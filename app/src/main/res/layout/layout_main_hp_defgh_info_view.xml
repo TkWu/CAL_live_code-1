@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_above="@+id/rlayout_info"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/home_terminal"
+            android:id="@+id/tv_Left_title"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:textColor="@color/white_four"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="false"
+            style="@style/medium"
+            android:shadowColor="@color/dark_navy_blue_50"
+            android:shadowRadius="2"
+            android:shadowDx="2"
+            android:shadowDy="2"  />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="@string/check_in_counter"
+            android:id="@+id/tv_center_title"
+            android:textSize="13sp"
+            android:gravity="center|bottom"
+            android:textColor="@color/white_four"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            style="@style/medium"
+            android:shadowColor="@color/dark_navy_blue_50"
+            android:shadowRadius="2"
+            android:shadowDx="2"
+            android:shadowDy="2"  />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/seat"
+            android:id="@+id/tv_right_title"
+            android:textSize="13sp"
+            android:textColor="@color/white_four"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            style="@style/medium"
+            android:shadowColor="@color/dark_navy_blue_50"
+            android:shadowRadius="2"
+            android:shadowDx="2"
+            android:shadowDy="2"  />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_info"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginBottom="11.7dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="2"
+            android:id="@+id/tv_Left"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/white_four"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="true"
+            style="@style/medium"
+            android:shadowColor="@color/dark_navy_blue_50"
+            android:shadowRadius="2"
+            android:shadowDx="2"
+            android:shadowDy="2"  />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="-"
+            android:id="@+id/tv_center"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/white_four"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            style="@style/medium"
+            android:shadowColor="@color/dark_navy_blue_50"
+            android:shadowRadius="2"
+            android:shadowDx="2"
+            android:shadowDy="2"  />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="3K(w)"
+            android:id="@+id/tv_right"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/white_four"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            style="@style/medium"
+            android:shadowColor="@color/dark_navy_blue_50"
+            android:shadowRadius="2"
+            android:shadowDx="2"
+            android:shadowDy="2"  />
+    </RelativeLayout>
+
+</LinearLayout>

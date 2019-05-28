@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlayout_meal_card_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_select_flight_head"
+        android:layout_width="match_parent"
+        android:layout_height="45.7px"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_boardimg_pass_head_radius"
+        android:gravity="center_vertical"
+        android:paddingLeft="20px"
+        android:paddingRight="20px">
+
+        <TextView
+            android:id="@+id/tv_airport_from"
+            style="@style/regular"
+            android:layout_width="120px"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black_two"
+            android:textSize="18px" />
+
+        <ImageView
+            android:id="@+id/title_flight_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_flight_from_to_2" />
+
+        <TextView
+            android:id="@+id/tv_airport_to"
+            style="@style/regular"
+            android:layout_width="120px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/black_two"
+            android:textSize="18px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_select_flight_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlayout_select_flight_head"
+        android:background="@color/white_five"
+        android:paddingLeft="20px"
+        android:paddingRight="20px">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_select_flight_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="80px">
+
+            <TextView
+                android:id="@+id/tv_select_flight_name"
+                style="@style/regular"
+                android:layout_width="220px"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/black_two"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/tv_select_seat"
+                style="@style/light"
+                android:layout_width="70px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="17px"
+                android:gravity="center"
+                android:text="@string/seat"
+                android:textColor="@color/warm_grey_two"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_select_seat_number"
+                style="@style/regular"
+                android:layout_width="70px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_select_seat"
+                android:layout_marginTop="4px"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/french_blue"
+                android:textSize="24px" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vline"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/warm_grey_50"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

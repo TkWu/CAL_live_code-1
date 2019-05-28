@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_layover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ci.ui.view.DashedLine
+            android:id="@+id/dl_top"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.5"
+            app:dl_color="@color/black_three" />
+
+        <TextView
+            android:id="@+id/tv_layover"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:background="@color/transparent"
+            android:text="@string/my_trips_layover"
+            android:textColor="@color/black_three"
+            android:textSize="14sp"
+            style="@style/light" />
+
+        <ci.ui.view.DashedLine
+            android:id="@+id/dl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.5"
+            app:dl_color="@color/black_three" />
+
+    </LinearLayout>
+</LinearLayout>

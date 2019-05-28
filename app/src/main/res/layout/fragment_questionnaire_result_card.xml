@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10px"
+    android:paddingRight="10px"
+    android:paddingTop="40px"
+    android:paddingBottom="72px">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_questionnaire_head_radius">
+        <!-- 問卷調查抬頭 -->
+        <TextView
+            android:id="@+id/question_title"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18px"
+            android:layout_marginBottom="19.3px"
+            android:textSize="20px"
+            style="@style/regular"
+            android:textColor="@color/black_one"
+            android:gravity="center_horizontal"
+            android:text="Your rate finished"/>
+
+        <!-- 問卷題目內容 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_below="@+id/question_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!-- 陰影 -->
+        <View
+            android:id="@+id/vGradient"
+            android:layout_width="match_parent"
+            android:layout_height="16px"
+            android:background="@drawable/bg_listview_bottom_gradient"
+            android:layout_alignBottom="@+id/recycler_view" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_no_wifi"
+        android:layout_width="103.3px"
+        android:layout_height="103.4px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48.3px"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_no_internet_connection" />
+
+    <TextView
+        android:id="@+id/tv_no_wifi"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="167.7px"
+        android:gravity="center_horizontal"
+        android:text="@string/system_no_network_connection"
+        android:textColor="@color/white_four"
+        android:textSize="20px"
+        style="@style/regular"/>
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="260px"
+        android:layout_height="40px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="231.7px"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        android:text="@string/home_page_refresh"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        style="@style/regular"/>
+</RelativeLayout>

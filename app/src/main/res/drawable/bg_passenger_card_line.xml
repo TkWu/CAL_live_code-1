@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Top color -->
+    <item android:bottom="0.7dip">
+        <shape  android:shape="rectangle">
+            <solid android:color="@color/warm_grey" />
+        </shape>
+    </item>
+
+    <!-- Bottom 1.3dp Shadow -->
+    <!--<item android:top="0.6dip">-->
+        <!--<shape  android:shape="rectangle">-->
+            <!--<solid android:color="@color/white_four" />-->
+        <!--</shape>-->
+    <!--</item>-->
+
+</layer-list>

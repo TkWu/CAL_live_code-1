@@ -1,0 +1,13 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "code_1A": "P",
+      "name_tw": "護照",
+      "name_cn": "护照",
+      "name_en": "Passport",
+      "name_jp": "パスポート"
+    }
+  ]
+}

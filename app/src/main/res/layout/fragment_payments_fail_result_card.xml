@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/iv_fail"
+        android:layout_width="48px"
+        android:layout_height="48px"
+        android:layout_marginTop="20px"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/img_step_alert"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18px"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20px"
+        android:textColor="@color/white_four"
+        style="@style/regular"
+        android:text="@string/trip_detail_passenger_bag_fail_title"/>
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16px"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="16px"
+        android:textColor="@color/white_four"
+        style="@style/light"
+        android:text="信息代碼：0000000000"/>
+
+</LinearLayout>

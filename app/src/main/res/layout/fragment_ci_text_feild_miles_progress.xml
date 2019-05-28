@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/float_label"
+        android:visibility="gone"
+        android:textSize="13sp"
+        android:layout_alignTop="@+id/text_input_layout"
+        android:layout_alignLeft="@+id/text_input_layout"
+        android:textColor="@color/white_80"
+        style="@style/light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48px"
+        android:textSize="33px"
+        android:layout_alignRight="@+id/text_input_layout"
+        android:layout_alignParentTop="true"
+        android:text="@string/member_login_input_correvt_format_msg"
+        android:id="@+id/tv_error"
+        android:layout_gravity="right"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:background="#ed1556"
+        android:paddingRight="10px"
+        android:paddingLeft="10px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="48px"
+        android:gravity="center"
+        android:singleLine="true"
+        style="@style/regular"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white_80"
+        app:hintTextAppearance="@style/CITextFeildStyle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:theme="@style/CITextFeildStyle_brownish_grey">
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="960px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:imeOptions="actionNext"
+            android:focusable="true"
+            android:singleLine="true"
+            android:paddingEnd="100px"
+            android:textColor="@color/black_one"
+            style="@style/light"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <ImageView
+        android:src="@drawable/btn_about_delete_n"
+        android:layout_width="72px"
+        android:layout_height="72px"
+        android:id="@+id/iv_btn_delete_n"
+        android:layout_alignRight="@+id/text_input_layout"
+        android:layout_alignBottom="@+id/text_input_layout"
+        android:layout_marginRight="24px"
+        android:layout_marginBottom="24px"
+        android:padding="0px"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="@drawable/bg_transparent_press_black20"
+        />
+
+        <ImageView
+            android:src="@drawable/ic_drop_down_g"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:id="@+id/iv_ic_drop_down"
+            android:layout_alignRight="@+id/text_input_layout"
+            android:layout_alignBottom="@+id/text_input_layout"
+            android:layout_marginRight="24px"
+            android:layout_marginBottom="24px"
+            android:padding="0px"
+            android:visibility="gone"
+            android:clickable="true"
+            android:background="@drawable/bg_transparent_press_black20"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_ic_item"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:layout_alignBottom="@+id/text_input_layout"
+            android:layout_alignEnd="@+id/text_input_layout"
+            android:layout_marginBottom="24px"
+            android:layout_marginRight="24px"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true"
+            android:padding="0px"
+            android:src="@drawable/ic_scan"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

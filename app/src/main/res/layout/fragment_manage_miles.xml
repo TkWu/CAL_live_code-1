@@ -1,0 +1,131 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:paddingTop="40px"
+        android:paddingBottom="20px">
+
+        <TextView
+            android:id="@+id/tv_miles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:minHeight="48px"
+            android:text="@string/menu_miles"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            style="@style/light" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_update"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tv_miles"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginLeft="20px"-->
+            <!--android:layout_marginRight="20px"-->
+            <!--android:layout_marginTop="10px"-->
+            <!--android:alpha="0.7"-->
+            <!--android:minHeight="16px"-->
+            <!--android:text="@string/update_xxx_ago"-->
+            <!--android:textColor="@color/white_four"-->
+            <!--android:textSize="13px"-->
+            <!--style="@style/regular" />-->
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_miles"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55.7px"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
+
+            <Button
+                android:id="@+id/btn_miles_activity"
+                android:layout_width="130px"
+                android:layout_height="40px"
+                android:background="@drawable/bg_manage_miles_btn_selector"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/miles_activity"
+                android:textAllCaps="false"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <Button
+                android:id="@+id/btn_reclaim_miles"
+                android:layout_width="130px"
+                android:layout_height="40px"
+                android:layout_marginLeft="20px"
+                android:background="@drawable/bg_manage_miles_btn_selector"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/reclaim_miles"
+                android:textAllCaps="false"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                style="@style/light" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_button"
+            android:layout_marginTop="40px">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_redeem_miles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl_card"
+            android:layout_marginTop="30px">
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="16px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white_four" />
+
+            <TextView
+                android:id="@+id/tv_redeem_miles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8px"
+                android:text="@string/redeem_miles"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                style="@style/regular" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_redeem_miles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_redeem_miles">
+
+        </FrameLayout>
+    </RelativeLayout>
+</ScrollView>

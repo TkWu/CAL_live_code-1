@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_about"
+    android:fitsSystemWindows="true">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true"
+        >
+    </ci.ui.view.NavigationBar>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_below="@id/toolbar"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="320px"
+            android:layout_height="40px"
+            android:paddingLeft="44px"
+            android:paddingRight="10px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_rectangle_116"
+            android:textColorHint="@color/french_blue_50"
+            android:textColor="@color/french_blue"
+            android:textSize="14px"
+            android:singleLine="true"
+            android:hint="@string/city"
+            style="@style/regular" />
+
+
+        <ImageView
+            android:id="@+id/iv_ic_search_2"
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:src="@drawable/ic_search_2"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/et_search"
+            android:layout_marginLeft="10px"
+            />
+    </RelativeLayout>
+
+    <!--透明白線-->
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:background="@color/white_30"
+        android:layout_height="0.7px"
+        android:layout_below="@+id/rl"/>
+
+    <!-- 透明黑標題 -->
+    <!--<RelativeLayout-->
+        <!--android:layout_below="@+id/rl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="32px"-->
+        <!--android:background="@color/black_30"-->
+        <!--android:clickable="true">-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="22.7px"-->
+            <!--android:singleLine="true"-->
+            <!--android:layout_marginLeft="30px"-->
+            <!--android:layout_marginRight="30px"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="Area nearby"-->
+            <!--android:textSize="16px"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/white_four"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<ListView-->
+        <!--android:id="@+id/activity_list_view_sign_up_select_menu"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/rl"-->
+        <!--android:divider="@color/white_30"-->
+        <!--android:dividerHeight="0.7px"-->
+        <!--android:visibility="gone"-->
+        <!--android:scrollbars="none">-->
+    <!--</ListView>-->
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_line"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+        android:childDivider="@null"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:fastScrollAlwaysVisible="false"
+        android:footerDividersEnabled="false"
+        android:groupIndicator="@null"
+        android:splitMotionEvents="false"
+        android:listSelector="@color/transparent"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none" />
+
+</RelativeLayout>

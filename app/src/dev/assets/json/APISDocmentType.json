@@ -1,0 +1,111 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "code_1A": "P",
+      "name_tw": "護照",
+      "name_cn": "护照",
+      "name_en": "Passport",
+      "name_jp": "パスポート"
+    },
+    {
+      "code_1A": "A",
+      "name_tw": "美國外國人登錄證",
+      "name_cn": "美国外国人登录证",
+      "name_en": "U.S.Alien Registration Card",
+      "name_jp": "U.S.Alien Registration Card"
+    },
+    {
+      "code_1A": "C",
+      "name_tw": "美國永久居留卡",
+      "name_cn": "美国永久居留卡",
+      "name_en": "U.S.Permanent Registration Card",
+      "name_jp": "U.S.Permanent Registration Card"
+    },
+    {
+      "code_1A": "M",
+      "name_tw": "軍官證",
+      "name_cn": "军官证",
+      "name_en": "Military ID Card",
+      "name_jp": "Military ID Card"
+    },
+    {
+      "code_1A": "T",
+      "name_tw": "美國再入境許可或難民旅行證件",
+      "name_cn": "美国再入境许可或难民旅行证件",
+      "name_en": "U.S.Re-entry Permit or Refugee Travel Document",
+      "name_jp": "U.S.Re-entry Permit or Refugee Travel Document"
+    },
+    {
+      "code_1A": "CT",
+      "name_tw": "台灣居民來往大陸通行證(台胞證)",
+      "name_cn": "台湾居民来往大陆通行证(台胞证)",
+      "name_en": "Travel Permit of Taiwan Residents To and From Mainland",
+      "name_jp": "Travel Permit of Taiwan Residents To and From Mainland"
+    },
+    {
+      "code_1A": "PT",
+      "name_tw": "中華人民共和國旅行證",
+      "name_cn": "中华人民共和国旅行证",
+      "name_en": "P.R. China Travel Permit",
+      "name_jp": "P.R. China Travel Permit"
+    },
+    {
+      "code_1A": "PL",
+      "name_tw": "中華人民共和國出入境通行證",
+      "name_cn": "中华人民共和国出入境通行证",
+      "name_en": "P.R. China Exit and Entry Permit",
+      "name_jp": "P.R. China Exit and Entry Permit"
+    },
+    {
+      "code_1A": "W",
+      "name_tw": "往來港澳通行證",
+      "name_cn": "往来港澳通行证",
+      "name_en": "Travel Permit To and From HK and Macao",
+      "name_jp": "Travel Permit To and From HK and Macao"
+    },
+    {
+      "code_1A": "CA",
+      "name_tw": "因公往來香港澳門特別行政區通行證",
+      "name_cn": "因公往来香港澳门特别行政区通行证",
+      "name_en": "Travel Permit To and From HK and Macao for Public Affairs",
+      "name_jp": "Travel Permit To and From HK and Macao for Public Affairs"
+    },
+    {
+      "code_1A": "Q",
+      "name_tw": "前往港澳通行證",
+      "name_cn": "前往港澳通行证",
+      "name_en": "Travel Permit To HK and Macao",
+      "name_jp": "Travel Permit To HK and Macao"
+    },
+    {
+      "code_1A": "CC",
+      "name_tw": "港澳同胞回鄉證、港澳居民來往內地通行證",
+      "name_cn": "港澳同胞回乡证、港澳居民来往内地通行证",
+      "name_en": "Travel Permit of HK and Macao Residents To and From Mainland",
+      "name_jp": "Travel Permit of HK and Macao Residents To and From Mainland"
+    },
+    {
+      "code_1A": "CD",
+      "name_tw": "大陸居民往來台灣通行證",
+      "name_cn": "大陆居民往来台湾通行证",
+      "name_en": "Travel Permit of Mainland Residents To and From Taiwan",
+      "name_jp": "Travel Permit of Mainland Residents To and From Taiwan"
+    },
+    {
+      "code_1A": "S",
+      "name_tw": "海員證",
+      "name_cn": "海员证",
+      "name_en": "Seafarer's Passport",
+      "name_jp": "Seafarer's Passport"
+    },
+    {
+      "code_1A": "F",
+      "name_tw": "其他證件",
+      "name_cn": "其他证件",
+      "name_en": "Approved non-standard identity documents used for travel",
+      "name_jp": "Approved non-standard identity documents used for travel"
+    }
+  ]
+}

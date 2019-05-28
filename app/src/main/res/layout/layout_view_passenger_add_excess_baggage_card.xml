@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:background="@color/black_30">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="300px"
+            android:layout_height="22.7px"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            android:textSize="16px"
+            android:gravity="center_vertical"
+            android:textColor="@color/white_four"
+            style="@style/regular" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_bag"
+        android:layout_below="@+id/rl_title"
+        android:layout_width="320px"
+        android:layout_height="36.3px"
+        android:layout_marginTop="19.7px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_decrease"
+            android:layout_width="48px"
+            android:layout_height="32px"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/btn_press_decrease_icon"
+            android:background="@drawable/btn_decrease_n">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/ib_add"
+            android:layout_width="48px"
+            android:layout_height="32px"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/btn_press_add_icon"
+            android:background="@drawable/btn_add_2_n">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="40px"
+            android:layout_height="28.7px"
+            android:textSize="24px"
+            android:layout_toRightOf="@+id/ib_decrease"
+            android:layout_marginLeft="56.3px"
+            android:textColor="@color/white_four"
+            android:text="0"
+            style="@style/light" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="92.3px"
+            android:layout_height="28.7px"
+            android:textSize="18px"
+            android:layout_toLeftOf="@+id/ib_add"
+            android:layout_marginRight="7.7px"
+            android:textColor="@color/white_four"
+            android:gravity="center_vertical"
+            android:text="Kg"
+            style="@style/light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_four"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_msg"
+        android:layout_width="320px"
+        android:layout_height="36px"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_passengers_messenger">
+
+        <ImageView
+            android:id="@+id/iv_alerts"
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:layout_marginLeft="10px"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_travel_alerts"/>
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="266px"
+            android:layout_height="wrap_content"
+            android:textSize="13px"
+            android:layout_marginLeft="10px"
+            android:textColor="@color/white_four"
+            android:layout_gravity="center_vertical"
+            android:text="error"
+            style="@style/regular" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"/>
+
+</LinearLayout>

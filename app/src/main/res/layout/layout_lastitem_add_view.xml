@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="50px">
+
+        <View
+            android:id="@+id/vline1"
+            android:layout_width="match_parent"
+            android:layout_alignTop="@+id/rl_add"
+            android:layout_height="0.3px"
+            android:background="@color/white_30"></View>
+
+        <RelativeLayout
+            android:id="@+id/rl_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_30"
+            android:paddingBottom="16px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:paddingTop="16px">
+
+            <TextView
+                android:id="@+id/tv_not_find"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/extra_services_have_not_booked_a_hsr_ticket"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                style="@style/regular" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="130px"
+                android:layout_height="40px"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_sidemenu_btn_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:singleLine="false"
+                android:text="@string/extra_services"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                style="@style/regular" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/vline2"
+            android:layout_width="match_parent"
+            android:layout_alignBottom="@+id/rl_add"
+            android:layout_height="0.3px"
+            android:background="@color/white_30"></View>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

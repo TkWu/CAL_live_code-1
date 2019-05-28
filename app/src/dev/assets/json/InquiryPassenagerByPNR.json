@@ -1,0 +1,116 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "Pax_Info": [
+      {
+        "First_Name": "HSIAOMING",
+        "Last_Name": "WANG",
+        "Pax_Type": "ADT",
+        "Pax_Number": "1",
+        "Seat_Number": "",
+        "Baggage_Allowence": "",
+        "Vip_Lounge": "Y",
+        "Booking_Class": "J",
+        "Ticket": "",
+        "Is_Change_Seat": "Y",
+        "Is_Change_SeatList": [
+          {
+            "Name": "Booking_Class",
+            "Is_Change": "Y"
+          },
+          {
+            "Name": "Wheel_Chair",
+            "Is_Change": "Y"
+          },
+          {
+            "Name": "PNR_Status",
+            "Is_Change": "Y"
+          }
+        ],
+        "Is_Change_Meal": "Y",
+        "Is_Add_Baggage": "N",
+        "Card_Id": "CT0000000",
+        "Card_Type": "PARA",
+        "Meal": {
+          "pnr_id": "4YZFLJ",
+          "itinerary_seq": "1",
+          "flight_date": "2016-10-09",
+          "flight_num": "0120",
+          "flight_sector": "TPEOKA",
+          "tkt_confirm_code": "HK",
+          "rt_code": "000",
+          "rt_msg": "OK",
+          "ssr_seq": 0,
+          "pono_number":"",
+          "meal_type":"2",
+          "meal_info":[
+            {
+              "meal_seq":"1",
+              "meal_content_seq":"",
+              "meal_code":"DBML",
+              "mealtype_code":"S",
+              "mealtype_desc":"",
+              "meal_name":"糖尿病餐",
+              "is_menu_only":false
+            }
+          ]
+        }
+      },
+      {
+        "First_Name": "KEVIN",
+        "Last_Name": "CHENG",
+        "Pax_Type": "ADT",
+        "Pax_Number": "1",
+        "Seat_Number": "",
+        "Baggage_Allowence": "",
+        "Vip_Lounge": "Y",
+        "Booking_Class": "J",
+        "Ticket": "",
+        "Is_Change_Seat": "Y",
+        "Is_Change_SeatList": [
+          {
+            "Name": "Booking_Class",
+            "Is_Change": "Y"
+          },
+          {
+            "Name": "Wheel_Chair",
+            "Is_Change": "Y"
+          },
+          {
+            "Name": "PNR_Status",
+            "Is_Change": "Y"
+          }
+        ],
+        "Is_Change_Meal": "Y",
+        "Is_Add_Baggage": "N",
+        "Card_Id": "CT0000001",
+        "Card_Type": "PARA",
+        "Meal": {
+          "pnr_id": "4YZFLJ",
+          "itinerary_seq": "1",
+          "flight_date": "2016-10-09",
+          "flight_num": "0120",
+          "flight_sector": "TPEOKA",
+          "tkt_confirm_code": "HK",
+          "rt_code": "000",
+          "rt_msg": "OK",
+          "ssr_seq": 0,
+          "pono_number":"",
+          "meal_type":"2",
+          "meal_info":[
+            {
+              "meal_seq":"1",
+              "meal_content_seq":"",
+              "meal_code":"DBML",
+              "mealtype_code":"S",
+              "mealtype_desc":"",
+              "meal_name":"一般餐",
+              "is_menu_only":false
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

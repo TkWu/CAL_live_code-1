@@ -1,0 +1,121 @@
+{
+  "project_info": {
+    "project_number": "698031224829",
+    "firebase_url": "https://cal-mobile-app-3-0.firebaseio.com",
+    "project_id": "cal-mobile-app-3-0",
+    "storage_bucket": "cal-mobile-app-3-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698031224829:android:b140622fe966827b",
+        "android_client_info": {
+          "package_name": "com.chinaairlines.mobile30"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698031224829-f4c00s0orq4lbhhjn01c65lo844qjsut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chinaairlines.mobile30",
+            "certificate_hash": "1756ee0ae15d1b268102ea7b2f25e24154c286f5"
+          }
+        },
+        {
+          "client_id": "698031224829-2rqvkg47ria68g1hoqhbnp1gqab30npv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chinaairlines.mobile30",
+            "certificate_hash": "a0401656b0e58113761840e227659faf5d386561"
+          }
+        },
+        {
+          "client_id": "698031224829-7su2p1c8u9bulsjk74j263ktlvoceoc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhnWzPhCLkTw9t51RTivqp7idtolT2XSQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698031224829-7su2p1c8u9bulsjk74j263ktlvoceoc8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "698031224829-gamdg23394ehjsrv8jfgjeek77o126uh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chinaairlines.cimobile30test"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698031224829:android:1c8b26ad83575448",
+        "android_client_info": {
+          "package_name": "com.chinaairlines.mobile30.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698031224829-i9kqr7q07c2rsq4ktku3kkjrfiv32ep4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chinaairlines.mobile30.dev",
+            "certificate_hash": "a0401656b0e58113761840e227659faf5d386561"
+          }
+        },
+        {
+          "client_id": "698031224829-7su2p1c8u9bulsjk74j263ktlvoceoc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhnWzPhCLkTw9t51RTivqp7idtolT2XSQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698031224829-7su2p1c8u9bulsjk74j263ktlvoceoc8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "698031224829-gamdg23394ehjsrv8jfgjeek77o126uh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chinaairlines.cimobile30test"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

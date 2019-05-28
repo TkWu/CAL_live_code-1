@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- System Message/按鈕 -->
+    <string name="system_no_network_connection">ネットワークの接続がありません</string>
+    <string name="system_no_network_connection_message">Wi-Fiに接続するか携帯電話のデータ通信をアップデートしてください</string>
+    <string name="system_settings">設定</string>
+    <string name="system_dismiss">スキップ</string>
+    <string name="china_airlines">チャイナエアライン</string>
+    <string name="next">次へ</string>
+    <string name="previous">上一步</string>
+    <string name="confirm">確認</string>
+    <string name="back_to_home">ホームへ戻る</string>
+    <string name="done">完了</string>
+    <string name="no">いいえ</string>
+    <string name="yes">はい</string>
+    <string name="edit">編集</string>
+    <string name="view">見る</string>
+    <string name="finish">送信</string>
+    <string name="exit_app_message">終了しますか？</string>
+    <string name="cancel">取消</string>
+    <string name="delay">遅延</string>
+    <string name="exit">終了</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="warning">注意</string>
+    <string name="please_input_field">%1$s の欄をご入力下さい。</string>
+    <string name="please_input_pnr">予約番号/航空券番号の欄をご入力下さい。</string>
+    <string name="please_login">ログインをご入力下さい。</string>
+    <string name="login_success">ログインに成功しました。</string>
+    <string name="back_to_mytrips">予約管理へ戻る</string>
+    <string name="back_to_boarding_pass">搭乗券＆マイウォレットに戻る</string>
+    <string name="select">選択</string>
+    <string name="loading">ダウンロード中</string>
+
+    <!-- SideMenu -->
+    <string name="menu_log_out">ログアウト</string>
+    <string name="menu_miles">%s マイル</string>
+    <string name="menu_become_a_dynasty_flyer">DFPに入会</string>
+    <string name="menu_welcome_tag">チャイナ エアラインへようこそ</string>
+    <string name="menu_log_in">ログイン</string>
+    <string name="menu_sign_up">登録する</string>
+    <!-- SideMenu Right-->
+    <string name="menu_title_homepage">ホーム</string>
+    <string name="menu_title_book_ticket">航空券予約</string>
+    <string name="menu_title_check_in">チェックイン</string>
+    <string name="menu_title_flight_status">運行状況</string>
+    <string name="menu_title_timetable">タイムテーブル</string>
+    <string name="menu_title_extra_services">追加のサービス</string>
+    <string name="menu_title_e_shopping">華航 Sky Boutique</string>
+    <string name="menu_title_promotions">パーソナル化のおすすめ</string>
+    <string name="menu_title_about">お問い合わせ</string>
+    <string name="menu_title_setting">設定(Settings)</string>
+    <string name="menu_title_ai_service"></string>
+
+
+    <!-- SideMenu Left-->
+    <string name="menu_title_boarding_pass_ewallet">搭乗券＆マイウォレット</string>
+    <string name="menu_title_my_trips">予約</string>
+    <string name="menu_title_manage_miles">マイルの管理</string>
+    <string name="menu_title_personal_detail">個人情報の詳細</string>
+
+    <!-- StartPage -->
+    <string name="start_page_update">更新</string>
+    <string name="start_page_cancel">確認済</string>
+    <string name="start_page_more">さらに</string>
+    <string name="gdpr_url">https://mobile30.china-airlines.com/mobile30/redirurl/gdpr.aspx?lang=JP&amp;uuid=</string>
+    <string name="gdpr_title">情報セキュリティに関する基本方針</string>
+
+    <!-- HomePage-->
+    <string name="home_page_already_have_a_trip">既にご予約がありますか？</string>
+    <string name="home_page_button_find_my_booking">予約を検索</string>
+    <string name="home_page_button_view_my_booking">予約を見る</string>
+    <string name="home_page_explore_destinations">パーソナル化のおすすめ</string>
+    <string name="home_page_button_book_ticket">航空券予約</string>
+    <string name="home_page_button_flight_status">運行状況</string>
+    <string name="home_page_button_extra_services">追加のサービス</string>
+    <string name="home_page_timetable">タイムテーブル</string>
+    <string name="home_page_refresh">更新</string>
+    <string name="home_page_have_ticket_long_time_ago">お客様の%1$s行は%2$s後です</string>
+    <string name="month">months</string>
+    <string name="day">Days</string>
+    <string name="home_page_select_meal">%1$sの前にあなたの食事を選択して下さい。</string>
+
+    <string name="seat">座席</string>
+    <string name="meal">食事</string>
+
+    <!-- 待提供 -->
+    <string name="zone">Zone</string>
+
+    <string name="home_page_seat_meal_cabin_cannot_selectmeal">お食事の選択ができないクラスです</string>
+    <string name="home_page_seat_meal_cabin_cannot_selectseat">お座席の選択ができないクラスです</string>
+    <string name="home_page_seat_meal_no_select_seat_time">お座席の選択ができない期間です</string>
+    <string name="home_page_seat_meal_no_select_meal_time">お食事の選択ができない期間です</string>
+        <string name="home_page_seat_meal_airline_cantnot_select_seat">他社運航のコードシェア便は事前座席指定不可です。</string>
+    <string name="home_page_seat_meal_airline_cantnot_select_meal">他社運航のコードシェア便はお食事の事前選択ができません。</string>
+
+    <string name="my_others_trips">他の予約</string>
+
+    <string name="online_check_in_is_now_open">チェックイン開始</string>
+    <string name="online_check_in_is_not_available">当便はEチェックインがご利用いただけません。</string>
+    <string name="check_in">チェックイン</string>
+    <string name="select_flight">フライトの選択</string>
+    <string name="home_terminal">ターミナル</string>
+    <string name="terminal">ターミナル %1$s</string>
+    <string name="check_in_counter">カウンター</string>
+    <string name="boarding_pass">搭乗券</string>
+    <string name="please_arrive_at_the_airport_before">%1$s 前に空港へお越し下さい。</string>
+    <string name="gate">搭乗口</string>
+    <string name="boarding">搭乗</string>
+    <string name="boarding_start_at_gate_xx">%1$s 搭乗口にて%2$s に搭乗開始です。</string>
+    <string name="time_to_destination_at_xx">目的地まで：%1$s</string>
+    <string name="minute">分</string>
+    <string name="hours">時</string>
+
+    <string name="transition_infomation">乗継便はターミナル %2$s の %3$s 搭乗口にて %1$s に搭乗開始です。</string>
+    <string name="welcome_xxx_baggage_at_xxx">%1$sへようこそ！\nカルーセル%2$sにてお荷物をお受け取り下さい。</string>
+    <string name="baggage_carousel">荷物カルーセル</string>
+    <string name="departure_time_delays">出発時刻は%1$sに遅れています。</string>
+    <string name="flight_boarding_gate_change_xx">%1$s 便の搭乗口は %2$s 搭乗口に変更となりました。</string>
+    <string name="boarding_gate_change_xx">%1$s 搭乗口に変更となりました。</string>
+
+    <string name="change_flight">予約変更</string>
+    <string name="please_confirm_your_new_flight">予約変更</string>
+    <string name="your_new_flight">新しいフライト</string>
+    <string name="flight_cancel_message">他のご希望がある場合、カスタマーサービススタッフが別の便をアレンジしてご連絡いたします。</string>
+    <string name="disagree">辞退する</string>
+    <string name="agree">同意する</string>
+    <string name="decide_later">後にする</string>
+    <string name="customer_center_will_cantact_you">カスタマーサービススタッフが別の便をアレンジしてご連絡いたします。</string>
+    <string name="customer_services">カスタマーサービス</string>
+    <string name="travel_alert_count">%1$s つの予約の通知</string>
+
+    <string name="flight_cancel_please_confirm_new_flight">%1$s 便は欠航となりました。新しい予約として%2$s便を確認してください。</string>
+    <string name="overbooking_fly_earlier_msg_title">早い便への変更をご希望ですか？</string>
+    <string name="overbooking_fly_earlier_subtitle">早い便に変更可能です。詳しい情報。</string>
+    <string name="complimentary_beverage">無料飲料</string>
+    <string name="complimentary_upgrade">無料アップグレード</string>
+    <string name="enjoy_more_time_at_your_destination">目的地までの時間をお楽しみ下さい。</string>
+    <string name="change">変更</string>
+    <string name="travel_alert">旅行通知</string>
+    <string name="non_ci_and_ae_alert_dialog">フライト情報は、チャイナ エアライン自社運航便のみ提供しています。</string>
+
+
+    <!--ADD 20160801 D5-->
+	<string name="collect_boardingpass_at_airport_before">チェックイン手続き完了されました。 %1$s 前に荷物を預かって、搭乗券を受け取ってください。</string>
+	
+	
+    <!-- 首頁廣告link -->
+    <string name="home_page_promotion_link_1">https://mobile30.china-airlines.com/CMS_1/JP_Discover1.html</string>
+    <string name="home_page_promotion_link_2">https://mobile30.china-airlines.com/CMS_1/JP_Discover2.html</string>
+    <string name="home_page_promotion_link_3">https://mobile30.china-airlines.com/CMS_1/JP_eShopping.html</string>
+    <string name="home_page_promotion_link_4">https://mobile30.china-airlines.com/CMS_1/JP_wifi.html</string>
+
+<string name="home_page_promotion_title">プロモーション</string>
+
+    <!-- Member_login / find my booking -->
+    <string name="member_login_title">会員ログイン</string>
+    <string name="member_login_member">会員</string>
+    <string name="member_login_booking_ref_ticket">予約番号/航空券番号</string>
+    <string name="member_login_booking_ref_ticket_hint">予約番号 / 航空券番号</string>
+    <string name="member_login_input_box_account_hint">会員番号/Eメール/国番号+電話番号</string>
+    <string name="member_login_please_enter">正しいカード番号/Eメールアドレス/携帯電話番号を入力してください</string>
+    <string name="member_login_input_box_password_hint">パスワード</string>
+    <string name="member_login_keep_logged_in">ログイン状態を保持</string>
+    <string name="member_login_forget">お忘れですか？</string>
+    <string name="member_login_log_in">ログイン</string>
+    <string name="member_login_or">もしくは</string>
+    <string name="member_logifacebook">Facebook</string>
+    <string name="member_login_google_plus">Google</string>
+    <string name="member_login_new_to_here">まだ会員ではない方</string>
+    <string name="member_login_sign_up">登録</string>
+    <string name="member_login_input_correvt_format_msg">フォーマットが違います</string>
+
+    <string name="input_detail_title">個人情報の詳細</string>
+    <string name="input_detail_hello">こんにちは</string>
+    <string name="input_detail_comma">，</string>
+    <string name="input_detail_update_email_msg">%1$s Eメールアドレスがすでに登録済みです。Eメールの情報を更新してください。</string>
+    <string name="input_detail_email_hint">新しいEメールアドレス</string>
+    <string name="input_detail_send">変更</string>
+    <!-- wireframe P.21, M2 /0312新增-->
+    <string name="input_detail_request_user_id">入力した情報が既存会員の登録内容と重複しています。IDカード番号もしくはパスポート番号をご入力下さい。</string>
+    <string name="input_detail_identity_hint">IDカード番号 / パスポート番号</string>
+    <!-- wireframe P.21, M2 /0312新增-->
+    <string name="input_detail_update_phone_msg">%1$s 携帯電話番号が重複しております。違う番号でのご登録をお願いいたします。</string>
+    <string name="input_detail_phone_hint">携帯電話番号を追加する</string>
+
+    <string name="recover_account_title">ログイン問い合わせ</string>
+    <string name="recover_account_prompt_title">どちらのログイン情報をお問い合わせしたいでしょうか？</string>
+    <string name="recover_account_prompt_msg">会員番号をお忘れでしょうか？Eメール或いは電話番号でもログイン可能です。</string>
+    <string name="recover_account_forget_card_number">DFP会員番号を忘れました。</string>
+    <string name="recover_account_forget_password">パスワードを忘れました。</string>
+    <string name="recover_account_apply_password">パスワード申請</string>
+
+    <string name="inquiry_card_number_prompt_msg">以下の詳細をご入力下さい。Eメールへ会員番号が届きます。</string>
+    <string name="inquiry_input_box_first_name_hint">名（英語で）</string>
+    <string name="inquiry_input_box_last_name_hint">姓（英語で）</string>
+    <string name="inquiry_input_box_date_of_birth_hint">生年月日</string>
+    <string name="inquiry_input_box_send">送信</string>
+    <string name="inquiry_card_number_title">カード番号問い合わせ</string>
+    <string name="inquiry_card_number_inquiry_successfully">会員番号はEメールへ送信されました。</string>
+    <string name="inquiry_password_title">パスワードの問い合わせ</string>
+    <string name="inquiry_password_prompt_msg">以下の詳細をご入力下さい。Eメールへパスワードが届きます。</string>
+    <string name="inquiry_input_box_account_hint">会員番号/Eメール/国番号+電話番号</string>
+    <string name="inquiry_password_inquiry_successfully">パスワードはご登録のEメールアドレスに送信されました。</string>
+
+    <string name="become_a_dynasty_flyer_title">DFPに入会</string>
+    <string name="become_a_dynasty_flyer_hello">こんにちは </string>
+    <string name="become_a_dynasty_flyer_prompt_msg">SNSのアカウントを使って簡単に会員登録やログインができます。</string>
+    <string name="become_a_dynasty_flyer_not_now">後で</string>
+    <string name="become_a_dynasty_flyer_sign_up">登録</string>
+    <string name="become_a_dynasty_flyer_already_have_account">すでにDFP会員ですか？</string>
+    <!--0311新增-->
+    <!-- apply password  -->
+    <string name="apply_password_inquiry">パスワード申請</string>
+    <string name="apply_password_success_note">会員パスワード登録のため、以下の情報をご入力下さい。</string>
+
+    <!-- Sign up-->
+    <string name="sign_up_terms_and_conditions_title">規約と条件</string>
+    <string name="sign_up_title">登録</string>
+    <string name="sign_up_personal_detail">個人情報の詳細</string>
+    <string name="sign_up_nationality">国/地域</string>
+    <string name="sign_up_salutation">性別</string>
+    <string name="sign_up_identity_card_no">IDカード番号</string>
+    <string name="sign_up_passport_chinese_name">旅券の名前（中国語）</string>
+    <string-array name="sign_up_salutation_list">
+        <item name="mr">Mr</item>
+        <item name="ms">Ms</item>
+    </string-array>
+
+    <string name="sign_up_passport_name">パスポートの名前</string>
+    <string name="sign_up_first_name">名（英語で）</string>
+    <string name="sign_up_last_name">姓（英語で）</string>
+    <string name="sign_up_date_of_birth_hint">生年月日</string>
+    <string name="sign_up_contact_information">連絡先情報</string>
+    <string name="sign_up_email_address">Eメール</string>
+    <string name="sign_up_monthly_mileage_summary_will_be_sent">月毎のマイレージサマリーはオンラインでのみ利用が可能で、Eメールに届きます。</string>
+    <string name="sign_up_receive_promotion_email">チャイナ エアラインの最新情報をEメールで受け取ることを同意します。</string>
+    <string name="sign_up_password">パスワード</string>
+    <string name="sign_up_mobile_num_country_code">国番号</string>
+    <string name="sign_up_mobile_number">電話番号</string>
+    <string name="sign_up_receive_sms">チャイナエアラインからのSMSメッセージを受け取ることを同意します。</string>
+    <string name="sign_up_account_information">DFPパスワード</string>
+    <string name="sign_up_password_prompt_case">パスワードは大文字と小文字を判別され、6~10文字の英数字が含まれている必要があります。特殊文字を使用しないで下さい。</string>
+    <string name="sign_up_confirm_password">再エントリーパスワード</string>
+    <!-- / 是分隔符號 -->
+    <string name="sign_up_trem_and_conditions">私は、上記の/会員規約、会員特典及び義務、チャイナ エアライン個人情報保護方針/に同意します。</string>
+    <string name="sign_up_confirm_button">登録</string>
+    <string name="sign_uregistration_finished_dynasty_flyer_num">ありがとうございます！ダイナスティフライヤー会員番号は</string>
+    <string name="sign_uregistration_finished_enjoy_our_service">パーソナル化したサービスをお楽しみ下さい。!</string>
+    <string name="special_meal_preference">特別食</string>
+    <string name="preference">ご希望</string>
+    <!--0311新增-->
+    <!-- sign up -->
+    <string name="sign_up_passport_NO">*パスポート番号</string>
+    <string name="sign_up_preferences">喜好選擇</string>
+    <!-- open id -->
+    <string name="open_id_qualifications">会員資格</string>
+    <string name="open_id_membership">•DFP会員</string>
+    <string name="open_id_membership_note1">1. 2歳以上であればどなたでもダイナスティ・フライヤー・プログラム（以下DFP）にご入会いただけます。</string>
+    <string name="open_id_membership_note2">2. 2歲以上から12歳未満の方が入会申し込みをされる際には、すでにDFP会員である保護者のご登録が必要となります。</string>
+
+    <string name="special_seat_preference">座席の優先</string>
+    <string-array name="sign_up_special_seat_list">
+        <item name="none">指定なし</item>
+        <item name="aisle">通路</item>
+        <item name="windows">窓</item>
+    </string-array>
+    
+    <string name="def_member_ship_card_number">会員番号</string>
+    <string name="guardian_details">保護者の詳細</string>
+    <string name="suggested_to_change_your_membership_mail">電子メール%1$sなど、あなたのメンバー%2$sのプロフィール情報に応じて変更を提案しました。</string>
+
+
+    <!--/2019-01-24 新增郵寄地址/-->
+
+    <string name="sign_up_address_type">居住地/勤務先住所</string>
+    <string name="sign_up_country">お住まいの国/地域</string>
+    <string name="sign_up_city">居住都市</string>
+    <string name="sign_up_county">市町村</string>
+    <string name="sign_up_street">番地</string>
+    <string name="sign_up_street_number">Street2</string>
+    <string name="sign_up_address_info">Street3</string>
+    <string name="sign_up_nearest_area">該当するエリア</string>
+    <string name="sign_up_zip_code">郵便番号</string>
+
+    <string name="sign_up_street1">Street</string>
+    <string name="sign_up_street2">Street 2</string>
+    <string name="sign_up_street3">Street 3</string>
+    <string name="sign_up_city_state">City/State</string>
+    <string name="sign_up_zip_code_en">Zip Code</string>
+    <string name="sign_up_nearest_area_en">the Nearest Area</string>
+
+    <string-array name="sign_up_address_type_list">
+        <item name="home">居住地</item>
+        <item name="company">勤務先住所</item>
+    </string-array>
+
+    <string name="sign_up_street1_note">郵送先住所を英語のアルファベットのみで入力してください。ex. 131, Section 3, Nanking East Road</string>
+    <string name="sign_up_home_nearest_area">Please Select the Nearest Area to Your Mailing Address</string>
+    <string name="sign_up_mailing_address">ご連絡先</string>
+    <!--/2019-01-24 新增郵寄地址/-->
+
+
+<!-- My Trip-->
+    <string name="my_trips_title">予約</string>
+    <string name="my_trips_upcoming_trips">フライト</string>
+    <string name="my_trips_past_trips">ヒストリー</string>
+    <string name="my_trips_linked_successfully">フライトが正常にリンクされています！!</string>
+    <string name="my_trips_layover">%1$d %2$sで停留:</string>
+    <string name="hours_unit">%1$d 時間</string>
+    <string name="minute_unit">%1$d 分</string>
+    <string name="my_trips_can_not_find_the_trip">ご予約がみつかりませんか？</string>
+    <string name="my_trips_add_flight">予約を検索</string>
+    <string name="my_trips_can_not_find_your_reservayion_number">ご予約番号が見つかりませんか？</string>
+    <string name="my_trips_detail_add_passenger">同行者の方をAppに追加する</string>
+    <string name="find_my_booking_title">予約を検索</string>
+    <string name="find_my_booking_button">検索</string>
+    <string name="find_my_booking_notes">お知らせ</string>
+    <string name="find_my_booking_notes_content">
+        \n
+        1. 予約番号は英文と数字を含む6桁です。\n\n
+        2. １つのご予約に複数名のご予約がある場合は、その中のお一人のお名前をご入力してください。\n\n
+    </string>
+
+    <!--644336 2019 2月3月 注意事項-->
+    <string name="find_my_booking_notes_us_visa_waiver_program">米国行のお客様</string>
+    <string name="find_my_booking_notes_us_visa_waiver_program_content">
+        \n
+       • 2009年1月12日より、ビザをお持ちでないVWP参加国（日本を含む）の渡航者が米国に旅行する際は、事前にインターネットで電子渡航認証システム（ESTA）の申請が必要となります。ご出発の72時間前までに必ずお済ませいただきますよう、ご案内申し上げます。\n\n
+    </string>
+
+    <string name="find_my_booking_notes2_content">
+        \n
+        • 当サービスでは、特別食や車椅子などの特別なサービスをご予約いただくことはできません。恐れ入りますが、事前に弊社コールセンターまでお申し出ください。E-チェックインがすでにお済みのお客様は、空港チェックインカウンターにて直接お申し出ください。\n\n
+        • E-チェックインサービスは9名以下のCI国際線（他社運航によるコードシェア便を除く）予約記録において、ご利用フライト時刻の48時間前から1.5時間前までご利用いただけます。\n\n
+        • 予約クラスＧのお客様は、Ｅ-チェックインサービスをご利用いただくことができません。\n\n
+        • セルフプリントボーディングパスやモバイル搭乗券サービス適用外のお客様は、チェックイン手続きのみ完了の上、ご利用フライト時刻の遅くとも1時間前までに空港チェックインカウンターにてボーディングパスの受け取り及び荷物のお預けをお済ませください。詳しくは該当ページにて確認ください。（高雄空港ＢカウンターにE-チェックインカウンターを設置しております。）\n\n
+        • お一人でローマからご出発される１８歳未満のお客様は、イタリア政府当局の規定により、eチェックインサービスをご利用いただくことができません。\n\n
+    </string>
+    <!--644336 2019 2月3月 注意事項-->
+
+    <string name="find_my_booking_traveling_with_other_companions">同行者の方はいらっしゃいますか？</string>
+    <string name="my_trips_not_find">ご予約情報が見つかりませんでした。</string>
+    <string name="my_trip_ci">チャイナ エアライン</string>
+    <string name="my_trip_ae">マンダリン航空</string>
+    <string name="add_member_card">会員カード登録</string>
+
+    <!-- Passenger -->
+    <string name="add_passenager_title">お客様を追加</string>
+    <string name="add_passenager_add_travel_companion_to_app">同行者の方をAppに追加する</string>
+    <string name="add_passenager_passenager_x">旅客 %1$d</string>
+    <string name="add_passenager_add_more">お客様を追加</string>
+    <string name="add_passenager">お客様を追加</string>
+    <string name="select_passenager">旅客の選択</string>
+
+    <!-- Trip Detail -->
+    <string name="trips_detail_title">%1$s ➞ %2$s</string>
+    <string name="trips_detail_tab_flight">フライト</string>
+    <string name="trips_detail_tab_passenger">旅客（%1$d）</string>
+    <string name="trips_detail_tab_information">インフォメーション</string>
+    <string name="trips_detail_reference_no">予約番号:</string>
+    <string name="trips_detail_airlines">航空会社:</string>
+    <string name="trips_detail_flight_number">フライト番号:</string>
+    <string name="trips_detail_travel_time">フライト時間:</string>
+    <string name="flight_status">運行状況</string>
+
+    <!--644336 2019 2月3月 行事曆-->
+    <string name="add_to_calendar">カレンダーに追加</string>
+    <string name="add_to_calendar_add_confirm">追加</string>
+    <string name="add_to_calendar_title_success">イベントを追加しました</string>
+    <string name="add_to_calendar_content_success">フライトスケジュールがカレンダーに追加されました。 E-チェックインの利用が可能になると、アラームでお知らせ致します。</string>
+    <string name="add_to_calendar_notes">フライトスケジュールに変更があった場合、自動で更新はされません。お客様ご自身でイベントを削除し、再度追加してください。</string>
+    <!--644336 2019 2月3月 行事曆-->
+
+    <string name="share">シェア</string>
+    <string name="weather">天気</string>
+    <string name="global_branch_office">海外支店</string>
+    <string name="trips_detail_taipei_support_number">未定義</string>
+    <string name="airport_name_code">空港名/コード</string>
+    <string name="nearest_office">お近くの支店</string>
+    <string name="all_area">すべてのエリア</string>
+    <string name="miles">マイル</string>
+
+    <string name="trips_detail_select">選択</string>
+    <string name="trips_detail_edit">編集</string>
+    <string name="trips_detail_view">ビュー</string>
+    <string name="trips_detail_business">ビジネス</string>
+    <string name="trips_detail_seat_w">窓側</string>
+    <string name="trips_detail_seat_a">通路側</string>
+    <string name="trips_detail_luggage_kg">KG</string>
+    <string name="trips_detail_luggage_PC">個</string>
+    <string name="vip_lounge">VIPラウンジ</string>
+    <string name="ticket_number">航空券番号: </string>
+    <string name="ticket_modifly">予約管理</string>
+    <string name="trips_detail_extra_services">カスタマーサービス</string>
+    <string name="trips_detail_hsr">HSRチケット</string>
+    <string name="wifi">機内Wi-Fi</string>
+    <string name="trips_detail_invalid">不可利用</string>
+    <string name="trips_detail_info_airport_information">空港情報</string>
+    <string name="trips_detail_info_airport_floor_map">空港フロアマップ</string>
+    <string name="trips_detail_info_location_map">所在地</string>
+    <string name="trips_detail_info_airport_office_website">空港公式ウェブサイト</string>
+    <string name="trips_detail_info_vip_lounge_infor">ラウンジサービス</string>
+    <string name="trips_detail_info_travel_hint">旅行のヒント</string>
+    <string name="trips_detail_info_travel_checklist">トラベルチェックリスト</string>
+    <string name="trips_detail_info_luggage_infor">荷物インフォメーション</string>
+    <string name="trips_detail_info_currency">通貨交換</string>
+    <string name="trips_detail_info_amenities">設備</string>
+    <string name="trips_detail_info_add_new_item">新しいアイテムを追加</string>
+    <string name="trips_detail_info_delete">削除</string>
+    <string name="trips_detail_info_update_date">更新日期</string>
+
+    <!-- ADD 20160803-->
+	<string name="trips_detail_share_info_description">リンクをクリックして最新の運航状況を見るください。</string>
+
+    <!-- 待提供 -->
+    <string name="trips_detail_anwser_title">Your rate finished</string>
+
+    <string name="trip_detail_passenger_not_find">お客様情報が見つかりませんでした。</string>
+
+    <!-- 乘客-行李url-->
+    <string name="trip_detail_passenger_bag_url">https://www.china-airlines.com/jp/jp/booking/manage-booking/reservation-booking-inquiry</string>
+
+    <string name="trip_detail_passenger_free_bag_title">無料受託手荷物</string>
+    <string name="trip_detail_passenger_add_excess_bag_title">前払い超過手荷物</string>
+    <string name="trip_detail_passenger_add_bag_btn">楽GO</string>
+    <string name="trip_detail_passenger_add_excess_bag_btn">追加購入</string>
+    <string name="trip_detail_passenger_bag_ewallet">クーポン</string>
+    <string name="trip_detail_passenger_bag_eb_total">合計金額</string>
+    <string name="trip_detail_passenger_bag_pay_title">お支払い情報</string>
+    <string name="trip_detail_passenger_bag_select_pay_mode">お支払方法をお選びください。</string>
+    <string name="trip_detail_passenger_bag_credit_card_data">クレジットカード情報</string>
+    <string name="trip_detail_passenger_bag_credit_card">クレジットカード</string>
+    <string name="trip_detail_passenger_bag_confirm_pay">購入する</string>
+    <string name="trip_detail_passenger_bag_pay_final_page">お支払いの確認</string>
+    <string name="trip_detail_passenger_bag_success_title">支払完了</string>
+    <string name="trip_detail_passenger_bag_fail_title">支払いが完了できませんでした。</string>
+    <string name="trip_detail_passenger_bag_success_msg">クーポンは‘搭乗券＆マイウォレット’に保存されました。</string>
+    <string name="trip_detail_passenger_bag_pay_total">合計金額:</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_bag">数量:</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_price">金額:</string>
+
+    <string name="join_member">会員になる</string>
+    <string name="gps_press_enable_gps_service">GPSの位置情報サービスを適用する</string>
+    <string name="rate_this_trip">アンケート</string>
+    <string name="rate_this_trip_info_url">https://mobile30.china-airlines.com/mobile30/redirurl/quesrule.aspx?lang=JP</string>
+
+
+    <string name="not_depart_yet">はまだ到着していません</string>
+    <string name="global_service_hotline">海外支店</string>
+    <string name="city">都市名を入力してください(e.g.台北)</string>
+    <string name="international_call">国際電話</string>
+    <string name="international_call_msg">ご旅行中での通話は追加の料金やローミング代が発生する可能性がありますのでご注意下さい。\n\n</string>
+    <string name="gps_positioning">GPS測位</string>
+    <string name="gps_position_fail">GPS測位が失敗しました</string>
+    <string name="gps_permissions_msg">位置情報の同意が必要です。設定にてGPS位置サービスのアクセスを許可して下さい。</string>
+    <!-- 待提供 -->
+    <string name="trip_detail_home_page_trip_track">ロック</string>
+    <string name="trip_detail_home_page_trip_tracked">ロックしました</string>
+    <string name="trip_detail_home_page_trip_finish">お選びになった便はすでに期限切れのため、ホームページへのロックができません。</string>
+
+    <!-- Check-in -->
+    <string name="check_in_select_flight">フライトの選択</string>
+    <string name="check_in_dabgerous_goods_info">荷物のご案</string>
+    <string name="check_in_have_flight">チェックイン (%1$s ➞ %2$s)</string>
+    <string name="check_in_completed">チェックイン完了</string>
+    <string name="cancel_check_in">チェックインを取消</string>
+    <string name="cancel_check_in_flight">チェックインを取消 (%1$s ➞ %2$s)</string>
+    <string name="boarding_with_qrcode">モバイル搭乗券</string>
+    <string name="scan_the_qrcode_boarding_pass">チェックインが完了しました。ホームページのQRコードで、モバイル搭乗券を表示します。</string>
+    <string name="dont_remind_me_again">わかりました。リマインドは入りません。</string>
+    <string name="check_in_boarding_pass">搭乗券</string>
+    <string name="back_to_trip_detail">予約管理へ戻る</string>
+    <string name="cancellation_completed">取消完成</string>
+    <string name="prohibit_product_claim_notice">上記手荷物に関する規定の内容を理解し、遵守することに同意します。</string>
+    <string name="prohibit_product_claim_notice_underline">危険物のインフォメーション</string>
+    <string name="get_boarding_pass_at_airport">搭乗券を空港で受け取る</string>
+    <string name="due_to_local_government_regulations">空港のカウンターまでお越しください。</string>
+    <string name="please_select_flight">フライトをご選択ください</string>
+    <string name="cancel_check_in_alert_msg">E-チェックインを取り消しますか？</string>
+    <string name="check_in_failure">E-チェックインが失敗しました。空港のチェックインカウンターで搭乗手続を完了してください。</string>
+    <!--<string name="can_not_add_same_pnr_id">同じ予約番号を入力することはできません</string>-->
+    <string name="can_not_find_any_passenger">新規のお客様の情報が見つかりません。</string>
+    <string name="please_select_passenger">お客様をご選択ください</string>         						<!--ADD 20160801-->
+    <string name="boardingpass_print">印刷</string>
+    <!--ADD 20160805-->
+    <string name="check_in_pnr_passenger_over_limit">客様の人数は9名様を越えます</string>
+    <string name="check_in_seat_allocated_erro">座席配置に異常あり、受付カウンターまでお越しください。</string>
+    <string name="check_in_creditcard_verification">カウンターもしくゲート前でクレジットカードの認証をお願いいたします。</string>
+    <string name="is_there_a_green_card">米国の永住権保持者</string>
+	<!--ADD 20161020-->
+	<string name="CancelCheckIn_SuccessMsg">チェックイン取消を完了しました。</string>
+	
+	
+	<!-- 選餐 -->
+    <string name="select_meal_flight">食事の選択 (%1$s ➞ %2$s)</string>
+    <string name="SelectMeal_Label_PleaseSelectBreakfast">朝食をお選びください。</string>
+    <string name="SelectMeal_Label_PleaseSelectLunch">あなたの昼食を選択してください</string>
+    <string name="SelectMeal_Label_PleaseSelectDinner">あなたの夕食を選択してください</string>
+                            <string name="SelectMeal_Label_PleaseSelectR">あなたの軽食を選択してください</string>
+    <string name="breakfast">朝食</string>
+    <string name="lunch">ランチ</string>
+    <string name="dinner">ディナー</string>
+    <string name="normal_meal">ノーマルミール(通常食）</string>
+    <string name="vegetarian_exclusive">ベジタリアンミール</string>
+    <string name="unselected">選択していません</string>
+    <string name="meal_selection_notice">事前のお食事選択のお知らせ</string>
+    <string name="meal_selection_notice_title">プレミアムビジネス及びビジネスクラスのお客様</string>
+    <string name="your_meal_selection_is_completed">食事の選択は完了しました</string>
+    <string name="vegetarian_exclusive_summary">台北桃園からの出発便では、チャイナエアラインが厳選した台湾の食材を使った、視覚も味覚も楽しめる東洋風創作ヘルシー菜食メニューを五種類ご用意しております。</string>
+    <string name="SelectMeal_NotSelectedMeal">夕食の選択がまだです。次へ進みますか？</string>
+    <string name="SelectMeal_NotSelectedPassenger">お客様の選択がまだです。</string>
+    <string name="SelectMeal_delete_meal">ミールを取り消しますか？</string>
+
+    <!-- 選位 -->
+    <string name="select_seat">座席の選択</string>
+    <string name="select_seat_flight">座席の選択 (%1$s ➞ %2$s)</string>
+    <string name="next_flight">次のフライト</string>
+    <string name="seat_selection_result">座席選択の結果</string>
+    <string name="your_seat_selection_is_completed">座席の選択は完了しました</string>
+    <string name="your_seat">お座席</string>
+    <string name="partner_seat">コンパニオン席</string>
+    <string name="available">選択可能</string>
+    <string name="occupied">指定できないお座席</string>
+    <string name="upper_deck">上</string>
+    <string name="lower_deck">メイン</string>
+    <string name="button_seat_confirm">確認・変更する</string>
+
+    <!-- boarding pass / ewallet -->
+    <string name="boarding_pass_ewallet_title">搭乗券＆マイウォレット</string>
+    <string name="boarding_pass_tab_boarding_pass">搭乗券</string>
+    <string name="boarding_pass_tab_services">追加の領収書</string>
+    <string name="boarding_pass_tab_coupon">クーポン</string>
+    <string name="economy">エコノミー</string>
+    <string name="need_to_book_hsr_ticket">HSRチケットの予約は必要ですか？</string>
+    <string name="extra_services">追加のサービス</string>
+    <string name="extra_services_award_no">特典番号</string>
+    <string name="extra_services_flight_number">フライト番号</string>
+    <string name="ewallet_notice">注意：このクーポンは航空券にのみ使用可能です。発券に関するご質問はチャイナ エアラインへ。</string>
+    <string name="id">ID</string>
+    <string name="password">パスワード</string>
+    <string name="lounge_area">VIPラウンジ‐ビジネスエリア</string>
+    <string name="date">日期</string>
+    <string name="valid_date">期限：</string>
+    <string name="enjoy_discount">機内免税品の%1$s%2$s割引プロモーション</string>
+    <string name="booking_no">予約番号</string>
+    <string name="seq">番号：</string>
+    <string name="eb_seq">番号</string>
+    <string name="discount">ディスカウント：</string>
+    <string name="extra_services_have_not_booked_a_hsr_ticket">HSRチケットの予約は必要ですか？</string>
+    <string name="booking_cabin">予約クラス</string>
+    <string name="bag_receipt">受託手荷物情報\n(非公式領収書)</string>
+    <string name="now_no_have_bag">受託手荷物がありません</string>
+    <string name="bag_to">目的地:</string>
+
+    <string name="purchase_date">購入日</string>
+    <string name="eb_amount">金額</string>
+    <string name="eb_flight_info">適用するフライト</string>
+    <string name="eb_bag">数量</string>
+    <string name="extra_baggage">前払い受託手荷物</string>
+    <string name="eb_extra_baggage">前払い超過手荷物</string>
+
+    <string name="boarding_pass_extra_services_wifi_notice">
+        "お知らせ
+        １、機内Wi-Fiは現在B777/A350機のみにサービスを提供しています。
+        ２、機内Wi-Fiのサービス券をご購入後は払い戻しができません。
+        ご質問がございましたらWiFiOnboard@China-Airlines.comへご連絡ください。"</string>
+    <string name="boarding_pass_extra_services_vip_notice">
+        お知らせ.\n
+        • チャイナ エアラインラウンジクーポンのご購入後は日付の変更や払い戻しを承ることができません。</string>
+
+    <string name="boarding_pass_extra_services_thsr_notice">
+        高鉄切符受取時の注意点：\n
+        ● 高鉄の出発時刻４０分前までに予約時に使用したID番号（台湾籍以外の方はパスポート番号）及び予約番号をご提示下さい。高鉄切符は提携のコンビニエンスストア（手数料10台湾ドルが別途かかります）、営業時間中の高鉄駅の窓口、発券機で受取可能です。\n
+        ● その他に関しまして高鉄カスタマーサービスホットライン412-9000（携帯電話：02-4129000）までお問合せ下さい。
+    </string>
+    <string name="boarding_pass_expired">（期限切れ）</string>
+    <string name="family_couch">ファミリーカウチ</string>
+    <string name="boarding_pass_e_miscellaneous_no">EMD番号</string>
+    <string name="boarding_pass_item">サービス項目</string>
+    <string name="boarding_pass_flight_no">フライト番号.</string>
+    <string name="boarding_pass_order_no">予約番号.</string>
+    <string name="boarding_pass_authorization_code">認証コード</string>
+    <string name="boarding_pass_date_time">日にち/時間</string>
+    <string name="boarding_pass_train_class">列車番号/クラス</string>
+    <string name="boarding_pass_departure_station">出発駅</string>
+    <string name="boarding_pass_airport">空港</string>
+    <string name="boarding_pass_terminal">ターミナル:</string>
+    <string name="boarding_pass_gate">搭乗口:</string>
+    <string name="boarding_pass_seat_no">座席</string>
+    <string name="boarding_pass_wifi_expiry_date">使用期限</string>
+    <string name="boarding_pass_wifi_item">機内Wi-Fiのサービス項目</string>
+
+    <!-- Manage Miles -->
+    <string name="manage_miles">マイルの管理</string>
+    <string name="point_balance">マイレージのバランス</string>
+    <string name="update_xxx_ago">%1$s日前に更新されました</string>
+    <string name="miles_activity">マイレージの詳細</string>
+    <string name="reclaim_miles">マイレージの訂正</string>
+    <string name="miles_overdue_in_6_months">マイレージの有効期限は6ヶ月以内</string>
+    <string name="manage_miles_miles_unit">マイル</string>
+    <string name="due_date">有効期限</string>
+    <string name="redeem_miles">マイレージの交換</string>
+    <string name="you_are_eligible_miles">マイレージの交換が可能です</string>
+    <string name="redeem_now">今すぐ交換</string>
+    <string name="need_xxx_miles">%1$d マイル必要です</string>
+    <string name="more">さらに</string>
+    <string name="web_only">ウェブのみ</string>
+    <string name="managemiles_tab_accumulation">獲得した</string>
+    <string name="managemiles_tab_redeem">交換した</string>
+    <string name="managemiles_tab_award_transfer">特典譲渡</string>
+    <string name="description_accumulation_date">説明/積算した日</string>
+    <string name="awards_redeem_date">特典/交換した日</string>
+    <string name="awards_transfer_date">特典/譲渡した日</string>
+    <string name="cabin">キャビン</string>
+    <string name="ticket_issued">使用済み特典</string>
+    <string name="member_detail">個人情報の詳細</string>
+    <string name="name">会員名</string>
+    <string name="member_no">会員番号</string>
+    <string name="email">Eメール</string>
+    <string name="update_email_to_my_personal">個人情報の詳細のEメールを更新する</string>
+    <string name="first_flight_detail">%1$s 番目のフライト詳細</string>
+    <string name="transfer">譲渡</string>
+    <string name="upgrade_awards">アップグレード特典</string>
+    <string name="ticket_awards">特典航空券</string>
+    <string name="awards_transfer">特典譲渡</string>
+    <string name="awards_received">特典譲受</string>
+    <string name="award_no">核奖号码</string>
+    <string name="add_more_flight">フライトの追加</string>
+    <string name="my_miles">マイルの管理</string>
+
+    <string name="departure_airport">出発空港</string>
+    <string name="arrival_airport">到着空港</string>
+    <string name="departure_date_only_within_6_months">出発日（6ヶ月以内）</string>
+    <string name="notice">注意</string>
+    <string name="notice_message_content_1">1.過去6ヶ月以内に、チャイナエアライン/マンダリン航空運航の航空券（航空券番号の最初の3桁が297/803の航空券）でご利用になられたマイルが積算されていない場合は、必要事項をご入力の上、お申込みください。</string>
+    <string name="notice_message_content_2">2.予約クラスがG/X/O/A/S/Lの航空券はマイル積算の対象外となります。</string>
+    <string name="reclaim_completed_message">お申込みいただいたマイルは、4週間以内に口座へ加算されます。</string>
+    <string name="back_to_manage_miles">マイルの管理へ戻る</string>
+    <string name="your_miles_has_been_update">マイルが更新されました</string>
+    <string name="miles_have_been_imported_to_your_account">%1$s (%2$s-%3$s)で%4$s マイルが加算されました。</string>
+    <string name="manage_miles_nominee">譲渡受取人</string>
+    <string name="manage_miles_cardtype">会員種別</string>
+    <string name="manage_miles_cardnumber">カード番号</string>
+    <string name="manage_miles_ticket_number">航空券番号</string>
+
+    <!-- Personal Detail -->
+    <string name="personal_detail">個人情報の詳細</string>
+    <string name="personal_valid_date">階級の有効期限：</string>
+    <string name="qrcode">QRコード</string>
+    <string name="flights">フライト</string>
+    <string name="miles_progress">マイレージの概要</string>
+    <string name="miles_progress_notice_msg">会員資格のアップグレード及び更新には、「フライトマイル」、「ビジネスクラスのフライト数」、「加重トリップカウント数」のいずれかの条件を満たした上で、チャイナエアライン/マンダリン航空が自社運航する国際線定期便にて6以上の加重トリップカウントを獲得している事が必要となります。新しい資格につきましては、資格条件を達成後、アップグレードの場合は翌月1日、更新の場合は期間満了の翌月１日より有効となります。</string>
+    <string name="miles_completed">積算マイル</string>
+    <string name="renewal">更新</string>
+    <string name="personal_detail_due">有効期限：</string>
+    <string name="upgrade">昇格</string>
+    <string name="upgrade_tag">備考：積算対象は、チャイナ エアラインおよびマンダリン航空の自社運航便のビジネスクラス搭乗のみ</string>
+    <string name="profile">個人情報の詳細</string>
+    <string name="passport_chinese_name">旅券の名前（中国語）：</string>
+    <string name="identity_card_no">IDカード番号：</string>
+    <string name="date_of_birth">生年月日：</string>
+    <string name="passport_no">パスポート番号：</string>
+    <string name="personal_email">Eメール:</string>
+    <string name="mobile_phone">電話番号:</string>
+    <string name="social_network">ソーシャルネットワーク</string>
+    <string name="facebook">Facebook</string>
+    <string name="google_plus">Google+</string>
+    <string name="social_network_facebook">Facebook:</string>
+    <string name="social_network_google_plus">Google:</string>
+    <string name="my_apis">渡航書類</string>
+    <string name="passport">パスポート</string>
+    <string name="usa_permanent_resident_card">米国の永住権</string>
+    <string name="companions_apis">同行者の渡航書類</string>
+    <string name="advance_passenger_information_system">(事前旅客情報システム)</string>
+    <string name="member_card_detail">会員カード詳細</string>
+    <string name="this_qrcode_contains_your_personal_infor">このQRコードは会員カード詳細も含まれています</string>
+    <string name="member_card_type">会員種別</string>
+    <string name="member_card_number">会員番号</string>
+    <string name="congratulations_eligible_to_renew_gold_membership">おめでとうございます！会員資格が更新されました。</string>
+    <string name="congratulations_eligible_to_upgrade_to_emerald_membership">おめでとうございます！会員資格が昇格されました。</string>
+    <string name="completed">資格を有する</string>
+    <string name="make_you_login_quickly">タップしてログインをする</string>
+    <string name="make_you_login_quickly_notice_msg">SNSのアカウントを用いて、サイトに簡単に会員登録・ログインができます。</string>
+    <string name="connected">接続</string>
+    <string name="disconnect">接続しない</string>
+    <string name="connect_to_others">他に接続する</string>
+    <string name="change_has_been_saved_successfully">変更は無事に保存されました</string>
+    <string name="vip_lounge_content">VIPラウンジは、リラックスした雰囲気と食事サービスを提供しています。</string>
+    <string name="not_in_use">は使用されません</string>
+    <string name="nominator">特典は未使用</string>
+    <string name="event_bonus">イベントボーナス</string>
+    <string name="excess_baggage">お荷物</string>
+    <string name="vip_lounge_use">VIPラウンジの使用法</string>
+    <!-- wireframe P.103, /0312新增-->
+    <string name="disconnect_social_account">SNSアカウントとの連動をやめる</string>
+    <string name="are_you_sure_you_want_to_disconnect">%1$sアカウントとの連動をやめますか？</string>
+    <string name="connecting_to_social_account_makes_you_log_in_more_easier">SNSアカウントを使って簡単に会員登録やログインができます</string>
+    <!-- wireframe P.103, /0312新增-->
+    <string name="not_connect">接続なし</string>
+    <string name="tai_bao_cheng">MTPを</string>
+    <string name="mainland_residents_traveling_to_taiwan_pass">台湾峠に旅行する本土の住民</string>
+    <string-array name="apis_document_list">
+        <item name="passport">パスポート</item>
+        <item name="usa_permanent_resident_card">米国の永住権</item>
+        <item name="tai_bao_cheng">MTPを</item>
+        <item name="mainland_residents_traveling_to_taiwan_pass">台湾峠に旅行する本土の住民</item>
+    </string-array>
+    <string name="card_type_gray">ダイナスティカード</string>
+    <string name="card_type_gold">ゴールドカード</string>
+    <string name="card_type_green">エメラルドカード</string>
+    <string name="card_type_blue">パラゴンカード</string>
+
+            <string name="back_to_personal_detail">個人情報へ戻る</string>
+
+    <!-- APIS -->
+    <string name="no_apis">渡航書類なし</string>
+    <string name="add_apis">渡航書類を追加する</string>
+    <string name="no_companions_apis">無同行旅客的旅行證件</string>
+    <string name="add_apis_notice">一部の国/地域では、追加の渡航書類情報（APIS）の提供が必要です。スピーディで簡単にチェックインするためにAPISを保存することができます。</string>
+    <string name="document_detail">書類の詳細</string>
+    <string name="input_apis">渡航書類の入力</string>
+    <string name="use_saved_apis">渡航書類を適用</string>
+    <string name="fill_new_form_apis">新しい渡航文書を入力</string>
+    <string name="male">男性</string>
+    <string name="female">女性</string>
+    <string name="resident_country">お住まいの国/地域</string>
+    <string name="document_type">渡航書類のタイプ</string>
+    <string name="document_number">渡航書類の番号</string>
+    <string name="country_of_issuance">発行国/地域</string>
+    <string name="date_of_expiry">有効期限</string>
+    <string name="apis_save_change">渡航書類の変更の保存</string>
+    <string name="apis_add_this_travel_doc_to_my_account">アカウントに渡航書類を追加する</string>
+    <string name="addapis_label_address">目的地の住所(米国へ入国する際に必要です)</string>
+    <string name="city_stat">州／県名</string>
+    <string name="city_county_district">都市名(市町村名)</string>
+    <string name="street">番地名</string>
+    <string name="zip_code">郵便番号</string>
+    <string name="save">保存</string>
+    <!-- wireframe P.105, /0312新增-->
+    <string name="delete_apis_title">渡航書類情報を削除</string>
+    <string name="delete_apis_msg">渡航書類情報を削除すると復元することができなくなります\n渡航書類情報を削除しますか</string>
+    <string name="delete_apis_delete">削除</string>
+    <string name="delete_apis_cancel">キャンセル</string>
+    <!-- wireframe P.105, /0312新增-->
+
+    <string name="miles_percent">%1$s / %2$s マイル</string>
+    <string name="flights_percent">%1$s / %2$s フライト</string>
+    <string name="account_security">アカウントのセキュリティ</string>
+    <string name="change_password"><u>パスワードを変更</u></string>
+    <string name="change_password_prompt_msg">以下の詳細をご入力下さい。Eメールへパスワードが届きます。</string>
+    <string name="old_password">*現在のパスワード</string>
+    <string name="new_password">*新しいパスワード</string>
+    <string name="re_enter_new_password">*新しいパスワードを再入力</string>
+    <string name="passwords_are_different">パスワードが違います。</string>
+    <string name="change_password_completed_message">パスワードが正常に変更され、</string>
+    <string name="apply_password">パスワードを登録</string>
+
+    <string-array name="miles_progress_pull_down">
+        <item name="miles_completed">積算マイル</item>
+        <item name="first_class_flight_completed">ビジネスクラストリップカウント</item>
+        <item name="qualifed_weighted_trips_completed">トリップカウント</item>
+        <item name="weighted_trip_counts_of_ci_ae">CI / AE 自社運航便トリップカウント</item>
+    </string-array>
+
+    <string name="editapis_alert_title_save_and_upload_your_apis">渡航情報を保存してアップロードする</string>
+    <string name="editapis_alert_title_save_and_upload_apis">渡航情報を保存してアップロードする</string>
+    <string name="editapis_alert_message_save_and_upload_your_apis">渡航情報を保存してアップロードしますか？</string>
+    <string name="editapis_alert_message_do_not_save_and_upload_your_apis">渡航情報を保存しますか？</string>
+
+
+<!--ADD 20160801-->
+    <string name="apis_address_country">国/地域</string>
+	
+	
+<!-- Flight status -->
+    <string name="by_route">フライトのルート</string>
+    <string name="by_flight">フライト番号</string>
+    <string name="from">出発空港</string>
+    <string name="to">到着空港</string>
+    <string name="departure_date">出発日</string>
+    <string name="arrival_date">到着日</string>
+    <string name="search">検索</string>
+    <string name="recent">最近の検索</string>
+    <string name="all_airport">全ての空港</string>
+    <string name="flight_status_flight_result">運行状況</string>
+    <string name="actual">実際</string>
+    <string name="scheduled">スケジュール</string>
+    <string name="estimated_time">予定時刻</string>
+    <string name="in_flight">フライト中</string>
+    <string name="no_matching_result_found_title">申し訳ありませんが、一致する結果が見つかりませんでした。</string>
+    <string name="no_matching_result_found">以下の結果が検索に最も近い日にちです。</string>
+    <string name="track">追跡</string>
+    <string name="tracked">追跡中</string>
+    <string name="flight_status_arrived_on_time">到着</string>
+    <string name="flight_status_delay">遅延</string>
+    <string name="flight_status_on_time">予定通り</string>
+
+    <string name="check_the_tracking">フライト追跡中</string>
+    <string name="check_the_tracking_notice">追跡中のフライトは、ホームページ上に表示されます。同時に3便まで追跡することができます。</string>
+    <string name="tracked_flight_status">フライト追跡中</string>
+    <string name="cabin_class">キャビンクラス:</string>
+    <string name="fly_time">飛行時刻 :</string>
+    <string name="fly_date">出発日:</string>
+    <string name="time_in_flight">飛行時間:</string>
+    <string name="time_remaining">到着地までの時間:</string>
+        <!-- about china airlines -->
+    <string name="contact_us">お問い合わせ</string>
+    <string name="fb_message">顧客サービス(Taiwan Only)</string>
+    <string name="about_us">チャイナ エアラインについて</string>
+    <string name="china_airlines_instroduction">弊社について</string>
+    <string name="china_airlines_app">チャイナ エアラインApp</string>
+    <string name="partner_skyteam">スカイチームパートナーズ</string>
+    <string name="route_map_3d">スカイチームルートマップ</string>
+    <string name="ticketing_fax">発券ファックス番号：</string>
+    <string name="counter_service">カウンターサービス：</string>
+    <string name="closed_on_holidays">祝祭日休業</string>
+    <string name="welcome_message_notice">チャイナエアラインをご紹介させていただきます。チャイナ エアラインYouTubeチャンネルをご覧ください。</string>
+
+    <string name="about_ai_service"></string>
+    <string name="global_customer_service">海外支店</string>
+    <string name="call">コール</string>
+    <string name="welcome_to_china_airlines">チャイナ エアラインへようこそ</string>
+    <string name="about_get_directions">ナビ開始</string>
+    
+    <string name="app_eshopping_name">華航 Sky Boutique</string>
+    <string name="app_eshopping_desc">華航 Sky Boutiqueはスムーズで便利なモバイルサービスです。</string>
+    <string name="app_exquisitetravel_name">ダイナスティパッケージモバイルプラットフォーム</string>
+    <string name="app_exquisitetravel_desc">ダイナスティパッケージのモバイルプラットフォームでは観光情報が満載。</string>
+
+    <!-- Setting -->
+    <string name="language_setting">言語設定(Language Setting)</string>
+    <string name="flight_notification">プッシュ通知</string>
+    <string name="language_tw">繁體中文</string>
+    <string name="language_cn">简体中文</string>
+    <string name="language_en">英文</string>
+    <string name="language_jp">日本語</string>
+    <string name="language_ge">Deutsch</string>
+
+    <!-- TimeTable -->
+    <string name="timetable_title">タイムテーブル</string>
+    <string name="round_trip">往復</string>
+    <string name="one_way">片道</string>
+    <string name="select_departure_date_title">選択出発日</string>
+    <string name="select_arrival_date_title">選択帰国日</string>
+    <string name="Departure">出発</string>
+    <string name="Return">帰国</string>
+    <string name="aircraft_type">機材:</string>
+    <!--MARK: 選擇機場(Select Airport)-->
+    <string name="select_departure_airport_title">出発空港の選択</string>
+    <string name="select_arrival_airport_title">到着空港の選択</string>
+    <string name="select_airport_section_recent">最近の検索</string>
+    <string name="select_airport_section_all_airports">全ての空港</string>
+    <string name="select_airport_section_airports_nearby">空港近くの</string>
+    <string name="depart_on" >出発日</string>
+
+    <string name="select_airport_search">空港名/コード</string>
+    <string name="select_error_msg">お選び下さい。</string>
+    <string name="departure_date_Mon">月</string>
+    <string name="departure_date_Tue">火</string>
+    <string name="departure_date_Wed">水</string>
+    <string name="departure_date_Thu">木</string>
+    <string name="departure_date_Fri">金</string>
+    <string name="departure_date_Sat">土</string>
+    <string name="departure_date_Sun">日</string>
+
+                        <string name="no_match_data">情報は見つかりませんでした</string>
+    <!-- book ticket -->
+    <string name="book_ticket">航空券予約</string>
+    <string name="return_date">帰国日</string>
+    <string name="passengers">旅客</string>
+    <string name="adults">大人</string>
+    <string name="youngadults">青少年</string>
+    <string name="children">子供</string>
+    <string name="infants">幼児</string>
+    <string name="passengers_and_booking_rules"><u>予約のインフォメーション</u></string>
+    <string name="find_flight">フライトの検索</string>
+    <!-- wireframe P.127, /0312新增-->
+    <string name="book_ticket_more_options">複数都市の予約、<u>もしくはストップオーバー</u></string>
+    <string name="book_ticket_more_options_underline">もしくはストップオーバー</string>
+    <string name="book_ticket_max_number_of_passengers">一度にご予約できるお客様の合計人数は9名様までです</string>
+    <string name="book_ticket_max_number_of_adults">一度にご予約できる大人の合計人数は4名様までです</string>
+    <string name="book_ticket_max_number_of_children">一度にご予約できる小児の合計人数は3名様までです</string>
+    <string name="book_ticket_max_number_of_infants">幼児の人数は大人の人数を超えられません</string>
+    <!-- wireframe P.127, /0312新增-->
+
+    <string-array name="book_ticket_cabin_list">
+        <item>エコノミ</item>
+        <item>プレミアムエコノミークラス</item>
+        <item>ビジネス</item>
+    </string-array>
+    <string name="add_multi_flight">フライト (%1$d/%2$d)</string>
+    <string name="add_flight_info_alert_msg">新しいフライトを追加する前に、上記の必要な項目を追加してください</string>
+
+            <string name="book_ticket_error_1">選択された出発時刻は先ほどのフライトの到着時刻よりも早い為、再度ご選択下さい。</string>
+    <string name="book_ticket_error_2">両便（出発/到着空港）が重複しています。再度ご選択下さい。</string>
+    <string name="book_ticket_error_3">お客様の人数をご入力下さい。</string>
+    <string name="book_ticket_error_4">お客様の人数が規定と違います。再度ご選択下さい。</string>
+    <string name="book_ticket_error_5">出発空港は到着空港が重複しています。</string>
+    <string name="book_ticket_error_6">到着時刻が出発時刻よりも早い為、再度選択して下さい。</string>
+    <string name="remind">リマインダー</string>
+    <string name="bookticket_cabin_class">キャビンクラス</string>
+    <string name="bookticket_promotion_code_title">プロモーションコード</string>
+    <string name="bookticket_promotion_code">プロモーションコード（オプション）</string>
+    <string name="bookticket_corporate_id_title">法人会員ID</string>
+    <string name="bookticket_corporate_id_code">法人会員ID（オプション）</string>
+    <string name="bookticket_promotion_code_msg">プロモーション用のお座席には限りがあるため、フライトによってはご利用いただけない場合があります。その他割引・サービスとの併用は不可です。幼児、子供料金の航空券には適用できません。</string>
+    <!-- Extra Services-->
+    <string name="extra_services_msg">チャイナエアラインはモバイルAPPを通じて、豊富なサービスの提供によりお客様の旅をサポートします。</string>
+
+    <!-- Extra Services card title-->
+    <string name="extra_service_title_extra_baggage">Prepaid Excess Baggage</string>
+    <string name="extra_service_title_family_couch">ファミリーカウチ</string>
+    <string name="extra_service_title_wifi">機内Wi-Fi</string>
+    <string name="extra_service_title_hsr">高鉄予約発券システム</string>
+    <string name="extra_service_title_eco_travel">ECO Travel Carbon Offsetting</string>
+
+    <!-- Extra Services card title-->
+    <string name="extra_service_content_extra_baggage">You may pre-purchase additional baggage allowance online at a discounted price, 24 hours prior to your flight departure time.</string>
+    <string name="extra_service_content_family_couch">チャイナエアラインはアジアで唯一ファミリーカウチを提供している航空会社です。ファミリーカウチなら長距離飛行でも機内を快適にお過ごし頂けます。</string>
+    <string name="extra_service_content_wifi">機内ではWi-Fiサービスをご提供しています。空の上でインターネットをお楽しみいただけます。</string>
+    <string name="extra_service_content_hsr">航空券購入後、当日割引価格で高鉄チケットをご購入いただけます。</string>
+    <string name="extra_service_content_eco_travel">China Airlines invites you to take part in carbon offsetting to achieve carbon neutrality for your flight.</string>
+
+    <!-- Extra Services link-->
+    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/jp/jp/booking/manage-booking/reservation-booking-inquiry</string>
+    <string name="extra_services_family_couch_link">https://calee.china-airlines.com/FC_DOT/Agreement.aspx?lang=en-us&#038;country=jp&#038;locale=jp</string>
+    <string name="extra_services_wifi_link">https://calde.china-airlines.com/Flywifi/Agreement.aspx?lang=en-us&#038;country=jp&#038;locale=jp</string>
+    <string name="extra_services_hsr_link">https://calee.china-airlines.com/CITHSR_AMA?country=tw&#038;locale=en</string>
+    <string name="extra_services_eco_travel_link">https://china-airlines.co2analytics.com/home</string>
+
+    <string name="explore_destination_link">https://www.china-airlines.com/jp/jp/discover/promotion</string>
+    <string name="sidemenu_promotions_link">https://www.china-airlines.com/jp/jp/discover/promotion</string>
+
+
+    <!-- weather -->
+    <string name="weather_now">今</string>
+    <string name="weather_currently">天気:</string>
+    <string name="weather_humidity">湿度:</string>
+    <string name="weather_visibility">視界:</string>
+    <string name="weather_visibility_unit">キロメートル</string>
+
+    <string name="weather_day_Mon">月</string>
+    <string name="weather_day_Tue">火</string>
+    <string name="weather_day_Wed">水</string>
+    <string name="weather_day_Thu">木</string>
+    <string name="weather_day_Fri">金</string>
+    <string name="weather_day_Sat">土</string>
+    <string name="weather_day_Sun">日</string>
+
+    <!-- weather code -->
+    <string name="weather_code_0">竜巻</string>
+    <string name="weather_code_1">熱帯暴風雨</string>
+    <string name="weather_code_2">ハリケーン</string>
+    <string name="weather_code_3">激しい雷雨</string>
+    <string name="weather_code_4">雷雨</string>
+    <string name="weather_code_5">雨時々雪</string>
+    <string name="weather_code_6">雨時々みぞれ</string>
+    <string name="weather_code_7">雪時々みぞれ</string>
+    <string name="weather_code_8">氷霧</string>
+    <string name="weather_code_9">霧雨</string>
+    <string name="weather_code_10">凍雨</string>
+    <string name="weather_code_11">にわか雨</string>
+    <string name="weather_code_12">にわか雨</string>
+    <string name="weather_code_13">にわか雪</string>
+    <string name="weather_code_14">小雪</string>
+    <string name="weather_code_15">ふぶき</string>
+    <string name="weather_code_16">雪</string>
+    <string name="weather_code_17">ひょう、あられ</string>
+    <string name="weather_code_18">みぞれ</string>
+    <string name="weather_code_19">ダスト</string>
+    <string name="weather_code_20">霧</string>
+    <string name="weather_code_21">もや、かすみ</string>
+    <string name="weather_code_22">もや、かすみ</string>
+    <string name="weather_code_23">暴風</string>
+    <string name="weather_code_24">強風</string>
+    <string name="weather_code_25">冷たい気候</string>
+    <string name="weather_code_26">曇り</string>
+    <string name="weather_code_27">おおよそ曇り（夜間）</string>
+    <string name="weather_code_28">おおよそ曇り（日中）</string>
+    <string name="weather_code_29">曇り（夜間）</string>
+    <string name="weather_code_30">曇り（日中）</string>
+    <string name="weather_code_31">晴れ（夜間）</string>
+    <string name="weather_code_32">晴れ</string>
+    <string name="weather_code_33">晴れ（夜間）</string>
+    <string name="weather_code_34">晴れ（日中）</string>
+    <string name="weather_code_35">雨時々ひょう</string>
+    <string name="weather_code_36">暑い気候</string>
+    <string name="weather_code_37">局地的に雷雨</string>
+    <string name="weather_code_38">ところにより雷雨</string>
+    <string name="weather_code_39">ところにより雷雨</string>
+    <string name="weather_code_40">ところにより雨</string>
+    <string name="weather_code_41">大雪</string>
+    <string name="weather_code_42">ところにより雪</string>
+    <string name="weather_code_43">大雪</string>
+    <string name="weather_code_44">晴れ時々曇り</string>
+    <string name="weather_code_45">激しい雷雨</string>
+    <string name="weather_code_46">にわか雪</string>
+    <string name="weather_code_47">局地的に激しい雷雨</string>
+    <string name="weather_code_3200">有効ではありません</string>
+
+
+    <string name="gps_connection_exception_warning">GPSの接続例外</string>
+    <string name="roaming_additional_fees_warning">ご旅行中での通話は追加の料金やローミング代が発生する可能性がありますのでご注意下さい。</string>
+    <string name="download_print_reminder">チャイナ エアラインウェブサイトにてダウンロードして下さい。</string>
+    <string name="book_ticket_multi_stop_flight">複数都市のフライト %1$d</string>
+
+    <string name="please_fill_all_text_field_that_must_to_fill">すべての必須項目をご入力下さい。</string>
+    <string name="not_check_agree">関連する利用規約に同意の場合は、チェックボックスにチェックを入れてください。</string>
+    <string name="selected_date_is_incorrect">選択不可日をお選びです。</string>
+    <string name="trips_detail_premium_economy">プレミアムエコノミークラス</string>
+    <string name="manage_miles_not_find">マイレージ情報は見つかりませんでした。</string>
+    <string name="download_airport_data_fail">空港インフォメーションのダウンロードに失敗いたしました</string>
+    <string name="trip_detail_can_not_check_in">E-チェックインは現在ご利用できません。</string>
+    <string name="out_of_memory_error">容量が不足しています。すぐに終了し、再起動しますか？</string>
+
+    <string name="system_time_out">接続時間が過ぎています。</string>
+    <string name="pnr_not_found">情報は見つかりませんでした</string>
+	<string name="trip_detail_can_not_cancel_check_in">E-チェックインの取消ができません。</string>
+    <string name="alert_cannot">できない</string>
+    <string name="alert_select_meal">食事を選択</string>
+    <string name="alert_select_seat">座席を選択</string>
+    <string name="textfield_placeholder_invalidformatmesseage">%1$sの欄のフォーマットが違います。</string>
+    <string name="error">失敗</string>
+
+    <string name="google_play_error">エラーが発生しました。"+
+"Google Playがインストールされており、お使いのデバイスがインターネットに接続されていることをご確認ください。"+
+”この問題が解決しない場合は開発元へご連絡ください。</string>
+<string name ="no_checkin_flight_available">E-チェックイン対象フライトがありません。</string>
+
+    <string name="flight_number">フライト番号</string>
+    <string name="sign_up_only_chinese">旅券の名前（中国語）は、中国の名前を入力することができます。</string>
+    <string name="fullweek">飛行日</string>
+    <string name="timetable_operated_by">運航航空会社 %s</string>
+    <string name="timetable_detail_operated_by">運航航空会社:</string>
+
+    <string name="scheme_auth_eshopping_title">China Airlines App にログイン</string>
+    <string name="scheme_auth_eshopping_name">Sky Boutique</string>
+    <string name="scheme_auth_eshopping_note"></string>
+    <string name="scheme_auth_eshopping_note_text">China Airlines App はあなたの個人情報を 華航 Sky Boutique と共有します。</string>
+    <string name="scheme_auth_eshopping_button_agree">同意</string>
+
+    <!-- Check-in 預辦登機+ADC -->
+    <string name="check_in_input_apis_doc">書類の詳細1</string>
+    <string name="check_in_input_apis_second_doc">書類の詳細2</string>
+    <string name="check_in_input_visa">Visaの詳細</string>
+    <string name="check_in_visa_index_title">Visa</string>
+    <string name="check_in_visa_document_number">Visa番号</string>
+    <string name="check_in_visa_date_of_expiry">Visa有効期限</string>
+    <string name="check_in_apis_non_ct">Travel Permit of Taiwan Residents To and From Mainlandがありません</string>
+    <string name="check_in_apis_have_ct">Travel Permit of Taiwan Residents To and From Mainland</string>
+    <string name="check_in_apis_have_can_c">Canada Permanent Resident Card</string>
+
+    <!-- 行李追蹤 -->
+    <string name="menu_title_baggage_tracking">手荷物の追跡</string>
+    <string name="boarding_pass_baggage_tracking_text">手荷物の追跡</string>
+    <string name="find_my_baggage_twoitem_left_text">予約番号</string>
+    <string name="find_my_baggage_twoitem_right_text">手荷物タグの番号</string>
+    <string name="baggage_booking_ref_hint">予約番号</string>
+    <string name="baggage_tag_ref_hint">手荷物タグの番号</string>
+    <string name="baggage_info_content_baggage_tag">手荷物タグの番号</string>
+    <string name="baggage_info_content_baggage_status">手荷物のステータス</string>
+    <string name="baggage_tracking_can_not_find_you_baggage">ご無料受託手荷物がみつかりませんか？</string>
+    <string name="baggage_tracking_can_not_find_button_find">手荷物を検索</string>
+    <string name="baggage_tracking_service_type">手荷物タグ</string>
+
+    <string name="find_my_booking_baggage_notes">お知らせ</string>
+    <string name="find_my_booking_baggage_notes_content">
+        \n
+        1. 手荷物の追跡は、桃園/ソウル/シンガポール/フランクフルト/ニューヨーク/サンフランシスコ発のお客様で、所定のカウンターで搭乗手続きと手荷物のチェックインを完了された方のみご利用いただけます。\n\n
+        2. 追跡は、フライトの到着から3日間に限りご利用可能です。\n\n
+		3. 手荷物の状況は、各空港の現地時間で表示されます。\n\n
+		4. 旅程にチャイナ エアライン以外の航空会社が含まれている場合、またはチャイナ エアライン以外の航空会社に乗り継ぎをされる場合、それらのフライトに関する手荷物の追跡ができない可能性があります。手荷物の状況については当該便を運航する航空会社にお問い合わせください。\n\n
+    </string>
+    <string name="find_my_booking_baggage_notes_2">注</string>
+    <string name="find_my_booking_baggage_notes_content_2">
+        \n
+        * 予約番号：英数字6桁の組合せです(例：000000)\n\n
+        * 手荷物タグの番号：2桁の航空会社コードと、数字6桁の組み合わせです(例：CI123456)\n\n
+    </string>
+    <string name="bagtag_camera_permissions_msg">カメラの同意が必要です。設定にてカメラへのアクセスを許可してください。</string>
+    <string name="trip_detail_passenger_tracking_title">手荷物の捜索</string>
+
+    <!--TMP WEATHER-->
+    <string name="weather_url">https://weather.com/ja-JP/weather/5day/l/</string>
+
+    <!--644336 2019 2月3月 截圖-->
+    <string name="braoding_pass_screenshots_name">%1$s-%2$s-_%3$s_boarding_pass</string>
+    <string name="braoding_pass_screenshots_success">スクリーンショット 成功。\nフライトスケジュールに変更があった場合、自動で更新はされません。お客様ご自身でスクリーンショットを削除し、再度追加してください。</string>
+    <string name="braoding_pass_screenshots_fail">スクリーンショット 失敗</string>
+    <string name="permissions_error">本機能の使用権限がありません</string>
+</resources>
+

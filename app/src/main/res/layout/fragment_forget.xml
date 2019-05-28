@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/iv_forget"
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_forget_card_number" />
+
+    <TextView
+        android:id="@+id/tv_prompt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_forget"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/recover_account_prompt_title"
+        android:textColor="@color/white_four"
+        android:textSize="20sp"
+        style="@style/regular" />
+
+    <TextView
+        android:id="@+id/tv_prompt_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_prompt_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/recover_account_prompt_msg"
+        android:textColor="@color/white_four"
+        android:textSize="16sp"
+        style="@style/light" />
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="59.3dp"
+        android:orientation="vertical"
+        android:splitMotionEvents="false">
+
+        <View
+            android:id="@+id/vline1"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:alpha="0.3"
+            android:background="@color/white_four" />
+
+        <RelativeLayout
+            android:id="@+id/rl_forget_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_forget_card_number_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="false"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="23dp"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tv_forget_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:singleLine="true"
+                android:text="@string/recover_account_forget_card_number"
+                android:textColor="@color/white_four"
+                style="@style/regular" />
+
+            <View
+                android:id="@+id/vline2"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:alpha="0.3"
+                android:background="@color/white_four" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_forget_password_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="false"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="23dp"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tv_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:singleLine="true"
+                android:text="@string/recover_account_forget_password"
+                android:textColor="@color/white_four"
+                style="@style/regular" />
+
+            <View
+                android:id="@+id/vline3"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:alpha="0.3"
+                android:background="@color/white_four" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_apply_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_apply_password_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="false"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="23dp"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/tv_apply_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toStartOf="@+id/img_done"
+                android:singleLine="true"
+                android:text="@string/recover_account_apply_password"
+                android:textColor="@color/white_four"
+                style="@style/regular" />
+
+            <View
+                android:id="@+id/vline4"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:alpha="0.3"
+                android:background="@color/white_four" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root">
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_60">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_card"
+        android:layout_width="340px"
+        android:layout_height="504px"
+        android:layout_marginRight="10px"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="40px"
+        android:background="@drawable/bg_boarding_with_qrcode"
+        android:layout_centerHorizontal="true">
+        <WebView
+            android:id="@+id/select_seat_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ivbtn_close"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16px"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_btn_about_delete_onclick" />
+
+</RelativeLayout>

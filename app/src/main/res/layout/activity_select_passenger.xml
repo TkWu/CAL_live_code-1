@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true"
+    tools:context="ci.function.MealSelection.CISelectPassengerActivity">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ci.ui.MealCard.CIAListView
+        android:id="@+id/ls_passenger"
+        android:layout_width="match_parent"
+        android:layout_height="470px"
+        android:layout_below="@id/toolbar"
+        >
+    </ci.ui.MealCard.CIAListView>
+
+    <View
+        android:id="@+id/vGradient"
+        android:layout_width="match_parent"
+        android:layout_height="16px"
+        android:layout_alignBottom="@+id/ls_passenger"
+        android:background="@drawable/bg_listview_bottom_gradient" />
+
+    <Button
+        android:id="@+id/btn_to_select_meal"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:layout_marginBottom="30px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16px" />
+
+</RelativeLayout>

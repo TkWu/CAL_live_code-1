@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+    </ci.ui.view.NavigationBar>
+
+
+    <FrameLayout
+        android:id="@+id/fragment1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_below="@+id/toolbar">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_below="@+id/fragment1">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_below="@+id/fragment2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:orientation="horizontal"
+        android:layout_below="@+id/fragment3">
+
+        <RelativeLayout
+            android:id="@+id/rl_notice_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="17px"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/tv_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="19.3px"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_vertical"
+                android:gravity="right|center"
+                android:text="@string/find_my_booking_notes"
+                android:layout_marginLeft="30px"
+                android:layout_toLeftOf="@id/iv_arrow"
+                style="@style/regular"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:id="@+id/btn_add"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginBottom="30px"
+        android:text="@string/add_passenager"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        style="@style/regular" />
+</RelativeLayout>

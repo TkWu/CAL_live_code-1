@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="10px"
+    android:paddingRight="10px">
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rv_accumulation"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" >-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+    <ListView
+        android:id="@+id/lv_accumulation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/transparent"
+        android:splitMotionEvents="false"
+        android:dividerHeight="0px"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none">
+    </ListView>
+</RelativeLayout>

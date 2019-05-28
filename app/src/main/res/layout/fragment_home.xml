@@ -1,0 +1,109 @@
+
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refresh_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:id="@+id/rlayout_bg"
+        tools:context="ci.function.HomePage.CIHomeFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ivBlurrBg"
+            android:src="@color/transparent"
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="false"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bg_scrollview"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/llayout_scrollview"
+                android:descendantFocusability="blocksDescendants">
+
+                <FrameLayout
+                    android:id="@+id/flayout_main_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flayout_flightInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/vShortcutBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    layout="@layout/layout_main_shortcut_button_bar"/>
+
+                <!--<FrameLayout-->
+                <!--android:id="@+id/flayout_promotion"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--</FrameLayout>-->
+
+                <View
+                    android:id="@+id/vDiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="10px"/>
+
+                <FrameLayout
+                    android:id="@+id/track_card_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flayout_webview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/flayout_webview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/flayout_webview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/flayout_webview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </FrameLayout>
+                <View
+                    android:id="@+id/vDiv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="10px"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/flayout_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </FrameLayout>
+
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

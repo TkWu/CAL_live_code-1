@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_login"
+    android:id="@+id/root">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="56px">
+    </ci.ui.view.NavigationBar>
+
+    <ScrollView
+        android:id="@+id/select_meal_scroll"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/btnview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llayout_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llayout_select_meal_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/img_select_meal">
+
+                <TextView
+                    android:id="@+id/tvPassenagerName"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="24px"
+                    android:layout_marginTop="20px"
+                    android:textSize="20px"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/white_four"
+                    style="@style/regular"/>
+
+                <LinearLayout
+                    android:id="@+id/llayout_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="28px"
+                    android:layout_marginBottom="28px"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_please_select_meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="84px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/SelectMeal_Label_PleaseSelectBreakfast"
+                    android:textColor="@color/white_four"
+                    android:textSize="20px"
+                    style="@style/regular"/>
+
+                <TextView
+                    android:id="@+id/tvNormalTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="32px"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="@string/normal_meal"
+                    android:textColor="@color/white_four"
+                    android:background="@color/black_30"
+                    android:textSize="16px"
+                    style="@style/regular"/>
+
+                <LinearLayout
+                    android:id="@+id/llayout_normal_meal_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:orientation="vertical"/>
+
+                <TextView
+                    android:id="@+id/tvVegeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="32px"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="@string/vegetarian_exclusive"
+                    android:textColor="@color/white_four"
+                    android:background="@color/black_30"
+                    android:textSize="16px"
+                    style="@style/regular"/>
+
+                <TextView
+
+                    android:id="@+id/tvVegeDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="10px"
+                    android:layout_marginBottom="10px"
+                    android:lineSpacingExtra="22.7px"
+                    android:text="@string/vegetarian_exclusive_summary"
+                    android:textColor="@color/white_four"
+                    android:textSize="13px"
+                    style="@style/regular"/>
+
+                <LinearLayout
+                    android:id="@+id/llayout_vegetarian_meal_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginBottom="30px"
+                    android:orientation="vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/vGradient"
+        android:layout_width="match_parent"
+        android:layout_height="16px"
+        android:layout_above="@+id/btnview"
+        android:background="@drawable/bg_listview_bottom_gradient" />
+
+    <LinearLayout
+        android:id="@+id/btnview"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="30px"
+        android:paddingBottom="30px"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_previous"
+            android:background="@drawable/bg_btn_blue_selector"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10px"
+            android:text="@string/previous"
+            android:textColor="@color/white"
+            android:textSize="16px"
+            style="@style/regular"/>
+
+        <Button
+            android:id="@+id/btn_to_select_complete"
+            android:background="@drawable/bg_btn_pink_agree_selector"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="16px"
+            style="@style/regular"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

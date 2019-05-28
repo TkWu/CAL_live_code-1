@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/ll_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="20px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="22.7px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_hello"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="@string/input_detail_hello"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:layout_marginLeft="3px"
+                android:text="CAL"
+                android:textColor="@color/white_four"
+                android:textSize="18px"
+                style="@style/medium"/>
+
+            <TextView
+                android:id="@+id/tv_comma"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="@string/input_detail_comma"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                style="@style/light" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_update_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16px"
+            android:text="@string/input_detail_update_phone_msg"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            style="@style/light" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_new_phone_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_text"
+        android:layout_marginTop="20px"
+        android:layout_centerHorizontal="true"></FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_new_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_new_phone_country"
+        android:layout_marginTop="6px"
+        android:layout_centerHorizontal="true"></FrameLayout>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="320px"
+        android:layout_height="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30px"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        android:text="@string/input_detail_send"
+        android:textAllCaps="false"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        style="@style/regular"/>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/transparent" />
+            <corners android:radius="2.5dp"/>
+            <size android:height="18dp" android:width="18dp"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/background" android:top="6.5dp" android:bottom="6.5dp">
+        <shape>
+            <solid android:color="@color/grey_four_15" />
+            <corners android:radius="2.5dp"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress" android:top="6.5dp" android:bottom="6.5dp">
+        <scale
+            android:drawable="@drawable/seekbar_progress_dusty_orange_fill"
+            android:scaleGravity="left"
+            android:scaleWidth="100%" />
+    </item>
+</layer-list>

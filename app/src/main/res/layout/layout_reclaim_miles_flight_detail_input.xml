@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_contain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:id="@+id/ll_add_flight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:src="@drawable/btn_add_n"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8px"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_vertical"
+                android:textSize="16px"
+                android:text="@string/add_more_flight"
+                style="@style/light" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- notice -->
+    <RelativeLayout
+        android:id="@+id/rl_notice"
+        android:layout_below="@+id/ll_contain"
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:layout_marginTop="40px"
+        android:background="@color/black_30">
+        <TextView
+            android:id="@+id/tv_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_centerVertical="true"
+            android:text="@string/notice"
+            android:textSize="16px"
+            android:gravity="center_vertical"
+            android:textColor="@color/white_four"
+            style="@style/regular" />
+    </RelativeLayout>
+
+    <!-- notice content-->
+    <TextView
+        android:id="@+id/tv_notice_content_1"
+        android:layout_below="@+id/rl_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16px"
+        android:gravity="left"
+        android:layout_marginTop="20px"
+        android:textColor="@color/white_four"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:text="@string/notice_message_content_1"
+        style="@style/light" />
+
+    <TextView
+        android:id="@+id/tv_notice_content_2"
+        android:layout_below="@+id/tv_notice_content_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16px"
+        android:gravity="left"
+        android:layout_marginTop="20px"
+        android:textColor="@color/white_four"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:text="@string/notice_message_content_2"
+        style="@style/light" />
+
+</RelativeLayout>

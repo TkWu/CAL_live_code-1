@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 左邊滑入 -->
+    <translate
+        android:interpolator="@android:anim/decelerate_interpolator" 
+        android:duration="300"
+        android:fromXDelta="-100%p"
+        android:toXDelta="0%p" >
+    </translate>
+
+    <!-- interpolator屬性
+    AccelerateDecelerateInterolator	先加速後減速，開始結束時慢，中間加速 
+    AccelerateInterpolator			加速，開始時慢中間加速
+    AnticipateInterpolator			反向 ，先向相反方向改變一段再加速播放
+    AnticipateOvershootInterpolator	反向加超越，先向相反方向改變，再加速播放，會超出目的值然後緩慢移動至目的值
+    BounceInterpolator				跳躍，快到目的值時值會跳躍，如目的值100，後面的值可能依次為85，77，70，80，90，100
+    CycleIinterpolator				迴圈，動畫迴圈一定次數，值的改變為一正弦函數
+    LinearInterpolator				線性，線性均勻改變
+    OvershottInterpolator			超越，最後超出目的值然後緩慢改變到目的值
+    -->
+    
+</set>

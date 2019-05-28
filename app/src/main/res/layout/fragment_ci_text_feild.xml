@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_hint"
+        android:layout_width="224px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:layout_marginTop="18.7px"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="24px"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="20.3px"
+            android:layout_toRightOf="@+id/iv"
+            android:alpha="0.8"
+            android:textColor="@color/white_four"
+            android:textSize="18px"
+            style="@style/light" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/float_label"
+            style="@style/light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/text_input_layout"
+            android:layout_alignTop="@+id/text_input_layout"
+            android:textColor="@color/white_80"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="960px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textColorHint="@color/white_80"
+            android:theme="@style/CITextFeildStyle_base"
+            app:hintTextAppearance="@style/CITextFeildStyle">
+
+            <EditText
+                android:id="@+id/edit_text"
+                style="@style/light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:ellipsize="end"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_error"
+            style="@style/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="48px"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/text_input_layout"
+            android:layout_gravity="right"
+            android:layout_marginEnd="10px"
+            android:layout_marginTop="48px"
+            android:background="#ed1556"
+            android:gravity="center"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:singleLine="true"
+            android:text="@string/member_login_input_correvt_format_msg"
+            android:textColor="@android:color/white"
+            android:textSize="33px"
+            android:visibility="invisible" />
+
+
+        <ImageView
+            android:id="@+id/iv_btn_delete_n"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:layout_alignBottom="@+id/text_input_layout"
+            android:layout_alignEnd="@+id/text_input_layout"
+            android:layout_marginBottom="24px"
+            android:layout_marginRight="24px"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true"
+            android:padding="0px"
+            android:src="@drawable/btn_about_delete_n"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_ic_drop_down"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:layout_alignBottom="@+id/text_input_layout"
+            android:layout_alignEnd="@+id/text_input_layout"
+            android:layout_marginBottom="24px"
+            android:layout_marginRight="24px"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true"
+            android:padding="0px"
+            android:src="@drawable/ic_drop_down"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/iv_ic_item"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:layout_alignBottom="@+id/text_input_layout"
+            android:layout_alignEnd="@+id/text_input_layout"
+            android:layout_marginBottom="24px"
+            android:layout_marginRight="24px"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true"
+            android:padding="0px"
+            android:src="@drawable/ic_scan"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

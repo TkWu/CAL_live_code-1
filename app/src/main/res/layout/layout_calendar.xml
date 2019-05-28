@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_marginTop="16px"
+        android:layout_marginBottom="16px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <View
+            android:id="@+id/v_leftline"
+            android:layout_marginLeft="10px"
+            android:layout_width="80px"
+            android:background="@color/white_20"
+            android:layout_centerVertical="true"
+            android:layout_height="0.7px"></View>
+
+        <TextView
+            android:id="@+id/tv_centerline"
+            android:layout_toRightOf="@id/v_leftline"
+            android:layout_marginLeft="13px"
+            android:layout_marginRight="13px"
+            android:layout_width="137.3px"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="16px"
+            android:textColor="@color/white_four"></TextView>
+
+        <View
+            android:id="@+id/v_rightline"
+            android:layout_marginRight="10px"
+            android:layout_toRightOf="@id/tv_centerline"
+            android:layout_width="80px"
+            android:layout_centerVertical="true"
+            android:background="@color/white_20"
+            android:layout_height="0.7px"></View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_day"
+        android:layout_below="@id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></RelativeLayout>
+    
+</RelativeLayout>

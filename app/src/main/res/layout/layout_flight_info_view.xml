@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rlayout_bg">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_head"
+        android:layout_width="match_parent"
+        android:layout_height="36px"
+        android:background="@drawable/bg_main_flight_info_head_radius"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CI 65"
+            android:id="@+id/tv_FlightNo"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:textSize="16px"
+            android:textColor="@color/black_one"
+            style="@style/regular" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Oct 12, 2015"
+            android:id="@+id/tv_Date"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="16px"
+            android:textColor="@color/black_one"
+            style="@style/regular" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_body"
+        android:layout_width="match_parent"
+        android:layout_height="104px"
+        android:background="@drawable/bg_main_flight_info_body_radius"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="8px"
+        android:paddingBottom="7px"
+        android:layout_below="@+id/rlayout_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TPE"
+            android:id="@+id/tv_from"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black_one"
+            android:textSize="20px"
+            style="@style/regular" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FUK"
+            android:id="@+id/tv_to"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black_one"
+            android:textSize="20px"
+            style="@style/regular" />
+
+        <TextView
+            android:layout_width="140px"
+            android:layout_height="wrap_content"
+            android:text="Taiwan Taoyuan Int’l"
+            android:id="@+id/tv_from_airport"
+            android:layout_below="@+id/tv_from"
+            android:layout_alignParentStart="true"
+            android:textSize="14px"
+            android:textColor="@color/black_two"
+            android:gravity="left"
+            android:ellipsize="end"
+            android:singleLine="true"
+            style="@style/light" />
+
+        <TextView
+            android:layout_width="140px"
+            android:layout_height="wrap_content"
+            android:text="Fukuoka Apt"
+            android:id="@+id/tv_to_airport"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_to"
+            android:textSize="14px"
+            android:textColor="@color/black_two"
+            android:gravity="right"
+            android:ellipsize="end"
+            android:singleLine="true"
+            style="@style/light" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_time"
+            android:layout_width="match_parent"
+            android:layout_height="48px"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="08:10"
+                android:id="@+id/tv_from_time"
+                android:layout_alignParentLeft="true"
+                android:textSize="40px"
+                android:textColor="@color/french_blue"
+                android:gravity="center|left"
+                style="@style/regular" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_flight_from_to"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_flight_from_to"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="11:20"
+                android:id="@+id/tv_to_time"
+                android:textSize="40px"
+                android:textColor="@color/french_blue"
+                android:layout_alignParentRight="true"
+                android:gravity="center|right"
+                android:layout_centerVertical="true"
+                style="@style/regular" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_tomorrow_tag"
+        android:textSize="13px"
+        android:textColor="@color/french_blue"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/rlayout_body"
+        android:layout_marginBottom="15px"
+        android:layout_marginRight="5px"
+        style="@style/regular" />
+
+    <View
+        android:id="@+id/vDiv"
+        android:layout_height="0.3px"
+        android:layout_width="match_parent"
+        android:background="@color/pinkish_grey"
+        android:layout_above="@+id/rlayout_body"/>
+
+    <TextView
+        android:layout_width="100px"
+        android:layout_height="24px"
+        android:text="@string/cancel"
+        android:id="@+id/tv_flight_status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23px"
+        android:textColor="@color/white_four"
+        android:textSize="18px"
+        android:background="@drawable/bg_main_flight_info_cancel"
+        android:gravity="center"
+        android:singleLine="true"
+        android:visibility="invisible"
+        style="@style/regular" />
+
+</RelativeLayout>

@@ -1,0 +1,456 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "flight_date": "2016-04-21",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 深圳 - 台北(桃園) ",
+      "mileage": "504",
+      "due_date": "2019-04-21",
+      "flight_number": "CI0528 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2016-04-20",
+      "flight_item": "2",
+      "flight_item_desc": "合作哩程",
+      "flight_desc": "合作哩程",
+      "mileage": "20",
+      "due_date": "2019-04-20",
+      "flight_number": "",
+      "cabin": ""
+    },
+    {
+      "flight_date": "2016-04-20",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 深圳 ",
+      "mileage": "403",
+      "due_date": "2019-04-20",
+      "flight_number": "CI0527 ",
+      "cabin": " V "
+    },
+    {
+      "flight_date": "2015-06-26",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 北京 - 台北(桃園) ",
+      "mileage": "1,074",
+      "due_date": "2018-06-26",
+      "flight_number": "CI0512 ",
+      "cabin": " Y "
+    },
+    {
+      "flight_date": "2015-06-12",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 香港 - 台北(桃園) ",
+      "mileage": "256",
+      "due_date": "2018-06-12",
+      "flight_number": "CI0602 ",
+      "cabin": " Q "
+    },
+    {
+      "flight_date": "2015-06-11",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 香港 ",
+      "mileage": "256",
+      "due_date": "2018-06-11",
+      "flight_number": "CI0641 ",
+      "cabin": " Q "
+    },
+    {
+      "flight_date": "2015-06-10",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 東京(成田) - 台北(桃園) ",
+      "mileage": "665",
+      "due_date": "2018-06-10",
+      "flight_number": "CI0107 ",
+      "cabin": " R "
+    },
+    {
+      "flight_date": "2015-06-07",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 東京(成田) ",
+      "mileage": "665",
+      "due_date": "2018-06-07",
+      "flight_number": "CI0100 ",
+      "cabin": " R "
+    },
+    {
+      "flight_date": "2015-05-29",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 北京 - 台北(桃園) ",
+      "mileage": "1,074",
+      "due_date": "2018-05-29",
+      "flight_number": "CI0512 ",
+      "cabin": " Y "
+    },
+    {
+      "flight_date": "2015-04-06",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 香港 ",
+      "mileage": "511",
+      "due_date": "2018-04-06",
+      "flight_number": "CI0909 ",
+      "cabin": " Y "
+    },
+    {
+      "flight_date": "2015-03-13",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 香港 - 台北(桃園) ",
+      "mileage": "409",
+      "due_date": "2018-03-13",
+      "flight_number": "CI0904 ",
+      "cabin": " V "
+    },
+    {
+      "flight_date": "2015-03-10",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 香港 ",
+      "mileage": "256",
+      "due_date": "2018-03-10",
+      "flight_number": "CI0925 ",
+      "cabin": " R "
+    },
+    {
+      "flight_date": "2015-03-04",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 東京(羽田) - 台北(松山) ",
+      "mileage": "1,330",
+      "due_date": "2018-03-04",
+      "flight_number": "CI0223 ",
+      "cabin": " M "
+    },
+    {
+      "flight_date": "2015-03-03",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(松山) - 東京(羽田) ",
+      "mileage": "1,064",
+      "due_date": "2018-03-03",
+      "flight_number": "CI0220 ",
+      "cabin": " T "
+    },
+    {
+      "flight_date": "2015-01-31",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 深圳 - 台北(桃園) ",
+      "mileage": "504",
+      "due_date": "2018-01-31",
+      "flight_number": "CZ3087 ",
+      "cabin": " Y "
+    },
+    {
+      "flight_date": "2015-01-23",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 深圳 ",
+      "mileage": "202",
+      "due_date": "2018-01-23",
+      "flight_number": "CZ3088 ",
+      "cabin": " Q "
+    },
+    {
+      "flight_date": "2014-11-27",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 深圳 - 台北(桃園) ",
+      "mileage": "504",
+      "due_date": "2017-11-27",
+      "flight_number": "CI0528 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-11-24",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 深圳 ",
+      "mileage": "252",
+      "due_date": "2017-11-24",
+      "flight_number": "CI0527 ",
+      "cabin": " R "
+    },
+    {
+      "flight_date": "2014-11-18",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 東京(羽田) - 台北(松山) ",
+      "mileage": "1,330",
+      "due_date": "2017-11-18",
+      "flight_number": "CI9223 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-11-17",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(松山) - 東京(羽田) ",
+      "mileage": "1,064",
+      "due_date": "2017-11-17",
+      "flight_number": "CI0220 ",
+      "cabin": " V "
+    },
+    {
+      "flight_date": "2014-08-07",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 紐約(甘迺迪) - 台北(桃園) ",
+      "mileage": "7,788",
+      "due_date": "2017-08-07",
+      "flight_number": "CI0019 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-07-26",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 洛杉磯 ",
+      "mileage": "6,781",
+      "due_date": "2017-07-26",
+      "flight_number": "CI0008 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-06-19",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 香港 - 台北(桃園) ",
+      "mileage": "0",
+      "due_date": "2017-06-19",
+      "flight_number": "CI0920 ",
+      "cabin": " X "
+    },
+    {
+      "flight_date": "2014-06-17",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 香港 ",
+      "mileage": "0",
+      "due_date": "2017-06-17",
+      "flight_number": "CI0919 ",
+      "cabin": " X "
+    },
+    {
+      "flight_date": "2014-05-23",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 武漢 - 台北(桃園) ",
+      "mileage": "573",
+      "due_date": "2017-05-23",
+      "flight_number": "CZ3015 ",
+      "cabin": " Y "
+    },
+    {
+      "flight_date": "2014-05-16",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 上海(浦東) - 台北(桃園) ",
+      "mileage": "338",
+      "due_date": "2017-05-16",
+      "flight_number": "CI0504 ",
+      "cabin": " T "
+    },
+    {
+      "flight_date": "2014-05-15",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 無錫 ",
+      "mileage": "228",
+      "due_date": "2017-05-15",
+      "flight_number": "MU2932 ",
+      "cabin": " K "
+    },
+    {
+      "flight_date": "2014-05-07",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 洛杉磯 - 台北(桃園) ",
+      "mileage": "8,476",
+      "due_date": "2017-05-07",
+      "flight_number": "CI0007 ",
+      "cabin": " C "
+    },
+    {
+      "flight_date": "2014-05-05",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 洛杉磯 ",
+      "mileage": "8,476",
+      "due_date": "2017-05-05",
+      "flight_number": "CI0008 ",
+      "cabin": " C "
+    },
+    {
+      "flight_date": "2014-04-18",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 深圳 - 台北(桃園) ",
+      "mileage": "504",
+      "due_date": "2017-04-18",
+      "flight_number": "CI0528 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-04-16",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 香港 ",
+      "mileage": "511",
+      "due_date": "2017-04-16",
+      "flight_number": "CI0679 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-04-10",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 北京 - 台北(桃園) ",
+      "mileage": "1,074",
+      "due_date": "2017-04-10",
+      "flight_number": "CI0518 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-04-06",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 新加坡 ",
+      "mileage": "2,008",
+      "due_date": "2017-04-06",
+      "flight_number": "CI0751 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-03-14",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 東京(羽田) - 台北(松山) ",
+      "mileage": "1,330",
+      "due_date": "2017-03-14",
+      "flight_number": "CI0221 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-03-12",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(松山) - 東京(羽田) ",
+      "mileage": "1,330",
+      "due_date": "2017-03-12",
+      "flight_number": "CI0222 ",
+      "cabin": " B "
+    },
+    {
+      "flight_date": "2014-02-14",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 舊金山 - 台北(桃園) ",
+      "mileage": "8,063",
+      "due_date": "2017-02-14",
+      "flight_number": "CI0003 ",
+      "cabin": " C "
+    },
+    {
+      "flight_date": "2014-02-10",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 舊金山 ",
+      "mileage": "8,063",
+      "due_date": "2017-02-10",
+      "flight_number": "CI0004 ",
+      "cabin": " C "
+    },
+    {
+      "flight_date": "2013-06-19",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 舊金山 - 台北(桃園) ",
+      "mileage": "8,063",
+      "due_date": "2016-06-19",
+      "flight_number": "CI0003 ",
+      "cabin": " C "
+    },
+    {
+      "flight_date": "2013-06-10",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 舊金山 ",
+      "mileage": "8,063",
+      "due_date": "2016-06-10",
+      "flight_number": "CI0004 ",
+      "cabin": " C "
+    },
+    {
+      "flight_date": "2013-06-10",
+      "flight_item": "2",
+      "flight_item_desc": "推廣哩程",
+      "flight_desc": "推廣哩程",
+      "mileage": "2,000",
+      "due_date": "2016-06-10",
+      "flight_number": "",
+      "cabin": ""
+    },
+    {
+      "flight_date": "2013-05-31",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 合肥(安徽) - 台北(桃園) ",
+      "mileage": "531",
+      "due_date": "2016-05-31",
+      "flight_number": "MU2049 ",
+      "cabin": " K "
+    },
+    {
+      "flight_date": "2013-05-29",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 合肥(安徽) ",
+      "mileage": "531",
+      "due_date": "2016-05-29",
+      "flight_number": "MU2050 ",
+      "cabin": " Y "
+    },
+    {
+      "flight_date": "2013-05-01",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 新加坡 - 台北(桃園) ",
+      "mileage": "1,004",
+      "due_date": "2016-05-01",
+      "flight_number": "CI0752 ",
+      "cabin": " R "
+    },
+    {
+      "flight_date": "2013-04-30",
+      "flight_item": "1",
+      "flight_item_desc": "搭機哩程",
+      "flight_desc": " 台北(桃園) - 新加坡 ",
+      "mileage": "1,004",
+      "due_date": "2016-04-30",
+      "flight_number": "CI0753 ",
+      "cabin": " R "
+    },
+    {
+      "flight_date": "2013-01-23",
+      "flight_item": "2",
+      "flight_item_desc": "推廣哩程",
+      "flight_desc": "推廣哩程",
+      "mileage": "888",
+      "due_date": "2016-01-23",
+      "flight_number": "",
+      "cabin": ""
+    }
+  ]
+}

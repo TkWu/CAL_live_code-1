@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!-- 頂部間隔-->
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:layout_alignParentTop="true"/>
+
+        <View
+            android:id="@+id/v_extra_service_bg"
+            android:layout_below="@+id/v_line1"
+            android:layout_width="340px"
+            android:layout_height="100px"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_btn_radius_3dp_white_four_white_six"/>
+
+        <!-- 已使用圖 -->
+        <ImageView
+            android:id="@+id/iv_used"
+            android:layout_width="80.7px"
+            android:layout_height="68.7px"
+            android:layout_marginTop="26px"
+            android:layout_marginLeft="181.2px"
+            android:src="@drawable/img_used_en"
+            android:scaleType="fitXY"/>
+
+        <!-- 服務資訊 -->
+        <RelativeLayout
+            android:id="@+id/ll_extra_service_click"
+            android:layout_below="@+id/v_line1"
+            android:layout_width="340px"
+            android:layout_height="100px"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_transparent_press_black20">
+
+            <TextView
+                android:id="@+id/tv_name_value"
+                android:layout_width="220px"
+                android:layout_height="53.3px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="12px"
+                android:layout_marginLeft="20px"
+                android:gravity="center_vertical"
+                android:text="YuRong Cheng"
+                android:textColor="@color/black_one"
+                android:textSize="20px"
+                style="@style/regular" />
+
+            <TextView
+                android:id="@+id/tv_service_num_value"
+                android:layout_width="220px"
+                android:layout_height="16px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="9px"
+                android:layout_marginLeft="20px"
+                android:gravity="center|left"
+                android:text="36551895412"
+                android:textColor="@color/grey_four"
+                android:textSize="13px"
+                style="@style/light" />
+            
+            <View
+                android:layout_width="0.3px"
+                android:layout_height="match_parent"
+                android:background="@color/french_blue"
+                android:layout_toStartOf="@+id/ll"/>
+
+            <!-- 右側藍透背景-->
+            <View
+                android:id="@+id/vRight"
+                android:layout_width="80px"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_btn_radius_3dp_white_four_powder_blue_30"/>
+
+            <!-- 右側服務資訊 -->
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="80px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_service"
+                    android:layout_width="32px"
+                    android:layout_height="32px"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10px"
+                    android:gravity="center"
+                    android:text="Extra Service"
+                    android:textColor="@color/french_blue"
+                    android:textSize="13px"
+                    style="@style/regular" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_extra_service_expired"
+            android:layout_below="@+id/v_line1"
+            android:layout_width="340px"
+            android:layout_height="100px"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_btn_radius_3dp_stroke_white"/>
+    </RelativeLayout>
+</RelativeLayout>

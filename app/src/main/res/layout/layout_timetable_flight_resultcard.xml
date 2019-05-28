@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/timetable_flight_resultcard_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_timetable_border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/flight_icon"
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:background="@color/white_six"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white_six">
+
+                <ImageView
+                    android:id="@+id/flight_status_icon_resault"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/flight_status_text_resault"
+                    style="@style/medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/flight_status_icon_resault"
+                    android:textSize="16px" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="318.7px"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/warm_grey_50" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flight_number_result_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/timetable_result_tilte_bg_corner">
+
+            <TextView
+                android:id="@+id/flight_number_result"
+                style="@style/regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10px"
+                android:textColor="@color/black_one"
+                android:textSize="16px" />
+
+            <TextView
+                android:id="@+id/flight_start_place_result"
+                style="@style/regular"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="40px"
+                android:singleLine="true"
+                android:textColor="@color/black_one"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/flight_left_terminal_result"
+                style="@style/light"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flight_start_place_result"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="4px"
+                android:text="@string/home_terminal"
+                android:textColor="@color/grey_four"
+                android:textSize="16px" />
+
+            <TextView
+                android:id="@+id/flight_arrival_place_result"
+                style="@style/regular"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="40px"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/black_one"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/flight_right_terminal_result"
+                style="@style/light"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/flight_arrival_place_result"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="4px"
+                android:gravity="right"
+                android:text="@string/home_terminal"
+                android:textColor="@color/grey_four"
+                android:textSize="16px" />
+
+            <TextView
+                android:id="@+id/flight_right_terminal_result2"
+                style="@style/light"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/flight_right_terminal_result"
+                android:layout_marginBottom="10px"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="4px"
+                android:gravity="right"
+                android:text="Terminal"
+                android:textColor="#0000"
+                android:textSize="16px" />
+
+            <ImageView
+                android:id="@+id/imageview_result"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5px"
+                android:layout_marginTop="56.7px"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_flight_from_to" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/flight_time_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_five">
+
+            <TextView
+                android:id="@+id/scheduled_left_textview_result_content"
+                style="@style/light"
+                android:layout_width="140px"
+                android:layout_height="16px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="20px"
+                android:text="@string/scheduled"
+                android:textColor="@color/grey_four"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/startTime_left_textview_result_content"
+                style="@style/regular"
+                android:layout_width="120px"
+                android:layout_height="48px"
+                android:layout_below="@+id/scheduled_left_textview_result_content"
+                android:layout_marginLeft="20px"
+                android:text="10:20"
+                android:textColor="@color/french_blue"
+                android:textSize="40px" />
+
+
+            <TextView
+                android:id="@+id/startPlace_left_textview_result_content"
+                style="@style/light"
+                android:layout_width="140px"
+                android:layout_height="19.3px"
+                android:layout_below="@+id/startTime_left_textview_result_content"
+                android:layout_marginLeft="20px"
+                android:text="Sat, Oct 17, 2015"
+                android:textColor="@color/french_blue"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/scheduled_right_textview_result_content"
+                style="@style/light"
+                android:layout_width="140px"
+                android:layout_height="16px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="20px"
+                android:gravity="right"
+                android:text="@string/scheduled"
+                android:textColor="@color/grey_four"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/startTime_right_textview_result_content"
+                style="@style/regular"
+                android:layout_width="120px"
+                android:layout_height="48px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/scheduled_right_textview_result_content"
+                android:layout_marginRight="20px"
+                android:gravity="right"
+                android:text="10:20"
+                android:textColor="@color/french_blue"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/startPlace_right_textview_result_content"
+                style="@style/light"
+                android:layout_width="140px"
+                android:layout_height="19.3px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/startTime_right_textview_result_content"
+                android:layout_marginRight="20px"
+                android:gravity="right"
+                android:text="Sat, Oct 17, 2015"
+                android:textColor="@color/french_blue"
+                android:textSize="13px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/timetable_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tinetable_flight_result_bg_corner">
+
+            <RelativeLayout
+                android:id="@+id/flight_time_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/scheduled_left_textview_result_content2"
+                    style="@style/light"
+                    android:layout_width="140px"
+                    android:layout_height="16px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:textColor="@color/grey_four"
+                    android:textSize="13px" />
+
+                <TextView
+                    android:id="@+id/startTime_left_textview_result_content2"
+                    style="@style/light"
+                    android:layout_width="120px"
+                    android:layout_height="48px"
+                    android:layout_below="@+id/scheduled_left_textview_result_content2"
+                    android:layout_marginLeft="20px"
+                    android:text="10:20"
+                    android:textColor="@color/black_one"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/scheduled_right_textview_result_content2"
+                    style="@style/light"
+                    android:layout_width="140px"
+                    android:layout_height="16px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="20px"
+                    android:gravity="right"
+                    android:textColor="@color/grey_four"
+                    android:textSize="13px" />
+
+                <TextView
+                    android:id="@+id/startTime_right_textview_result_content2"
+                    style="@style/light"
+                    android:layout_width="120px"
+                    android:layout_height="48px"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/scheduled_right_textview_result_content2"
+                    android:layout_marginRight="20px"
+                    android:gravity="right"
+                    android:text="10:20"
+                    android:textColor="@color/black_one"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/flight_time_content2"
+                android:layout_marginTop="20px"
+                android:background="@color/warm_grey_50"></RelativeLayout>
+
+            <TextView
+                android:id="@+id/flight_flytime"
+                style="@style/light"
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:layout_below="@+id/line"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="10px"
+                android:gravity="center_vertical"
+                android:text="@string/fly_time"
+                android:textColor="@color/grey_four"
+                android:textSize="16px" />
+
+            <TextView
+                android:id="@+id/flight_flytime_result"
+                style="@style/light"
+                android:layout_width="200px"
+                android:layout_height="40px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/line"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="10px"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:text="2h 15m"
+                android:textColor="@color/black_one"
+                android:textSize="16px" />
+
+            <RelativeLayout
+                android:id="@+id/line2"
+                android:layout_width="319.5px"
+                android:layout_height="1px"
+                android:layout_below="@+id/flight_flytime_result"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+                android:background="@color/warm_grey_50"></RelativeLayout>
+
+            <TextView
+                android:id="@+id/flight_flydate"
+                style="@style/light"
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:layout_below="@+id/line2"
+                android:layout_marginLeft="20px"
+                android:gravity="center_vertical"
+                android:text="@string/fly_date"
+                android:textColor="@color/grey_four"
+                android:textSize="16px" />
+
+            <TextView
+                android:id="@+id/flight_flydate_result"
+                style="@style/light"
+                android:layout_width="200px"
+                android:layout_height="40px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/line2"
+                android:layout_marginRight="20px"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:text="Tue / Fri / Sat"
+                android:textColor="@color/black_one"
+                android:textSize="16px" />
+
+            <RelativeLayout
+                android:id="@+id/line4"
+                android:layout_width="319.5px"
+                android:layout_height="1px"
+                android:layout_below="@+id/flight_flydate_result"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+                android:background="@color/warm_grey_50"></RelativeLayout>
+
+            <TextView
+                android:id="@+id/flight_type"
+                style="@style/light"
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:layout_below="@+id/flight_flydate_result"
+                android:layout_marginLeft="20px"
+                android:gravity="center_vertical"
+                android:text="@string/aircraft_type"
+                android:textColor="@color/grey_four"
+                android:textSize="16px" />
+
+            <TextView
+                android:id="@+id/flight_type_value"
+                style="@style/light"
+                android:layout_width="200px"
+                android:layout_height="40px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/flight_flydate_result"
+                android:layout_marginRight="20px"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:text="Tue / Fri / Sat"
+                android:textColor="@color/black_one"
+                android:textSize="16px" />
+
+            <RelativeLayout
+                android:id="@+id/rl_operating"
+                android:layout_below="@+id/flight_type_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/line3"
+                    android:layout_width="319.5px"
+                    android:layout_height="1px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="10px"
+                    android:background="@color/warm_grey_50"></RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_operating_by"
+                    style="@style/light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40px"
+                    android:layout_below="@+id/line3"
+                    android:layout_marginLeft="20px"
+                    android:gravity="center_vertical"
+                    android:text="@string/timetable_detail_operated_by"
+                    android:textColor="@color/grey_four"
+                    android:textSize="16px" />
+
+                <TextView
+                    android:id="@+id/tv_operating"
+                    style="@style/light"
+                    android:layout_width="200px"
+                    android:layout_height="40px"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/line3"
+                    android:layout_marginRight="20px"
+                    android:gravity="center_vertical|right"
+                    android:singleLine="true"
+                    android:text="Tue / Fri / Sat"
+                    android:textColor="@color/black_one"
+                    android:textSize="16px" />
+            </RelativeLayout>
+            <View
+                android:layout_below="@+id/rl_operating"
+                android:layout_width="match_parent"
+                android:layout_height="10px" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/transparent"></RelativeLayout>
+
+</LinearLayout>

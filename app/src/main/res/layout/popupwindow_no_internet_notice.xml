@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/black_60"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_alert"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:text="@string/system_no_network_connection"
+        android:textColor="@color/white_four"
+        android:textSize="16sp"
+        style="@style/regular"/>
+
+</LinearLayout>

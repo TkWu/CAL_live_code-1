@@ -1,0 +1,149 @@
+{
+  "query": {
+    "count": 1,
+    "created": "2016-08-04T09:02:29Z",
+    "lang": "zh-TW",
+    "results": {
+      "channel": {
+        "units": {
+          "distance": "km",
+          "pressure": "mb",
+          "speed": "km/h",
+          "temperature": "C"
+        },
+        "title": "Yahoo! Weather - Taoyuan City, Taoyuan City, TW",
+        "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2306254/",
+        "description": "Yahoo! Weather for Taoyuan City, Taoyuan City, TW",
+        "language": "en-us",
+        "lastBuildDate": "Thu, 04 Aug 2016 05:02 PM CST",
+        "ttl": "60",
+        "location": {
+          "city": "Taoyuan City",
+          "country": "Taiwan",
+          "region": " Taoyuan City"
+        },
+        "wind": {
+          "chill": "86",
+          "direction": "293",
+          "speed": "17.70"
+        },
+        "atmosphere": {
+          "humidity": "92",
+          "pressure": "33863.90",
+          "rising": "0",
+          "visibility": "18.83"
+        },
+        "astronomy": {
+          "sunrise": "5:25 am",
+          "sunset": "6:37 pm"
+        },
+        "image": {
+          "title": "Yahoo! Weather",
+          "width": "142",
+          "height": "18",
+          "link": "http://weather.yahoo.com",
+          "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+        },
+        "item": {
+          "title": "Conditions for Taoyuan City, Taoyuan City, TW at 04:00 PM CST",
+          "lat": "25.071501",
+          "long": "121.226997",
+          "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2306254/",
+          "pubDate": "Thu, 04 Aug 2016 04:00 PM CST",
+          "condition": {
+            "code": "26",
+            "date": "Thu, 04 Aug 2016 04:00 PM CST",
+            "temp": "30",
+            "text": "Cloudy"
+          },
+          "forecast": [
+            {
+              "code": "4",
+              "date": "04 Aug 2016",
+              "day": "Thu",
+              "high": "29",
+              "low": "27",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "26",
+              "date": "05 Aug 2016",
+              "day": "Fri",
+              "high": "28",
+              "low": "27",
+              "text": "Cloudy"
+            },
+            {
+              "code": "4",
+              "date": "06 Aug 2016",
+              "day": "Sat",
+              "high": "27",
+              "low": "25",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "07 Aug 2016",
+              "day": "Sun",
+              "high": "28",
+              "low": "26",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "08 Aug 2016",
+              "day": "Mon",
+              "high": "28",
+              "low": "26",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "09 Aug 2016",
+              "day": "Tue",
+              "high": "27",
+              "low": "26",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "10 Aug 2016",
+              "day": "Wed",
+              "high": "28",
+              "low": "26",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "11 Aug 2016",
+              "day": "Thu",
+              "high": "28",
+              "low": "27",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "34",
+              "date": "12 Aug 2016",
+              "day": "Fri",
+              "high": "30",
+              "low": "27",
+              "text": "Mostly Sunny"
+            },
+            {
+              "code": "34",
+              "date": "13 Aug 2016",
+              "day": "Sat",
+              "high": "29",
+              "low": "26",
+              "text": "Mostly Sunny"
+            }
+          ],
+          "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/26.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Cloudy\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Thu - Thunderstorms. High: 29Low: 27\n<BR /> Fri - Cloudy. High: 28Low: 27\n<BR /> Sat - Thunderstorms. High: 27Low: 25\n<BR /> Sun - Thunderstorms. High: 28Low: 26\n<BR /> Mon - Thunderstorms. High: 28Low: 26\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2306254/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)\n<BR />\n]]>",
+          "guid": {
+            "isPermaLink": "false"
+          }
+        }
+      }
+    }
+  }
+}

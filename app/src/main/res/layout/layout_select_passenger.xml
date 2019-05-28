@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/image_button"
+        android:layout_width="24px"
+        android:layout_height="24px"
+        android:layout_marginTop="34.7px"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:text="YuRong Cheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/image_button"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="17.3px"
+        android:textSize="18px"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@+id/lunch"
+        android:text="Lunch- Unselected"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/image_button"
+        android:layout_marginTop="4px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="13px"/>
+
+    <TextView
+        android:id="@+id/dinner"
+        android:text="Dinner - Unselected"
+        android:layout_below="@+id/lunch"
+        android:layout_toRightOf="@+id/image_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="13px"/>
+</RelativeLayout>

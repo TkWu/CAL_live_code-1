@@ -1,0 +1,235 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@drawable/bg_login">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true" >
+    </ci.ui.view.NavigationBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none">
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="360px"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10px"-->
+            <!--android:background="@color/black_30"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+            <!--style="@style/regular"-->
+            <!--android:layout_width="300px"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="18px"-->
+            <!--android:layout_marginBottom="18px"-->
+            <!--android:gravity="left"-->
+            <!--android:text="@string/find_my_booking_notes"-->
+            <!--android:textColor="@color/white_four"-->
+            <!--android:textSize="20px" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:alpha="0.15"-->
+            <!--android:background="@color/white_four" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_content"-->
+            <!--style="@style/light"-->
+            <!--android:layout_width="300px"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="20px"-->
+            <!--android:gravity="left"-->
+            <!--android:lineSpacingExtra="10px"-->
+            <!--android:text="@string/find_my_booking_notes_content"-->
+            <!--android:textColor="@color/white_four"-->
+            <!--android:textSize="16px" />-->
+
+            <!--</LinearLayout>-->
+            <!--644336 2019 2月3月 注意事項-->
+            <LinearLayout
+                android:id="@+id/rlayout_home_notes"
+                android:layout_width="360px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:background="@color/black_30"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/regular"
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18px"
+                    android:layout_marginBottom="18px"
+                    android:gravity="left"
+                    android:text="@string/find_my_booking_notes"
+                    android:textColor="@color/white_four"
+                    android:textSize="20px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:alpha="0.15"
+                    android:background="@color/white_four" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    style="@style/light"
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20px"
+                    android:gravity="left"
+                    android:lineSpacingExtra="10px"
+                    android:text="@string/find_my_booking_notes_content"
+                    android:textColor="@color/white_four"
+                    android:textSize="16px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlayout_checkin_notes"
+                android:layout_width="360px"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="360px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:background="@color/black_30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/regular"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="18px"
+                        android:layout_marginBottom="18px"
+                        android:gravity="left"
+                        android:text="@string/find_my_booking_notes_us_visa_waiver_program"
+                        android:textColor="@color/white_four"
+                        android:textSize="20px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:alpha="0.15"
+                        android:background="@color/white_four" />
+
+                    <TextView
+                        android:id="@+id/tv_content_us_visa_waiver"
+                        style="@style/light"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20px"
+                        android:gravity="left"
+                        android:lineSpacingExtra="10px"
+                        android:text="@string/find_my_booking_notes_us_visa_waiver_program_content"
+                        android:textColor="@color/white_four"
+                        android:textSize="16px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="360px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:background="@color/black_30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/regular"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="18px"
+                        android:layout_marginBottom="18px"
+                        android:gravity="left"
+                        android:text="@string/find_my_booking_notes"
+                        android:textColor="@color/white_four"
+                        android:textSize="20px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:alpha="0.15"
+                        android:background="@color/white_four" />
+
+                    <TextView
+                        style="@style/light"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20px"
+                        android:gravity="left"
+                        android:lineSpacingExtra="10px"
+                        android:text="@string/find_my_booking_notes2_content"
+                        android:textColor="@color/white_four"
+                        android:textSize="16px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="360px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:background="@color/black_30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/regular"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="18px"
+                        android:layout_marginBottom="18px"
+                        android:gravity="left"
+                        android:text="@string/find_my_booking_baggage_notes_2"
+                        android:textColor="@color/white_four"
+                        android:textSize="20px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:alpha="0.15"
+                        android:background="@color/white_four" />
+
+                    <TextView
+                        style="@style/light"
+                        android:layout_width="300px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20px"
+                        android:gravity="left"
+                        android:lineSpacingExtra="10px"
+                        android:text="@string/find_my_booking_notes_content"
+                        android:textColor="@color/white_four"
+                        android:textSize="16px" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

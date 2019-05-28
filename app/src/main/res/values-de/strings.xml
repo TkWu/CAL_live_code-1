@@ -1,0 +1,975 @@
+<?xml version="1.0" ?>
+<resources>
+    <!-- System Message/按鈕 -->
+    <string name="system_no_network_connection">Keine Netzwerkverbindung</string>
+    <string name="system_no_network_connection_message">Stellen Sie zur Aktualisierung Ihrer Informationen eine Verbindung mit dem WLAN oder Mobilfunknetz her.</string>
+    <string name="system_settings">Einstellungen</string>
+    <string name="system_dismiss">Verwerfen</string>
+    <string name="china_airlines">China Airlines</string>
+    <string name="next">Weiter</string>
+    <string name="previous">Zurück</string>
+    <string name="confirm">Bestätigen</string>
+    <string name="back_to_home">Zurück zur Startseite</string>
+    <string name="done">Fertig</string>
+    <string name="no">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="view">Anzeigen</string>
+    <string name="finish">Senden</string>
+    <string name="warning">Warnung</string>
+    <string name="exit_app_message">Möchten Sie beenden?</string>
+    <string name="exit">Beenden</string>
+    <string name="please_input_field">Bitte geben Sie %1$s ein.</string>
+    <string name="please_input_pnr">Bitte geben Sie die Reservierungs-/Ticketnummer ein.</string>
+    <string name="please_login">Bitte melden Sie sich an!</string>
+    <string name="login_success">Erfolgreich angemeldet!</string>
+    <string name="back_to_mytrips">Zurück zu Meine Buchungen</string>
+    <string name="back_to_boarding_pass">Zurück zu Bordkarte &amp; MyWallet</string>
+    <string name="select">Auswählen</string>
+    <string name="loading">Wird geladen...</string>
+
+    <!-- switch -->
+    <string name="on">Ein</string>
+    <string name="off">Aus</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="delay">Verspätet</string>
+
+    <!-- SideMenu -->
+    <string name="menu_log_out">Abmelden</string>
+    <string name="menu_miles">%s Meilen</string>
+    <string name="menu_become_a_dynasty_flyer">Am Dynasty Flyer-Programm teilnehmen</string>
+    <string name="menu_welcome_tag">Willkommen bei China Airlines</string>
+    <string name="menu_log_in">Anmelden</string>
+    <string name="menu_sign_up">Registrieren</string>
+
+    <!-- SideMenu Right-->
+    <string name="menu_title_homepage">Startseite</string>
+    <string name="menu_title_book_ticket">Flüge buchen</string>
+    <string name="menu_title_check_in">Check-in</string>
+    <string name="menu_title_flight_status">Flugstatus</string>
+    <string name="menu_title_timetable">Flugplan</string>
+    <string name="menu_title_extra_services">Add-ons</string>
+    <string name="menu_title_e_shopping">華航 Sky Boutique</string>
+    <string name="menu_title_promotions">Persönliche Empfehlungen</string>
+    <string name="menu_title_about">Kontakt</string>
+    <string name="menu_title_setting">Einstellungen</string>
+    <string name="menu_title_ai_service"></string>
+
+    <!-- SideMenu Left-->
+    <string name="menu_title_boarding_pass_ewallet">Bordkarte &amp; MyWallet</string>
+    <string name="menu_title_my_trips">Meine Buchungen</string>
+    <string name="menu_title_manage_miles">Meilen verwalten</string>
+    <string name="menu_title_personal_detail">Angaben zur Person</string>
+
+    <!-- StartPage -->
+    <string name="start_page_update">Aktualisieren</string>
+    <string name="start_page_cancel">Abbrechen</string>
+    <string name="start_page_more">Mehr</string>
+    <string name="gdpr_url">https://mobile30.china-airlines.com/mobile30/redirurl/gdpr.aspx?lang=EN&amp;uuid=</string>
+    <string name="gdpr_title">Informationssicherheitsrichtlinie</string>
+
+    <!-- HomePage-->
+    <string name="home_page_already_have_a_trip">Haben Sie bereits eine Buchung?</string>
+    <string name="home_page_button_find_my_booking">Meine Buchung suchen</string>
+    <string name="home_page_button_view_my_booking">Meine Buchungen anzeigen</string>
+    <string name="home_page_explore_destinations">Persönliche Empfehlungen</string>
+    <string name="home_page_button_book_ticket">Flüge buchen</string>
+    <string name="home_page_button_flight_status">Flugstatus</string>
+    <string name="home_page_button_extra_services">Add-ons</string>
+    <string name="home_page_timetable">Flugplan</string>
+    <string name="home_page_refresh">Aktualisieren</string>
+    <string name="home_page_have_ticket_long_time_ago">Ihr Flug nach %1$s beginnt in %2$s Tagen.</string>
+    <string name="month">Monate</string>
+    <string name="day">Tage</string>
+    <string name="home_page_select_meal">Bitte wählen Sie Ihr Menü im Voraus aus. %1$s</string>
+
+    <string name="seat">Sitzplatz</string>
+    <string name="meal">Menü</string>
+    <string name="zone">Bereich</string>
+    <string name="home_page_seat_meal_cabin_cannot_selectmeal">Die Menüauswahl ist für diese Klasse nicht verfügbar.</string>
+    <string name="home_page_seat_meal_cabin_cannot_selectseat">Die Sitzplatzauswahl ist für diese Klasse nicht verfügbar.</string>
+    <string name="home_page_seat_meal_no_select_seat_time">Die Sitzplatzauswahl ist noch nicht verfügbar.</string>
+    <string name="home_page_seat_meal_no_select_meal_time">Die Menüauswahl ist noch nicht verfügbar.</string>
+    <string name="home_page_seat_meal_airline_cantnot_select_seat">Die Sitzplatzauswahl ist für nicht von CI durchgeführte Flüge nicht verfügbar.</string>
+    <string name="home_page_seat_meal_airline_cantnot_select_meal">Die Menüauswahl ist für nicht von CI durchgeführte Flüge nicht verfügbar.</string>
+
+    <string name="my_others_trips">Weitere Buchungen</string>
+
+    <string name="online_check_in_is_now_open">Check-in-Schalter jetzt geöffnet!</string>
+    <string name="online_check_in_is_not_available">Für diesen Flug ist kein Online-Check-in verfügbar.</string>
+    <string name="check_in">Check-in</string>
+    <string name="select_flight">Flug auswählen</string>
+    <string name="home_terminal">Terminal</string>
+    <string name="terminal">Terminal %1$s</string>
+    <string name="check_in_counter">Check-in-Schalter</string>
+    <string name="boarding_pass">Bordkarte</string>
+    <string name="please_arrive_at_the_airport_before">Bitte kommen Sie zum Flughafen vor %1$s</string>
+    <string name="gate">Gate</string>
+    <string name="boarding">Boarding</string>
+    <string name="boarding_start_at_gate_xx">Das Boarding beginnt um %1$s am Gate %2$s</string>
+    <string name="time_to_destination_at_xx">Zeit bis zum Zielort: %1$s</string>
+    <string name="minute">Min.</string>
+    <string name="hours">Std.</string>
+
+    <string name="transition_infomation">Das Boarding für Ihren Transitflug beginnt \n um %1$s am Gate %3$s, Terminal %2$s</string>
+    <string name="welcome_xxx_baggage_at_xxx">Willkommen in %1$s!\nBitte holen Sie Ihr Gepäck beim Gepäckband %2$s</string>
+    <string name="baggage_carousel">Gepäckband</string>
+    <string name="departure_time_delays">Departure time has been delayed to %1$s</string>
+    <string name="flight_boarding_gate_change_xx">Boarding gate of %1$s has been changed to Gate %2$s</string>
+    <string name="boarding_gate_change_xx">Boarding gate has been changed to Gate %1$s</string>
+
+    <string name="change_flight">Meinen Flug ändern</string>
+    <string name="please_confirm_your_new_flight">Bitte bestätigen Sie Ihren neuen Flug.</string>
+    <string name="your_new_flight">Ihr neuer Flug</string>
+    <string name="flight_cancel_message">Möchten Sie eine andere Verbindung buchen? Der Kundenservice wird Sie für die Buchung eines anderen Flugs kontaktieren.</string>
+    <string name="disagree">Ablehnen</string>
+    <string name="agree">Annehmen</string>
+    <string name="decide_later">Später entscheiden</string>
+    <string name="customer_center_will_cantact_you">Der Kundenservice wird Sie für die Buchung einer neuen Verbindung kontaktieren.</string>
+    <string name="customer_services">Kundenservice</string>
+    <string name="travel_alert_count">%1$s Reisewarnung</string>
+
+    <string name="flight_cancel_please_confirm_new_flight">%1$s has been canceled. Please confirm %2$s as your new flight</string>
+    <string name="overbooking_fly_earlier_msg_title">Möchten Sie auf einen früheren Flug wechseln?</string>
+    <string name="overbooking_fly_earlier_subtitle">An earlier flight is available for you and %1$s. Offer includes:</string>
+    <string name="complimentary_beverage">Complimentary Beverage</string>
+    <string name="complimentary_upgrade">Complimentary Upgrade</string>
+    <string name="enjoy_more_time_at_your_destination">Enjoy more time at your destination</string>
+    <string name="change">Ändern</string>
+    <string name="travel_alert">Reisewarnung</string>
+
+    <!--ADD 20160801 D5-->
+    <string name="collect_boardingpass_at_airport_before">Check-in abgeschlossen. Bitte checken Sie Ihr Gepäck ein und holen Sie Ihre Bordkarte vor %1$s ab.</string>
+
+    <!-- 首頁廣告link -->
+    <string name="home_page_promotion_link_1">https://mobile30.china-airlines.com/CMS_1/EN_Discover1.html</string>
+    <string name="home_page_promotion_link_2">https://mobile30.china-airlines.com/CMS_1/EN_Discover2.html</string>
+    <string name="home_page_promotion_link_3">https://mobile30.china-airlines.com/CMS_1/EN_eShopping.html</string>
+    <string name="home_page_promotion_link_4">https://mobile30.china-airlines.com/CMS_1/EN_wifi.html</string>
+
+    <string name="home_page_promotion_title">Angebote</string>
+
+    <!-- Member_login / find my booking -->
+    <string name="member_login_title">Anmeldung für Mitglieder</string>
+    <string name="member_login_member">Mitglied</string>
+    <string name="member_login_booking_ref_ticket">Reserv.-/Ticket-Nr.</string>
+    <string name="member_login_booking_ref_ticket_hint">Reserv.-/Ticket-Nr.</string>
+    <string name="member_login_input_box_account_hint">Kartennummer/E-Mail/Ländervorwahl+Telefonnummer</string>
+    <string name="member_login_please_enter">Geben Sie eine gültige Kartennummer/E-Mail/Handynummer ein.</string>
+    <string name="member_login_input_box_password_hint">Passwort</string>
+    <string name="member_login_keep_logged_in">Angemeldet bleiben</string>
+    <string name="member_login_forget">Vergessen?</string>
+    <string name="member_login_log_in">Anmelden</string>
+    <string name="member_login_or">oder</string>
+    <string name="member_logifacebook">Facebook</string>
+    <string name="member_login_google_plus">Google</string>
+    <string name="member_login_new_to_here">Noch kein Mitglied?</string>
+    <string name="member_login_sign_up">Registrieren</string>
+    <string name="member_login_input_correvt_format_msg">Ungültiges Format</string>
+
+    <string name="input_detail_title">Angaben zur Person</string>
+    <string name="input_detail_hello">Hallo</string>
+    <string name="input_detail_comma">,</string>
+    <string name="input_detail_update_email_msg">Wird Ihre Adresse von noch jemandem verwendet? Diese Adresse %1$s gehört zu mehr als einer Kartennummer. Bitte aktualisieren und korrigieren Sie Ihre E-Mail-Adresse.</string>
+    <string name="input_detail_email_hint">Neue E-Mail-Adresse</string>
+    <string name="input_detail_send">Ändern</string>
+    <!-- wireframe P.21, M2 /0312新增-->
+    <string name="input_detail_request_user_id">Dieser Name und dieses Geburtsdatum sind mit mehr als einer DFP-Mitgliedskartennummer verknüpft. Bitte geben Sie Ihre Ausweis-/Reisepassnummer an.</string>
+    <string name="input_detail_identity_hint">Ausweis-/Reisepassnummer</string>
+    <!-- wireframe P.21, M2 /0312新增-->
+    <string name="input_detail_update_phone_msg">Wird diese Handynummer %@ von noch jemandem verwendet?\n Diese Handynummer %1$s ist mit mehr als einer DFP-Mitgliedskartennummer verknüpft. Bitte aktualisieren Sie Ihre Handynummer.</string>
+    <string name="input_detail_phone_hint">Handynummer hinzufügen</string>
+
+    <string name="recover_account_title">Abfrage Anmeldedaten</string>
+    <string name="recover_account_prompt_title">Welche Anmeldeinformationen möchten Sie abfragen?</string>
+    <string name="recover_account_prompt_msg">Haben Sie Ihre DFP-Mitgliedskartennummer vergessen? Sie können sich auch mit Ihrer E-Mail-Adresse oder Handynummer anmelden.</string>
+    <string name="recover_account_forget_card_number">Vergessene DFP-Kartennummer.</string>
+    <string name="recover_account_forget_password">Vergessene DFP-Kartennummer.</string>
+    <string name="recover_account_apply_password">Passwort beantragen</string>
+
+    <string name="inquiry_card_number_prompt_msg">Bitte geben Sie die folgenden Informationen an. Ihre DFP-Mitgliedskartennummer wird Ihnen in Kürze per E-Mail zugesandt.</string>
+    <string name="inquiry_input_box_first_name_hint">Vorname (lateinische Schrift)</string>
+    <string name="inquiry_input_box_last_name_hint">Nachname (lateinische Schrift)</string>
+    <string name="inquiry_input_box_date_of_birth_hint">Geburtsdatum</string>
+    <string name="inquiry_input_box_send">Senden</string>
+    <string name="inquiry_card_number_title">Abfrage: Kartennummer</string>
+    <string name="inquiry_card_number_inquiry_successfully">Ihre DFP-Mitgliedskartennummer wurde an Ihre E-Mail-Adresse gesendet.</string>
+    <string name="inquiry_password_title">Abfrage: Passwort</string>
+    <string name="inquiry_password_prompt_msg">Bitte geben Sie die folgenden Informationen an. Ihr DFP-Passwort wird Ihnen in Kürze per E-Mail zugesandt.</string>
+    <string name="inquiry_input_box_account_hint">Kartennummer/E-Mail-Adresse/Ländervorwahl+Telefonnummer</string>
+    <string name="inquiry_password_inquiry_successfully">Das DFP-Passwort wurde Ihnen per E-Mail und per SMS zugesandt.</string>
+
+    <string name="become_a_dynasty_flyer_title">Am Dynasty Flyer-Programm teilnehmen</string>
+    <string name="become_a_dynasty_flyer_hello">Hallo</string>
+    <string name="become_a_dynasty_flyer_prompt_msg">Melden Sie sich für eine einfache Anmeldung und die Nutzung unserer persönlichen Services bitte mit Ihrem sozialen Netzwerkkonto für eine Dynasty Flyer-Mitgliedschaft an.</string>
+    <string name="become_a_dynasty_flyer_not_now">Nicht jetzt</string>
+    <string name="become_a_dynasty_flyer_sign_up">Registrieren</string>
+    <string name="become_a_dynasty_flyer_already_have_account">Sind Sie bereits DFP-Mitglied?</string>
+    <!--0311新增-->
+    <!-- password inquiry -->
+    <string name="apply_password_inquiry">Passwort beantragen</string>
+    <string name="apply_password_success_note">Für die Registrierung Ihres DFP-Passworts geben Sie bitte die folgenden Informationen an.</string>
+    <string name="sign_up_terms_and_conditions_title">Allgemeine Geschäftsbedingungen</string>
+    <string name="sign_up_title">Registrieren</string>
+    <string name="sign_up_personal_detail">Angaben zur Person</string>
+
+    <!-- Sign up-->
+    <string name="sign_up_nationality">Nationalität/Region</string>
+    <string name="sign_up_salutation">Anrede</string>
+    <string name="sign_up_identity_card_no">Taiwan ID-Nummer</string>
+    <string name="sign_up_passport_chinese_name">Name laut Reisepass</string>
+    <string-array name="sign_up_salutation_list">
+        <item name="mr">Herr</item>
+        <item name="ms">Frau</item>
+    </string-array>
+
+    <string name="sign_up_passport_name">Name laut Reisepass</string>
+    <string name="sign_up_first_name">Vorname (lateinische Schrift)</string>
+    <string name="sign_up_last_name">Nachname (lateinische Schrift)</string>
+    <string name="sign_up_date_of_birth_hint">Geburtsdatum</string>
+    <string name="sign_up_contact_information">Kontaktinformationen</string>
+    <string name="sign_up_email_address">E-Mail-Adresse</string>
+    <string name="sign_up_monthly_mileage_summary_will_be_sent">Die monatliche Meilenübersicht ist nur online verfügbar und wird Ihnen an die angegebene E-Mail-Adresse zugesandt.</string>
+    <string name="sign_up_receive_promotion_email">Ja, ich möchte Neuigkeiten und Aktionsangebote von China Airlines per E-Mail erhalten.</string>
+    <string name="sign_up_password">Passwort</string>
+    <string name="sign_up_mobile_num_country_code">Ländervorwahl Handynummer</string>
+    <string name="sign_up_mobile_number">Handynummer</string>
+    <string name="sign_up_receive_sms">Ja, ich möchte SMS-Nachrichten von China Airlines erhalten.</string>
+    <string name="sign_up_account_information">DFP-Passwort</string>
+    <string name="sign_up_password_prompt_case">Beim Passwort wird zwischen Groß- und Kleinschreibung unterschieden. Es muss 6 bis 10 alphanumerische Zeichen enthalten. Verwenden Sie bitte keine Sonderzeichen.</string>
+    <string name="sign_up_confirm_password">Passwort erneut eingeben</string>
+    <!-- / 是分隔符號 -->
+    <string name="sign_up_trem_and_conditions">Ich bestätige, dass ich die Allgemeinen Geschäftsbedingungen der Bedingungen, Mitgliedschaftsrechte und -verpflichtungen sowie die Datenschutz- &amp; Sicherheitserklärung von China Airlines gelesen habe &amp; damit einverstanden bin.</string>
+    <string name="sign_up_confirm_button">Registrieren</string>
+    <string name="sign_uregistration_finished_dynasty_flyer_num">Vielen Dank. Ihre Dynasty Flyer-Mitgliedskartennummer lautet</string>
+    <string name="sign_uregistration_finished_enjoy_our_service">Genießen Sie unsere persönlichen Services.</string>
+    <string name="special_meal_preference">Besonderer Menüwunsch</string>
+    <string name="preference">Präferenz</string>
+    <!--0311新增-->
+    <string name="sign_up_passport_NO">*Reisepassnummer</string>
+    <string name="sign_up_preferences">Präferenzen</string>
+    <!-- open id -->
+    <string name="open_id_qualifications">Voraussetzungen</string>
+    <string name="open_id_membership">• Dynasty-Mitgliedschaft</string>
+    <string name="open_id_membership_note1">1. Alle Personen ab zwei Jahren können Dynasty Flyer-Mitglieder werden.</string>
+    <string name="open_id_membership_note2">2. Bewerber unter zwölf Jahren müssen einen Erziehungsberechtigten angeben, der ebenfalls Mitglied ist.</string>
+    <string name="suggested_to_change_your_membership_mail">Ihre Mitglieds-E-Mail-Adresse ist mit Ihrer %1$-E-Mail identisch. Wir empfehlen, Ihre Mitglieds-E-Mail zur %2$-E-Mail zu ändern.</string>
+
+    <string name="special_seat_preference">Sitzplatzwunsch</string>
+    <string-array name="sign_up_special_seat_list">
+        <item name="none">Keine Präferenz</item>
+        <item name="aisle">Gang</item>
+        <item name="windows">Fenster</item>
+    </string-array>
+    <string name="def_member_ship_card_number">Membership No.</string>
+    <string name="guardian_details">Guardian Details</string>
+
+
+    <!--/2019-01-24 新增郵寄地址/-->
+
+    <string name="sign_up_address_type">Privat-/Geschäftsadresse</string>
+    <string name="sign_up_country">Land/Region Ihres Wohnsitzes</string>
+    <string name="sign_up_city">Stadt/Staat</string>
+    <string name="sign_up_county">Stadt/Land/Bezirk</string>
+    <string name="sign_up_street">Straße</string>
+    <string name="sign_up_street_number">Straße 2</string>
+    <string name="sign_up_address_info">Straße 3</string>
+    <string name="sign_up_nearest_area">Nächstgelegen</string>
+    <string name="sign_up_zip_code">Postleitzahl</string>
+
+    <string name="sign_up_street1">Straße</string>
+    <string name="sign_up_street2">Straße 2</string>
+    <string name="sign_up_street3">Straße 3</string>
+    <string name="sign_up_city_state">Stadt/Staat</string>
+    <string name="sign_up_zip_code_en">Postleitzahl</string>
+    <string name="sign_up_nearest_area_en">Nächstgelegen</string>
+
+    <string-array name="sign_up_address_type_list">
+        <item name="home">Privatadresse</item>
+        <item name="company">Geschäftsadresse</item>
+    </string-array>
+
+    <string name="sign_up_street1_note">Geben Sie Ihre Postanschrift nur in lateinischer Schrift ein. Beispiel: 131, Section 3, Nanking East Road</string>
+    <string name="sign_up_home_nearest_area">Wählen Sie den nächstgelegenen Bereich für Ihre Postanschrift aus.</string>
+    <string name="sign_up_mailing_address">Adresse</string>
+    <!--/2019-01-24 新增郵寄地址/-->
+
+    <!-- My Trip-->
+    <string name="my_trips_title">Meine Buchungen</string>
+    <string name="my_trips_upcoming_trips">Flüge</string>
+    <string name="my_trips_past_trips">Verlauf</string>
+    <string name="my_trips_linked_successfully">Flug wurde erfolgreich verknüpft!</string>
+    <string name="my_trips_layover">%1$d Stopp in (%2$s):</string>
+    <string name="hours_unit">%1$d Std.</string>
+    <string name="minute_unit">%1$d Min.</string>
+    <string name="my_trips_can_not_find_the_trip">Sie können Ihre Buchung nicht finden?</string>
+    <string name="my_trips_add_flight">Meine Buchung suchen</string>
+    <string name="my_trips_can_not_find_your_reservayion_number">Can\'t find your reservation number?</string>
+    <string name="find_my_booking_title">Meine Buchung suchen</string>
+    <string name="find_my_booking_button">Suchen</string>
+    <string name="find_my_booking_notes">Hinweise</string>
+    <string name="find_my_booking_notes_content">\n
+        1. Die Reservierungsnummer besteht aus sechs Buchstaben oder Zahlen.\n\n
+        2. Falls zu Ihrer Reservierungsnummer mehrere Passagiere gehören, geben Sie nur den Namen einer Person ein.\n\n</string>
+    <!--644336 2019 2月3月 注意事項-->
+    <string name="find_my_booking_notes_us_visa_waiver_program">Visa-Waiver-Programm der USA</string>
+    <string name="find_my_booking_notes_us_visa_waiver_program_content">\n
+       • Seit dem 12. Januar 2009 müssen alle Reisenden im Rahmen des Visa-Waiver-Programms für Reisen in die USA eine Vorabgenehmigung beantragen und über das elektronische Reisegenehmigungssystem ESTA (Electronic System for Travel Authorization) genehmigt werden. Passagiere, die die USA im Rahmen des Visa-Waiver-Programms betreten möchten, dürfen nur an Bord gehen, wenn ihre Angaben auf der ESTA-Website registriert wurden. Bitte beachten Sie, dass die Bestätigung der Anträge bis zu 72 Stunden dauern kann.\n\n</string>
+    <string name="find_my_booking_notes2_content">\n
+        • Besondere Menüs oder Sonderservices wie Rollstühle werden beim eCheck-in nicht angeboten. Bitte fordern Sie dies bei der Reservierung vor dem eCheck-in an oder bitten Sie am Check-in-Schalter am Flughafen um Hilfe, wenn Sie den eCheck-in abgeschlossen haben.\n\n
+        • Derzeit ist der eCheck-in für Gruppen mit bis zu 9 Personen pro Buchung für internationale CI-Flüge (ausgenommen Codesharing-Flüge von anderen Fluggesellschaften) ab 48 Stunden bis hin zu 1,5 Stunden vor Abflug verfügbar.\n\n
+        • Der eCheck-in steht Passagieren mit Buchungen der G-Klasse nicht zur Verfügung.n\n
+        • Wenn Sie zur Nutzung des Selbstdruck-Bordkartenservice oder des mobilen Bordkartenservice nicht berechtigt sind, holen Sie Ihre Bordkarte mindestens 1 bis 2 Stunden vor Abflugzeit am Flughafen ab und checken Sie bei Bedarf Ihr Gepäck ein (siehe Hinweise zum eCheck-in und zur Druckfunktion auf der Website). Sie können sich direkt an den eCheck-in-Schalter am Schalter B des Flughafens KHH wenden und durch die Sicherheitskontrolle gehen.\n\n
+        • Passagiere aus Rom, die jünger als 18 Jahre sind und allein reisen, können den eCheck-in-Service aufgrund der örtlichen gesetzlichen Bestimmungen nicht nutzen.\n\n</string>
+    <string name="find_my_booking_traveling_with_other_companions">Reisen Sie mit weiteren Personen?</string>
+    <string name="my_trips_not_find">Buchung nicht gefunden</string>
+    <string name="my_trip_ci">China Airlines</string>
+    <string name="my_trip_ae">Mandarin Airlines</string>
+    <string name="add_member_card">Verknüpfung Mitgliedsnummer</string>
+    <string name="add_passenager_title">Passagier hinzufügen</string>
+    <string name="add_passenager_add_travel_companion_to_app">Reisebegleitung zur App hinzufügen</string>
+    <string name="add_passenager_passenager_x">Passagier %1$d</string>
+    <string name="add_passenager_add_more">Passagier hinzufügen</string>
+    <string name="add_passenager">Passagier hinzufügen</string>
+    <string name="select_passenager">Passagiere auswählen</string>
+    <string name="trips_detail_title">%1$s ➞ %2$s</string>
+    <string name="trips_detail_tab_flight">Flug</string>
+    <string name="trips_detail_tab_passenger">Passagier(%1$d)</string>
+    <string name="trips_detail_tab_information">Informationen</string>
+    <string name="trips_detail_reference_no">Reservierungsnummer:</string>
+    <string name="trips_detail_airlines">Fluggesellschaften:</string>
+    <string name="trips_detail_flight_number">Flugnummer:</string>
+    <string name="trips_detail_travel_time">Flugdauer:</string>
+    <string name="flight_status">Flugstatus</string>
+    <string name="add_to_calendar">Zum Kalender</string>
+    <string name="add_to_calendar_add_confirm">Hinzufügen</string>
+    <string name="add_to_calendar_title_success">Kalenderereignis hinzugefügt</string>
+    <string name="add_to_calendar_content_success">Flight schedule has been added to a calendar. The alarm will be started when online check-in service is available.</string>
+    <string name="add_to_calendar_notes">Entfernen Sie das Ereignis manuell aus dem Kalender. Fügen Sie bei Änderungen erneut über die China Airlines-App hinzu. Vielen Dank für Ihre Unterstützung.</string>
+    <string name="share">Teilen</string>
+    <string name="weather">Wetter</string>
+    <string name="global_branch_office">Globale Niederlassung</string>
+    <string name="airport_name_code">Flughafenname/-code</string>
+    <string name="nearest_office">Niederlassung in Ihrer Nähe</string>
+    <string name="all_area">Alle Bereiche</string>
+    <string name="miles">Meilen</string>
+    <string name="trips_detail_select">Auswählen</string>
+    <string name="trips_detail_edit">Bearbeiten</string>
+    <string name="trips_detail_view">Anzeigen</string>
+    <string name="trips_detail_business">Business</string>
+    <string name="trips_detail_seat_w">Fenster</string>
+    <string name="trips_detail_seat_a">Gang</string>
+    <string name="trips_detail_luggage_kg">Kg</string>
+    <string name="trips_detail_luggage_PC">Stück</string>
+    <string name="vip_lounge">VIP-Lounge</string>
+    <string name="ticket_number">Ticketnummer:</string>
+    <string name="ticket_modifly">Verwalten</string>
+    <string name="trips_detail_extra_services">Kundenservice</string>
+    <string name="trips_detail_hsr">HSR-Tickets</string>
+    <string name="wifi">WLAN an Bord</string>
+    <string name="trips_detail_invalid">Nicht verfügbar</string>
+    <string name="trips_detail_info_airport_information">Flughafeninformationen</string>
+    <string name="trips_detail_info_airport_floor_map">Flughafenplan</string>
+    <string name="trips_detail_info_location_map">Lageplan</string>
+    <string name="trips_detail_info_airport_office_website">Offizielle Website des Flughafens</string>
+    <string name="trips_detail_info_vip_lounge_infor">Informationen zur VIP Lounge</string>
+    <string name="trips_detail_info_travel_hint">Reisetipps</string>
+    <string name="trips_detail_info_travel_checklist">Reisecheckliste</string>
+    <string name="trips_detail_info_luggage_infor">Gepäckinformationen</string>
+    <string name="trips_detail_info_currency">Geldwechsel</string>
+    <string name="trips_detail_info_amenities">Einrichtungen</string>
+    <string name="trips_detail_info_add_new_item">Add new item</string>
+    <string name="trips_detail_info_delete">Löschen</string>
+    <string name="trips_detail_info_update_date">Letzte Aktualisierung</string>
+    <string name="non_ci_and_ae_alert_dialog">Informationen zum Flugstatus werden nur für Marketing-Fluggesellschaften bereitgestellt.</string>
+    <string name="trips_detail_share_info_description">Klicken Sie auf den Link, um den aktuellen Flugstatus anzuzeigen.</string>
+    <string name="trips_detail_anwser_title">Ihr Tarif ist abgeschlossen.</string>
+    <string name="my_trips_detail_add_passenger">Add passenger to this trip</string>
+    <string name="join_member">Am Dynasty Flyer-Programm teilnehmen</string>
+    <string name="not_depart_yet">Not depart yet</string>
+    <string name="global_service_hotline">Globale Niederlassung</string>
+    <string name="city">Geben Sie den Stadtnamen ein</string>
+    <string name="international_call">Internationaler Anruf</string>
+    <string name="international_call_msg">Bitte beachten Sie, dass je nach Land und Region während Ihrer Reise Roaming-Gebühren oder zusätzliche Gebühren anfallen können.\n\n</string>
+    <string name="rate_this_trip">Umfrage</string>
+    <string name="rate_this_trip_info_url">https://mobile30.china-airlines.com/mobile30/redirurl/quesrule.aspx?lang=EN</string>
+    <string name="gps_press_enable_gps_service">GPS-Positionierungsdienst aktivieren</string>
+    <string name="gps_positioning">GPS-Positionierung</string>
+    <string name="gps_position_fail">GPS-Positionierung fehlgeschlagen</string>
+    <string name="gps_permissions_msg">Für den Zugriff auf Ihren Standort ist eine Autorisierung erforderlich. Gehen Sie zu den Einstellungen auf Ihrem Gerät, um den GPS-Positionierungsdienst zu aktivieren.</string>
+    <string name="trip_detail_passenger_bag_url">https://www.china-airlines.com/jp/jp/booking/manage-booking/reservation-booking-inquiry</string>
+    <string name="trip_detail_passenger_free_bag_title">Aufgegebenes Gepäck</string>
+    <string name="trip_detail_passenger_add_excess_bag_title">Vorausbezahltes Übergepäck</string>
+    <string name="trip_detail_passenger_add_bag_btn">Let’s GO</string>
+    <string name="trip_detail_passenger_add_excess_bag_btn">Mehr kaufen</string>
+    <string name="trip_detail_passenger_bag_ewallet">Gutschein</string>
+    <string name="trip_detail_passenger_bag_eb_total">Gesamtpreis</string>
+    <string name="trip_detail_passenger_bag_pay_title">Rechnungsinformationen</string>
+    <string name="trip_detail_passenger_bag_select_pay_mode">Wählen Sie eine Zahlungsmethode aus.</string>
+    <string name="trip_detail_passenger_bag_credit_card_data">Kreditkartendaten</string>
+    <string name="trip_detail_passenger_bag_credit_card">Kreditkarte</string>
+    <string name="trip_detail_passenger_bag_confirm_pay">Jetzt bezahlen</string>
+    <string name="trip_detail_passenger_bag_pay_final_page">Zahlungsbestätigung</string>
+    <string name="trip_detail_passenger_bag_success_title">Kauf abgeschlossen</string>
+    <string name="trip_detail_passenger_bag_fail_title">Kauf fehlgeschlagen</string>
+    <string name="trip_detail_passenger_bag_success_msg">Der Gutschein wurde unter „Bordkarte &amp; MyWallet“ ausgestellt.</string>
+    <string name="trip_detail_passenger_bag_pay_total">Gesamtpreis:</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_bag">Menge:</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_price">Betrag:</string>
+    <string name="trip_detail_passenger_not_find">Passenger Not Found</string>
+    <string name="trip_detail_home_page_trip_track">Fixieren</string>
+    <string name="trip_detail_home_page_trip_tracked">Fixiert</string>
+    <string name="trip_detail_home_page_trip_finish">Fixierung an die Startseite nicht möglich. Der Flug ist bereits gelandet.</string>
+    <string name="check_in_select_flight">Flug auswählen</string>
+    <string name="check_in_dabgerous_goods_info">Gepäckinformationen</string>
+    <string name="check_in_have_flight">Check-in (%1$s ➞ %2$s)</string>
+    <string name="check_in_completed">Check-in abgeschlossen</string>
+    <string name="cancel_check_in">Check-in abbrechen</string>
+    <string name="cancel_check_in_flight">Check-in abbrechen (%1$s ➞ %2$s)</string>
+    <string name="boarding_with_qrcode">Mobile Bordkarte</string>
+    <string name="scan_the_qrcode_boarding_pass">Check-in abgeschlossen. Zur Startseite gehen und auf den QR-Code klicken, um mobile Bordkarte anzuzeigen.</string>
+    <string name="dont_remind_me_again">Alles klar. Nicht mehr erinnern.</string>
+    <string name="check_in_boarding_pass">Bordkarte</string>
+    <string name="back_to_trip_detail">Zurück zu Meine Buchungen</string>
+    <string name="cancellation_completed">Canceled</string>
+    <string name="prohibit_product_claim_notice">Ich habe die oben genannten Gepäckinformationen gelesen und erkläre mich mit den relevanten Bestimmungen einverstanden.</string>
+    <string name="prohibit_product_claim_notice_underline">Prohibit Product Claim.</string>
+    <string name="please_select_flight">Flug auswählen</string>
+    <string name="cancel_check_in_alert_msg">Möchten Sie den Check-in abbrechen?</string>
+    <string name="check_in_failure">Einchecken fehlgeschlagen! Bitte führen Sie den Check-in am Flughafen durch.</string>
+    <string name="can_not_find_any_passenger">Angaben zum hinzugefügten Passagier wurden nicht gefunden.</string>
+    <string name="please_select_passenger">Passagier auswählen</string>
+    <string name="get_boarding_pass_at_airport">Bordkarte am Flughafen abholen</string>
+    <string name="due_to_local_government_regulations">Bitte holen Sie Ihre Bordkarte am Flughafen ab.</string>
+    <string name="boardingpass_print">Drucken</string>
+    <string name="check_in_pnr_passenger_over_limit">Passagieranzahl größer als 9 Personen</string>
+    <string name="check_in_seat_allocated_erro">Bei der Sitzplatzzuweisung ist ein Fehler aufgetreten. Bitte begeben Sie sich zum Check-in-Schalter.</string>
+    <string name="check_in_creditcard_verification">Bitte begeben Sie sich zur Kreditkartenüberprüfung zum Schalter oder Gate.</string>
+    <string name="is_there_a_green_card">Einwohner der USA (Inhaber der Green Card)</string>
+    <string name="CancelCheckIn_SuccessMsg">Stornierung des Check-ins abgeschlossen</string>
+    <string name="select_meal_flight">Menü auswählen (%1$s ➞ %2$s)</string>
+    <string name="SelectMeal_Label_PleaseSelectBreakfast">Bitte wählen Sie Ihr Frühstück!</string>
+    <string name="SelectMeal_Label_PleaseSelectLunch">Bitte wählen Sie Ihr Mittagessen!</string>
+    <string name="SelectMeal_Label_PleaseSelectDinner">Bitte wählen Sie Ihr Abendessen!</string>
+    <string name="SelectMeal_Label_PleaseSelectR">Bitte wählen Sie Ihr Getränk!</string>
+    <string name="breakfast">Frühstück</string>
+    <string name="lunch">Mittagessen</string>
+    <string name="dinner">Abendessen</string>
+    <string name="unselected">Nicht ausgewählt</string>
+    <string name="normal_meal">Normales Menü</string>
+    <string name="vegetarian_exclusive">Ausschließlich vegetarisch</string>
+    <string name="your_meal_selection_is_completed">Ihre Menüauswahl wurde abgeschlossen.</string>
+    <string name="meal_selection_notice">Hinweis zur Menüauswahl</string>
+    <string name="meal_selection_notice_title">Premium Business- und Business-Passagier</string>
+    <string name="vegetarian_exclusive_summary">Für Flüge von Taipei Taoyuan haben wir 5 vegetarische Hauptgerichte mit ausgewählten frischen, gesunden Zutaten zusammengestellt, die mit asiatischer Ästhetik und Kreativität kombiniert werden.</string>
+    <string name="SelectMeal_NotSelectedMeal">Sie haben kein Menü ausgewählt.</string>
+    <string name="SelectMeal_NotSelectedPassenger">Sie haben keinen Passagier ausgewählt.</string>
+    <string name="SelectMeal_delete_meal">Möchten Sie Ihr Menü stornieren?</string>
+    <string name="select_seat">Sitzplatz auswählen</string>
+    <string name="select_seat_flight">Sitzplatz auswählen (%1$s ➞ %2$s)</string>
+    <string name="next_flight">Nächster Flug</string>
+    <string name="seat_selection_result">Ergebnisse Sitzplatzauswahl</string>
+    <string name="your_seat_selection_is_completed">Ihre Sitzplatzauswahl wurde abgeschlossen.</string>
+    <string name="your_seat">Ihr Platz</string>
+    <string name="partner_seat">Begleitsitz</string>
+    <string name="available">Verfügbar</string>
+    <string name="occupied">Belegt</string>
+    <string name="upper_deck">Obere Ebene</string>
+    <string name="lower_deck">Hauptebene</string>
+    <string name="button_seat_confirm">Änderungen bestätigen</string>
+    <string name="boarding_pass_ewallet_title">Bordkarte &amp; MyWallet</string>
+    <string name="boarding_pass_tab_boarding_pass">Bordkarte</string>
+    <string name="boarding_pass_tab_services">Add-on-Beleg</string>
+    <string name="boarding_pass_tab_coupon">Gutschein</string>
+    <string name="economy">Economy</string>
+    <string name="need_to_book_hsr_ticket">Möchten Sie HSR-Tickets buchen?</string>
+    <string name="extra_services">Add-ons</string>
+    <string name="extra_services_award_no">Prämiennummer</string>
+    <string name="extra_services_flight_number">Flugnummer</string>
+    <string name="ewallet_notice">Hinweis: Dieser Gutschein kann nur in Verbindung mit einem Flugticket verwendet werden. Bei Problemen wenden Sie sich bitte an China Airlines.</string>
+    <string name="id">Ausweis</string>
+    <string name="password">Passwort</string>
+    <string name="lounge_area">VIP-Lounge – Business-Bereich</string>
+    <string name="date">Datum</string>
+    <string name="valid_date">Gültig bis:</string>
+    <string name="booking_no">Reservierungsnummer</string>
+    <string name="seq">SEQ:</string>
+    <string name="eb_seq">SEQ</string>
+    <string name="enjoy_discount">Profitieren Sie von %1$s%2$s-Rabatten für zollfreie Waren an Bord.</string>
+    <string name="discount">Rabatt:</string>
+    <string name="extra_services_have_not_booked_a_hsr_ticket">Sie haben noch kein HSR-Ticket gebucht?</string>
+    <string name="family_couch">Family Couch</string>
+    <string name="booking_cabin">Buchungsklasse</string>
+    <string name="bag_receipt">Informationen zu aufgegebenem Gepäck\n(formloser Beleg)</string>
+    <string name="now_no_have_bag">Nicht aufgegebenes Gepäck</string>
+    <string name="bag_to">Zielort:</string>
+    <string name="purchase_date">Kaufdatum</string>
+    <string name="eb_amount">Betrag</string>
+    <string name="eb_flight_info">Gültiger Flug</string>
+    <string name="eb_bag">Menge</string>
+    <string name="extra_baggage">Vorausbezahltes Übergepäck</string>
+    <string name="eb_extra_baggage">Vorausbezahltes Übergepäck</string>
+    <string name="boarding_pass_extra_services_wifi_notice">Wichtiger Hinweis\n
+            WLAN ist nur an Bord der Maschine B777-300ER/A350 verfügbar.\n
+            Der Gutschein für WLAN an Bord kann nach dem Kauf nicht zurückerstattet werden. \n
+            Bitte kontaktieren Sie uns unter WiFiOnboard@China-Airlines.com.</string>
+    <string name="boarding_pass_extra_services_vip_notice">Wichtiger Hinweis\n
+            •Der Gutschein für die VIP-Lounge kann nicht zurückerstattet werden. Das Datum kann nach dem Kauf nicht geändert werden.</string>
+    <string name="boarding_pass_extra_services_thsr_notice">Hinweis zur Ticketabholung:\n
+    ● Geben Sie bei der Abholung der Tickets 40 Minuten vor der Abfahrtzeit des Zuges bitte die Ausweisnummer (Passagiere aus dem Ausland bitte die Reisepassnummer) an, die für die Buchung verwendet wurde, sowie die Reservierungsnummer. Die Tickets können während der Öffnungszeiten in Partnergeschäften (zusätzliche Gebühr von 10 NTD pro Ticket), an Ticketschaltern oder beim Ticketautomaten an jedem THSR-Bahnhof abgeholt werden.\n
+    ● Wenden Sie sich bei Problemen bitte an den THSR-Kundenservice unter 412-9000 (Handy: 02-4129000).\n</string>
+    <string name="boarding_pass_expired">(Expired)</string>
+    <string name="boarding_pass_e_miscellaneous_no">EMD-Nummer</string>
+    <string name="boarding_pass_item">Artikel</string>
+    <string name="boarding_pass_flight_no">Flugnummer</string>
+    <string name="boarding_pass_seat_no">Sitznr.</string>
+    <string name="boarding_pass_wifi_item">WLAN an Bord</string>
+    <string name="boarding_pass_wifi_expiry_date">Ablaufdatum</string>
+    <string name="boarding_pass_order_no">Bestellnummer</string>
+    <string name="boarding_pass_authorization_code">Autorisierungscode</string>
+    <string name="boarding_pass_date_time">Datum/Uhrzeit</string>
+    <string name="boarding_pass_train_class">Zug/Klasse</string>
+    <string name="boarding_pass_departure_station">Abfahrtsbahnhof</string>
+    <string name="boarding_pass_airport">Flughafen</string>
+    <string name="boarding_pass_terminal">Terminal:</string>
+    <string name="boarding_pass_gate">Gate:</string>
+    <string name="manage_miles">Meilen verwalten</string>
+    <string name="point_balance">Meilenguthaben</string>
+    <string name="update_xxx_ago">Updated %1$s day ago</string>
+    <string name="miles_activity">Details</string>
+    <string name="reclaim_miles">Korrektur</string>
+    <string name="miles_overdue_in_6_months">Meilen, die innerhalb von 6 Monaten verfallen</string>
+    <string name="manage_miles_miles_unit">Meilen</string>
+    <string name="due_date">Ablaufdatum</string>
+    <string name="redeem_miles">Einlösen von Meilen</string>
+    <string name="you_are_eligible_miles">Sie können Meilen einlösen.</string>
+    <string name="redeem_now">Jetzt einlösen</string>
+    <string name="need_xxx_miles">Mehr %1$d Meilen erforderlich</string>
+    <string name="more">Mehr</string>
+    <string name="web_only">Nur Web</string>
+    <string name="managemiles_tab_accumulation">Details zu den Meilen</string>
+    <string name="managemiles_tab_redeem">Eingelöst</string>
+    <string name="managemiles_tab_award_transfer">Prämienübertragung</string>
+    <string name="description_accumulation_date">Beschreibung/Datum des Erwerbs</string>
+    <string name="awards_redeem_date">Prämien/Einlösedatum</string>
+    <string name="awards_transfer_date">Prämien/Übertragungsdatum</string>
+    <string name="cabin">Kabine</string>
+    <string name="ticket_issued">Prämie verwendet</string>
+    <string name="member_detail">Angaben zur Person</string>
+    <string name="name">Name</string>
+    <string name="member_no">Kartennummer</string>
+    <string name="email">E-Mail-Adresse</string>
+    <string name="update_email_to_my_personal">Meine E-Mail-Adresse mit meinen persönlichen Daten aktualisieren</string>
+    <string name="first_flight_detail">Flugdetail %1$s Segment</string>
+    <string name="transfer">Transfer</string>
+    <string name="upgrade_awards">Upgrade-Prämien</string>
+    <string name="ticket_awards">Ticket Awards</string>
+    <string name="awards_transfer">Awards Transfer</string>
+    <string name="awards_received">Awards Received</string>
+    <string name="not_in_use">Prämie nicht verwendet</string>
+    <string name="nominator">Ernenner</string>
+    <string name="add_more_flight">Flug hinzufügen</string>
+    <string name="my_miles">Meilen verwalten</string>
+    <string name="departure_airport">Abflughafen</string>
+    <string name="arrival_airport">Zielflughafen</string>
+    <string name="departure_date_only_within_6_months">Abreisedatum (nur innerhalb von 6 Monaten)</string>
+    <string name="notice">Hinweise</string>
+    <string name="notice_message_content_1">1. Wenn Sie in den letzten 6 Monaten mit China Airlines/Mandarin Airlines gereist sind und Ihre Meilen nicht gutgeschrieben worden sind, beantragen Sie bitte die Anpassung Ihrer Meilen. Es werden nur Tickets akzeptiert, die von CI/AE mit der Ticketnummer 297/803 ausgestellt wurden.</string>
+    <string name="notice_message_content_2">2. Wenn ein Mitglied ein Ticket mit dem Buchungscode „G/X/O/A/S/L“ verwendet, werden keine Meilen gesammelt.</string>
+    <string name="reclaim_completed_message">Bei einem gültigen Antrag auf fehlende Meilen werden sie dem Konto des Mitglieds innerhalb von 4 Wochen gutgeschrieben.</string>
+    <string name="back_to_manage_miles">Zurück zu Meilen verwalten</string>
+    <string name="your_miles_has_been_update">Meilen aktualisiert</string>
+    <string name="miles_have_been_imported_to_your_account">Es wurden Ihnen %1$s Meilen gutgeschrieben für %4$s (%2$s-%3$s) gutgeschrieben.</string>
+    <string name="manage_miles_nominee">Nominierter</string>
+    <string name="manage_miles_cardtype">Kartentyp</string>
+    <string name="manage_miles_cardnumber">Kartennummer</string>
+    <string name="award_no">Prämiennummer</string>
+    <string name="manage_miles_ticket_number">Ticketnummer</string>
+    <string name="personal_detail">Angaben zur Person</string>
+    <string name="personal_valid_date">Gültigkeitszeitraum:</string>
+    <string name="qrcode">QR-Code</string>
+    <string name="flights">Flüge</string>
+    <string name="miles_progress">Übersicht über die Meilen</string>
+    <string name="miles_progress_notice_msg">Für das Upgrade und die Verlängerung der Mitgliedschaft muss jedes Mitglied mindestens 6 selbst durchgeführte internationale gewichtete Flüge von China Airlines (CI)/Mandarin Airlines (AE) sammeln sowie mindestens einen der folgenden Punkte entsprechend erfüllen: „Gesammelte Meilen“, „Ausgewiesene Business Class-Flüge“ oder „Gewichtete Reisen“. Wenn das oben genannte Ziel erreicht wurde, erhält die Mitgliedschaft am 1. des Folgemonats das Upgrade; die Mitgliedschaft wird am Tag nach dem Ablaufdatum der aktuellen Mitgliedschaft verlängert.</string>
+    <string name="miles_completed">Gesammelte Meilen</string>
+    <string name="renewal">Verlängerung</string>
+    <string name="personal_detail_due">Ablaufdatum:</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="upgrade_tag">Die Anzahl der gesammelten Business Class-Flüge gilt nur für selbst durchgeführte internationale Flüge von China Airlines und Mandarin Airlines.</string>
+    <string name="profile">Angaben zur Person</string>
+    <string name="passport_chinese_name">Name laut Reisepass:</string>
+    <string name="identity_card_no">Taiwan ID-Nummer:</string>
+    <string name="date_of_birth">Geburtsdatum:</string>
+    <string name="passport_no">Reisepassnummer:</string>
+    <string name="personal_email">E-Mail-Adresse:</string>
+    <string name="mobile_phone">Handynummer:</string>
+    <string name="social_network">Soziales Netzwerk</string>
+    <string name="facebook">Facebook</string>
+    <string name="google_plus">Google+</string>
+    <string name="social_network_facebook">Facebook:</string>
+    <string name="social_network_google_plus">Google:</string>
+    <string name="my_apis">Meine Reiseunterlagen</string>
+    <string name="passport">Reisepass</string>
+    <string name="usa_permanent_resident_card">US Permanent Resident Card</string>
+    <string name="companions_apis">Dokumente des Begleiters</string>
+    <string name="advance_passenger_information_system">(Advance Passenger Information System)</string>
+    <string name="member_card_detail">Details zur Mitgliedskarte</string>
+    <string name="this_qrcode_contains_your_personal_infor">Dieser QR-Code enthält Ihre Details zur Mitgliedskarte.</string>
+    <string name="member_card_type">Stufe</string>
+    <string name="member_card_number">Kartennummer</string>
+    <string name="congratulations_eligible_to_renew_gold_membership">Herzlichen Glückwunsch! Sie haben Anspruch auf die Verlängerung Ihrer Mitgliedschaft.</string>
+    <string name="congratulations_eligible_to_upgrade_to_emerald_membership">Herzlichen Glückwunsch! Sie haben Anspruch auf ein Upgrade Ihrer Mitgliedschaft.</string>
+    <string name="completed">Qualifiziert</string>
+    <string name="make_you_login_quickly">Anmeldung mit Fingerprint</string>
+    <string name="make_you_login_quickly_notice_msg">Wählen Sie das soziale Netzwerkkonto aus, um eine Verbindung zu Ihrem Dynasty Flyer-Konto herzustellen.</string>
+    <string name="connected">Verbunden</string>
+    <string name="disconnect">Trennen</string>
+    <string name="connect_to_others">Mit anderen verbinden</string>
+    <string name="change_has_been_saved_successfully">Änderung wurde erfolgreich gespeichert</string>
+    <string name="vip_lounge_content">Die Lounge bietet Ihnen bei All-You-Can-Eat eine entspannte Atmosphäre.</string>
+    <string name="event_bonus">Event bonus</string>
+    <string name="excess_baggage">Excess Baggage</string>
+    <string name="vip_lounge_use">VIP Lounge Usage</string>
+    <string name="disconnect_social_account">Verbindung zum sozialen Netzwerkkonto trennen</string>
+    <string name="are_you_sure_you_want_to_disconnect">Möchten Sie die Verbindung zu Ihrem %1$s-Konto trennen?</string>
+    <string name="connecting_to_social_account_makes_you_log_in_more_easier">Melden Sie sich für eine einfache Anmeldung und die Nutzung unserer persönlichen Services bitte mit Ihrem sozialen Netzwerkkonto für eine Dynasty Flyer-Mitgliedschaft an.</string>
+    <string name="not_connect">Nicht verbunden</string>
+    <string name="tai_bao_cheng">MPTS</string>
+    <string name="mainland_residents_traveling_to_taiwan_pass">Ticket für Bewohner Festlandchinas, die nach Taiwan reisen</string>
+    <string-array name="apis_document_list">
+        <item name="passport">Reisepass</item>
+        <item name="usa_permanent_resident_card">US Permanent Resident Card</item>
+        <item name="tai_bao_cheng">MPTS</item>
+        <item name="mainland_residents_traveling_to_taiwan_pass">Ticket für Bewohner Festlandchinas, die nach Taiwan reisen</item>
+    </string-array>
+    <string name="card_type_gray">Dynasty Card</string>
+    <string name="card_type_gold">Gold Card</string>
+    <string name="card_type_green">Emerald Card</string>
+    <string name="card_type_blue">Paragon Card</string>
+    <string name="back_to_personal_detail">Zurück zu Angaben zur Person</string>
+    <string name="no_apis">Keine Reiseunterlagen</string>
+    <string name="add_apis">Reiseunterlagen hinzufügen</string>
+    <string name="no_companions_apis">Reiseunterlagen des Reisebegleiters sind nicht verfügbar.</string>
+    <string name="add_apis_notice">In einigen Ländern/Regionen müssen Passagiere zusätzliche Informationen zu Reiseunterlagen (APIS) angeben. Füllen Sie die nachstehenden Felder aus, speichern Sie sie, und genießen Sie einen schnellen und einfachen Check-in.</string>
+    <string name="document_detail">Dokumentdetails</string>
+    <string name="input_apis">Reiseunterlagen eingeben</string>
+    <string name="use_saved_apis">Gespeichertes Dokument verwenden</string>
+    <string name="fill_new_form_apis">Neues Dokument ausfüllen</string>
+    <string name="male">Männlich</string>
+    <string name="female">Weiblich</string>
+    <string name="resident_country">Land/Region Ihres Wohnsitzes</string>
+    <string name="document_type">Dokumenttyp</string>
+    <string name="document_number">Dokumentnummer</string>
+    <string name="country_of_issuance">Ausstellungsland/-region</string>
+    <string name="date_of_expiry">Ablaufdatum</string>
+    <string name="apis_save_change">Änderungen an den Reiseunterlagen speichern.</string>
+    <string name="apis_add_this_travel_doc_to_my_account">Diese Reiseunterlagen meinem Konto hinzufügen</string>
+    <string name="addapis_label_address">Zieladresse (nur für Reisen in die USA)</string>
+    <string name="city_stat">Abkürzung Bundesstaat</string>
+    <string name="city_county_district">Stadtname</string>
+    <string name="street">Straßenname &amp; -nummer</string>
+    <string name="zip_code">Postleitzahl</string>
+    <string name="save">Speichern</string>
+    <string name="delete_apis_title">Reiseunterlagen löschen</string>
+    <string name="delete_apis_msg">Diese Information der Reiseunterlagen wird entfernt und kann nicht wiederhergestellt werden.\nMöchten Sie diese Reiseunterlagen löschen?</string>
+    <string name="delete_apis_delete">Löschen</string>
+    <string name="delete_apis_cancel">Abbrechen</string>
+    <string name="miles_percent">%1$s / %2$s Meilen</string>
+    <string name="flights_percent">%1$s / %2$s Flüge</string>
+    <string name="account_security">Kontosicherheit</string>
+    <string name="change_password">Passwort ändern</string>
+    <string name="change_password_prompt_msg">Bitte geben Sie die folgenden Informationen an. Ihr DFP-Passwort wird Ihnen in Kürze per E-Mail zugesandt.</string>
+    <string name="old_password">*Altes Passwort</string>
+    <string name="new_password">*Neues Passwort</string>
+    <string name="re_enter_new_password">*Passwort erneut eingeben</string>
+    <string name="passwords_are_different">Die eingegebenen Passwörter sind unterschiedlich!</string>
+    <string name="change_password_completed_message">Das Passwort wurde erfolgreich geändert.</string>
+    <string name="apply_password">Passwort beantragen</string>
+
+    <string-array name="miles_progress_pull_down">
+        <item name="miles_completed">Gesammelte Meilen</item>
+        <item name="first_class_flight_completed">Ausgewiesene Business Class-Flüge</item>
+        <item name="qualifed_weighted_trips_completed">Ausgewiesene gewichtete Flüge</item>
+        <item name="weighted_trip_counts_of_ci_ae">Zählung gewichteter CI/AE-Reisen</item>
+    </string-array>
+
+    <string name="editapis_alert_title_save_and_upload_your_apis">Reiseunterlagen speichern und hochladen</string>
+    <string name="editapis_alert_title_save_and_upload_apis">Reiseunterlagen speichern und hochladen</string>
+    <string name="editapis_alert_message_save_and_upload_your_apis">Speichern und laden Sie Ihre Reiseunterlagen für zukünftige Verwendungen hoch. \nMöchten Sie sie speichern und hochladen?</string>
+    <string name="editapis_alert_message_do_not_save_and_upload_your_apis">Speichern Sie Ihre Reiseunterlagen für zukünftige Verwendungen. \nMöchten Sie sie speichern?</string>
+    <string name="apis_address_country">Land/Region</string>
+    <string name="by_route">Flugroute</string>
+    <string name="by_flight">Flugnummer</string>
+    <string name="from">Abflughafen</string>
+    <string name="to">Zielflughafen</string>
+    <string name="departure_date">Abflugdatum</string>
+    <string name="arrival_date">Ankunftsdatum</string>
+    <string name="search">Suchen</string>
+    <string name="recent">Letzte Suchen</string>
+    <string name="all_airport">Alle Flughäfen</string>
+    <string name="flight_status_flight_result">Flugstatusergebnisse</string>
+    <string name="actual">Tatsächlich</string>
+    <string name="scheduled">Planmäßig</string>
+    <string name="estimated_time">Erwartet</string>
+    <string name="in_flight">In Flight</string>
+    <string name="no_matching_result_found_title">Es wurden keine übereinstimmenden Ergebnisse gefunden.</string>
+    <string name="no_matching_result_found">Die folgenden Ergebnisse stimmen am meisten mit Ihrer Suche überein.</string>
+    <string name="track">Verfolgen</string>
+    <string name="tracked">Verfolgt</string>
+    <string name="flight_status_arrived_on_time">Ankunft</string>
+    <string name="flight_status_delay">Verspätet</string>
+    <string name="flight_status_on_time">Pünktlich</string>
+    <string name="check_the_tracking">Flugverfolgung</string>
+    <string name="check_the_tracking_notice">Die verfolgten Flüge werden auf der Startseite angezeigt. Sie können bis zu 3 Flüge gleichzeitig verfolgen.</string>
+    <string name="tracked_flight_status">Flugverfolgung</string>
+    <string name="cabin_class">Kabinenklasse:</string>
+    <string name="fly_time">Flugzeit:</string>
+    <string name="fly_date">Tag:</string>
+    <string name="time_in_flight">Flugdauer:</string>
+    <string name="time_remaining">Zeit bis zum Zielort:</string>
+    <string name="contact_us">Kontakt</string>
+    <string name="fb_message">Kundenservice (nur Taiwan)</string>
+    <string name="about_us">Über China Airlines</string>
+    <string name="china_airlines_instroduction">Über China Airlines</string>
+    <string name="china_airlines_app">China Airlines-App</string>
+    <string name="partner_skyteam">SkyTeam-Partner</string>
+    <string name="route_map_3d">SkyTeam-Streckenkarte</string>
+    <string name="ticketing_fax">Faxnummer für Buchungen:</string>
+    <string name="counter_service">Schalterdienst:</string>
+    <string name="closed_on_holidays">Closed on Holidays</string>
+    <string name="welcome_message_notice">Wir freuen uns, Ihnen China Airlines vorstellen zu können. Weitere Informationen finden Sie auf dem YouTube-Kanal von China Airlines.</string>
+    <string name="global_customer_service">Globale Niederlassung</string>
+    <string name="call">Anruf</string>
+    <string name="welcome_to_china_airlines">Willkommen bei China Airlines</string>
+    <string name="about_get_directions">Wegbeschreibung abrufen</string>
+    <string name="app_eshopping_name">華航 Sky Boutique</string>
+    <string name="app_eshopping_desc">Einfacher Zugang zu China Airlines 華航 Sky Boutique.</string>
+    <string name="about_ai_service"></string>
+    <string name="app_exquisitetravel_name">Mobile Plattform von Dynasty Package</string>
+    <string name="app_exquisitetravel_desc">Jährliche Tourismusinformationen, die von Dynasty Package veröffentlicht werden.</string>
+    <string name="language_setting">Spracheinstellung</string>
+    <string name="flight_notification">Push-Benachrichtigung</string>
+    <string name="language_tw">繁體中文</string>
+    <string name="language_cn">简体中文</string>
+    <string name="language_en">English</string>
+    <string name="language_jp">日本語</string>
+    <string name="language_ge">Deutsch</string>
+    <string name="timetable_title">Flugplan</string>
+    <string name="round_trip">Hin- und Rückflug</string>
+    <string name="one_way">Hinflug</string>
+    <string name="select_departure_date_title">Abflugdatum auswählen</string>
+    <string name="select_arrival_date_title">&quot;Rückflugdatum auswählen</string>
+    <string name="Departure">Hinflug</string>
+    <string name="Return">Rückflug</string>
+    <string name="aircraft_type">Flugzeug:</string>
+    <string name="select_departure_airport_title">Wählen Sie den Abflughafen aus.</string>
+    <string name="select_arrival_airport_title">Wählen Sie den Ankunftsflughafen aus.</string>
+    <string name="select_airport_section_recent">Letzte Suchen</string>
+    <string name="select_airport_section_all_airports">Alle Flughäfen</string>
+    <string name="select_airport_section_airports_nearby">Flughäfen in der Nähe</string>
+    <string name="depart_on">Abfahrt am</string>
+    <string name="select_airport_search">Geben Sie den Flughafennamen/-code ein.</string>
+    <string name="select_error_msg">Bitte wählen Sie</string>
+    <string name="departure_date_Mon">Mo.</string>
+    <string name="departure_date_Tue">Di.</string>
+    <string name="departure_date_Wed">Mi.</string>
+    <string name="departure_date_Thu">Do.</string>
+    <string name="departure_date_Fri">Fr.</string>
+    <string name="departure_date_Sat">Sa.</string>
+    <string name="departure_date_Sun">So.</string>
+    <string name="no_match_data">Keine Daten gefunden</string>
+    <string name="book_ticket">Flüge buchen</string>
+    <string name="return_date">Rückflugdatum</string>
+    <string name="passengers">Passagiere</string>
+    <string name="adults">Erwachsene</string>
+    <string name="children">Kinder</string>
+    <string name="infants">Kleinkinder</string>
+    <string name="passengers_and_booking_rules">Buchungsinformationen</string>
+    <string name="find_flight">Flüge suchen</string>
+    <string name="book_ticket_more_options">Weitere Optionen?</string>
+    <string name="book_ticket_more_options_underline">Mehrere Städte und Zwischenstopp</string>
+    <string name="book_ticket_max_number_of_passengers">Es können nicht mehr als 9 Personen angegeben werden.</string>
+    <string name="book_ticket_max_number_of_adults">Es können nicht mehr als 4 Erwachsene angegeben werden.</string>
+    <string name="book_ticket_max_number_of_children">Es können nicht mehr als 3 pKinder angegeben werden.</string>
+    <string name="book_ticket_max_number_of_infants">Es können nicht mehr Kinder als Erwachsene angegeben werden.</string>
+    <string-array name="book_ticket_cabin_list">
+        <item>Economy</item>
+        <item>Premium Economy</item>
+        <item>Business</item>
+    </string-array>
+    <string name="add_multi_flight">Flug (%1$d/%2$d)</string>
+    <string name="book_ticket_multi_stop_flight">Flüge mit mehreren Zwischenstopps</string>
+    <string name="add_flight_info_alert_msg">Füllen Sie die erforderlichen Felder aus, bevor Sie einen neuen Flug hinzufügen.</string>
+    <string name="book_ticket_error_1">Die abgefragte Abflugzeit liegt vor der Ankunftszeit des vorherigen Fluges. Versuchen Sie es erneut.</string>
+    <string name="book_ticket_error_2">Die zwei Flüge (Abflug-/Zielflughäfen) können nicht identisch sein. Versuchen Sie es erneut.</string>
+    <string name="book_ticket_error_3">Geben Sie die Anzahl der Passagiere ein.</string>
+    <string name="book_ticket_error_4">Ungültige Passagieranzahl Bitte anderen Platz wählen</string>
+    <string name="book_ticket_error_5">Der Abflughafen darf nicht mit Ankunftsflughafen identisch sein.</string>
+    <string name="book_ticket_error_6">Die Ankunftszeit darf nicht vor der Abflugzeit liegen. Bitte anderen Platz wählen</string>
+    <string name="remind">Erinnerung</string>
+    <string name="bookticket_cabin_class">Kabinenklasse</string>
+    <string name="bookticket_promotion_code_title">Aktionscode</string>
+    <string name="bookticket_promotion_code">Werbeaktionscode (optional)</string>
+    <string name="bookticket_promotion_code_msg">Der Aktionscode kann nicht in Verbindung mit anderen Angeboten verwendet werden und bietet möglicherweise keine weiteren Rabatte für Kleinkinder und Kinder. Sitzplätze sind nur begrenzt und möglicherweise nicht auf allen Flügen verfügbar.</string>
+    <string name="extra_services_msg">China Airlines bietet zur Verbesserung Ihrer Reiseerfahrung eine Reihe von Services über die mobile App an.</string>
+
+    <string name="extra_service_title_extra_baggage">Vorausbezahltes Übergepäck</string>
+    <string name="extra_service_title_family_couch">Family Couch</string>
+    <string name="extra_service_title_wifi">WLAN an Bord</string>
+    <string name="extra_service_title_hsr">THSR-Reservierungs- und Ticketausstellungssystem</string>
+    <string name="extra_service_title_eco_travel">ECO Travel Carbon Offsetting</string>
+
+    <string name="extra_service_content_extra_baggage">Sie können Zusatzgepäck 24 Stunden vor Abflug online zu einem ermäßigten Preis bezahlen.</string>
+    <string name="extra_service_content_family_couch">Als einzige Fluggesellschaft in Asien bietet China Airlines das „Familiensofa“. Kuscheln Sie auf Ihrem Langstreckenflug mit Ihrer Familie und erholen Sie sich.</string>
+    <string name="extra_service_content_wifi">Wir bieten Ihnen einen Roaming-Service an Bord, damit Ihnen auch in luftiger Höhe Internet zur Verfügung steht.</string>
+    <string name="extra_service_content_hsr">Bietet THSR-Tickets zu einem ermäßigten Preis am Tag nach der Ausstellung des Flugtickets.</string>
+    <string name="extra_service_content_eco_travel">China Airlines invites you to take part in carbon offsetting to achieve carbon neutrality for your flight.</string>
+
+    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/tw/en/booking/manage-booking/reservation-booking-inquiry</string>
+    <string name="extra_services_family_couch_link">https://calee.china-airlines.com/FC_DOT/Agreement.aspx?lang=en-us&amp;country=us&amp;locale=en</string>
+    <string name="extra_services_wifi_link">https://calde.china-airlines.com/Flywifi/Agreement.aspx?lang=en-us&amp;country=us&amp;locale=en</string>
+    <string name="extra_services_hsr_link">https://calee.china-airlines.com/CITHSR_AMA?country=tw&amp;locale=en</string>
+    <string name="extra_services_eco_travel_link">https://china-airlines.co2analytics.com/home</string>
+
+    <string name="explore_destination_link">https://www.china-airlines.com/us/en/discover/promotion</string>
+    <string name="sidemenu_promotions_link">https://www.china-airlines.com/us/en/discover/promotion</string>
+
+
+    <string name="weather_now">Jetzt</string>
+    <string name="weather_currently">Wetter:</string>
+    <string name="weather_humidity">Luftfeuchtigkeit:</string>
+    <string name="weather_visibility">Sichtbarkeit:</string>
+    <string name="weather_visibility_unit">km</string>
+
+    <string name="weather_day_Mon">Mo.</string>
+    <string name="weather_day_Tue">Di.</string>
+    <string name="weather_day_Wed">Mi.</string>
+    <string name="weather_day_Thu">Do.</string>
+    <string name="weather_day_Fri">Fr.</string>
+    <string name="weather_day_Sat">Sa.</string>
+    <string name="weather_day_Sun">So.</string>
+    <string name="weather_code_0">Tornado</string>
+    <string name="weather_code_1">Tropensturm</string>
+    <string name="weather_code_2">Hurrikan</string>
+    <string name="weather_code_3">Schwere Gewitter</string>
+    <string name="weather_code_4">Gewitter</string>
+    <string name="weather_code_5">Schneeregen</string>
+    <string name="weather_code_6">Graupelschauer</string>
+    <string name="weather_code_7">Eisregen</string>
+    <string name="weather_code_8">Eisiger Nieselregen</string>
+    <string name="weather_code_9">Nieselregen</string>
+    <string name="weather_code_10">Eisregen</string>
+    <string name="weather_code_11">Regen</string>
+    <string name="weather_code_12">Regen</string>
+    <string name="weather_code_13">Schneeflocken</string>
+    <string name="weather_code_14">Leichter Schneefall</string>
+    <string name="weather_code_15">Heftiger Schneefall</string>
+    <string name="weather_code_16">Schnee</string>
+    <string name="weather_code_17">Hagel</string>
+    <string name="weather_code_18">Graupelschauer</string>
+    <string name="weather_code_19">Sand</string>
+    <string name="weather_code_20">Neblig</string>
+    <string name="weather_code_21">Nebel</string>
+    <string name="weather_code_22">Dunstig</string>
+    <string name="weather_code_23">Stürmisch</string>
+    <string name="weather_code_24">Windig</string>
+    <string name="weather_code_25">Kalt</string>
+    <string name="weather_code_26">Bewölkt</string>
+    <string name="weather_code_27">Überwiegend bewölkt (Nacht)</string>
+    <string name="weather_code_28">Überwiegend bewölkt (Tag)</string>
+    <string name="weather_code_29">Teilweise bewölkt (Nacht)</string>
+    <string name="weather_code_30">Teilweise bewölkt (Tag)</string>
+    <string name="weather_code_31">Klar (Nacht)</string>
+    <string name="weather_code_32">Sonnig</string>
+    <string name="weather_code_33">Heiter (Nacht)</string>
+    <string name="weather_code_34">Heiter (Tag)</string>
+    <string name="weather_code_35">Graupelschauer</string>
+    <string name="weather_code_36">Heiß</string>
+    <string name="weather_code_37">Vereinzelte Gewitter</string>
+    <string name="weather_code_38">Vereinzelte Gewitter</string>
+    <string name="weather_code_39">Vereinzelte Gewitter</string>
+    <string name="weather_code_40">Vereinzelte Regenschauer</string>
+    <string name="weather_code_41">Heftiger Schneefall</string>
+    <string name="weather_code_42">Vereinzelte Schneefälle</string>
+    <string name="weather_code_43">Heftiger Schneefall</string>
+    <string name="weather_code_44">Teilweise bewölkt</string>
+    <string name="weather_code_45">Gewitter</string>
+    <string name="weather_code_46">Schneefälle</string>
+    <string name="weather_code_47">Vereinzelte Gewitter</string>
+    <string name="weather_code_3200">Nicht verfügbar</string>
+    <string name="trips_detail_taipei_support_number">Nicht definiert</string>
+    <string name="gps_connection_exception_warning">GPS connection exception</string>
+    <string name="roaming_additional_fees_warning">Bitte beachten Sie, dass je nach Land und Region während Ihrer Reise Roaming-Gebühren oder zusätzliche Gebühren anfallen können.</string>
+    <string name="download_print_reminder">Please refer to CI website to download and print the documents.</string>
+    <string name="please_fill_all_text_field_that_must_to_fill">Bitte füllen Sie alle Pflichtfelder aus.</string>
+    <string name="not_check_agree">Klicken Sie bitte das Kästchen an, um zu bestätigen, dass Sie die relevanten Allgemeinen Geschäftsbedingungen gelesen haben und damit einverstanden sind.</string>
+    <string name="selected_date_is_incorrect">Invalid Date Selected</string>
+    <string name="download_airport_data_fail">Flughafeninformationen konnten nicht heruntergeladen werden.</string>
+    <string name="trips_detail_premium_economy">Premium Economy</string>
+    <string name="manage_miles_not_find">Meileninformationen wurden nicht gefunden.</string>
+    <string name="trip_detail_can_not_check_in">Online check-in is not available</string>
+    <string name="out_of_memory_error">Nicht genügend Speicher.\n Die App wird beendet. Möchten Sie sie erneut starten?</string>
+    <string name="trip_detail_can_not_cancel_check_in">Cannot Cancel Check-In</string>
+    <string name="system_time_out">Zeitüberschreitung der Verbindung</string>
+    <string name="pnr_not_found">Keine Daten gefunden</string>
+    <string name="alert_cannot">Cannot</string>
+    <string name="alert_select_meal">Meal Selection</string>
+    <string name="alert_select_seat">Seat Selection</string>
+    <string name="textfield_placeholder_invalidformatmesseage">%1$s Feld: Ungültiges Format</string>
+    <string name="error">Fehlgeschlagen</string>
+    <string name="no_checkin_flight_available">Es ist kein Flug für den Online-Check-in verfügbar.</string>
+    <string name="google_play_error">Ein Fehler ist aufgetreten. „+
+                                “Überprüfen Sie, ob Google Play installiert ist und Ihr Gerät mit dem Internet verbunden ist. „ +
+                                “Wenden Sie sich an den Entwickler, wenn das Problem weiterhin besteht.</string>
+    <string name="flight_number">Flugnummer</string>
+    <string name="sign_up_only_chinese">Ist im Reisepass ein chinesischer Name angeführt, kann er nur mit chinesischen Schriftzeichen eingegeben werden.</string>
+    <string name="fullweek">Betriebstag</string>
+    <string name="timetable_operated_by">Betrieben von %s</string>
+    <string name="timetable_detail_operated_by">Betrieben von:</string>
+    <string name="scheme_auth_eshopping_title">Melden Sie sich mit der China Airlines-App an.</string>
+    <string name="scheme_auth_eshopping_name">Sky Boutique</string>
+    <string name="scheme_auth_eshopping_note"></string>
+    <string name="scheme_auth_eshopping_note_text">Die China Airlines-App teilt Ihre persönlichen Daten mit 華航 Sky Boutique.</string>
+    <string name="scheme_auth_eshopping_button_agree">Zustimmen</string>
+    <string name="check_in_input_apis_doc">Dokumentdetails 1</string>
+    <string name="check_in_input_apis_second_doc">Dokumentdetails 2</string>
+    <string name="check_in_input_visa">Visumsdetails</string>
+    <string name="check_in_visa_index_title">VISA</string>
+    <string name="check_in_visa_document_number">Visumsnummer</string>
+    <string name="check_in_visa_date_of_expiry">Ablaufdatum des Visums</string>
+    <string name="check_in_apis_non_ct">Keine gültige Reisegenehmigung für Einwohner Taiwans von und nach Festlandchin</string>
+    <string name="check_in_apis_have_ct">Reisegenehmigung für Einwohner Taiwans von und nach Festlandchina</string>
+    <string name="check_in_apis_have_can_c">Canada Permanent Resident Card</string>
+    <string name="menu_title_baggage_tracking">Gepäckverfolgung</string>
+    <string name="boarding_pass_baggage_tracking_text">Gepäckverfolgung</string>
+    <string name="find_my_baggage_twoitem_left_text">Reservierungsnummer</string>
+    <string name="find_my_baggage_twoitem_right_text">Gepäckanhängernummer</string>
+    <string name="baggage_booking_ref_hint">Reservierungsnummer</string>
+    <string name="baggage_tag_ref_hint">Gepäckanhängernummer</string>
+    <string name="baggage_info_content_baggage_tag">Gepäckanhängernummer</string>
+    <string name="baggage_info_content_baggage_status">Gepäckstatus</string>
+    <string name="baggage_tracking_can_not_find_you_baggage">Können Sie Ihre Gepäckinformationen nicht finden?</string>
+    <string name="baggage_tracking_can_not_find_button_find">Mein Gepäck finden</string>
+    <string name="baggage_tracking_service_type">Gepäckanhänger</string>
+    <string name="find_my_booking_baggage_notes">Hinweis</string>
+    <string name="find_my_booking_baggage_notes_content">\n
+            1. Die Gepäckverfolgung ist nur für Passagiere verfügbar, die von Taoyuan/Seoul/Singapur/Frankfurt/New York/San Francisco abfliegen und am dafür vorgesehenen Schalter den Flug und die Gepäckabfertigung abgeschlossen haben.\n\n
+            2. Die Gepäckverfolgung ist nur innerhalb von 3 Tagen nach Ankunft des Fluges verfügbar.\n\n
+            3. Alle Gepäckaktivitäten werden in der Ortszeit des Flughafens angezeigt.\n\n
+            4. Umfasst Ihr Reiseplan Reisen mit anderen Fluggesellschaften als China Airlines oder seinen Anschlussfluggesellschaften, sind die Gepäckverfolgungsinformationen für diese Flüge möglicherweise nicht verfügbar. Bitte fragen Sie bei der durchführenden Fluggesellschaft nach Ihrem Gepäckstatus.\n\n</string>
+    <string name="find_my_booking_baggage_notes_2">Hinweis</string>
+    <string name="find_my_booking_baggage_notes_content_2">\n
+            * Reservierungsnummer：eine Kombination aus 6 alphanumerischen Zeichen (z. B. 000000)\n\n
+            * Gepäckanhängernummer：besteht aus 2 Buchstaben der Fluggesellschaft + 6 Zahlen (z. B. CI123456)\n\n</string>
+    <string name="bagtag_camera_permissions_msg">Für den Zugriff auf Ihre Kamera ist eine Autorisierung erforderlich. Gehen Sie zu den Einstellungen auf Ihrem Gerät, um das Scannen von Gepäckanhängern zu aktivieren.</string>
+    <string name="trip_detail_passenger_tracking_title">Baggage Tracking</string>
+
+    <!--TMP WEATHER-->
+    <string name="weather_url">https://weather.com/ja-JP/weather/5day/l/</string>
+
+    <!--644336 2019 2月3月 截圖-->
+    <string name="braoding_pass_screenshots_name">-----%1$s-%2$s-_%3$s_boarding_pass</string>
+    <string name="braoding_pass_screenshots_success">-----Screenshot success\nPlease manaully remove the screenshot and re-keep again. Thank you for your cooperation.</string>
+    <string name="braoding_pass_screenshots_fail">-----Screenshot fail</string>
+    <string name="permissions_error">-----Access invalid. Function not available.</string>
+</resources>

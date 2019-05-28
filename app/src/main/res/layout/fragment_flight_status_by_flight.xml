@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20px"
+    android:paddingRight="20px"
+    android:paddingTop="26px"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/button_ci"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="16px"
+        android:background="@drawable/btn_flight_number_enable">
+
+        <TextView
+            android:id="@+id/text_ci"
+            style="@style/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="CI"
+            android:textColor="@color/french_blue"
+            android:textSize="18px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_ae"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="16px"
+        android:background="@drawable/btn_flight_number_n">
+
+        <TextView
+            android:id="@+id/text_ae"
+            style="@style/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="AE"
+            android:textColor="@color/white_four"
+            android:textSize="18px" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20px"
+        android:layout_marginLeft="20px"/>
+
+</LinearLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_60">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bg_baggage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10px"
+        android:layout_marginEnd="10px"
+        android:layout_marginTop="64.1px"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:background="@drawable/bg_boardimg_pass_head_radius">
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_hole"
+            android:layout_width="match_parent"
+            android:layout_height="12px"
+            android:layout_below="@+id/rl_head"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_card_hole"/>
+
+
+        <TextView
+            android:id="@+id/tv_baggage_num"
+            style="@style/regular"
+            android:layout_width="195px"
+            android:layout_height="22.5px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="15.2px"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/black_one"
+            android:textSize="15px"
+            android:ellipsize="end"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="7.8dp"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/light"
+            android:layout_width="100px"
+            android:layout_height="22.5px"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15.2px"
+            android:layout_marginEnd="20px"
+            android:textColor="@color/brownish_grey"
+            android:textSize="13px"
+            android:ellipsize="end"
+            android:lineSpacingExtra="9.5sp"
+            android:gravity="center|end"/>
+
+        <ImageView
+            android:id="@+id/iv_flight_from_to"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="46.6px"
+            android:scaleType="fitXY"
+            android:background="@drawable/ic_flight_from_to"/>
+
+        <TextView
+            android:id="@+id/tv_departure_station"
+            android:layout_width="wrap_content"
+            android:layout_height="28px"
+            android:layout_below="@+id/tv_baggage_num"
+            android:layout_marginTop="10px"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20px"
+            android:textSize="24px"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="4.5sp"
+            android:textColor="@color/black_one"
+            style="@style/bold"/>
+
+        <TextView
+            android:id="@+id/tv_arrival_station"
+            android:layout_width="wrap_content"
+            android:layout_height="28px"
+            android:layout_below="@+id/tv_date"
+            android:layout_marginTop="10px"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20px"
+            android:textSize="24px"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="4.5sp"
+            android:gravity="center|end"
+            android:textColor="@color/black_one"
+            style="@style/bold"/>
+
+        <ci.ui.view.DashedLine
+            android:id="@+id/dl"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="96.9px"
+            android:layout_marginStart="10px"
+            android:layout_marginRight="10px"
+            app:dl_color="@color/greyish_two"/>
+
+
+        <ci.ui.view.ShadowBar.ShadowBarRecycleView
+            android:id="@+id/sv_Recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="406px"
+            android:layout_below="@+id/iv_hole"
+            android:background="@drawable/bg_boardimg_pass_body_radius"/>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ivbtn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15.6px"
+        android:scaleType="fitXY"
+        android:background="@color/transparent"
+        android:src="@drawable/bg_btn_about_delete_onclick" />
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">中華航空_DEV</string>
+    <!--開發以及測試環境的Key-->
+    <string name="facebook_app_id" translatable="false">1578762465786159</string>
+    <string name="api_key" translatable="false">AIzaSyAGg96COck7hN6JSdX-1C3Xeguqmc7bHUg</string>
+
+    <!--&lt;!&ndash;推播 Sender Id&ndash;&gt;-->
+    <!--<string name="gcm_SenderId" translatable="false">783827686194</string>-->
+</resources>

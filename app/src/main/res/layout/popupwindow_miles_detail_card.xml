@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_60">
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10px">
+
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:background="@drawable/bg_miles_detail_card_head_radius"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taipei to Los Angeles"
+                    android:textColor="@color/black_one"
+                    android:textSize="18px"
+                    style="@style/regular" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4px"
+                        android:text="Sep 10, 2015"
+                        android:textColor="@color/grey_four"
+                        android:textSize="13px"
+                        style="@style/light" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer"
+                        android:layout_width="70px"
+                        android:layout_height="16px"
+                        android:layout_marginLeft="5px"
+                        android:background="@drawable/bg_transfer_gray"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/transfer"
+                        android:textColor="@color/white_four"
+                        android:textSize="13px"
+                        android:visibility="gone"
+                        style="@style/regular" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_miles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="+6,800"
+                android:textColor="@color/french_blue"
+                android:textSize="24px"
+                style="@style/light" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_head"
+            android:background="@drawable/bg_manage_miles_body_radius"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_name_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_due_date"
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:layout_below="@+id/ll_name_data">
+
+                <TextView
+                    android:id="@+id/tv_due_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="@string/due_date"
+                    android:textColor="@color/grey_four"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+                <TextView
+                    android:id="@+id/tv_due_date_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="4px"
+                    android:text="Sep 10, 2015"
+                    android:textColor="@color/black_one"
+                    android:textSize="16px"
+                    style="@style/light" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_other_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_due_date"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_not_in_use"
+            android:layout_width="match_parent"
+            android:layout_height="32px"
+            android:layout_below="@+id/ll_body"
+            android:background="@drawable/bg_miles_award_not_in_use"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_not_in_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/not_in_use"
+                android:textColor="@color/white_four"
+                android:textSize="13px"
+                style="@style/medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ticket_issued"
+            android:layout_width="match_parent"
+            android:layout_height="32px"
+            android:layout_below="@+id/ll_body"
+            android:background="@drawable/bg_miles_award_ticket_issued"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_ticket_issued"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/ticket_issued"
+                android:textColor="@color/white_four"
+                android:textSize="13px"
+                style="@style/medium" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ibtn_close"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16px"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_btn_about_delete_onclick" />
+
+</RelativeLayout>

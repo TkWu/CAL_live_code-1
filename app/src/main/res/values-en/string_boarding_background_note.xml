@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boardingpass_background_notes_title">Notes</string>
+    <string name="boardingpass_background_notes_content">
+        • For business travel expenses reimbursement, you can get a screenshot of your mobile boarding pass before boarding. After boarding, you can go to an office of China Airlines to apply for boarding proof.( https://www.china-airlines.com/us/en/fly/on-board/invoice-application-form )\n\n
+        • Please present your travel document at the Boarding Gate Service Desk at least 30 minutes prior to departure and present this boarding pass when you are boarding. \n\n
+        • Please refer to the flight information system at the airport to get the correct Boarding Gate Number.\n\n
+        • Check in your baggage at least 1 hour(s) prior to the flight departure time at the airport (you may contact eCheck-In counter at counter B at KHH airport) before proceeding to the immigration\'s inspection and security check procedures.\n\n
+        • Due to operational reason we reserve the right to change aircraft type, flight departure time and your seat allocation without any prior notification.\n\n
+        • Currently, self-print boarding pass service is not applicable for passengers transferring at Hong Kong airport.\n\n
+        • Passengers holding electronic tickets paid by credit card must complete the procedure of credit card verification at the check-in counter or the boarding gate at the airport for their initial flight on the itinerary of booking record. Otherwise, they will encounter denial of boarding at the airport or have to buy another ticket for the booking if the required verification has not been properly completed. Please refer to China Airlines website ( https://www.china-airlines.com/us/en/fly/prepare-for-the-fly/information-for-travellers/Notice-for-Credit-Card-Payment ) for more details about the third party payment procedures.\n
+        </string>
+</resources>

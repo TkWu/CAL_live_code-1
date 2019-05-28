@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Qualifications_title">
+        Qualifications
+    </string>
+    <string name="Qualifications_content">
+        •Dynasty Membership\n\n
+        1. Anyone at two years of age or above is eligible to become a Dynasty Flyer Member.\n\n
+        2. Applicant under 12 years old must register a legal guardian, who must also be a member.\n\n
+    </string>
+    <string name="Conditions_Membership_Privileges_and_Obligations_title">
+        Conditions, Membership Privileges &#38; Obligations
+    </string>
+    <string name="Conditions_Membership_Privileges_and_Obligations_content">
+        •Conditions\n\n
+        1. The membership card is non-transferable, and each member may only have one membership card number. If a member fails to accumulate any flight mileage for three consecutive years, China Airlines reserves the right to terminate the membership.\n\n
+        2. Please use the same name as appears in your passport. To ensure that your flight mileage is credited accurately and timely, please give our service personnel both your membership card number and your name (as it appears on your card), when you are making a reservation.\n\n
+        3. Once you have enrolled online, you will be given a DFP membership card number immediately. Please be noted that the mileage accumulation will begin with flights taken after membership application. If you have flown with us within the last 6 months prior to the enrollment, you may use the "online Mileage Correction" function or fax the photocopies of ticket coupon and boarding passes as well as membership card number to the nearest local office to reclaim your miles.\n\n
+        4. For security reason, members are requested to keep your own password. If member use password to access “Members Area” online service, it will be regarded as member\'s own behavior. Therefore, please do not reveal your password to other persons.\n\n
+        •Membership Privileges &#38; Obligations\n\n
+        1. The membership card is non-transferable. If a member fails to accumulate any flight mileage for three consecutive years, China Airlines reserves the right to terminate the membership.\n\n
+        2. Violation of regulations or procedures or submission of falsified information will result in the loss of membership and accrued mileage. China Airlines reserves the right to prosecute for illegal gains in such violations. If a member sustains a loss as a result of an oversight or error of this program, China Airlines\' liability is limited to the compensation equivalent of such a loss.\n\n
+        3. Members are fully responsible for paying any service charge or tax for awards in accordance with relevant laws and regulations.\n\n
+        4. Members may not use a hotel or travel agency as their mailing address. Members must also notify China Airlines immediately of any change in address. China Airlines shall not be responsible for any loss or delay of mail due to incorrect address.\n\n
+        5. China Airlines has the right to limit the number of passengers using upgrade awards or free award tickets on each flight.\n\n
+        6. China Airlines reserves the right to revise or terminate the Dynasty Flyer Program and retains full ownership of membership cards. Members must exercise their rights in accordance with the program rules. China Airlines may, either with or without notice, terminate membership status at any time if members violate any of the conditions listed below. Members are also expected to compensate for the losses suffered by China Airlines as a consequence of their action.\n\n
+        (1) China Airlines shall cancel membership and accrued mileage of members who profit through illegal means (such as, by earning miles under a fictitious name or selling the award). Such members will also be responsible for compensation of the equivalent cash amount for the airline miles improperly earned/redeemed.\n\n
+        (2) Unreasonable demands for undue privileges or failure to abide by flight cabin or airport lounge regulations, which create problems for the airline staff.\n\n
+        (3) Verbal and/or physical conduct believed to endanger flight safety or infringe on the rights of other passengers.\n\n
+        (4) Untrue or improper statements that damage China Airlines\' reputation.\n\n
+        (5) Other actions in general that involve improper use or abuse of membership privileges.\n\n
+        7. Partnership Mileage was developed as part of the Dynasty Flyer Program to increase members\' mileage-earning opportunities. China Airlines is not involved with the pricing and operational procedures of any of its partners. In the case of a transactional dispute, members should directly contact the participating partner. The content of the partnership is based on the contract that China Airlines signs with such partners and is subject to change without notice.\n\n
+        8. All privileges relating to members\' mileage, award redemption and courtesy treatment is conducted in accordance with the rules in Dynasty Flyer Program Membership Guide.\n\n
+        9. DFP Member must fill out the application form to process personal data correction, such as English/Chinese name 、Birthday、E-mail address 、ID/Passport number 、Phone 、Address.\n\n</string>
+    <string name="Conditions_Membership_Data_Privacy_Security_Statement_title">
+        China Airlines Data Privacy &#38; Security Statement
+    </string>
+    <string name="Conditions_Membership_Data_Privacy_Security_Statement_content">
+        ●Intelligent Property Rights\n\n
+        China Airlines is committed to protecting privacy of your personal data and expects you to understand your related rights so as to feel comfortable to use all related Internet services provided by China Airlines (hereinafter referred to as "We"). In addition, to enhance information protection, you must provide personal identification information to access certain parts of this websites.\n\n
+        ●Collection of Customer Information\n\n
+        We will collect your personal information through the following methods in certain parts of the Website, Mobile APP, Ticketing counter or Service Center:\n\n
+        1. Applying for Dynasty Flyer Program (DFP) Membership\n\n
+		2. Online booking/ticketing\n\n
+		3. Booking Inquiry and additional purchase or service\n\n
+		4. Airport processing includes checking procedure or luggage services\n\n
+		5. YesTrip trip advisory\n\n
+		6. DFP interactive services and travel information provided for members\n\n
+		7. Messaging service\n\n
+		8. Online shopping and activities\n\n
+		9. Promotion and marketing\n\n
+		10. Customer service\n\n
+        Through the above collection methods, we may collect your personal information, including but not limited to following categories:\n\n
+		1. Personal identifiers\n\n
+		2. Identifiers of personal finance\n\n
+		3. Identifiers issued by government agencies\n\n
+		4. Personal details\n\n
+		5. Details of the member\'s family members\n\n
+		6. Travel and other migration details\n\n
+		7. Leisure activities and hobbies\n\n
+		8. Occupations\n\n
+		9. Compensations\n\n
+		10. Health records\n\n
+		11. Personal identifiers of children\n\n
+		12. Uncategorized information\n\n
+        And the content might include but not limited to\n
+		Title, Chinese and English name on your passport, date of birth, nationality, ID number, passport number, country of residence, mailing address, email address, phone number, fax number, mobile number, DFP membership card number and password, credit card information (including owner name, card number, and card expiration date), company name, company address, profession and position, assignees\' name and DFP membership card number, preferred language, special diets and seat and travel preferences, health record and children information, IP and cookies, other material includes audio or paper recordings from customer service and other information might directly or indirectly identify persons. If you fail to provide the required personal information, certain parts of the requested online services may be unavailable.\n\n
+		China Airlines may also occasionally ask you to update your personal data. Your booking information or flight itinerary plan may be disclosed to the customs and immigration related authorities in accordance with the provisions of the law. Therefore, it is very important to ensure that the personal data in your booking details or flight itinerary plan is up-to-date, complete and correct.\n\n
+ 
+		China Airlines needs your assistance to ensure that your personal information is up-to-date, complete and correct. Therefore, if your personal data changes, please contact China Airlines and provide your updated customer information. If you are a Dynasty frequent flyer program member or a registered website user, you can update your personal information at any time by logging in to your account on the China Airlines website.\n\n
+		
+        ●Use of Customer Information\n\n
+        Customer information will be used for business management purpose only and is aimed at improving service quality and providing enhanced personal service for customers:\n\n
+        1. Online ticketing services including customized services, check-in and provide related information\n\n
+        2. Evaluate and handle DFP membership applications\n\n
+        3. Operate DFP services, including mileage accumulation, DFP membership records, mileage redemption records, and mileage transfer records\n\n
+        4. Handle members\' trip arrangement and the products and services purchased including online shopping, pre-orders.\n\n
+        5. Handle online services, message notification service, discount service, and promotion service for members\n\n
+        6. Market surveys and questionnaires for services improvement\n\n
+		7. We may provide your information collected by us to our affiliated companies, subsidiaries, and other business partners including but not limited to Co-Brand Card banks so that they can process the information and provide related services to you.\n\n
+        We promise that we will not reveal your personal information to any third parties not related to this service or transaction without your consent.\n\n
+        When you book or purchase travel-related products (car rental, hotel, local transportation or others) sold by other providers on this website, these providers may collect your personal information through their transaction platform to provide subsequent services. Personal information might be used by our worldwide branches and ticketing counters to provide subsequent services.\n\n
+		The period of use of the personal data mentioned above is based on the duration of collection of the specified purpose, or as determined by relevant laws or the period of preservation necessary for the execution of the business or on a contractual basis.\n\n
+		
+		●Passenger\'s rights to his/her personal information\n\n
+		Passengers and members who voluntarily provides us with his/her personal information is entitled to the following rights according to the Personal Information Protection Act through our website or ticketing counter and branches worldwide, your request will be handled as soon as your identity is verified, if you provide incorrect or incomplete personal information, such as a nickname, which prevents us from verifying your real identity, we might be unable to uphold your privacy rights:\n\n
+		 
+		1. Right to Access\n
+		2. Right to Information\n
+		3. Right to Rectification\n
+		4. Right to Objection\n
+		5. Right to Restriction\n
+		6. Restriction on automated individual decision making\n
+		7. Right to Erase\n
+		8. Right to Data Portability\n\n
+
+		●Customer Data Access\n\n
+		After you submit application to us, China Airlines will agree to review the personal data we hold about you. If permitted by law, China Airlines reserves the right to charge a reasonable service fee for this service. In exceptional circumstances, China Airlines reserves the right to refuse your access to your personal data and to provide you with instructions in accordance with applicable laws.\n\n
+ 
+		Special circumstances (applicable to law) include:\n\n
+		 
+		a) Investigation agencies or government agencies object to China Airlines\' compliance with customer requirements;\n
+		b) According to China Airlines\' reasonable judgments and/or assessments, it is believed that the information may affect a person\'s life or safety; and\n
+		c) The information collected is used for purposes related to breach of contract investigations, suspected fraudulent activities or illegal activities.\n\n
+		
+		●Store of Customer Information\n\n
+		In order to satisfy the purpose of collecting information, and China Airlines\' legal and commercial purposes or related laws, China Airlines will continue to keep your customer information for the necessary time.\n\n
+		 
+		When destroying customer data, we will adopt commercially reasonable and technically feasible measures in accordance with relevant laws to ensure that the personal data cannot be returned or cannot be reproduced.\n\n
+		
+		●Data analysis and automated decision-making\n\n
+		It refers to the marketing activities of China Airlines and related companies or other business cooperation agencies. We will use the aforementioned data to include but not limited to transaction amount and travel itinerary to obtain specific information to observe consumer behavior and may send this information to our service providers to provide better and more personalized transactions and services.\n\n
+		
+		●Collection of information through \'Cookies\' and \'IP Address\'\n\n
+		A \'cookie\' is a small piece of data sent by a web server to be stored on a web browser. The data collected from cookies is to read and differentiate the preference of the individual user which includes third-party tracking code to track visitor volume linked from third-party website\'s online advertisement to our website\n
+		And the usage of our website. If you disable your cookies, you will not have access to certain personalized features or participate in all of the activities on the web-site.\n
+		An Internet Protocol address (IP address) is a numerical label assigned to each device participating in internet that uses the Internet Protocol for communication from service provider. When you access our website and mobile services, we collect your IP address and store this information to help us manage security.\n\n
+		China Airlines uses cookies on its website for the following purposes:\n\n
+		 
+		1. Technical use \n
+		In able China Airlines website to operate effectively, including but not limited to:\n 
+		a) Control website traffic to ensure that all users have the same stable and reliable service; \n
+		b) Restrict the flow of important areas of the site and maintain its operational level.\n\n
+
+		2. Easy to use \n
+		The cookies allow you to browse the web more easily, including but not limited to: \n
+		a) Memorize your chosen language and country and provide relevant content; \n
+		b) track of Dynasty frequent flyer member numbers you have logged into the rewards program; and \n
+		c) When booking a flight, provide the departure airport that is most relevant to your location. \n\n
+
+		3. Tracking and Marketing\n
+		Use data (cookies) to collect relevant statistics on your browsing and trading activities on our website and provide you with more appropriate information, including but not limited to: \n
+		a) collect your satisfaction data through questionnaires; and \n
+		b) Understand how you navigate our website and trading practices to improve the usability. \n
+		c) Allow the company\'s website to provide different versions of web pages for marketing purposes; \n
+		d) allow third parties to provide appropriate advertising and track their effectiveness; and \n
+		e) Present related product information based on your browsing behavior on our website and on specific web pages.\n\n
+				
+        ●Links to Other Websites\n\n
+        Our website contains links to other websites that are operated under different privacy terms. When you leave our website and access other websites, please remain alert and read the privacy terms of other websites. We have no control over and provide no guarantee on the information submitted to these websites.\n\n
+        ●Sending of Emails\n\n
+        We obtain your email account according to Collection of Customer Information. In order to provide you with more services or discount offers, we will send you emails containing the above related contents and indicate that we are the sender in the email.\n\n
+        ●Changes to Privacy/Security Statement\n\n
+        We may revise this Privacy/Security Statement without prior notice. This web page will display the latest content. Should a significant modification be made to the use of customer information, we will announce and post those changes on our website so that you can know related matters. We have adopted appropriate electronic and management measures to maintain the accuracy of the collected information, prevent unauthorized login, and ensure correct use of the information. When you input sensitive information such as credit card details, the information will be automatically converted to ciphers before being sent to the Internet.\n\n
+        ●Customer Self-Protection\n\n
+        Please keep your personal information safe and do not provide any personal information to others. Do not forget to log out after completing online booking, purchase and member contacts information change, etc. If you share a computer with others or use a public computer, please close the browser window to protect your personal information from unauthorized collection and use. To protect your consumption rights, please purchase our international flight tickets through normal sales channels, such as China Airlines website, China Airlines sales offices, YesTrip Travel Service and other travel services.\n\n
+        ●Governing Law and Court\n\n
+        Any dispute arising out of or in connection with this website shall be governed and construed by the laws of the Republic of China, and shall be resolved by Taiwan Taipei District Court which serves as the court of first instance.\n\n
+        *Please contact us if you have any questions regarding our Security Statement and Privacy Policy.\n\n</string>
+</resources>

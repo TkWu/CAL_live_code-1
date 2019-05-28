@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="vertical"
+    tools:context="ci.function.HomePage.CIFlightInfoFragment">
+
+    <LinearLayout
+        android:id="@+id/llayout_info_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_other_trips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="right|center"
+        android:orientation="horizontal"
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_other_trips"
+            style="@style/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:text="@string/my_others_trips"
+            android:textColor="@color/white_four"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow" />
+    </LinearLayout>
+</LinearLayout>

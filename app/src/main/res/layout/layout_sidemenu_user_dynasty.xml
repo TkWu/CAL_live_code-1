@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_photo_dynasty"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp">
+
+        <ImageView
+            android:id="@+id/iv_default_dynasty"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_avatar_not_logged_in" />
+
+        <ImageView
+            android:id="@+id/iv_userphoto_dynasty"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_username_dynasty"
+        android:layout_width="260dp"
+        android:layout_height="25.3dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="User Name"
+        android:textColor="@color/white_four"
+        android:textSize="20sp"
+        style="@style/light"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_detail"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="131.7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_card"
+                android:layout_width="26.7dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="6dp"
+                android:background="@color/transparent" />
+
+            <TextView
+                android:id="@+id/tv_card_number"
+                style="@style/light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.80"
+                android:singleLine="true"
+                android:text="WC0000000"
+                android:textColor="@color/white_four"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:alpha="0.6"
+            android:background="@color/white_four"
+            android:visibility="gone">
+
+        </View>
+
+        <TextView
+            android:id="@+id/tv_miles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16.2dp"
+            android:layout_toRightOf="@+id/view"
+            android:alpha="0.8"
+            android:singleLine="true"
+            android:text="@string/menu_miles"
+            android:textColor="@color/white_four"
+            android:textSize="13sp"
+            style="@style/light"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

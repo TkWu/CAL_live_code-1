@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_photo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp">
+
+        <ImageView
+            android:id="@+id/iv_default"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:background="@color/transparent"
+            android:src="@drawable/img_avatar_not_logged_in" />
+
+        <ImageView
+            android:id="@+id/iv_userphoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="260dp"
+        android:layout_height="25.3dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="User Name"
+        android:textColor="@color/white_four"
+        android:textSize="20sp"
+        style="@style/light"/>
+
+    <Button
+        android:id="@+id/btn_become_a_member"
+        android:layout_width="220dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="123dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:background="@drawable/bg_sidemenu_btn_selector"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/menu_become_a_dynasty_flyer"
+        android:textColor="@color/white_four"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:singleLine="true"
+        style="@style/light"/>
+
+</RelativeLayout>

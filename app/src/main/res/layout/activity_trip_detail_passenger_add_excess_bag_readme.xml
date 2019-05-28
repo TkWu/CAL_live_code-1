@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_login">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true">
+    </ci.ui.view.NavigationBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar">
+        <RelativeLayout
+            android:id="@+id/rl_prod"
+            android:layout_width="match_parent"
+            android:layout_height="61px"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                style="@style/light"
+                android:text="@string/trip_detail_passenger_bag_pay_add_excess_production_readme"/>
+
+            <ImageView
+                android:id="@+id/iv_prod"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:src="@drawable/ic_list_arrow"
+                android:scaleType="fitXY"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white_four"
+                android:alpha="0.3"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_notes"
+            android:layout_width="match_parent"
+            android:layout_height="61px"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                style="@style/light"
+                android:text="@string/trip_detail_passenger_bag_pay_add_excess_notes"/>
+
+            <ImageView
+                android:id="@+id/iv_notes"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:src="@drawable/ic_list_arrow"
+                android:scaleType="fitXY"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white_four"
+                android:alpha="0.3"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_rules"
+            android:layout_width="match_parent"
+            android:layout_height="61px"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                style="@style/light"
+                android:text="@string/trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules"/>
+
+            <ImageView
+                android:id="@+id/iv_rules"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:src="@drawable/ic_list_arrow"
+                android:scaleType="fitXY"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white_four"
+                android:alpha="0.3"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

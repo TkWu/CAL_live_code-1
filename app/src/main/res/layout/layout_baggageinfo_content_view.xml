@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlayout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20px"
+    android:paddingRight="20px">
+
+    <TextView
+        android:id="@+id/tv_departure_station"
+        android:layout_width="45px"
+        android:layout_height="25px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textSize="16px"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="3.1sp"
+        android:gravity="center|left"
+        android:text="TPE"
+        android:textColor="@color/french_blue"
+        style="@style/regular"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_img"
+        android:layout_width="24px"
+        android:layout_height="84px"
+        android:layout_marginLeft="6px"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tv_departure_station">
+
+        <ImageView
+            android:id="@+id/img_baggage"
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baggage_b"/>
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="8px"
+            android:layout_height="45.7px"
+            android:layout_below="@+id/img_baggage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6px"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baggage_track_arrow"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_bag_status"
+        android:layout_width="match_parent"
+        android:layout_height="25px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/rlayout_img"
+        android:layout_marginLeft="18px"
+        android:textSize="16px"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8.8sp"
+        android:gravity="center|left"
+        android:text="行李已上飛機"
+        android:textColor="@color/french_blue"
+        style="@style/regular"
+        />
+
+    <TextView
+        android:id="@+id/tv_Execute_Time"
+        android:layout_width="match_parent"
+        android:layout_height="21px"
+        android:layout_alignLeft="@+id/tv_bag_status"
+        android:layout_below="@+id/tv_bag_status"
+        android:textSize="13px"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8.8sp"
+        android:gravity="center|left"
+        android:text="行李已上飛機"
+        android:textColor="@color/warm_grey"
+        style="@style/light"
+        />
+
+
+
+</RelativeLayout>

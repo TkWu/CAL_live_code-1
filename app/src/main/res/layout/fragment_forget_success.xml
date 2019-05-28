@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_bg">
+
+    <ImageView
+        android:id="@+id/iv_success"
+        android:layout_width="71.2dp"
+        android:layout_height="71.2dp"
+        android:layout_marginTop="57.1dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img_done"/>
+
+    <LinearLayout
+        android:id="@+id/ll_textview"
+        android:layout_below="@+id/iv_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="35.7dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="6.7sp"
+            android:text="@string/inquiry_card_number_inquiry_successfully"
+            style="@style/light"
+            android:textColor="@color/white_four"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_btn_pinkish_red_selector"
+            android:text="@string/back_to_home"
+            android:textColor="@color/white_four"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            style="@style/regular" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="64px"
+        android:background="@drawable/bg_miles_detail_card_head_radius"
+        android:paddingLeft="20px"> <!--android:paddingRight="20px" -->
+        <LinearLayout
+            android:id="@+id/ll_edit"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="20px"
+            android:gravity="right|center_vertical">
+            <ImageButton
+                android:id="@+id/ibtn_edit"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_edit"
+                android:clickable="false"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/profile"
+            android:textColor="@color/black_one"
+            android:textSize="20px"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/ll_edit"
+            style="@style/regular" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_head"
+        android:background="@drawable/bg_manage_miles_body_radius"
+        android:orientation="vertical"
+        android:paddingBottom="20px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="10px">
+
+        <RelativeLayout
+            android:id="@+id/rl_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50px"
+            android:paddingBottom="15.3px"
+            android:paddingTop="15.3px">
+
+            <TextView
+                android:id="@+id/tv_passport_chinese_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_fb"
+                android:text="@string/passport_chinese_name"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_passport_chinese_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/tv_passport_chinese_name_title"
+                android:text="鄭宇容"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50"
+            android:paddingLeft="20px"
+            android:paddingRight="20px" />
+
+        <RelativeLayout
+            android:id="@+id/rl_identity_card_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50px"
+            android:paddingBottom="15.3px"
+            android:paddingTop="15.3px">
+
+            <TextView
+                android:id="@+id/tv_identity_card_no_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/identity_card_no"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_identity_card_no_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/tv_identity_card_no_title"
+                android:text="K222000123"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+        <RelativeLayout
+            android:id="@+id/rl_date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50px"
+            android:paddingBottom="15.3px"
+            android:paddingTop="15.3px">
+
+            <TextView
+                android:id="@+id/tv_date_of_birth_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/date_of_birth"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_date_of_birth_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/tv_date_of_birth_title"
+                android:text="Aug 31, 1987"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+        <RelativeLayout
+            android:id="@+id/rl_passport_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50px"
+            android:paddingBottom="15.3px"
+            android:paddingTop="15.3px">
+
+            <TextView
+                android:id="@+id/tv_passport_no_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/passport_no"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_passport_no_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/tv_passport_no_title"
+                android:text="214177501"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line4"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+        <RelativeLayout
+            android:id="@+id/rl_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50px"
+            android:paddingBottom="15.3px"
+            android:paddingTop="15.3px">
+
+
+            <TextView
+                android:id="@+id/tv_email_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/personal_email"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_email_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/tv_email_title"
+                android:text="Yurong@gmail.com"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                android:singleLine="true"
+                android:ellipsize="end"
+                style="@style/light" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line5"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mobile_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50px"
+            android:paddingBottom="15.3px"
+            android:paddingTop="15.3px">
+
+            <TextView
+                android:id="@+id/tv_mobile_phone_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/mobile_phone"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_mobile_phone_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/tv_mobile_phone_title"
+                android:text="+886 928123321"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line6"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+    </LinearLayout>
+
+</LinearLayout>

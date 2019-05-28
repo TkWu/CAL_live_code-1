@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="1dp"
+    android:background="@drawable/btn_home_shortcut_bar_background">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_left_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/btn_home_shortcut_bar_button_left">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_bookticket"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_book_flight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_page_button_book_ticket"
+            android:id="@+id/tv_bookticket"
+            android:layout_below="@+id/img_bookticket"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white_four"
+            style="@style/light" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/white_30" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_center_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/btn_home_shortcut_bar_button">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_flightstatus"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_flight_status" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flight_status"
+            android:id="@+id/tv_flight_status"
+            android:layout_below="@+id/img_flightstatus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white_four"
+            style="@style/light" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/white_30" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_right_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/btn_home_shortcut_bar_button_right">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_timetable"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_timetablet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_page_timetable"
+            android:id="@+id/tv_timetable"
+            android:layout_below="@+id/img_timetable"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white_four"
+            style="@style/light" />
+    </RelativeLayout>
+</LinearLayout>

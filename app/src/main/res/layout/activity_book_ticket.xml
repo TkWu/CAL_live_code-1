@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_login">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true">
+    </ci.ui.view.NavigationBar>
+
+    <ci.ui.view.StepHorizontalView
+        android:id="@+id/llayout_setp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="39px"
+        android:layout_below="@+id/toolbar">
+    </ci.ui.view.StepHorizontalView>
+
+    <FrameLayout
+        android:id="@+id/fl_two_item_navigation_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.3px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/llayout_setp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24px"
+        android:layout_below="@+id/fl_two_item_navigation_bar"
+        android:layout_above="@+id/btn_find_flights"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 單航班區塊 -->
+            <LinearLayout
+                android:id="@+id/ll_single_flight_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_multi_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2px"
+                    android:textColor="@color/white_four"
+                    android:textSize="16px"
+                    android:layout_gravity="center"
+                    android:text="@string/book_ticket_more_options"
+                    style="@style/light" />
+
+                <FrameLayout
+                    android:id="@+id/fl_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40px"/>
+
+                <FrameLayout
+                    android:id="@+id/fl_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6px"/>
+
+                <FrameLayout
+                    android:id="@+id/fl_departure_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6px"/>
+
+                <FrameLayout
+                    android:id="@+id/fl_return_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6px"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24px"/>
+            </LinearLayout>
+
+            <!-- 多航班區塊 -->
+            <LinearLayout
+                android:id="@+id/ll_multi_flight_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/ll_multi_flight_info_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_add_flight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginBottom="18.7px"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/iv_add"
+                        android:layout_width="24px"
+                        android:layout_height="24px"
+                        android:src="@drawable/btn_add_n"
+                        android:background="@drawable/bg_transparent_press_black20"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tv_add_flight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8px"
+                        android:textColor="@color/white_four"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16px"
+                        android:text="@string/add_multi_flight"
+                        style="@style/light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_flight_alert_msg"
+                    android:layout_width="320px"
+                    android:layout_height="36px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20px"
+                    android:layout_marginBottom="20px"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_passengers_messenger">
+
+                    <ImageView
+                        android:id="@+id/iv_flight_travel_alerts"
+                        android:layout_width="24px"
+                        android:layout_height="24px"
+                        android:layout_marginLeft="10px"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_travel_alerts"/>
+
+                    <TextView
+                        android:id="@+id/tv_flight_msg"
+                        android:layout_width="266px"
+                        android:layout_height="wrap_content"
+                        android:textSize="13px"
+                        android:layout_marginLeft="10px"
+                        android:textColor="@color/white_four"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/add_flight_info_alert_msg"
+                        style="@style/regular" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24px"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/passengers"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular" />
+            </RelativeLayout>
+            <!-- 成人 -->
+            <RelativeLayout
+                android:layout_width="320px"
+                android:layout_height="46px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px">
+
+                <ImageView
+                    android:id="@+id/iv_adults_decrease"
+                    android:layout_width="48px"
+                    android:layout_height="32px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_press_decrease_icon"
+                    android:background="@drawable/btn_decrease_n">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/iv_adults_add"
+                    android:layout_width="48px"
+                    android:layout_height="32px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_press_add_icon"
+                    android:background="@drawable/btn_add_2_n">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_adults_value"
+                    android:layout_width="40px"
+                    android:layout_height="28.7px"
+                    android:textSize="24px"
+                    android:layout_alignTop="@+id/iv_adults_decrease"
+                    android:layout_toRightOf="@+id/iv_adults_decrease"
+                    android:layout_marginLeft="43.3px"
+                    android:textColor="@color/white_four"
+                    android:text="0"
+                    style="@style/light" />
+
+                <LinearLayout
+                    android:layout_width="110px"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20px"
+                    android:layout_alignBottom="@+id/iv_adults_add"
+                    android:layout_toLeftOf="@+id/iv_adults_add">
+
+                    <TextView
+                        android:id="@+id/tv_adults"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18px"
+                        android:textColor="@color/white_four"
+                        android:text="@string/adults"
+                        style="@style/light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13px"
+                        android:layout_marginTop="2px"
+                        android:alpha="0.8"
+                        android:textColor="@color/white_four"
+                        android:text="16+"
+                        style="@style/light" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:alpha="0.4"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_four"/>
+            </RelativeLayout>
+            <!--青少年-->
+            <RelativeLayout
+                android:layout_width="320px"
+                android:layout_height="46px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_young_adults_decrease"
+                    android:layout_width="48px"
+                    android:layout_height="32px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_press_decrease_icon"
+                    android:background="@drawable/btn_decrease_n">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/iv_young_adults_add"
+                    android:layout_width="48px"
+                    android:layout_height="32px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_press_add_icon"
+                    android:background="@drawable/btn_add_2_n">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_young_adults_value"
+                    android:layout_width="40px"
+                    android:layout_height="28.7px"
+                    android:textSize="24px"
+                    android:layout_alignTop="@+id/iv_young_adults_decrease"
+                    android:layout_toRightOf="@+id/iv_young_adults_decrease"
+                    android:layout_marginLeft="43.3px"
+                    android:textColor="@color/white_four"
+                    android:text="0"
+                    style="@style/light" />
+
+                <LinearLayout
+                    android:layout_width="110px"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20px"
+                    android:layout_alignBottom="@+id/iv_young_adults_add"
+                    android:layout_toLeftOf="@+id/iv_young_adults_add">
+
+                    <TextView
+                        android:id="@+id/tv_young_adult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18px"
+                        android:maxLines="1"
+                        android:textColor="@color/white_four"
+                        android:text="@string/youngadults"
+                        style="@style/light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13px"
+                        android:layout_marginTop="2px"
+                        android:alpha="0.8"
+                        android:textColor="@color/white_four"
+                        android:text="12-15"
+                        style="@style/light" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:alpha="0.4"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_four"/>
+            </RelativeLayout>
+            <!-- 小孩 -->
+            <RelativeLayout
+                android:layout_width="320px"
+                android:layout_height="46px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24.3px">
+
+                <ImageView
+                    android:id="@+id/iv_children_decrease"
+                    android:layout_width="48px"
+                    android:layout_height="32px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_press_decrease_icon"
+                    android:background="@drawable/btn_decrease_n">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/iv_children_add"
+                    android:layout_width="48px"
+                    android:layout_height="32px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_press_add_icon"
+                    android:background="@drawable/btn_add_2_n">
+                    </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_children_value"
+                    android:layout_width="40px"
+                    android:layout_height="28.7px"
+                    android:textSize="24px"
+                    android:layout_alignTop="@+id/iv_children_decrease"
+                    android:layout_toRightOf="@+id/iv_children_decrease"
+                    android:layout_marginLeft="43.3px"
+                    android:textColor="@color/white_four"
+                    android:text="0"
+                    style="@style/light" />
+
+                <LinearLayout
+                    android:layout_width="110px"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20px"
+                    android:layout_alignBottom="@+id/iv_children_add"
+                    android:layout_toLeftOf="@+id/iv_children_add">
+
+                    <TextView
+                        android:id="@+id/tv_children"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18px"
+                        android:textColor="@color/white_four"
+                        android:text="@string/children"
+                        style="@style/light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13px"
+                        android:layout_marginTop="2px"
+                        android:alpha="0.8"
+                        android:textColor="@color/white_four"
+                        android:text="2-11"
+                        style="@style/light" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:alpha="0.4"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_four"/>
+            </RelativeLayout>
+            <!-- 嬰兒 -->
+            <RelativeLayout
+                android:layout_width="320px"
+                android:layout_height="46px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24.3px">
+
+                <ImageView
+                    android:id="@+id/iv_infants_decrease"
+                    android:layout_width="48px"
+                    android:layout_height="32px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_press_decrease_icon"
+                    android:background="@drawable/btn_decrease_n">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/iv_infants_add"
+                    android:layout_width="48px"
+                    android:layout_height="32px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_press_add_icon"
+                    android:background="@drawable/btn_add_2_n">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_infants_value"
+                    android:layout_width="40px"
+                    android:layout_height="28.7px"
+                    android:textSize="24px"
+                    android:layout_alignTop="@+id/iv_infants_decrease"
+                    android:layout_toRightOf="@+id/iv_infants_decrease"
+                    android:layout_marginLeft="43.3px"
+                    android:textColor="@color/white_four"
+                    android:text="0"
+                    style="@style/light" />
+
+                <LinearLayout
+                    android:layout_width="110px"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20px"
+                    android:layout_alignBottom="@+id/iv_infants_add"
+                    android:layout_toLeftOf="@+id/iv_infants_add">
+
+                    <TextView
+                        android:id="@+id/tv_infants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18px"
+                        android:textColor="@color/white_four"
+                        android:text="@string/infants"
+                        style="@style/light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13px"
+                        android:layout_marginTop="2px"
+                        android:alpha="0.8"
+                        android:textColor="@color/white_four"
+                        android:text="0-2"
+                        style="@style/light" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:alpha="0.4"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_four"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_passengers_msg"
+                android:layout_width="320px"
+                android:layout_height="36px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="20px"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                android:background="@drawable/bg_passengers_messenger">
+
+                <ImageView
+                    android:id="@+id/iv_travel_alerts"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_marginLeft="10px"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_travel_alerts"/>
+
+                <TextView
+                    android:id="@+id/tv_passengers_msg"
+                    android:layout_width="266px"
+                    android:layout_height="wrap_content"
+                    android:textSize="13px"
+                    android:layout_marginLeft="10px"
+                    android:textColor="@color/white_four"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/book_ticket_max_number_of_passengers"
+                    style="@style/regular" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/bookticket_cabin_class"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_economy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/bookticket_corporate_id_title"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_corporate_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/bookticket_promotion_code_title"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_promotion_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"/>
+
+            <TextView
+                android:id="@+id/tv_promotion_code_msg"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:textSize="13px"
+                android:layout_marginBottom="10px"
+                android:alpha="0.8"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/bookticket_promotion_code_msg"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_passengers_and_booking_rules_msg"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:textSize="16px"
+                android:layout_marginTop="44px"
+                android:layout_marginBottom="10px"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/passengers_and_booking_rules"
+                style="@style/light" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/vGradient"
+        android:layout_width="match_parent"
+        android:layout_height="16px"
+        android:layout_above="@+id/btn_find_flights"
+        android:background="@drawable/bg_listview_bottom_gradient" />
+
+    <!-- 訂票 尋找飛航資訊按鈕-->
+
+    <Button
+        android:id="@+id/btn_find_flights"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:minHeight="0px"
+        android:minWidth="0px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        android:text="@string/find_flight"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        android:textAllCaps="false"
+        style="@style/regular" />
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "doc_no": "1234567890",
+      "doc_type": "CT",
+      "nationality": "TW ",
+      "resident_city": "TWN",
+      "issue_country": "TWN",
+      "doc_expired_date": "2016-01-15",
+      "last_name": "CHAO                          ",
+      "first_name": "HEY                           ",
+      "birthday": "1988-02-12",
+      "sex": "88",
+      "addr_street": "1021 SUOTH PALM WALK             ",
+      "addr_city": "LOS ANGELES                      ",
+      "addr_state": "CA        ",
+      "addr_country": "USA       ",
+      "addr_zipcode": "404123    "
+    }
+  ]
+}

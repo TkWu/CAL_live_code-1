@@ -1,0 +1,66 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "Pax_Info": [
+      {
+        "First_Name": "CHUNGCHING",
+        "Last_Name": "HUANG",
+        "Pax_Type": "ADT",
+        "Pax_Number": "1",
+        "Seat_Number": "018J",
+        "Baggage_Allowence": "",
+        "Vip_Lounge": "N",
+        "Booking_Class": "Q",
+        "Ticket": "2971721276773",
+        "Is_Change_Seat": "Y",
+        "Is_Change_Meal": "N",
+        "Is_Add_Baggage": "N",
+        "Card_Id": "WD1201296",
+        "Card_Type": null,
+        "Meal": {
+          "pnr_id": null,
+          "itinerary_seq": null,
+          "flight_date": null,
+          "flight_num": null,
+          "flight_sector": null,
+          "tkt_confirm_code": null,
+          "rt_code": "error",
+          "rt_msg": null,
+          "breakfast_detail": null,
+          "lunch_detail": null,
+          "dinner_detail": null
+        }
+      },
+      {
+        "First_Name": "ITZU",
+        "Last_Name": "HSIEH",
+        "Pax_Type": "ADT",
+        "Pax_Number": "2",
+        "Seat_Number": "018K",
+        "Baggage_Allowence": "",
+        "Vip_Lounge": "N",
+        "Booking_Class": "Q",
+        "Ticket": "2971721276774",
+        "Is_Change_Seat": "Y",
+        "Is_Change_Meal": "N",
+        "Is_Add_Baggage": "N",
+        "Card_Id": "",
+        "Card_Type": "",
+        "Meal": {
+          "pnr_id": null,
+          "itinerary_seq": null,
+          "flight_date": null,
+          "flight_num": null,
+          "flight_sector": null,
+          "tkt_confirm_code": null,
+          "rt_code": "error",
+          "rt_msg": null,
+          "breakfast_detail": null,
+          "lunch_detail": null,
+          "dinner_detail": null
+        }
+      }
+    ]
+  }
+}

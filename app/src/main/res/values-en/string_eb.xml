@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trip_detail_passenger_bag_pay_add_excess_readme">Prepaid Excess Baggage Service Instruction</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_production_readme">Product</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_production_content_url">https://www.china-airlines.com/us/en/fly/prepare-for-the-fly/baggage/excess-baggage</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_notes">Terms and Conditions</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_notes_content">
+        1. The pre-paid excess baggage is available for passengers holding China Airlines(297)and Mandarin Airlines(803) tickets (excluding infant), excluding codeshare flights by partner airlines. Separate tickets are not eligible for this service\n\n
+        2. You can pre-purchase excess baggage up to 24 hours prior to flight departure at china-airlines.com. Additional baggage over the pre-paid baggage allowance checked in at the airport within 24 hours will be charged at higher excess baggage rates.\n\n
+        3. The pre-paid excess baggage is personal and non-transferable. The prepaid excess baggage allowance cannot be refunded or transferred to other flights once it is used.\n\n
+        4. The prepaid excess baggage is valid for single sector to the place of stopover or final destination. Please note each passenger is limited to purchase once on line for each one-way journey.\n\n
+        5. For travel to destinations where the weight concept applies, you may prepurchase extra weight allowance in units of 5kg up to a maximum of 50kg per flight. The maximum weight per piece of checked baggage must not exceed 32kg. For those itineraries to/from the US or Canada, you may pre-purchase extra baggage up to 2 pieces. The maximum weight per baggage is based upon your travel class.\n\n
+        6. The prepaid excess baggage is not applicable to oversized or overweight baggage, golf equipment, animals (pets), cabin check-in baggage. Please kindly refer to our Baggage Information for more information.\n\n
+        7. If travelers\' itinerary are Hong Kong-Jakarta or depart from/arrive at theairports listed below, they cannot purchase prepaid excess baggage allowance online.\n\n●Mainland China: Dalian, Fuzhou, Haikou, Hefei, Nanchang, Meixian, Ningbo, Sanya, Weihai, Wenzhou, Wuxi, Xuzhou, Yancheng, Yangzhou \n\n●Southeast Asia: Palau \n\n
+        8.The prepaid excess baggage is not available to purchase for international multi-stop itineraries to/from USA or Canada.\n\n
+        9. If you are travelling on the Lets GO fare (Hand Baggage Only), pre-paid excess baggage is not applied. You can purchase the baggage via Booking Inquiry.\n\n
+        10. If there is a need for you to change to another flight, please contact China Airlines Customer Service during office hours or visit a CI branch office to make a change before your original flight departure. However, your departure and arrival destinations should be the same or your tickets are applicable for interchangeability as follows routes:\n\n●Taiwan- Guangzhou/Shenzhen is applicable to Taiwan-Hong Kong \n\n●Taoyuan-Pudong is interchangeable with Songshan-Hongqiao \n\n●Taoyuan-Narita is interchangeable with Songshan- Haneda \n\n●Taoyuan- Incheon is interchangeable with Songshan-Gimpo \n\n
+        11. Please contact branch offices of China Airlines to apply refund within 2 years after purchasing if the excess baggage is eligible for refund. The prepaid excess baggage allowance is non-refundable once the ticket has been used. 30% of the prepaid baggage fee will be charged as a service fee.\n\n
+        12. All baggage is subject to China Airlines’ General Conditions of Carriage for Passengers and Baggage.\n\n
+        13. China Airlines reserves the right to revise its additional baggage rates, as well as the terms and conditions associated with the purchase of additional baggage allowance at any time with or without prior notice.</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules">Refund Rules</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules_content">
+        1. If you need to refund tickets purchased with Alipay, please contact China Airlines branch office or Mandarin Airlines office.\n\n
+        2. The tickets that you hold should be issued by either China Airlines(297) or Mandarin Airlines(803).\n\n
+        3. Online refunds are available only for completely unused excess baggage cuppon within two years of the date of issue.\n\n
+        4. Excess baggage cuppon refund application may only be applied the day after the booking is made.\n\n
+        5. The refund amount will be reimbursed to original cardholder and his/her card number for subject ticket payment.\n\n
+        6. We will prompt refund as possible once receive your request and the duration of reimbursement will subject to card-issuing banks handling procedures, and the refund service charge will be deducted from original amount.\n\n
+        7. Tickets to/from USA, a full refund without service charge will be given if the refund request is submitted within 48 hours after ticket purchase.\n\n
+        8. Tickets commencing from Korea, a full refund without service charge will be given if the refund request is submitted within 7 days after ticket purchase.</string>
+    <!-- / 是超連結區塊符號 -->
+    <string name="trip_detail_passenger_bag_term_and_conditions">I certify that I have read and agree to the /Terms and Conditions/ of the Purchase of Goods.</string>
+</resources>

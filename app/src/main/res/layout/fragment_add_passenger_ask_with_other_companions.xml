@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true"
+    tools:context="ci.function.Signup.CISignUpActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40px"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_ask_with_companions_img"
+            android:layout_width="160px"
+            android:layout_height="126.7px"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_add_passengers" />
+
+        <LinearLayout
+            android:id="@+id/ll_ask"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25px"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30px"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/become_a_dynasty_flyer_hello"
+                    android:textColor="@color/white_four"
+                    android:textSize="20px" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    style="@style/regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="Kevin Cheng"
+                    android:textColor="@color/white_four"
+                    android:textSize="20px" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ask_content"
+                style="@style/regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16px"
+                android:text="@string/find_my_booking_traveling_with_other_companions"
+                android:textColor="@color/white_four"
+                android:textSize="16px" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_social_disconnect"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25px"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_disconnect"
+                style="@style/regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="24px"
+                android:text="@string/are_you_sure_you_want_to_disconnect"
+                android:textColor="@color/white_four"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/tv_hi"
+                style="@style/regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16px"
+                android:minHeight="22.7px"
+                android:text="@string/connecting_to_social_account_makes_you_log_in_more_easier"
+                android:textColor="@color/white_four"
+                android:textSize="16px" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 詢問是否有同伴 -->
+    <LinearLayout
+        android:id="@+id/ll_ask_change_email"
+        android:layout_width="340px"
+        android:layout_height="55px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15px"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_no"
+            style="@style/regular"
+            android:layout_width="150px"
+            android:layout_height="40px"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/bg_btn_blue_selector"
+            android:text="@string/no"
+            android:textColor="@color/white_four"
+            android:textSize="16px" />
+
+        <Button
+            android:id="@+id/btn_yes"
+            style="@style/regular"
+            android:layout_width="150px"
+            android:layout_height="40px"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/bg_btn_pink_agree_selector"
+            android:text="@string/yes"
+            android:textColor="@color/white_four"
+            android:textSize="16px" />
+
+    </LinearLayout>
+
+</RelativeLayout>

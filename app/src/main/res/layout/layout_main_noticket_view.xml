@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ci.function.HomePage.CIMainInfoView
+        android:id="@+id/vInfoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ci.function.HomePage.CIMainInfoView>
+
+    <include
+        android:id="@+id/btn_my_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        layout="@layout/layout_main_my_booking_button"/>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_list_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_year"
+        android:layout_width="match_parent"
+        android:layout_height="45.7px"
+        android:background="@drawable/bg_manage_miles_head_radius"
+        android:orientation="vertical"
+        android:paddingBottom="12px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="12px">
+
+        <TextView
+            android:id="@+id/tv_year"
+            style="@style/regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="21.7px"
+            android:text="@string/miles_overdue_in_6_months"
+            android:textColor="@color/black_one"
+            android:textSize="18px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_year"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_list_head"
+            android:layout_width="match_parent"
+            android:layout_height="24px"
+            android:background="@color/white_seven"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <TextView
+                android:id="@+id/tv_head_data"
+                style="@style/light"
+                android:layout_width="230px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/description_accumulation_date"
+                android:textColor="@color/grey_four"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_miles_head"
+                style="@style/light"
+                android:layout_width="50px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:gravity="right"
+                android:text="@string/miles"
+                android:textColor="@color/grey_four"
+                android:textSize="13px" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_list_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_five"
+            android:orientation="vertical"
+            android:splitMotionEvents="false">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="@drawable/bg_manage_miles_body_radius"
+            android:orientation="vertical">
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vDiv"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:layout_below="@id/ll_list"
+        android:background="@color/transparent" />
+</RelativeLayout>

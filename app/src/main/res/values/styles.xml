@@ -1,0 +1,138 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+
+        <!-- Actionbar color -->
+        <item name="colorPrimary">@color/french_blue</item>
+        <!--Status bar color-->
+        <item name="colorPrimaryDark">@color/black_20</item>
+        <!--Window color-->
+        <item name="android:windowBackground">@color/french_blue</item>
+        <!--取消app所有按鈕字母自動轉大寫-->
+        <item name="android:textAllCaps">false</item>
+
+    </style>
+
+    <style name="StartAppTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Text Feild Components hint style base-->
+    <style name="CITextFeildStyle" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/white_80</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- Text Feild Components Theme base-->
+    <style name="CITextFeildStyle_base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/white_40</item>
+        <item name="colorControlActivated">@color/white_four</item>
+        <item name="colorControlHighlight">@color/white_four</item>
+    </style>
+
+    <!-- Text Feild Components Theme brownish_grey_40-->
+    <style name="CITextFeildStyle_brownish_grey" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorControlNormal">@color/brownish_grey_40</item>
+    <item name="colorControlActivated">@color/brownish_grey_40</item>
+    <item name="colorControlHighlight">@color/brownish_grey_40</item>
+    </style>
+
+    <!-- Text Feild With No Bottom Line-->
+    <style name="EditTextNoUnderbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">#00000000</item>
+        <item name="colorControlActivated">#00000000</item>
+        <item name="colorControlHighlight">#00000000</item>
+    </style>
+
+    <style name="alertdialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <!--  Shadow -->
+    <declare-styleable name="ShadowLayout">
+        <attr name="sl_cornerRadius" format="dimension" />
+        <attr name="sl_shadowSize" format="dimension" />
+        <attr name="sl_shadowColor" format="color" />
+        <attr name="sl_dx" format="dimension" />
+        <attr name="sl_dy" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DashedLine">
+        <attr name="dl_color" format="color" />
+        <attr name="dl_shadowColor" format="color" />
+        <attr name="dl_shadowSize" format="dimension" />
+    </declare-styleable>
+
+    <!-- TabLayout Style-->
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTabText</item>
+        <item name="tabSelectedTextColor">@color/white_four</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
+        <!-- 如果TabLayout tabTextSize 要能自由調整字體大小，下面要設字型大小，它將影響著最大可設定的字型大小-->
+        <item name="android:textSize">50dp</item>
+        <item name="android:textColor">@color/white_60</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--將Activity的Theme設置成透明-->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="PopupAnimation" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/anim_alpha_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_alpha_out</item>
+    </style>
+
+    <!--新增字型設定-->
+    <style name="regular">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="light" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="bold" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--medium android 5.0以後才支援, 故 設定在 v21/style.xml-->
+    <style name="medium" parent="bold">
+    </style>
+
+    <!--Progress Dlg設定-->
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="CIProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

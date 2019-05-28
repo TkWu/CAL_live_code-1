@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llayout_meal_card_layout"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:orientation="vertical"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="12px"
+        android:paddingBottom="12px">
+
+        <TextView
+            android:id="@+id/tv_meal_card_desc"
+            android:layout_width="match_parent"
+            android:layout_height="15.7px"
+            android:text="YuRong Cheng"
+            android:textColor="@color/grey_four"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="13px"
+            style="@style/light"/>
+
+        <TextView
+            android:id="@+id/tv_meal_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="19.3px"
+            android:layout_marginTop="1px"
+            android:text="YuRong Cheng"
+            android:textColor="@color/black_one"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="16px"
+            style="@style/light"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vline"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="@color/warm_grey_50" />
+</LinearLayout>

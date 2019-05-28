@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/bg_transparent_press_black20"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/tv_top_text"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="14.3dp"
+        android:text="Bergstrom Int"
+        android:textSize="18sp"
+        android:textColor="@color/white_four"/>
+
+    <TextView
+        android:id="@+id/tv_bottom_text"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_top_text"
+        android:layout_alignLeft="@id/tv_top_text"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="14dp"
+        android:text="Bergstrom Int"
+        android:textSize="13sp"
+        android:textColor="@color/white_four"/>
+
+    <TextView
+        android:id="@+id/tv_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25.6dp"
+        android:layout_marginRight="30dp"
+        android:text="Bergstrom Int"
+        android:textSize="16sp"
+        android:textColor="@color/white_four"/>
+</RelativeLayout>
+

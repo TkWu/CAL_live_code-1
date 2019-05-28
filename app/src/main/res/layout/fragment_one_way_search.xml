@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root">
+
+    <FrameLayout
+        android:id="@+id/fragment1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="72px"/>
+
+    <ImageButton
+        android:id="@+id/btn_change_airport"
+        android:layout_width="32px"
+        android:layout_height="32px"
+        android:layout_marginRight="20px"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="71.3px"
+        android:background="@drawable/btn_transform_n"/>
+
+    <FrameLayout
+        android:id="@+id/fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment1"
+        android:layout_marginTop="10.3px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="72px"/>
+
+    <FrameLayout
+        android:id="@+id/fragment3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment2"
+        android:layout_marginTop="10.3px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"/>
+
+</RelativeLayout>

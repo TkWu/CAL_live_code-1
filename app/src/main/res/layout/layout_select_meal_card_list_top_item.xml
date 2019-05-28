@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="30px"
+    android:layout_marginLeft="30px">
+
+    <ImageView
+        android:id="@+id/img_done"
+        android:layout_width="48px"
+        android:layout_height="48px"
+        android:layout_marginTop="20px"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img_done"/>
+
+    <TextView
+        android:id="@+id/tv_select_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_below="@+id/img_done"
+        android:gravity="center_horizontal"
+        android:text="@string/your_meal_selection_is_completed"
+        android:textColor="@color/white_four"
+        android:textSize="20px"
+        style="@style/regular"/>
+
+</RelativeLayout>

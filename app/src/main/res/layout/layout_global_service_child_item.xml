@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rl_phone_click"
+            android:layout_width="80px"
+            android:layout_height="92px"
+            android:clickable="true"
+            android:background="@drawable/bg_transparent_press_black20">
+
+            <!-- 電話icon -->
+            <ImageView
+                android:id="@+id/iv_ic_phone"
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_phone"/>
+
+            <!-- 30%透明白線垂直-->
+            <View
+                android:id="@+id/view_line_v"
+                android:layout_width="1px"
+                android:background="@color/white_30"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_map_click"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@drawable/bg_transparent_press_black20">
+            <LinearLayout
+                android:id="@+id/ll_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19px"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_city_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:layout_centerVertical="true"
+                        android:text="Taipei"
+                        android:textSize="18px"
+                        android:gravity="left"
+                        android:textColor="@color/white_four"
+                        style="@style/regular"
+                        android:ellipsize="end"/>
+                    <ImageView
+                        android:id="@+id/tv_ic_locate_2"
+                        android:layout_width="18px"
+                        android:layout_height="18px"
+                        android:layout_marginLeft="6px"
+                        android:visibility="visible"
+                        android:src="@drawable/ic_locate_2"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="196px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="No.131, Sec.4, Nanjing E. Rd., Taipei City 104, Taiwan "
+                    android:textSize="13px"
+                    android:gravity="left"
+                    android:layout_marginTop="4px"
+                    android:textColor="@color/white_four"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    style="@style/regular" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/iv_ic_list_arrow"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_marginLeft="20px"
+                android:src="@drawable/ic_list_arrow"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ll_location"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 30%透明白線水平-->
+    <View
+        android:id="@+id/view_line_h"
+        android:layout_width="match_parent"
+        android:background="@color/white_30"
+        android:layout_height="1px"/>
+
+
+</LinearLayout>

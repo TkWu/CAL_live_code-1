@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_login">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true">
+    </ci.ui.view.NavigationBar>
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btn_next"
+        />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:layout_alignParentBottom="true"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        android:text="@string/back_to_trip_detail"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        android:textAllCaps="false"
+        style="@style/regular"/>
+
+</RelativeLayout>

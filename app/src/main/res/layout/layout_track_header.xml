@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/track_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <View
+        android:id="@+id/v_top_div"
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="@color/transparent" />
+
+    <TextView
+        android:id="@+id/track_title_head"
+        android:layout_width="2px"
+        android:layout_height="16px"
+        android:layout_below="@+id/v_top_div"
+        android:layout_centerVertical="true"
+        android:background="@color/white_four" />
+
+    <TextView
+        android:id="@+id/tv_track_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_top_div"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8px"
+        android:layout_toRightOf="@+id/track_title_head"
+        android:text="@string/tracked_flight_status"
+        android:textColor="@color/white_four"
+        android:textSize="16px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7.3px"
+        android:layout_below="@+id/tv_track_title"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

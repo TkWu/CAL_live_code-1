@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/track_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/v_head_div"
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="@color/transparent" />
+
+        <TextView
+            android:id="@+id/track_time"
+            style="@style/regular"
+            android:layout_width="155.3px"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_head_div"
+            android:layout_marginBottom="10px"
+            android:shadowColor="@color/dark_navy_blue_50"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="4"
+            android:text="Oct 29, 2015"
+            android:textColor="@color/white_four"
+            android:textSize="16px" />
+
+        <TextView
+            android:id="@+id/track_place"
+            style="@style/light"
+            android:layout_width="155.3px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/v_head_div"
+            android:gravity="right"
+            android:shadowColor="@color/dark_navy_blue_50"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="4"
+            android:singleLine="true"
+            android:text="@string/trips_detail_title"
+            android:textColor="@color/white_four"
+            android:textSize="16px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/flight_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_four">
+
+        <TextView
+            android:id="@+id/flight_number"
+            style="@style/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="8px"
+            android:gravity="center_vertical"
+            android:minHeight="19.3px"
+            android:textColor="@color/black_one"
+            android:textSize="16px" />
+
+        <TextView
+            android:id="@+id/flight_status_text"
+            style="@style/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:textColor="@color/cool_grey"
+            android:textSize="16px"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/flight_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4px"
+            android:layout_toLeftOf="@+id/flight_status_text"
+            android:visibility="gone" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_operating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_operating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_four">
+
+            <TextView
+                android:id="@+id/tv_operating"
+                style="@style/regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="8px"
+                android:gravity="center_vertical"
+                android:minHeight="19.3px"
+                android:textColor="@color/black_one"
+                android:textSize="16px" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/pinkish_grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/card_content_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:background="@color/white_four"
+        android:paddingLeft="0.3px"
+        android:paddingRight="0.3px">
+
+        <RelativeLayout
+            android:id="@+id/card_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_six">
+
+            <TextView
+                android:id="@+id/scheduled_left_textview"
+                style="@style/light"
+                android:layout_width="140px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="9px"
+                android:minHeight="16px"
+                android:text="@string/scheduled"
+                android:textColor="@color/grey_four"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/startTime_left_textview"
+                style="@style/regular"
+                android:layout_width="120px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="20px"
+                android:minHeight="40px"
+                android:textColor="@color/french_blue"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/startPlace_left_textview"
+                style="@style/regular"
+                android:layout_width="140px"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/startTime_left_textview"
+                android:layout_marginLeft="20px"
+                android:gravity="center_vertical"
+                android:minHeight="31.3px"
+                android:textColor="@color/black_one"
+                android:textSize="16px" />
+
+            <TextView
+                android:id="@+id/scheduled_right_textview"
+                style="@style/light"
+                android:layout_width="140px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="9px"
+                android:gravity="right"
+                android:minHeight="16px"
+                android:text="@string/scheduled"
+                android:textColor="@color/grey_four"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/arrivalTime_right_textview"
+                style="@style/regular"
+                android:layout_width="120px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="20px"
+                android:gravity="right"
+                android:minHeight="40px"
+                android:text="11:11"
+                android:textColor="@color/french_blue"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/tv_tomorrow_tag"
+                style="@style/regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5px"
+                android:layout_marginTop="42px"
+                android:textColor="@color/french_blue"
+                android:textSize="14px" />
+
+            <TextView
+                android:id="@+id/arrivalPlace_right_textview"
+                style="@style/regular"
+                android:layout_width="140px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/arrivalTime_right_textview"
+                android:layout_marginRight="20px"
+                android:gravity="right|center_vertical"
+                android:minHeight="31.3px"
+                android:textColor="@color/black_one"
+                android:textSize="16px" />
+
+            <ImageView
+                android:id="@+id/flight_imageview"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15px"
+                android:layout_marginTop="30px"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_flight_from_to" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15.7px"
+                android:layout_below="@+id/arrivalPlace_right_textview"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dash_part_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_four"
+        android:paddingLeft="0.3px"
+        android:paddingRight="0.3px">
+
+        <RelativeLayout
+            android:id="@+id/dash_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_six">
+
+            <ci.ui.view.DashedLine
+                android:id="@+id/line_top"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/dashed_line" />
+
+            <TextView
+                android:id="@+id/arrival_time"
+                style="@style/light"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_top"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="4px"
+                android:singleLine="true"
+                android:textColor="@color/black_three"
+                android:textSize="14px" />
+
+            <ci.ui.view.DashedLine
+                android:id="@+id/line_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/arrival_time"
+                android:layout_marginTop="4px"
+                android:background="@drawable/dashed_line" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fullweek"
+        android:layout_width="match_parent"
+        android:layout_height="35px"
+        android:background="@color/white_six"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ci.ui.view.DashedLine
+            android:id="@+id/dl_top"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:dl_color="@color/greyish_brown_30"
+            android:background="@drawable/dashed_line_greyish_brown" />
+
+        <TextView
+            android:id="@+id/tv_fullweek"
+            android:layout_width="match_parent"
+            android:layout_height="33px"
+            android:gravity="center"
+            android:text="@string/fullweek"
+            android:textColor="@color/warm_grey_three"
+            android:textSize="14px" />
+
+        <ci.ui.view.DashedLine
+            android:id="@+id/dl_bottom"
+            app:dl_color="@color/greyish_brown_30"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/dashed_line_greyish_brown"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_text_week"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:paddingLeft="4px"
+        android:paddingRight="4px"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@color/white_four"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_week"
+        android:layout_width="match_parent"
+        android:layout_height="43px"
+        android:orientation="vertical"
+        android:background="@drawable/timetable_content_bg_corner"
+        android:visibility="gone">
+
+        <!--<ci.ui.view.DashedLine-->
+            <!--android:id="@+id/dl_week"-->
+            <!--app:dl_color="@color/greyish_brown_30"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="@drawable/dashed_line_greyish_brown" />-->
+
+        <LinearLayout
+            android:id="@+id/ll_icon_week"
+            android:layout_width="match_parent"
+            android:layout_height="43px"
+            android:paddingLeft="4px"
+            android:paddingRight="4px"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="10px"></RelativeLayout>
+</LinearLayout>
+

@@ -1,0 +1,86 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "flight_item": "1",
+      "flight_desc": "酬賓獎項受讓",
+      "flight_duedate": "2016-02-29",
+      "flight_awdno": "138879966",
+      "flight_date": "2015-07-24",
+      "flight_remark": "未使用",
+      "nominator": "/",
+      "card_no": "CT0000000"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "酬賓獎項受讓",
+      "flight_duedate": "2016-06-24",
+      "flight_awdno": "138677310",
+      "flight_date": "2015-06-24",
+      "flight_remark": "未使用",
+      "nominator": "/",
+      "card_no": "CT0000000"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "酬賓獎項受讓",
+      "flight_duedate": "2014-11-30",
+      "flight_awdno": "137176964",
+      "flight_date": "2014-11-03",
+      "flight_remark": "未使用",
+      "nominator": "/",
+      "card_no": "CT0000000"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "酬賓獎項受讓",
+      "flight_duedate": "2014-11-30",
+      "flight_awdno": "137008798",
+      "flight_date": "2014-10-06",
+      "flight_remark": "未使用",
+      "nominator": "/",
+      "card_no": "CT0000000"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "酬賓獎項受讓",
+      "flight_duedate": "2014-11-30",
+      "flight_awdno": "137008091",
+      "flight_date": "2014-10-06",
+      "flight_remark": "未使用",
+      "nominator": "/",
+      "card_no": "CT0000000"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "酬賓獎項受讓",
+      "flight_duedate": "2014-06-30",
+      "flight_awdno": "136035382",
+      "flight_date": "2014-04-16",
+      "flight_remark": "未使用",
+      "nominator": "/",
+      "card_no": "CT0000000"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "酬賓獎項受讓",
+      "flight_duedate": "2014-10-20",
+      "flight_awdno": "135953910",
+      "flight_date": "2014-04-01",
+      "flight_remark": "未使用",
+      "nominator": "/",
+      "card_no": "CT0000000"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "酬賓獎項受讓",
+      "flight_duedate": "2014-10-21",
+      "flight_awdno": "135146766",
+      "flight_date": "2013-10-21",
+      "flight_remark": "未使用",
+      "nominator": "/",
+      "card_no": "CT0000000"
+    }
+  ]
+}

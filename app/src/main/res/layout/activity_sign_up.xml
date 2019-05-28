@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="ci.function.Signup.CISignUpActivity"
+    android:background="@drawable/bg_login">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true" >
+    </ci.ui.view.NavigationBar>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none"
+        android:layout_above="@+id/btn_save"
+        android:id="@+id/sign_up_scrollview">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/sign_up_personal_detail"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular"/>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:layout_marginBottom="24px">
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_guardian_details"
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/guardian_details"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular"/>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment5_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment5_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment5_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/sign_up_contact_information"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px">
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sign_up_monthly_mileage_summary_will_be_sent"
+                    android:textSize="13px"
+                    android:textColor="@color/white_four"
+                    android:layout_marginTop="53px"
+                    android:alpha="0.8"
+                    style="@style/light"/>
+                <FrameLayout
+                    android:id="@+id/fragment7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </FrameLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Receive_promotion_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12.3px">
+                <ImageView
+                    android:id="@+id/iv_Receive_promotion_email"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:src="@drawable/btn_checkbox_off"
+                    android:layout_marginLeft="30px"
+                    android:background="@drawable/bg_transparent_press_black20"
+                    android:layout_gravity="left"
+                    android:scaleType="fitXY"/>
+                <TextView
+                    android:id="@+id/tv_Receive_promotion_email"
+                    android:layout_width="268px"
+                    android:layout_marginLeft="8px"
+                    android:layout_height="wrap_content"
+                    android:textSize="16px"
+                    android:textColor="@color/white_four"
+                    android:alpha="0.8"
+                    android:text="@string/sign_up_receive_promotion_email"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical|left"
+                    style="@style/light"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Receive_SMS_from_China_Airlines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2.3px"
+                android:layout_marginBottom="42.3px">
+                <ImageView
+                    android:id="@+id/iv_Receive_SMS_from_China_Airlines"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:src="@drawable/btn_checkbox_off"
+                    android:layout_marginLeft="30px"
+                    android:background="@drawable/bg_transparent_press_black20"
+                    android:layout_gravity="left"
+                    android:scaleType="fitXY"/>
+                <TextView
+                    android:id="@+id/tv_Receive_SMS_from_China_Airlines"
+                    android:layout_width="268px"
+                    android:layout_marginLeft="8px"
+                    android:layout_height="wrap_content"
+                    android:textSize="16px"
+                    android:textColor="@color/white_four"
+                    android:alpha="0.8"
+                    android:text="@string/sign_up_receive_sms"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical|left"
+                    style="@style/light"/>
+
+            </LinearLayout>
+
+            <!--/2019-01-24 新增郵寄地址/-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/sign_up_mailing_address"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular"/>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_address1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6px">
+                <TextView
+                    android:id="@+id/tvaddress1_note"
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sign_up_street1_note"
+                    android:textSize="13px"
+                    android:textColor="@color/white_four"
+                    android:layout_marginTop="53px"
+                    android:alpha="0.8"
+                    android:visibility="gone"
+                    style="@style/light"/>
+                <FrameLayout
+                    android:id="@+id/fragment_address1_tw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fragment_address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address2_tw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address2_cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address3_tw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fragment_address3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address3_cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address4_tw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address5_tw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fragment_address5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address6_tw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px"
+                android:visibility="gone">
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_Nearest_Area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6px"
+                android:layout_marginBottom="24px">
+                <TextView
+                    android:id="@+id/tvNearest_Area"
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sign_up_home_nearest_area"
+                    android:textSize="13px"
+                    android:textColor="@color/white_four"
+                    android:layout_marginTop="53px"
+                    android:alpha="0.8"
+                    android:visibility="gone"
+                    style="@style/light"/>
+                <FrameLayout
+                    android:id="@+id/fragment_Nearest_Area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <!--/2019-01-24 新增郵寄地址/-->
+
+            <RelativeLayout
+                android:id="@+id/rl_password_title"
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/sign_up_account_information"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px">
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sign_up_password_prompt_case"
+                    android:textSize="13px"
+                    android:textColor="@color/white_four"
+                    android:layout_marginTop="53px"
+                    android:alpha="0.8"
+                    style="@style/light"/>
+                <FrameLayout
+                    android:id="@+id/fragment10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="27px"
+                android:layout_marginBottom="24px">
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/sign_up_preferences"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular"/>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20px">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6px">
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/change_password"
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/account_security"
+                    android:textSize="16px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white_four"
+                    style="@style/regular"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_change_password"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="20px"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                android:text="@string/change_password"
+                android:gravity="left"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                style="@style/regular"/>
+
+            <LinearLayout
+                android:id="@+id/rl_Terms_and_Conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="56.3px">
+                <ImageButton
+                    android:id="@+id/iv_Terms_and_Conditions"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:src="@drawable/btn_checkbox_off"
+                    android:layout_marginLeft="30px"
+                    android:background="@drawable/bg_transparent_press_black20"
+                    android:layout_gravity="left"
+                    android:scaleType="fitXY"/>
+                <TextView
+                    android:id="@+id/tv_Terms_and_Conditions"
+                    android:layout_width="268px"
+                    android:layout_marginLeft="8px"
+                    android:layout_height="wrap_content"
+                    android:textSize="16px"
+                    android:textColor="@color/white_four"
+                    android:alpha="0.8"
+                    android:text="@string/sign_up_trem_and_conditions"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical|left"
+                    style="@style/light"/>
+
+            </LinearLayout>
+            <!-- 加入會員 使用的按鈕-->
+            <Button
+                    android:id="@+id/btn_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="40px"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="40px"
+                    android:layout_marginBottom="30px"
+                    android:background="@drawable/bg_btn_pinkish_red_selector"
+                    android:text="@string/sign_up_title"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textColor="@color/white_four"
+                    android:textSize="16px"
+                    android:textAllCaps="false"
+                    style="@style/regular"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/vGradient"
+        android:layout_width="match_parent"
+        android:layout_height="16px"
+        android:layout_above="@+id/btn_save"
+        android:visibility="gone"
+        android:background="@drawable/bg_listview_bottom_gradient" />
+    <!-- 個人資訊 使用的按鈕 儲存-->
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:layout_alignParentBottom="true"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        android:text="@string/save"
+        android:textColor="@color/white_four"
+        android:visibility="gone"
+        android:textSize="16px"
+        android:textAllCaps="false"
+        style="@style/regular"/>
+
+</RelativeLayout>

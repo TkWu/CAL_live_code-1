@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_content"
+        android:background="@color/transparent"
+        android:src="@drawable/img_dangerous_tc_1"
+        android:adjustViewBounds="true"/>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/imgbtn_checkbox"
+            android:layout_alignTop="@+id/tv_notice"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/btn_checkbox_off"
+            android:background="@color/transparent"
+            android:clickable="false"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prohibit_product_claim_notice"
+            android:id="@+id/tv_notice"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="30dp"
+            android:textSize="16sp"
+            android:textColor="@color/white_four"
+            style="@style/medium"
+            android:clickable="false"/>
+    </RelativeLayout>
+</LinearLayout>

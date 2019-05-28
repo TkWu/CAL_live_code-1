@@ -1,0 +1,25 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": {
+    "expire_date":"2016-05-10",
+    "miles": {
+      "crtmil_standard01": "50000.00",
+      "crtmil_accumulation02": "0.00",
+      "crtmil_standard02": "50000.00",
+      "crtmil_accumulation01": "0.00"
+    },
+    "qualified_weighted_trips": {
+      "wgttrip_standard02": "40.00",
+      "wgttrip_standard01": "40.00",
+      "wgttrip_accumulation01": "0.00",
+      "wgttrip_accumulation02": "0.00"
+    },
+    "first_class_flights": {
+      "crtftrp_standard01": "30.00",
+      "crtftrp_standard02": "20.00",
+      "crtftrp_accumulation01": "0.00",
+      "crtftrp_accumulation02": "0.00"
+    }
+  }
+}

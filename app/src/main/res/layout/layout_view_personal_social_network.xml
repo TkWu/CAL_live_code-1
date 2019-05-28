@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/personal_social_network_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="64px"
+        android:background="@drawable/bg_miles_detail_card_head_radius"
+        android:paddingLeft="20px">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/social_network"
+            android:textColor="@color/black_one"
+            android:textSize="20px"
+            style="@style/regular" />
+
+        <LinearLayout
+            android:id="@+id/ll_edit"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="20px"
+            android:gravity="right|center_vertical">
+            <ImageButton
+                android:id="@+id/ibtn_edit"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_edit"
+                android:clickable="false"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_head"
+        android:background="@drawable/bg_manage_miles_body_radius"
+        android:orientation="vertical"
+        android:paddingBottom="20px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="10px">
+
+        <RelativeLayout
+            android:id="@+id/rl_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+
+            <ImageView
+                android:id="@+id/iv_fb"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_facebook_b" />
+
+            <TextView
+                android:id="@+id/tv_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/iv_fb"
+                android:maxWidth="166px"
+                android:singleLine="true"
+                android:text="@string/social_network_facebook"
+                android:textColor="@color/denim_blue"
+                android:textSize="16px"
+                style="@style/regular" />
+
+            <TextView
+                android:id="@+id/tv_fb_id_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/iv_fb"
+                android:maxWidth="166px"
+                android:singleLine="true"
+                android:text="@string/social_network_facebook"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_fb_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/tv_facebook"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="Yurong@gmail.com"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <Button
+                android:id="@+id/btn_fb"
+                android:layout_width="80px"
+                android:layout_height="32px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:background="@drawable/bg_btn_check_in_view"
+                android:minHeight="0px"
+                android:minWidth="0px"
+                android:text="@string/disconnect"
+                android:textColor="@color/french_blue"
+                android:textSize="13px"
+                android:visibility="gone"
+                style="@style/regular" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50"
+            android:paddingLeft="20px"
+            android:paddingRight="20px" />
+
+        <RelativeLayout
+            android:id="@+id/rl_google"
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+
+            <ImageView
+                android:id="@+id/iv_google"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_google" />
+
+            <TextView
+                android:id="@+id/tv_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/iv_google"
+                android:maxWidth="166px"
+                android:singleLine="true"
+                android:text="@string/social_network_google_plus"
+                android:textColor="@color/black_54"
+                android:textSize="16px"
+                style="@style/regular" />
+
+            <TextView
+                android:id="@+id/tv_google_id_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/iv_google"
+                android:maxWidth="166px"
+                android:singleLine="true"
+                android:text="@string/social_network_google_plus"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_google_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/tv_google"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="@string/not_connect"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <Button
+                android:id="@+id/btn_google"
+                android:layout_width="80px"
+                android:layout_height="32px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:background="@drawable/bg_btn_pinkish_red_selector"
+                android:minHeight="0px"
+                android:minWidth="0px"
+                android:text="@string/connected"
+                android:textColor="@color/white_four"
+                android:textSize="13px"
+                android:visibility="gone"
+                style="@style/regular" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+    </LinearLayout>
+
+</LinearLayout>

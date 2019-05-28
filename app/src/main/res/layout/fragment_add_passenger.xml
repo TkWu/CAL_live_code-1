@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root">
+    <ci.ui.view.ShadowBar.ShadowBarScrollview
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="460px"
+        android:scrollbars="none">
+
+    </ci.ui.view.ShadowBar.ShadowBarScrollview>
+    <RelativeLayout
+        android:id="@+id/rl_finish"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="320px"
+            android:layout_height="40px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_btn_pinkish_red_selector"
+            android:text="@string/finish"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            style="@style/regular"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rl_big_category"
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:background="@color/black_30">
+        <TextView
+            android:id="@+id/tv_big_category"
+            android:layout_width="wrap_content"
+            android:layout_height="22.7px"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_centerInParent="true"
+            android:text="Area nearby"
+            android:textSize="16px"
+            android:gravity="center"
+            android:textColor="@color/white_four"
+            style="@style/regular" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_county_category"
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:background="@color/white_20">
+        <TextView
+            android:id="@+id/tv_county_category"
+            android:layout_width="wrap_content"
+            android:layout_height="22.7px"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_centerInParent="true"
+            android:text="Taiwan"
+            android:textSize="16px"
+            android:gravity="center"
+            android:textColor="@color/white_four"
+            style="@style/light" />
+    </RelativeLayout>
+
+</LinearLayout>

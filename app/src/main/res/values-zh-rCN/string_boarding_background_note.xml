@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boardingpass_background_notes_title">注意事项</string>
+    <string name="boardingpass_background_notes_content">
+        • 若需以登机证作为公差报帐依据，搭机前请自行将电子登机证透过截图方式进行保存，搭机后另可至中华航空各营业处所申请搭机证明。( https://www.china-airlines.com/cn/zh/fly/on-board/invoice-application-form )\n\n
+        • 请在航班启航前最少30分钟于登机门服务柜台出示旅行证件并于登机时出示本登机证。\n\n
+        • 正确之登机门号码请参考机场航班资讯系统。\n\n
+        • 如您有托运行李，请务必于起飞前1小时至机场本公司报到柜台办理后（小港国际机场B柜台前方设有专属快速服务柜台），再接受证照及安全检查。\n\n
+        • 本公司保有权利因应飞机调度，而更动起飞时间，及调整旅客指定座位。\n\n
+        • 目前「预办登机」自助列印登机证服务不适用于香港机场转机之旅客。\n\n
+        • 以信用卡购买电子机票旅客必须于订位纪录中第一段行程启程地之机场报到柜台或登机门完成「核对信用卡」手续，未依规定完成核对手续者，将导致旅客必须在机场另行购买适用机票，方可成行，信用卡代购须知请参阅华航网站 ( https://www.china-airlines.com/cn/zh/fly/prepare-for-the-fly/information-for-travellers/Notice-for-Credit-Card-Payment )。\n
+        </string>
+</resources>

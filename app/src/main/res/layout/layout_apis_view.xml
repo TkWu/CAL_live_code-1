@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llayout_root"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:singleLine="true"
+        android:paddingStart="30px"
+        android:paddingEnd="30px"
+        android:layout_centerVertical="true"
+        android:text="Passenger Name"
+        android:textSize="20px"
+        android:letterSpacing="0.01"
+        android:gravity="center_vertical|left"
+        android:textColor="@color/white_four"
+        android:background="@color/black_30"
+        style="@style/regular" />
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/flayout_select"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="20px"-->
+        <!--android:layout_marginLeft="20px"-->
+        <!--android:layout_marginTop="20px"/>-->
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/flayout_apis_doc"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="20px"-->
+        <!--android:layout_marginLeft="20px"-->
+        <!--android:layout_marginTop="26px"/>-->
+
+    <ci.ui.view.TwoItemSelectBar
+        android:id="@+id/v_gender"
+        android:layout_width="match_parent"
+        android:layout_height="24px"
+        android:layout_marginRight="26.4px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="24px">
+    </ci.ui.view.TwoItemSelectBar>
+    <FrameLayout
+        android:id="@+id/flayout_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="22px"/>
+    <FrameLayout
+        android:id="@+id/flayout_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="22px"/>
+
+    <FrameLayout
+        android:id="@+id/flayout_nationality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="9px"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:singleLine="true"
+        android:paddingStart="30px"
+        android:paddingEnd="30px"
+        android:layout_centerVertical="true"
+        android:text="@string/check_in_input_apis_doc"
+        android:textSize="16px"
+        android:gravity="center_vertical|left"
+        android:textColor="@color/white_four"
+        android:background="@color/black_30"
+        android:layout_marginTop="9px"
+        style="@style/regular" />
+
+    <FrameLayout
+        android:id="@+id/flayout_doc_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="9px"/>
+
+    <FrameLayout
+        android:id="@+id/flayout_doc_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="9px"/>
+
+    <FrameLayout
+        android:id="@+id/flayout_issue_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="9px"/>
+
+    <FrameLayout
+        android:id="@+id/flayout_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="9px"/>
+
+    <!--是否有特殊證件的選項、目前用途
+    綠卡、台胞證、楓葉卡：-->
+    <RelativeLayout
+        android:id="@+id/rlayout_other_doc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="26px">
+
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:id="@+id/iv_green_card_checkbox"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:src="@drawable/bg_btn_checkbox_selector"
+            android:scaleType="center"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/is_there_a_green_card"
+            android:id="@+id/tv_other_doc_notice"
+            android:layout_toEndOf="@+id/iv_green_card_checkbox"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            android:layout_marginLeft="8px"
+            style="@style/light" />
+    </RelativeLayout>
+
+    <!--第二證件的選項、預設ui-->
+    <LinearLayout
+        android:id="@+id/llayout_second_document"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_doc"
+            android:layout_width="match_parent"
+            android:layout_height="32px"
+            android:singleLine="true"
+            android:paddingStart="30px"
+            android:paddingEnd="30px"
+            android:layout_centerVertical="true"
+            android:text="@string/check_in_input_apis_second_doc"
+            android:textSize="16px"
+            android:letterSpacing="0.01"
+            android:gravity="center_vertical|left"
+            android:textColor="@color/white_four"
+            android:background="@color/black_30"
+            android:layout_marginTop="9px"
+            style="@style/regular" />
+
+        <FrameLayout
+            android:id="@+id/flayout_second_doc_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"/>
+        <FrameLayout
+            android:id="@+id/flayout_second_doc_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"/>
+        <FrameLayout
+            android:id="@+id/flayout_second_issue_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"
+            android:visibility="gone"/>
+        <FrameLayout
+            android:id="@+id/flayout_second_expiry_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"/>
+    </LinearLayout>
+
+    <!--第二證件的選項、美國線-地址區塊 -->
+    <LinearLayout
+        android:id="@+id/llayout_Address"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_second_doc"
+            android:layout_width="match_parent"
+            android:layout_height="32px"
+            android:singleLine="true"
+            android:paddingStart="30px"
+            android:paddingEnd="30px"
+            android:layout_centerVertical="true"
+            android:text="@string/check_in_input_apis_second_doc"
+            android:textSize="16px"
+            android:letterSpacing="0.01"
+            android:gravity="center_vertical|left"
+            android:textColor="@color/white_four"
+            android:background="@color/black_30"
+            android:layout_marginTop="9px"
+            style="@style/regular" />
+
+        <FrameLayout
+            android:id="@+id/flayout_address_Nationality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"/>
+
+        <FrameLayout
+            android:id="@+id/flayout_address_city_stat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"/>
+
+        <FrameLayout
+            android:id="@+id/flayout_address_county"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"/>
+
+        <FrameLayout
+            android:id="@+id/flayout_address_street"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"/>
+
+        <FrameLayout
+            android:id="@+id/flayout_address_zipcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="9px"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlayout_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="24px"
+        android:layout_marginRight="30px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="72.3px">
+
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:id="@+id/iv_checkbox"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:src="@drawable/bg_btn_checkbox_selector"
+            android:scaleType="center"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apis_save_change"
+            android:id="@+id/tv_save"
+            android:layout_toEndOf="@+id/iv_checkbox"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            android:layout_marginLeft="8px"
+            style="@style/light" />
+    </RelativeLayout>
+
+</LinearLayout>

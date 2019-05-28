@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a8cbff">
+
+        <ci.ui.view.NavigationBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56px"
+            android:layout_alignParentTop="true"></ci.ui.view.NavigationBar>
+
+
+        <ImageView
+            android:id="@+id/img_bg_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:src="@drawable/bg_map"
+            android:scaleType="fitXY"/>
+
+
+        <!-- 導入華航map by kevin 2016/05/30 -->
+        <FrameLayout
+            android:id="@+id/fl_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"/>
+
+        <Button
+            android:id="@+id/track"
+            android:layout_width="72px"
+            android:layout_height="32px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16px"
+            android:layout_marginTop="13.7px"
+            android:background="@drawable/bg_track_btn"
+            android:text="@string/track"
+            android:textSize="13px"
+            android:textColor="@color/white_four"
+            />
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            />
+
+        <View
+            android:id="@+id/vGradient"
+            android:layout_width="match_parent"
+            android:layout_height="16px"
+            android:layout_alignBottom="@+id/fl_content"
+            android:background="@drawable/bg_listview_bottom_gradient"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

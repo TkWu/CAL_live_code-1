@@ -1,0 +1,43 @@
+{
+  "rt_code":"000",
+  "rt_msg":"OK",
+  "rt_data":{
+    "pax_info":[
+      {
+        "First_Name":"TEST",
+        "Last_Name":"CHIANG",
+        "Uci":"2401C7F00000EF3D",
+        "Pnr_Id":"YKLAEJ",
+        "Itinerary_Info":[
+          {
+            "Segment_Number": "1",
+            "Departure_Date":"2016-05-21",
+            "Departure_Time":"18:00",
+            "Departure_Station":"TPE",
+            "Departure_Station_Name":"台北(桃園)",
+            "Arrival_Date":"2016-05-21",
+            "Arrival_Time":"19:30",
+            "Arrival_Station":"HKG",
+            "Arrival_Station_Name":"香港",
+            "Airlines":"CI",
+            "Airlines_Name":"中華國際航空公司",
+            "Flight_Number":"1692",
+            "Did":"2401C7F00001772C",
+            "Is_Black":"N",
+            "Is_Check_In":"N",
+            "Is_Do_Check_In":"Y",
+            "Boarding_Pass": null,
+            "Seat_Number":"024D",
+            "Boarding_Gate":"G1",
+            "Boarding_Date":"2016-05-21",
+            "Boarding_Time":"17:20",
+            "Check_In_Counter":"3",
+            "Oids":[
+
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

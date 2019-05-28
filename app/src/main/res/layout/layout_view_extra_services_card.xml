@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="94.5px"
+        android:background="@drawable/bg_boardimg_pass_head_radius">
+
+    </RelativeLayout>
+
+    <!-- 已使用圖 -->
+    <ImageView
+        android:id="@+id/iv_used"
+        android:layout_width="80.7px"
+        android:layout_height="68.7px"
+        android:layout_marginTop="15.7px"
+        android:layout_marginLeft="171.2px"
+        android:src="@drawable/img_used_en"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/iv_hole"
+        android:layout_width="match_parent"
+        android:layout_height="12px"
+        android:layout_below="@+id/rl_head"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_card_hole_" />
+
+    <ImageView
+        android:id="@+id/iv_blue"
+        android:layout_width="80px"
+        android:layout_height="100px"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_extra_services_card_blue" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="220px"
+        android:layout_height="28.7px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="28px"
+        android:text="YuRong Cheng"
+        android:textColor="@color/black_one"
+        android:textSize="20px"
+        style="@style/regular" />
+
+    <TextView
+        android:id="@+id/tv_no"
+        android:layout_width="220px"
+        android:layout_height="16px"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="22.3px"
+        android:text="36551895412"
+        android:textColor="@color/grey_four"
+        android:textSize="13px"
+        style="@style/light" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="100px"
+        android:layout_toLeftOf="@+id/ll_service"
+        android:background="@color/french_blue" />
+
+    <LinearLayout
+        android:id="@+id/ll_service"
+        android:layout_width="80px"
+        android:layout_height="100px"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_service"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baggage_b_services" />
+
+        <TextView
+            android:id="@+id/tv_service"
+            android:layout_width="60px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:gravity="center"
+            android:text="@string/extra_baggage"
+            android:textColor="@color/french_blue"
+            android:textSize="13px"
+            style="@style/regular" />
+    </LinearLayout>
+
+    <ci.ui.view.DashedLine
+        android:id="@+id/dl"
+        android:layout_width="327px"
+        android:layout_height="1px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"
+        app:dl_color="@color/warm_grey" />
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_hole"
+        android:background="@color/white_six"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_line1"
+            android:layout_width="300px"
+            android:layout_height="50px"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_line1"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/extra_services_award_no"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_line1_data"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="300px"
+            android:layout_height="1px"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+        <LinearLayout
+            android:id="@+id/ll_line2"
+            android:layout_width="300px"
+            android:layout_height="50px"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_line2"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/extra_services_flight_number"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_line2_data"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line2"
+            android:layout_width="300px"
+            android:layout_height="1px"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+        <LinearLayout
+            android:id="@+id/ll_line3"
+            android:layout_width="300px"
+            android:layout_height="50px"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_line3"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/extra_services_flight_number"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_line3_data"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line3"
+            android:layout_width="300px"
+            android:layout_height="1px"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+        <RelativeLayout
+            android:id="@+id/rl_line4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_barcode"
+                android:layout_width="300px"
+                android:layout_height="96px"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_barcode"
+                    android:layout_width="270px"
+                    android:layout_height="56px"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_sidemenu_btn_check" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_line4"
+                android:layout_width="300px"
+                android:layout_height="50px"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_line4"
+                    android:layout_width="150px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/extra_services_flight_number"
+                    android:textColor="@color/grey_four"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+                <TextView
+                    android:id="@+id/tv_line4_data"
+                    android:layout_width="150px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:textColor="@color/black_one"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line4"
+            android:layout_width="300px"
+            android:layout_height="1px"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50" />
+
+        <LinearLayout
+            android:id="@+id/ll_line5"
+            android:layout_width="300px"
+            android:layout_height="50px"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_line5"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/extra_services_flight_number"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_line5_data"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_logo"
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:layout_below="@+id/ll_list"
+        android:background="@drawable/bg_personal_member_card_detail_bosy">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="130px"
+            android:layout_height="20px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_china_airlines_boarding_pass" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="0px"
+        android:layout_below="@+id/rl_logo"
+        android:layout_marginTop="10px"
+        android:textColor="@color/white_four"
+        android:textSize="13px"
+        style="@style/regular" />
+
+</RelativeLayout>

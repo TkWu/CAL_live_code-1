@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340px"
+    android:layout_height="153px"
+    android:id="@+id/root">
+
+    <ImageView
+        android:id="@+id/iv_aircraft_img"
+        android:layout_width="340px"
+        android:layout_height="153px"
+        android:src="@drawable/img_flight_photo"
+        android:scaleType="fitXY"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_flight_tab_flight_air_craft_inside_line"/>
+
+</RelativeLayout>

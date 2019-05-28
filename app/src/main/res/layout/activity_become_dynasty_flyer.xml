@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="ci.function.Signup.CISignUpActivity"
+    android:background="@drawable/bg_login">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true" >
+    </ci.ui.view.NavigationBar>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40px"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/become_dynasty_flyer_img"
+            android:layout_width="160px"
+            android:layout_height="110px"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/img_become_dynasty_flyer"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20px"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/become_a_dynasty_flyer_hello"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_become_dynasty_flyer_member_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FirstName LastName"
+                android:textColor="@color/white_four"
+                android:textSize="18px"
+                style="@style/medium"
+                android:layout_marginLeft="10px"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_become_dynasty_flyer_member_invite"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:text="@string/become_a_dynasty_flyer_prompt_msg"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            android:layout_marginTop="16px"
+            android:layout_centerHorizontal="true"
+            style="@style/light"/>
+
+    </LinearLayout>
+    <!-- 詢問是否加入會員按鈕 -->
+    <LinearLayout
+        android:id="@+id/ll_become_dynasty_flyer_ask"
+        android:layout_width="340px"
+        android:layout_height="55px"
+        android:layout_marginBottom="64.3px"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_become_dynasty_flyer_cancel"
+            android:layout_width="150px"
+            android:layout_height="40px"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/bg_btn_blue_selector"
+            android:text="@string/become_a_dynasty_flyer_not_now"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            android:textAllCaps="false"
+            style="@style/regular"/>
+
+        <Button
+            android:id="@+id/btn_become_dynasty_flyer_ok"
+            android:layout_width="150px"
+            android:layout_height="40px"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/bg_btn_pink_agree_selector"
+            android:text="@string/become_a_dynasty_flyer_sign_up"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            android:textAllCaps="false"
+            style="@style/regular"/>
+
+
+    </LinearLayout>
+    <!-- 加入會員按鈕 -->
+
+    <Button
+        android:id="@+id/btn_become_dynasty_flyer_sign_up"
+        android:layout_width="320px"
+        android:layout_height="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="79.3px"
+        android:layout_centerHorizontal="true"
+        android:minHeight="0px"
+        android:minWidth="0px"
+        android:background="@drawable/bg_btn_pink_agree_selector"
+        android:text="@string/become_a_dynasty_flyer_sign_up"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        android:textAllCaps="false"
+        style="@style/regular"/>
+
+    <!--底部-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/become_a_dynasty_flyer_already_have_account"
+            android:textColor="@color/white_four"
+            android:alpha="0.8"
+            android:textSize="16px"
+            style="@style/light"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:text="@string/member_login_log_in"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            android:minHeight="0px"
+            android:minWidth="0px"
+            android:layout_marginLeft="10px"
+            android:textAllCaps="false"
+            style="@style/regular"/>
+
+        <ImageButton
+            android:id="@+id/ibtn_login"
+            android:layout_width="16px"
+            android:layout_height="16px"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/btn_signup"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:src="@drawable/ic_arrow"
+            android:scaleType="fitXY" />
+
+    </LinearLayout>
+</RelativeLayout>

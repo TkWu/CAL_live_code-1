@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true"></ci.ui.view.NavigationBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_nomal_meal"
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:clickable="true">
+
+                <View
+                    android:id="@+id/v_nomal_meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black_20" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Normal Meal"
+                    android:textColor="@color/white_four"
+                    android:textSize="18px"
+                    style="@style/regular" />
+
+                <ImageView
+                    android:id="@+id/iv_normal_meal"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20px"
+                    android:src="@drawable/ic_done"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Vegetarian Meal"
+                    android:textColor="@color/white_four"
+                    android:textSize="16px"
+                    style="@style/regular" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_Vegetarian_Oriental_Meal"
+                android:layout_width="match_parent"
+                android:layout_height="106.7px"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:clickable="true">
+
+                <View
+                    android:id="@+id/v_Vegetarian_Oriental_Meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black_20" />
+
+                <TextView
+                    android:id="@+id/tv_Vegetarian_Oriental_Meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginTop="16.7px"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Vegetarian Oriental Meal"
+                    android:textColor="@color/white_four"
+                    android:textSize="18px"
+                    style="@style/regular" />
+
+                <TextView
+                    android:id="@+id/tv_Vegetarian_Oriental_Meal_mutil_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Vegetarian_Oriental_Meal"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginTop="4px"
+                    android:alpha="0.7"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="0.2px"
+                    android:text="Oriental style vegetarian, exclude egg and dairy products. Prohibit to ginger, garlic, onion."
+                    android:textColor="@color/white_four"
+                    android:textSize="13px"
+                    style="@style/regular" />
+
+                <ImageView
+                    android:id="@+id/iv_Vegetarian_Oriental_Meal"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20px"
+                    android:src="@drawable/ic_done"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.7px"
+                android:alpha="0.15"
+                android:background="@color/white_four" />
+
+            <RelativeLayout
+                android:id="@+id/rl_Vegetarian_Lacto_Ovo_Meal"
+                android:layout_width="match_parent"
+                android:layout_height="106.7px"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:clickable="true">
+
+                <View
+                    android:id="@+id/v_Vegetarian_Lacto_Ovo_Meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black_20" />
+
+                <TextView
+                    android:id="@+id/tv_Vegetarian_Lacto_Ovo_Meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginTop="16.7px"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Vegetarian Lacto-Ovo Meal"
+                    android:textColor="@color/white_four"
+                    android:textSize="18px"
+                    style="@style/regular" />
+
+                <TextView
+                    android:id="@+id/tv_Vegetarian_Lacto_Ovo_Meal_mutil_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Vegetarian_Lacto_Ovo_Meal"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginTop="4px"
+                    android:alpha="0.7"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="0.2px"
+                    android:text="Western vegetarian style with dairy and egg product."
+                    android:textColor="@color/white_four"
+                    android:textSize="13px"
+                    style="@style/regular" />
+
+                <ImageView
+                    android:id="@+id/iv_Vegetarian_Lacto_Ovo_Meal"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20px"
+                    android:src="@drawable/ic_done"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.7px"
+                android:alpha="0.15"
+                android:background="@color/white_four" />
+
+            <RelativeLayout
+                android:id="@+id/rl_Vegetarian_Vegan_Meal"
+                android:layout_width="match_parent"
+                android:layout_height="106.7px"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:clickable="true">
+
+                <View
+                    android:id="@+id/v_Vegetarian_Vegan_Meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black_20" />
+
+                <TextView
+                    android:id="@+id/tv_Vegetarian_Vegan_Meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginTop="16.7px"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Vegetarian Vegan Meal"
+                    android:textColor="@color/white_four"
+                    android:textSize="18px"
+                    style="@style/regular" />
+
+                <TextView
+                    android:id="@+id/tv_Vegetarian_Vegan_Meal_mutil_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Vegetarian_Vegan_Meal"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginTop="4px"
+                    android:alpha="0.7"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="0.2px"
+                    android:text="Strict western vegetarian meal exclude dairy and egg product."
+                    android:textColor="@color/white_four"
+                    android:textSize="13px"
+                    style="@style/regular" />
+
+                <ImageView
+                    android:id="@+id/iv_Vegetarian_Vegan_Meal"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20px"
+                    android:src="@drawable/ic_done"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32px"
+                android:background="@color/black_30"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Religious Meal"
+                    android:textColor="@color/white_four"
+                    android:textSize="16px"
+                    style="@style/regular" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_Vegetarian_Oriental_Meal2"
+                android:layout_width="match_parent"
+                android:layout_height="106.7px"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:clickable="true">
+
+                <View
+                    android:id="@+id/v_Vegetarian_Oriental_Meal2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black_20" />
+
+                <TextView
+                    android:id="@+id/tv_Vegetarian_Oriental_Meal2"
+                    android:layout_width="match_parent"
+                    android:layout_height="22.7px"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginTop="16.7px"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Vegetarian Oriental Meal"
+                    android:textColor="@color/white_four"
+                    android:textSize="18px"
+                    style="@style/regular" />
+
+                <TextView
+                    android:id="@+id/tv_Vegetarian_Oriental_Meal2_mutil_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Vegetarian_Oriental_Meal2"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginTop="4px"
+                    android:alpha="0.7"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="0.2px"
+                    android:text="Oriental style vegetarian, exclude egg and dairy products. Prohibit to ginger, garlic, onion."
+                    android:textColor="@color/white_four"
+                    android:textSize="13px"
+                    style="@style/regular" />
+
+                <ImageView
+                    android:id="@+id/iv_Vegetarian_Oriental_Meal2"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20px"
+                    android:src="@drawable/ic_done"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

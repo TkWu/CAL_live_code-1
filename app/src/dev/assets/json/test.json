@@ -1,0 +1,34 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": [{"Pax_Info":    [
+    {
+      "First_Name": "JAMISON",
+      "Last_Name": "WU",
+      "Uci": "2401C7C000006325",
+      "Pnr_Id": "YINVAQ",
+      "Itinerary_Info": [         {
+        "Did": "2401C7C00000A86E",
+        "Departure_Station": "TPE",
+        "Arrival_Station": "SYD",
+        "rt_code": "14929",
+        "rt_msg": "DCSSTG_MarkBPAsPrinted:APP authorisation required,",
+        "Step": "Mark BP As Printed"
+      }]
+    },
+    {
+      "First_Name": "TAO",
+      "Last_Name": "Lin",
+      "Uci": "2401C7C100006378",
+      "Pnr_Id": "YIPVE7",
+      "Itinerary_Info": [         {
+        "Did": "2401C7C10000B27E",
+        "Departure_Station": "HKG",
+        "Arrival_Station": "TPE",
+        "rt_code": "14207",
+        "rt_msg": "DCSSTG_MarkBPAsPrinted:Unable as the customer is not accepted.,",
+        "Step": "Mark BP As Printed"
+      }]
+    }
+  ]}]
+}

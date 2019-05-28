@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_seat"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/btn_main_meal_seat_select"
+        android:layout_marginLeft="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seat"
+            android:id="@+id/tv_seat"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white_four"
+            android:textSize="16sp"
+            style="@style/regular" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_seat"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_seat" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_seat_add"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_done" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_meal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/btn_main_meal_seat_unselect"
+        android:layout_marginRight="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/meal"
+            android:id="@+id/tv_meal"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white_four"
+            android:textSize="16sp"
+            style="@style/regular" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_meal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_meal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_meal_add"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_add"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

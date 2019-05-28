@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <View
+        android:id="@+id/vline"
+        android:layout_width="match_parent"
+        android:layout_height="1.4dp"
+        android:layout_centerVertical="true"
+        android:alpha="0.6"
+        android:background="@drawable/bg_sidemenu_group_line"></View>
+
+    <LinearLayout
+        android:id="@+id/rlayout_bg_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        >
+        <TableLayout
+            android:id="@+id/rlayout_icon_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="90dp"
+            android:paddingTop="15dp"
+            >
+        </TableLayout>
+    </LinearLayout>
+</LinearLayout>

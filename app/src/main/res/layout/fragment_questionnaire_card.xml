@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10px"
+    android:paddingRight="10px"
+    android:paddingTop="40px"
+    android:paddingBottom="72px">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_questionnaire_head_radius">
+        <!-- 問卷調查抬頭 -->
+        <TextView
+            android:id="@+id/question_title"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18px"
+            android:layout_marginBottom="19.3px"
+            android:textSize="20px"
+            style="@style/regular"
+            android:textColor="@color/black_one"
+            android:gravity="center_horizontal"
+            android:text="How was your experience?"/>
+
+        <!-- 問卷題目內容 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_below="@+id/question_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_send"/>
+
+        <!-- 陰影 -->
+        <View
+            android:id="@+id/vGradient"
+            android:layout_width="match_parent"
+            android:layout_height="16px"
+            android:background="@drawable/bg_listview_bottom_gradient"
+            android:layout_above="@+id/rl_send" />
+
+        <!-- 提交問卷題目按鈕 -->
+        <RelativeLayout
+            android:id="@+id/rl_send"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="300px"
+                android:layout_height="40px"
+                android:layout_centerInParent="true"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                style="@style/regular"
+                android:background="@drawable/bg_btn_pinkish_red_selector"
+                android:text="@string/inquiry_input_box_send"/>
+            
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ll_flight_data"
+        android:layout_width="match_parent"
+        android:layout_height="45.7px"
+        android:background="@drawable/bg_manage_miles_head_radius"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_departure"
+            style="@style/regular"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="DEP"
+            android:textColor="@color/black_two"
+            android:textSize="18px" />
+        
+        <ImageView
+            android:id="@+id/iv_flight"
+            android:layout_width="21.3px"
+            android:layout_height="21.3px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_flight_from_to_2"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/tv_arrival"
+            style="@style/regular"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="ARR"
+            android:textColor="@color/black_two"
+            android:textSize="18px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="49px"
+        android:layout_below="@+id/ll_flight_data"
+        android:background="@drawable/bg_manage_miles_body_radius"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_list_data"
+            android:layout_width="match_parent"
+            android:layout_height="49px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
+
+            <TextView
+                android:id="@+id/tv_key"
+                style="@style/light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical|left"
+                android:text="@string/trip_detail_passenger_bag_pay_total"
+                android:textColor="@color/brownish_grey"
+                android:textSize="16px"/>
+
+            <TextView
+                android:id="@+id/tv_value"
+                style="@style/light"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical|right"
+                android:text="TWD 8,888"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/black_one"
+                android:textSize="18px"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

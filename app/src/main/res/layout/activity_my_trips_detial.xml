@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baby_blue"
+    android:fitsSystemWindows="true">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true">
+    </ci.ui.view.NavigationBar>
+
+    <ImageView
+        android:id="@+id/img_bg_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:src="@drawable/bg_map"
+        android:scaleType="fitXY"/>
+
+    <FrameLayout
+        android:id="@+id/fl_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"/>
+
+    <Button
+        android:id="@+id/btn_track"
+        android:layout_width="72px"
+        android:layout_height="32px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16px"
+        android:layout_marginTop="13.7px"
+        android:background="@drawable/bg_btn_trip_track_selector"
+        android:text="@string/trip_detail_home_page_trip_track"
+        android:textSize="13px"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/white_four"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:src="@drawable/bg_drakish_blue_gradient"
+        android:scaleType="fitXY"
+        android:layout_below="@id/toolbar"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:tabIndicatorColor="@android:color/white"
+        android:layout_below="@+id/toolbar"
+        app:tabMaxWidth="0dp"
+        style="@style/MyCustomTabLayout"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_below="@+id/tabLayout"
+        android:paddingTop="23.5px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:splitMotionEvents="false"/>
+
+
+</RelativeLayout>

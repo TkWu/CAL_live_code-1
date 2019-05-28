@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlayout_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_002_left"
+    tools:context="ci.function.Main.LeftDrawerFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_sidemenu_left"/>
+
+    <View
+        android:id="@+id/vline"
+        android:layout_width="0.3dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white_30" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true">
+
+    </ViewFlipper>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_logout"
+        android:layout_below="@+id/viewFlipper"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+        android:childDivider="@null"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:fastScrollAlwaysVisible="false"
+        android:footerDividersEnabled="false"
+        android:groupIndicator="@null"
+        android:listSelector="@color/transparent"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="140dp"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_sidemenu_btn_selector"
+        android:gravity="center_vertical|center_horizontal"
+        android:singleLine="true"
+        android:text="@string/menu_log_out"
+        android:textAllCaps="false"
+        android:textColor="@color/white_four"
+        style="@style/light"/>
+
+    <ViewAnimator
+        android:id="@+id/viewAnimator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btn_logout" />
+</RelativeLayout>

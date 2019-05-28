@@ -1,0 +1,142 @@
+[
+    {
+      "meal_name": "一般餐",
+      "meal_code": "",
+      "meal_name_e": "Normal Meal",
+      "meal_name_cn": "一般餐",
+      "meal_name_jp": "ノーマルミール(通常食）"
+    },
+    {
+      "meal_name": "東方素食餐",
+      "meal_code": "VOML",
+      "meal_name_e": "Vegetarian Oriental Meal",
+      "meal_name_cn": "東方素食餐",
+      "meal_name_jp": "東洋式菜食"
+    },
+    {
+      "meal_name": "西式乳蛋類素食餐",
+      "meal_code": "VLML",
+      "meal_name_e": "Vegetarian Lacto-Ovo Meal",
+      "meal_name_cn": "西式乳蛋类素食餐",
+      "meal_name_jp": "乳製品・卵可の菜食"
+    },
+    {
+      "meal_name": "嚴格西式素食餐",
+      "meal_code": "VGML",
+      "meal_name_e": "Vegetarian Vegan Meal",
+      "meal_name_cn": "严格西式素食餐",
+      "meal_name_jp": "純粋菜食"
+    },
+    {
+      "meal_name": "印度素食",
+      "meal_code": "AVML",
+      "meal_name_e": "Vegetarian Indian Meal",
+      "meal_name_cn": "印度素食",
+      "meal_name_jp": "インド式菜食"
+    },
+    {
+      "meal_name": "嚴格印度素食餐",
+      "meal_code": "VJML",
+      "meal_name_e": "Vegetarian Jain Meal",
+      "meal_name_cn": "严格印度素食餐",
+      "meal_name_jp": "厳格なインド式菜食・ジャイナ式菜食"
+    },
+    {
+      "meal_name": "水果餐",
+      "meal_code": "FPML",
+      "meal_name_e": "Western",
+      "meal_name_cn": "水果餐",
+      "meal_name_jp": "フルーツミール"
+    },
+    {
+      "meal_name": "生菜水果餐",
+      "meal_code": "RVML",
+      "meal_name_e": "Vegetarian Raw Meal",
+      "meal_name_cn": "生菜水果餐",
+      "meal_name_jp": "生菜食"
+    },
+    {
+      "meal_name": "印度餐",
+      "meal_code": "HNML",
+      "meal_name_e": "Hindu Meal",
+      "meal_name_cn": "印度餐",
+      "meal_name_jp": "ヒンズー教徒食"
+    },
+    {
+      "meal_name": "猶太餐",
+      "meal_code": "KSML",
+      "meal_name_e": "Kosher Meal",
+      "meal_name_cn": "犹太餐",
+      "meal_name_jp": "ユダヤ教徒食"
+    },
+    {
+      "meal_name": "回教餐",
+      "meal_code": "MOML",
+      "meal_name_e": "Moslem Meal",
+      "meal_name_cn": "回教餐",
+      "meal_name_jp": "イスラム教徒食"
+    },
+    {
+      "meal_name": "嬰兒餐",
+      "meal_code": "BBML",
+      "meal_name_e": "Baby Food",
+      "meal_name_cn": "婴儿餐",
+      "meal_name_jp": "ベビーフード"
+    },
+    {
+      "meal_name": "兒童餐",
+      "meal_code": "CHML",
+      "meal_name_e": "Children Meal",
+      "meal_name_cn": "儿童餐",
+      "meal_name_jp": "チャイルドミール"
+    },
+    {
+      "meal_name": "無刺激性餐",
+      "meal_code": "BLML",
+      "meal_name_e": "Bland Meal",
+      "meal_name_cn": "无刺激性餐",
+      "meal_name_jp": "低刺激食"
+    },
+    {
+      "meal_name": "糖尿病餐",
+      "meal_code": "DBML",
+      "meal_name_e": "Diabetic Meal",
+      "meal_name_cn": "糖尿病餐",
+      "meal_name_jp": "糖尿病患者食"
+    },
+    {
+      "meal_name": "無麵筋飲食",
+      "meal_code": "GFML",
+      "meal_name_e": "Gluten Intolerant Meal",
+      "meal_name_cn": "无面筋饮食",
+      "meal_name_jp": "グルテンなしのお食事"
+    },
+    {
+      "meal_name": "低卡路里餐",
+      "meal_code": "LCML",
+      "meal_name_e": "Low Calorie Meal",
+      "meal_name_cn": "低卡路里餐",
+      "meal_name_jp": "低カロリーのお食事"
+    },
+    {
+      "meal_name": "低脂/膽固醇餐",
+      "meal_code": "LFML",
+      "meal_name_e": "Low Fat/low cholesterol Meal",
+      "meal_name_cn": "低脂/胆固醇餐",
+      "meal_name_jp": "低脂肪/低コレステロールのお食事"
+    },
+    {
+      "meal_name": "低鹽餐",
+      "meal_code": "LSML",
+      "meal_name_e": "Low Salt Meal",
+      "meal_name_cn": "低盐餐",
+      "meal_name_jp": "塩分を抑えたお食事"
+    },
+    {
+      "meal_name": "低乳糖餐",
+      "meal_code": "NLML",
+      "meal_name_e": "Low Lactose Meal",
+      "meal_name_cn": "低乳糖餐",
+      "meal_name_jp": "低ラクトース食"
+    }
+]

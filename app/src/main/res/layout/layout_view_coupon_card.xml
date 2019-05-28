@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="203.7px"
+        android:layout_marginTop="3px"
+        android:background="@drawable/bg_boardimg_pass_head_radius">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_hole"
+        android:layout_width="match_parent"
+        android:layout_height="12px"
+        android:layout_below="@+id/rl_head"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_card_hole_" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_hole"
+        android:layout_alignBottom="@+id/ll_msg"
+        android:background="@drawable/bg_boardimg_pass_body_radius">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0px"
+        android:scaleType="fitXY"
+        android:src="@drawable/promotions_img_test" />
+
+    <RelativeLayout
+        android:id="@+id/rl_discount"
+        android:layout_width="196.7px"
+        android:layout_height="34px"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="106px"
+        android:background="@drawable/img_coupon_tag">
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6px"
+            android:layout_marginLeft="23.7px"
+            android:layout_marginTop="12.3px"
+            android:text="@string/discount"
+            android:textColor="@color/white_four"
+            android:textSize="13px"
+            style="@style/light" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            style="@style/bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5px"
+            android:layout_toLeftOf="@+id/tv_off"
+            android:text="10%"
+            android:textColor="@color/white_four"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_off"
+            style="@style/bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="12.3px"
+            android:layout_marginBottom="6px"
+            android:layout_marginRight="10px"
+            android:text="OFF"
+            android:textColor="@color/white_four"
+            android:textSize="13px" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150px"
+        android:text="Duty Free Goods Discount , Free"
+        android:textColor="@color/black_one"
+        android:textSize="20px"
+        style="@style/regular" />
+
+    <LinearLayout
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="182.6px"
+            android:text="@string/valid_date"
+            android:textColor="@color/grey_four"
+            android:textSize="13px"
+            style="@style/light" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:layout_marginTop="182.6px"
+            android:text="2015/10/13, CI65"
+            android:textColor="@color/grey_four"
+            android:textSize="13px"
+            style="@style/light" />
+    </LinearLayout>
+
+    <ci.ui.view.DashedLine
+        android:id="@+id/dl_top"
+        android:layout_width="327px"
+        android:layout_height="1px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="211.5px"
+        app:dl_color="@color/warm_grey" />
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dl_top"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="10px">
+
+        <LinearLayout
+            android:id="@+id/ll_flight"
+            android:layout_width="300px"
+            android:layout_height="60px"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_flight_no"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/trips_detail_flight_number"
+                android:textColor="@color/grey_four"
+                android:textSize="16px"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_flight_no_data"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:text="CI 116"
+                android:textColor="@color/black_one"
+                android:textSize="16px"
+                style="@style/light" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="300px"
+            android:layout_height="1px"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0.4"
+            android:background="@color/warm_grey_50"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_barcode"
+            android:layout_width="300px"
+            android:layout_height="96px"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_barcode"
+                android:layout_width="270px"
+                android:layout_height="56px"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_sidemenu_btn_check" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ci.ui.view.DashedLine
+        android:id="@+id/dl_bottom"
+        android:layout_width="340px"
+        android:layout_height="1px"
+        android:layout_below="@+id/ll_list"
+        android:layout_centerHorizontal="true"
+        app:dl_color="@color/warm_grey" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dl_bottom"
+        android:minHeight="65px"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enjoy_discount"
+            android:textColor="@color/black_one"
+            android:textSize="16px"
+            style="@style/regular" />
+
+        <TextView
+            android:id="@+id/tv_excludeditem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7px"
+            android:textColor="@color/black_one"
+            android:textSize="16px"
+            style="@style/regular" />
+
+    </LinearLayout>
+
+</RelativeLayout>

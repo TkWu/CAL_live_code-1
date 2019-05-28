@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_world_map"
+    android:fitsSystemWindows="true">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/put_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/fl_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px" />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/llayout_date"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/fl_select"-->
+        <!--android:layout_marginTop="12px"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<View-->
+            <!--android:layout_width="33.3px"-->
+            <!--android:layout_height="0.7px"-->
+            <!--android:background="@color/white_four" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_depart_date"-->
+            <!--android:layout_width="206px"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:shadowColor="#4d00062c"-->
+            <!--android:shadowRadius="3"-->
+            <!--android:textColor="@color/white_four"-->
+            <!--android:textSize="16px" />-->
+
+        <!--<View-->
+            <!--android:layout_width="33.3px"-->
+            <!--android:layout_height="0.7px"-->
+            <!--android:background="@color/white_four" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_select"
+        android:paddingTop="12px"/>
+</RelativeLayout>

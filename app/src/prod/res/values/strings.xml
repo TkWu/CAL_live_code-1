@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name" translatable="false">中華航空</string>
+    <!--正是環境的Key-->
+    <!--<string name="facebook_app_id" translatable="false">529300217243701</string>-->
+    <string name="facebook_app_id" translatable="false">626397757519549</string>
+    <string name="youtube_api_key" translatable="false">AIzaSyAGg96COck7hN6JSdX-1C3Xeguqmc7bHUg</string>
+
+    <!--短網址的API Key-->
+    <string name="google_urlshortener_api_key" translatable="false">AIzaSyCijTKrvuBFMg4MIuoGvc3sRCwHO9g3tmA</string>
+
+    <!-- 行程管理、timeTable 上方地圖 使用的key -->
+    <string name="google_map_api_key" translatable="false">AIzaSyA8bgpyq886DQWxH4qcYd5AcwIRyiBnffM</string>
+
+    <!--Prodution 使用有domain的網址-->
+    <!-- BOOKTICKET_WS_URL -->
+    <!--<string name="bookticket_ws_url" translatable="false">https://202.165.148.153/eRetailPortal/Mobile.svc/Mobile/Search</string>-->
+    <string name="bookticket_ws_url" translatable="false">https://bookingportal.china-airlines.com/eRetailPortal/Mobile.svc/Mobile/Search</string>
+
+    <string name="scheme" translatable="false">calmobile30</string>
+    <string name="scheme_eshopping" translatable="false">caleshopping</string>
+
+    <string name="eshopping_packagename" translatable="false">com.chinaairlines.caleshopping</string>
+    <string name="exquisitetravel_packagename" translatable="false">tw.com.mook.exquisitetravel</string>
+
+    <!--20190227 高層要的小圖示-->
+    <string name="facebook_packagename" translatable="false">com.facebook.katana</string>
+    <string name="facebook_deeplink_global"  translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/chinaairlines.travelchannel</string>
+    <string name="facebook_deeplink_US"  translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/ChinaAirlinesUS</string>
+    <string name="facebook_deeplink_JP"  translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/ChinaAirlinesJapan</string>
+    <string name="facebook_fanpage_global" translatable="false">https://www.facebook.com/chinaairlines.travelchannel/</string>
+    <string name="facebook_fanpage_US" translatable="false">https://www.facebook.com/ChinaAirlinesUS/</string>
+    <string name="facebook_fanpage_JP" translatable="false">https://www.facebook.com/ChinaAirlinesJapan/</string>
+
+    <string name="wechat_packagename" translatable="false">com.tencent.mm</string>
+    <string name="wechat_fanpage_global" translatable="false">http://weixin.qq.com/r/5Uy4oKHEEPxvreXD9xn3</string>
+
+    <string name="weibo_packagename" translatable="false">com.sina.weibo</string>
+    <string name="weibo_deeplink_global" translatable="false">sinaweibo://userinfo?uid=3658998552</string>
+    <string name="weibo_fanpage_global" translatable="false">http://www.weibo.com/u/3658998552</string>
+
+    <string name="youtube_packagename" translatable="false">com.google.android.youtube</string>
+    <string name="youtube_deeplink_global" translatable="false">https://www.youtube.com/watch?v=eCwrPB4xR1A</string>
+    <string name="youtube_fanpage_global" translatable="false">https://www.youtube.com/user/TheCHINAAIRLINES</string>
+
+    <!--只有日文有-->
+    <string name="twitter_packagename" translatable="false">com.twitter.android</string>
+    <string name="twitter_deeplink_JP" translatable="false">twitter://user?screen_name=ChinaairlinesJP</string>
+    <string name="twitter_fanpage_JP" translatable="false">https://twitter.com/ChinaairlinesJP</string>
+
+    <string name="instagram_packagename" translatable="false">com.instagram.android</string>
+    <string name="instagram_deeplink_global" translatable="false">https://www.instagram.com/_u/chinaairlines.tw/</string>
+    <string name="instagram_deeplink_JP" translatable="false">https://www.instagram.com/_u/chinaairlines.jp/</string>
+    <string name="instagram_deeplink_US" translatable="false">https://www.instagram.com/_u/chinaairlines.usa/</string>
+    <string name="instagram_fanpage_global" translatable="false">https://www.instagram.com/chinaairlines.tw/</string>
+    <string name="instagram_fanpage_JP" translatable="false">https://www.instagram.com/chinaairlines.jp/</string>
+    <string name="instagram_fanpage_US" translatable="false">https://www.instagram.com/chinaairlines.usa/</string>
+
+    <!-- AI_SERVICE_WS_URL -->
+    <string name="ai_service_ws_url" translatable="false">https://calaics01t.china-airlines.com/chatindex.aspx</string>
+
+</resources>

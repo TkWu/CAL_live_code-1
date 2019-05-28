@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:id="@+id/flight_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10px"
+        android:layout_marginTop="21px"
+        android:layout_marginBottom="20.3px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:background="@drawable/bg_select_date_radius3_white"
+        android:layout_below="@+id/toolbar">
+        <TextView
+            android:id="@+id/title_text_left"
+            android:layout_width="100px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="15.8px"
+            android:layout_marginLeft="20px"
+            android:textColor="@color/black_one"
+            android:textSize="24px"
+            android:ellipsize="end"
+            android:singleLine="true" />
+        <TextView
+            android:id="@+id/title_name_left"
+            android:layout_width="130px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_text_left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="4px"
+            android:layout_marginLeft="20px"
+            android:textColor="@color/black_two"
+            android:textSize="14.7px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:password="false" />
+        <ImageView
+            android:id="@+id/title_flight_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21.8px"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_flight_from_to"/>
+        <TextView
+            android:id="@+id/title_text_right"
+            android:layout_width="100px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15.8px"
+            android:layout_marginRight="20px"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black_one"
+            android:textSize="24px"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="right" />
+        <TextView
+            android:id="@+id/title_name_right"
+            android:layout_width="130px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:layout_marginRight="20px"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/title_text_right"
+            android:textColor="@color/black_two"
+            android:textSize="14.7px"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="right" />
+        <View
+            android:id="@+id/vline_title"
+            android:layout_width="match_parent"
+            android:layout_height="0.3px"
+            android:layout_below="@+id/title_name_left"
+            android:layout_marginTop="16px"
+            android:background="@color/black_30"/>
+        <TextView
+            android:id="@+id/title_date_left"
+            android:layout_width="140px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.2px"
+            android:layout_marginLeft="20px"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/vline_title"
+            android:textColor="@color/french_blue"
+            android:textSize="16px"
+            android:ellipsize="end"
+            android:singleLine="true" />
+        <TextView
+            android:id="@+id/title_date_right"
+            android:layout_width="140px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.2px"
+            android:layout_marginRight="20px"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/vline_title"
+            android:textColor="@color/french_blue"
+            android:textSize="16px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="right" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:layout_marginBottom="20px"
+        android:layout_below="@id/flight_select"
+        android:background="@drawable/bg_choose_search_data"/>
+
+</RelativeLayout>

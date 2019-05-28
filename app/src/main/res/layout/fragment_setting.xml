@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ci.function.HomePage.CIHomeFragment"
+    android:background="@drawable/bg_login"
+    android:id="@+id/flayout_root"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_language"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_transparent_press_black20">
+
+        <LinearLayout
+            android:id="@+id/llayout_language"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toStartOf="@+id/img_arrow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/language_setting"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/tv_language_title"
+                android:textColor="#ffffff"
+                style="@style/regular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/tv_language"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/white_four"
+                android:alpha="0.8"
+                style="@style/regular" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_list_arrow"
+            android:background="@color/transparent"
+            android:layout_marginRight="20dp" />
+
+        <View
+            android:id="@+id/vline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_four"
+            android:alpha="0.3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlayout_notification"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:id="@+id/llayout_notify"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toStartOf="@+id/switch1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/flight_notification"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/tv_notification_title"
+                android:textColor="#ffffff"
+                style="@style/regular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/tv_notification"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/white_four"
+                android:alpha="0.8"
+                style="@style/regular" />
+        </LinearLayout>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/switch1"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16.3dp"
+            android:layout_gravity="right" />
+
+        <View
+            android:id="@+id/vline_n"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_four"
+            android:alpha="0.3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:gravity="right|bottom"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        style="@style/bold"
+        android:padding="10dp"/>
+</LinearLayout>

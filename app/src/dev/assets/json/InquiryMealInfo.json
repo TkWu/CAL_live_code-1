@@ -1,0 +1,84 @@
+{
+  "rt_code": "000",
+  "rt_msg": "查詢成功。",
+  "rt_data": {
+    "L": {
+      "COMMON": [
+        {
+          "meal_seq": "2",
+          "meal_content_seq": "A",
+          "meal_code": "CLDMCCH001238",
+          "mealtype_code": "L",
+          "mealtype_desc": "午餐",
+          "meal_name": "香炒蒜味明蝦干貝佐蛋炒飯",
+          "is_menu_only": false
+        },
+        {
+          "meal_seq": "2",
+          "meal_content_seq": "B",
+          "meal_code": "CLDMCWS001399",
+          "mealtype_code": "L",
+          "mealtype_desc": "午餐",
+          "meal_name": "燒烤澳洲牛肉佐帕西里洋芋",
+          "is_menu_only": false
+        },
+        {
+          "meal_seq": "2",
+          "meal_content_seq": "C",
+          "meal_code": "CLDMCFU000115",
+          "mealtype_code": "L",
+          "mealtype_desc": "午餐",
+          "meal_name": "香烤茄醬雞胸佐南瓜蓉",
+          "is_menu_only": false
+        }
+      ],
+      "MENU_ONLY": [
+        {
+          "meal_seq": "2",
+          "meal_content_seq": "D",
+          "meal_code": "CLDMCCH0012389",
+          "mealtype_code": "L",
+          "mealtype_desc": "午餐",
+          "meal_name": "大俠愛吃漢堡飽",
+          "is_menu_only": true
+        },
+        {
+          "meal_seq": "2",
+          "meal_content_seq": "E",
+          "meal_code": "CLDMCCH0012340",
+          "mealtype_code": "L",
+          "mealtype_desc": "午餐",
+          "meal_name": "胖胖愛吃頂呱呱",
+          "is_menu_only": true
+        }
+      ]
+    },
+    "D": {
+      "COMMON": [],
+      "MENU_ONLY": []
+    },
+    "B": {
+      "COMMON": [
+        {
+          "meal_seq":"1",
+          "meal_content_seq":"A",
+          "meal_code":"CBFMCCH000285",
+          "mealtype_code":"B",
+          "mealtype_desc":"Breakfast",
+          "meal_name":"Soy braised chicken with straw mushroom fried flat noodles",
+          "is_menu_only":false
+        },
+        {
+          "meal_seq":"1",
+          "meal_content_seq":"B",
+          "meal_code":"CBFMCWS000331",
+          "mealtype_code":"B",
+          "mealtype_desc":"Breakfast",
+          "meal_name":"Mixed bell pepper omelet and chicken sausage with roasted potato cake",
+          "is_menu_only":false
+        }
+      ],
+      "MENU_ONLY": []
+    }
+  }
+}

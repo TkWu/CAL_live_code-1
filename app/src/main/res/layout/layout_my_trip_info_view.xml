@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_head"
+        android:layout_width="match_parent"
+        android:layout_height="19.3dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/transparent">
+
+        <TextView
+            android:id="@+id/tv_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text=" Oct 12, 2015"
+            android:textColor="@color/white_four"
+            android:textSize="16sp"
+            style="@style/regular" />
+
+        <TextView
+            android:id="@+id/tv_goto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/trips_detail_title"
+            android:textColor="@color/white_four"
+            android:textSize="16sp"
+            style="@style/light" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/shadowlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlayout_head"
+        android:layout_centerHorizontal="true">
+
+    <!--<ci.ui.view.ShadowLayout-->
+        <!--android:id="@+id/shadowlayout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/rlayout_head"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--app:sl_cornerRadius="3dp"-->
+        <!--app:sl_dx="0dp"-->
+        <!--app:sl_dy="0dp"-->
+        <!--app:sl_shadowColor="@color/transparent"-->
+        <!--app:sl_shadowSize="10dp">-->
+
+        <LinearLayout
+            android:id="@+id/llayout_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlayout_head"
+            android:background="@drawable/trip_detail_view_03"
+            android:orientation="vertical"
+            android:splitMotionEvents="false"></LinearLayout>
+    <!--</ci.ui.view.ShadowLayout>-->
+    </FrameLayout>
+
+</RelativeLayout>

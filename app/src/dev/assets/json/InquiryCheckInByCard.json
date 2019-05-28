@@ -1,0 +1,66 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "pax_info": [
+      {
+        "First_Name": "YIFAN",
+        "Last_Name": "CHANG",
+        "Uci": "200297BE00079BE6",
+        "Pnr_Id": "22IYRR",
+        "Itinerary_Info": [
+          {
+            "Segment_Number": "1",
+            "Departure_Date": "2016-06-22",
+            "Departure_Time": "14:40",
+            "Departure_Station": "TPE",
+            "Departure_Station_Name": "台北(桃園)",
+            "Arrival_Date": "2016-06-22",
+            "Arrival_Time": "18:55",
+            "Arrival_Station": "NRT",
+            "Arrival_Station_Name": "東京(成田)",
+            "Airlines": "CI",
+            "Airlines_Name": "中華航空公司",
+            "Flight_Number": "18",
+            "Did": "2002D7BE004560D0",
+            "Is_Black": "N",
+            "Is_Check_In": "Y",
+            "Is_Do_Check_In": "Y",
+            "Boarding_Pass": "M1CHANG/YIFAN         E22IYRR TPENRTCI 0018 174Y008A0001 18A>518                        2A2971721240072                         20K ",
+            "Seat_Number": "008A",
+            "Boarding_Gate": "4D",
+            "Boarding_Date": "2016-06-22",
+            "Boarding_Time": "14:00",
+            "Check_In_Counter": null,
+            "Oids": []
+          },
+          {
+            "Segment_Number": "2",
+            "Departure_Date": "2016-06-27",
+            "Departure_Time": "21:20",
+            "Departure_Station": "NRT",
+            "Departure_Station_Name": "東京(成田)",
+            "Arrival_Date": "2016-06-28",
+            "Arrival_Time": "0:05",
+            "Arrival_Station": "TPE",
+            "Arrival_Station_Name": "台北(桃園)",
+            "Airlines": "CI",
+            "Airlines_Name": "中華航空公司",
+            "Flight_Number": "109",
+            "Did": "2002D7BE004560D2",
+            "Is_Black": "N",
+            "Is_Check_In": "N",
+            "Is_Do_Check_In": "N",
+            "Boarding_Pass": "M1CHANG/YIFAN         E22IYRR NRTTPECI 0109 179Y00000000 18A>518                        2A2971721240072                             ",
+            "Seat_Number": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Check_In_Counter": null,
+            "Oids": []
+          }
+        ]
+      }
+    ]
+  }
+}

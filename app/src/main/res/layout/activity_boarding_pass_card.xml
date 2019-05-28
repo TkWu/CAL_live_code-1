@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_60">
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_pagecontrol"
+        android:layout_width="match_parent"
+        android:layout_height="6px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24px"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:id="@+id/llayout_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_doc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shape_pagecontrol" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_flip"
+        android:layout_width="26.7px"
+        android:layout_height="26.7px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9.3px"
+        android:layout_marginEnd="18px"
+        android:src="@drawable/ic_boardingpass_flip"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:id="@+id/ll_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40px"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ibtn_close"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16px"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_btn_about_delete_onclick" />
+
+    <!--644336 2019 2月3月 截圖-->
+    <ImageButton
+        android:id="@+id/ibtn_screenshot"
+        android:layout_width="26.7px"
+        android:layout_height="26.7px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16px"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_screenshot_w"
+        android:visibility="visible"/>
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_flight_date"
+        style="@style/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- -"
+        android:textColor="#656565"
+        android:textSize="13.5px"/>
+
+    <TextView
+        android:id="@+id/tv_trip_goto"
+        style="@style/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="- -"
+        android:textColor="#656565"
+        android:textSize="13.5px"/>
+
+</RelativeLayout>

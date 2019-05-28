@@ -1,0 +1,3617 @@
+{
+  "rt_code": "000",
+  "rt_msg": "",
+  "rt_data": {
+    "result_count": 87,
+    "station_list": [
+      {
+        "depature": {
+          "station_code": "TPE",
+          "station_desc": "台北(桃園)",
+          "continent": "ASIA",
+          "area": "臺灣",
+          "country": "台灣",
+          "city": "TAIPEI",
+          "longitude": 121.2322222222,
+          "latitude": 25.0802777778
+        },
+        "arrival": [
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "CAN",
+            "station_desc": "廣州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "GUANGZHOU",
+            "longitude": 113.3066666667,
+            "latitude": 23.39
+          },
+          {
+            "station_code": "CGO",
+            "station_desc": "鄭州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "ZHENGZHOU",
+            "longitude": 113.8416666667,
+            "latitude": 34.5183333333
+          },
+          {
+            "station_code": "CGQ",
+            "station_desc": "長春",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "CHANGCHUN",
+            "longitude": 125.6883333333,
+            "latitude": 43.9983333333
+          },
+          {
+            "station_code": "CSX",
+            "station_desc": "長沙",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "CHANGSHA",
+            "longitude": 113.22,
+            "latitude": 28.1891666667
+          },
+          {
+            "station_code": "CTU",
+            "station_desc": "成都",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "CHENGDU",
+            "longitude": 103.9483333333,
+            "latitude": 30.58
+          },
+          {
+            "station_code": "DLC",
+            "station_desc": "大連",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "DALIAN",
+            "longitude": 121.53,
+            "latitude": 38.96
+          },
+          {
+            "station_code": "HAK",
+            "station_desc": "海口",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "HAIKOU",
+            "longitude": 110.4566666667,
+            "latitude": 19.9333333333
+          },
+          {
+            "station_code": "HFE",
+            "station_desc": "合肥",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "HEFEI",
+            "longitude": 117.3,
+            "latitude": 31.7833333333
+          },
+          {
+            "station_code": "HKG",
+            "station_desc": "香港",
+            "continent": "ASIA",
+            "area": "大陸及香港",
+            "country": "香港",
+            "city": "HONG KONG",
+            "longitude": 113.9147222222,
+            "latitude": 22.3088888889
+          },
+          {
+            "station_code": "KHN",
+            "station_desc": "南昌",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "NANCHANG",
+            "longitude": 115.9,
+            "latitude": 28.865
+          },
+          {
+            "station_code": "NGB",
+            "station_desc": "寧波",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "NINGBO",
+            "longitude": 121.4633333333,
+            "latitude": 29.8233333333
+          },
+          {
+            "station_code": "NKG",
+            "station_desc": "南京",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "NANJING",
+            "longitude": 118.86,
+            "latitude": 31.74
+          },
+          {
+            "station_code": "PEK",
+            "station_desc": "北京",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "BEIJING",
+            "longitude": 116.595,
+            "latitude": 40.0733333333
+          },
+          {
+            "station_code": "PVG",
+            "station_desc": "上海(浦東)",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "SHANGHAI",
+            "longitude": 121.79,
+            "latitude": 31.1416666667
+          },
+          {
+            "station_code": "SHE",
+            "station_desc": "瀋陽",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "SHENYANG",
+            "longitude": 123.485,
+            "latitude": 41.6383333333
+          },
+          {
+            "station_code": "SYX",
+            "station_desc": "三亞",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "SANYA",
+            "longitude": 109.4133333333,
+            "latitude": 18.3016666667
+          },
+          {
+            "station_code": "SZX",
+            "station_desc": "深圳",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "SHENZHEN",
+            "longitude": 113.8116666667,
+            "latitude": 22.6383333333
+          },
+          {
+            "station_code": "TAO",
+            "station_desc": "青島",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "QINGDAO",
+            "longitude": 120.375,
+            "latitude": 36.265
+          },
+          {
+            "station_code": "URC",
+            "station_desc": "烏魯木齊",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "URUMQI",
+            "longitude": 87.4766666667,
+            "latitude": 43.905
+          },
+          {
+            "station_code": "WEH",
+            "station_desc": "威海",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "WEIHAI",
+            "longitude": 122.23,
+            "latitude": 37.1883333333
+          },
+          {
+            "station_code": "WNZ",
+            "station_desc": "溫州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "WENZHOU",
+            "longitude": 120.8516666667,
+            "latitude": 27.9133333333
+          },
+          {
+            "station_code": "WUH",
+            "station_desc": "武漢",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "WUHAN",
+            "longitude": 114.21,
+            "latitude": 30.785
+          },
+          {
+            "station_code": "WUX",
+            "station_desc": "無錫",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "WUXI",
+            "longitude": 120.4294444444,
+            "latitude": 31.4944444444
+          },
+          {
+            "station_code": "XIY",
+            "station_desc": "西安",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "XIANYANG",
+            "longitude": 108.75,
+            "latitude": 34.445
+          },
+          {
+            "station_code": "XMN",
+            "station_desc": "廈門",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "XIAMEN",
+            "longitude": 118.125,
+            "latitude": 24.5433333333
+          },
+          {
+            "station_code": "XUZ",
+            "station_desc": "徐州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "XUZHOU",
+            "longitude": 117.5558333333,
+            "latitude": 34.0591666667
+          },
+          {
+            "station_code": "YNT",
+            "station_desc": "煙台",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "YANTAI",
+            "longitude": 121.3716666667,
+            "latitude": 37.4016666667
+          },
+          {
+            "station_code": "YNZ",
+            "station_desc": "鹽城",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "YANCHENG",
+            "longitude": 120.1166666667,
+            "latitude": 33.2333333333
+          },
+          {
+            "station_code": "YTY",
+            "station_desc": "揚州泰州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "YANGZHOU",
+            "longitude": 119.715,
+            "latitude": 32.5616666667
+          },
+          {
+            "station_code": "CTS",
+            "station_desc": "札幌(千歲)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "CHITOSE",
+            "longitude": 141.6925,
+            "latitude": 42.7752777778
+          },
+          {
+            "station_code": "FSZ",
+            "station_desc": "靜岡",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "SHIZUOKA",
+            "longitude": 138.1875,
+            "latitude": 34.7958333333
+          },
+          {
+            "station_code": "FUK",
+            "station_desc": "福岡",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "FUKUOKA",
+            "longitude": 130.4516666667,
+            "latitude": 33.5844444444
+          },
+          {
+            "station_code": "HIJ",
+            "station_desc": "廣島",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "HIROSHIMA",
+            "longitude": 132.9194444444,
+            "latitude": 34.4361111111
+          },
+          {
+            "station_code": "ICN",
+            "station_desc": "首爾(仁川)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "韓國",
+            "city": "SEOUL INCHEON",
+            "longitude": 126.4391666667,
+            "latitude": 37.4625
+          },
+          {
+            "station_code": "ISG",
+            "station_desc": "石垣島(沖？)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "ISHIGAKI",
+            "longitude": 124.1869444444,
+            "latitude": 24.3447222222
+          },
+          {
+            "station_code": "KIX",
+            "station_desc": "大阪",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "OSAKA",
+            "longitude": 135.2327777778,
+            "latitude": 34.4341666667
+          },
+          {
+            "station_code": "KMI",
+            "station_desc": "宮崎",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "MIYAZAKI",
+            "longitude": 131.4486111111,
+            "latitude": 31.8772222222
+          },
+          {
+            "station_code": "KOJ",
+            "station_desc": "鹿兒島",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "KAGOSHIMA",
+            "longitude": 130.7194444444,
+            "latitude": 31.8033333333
+          },
+          {
+            "station_code": "NGO",
+            "station_desc": "名古屋",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "NAGOYA",
+            "longitude": 136.8052777778,
+            "latitude": 34.8583333333
+          },
+          {
+            "station_code": "NRT",
+            "station_desc": "東京(成田)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "TOKYO",
+            "longitude": 140.3863888889,
+            "latitude": 35.7647222222
+          },
+          {
+            "station_code": "NTQ",
+            "station_desc": "輪島(能登)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "WAJIMA",
+            "longitude": 136.9622222222,
+            "latitude": 37.2933333333
+          },
+          {
+            "station_code": "OKA",
+            "station_desc": "沖繩(那霸)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "NAHA",
+            "longitude": 127.6458333333,
+            "latitude": 26.1958333333
+          },
+          {
+            "station_code": "PUS",
+            "station_desc": "釜山",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "韓國",
+            "city": "BUSAN",
+            "longitude": 128.9380555556,
+            "latitude": 35.1805555556
+          },
+          {
+            "station_code": "TAK",
+            "station_desc": "高松",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "TAKAMATSU",
+            "longitude": 134.0155555556,
+            "latitude": 34.2141666667
+          },
+          {
+            "station_code": "TOY",
+            "station_desc": "富山",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "TOYAMA JAPAN",
+            "longitude": 137.1875,
+            "latitude": 36.6483333333
+          },
+          {
+            "station_code": "BKK",
+            "station_desc": "曼谷",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "泰國",
+            "city": "BANGKOK",
+            "longitude": 100.7488888889,
+            "latitude": 13.6858333333
+          },
+          {
+            "station_code": "CGK",
+            "station_desc": "雅加達",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "印尼",
+            "city": "JAKARTA",
+            "longitude": 106.6611111111,
+            "latitude": -6.1236111111
+          },
+          {
+            "station_code": "DEL",
+            "station_desc": "德里",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "印度",
+            "city": "DELHI",
+            "longitude": 77.1122222222,
+            "latitude": 28.5686111111
+          },
+          {
+            "station_code": "DPS",
+            "station_desc": "峇里島",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "印尼",
+            "city": "DENPASAR-BALI ISLAND",
+            "longitude": 115.1691666667,
+            "latitude": -8.7475
+          },
+          {
+            "station_code": "HAN",
+            "station_desc": "河內",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "越南",
+            "city": "HANOI",
+            "longitude": 105.8055555556,
+            "latitude": 21.2216666667
+          },
+          {
+            "station_code": "KLO",
+            "station_desc": "長灘島",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "菲律賓",
+            "city": "KALIBO",
+            "longitude": 122.3763888889,
+            "latitude": 11.6802777778
+          },
+          {
+            "station_code": "KUL",
+            "station_desc": "吉隆坡",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "馬來西亞",
+            "city": "KUALA LUMPUR",
+            "longitude": 101.6980555556,
+            "latitude": 2.7433333333
+          },
+          {
+            "station_code": "MNL",
+            "station_desc": "馬尼拉",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "菲律賓",
+            "city": "MANILA",
+            "longitude": 121.0138888889,
+            "latitude": 14.51
+          },
+          {
+            "station_code": "PEN",
+            "station_desc": "檳城",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "馬來西亞",
+            "city": "PENANG",
+            "longitude": 100.2766666667,
+            "latitude": 5.2972222222
+          },
+          {
+            "station_code": "PNH",
+            "station_desc": "金邊",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "柬埔寨",
+            "city": "PHNOM PENH",
+            "longitude": 104.8416666667,
+            "latitude": 11.5466666667
+          },
+          {
+            "station_code": "RGN",
+            "station_desc": "仰光",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "緬甸",
+            "city": "YANGON",
+            "longitude": 96.1333333333,
+            "latitude": 16.9072222222
+          },
+          {
+            "station_code": "SGN",
+            "station_desc": "胡志明市",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "越南",
+            "city": "HO CHI MINH CITY",
+            "longitude": 106.6608333333,
+            "latitude": 10.8205555556
+          },
+          {
+            "station_code": "SIN",
+            "station_desc": "新加坡",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "新加坡",
+            "city": "SINGAPORE",
+            "longitude": 103.9894444444,
+            "latitude": 1.3591666667
+          },
+          {
+            "station_code": "SUB",
+            "station_desc": "泗水",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "印尼",
+            "city": "SURABAYA",
+            "longitude": 112.7863888889,
+            "latitude": -7.3808333333
+          },
+          {
+            "station_code": "AKL",
+            "station_desc": "奧克蘭",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "紐西蘭",
+            "city": "AUCKLAND",
+            "longitude": 174.7666666667,
+            "latitude": -36.8666666667
+          },
+          {
+            "station_code": "BNE",
+            "station_desc": "布里斯本",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "澳洲",
+            "city": "BRISBANE",
+            "longitude": 153.1175,
+            "latitude": -27.3841666667
+          },
+          {
+            "station_code": "GUM",
+            "station_desc": "關島",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "美國",
+            "city": "GUAM",
+            "longitude": 144.7972222222,
+            "latitude": 13.4838888889
+          },
+          {
+            "station_code": "MEL",
+            "station_desc": "墨爾本",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "澳洲",
+            "city": "MELBOURNE",
+            "longitude": 144.8433333333,
+            "latitude": -37.6733333333
+          },
+          {
+            "station_code": "ROR",
+            "station_desc": "帛琉",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "帛琉",
+            "city": "BABELTHUAP ISLAND",
+            "longitude": 134.5441666667,
+            "latitude": 7.3672222222
+          },
+          {
+            "station_code": "SYD",
+            "station_desc": "雪梨",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "澳洲",
+            "city": "SYDNEY",
+            "longitude": 151.1772222222,
+            "latitude": -33.9461111111
+          },
+          {
+            "station_code": "AMS",
+            "station_desc": "阿姆斯特丹",
+            "continent": "EUROPE",
+            "area": "歐洲",
+            "country": "荷蘭",
+            "city": "AMSTERDAM",
+            "longitude": 4.7641666667,
+            "latitude": 52.3080555556
+          },
+          {
+            "station_code": "FCO",
+            "station_desc": "羅馬",
+            "continent": "EUROPE",
+            "area": "歐洲",
+            "country": "義大利",
+            "city": "ROME",
+            "longitude": 12.2388888889,
+            "latitude": 41.8002777778
+          },
+          {
+            "station_code": "FRA",
+            "station_desc": "法蘭克福",
+            "continent": "EUROPE",
+            "area": "歐洲",
+            "country": "德國",
+            "city": "FRANKFURT",
+            "longitude": 8.5705555556,
+            "latitude": 50.0333333333
+          },
+          {
+            "station_code": "VIE",
+            "station_desc": "維也納",
+            "continent": "EUROPE",
+            "area": "歐洲",
+            "country": "奧地利",
+            "city": "VIENNA",
+            "longitude": 16.5697222222,
+            "latitude": 48.1102777778
+          },
+          {
+            "station_code": "HNL",
+            "station_desc": "夏威夷",
+            "continent": "AMERICA",
+            "area": "美國及加拿大",
+            "country": "美國",
+            "city": "HONOLULU",
+            "longitude": -156.0775,
+            "latitude": 21.3186111111
+          },
+          {
+            "station_code": "JFK",
+            "station_desc": "紐約 (甘迺迪)",
+            "continent": "AMERICA",
+            "area": "美國及加拿大",
+            "country": "美國",
+            "city": "NEW YORK CITY",
+            "longitude": -72.2211111111,
+            "latitude": 40.6397222222
+          },
+          {
+            "station_code": "LAX",
+            "station_desc": "洛杉磯",
+            "continent": "AMERICA",
+            "area": "美國及加拿大",
+            "country": "美國",
+            "city": "LOS ANGELES",
+            "longitude": -117.5927777778,
+            "latitude": 33.9425
+          },
+          {
+            "station_code": "SFO",
+            "station_desc": "舊金山",
+            "continent": "AMERICA",
+            "area": "美國及加拿大",
+            "country": "美國",
+            "city": "SAN FRANCISCO",
+            "longitude": -121.625,
+            "latitude": 37.6188888889
+          },
+          {
+            "station_code": "YVR",
+            "station_desc": "溫哥華",
+            "continent": "AMERICA",
+            "area": "美國及加拿大",
+            "country": "加拿大",
+            "city": "VANCOUVER",
+            "longitude": -122.8155555556,
+            "latitude": 49.1938888889
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "TSA",
+          "station_desc": "台北(松山)",
+          "continent": "ASIA",
+          "area": "臺灣",
+          "country": "台灣",
+          "city": "TAIPEI CITY",
+          "longitude": 121.5525,
+          "latitude": 25.0697222222
+        },
+        "arrival": [
+          {
+            "station_code": "FOC",
+            "station_desc": "福州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "FUZHOU",
+            "longitude": 119.6616666667,
+            "latitude": 25.9333333333
+          },
+          {
+            "station_code": "SHA",
+            "station_desc": "上海(虹橋)",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "SHANGHAI",
+            "longitude": 121.3355555556,
+            "latitude": 31.1977777778
+          },
+          {
+            "station_code": "WNZ",
+            "station_desc": "溫州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "WENZHOU",
+            "longitude": 120.8516666667,
+            "latitude": 27.9133333333
+          },
+          {
+            "station_code": "GMP",
+            "station_desc": "首爾(金浦)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "韓國",
+            "city": "SEOUL",
+            "longitude": 126.7905555556,
+            "latitude": 37.5583333333
+          },
+          {
+            "station_code": "HND",
+            "station_desc": "東京(羽田)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "TOKYO",
+            "longitude": 139.7811111111,
+            "latitude": 35.5533333333
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "KHH",
+          "station_desc": "高雄",
+          "continent": "ASIA",
+          "area": "臺灣",
+          "country": "台灣",
+          "city": "KAOHSIUNG CITY",
+          "longitude": 120.3502777778,
+          "latitude": 22.5769444444
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "CKG",
+            "station_desc": "重慶",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "CHONGQING",
+            "longitude": 106.64,
+            "latitude": 29.7166666667
+          },
+          {
+            "station_code": "CSX",
+            "station_desc": "長沙",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "CHANGSHA",
+            "longitude": 113.22,
+            "latitude": 28.1891666667
+          },
+          {
+            "station_code": "CZX",
+            "station_desc": "常州",
+            "continent": "ASIA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "CHANGZHOU",
+            "longitude": 119.7791666667,
+            "latitude": 31.9222222222
+          },
+          {
+            "station_code": "HGH",
+            "station_desc": "杭州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "HANGZHOU",
+            "longitude": 120.4316666667,
+            "latitude": 30.2283333333
+          },
+          {
+            "station_code": "HKG",
+            "station_desc": "香港",
+            "continent": "ASIA",
+            "area": "大陸及香港",
+            "country": "香港",
+            "city": "HONG KONG",
+            "longitude": 113.9147222222,
+            "latitude": 22.3088888889
+          },
+          {
+            "station_code": "KHN",
+            "station_desc": "南昌",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "NANCHANG",
+            "longitude": 115.9,
+            "latitude": 28.865
+          },
+          {
+            "station_code": "PEK",
+            "station_desc": "北京",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "BEIJING",
+            "longitude": 116.595,
+            "latitude": 40.0733333333
+          },
+          {
+            "station_code": "PVG",
+            "station_desc": "上海(浦東)",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "SHANGHAI",
+            "longitude": 121.79,
+            "latitude": 31.1416666667
+          },
+          {
+            "station_code": "SZX",
+            "station_desc": "深圳",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "SHENZHEN",
+            "longitude": 113.8116666667,
+            "latitude": 22.6383333333
+          },
+          {
+            "station_code": "XMN",
+            "station_desc": "廈門",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "XIAMEN",
+            "longitude": 118.125,
+            "latitude": 24.5433333333
+          },
+          {
+            "station_code": "CTS",
+            "station_desc": "札幌(千歲)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "CHITOSE",
+            "longitude": 141.6925,
+            "latitude": 42.7752777778
+          },
+          {
+            "station_code": "ICN",
+            "station_desc": "首爾(仁川)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "韓國",
+            "city": "SEOUL INCHEON",
+            "longitude": 126.4391666667,
+            "latitude": 37.4625
+          },
+          {
+            "station_code": "KIX",
+            "station_desc": "大阪",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "OSAKA",
+            "longitude": 135.2327777778,
+            "latitude": 34.4341666667
+          },
+          {
+            "station_code": "NRT",
+            "station_desc": "東京(成田)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "TOKYO",
+            "longitude": 140.3863888889,
+            "latitude": 35.7647222222
+          },
+          {
+            "station_code": "OKA",
+            "station_desc": "沖繩(那霸)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "NAHA",
+            "longitude": 127.6458333333,
+            "latitude": 26.1958333333
+          },
+          {
+            "station_code": "BKK",
+            "station_desc": "曼谷",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "泰國",
+            "city": "BANGKOK",
+            "longitude": 100.7488888889,
+            "latitude": 13.6858333333
+          },
+          {
+            "station_code": "MNL",
+            "station_desc": "馬尼拉",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "菲律賓",
+            "city": "MANILA",
+            "longitude": 121.0138888889,
+            "latitude": 14.51
+          },
+          {
+            "station_code": "SIN",
+            "station_desc": "新加坡",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "新加坡",
+            "city": "SINGAPORE",
+            "longitude": 103.9894444444,
+            "latitude": 1.3591666667
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "RMQ",
+          "station_desc": "台中 (清泉崗)",
+          "continent": "ASIA",
+          "area": "臺灣",
+          "country": "台灣",
+          "city": "TAICHUNG",
+          "longitude": 120.6208333333,
+          "latitude": 24.265
+        },
+        "arrival": [
+          {
+            "station_code": "HGH",
+            "station_desc": "杭州",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "HANGZHOU",
+            "longitude": 120.4316666667,
+            "latitude": 30.2283333333
+          },
+          {
+            "station_code": "MXZ",
+            "station_desc": "梅縣(長崗岌)",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國",
+            "city": "MEIZHOU",
+            "longitude": 116.0991666667,
+            "latitude": 24.2655555556
+          },
+          {
+            "station_code": "NGB",
+            "station_desc": "寧波",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "NINGBO",
+            "longitude": 121.4633333333,
+            "latitude": 29.8233333333
+          },
+          {
+            "station_code": "WUH",
+            "station_desc": "武漢",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "WUHAN",
+            "longitude": 114.21,
+            "latitude": 30.785
+          },
+          {
+            "station_code": "WUX",
+            "station_desc": "無錫",
+            "continent": "CHINA",
+            "area": "大陸及香港",
+            "country": "中國大陸",
+            "city": "WUXI",
+            "longitude": 120.4294444444,
+            "latitude": 31.4944444444
+          },
+          {
+            "station_code": "ICN",
+            "station_desc": "首爾(仁川)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "韓國",
+            "city": "SEOUL INCHEON",
+            "longitude": 126.4391666667,
+            "latitude": 37.4625
+          },
+          {
+            "station_code": "NGO",
+            "station_desc": "名古屋",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "NAGOYA",
+            "longitude": 136.8052777778,
+            "latitude": 34.8583333333
+          },
+          {
+            "station_code": "OKA",
+            "station_desc": "沖繩(那霸)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "NAHA",
+            "longitude": 127.6458333333,
+            "latitude": 26.1958333333
+          },
+          {
+            "station_code": "HAN",
+            "station_desc": "河內",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "越南",
+            "city": "HANOI",
+            "longitude": 105.8055555556,
+            "latitude": 21.2216666667
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "TNN",
+          "station_desc": "台南",
+          "continent": "ASIA",
+          "area": "臺灣",
+          "country": "台灣",
+          "city": "TAINAN",
+          "longitude": 120.2111111111,
+          "latitude": 22.9491666667
+        },
+        "arrival": [
+          {
+            "station_code": "HKG",
+            "station_desc": "香港",
+            "continent": "ASIA",
+            "area": "大陸及香港",
+            "country": "香港",
+            "city": "HONG KONG",
+            "longitude": 113.9147222222,
+            "latitude": 22.3088888889
+          },
+          {
+            "station_code": "KIX",
+            "station_desc": "大阪",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "OSAKA",
+            "longitude": 135.2327777778,
+            "latitude": 34.4341666667
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CAN",
+          "station_desc": "廣州",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "GUANGZHOU",
+          "longitude": 113.3066666667,
+          "latitude": 23.39
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CGO",
+          "station_desc": "鄭州",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "ZHENGZHOU",
+          "longitude": 113.8416666667,
+          "latitude": 34.5183333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CGQ",
+          "station_desc": "長春",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "CHANGCHUN",
+          "longitude": 125.6883333333,
+          "latitude": 43.9983333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CKG",
+          "station_desc": "重慶",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "CHONGQING",
+          "longitude": 106.64,
+          "latitude": 29.7166666667
+        },
+        "arrival": [
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CSX",
+          "station_desc": "長沙",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "CHANGSHA",
+          "longitude": 113.22,
+          "latitude": 28.1891666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CTU",
+          "station_desc": "成都",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "CHENGDU",
+          "longitude": 103.9483333333,
+          "latitude": 30.58
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CZX",
+          "station_desc": "常州",
+          "continent": "ASIA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "CHANGZHOU",
+          "longitude": 119.7791666667,
+          "latitude": 31.9222222222
+        },
+        "arrival": [
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "DLC",
+          "station_desc": "大連",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "DALIAN",
+          "longitude": 121.53,
+          "latitude": 38.96
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "FOC",
+          "station_desc": "福州",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "FUZHOU",
+          "longitude": 119.6616666667,
+          "latitude": 25.9333333333
+        },
+        "arrival": [
+          {
+            "station_code": "TSA",
+            "station_desc": "台北(松山)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI CITY",
+            "longitude": 121.5525,
+            "latitude": 25.0697222222
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "HAK",
+          "station_desc": "海口",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "HAIKOU",
+          "longitude": 110.4566666667,
+          "latitude": 19.9333333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "HFE",
+          "station_desc": "合肥",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "HEFEI",
+          "longitude": 117.3,
+          "latitude": 31.7833333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "HGH",
+          "station_desc": "杭州",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "HANGZHOU",
+          "longitude": 120.4316666667,
+          "latitude": 30.2283333333
+        },
+        "arrival": [
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "HKG",
+          "station_desc": "香港",
+          "continent": "ASIA",
+          "area": "大陸及香港",
+          "country": "香港",
+          "city": "HONG KONG",
+          "longitude": 113.9147222222,
+          "latitude": 22.3088888889
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "TNN",
+            "station_desc": "台南",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAINAN",
+            "longitude": 120.2111111111,
+            "latitude": 22.9491666667
+          },
+          {
+            "station_code": "CGK",
+            "station_desc": "雅加達",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "印尼",
+            "city": "JAKARTA",
+            "longitude": 106.6611111111,
+            "latitude": -6.1236111111
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "KHN",
+          "station_desc": "南昌",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "NANCHANG",
+          "longitude": 115.9,
+          "latitude": 28.865
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "MXZ",
+          "station_desc": "梅縣(長崗岌)",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國",
+          "city": "MEIZHOU",
+          "longitude": 116.0991666667,
+          "latitude": 24.2655555556
+        },
+        "arrival": [
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "NGB",
+          "station_desc": "寧波",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "NINGBO",
+          "longitude": 121.4633333333,
+          "latitude": 29.8233333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "NKG",
+          "station_desc": "南京",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "NANJING",
+          "longitude": 118.86,
+          "latitude": 31.74
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "PEK",
+          "station_desc": "北京",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "BEIJING",
+          "longitude": 116.595,
+          "latitude": 40.0733333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "PVG",
+          "station_desc": "上海(浦東)",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "SHANGHAI",
+          "longitude": 121.79,
+          "latitude": 31.1416666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SHA",
+          "station_desc": "上海(虹橋)",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "SHANGHAI",
+          "longitude": 121.3355555556,
+          "latitude": 31.1977777778
+        },
+        "arrival": [
+          {
+            "station_code": "TSA",
+            "station_desc": "台北(松山)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI CITY",
+            "longitude": 121.5525,
+            "latitude": 25.0697222222
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SHE",
+          "station_desc": "瀋陽",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "SHENYANG",
+          "longitude": 123.485,
+          "latitude": 41.6383333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SYX",
+          "station_desc": "三亞",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "SANYA",
+          "longitude": 109.4133333333,
+          "latitude": 18.3016666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SZX",
+          "station_desc": "深圳",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "SHENZHEN",
+          "longitude": 113.8116666667,
+          "latitude": 22.6383333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "TAO",
+          "station_desc": "青島",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "QINGDAO",
+          "longitude": 120.375,
+          "latitude": 36.265
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "URC",
+          "station_desc": "烏魯木齊",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "URUMQI",
+          "longitude": 87.4766666667,
+          "latitude": 43.905
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "WEH",
+          "station_desc": "威海",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "WEIHAI",
+          "longitude": 122.23,
+          "latitude": 37.1883333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "WNZ",
+          "station_desc": "溫州",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "WENZHOU",
+          "longitude": 120.8516666667,
+          "latitude": 27.9133333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "TSA",
+            "station_desc": "台北(松山)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI CITY",
+            "longitude": 121.5525,
+            "latitude": 25.0697222222
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "WUH",
+          "station_desc": "武漢",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "WUHAN",
+          "longitude": 114.21,
+          "latitude": 30.785
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "WUX",
+          "station_desc": "無錫",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "WUXI",
+          "longitude": 120.4294444444,
+          "latitude": 31.4944444444
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "XIY",
+          "station_desc": "西安",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "XIANYANG",
+          "longitude": 108.75,
+          "latitude": 34.445
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "XMN",
+          "station_desc": "廈門",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "XIAMEN",
+          "longitude": 118.125,
+          "latitude": 24.5433333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "XUZ",
+          "station_desc": "徐州",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "XUZHOU",
+          "longitude": 117.5558333333,
+          "latitude": 34.0591666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "YNT",
+          "station_desc": "煙台",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "YANTAI",
+          "longitude": 121.3716666667,
+          "latitude": 37.4016666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "YNZ",
+          "station_desc": "鹽城",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "YANCHENG",
+          "longitude": 120.1166666667,
+          "latitude": 33.2333333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "YTY",
+          "station_desc": "揚州泰州",
+          "continent": "CHINA",
+          "area": "大陸及香港",
+          "country": "中國大陸",
+          "city": "YANGZHOU",
+          "longitude": 119.715,
+          "latitude": 32.5616666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CTS",
+          "station_desc": "札幌(千歲)",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "CHITOSE",
+          "longitude": 141.6925,
+          "latitude": 42.7752777778
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "FSZ",
+          "station_desc": "靜岡",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "SHIZUOKA",
+          "longitude": 138.1875,
+          "latitude": 34.7958333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "FUK",
+          "station_desc": "福岡",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "FUKUOKA",
+          "longitude": 130.4516666667,
+          "latitude": 33.5844444444
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "GMP",
+          "station_desc": "首爾(金浦)",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "韓國",
+          "city": "SEOUL",
+          "longitude": 126.7905555556,
+          "latitude": 37.5583333333
+        },
+        "arrival": [
+          {
+            "station_code": "TSA",
+            "station_desc": "台北(松山)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI CITY",
+            "longitude": 121.5525,
+            "latitude": 25.0697222222
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "HIJ",
+          "station_desc": "廣島",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "HIROSHIMA",
+          "longitude": 132.9194444444,
+          "latitude": 34.4361111111
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "HNL",
+            "station_desc": "夏威夷",
+            "continent": "AMERICA",
+            "area": "美國及加拿大",
+            "country": "美國",
+            "city": "HONOLULU",
+            "longitude": -156.0775,
+            "latitude": 21.3186111111
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "HND",
+          "station_desc": "東京(羽田)",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "TOKYO",
+          "longitude": 139.7811111111,
+          "latitude": 35.5533333333
+        },
+        "arrival": [
+          {
+            "station_code": "TSA",
+            "station_desc": "台北(松山)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI CITY",
+            "longitude": 121.5525,
+            "latitude": 25.0697222222
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "ICN",
+          "station_desc": "首爾(仁川)",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "韓國",
+          "city": "SEOUL INCHEON",
+          "longitude": 126.4391666667,
+          "latitude": 37.4625
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "ISG",
+          "station_desc": "石垣島(沖？)",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "ISHIGAKI",
+          "longitude": 124.1869444444,
+          "latitude": 24.3447222222
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "KIX",
+          "station_desc": "大阪",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "OSAKA",
+          "longitude": 135.2327777778,
+          "latitude": 34.4341666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "TNN",
+            "station_desc": "台南",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAINAN",
+            "longitude": 120.2111111111,
+            "latitude": 22.9491666667
+          },
+          {
+            "station_code": "GUM",
+            "station_desc": "關島",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "美國",
+            "city": "GUAM",
+            "longitude": 144.7972222222,
+            "latitude": 13.4838888889
+          },
+          {
+            "station_code": "HNL",
+            "station_desc": "夏威夷",
+            "continent": "AMERICA",
+            "area": "美國及加拿大",
+            "country": "美國",
+            "city": "HONOLULU",
+            "longitude": -156.0775,
+            "latitude": 21.3186111111
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "KMI",
+          "station_desc": "宮崎",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "MIYAZAKI",
+          "longitude": 131.4486111111,
+          "latitude": 31.8772222222
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "KOJ",
+          "station_desc": "鹿兒島",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "KAGOSHIMA",
+          "longitude": 130.7194444444,
+          "latitude": 31.8033333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "NGO",
+          "station_desc": "名古屋",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "NAGOYA",
+          "longitude": 136.8052777778,
+          "latitude": 34.8583333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          },
+          {
+            "station_code": "GUM",
+            "station_desc": "關島",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "美國",
+            "city": "GUAM",
+            "longitude": 144.7972222222,
+            "latitude": 13.4838888889
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "NRT",
+          "station_desc": "東京(成田)",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "TOKYO",
+          "longitude": 140.3863888889,
+          "latitude": 35.7647222222
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "GUM",
+            "station_desc": "關島",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "美國",
+            "city": "GUAM",
+            "longitude": 144.7972222222,
+            "latitude": 13.4838888889
+          },
+          {
+            "station_code": "HNL",
+            "station_desc": "夏威夷",
+            "continent": "AMERICA",
+            "area": "美國及加拿大",
+            "country": "美國",
+            "city": "HONOLULU",
+            "longitude": -156.0775,
+            "latitude": 21.3186111111
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "NTQ",
+          "station_desc": "輪島(能登)",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "WAJIMA",
+          "longitude": 136.9622222222,
+          "latitude": 37.2933333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "OKA",
+          "station_desc": "沖繩(那霸)",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "NAHA",
+          "longitude": 127.6458333333,
+          "latitude": 26.1958333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "PUS",
+          "station_desc": "釜山",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "韓國",
+          "city": "BUSAN",
+          "longitude": 128.9380555556,
+          "latitude": 35.1805555556
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "TAK",
+          "station_desc": "高松",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "TAKAMATSU",
+          "longitude": 134.0155555556,
+          "latitude": 34.2141666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "TOY",
+          "station_desc": "富山",
+          "continent": "ASIA",
+          "area": "東北亞",
+          "country": "日本",
+          "city": "TOYAMA JAPAN",
+          "longitude": 137.1875,
+          "latitude": 36.6483333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "BKK",
+          "station_desc": "曼谷",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "泰國",
+          "city": "BANGKOK",
+          "longitude": 100.7488888889,
+          "latitude": 13.6858333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "AMS",
+            "station_desc": "阿姆斯特丹",
+            "continent": "EUROPE",
+            "area": "歐洲",
+            "country": "荷蘭",
+            "city": "AMSTERDAM",
+            "longitude": 4.7641666667,
+            "latitude": 52.3080555556
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "CGK",
+          "station_desc": "雅加達",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "印尼",
+          "city": "JAKARTA",
+          "longitude": 106.6611111111,
+          "latitude": -6.1236111111
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "HKG",
+            "station_desc": "香港",
+            "continent": "ASIA",
+            "area": "大陸及香港",
+            "country": "香港",
+            "city": "HONG KONG",
+            "longitude": 113.9147222222,
+            "latitude": 22.3088888889
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "DEL",
+          "station_desc": "德里",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "印度",
+          "city": "DELHI",
+          "longitude": 77.1122222222,
+          "latitude": 28.5686111111
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "FCO",
+            "station_desc": "羅馬",
+            "continent": "EUROPE",
+            "area": "歐洲",
+            "country": "義大利",
+            "city": "ROME",
+            "longitude": 12.2388888889,
+            "latitude": 41.8002777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "DPS",
+          "station_desc": "峇里島",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "印尼",
+          "city": "DENPASAR-BALI ISLAND",
+          "longitude": 115.1691666667,
+          "latitude": -8.7475
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "HAN",
+          "station_desc": "河內",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "越南",
+          "city": "HANOI",
+          "longitude": 105.8055555556,
+          "latitude": 21.2216666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "RMQ",
+            "station_desc": "台中 (清泉崗)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAICHUNG",
+            "longitude": 120.6208333333,
+            "latitude": 24.265
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "KLO",
+          "station_desc": "長灘島",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "菲律賓",
+          "city": "KALIBO",
+          "longitude": 122.3763888889,
+          "latitude": 11.6802777778
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "KUL",
+          "station_desc": "吉隆坡",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "馬來西亞",
+          "city": "KUALA LUMPUR",
+          "longitude": 101.6980555556,
+          "latitude": 2.7433333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "MNL",
+          "station_desc": "馬尼拉",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "菲律賓",
+          "city": "MANILA",
+          "longitude": 121.0138888889,
+          "latitude": 14.51
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "PEN",
+          "station_desc": "檳城",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "馬來西亞",
+          "city": "PENANG",
+          "longitude": 100.2766666667,
+          "latitude": 5.2972222222
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "PNH",
+          "station_desc": "金邊",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "柬埔寨",
+          "city": "PHNOM PENH",
+          "longitude": 104.8416666667,
+          "latitude": 11.5466666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "RGN",
+          "station_desc": "仰光",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "緬甸",
+          "city": "YANGON",
+          "longitude": 96.1333333333,
+          "latitude": 16.9072222222
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SGN",
+          "station_desc": "胡志明市",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "越南",
+          "city": "HO CHI MINH CITY",
+          "longitude": 106.6608333333,
+          "latitude": 10.8205555556
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SIN",
+          "station_desc": "新加坡",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "新加坡",
+          "city": "SINGAPORE",
+          "longitude": 103.9894444444,
+          "latitude": 1.3591666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KHH",
+            "station_desc": "高雄",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "KAOHSIUNG CITY",
+            "longitude": 120.3502777778,
+            "latitude": 22.5769444444
+          },
+          {
+            "station_code": "SUB",
+            "station_desc": "泗水",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "印尼",
+            "city": "SURABAYA",
+            "longitude": 112.7863888889,
+            "latitude": -7.3808333333
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SUB",
+          "station_desc": "泗水",
+          "continent": "ASIA",
+          "area": "東南亞",
+          "country": "印尼",
+          "city": "SURABAYA",
+          "longitude": 112.7863888889,
+          "latitude": -7.3808333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "SIN",
+            "station_desc": "新加坡",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "新加坡",
+            "city": "SINGAPORE",
+            "longitude": 103.9894444444,
+            "latitude": 1.3591666667
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "AKL",
+          "station_desc": "奧克蘭",
+          "continent": "OCEANIA",
+          "area": "大洋洲",
+          "country": "紐西蘭",
+          "city": "AUCKLAND",
+          "longitude": 174.7666666667,
+          "latitude": -36.8666666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "BNE",
+            "station_desc": "布里斯本",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "澳洲",
+            "city": "BRISBANE",
+            "longitude": 153.1175,
+            "latitude": -27.3841666667
+          },
+          {
+            "station_code": "SYD",
+            "station_desc": "雪梨",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "澳洲",
+            "city": "SYDNEY",
+            "longitude": 151.1772222222,
+            "latitude": -33.9461111111
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "BNE",
+          "station_desc": "布里斯本",
+          "continent": "OCEANIA",
+          "area": "大洋洲",
+          "country": "澳洲",
+          "city": "BRISBANE",
+          "longitude": 153.1175,
+          "latitude": -27.3841666667
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "AKL",
+            "station_desc": "奧克蘭",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "紐西蘭",
+            "city": "AUCKLAND",
+            "longitude": 174.7666666667,
+            "latitude": -36.8666666667
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "GUM",
+          "station_desc": "關島",
+          "continent": "OCEANIA",
+          "area": "大洋洲",
+          "country": "美國",
+          "city": "GUAM",
+          "longitude": 144.7972222222,
+          "latitude": 13.4838888889
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "KIX",
+            "station_desc": "大阪",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "OSAKA",
+            "longitude": 135.2327777778,
+            "latitude": 34.4341666667
+          },
+          {
+            "station_code": "NRT",
+            "station_desc": "東京(成田)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "TOKYO",
+            "longitude": 140.3863888889,
+            "latitude": 35.7647222222
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "MEL",
+          "station_desc": "墨爾本",
+          "continent": "OCEANIA",
+          "area": "大洋洲",
+          "country": "澳洲",
+          "city": "MELBOURNE",
+          "longitude": 144.8433333333,
+          "latitude": -37.6733333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "ROR",
+          "station_desc": "帛琉",
+          "continent": "OCEANIA",
+          "area": "大洋洲",
+          "country": "帛琉",
+          "city": "BABELTHUAP ISLAND",
+          "longitude": 134.5441666667,
+          "latitude": 7.3672222222
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SYD",
+          "station_desc": "雪梨",
+          "continent": "OCEANIA",
+          "area": "大洋洲",
+          "country": "澳洲",
+          "city": "SYDNEY",
+          "longitude": 151.1772222222,
+          "latitude": -33.9461111111
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "AKL",
+            "station_desc": "奧克蘭",
+            "continent": "OCEANIA",
+            "area": "大洋洲",
+            "country": "紐西蘭",
+            "city": "AUCKLAND",
+            "longitude": 174.7666666667,
+            "latitude": -36.8666666667
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "AMS",
+          "station_desc": "阿姆斯特丹",
+          "continent": "EUROPE",
+          "area": "歐洲",
+          "country": "荷蘭",
+          "city": "AMSTERDAM",
+          "longitude": 4.7641666667,
+          "latitude": 52.3080555556
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "BKK",
+            "station_desc": "曼谷",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "泰國",
+            "city": "BANGKOK",
+            "longitude": 100.7488888889,
+            "latitude": 13.6858333333
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "FCO",
+          "station_desc": "羅馬",
+          "continent": "EUROPE",
+          "area": "歐洲",
+          "country": "義大利",
+          "city": "ROME",
+          "longitude": 12.2388888889,
+          "latitude": 41.8002777778
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "DEL",
+            "station_desc": "德里",
+            "continent": "ASIA",
+            "area": "東南亞",
+            "country": "印度",
+            "city": "DELHI",
+            "longitude": 77.1122222222,
+            "latitude": 28.5686111111
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "FRA",
+          "station_desc": "法蘭克福",
+          "continent": "EUROPE",
+          "area": "歐洲",
+          "country": "德國",
+          "city": "FRANKFURT",
+          "longitude": 8.5705555556,
+          "latitude": 50.0333333333
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "VIE",
+          "station_desc": "維也納",
+          "continent": "EUROPE",
+          "area": "歐洲",
+          "country": "奧地利",
+          "city": "VIENNA",
+          "longitude": 16.5697222222,
+          "latitude": 48.1102777778
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "HNL",
+          "station_desc": "夏威夷",
+          "continent": "AMERICA",
+          "area": "美國及加拿大",
+          "country": "美國",
+          "city": "HONOLULU",
+          "longitude": -156.0775,
+          "latitude": 21.3186111111
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          },
+          {
+            "station_code": "NRT",
+            "station_desc": "東京(成田)",
+            "continent": "ASIA",
+            "area": "東北亞",
+            "country": "日本",
+            "city": "TOKYO",
+            "longitude": 140.3863888889,
+            "latitude": 35.7647222222
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "JFK",
+          "station_desc": "紐約 (甘迺迪)",
+          "continent": "AMERICA",
+          "area": "美國及加拿大",
+          "country": "美國",
+          "city": "NEW YORK CITY",
+          "longitude": -72.2211111111,
+          "latitude": 40.6397222222
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "LAX",
+          "station_desc": "洛杉磯",
+          "continent": "AMERICA",
+          "area": "美國及加拿大",
+          "country": "美國",
+          "city": "LOS ANGELES",
+          "longitude": -117.5927777778,
+          "latitude": 33.9425
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "SFO",
+          "station_desc": "舊金山",
+          "continent": "AMERICA",
+          "area": "美國及加拿大",
+          "country": "美國",
+          "city": "SAN FRANCISCO",
+          "longitude": -121.625,
+          "latitude": 37.6188888889
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      },
+      {
+        "depature": {
+          "station_code": "YVR",
+          "station_desc": "溫哥華",
+          "continent": "AMERICA",
+          "area": "美國及加拿大",
+          "country": "加拿大",
+          "city": "VANCOUVER",
+          "longitude": -122.8155555556,
+          "latitude": 49.1938888889
+        },
+        "arrival": [
+          {
+            "station_code": "TPE",
+            "station_desc": "台北(桃園)",
+            "continent": "ASIA",
+            "area": "臺灣",
+            "country": "台灣",
+            "city": "TAIPEI",
+            "longitude": 121.2322222222,
+            "latitude": 25.0802777778
+          }
+        ]
+      }
+    ]
+  }
+}

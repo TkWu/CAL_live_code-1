@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/sample_redeem_mile" />
+
+    <ImageView
+        android:id="@+id/imageView_blur"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/sample_redeem_mile" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_promotion_text"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10.6dp">
+
+        <TextView
+            android:id="@+id/tv_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="37.3px"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="8px"
+            android:lineSpacingMultiplier="1.1"
+            android:text="@string/vip_lounge_content"
+            android:textColor="@color/black_two"
+            android:textSize="13sp"
+            style="@style/light" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/vip_lounge"
+            android:textColor="@color/black_one"
+            android:textSize="20sp"
+            style="@style/regular" />
+
+        <TextView
+            android:id="@+id/tv_miles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_title"
+            android:layout_alignParentEnd="true"
+            android:text="@string/miles"
+            android:textColor="@color/pinkish_red"
+            android:textSize="20sp"
+            android:visibility="visible"
+            style="@style/regular" />
+    </RelativeLayout>
+
+    <!-- 已經有足夠的里程可以兌換了-->
+    <RelativeLayout
+        android:id="@+id/rlayout_eligble_to_redeem"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/rlayout_summary"
+        android:layout_centerHorizontal="true"
+        android:background="@color/pinkish_red"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_eligble_to_redeem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/you_are_eligible_miles"
+            android:textColor="@color/white_four"
+            android:textSize="13sp"
+            android:visibility="visible"
+            style="@style/regular" />
+
+        <ImageView
+            android:id="@+id/iv_ic_list_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.3dp"
+            android:src="@drawable/ic_list_arrow" />
+
+    </RelativeLayout>
+
+    <!-- 還需要一些里程才可兌換-->
+    <RelativeLayout
+        android:id="@+id/rlayout_miles"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/rlayout_summary"
+        android:layout_centerHorizontal="true"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/img_top_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/black_40" />
+
+        <TextView
+            android:id="@+id/tv_need_more_miles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="44dp"
+            android:text="@string/need_xxx_miles"
+            android:textColor="@color/white_four"
+            android:textSize="13sp"
+            style="@style/regular" />
+    </RelativeLayout>
+
+    <!-- Web Only-->
+    <RelativeLayout
+        android:id="@+id/rlayout_web_only"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_web_only_fill_black_60_line_white_30_radius_17"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/tv_web_only"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/web_only"
+            android:textColor="@color/white_four"
+            android:textSize="13sp"
+            style="@style/light" />
+    </RelativeLayout>
+</RelativeLayout>

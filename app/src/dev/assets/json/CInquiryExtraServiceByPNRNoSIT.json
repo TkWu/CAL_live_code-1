@@ -1,0 +1,118 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "ExtraService": [
+      [
+        {
+          "THSRDEPTIME": "2016/9/1 上午 12:01:00",
+          "LASTNAME": "CA",
+          "TICKETNO": "2972400571890",
+          "THSRINFO": "109   ,C",
+          "THSRBOOKINGNO": "45412144",
+          "FIRSTNAME": "TEST MR",
+          "THSRDEPSTN": "台北",
+          "STATUS": "N",
+          "SERVICETYPE": "THSR",
+          "THSRAUTHNO": "2222"
+        },
+        {
+          "WIFIPASSWORD": "r4a-6nx             ",
+          "TICKETNO": "2972400571890",
+          "DYNASTYCARDNO": "WE0805590",
+          "LASTNAME": "CA",
+          "STATUS": "N",
+          "WIFIID": "BP-CIA4y8zn5@tmobile.de  ",
+          "SERVICETYPE": "WIFI",
+          "FIRSTNAME": "TEST MR",
+          "WIFIITEM": "1    ",
+          "WIFIEXPIRYDATE": "2016/10/31 上午 12:00:00"
+        },
+        {
+          "FLIGHTDATE": "2016/6/6 上午 01:02:00",
+          "TICKETNO": "2972400571890",
+          "LASTNAME": "CA",
+          "FIRSTNAME": "TEST MR",
+          "AIRPORTNAME": "桃園國際機場                                                                                        ",
+          "VIPNAME": "中華航空貴賓室(V1)                                                                                  ",
+          "STATUS": "Y",
+          "AIRPORTTERMINAL": "1",
+          "SERVICETYPE": "VIP",
+          "FLIGHTNO": "CI0008",
+          "AWARDNO": "201114423"
+        },
+        {
+          "EMDNO": "2978214545644",
+          "TICKETNO": "2972400571890",
+          "FLIGHTNO": "CI0054",
+          "LASTNAME": "CA",
+          "FIRSTNAME": "TEST MR",
+          "STATUS": "N",
+          "DEPTIME": "2016/8/31 上午 12:00:00",
+          "SERVICETYPE": "FamilyCouch",
+          "FAMILYSEATNO": "42J"
+        },
+        {
+          "THSRDEPTIME": "2016/9/1 上午 12:01:00",
+          "LASTNAME": "CA",
+          "TICKETNO": "2972400571891",
+          "THSRINFO": "109   ,Y",
+          "THSRBOOKINGNO": "45454544",
+          "FIRSTNAME": "TESTAAAA MSTR",
+          "THSRDEPSTN": "",
+          "STATUS": "N",
+          "SERVICETYPE": "THSR",
+          "THSRAUTHNO": "4444"
+        },
+        {
+          "WIFIPASSWORD": "asa-6nx             ",
+          "TICKETNO": "2972400571891",
+          "DYNASTYCARDNO": "WC0000000",
+          "LASTNAME": "CA",
+          "STATUS": "N",
+          "WIFIID": "BP-TEST@tmobile.de       ",
+          "SERVICETYPE": "WIFI",
+          "FIRSTNAME": "TESTAAAA MSTR",
+          "WIFIITEM": "1    ",
+          "WIFIEXPIRYDATE": "2016/10/31 上午 12:00:00"
+        },
+        {
+          "FLIGHTDATE": "2016/6/6 下午 01:02:00",
+          "TICKETNO": "2972400571891",
+          "LASTNAME": "CA",
+          "FIRSTNAME": "TESTAAAA MSTR",
+          "AIRPORTNAME": "桃園國際機場                                                                                        ",
+          "VIPNAME": "中華航空貴賓室(V1)                                                                                  ",
+          "STATUS": "Y",
+          "AIRPORTTERMINAL": "1",
+          "SERVICETYPE": "VIP",
+          "FLIGHTNO": "CI0008",
+          "AWARDNO": "204512123"
+        },
+        {
+          "EMDNO": "2978212454545",
+          "TICKETNO": "2972400571891",
+          "FLIGHTNO": "CI0054",
+          "LASTNAME": "CA",
+          "FIRSTNAME": "TESTAAAA MSTR",
+          "STATUS": "N",
+          "DEPTIME": "2016/8/31 上午 12:00:00",
+          "SERVICETYPE": "FamilyCouch",
+          "FAMILYSEATNO": "42H"
+        }
+      ],
+      [
+        {
+          "SERVICETYPE": "ExtraBaggage",
+          "STATUS": "Y",
+          "TICKETNO": "2972400196354",
+          "FIRSTNAME": "TESTB MISS",
+          "LASTNAME": "CA",
+          "BGWDINFO": "TTL20KG0PC",
+          "DEPTIME": "2016/5/17 下午 01:05:00",
+          "EMDNO": "2978212567899"
+        }
+      ]
+    ]
+  }
+}

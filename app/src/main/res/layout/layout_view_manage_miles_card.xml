@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_miles_overdue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="64px"
+        android:background="@drawable/bg_manage_miles_head_radius"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <TextView
+            android:id="@+id/tv_miles_overdue"
+            style="@style/regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="24px"
+            android:text="@string/miles_overdue_in_6_months"
+            android:textColor="@color/black_one"
+            android:textSize="20px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_miles_overdue"
+        android:background="@drawable/bg_manage_miles_body_radius"
+        android:orientation="vertical"
+        android:paddingBottom="20px">
+
+        <RelativeLayout
+            android:id="@+id/ll_list_head"
+            android:layout_width="match_parent"
+            android:layout_height="24px"
+            android:layout_marginTop="1px"
+            android:background="@color/white_seven"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <TextView
+                android:id="@+id/tv_head_data"
+                style="@style/light"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/due_date"
+                android:textColor="@color/grey_four"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_miles_head"
+                style="@style/light"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="@string/miles"
+                android:textColor="@color/grey_four"
+                android:textSize="13px" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_list_data"
+            android:layout_width="match_parent"
+            android:layout_height="310px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="10px"
+            android:orientation="vertical"
+            android:splitMotionEvents="false">
+
+            <TextView
+                android:id="@+id/tv_not_find"
+                style="@style/light"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/manage_miles_not_find"
+                android:textColor="@color/black_one"
+                android:textSize="18px"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

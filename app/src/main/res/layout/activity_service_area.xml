@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="ci.function.Signup.CISignUpActivity"
+    android:background="@drawable/bg_about">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true" >
+    </ci.ui.view.NavigationBar>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="233.3px"
+        android:layout_below="@+id/toolbar"/>
+
+    <ProgressBar
+        android:id="@+id/proBar_load"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4px"
+        android:layout_below="@+id/toolbar"
+        android:progressDrawable="@drawable/progress_bar"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_get_directions"
+        android:layout_width="104px"
+        android:layout_height="24px"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="10px"
+        android:minHeight="0px"
+        android:minWidth="0px"
+        android:text="@string/about_get_directions"
+        android:textSize="13px"
+        android:textColor="@color/white_four"
+        android:background="@drawable/bg_btn_radius_17dp_black_60"
+        style="@style/light" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/webview"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true">
+            <LinearLayout
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/iv_locate"
+                    android:layout_width="34.7px"
+                    android:layout_height="34.7px"
+                    android:src="@drawable/ic_locate"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/tv_address_value"
+                    android:layout_width="255.3px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:textSize="16px"
+                    android:textColor="@color/white_four"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:text="No.131, Sec.4, Nanjing E. Rd.,Taipei City 104, Taiwan.,"
+                    style="@style/regular" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_fax"
+                android:layout_width="300px"
+                android:layout_height="93.3px"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_fax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18px"
+                        android:textColor="@color/white_four"
+                        android:text="@string/ticketing_fax"
+                        style="@style/regular" />
+
+                    <TextView
+                        android:id="@+id/tv_fax_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4px"
+                        android:textSize="13px"
+                        android:alpha="0.8"
+                        android:textColor="@color/white_four"
+                        android:text="886-2-514-5549"
+                        style="@style/regular" />
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/white_four"
+                android:alpha="0.3"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_counter_service"
+                android:layout_width="300px"
+                android:layout_height="93.3px"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_counter_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18px"
+                        android:textColor="@color/white_four"
+                        android:text="@string/counter_service"
+                        style="@style/regular" />
+
+                    <TextView
+                        android:id="@+id/tv_counter_service_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4px"
+                        android:textSize="13px"
+                        android:alpha="0.8"
+                        android:textColor="@color/white_four"
+                        android:text="Mon-Fri, 08:30~17:30"
+                        style="@style/regular" />
+
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/white_four"
+                android:alpha="0.3"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

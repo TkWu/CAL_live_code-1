@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trip_detail_passenger_bag_pay_add_excess_readme">预购超额托运行李说明</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_production_readme">商品介紹</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_production_content_url">https://www.china-airlines.com/cn/zh/fly/prepare-for-the-fly/baggage/excess-baggage</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_notes">注意事项</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_notes_content">
+        1. 您持有的有效机票需为华航(297)/华信(803)开立之机票（婴儿票不适用），且限搭乘中华航空(CI)、华信航空(AE)自营班号或两航(CI&#38;AE)共用班号之营运航班，不包括您旅途航程中其他之航空公司航班。若您的行程中分持两本票者将不提供此项服务。\n\n
+        2. 预购额外托运行李必须于航班起飞前24小时于本公司官网完成加购手续，若于24小时内，则需依照一般超重（件）行李价格于机场支付费用。\n\n
+        3. 超额托运行李额度限本人使用，不可转让或分享他人使用。购买额度一经使用后，若有剩余额度恕不办理退费或挪作其他航程使用。\n\n
+        4. 预购超额行李额度以「单一航段」为购买基础，且每位旅客各航段限购买一次，请特别留意您所购买的使用航段。\n\n
+        5. 购买超额托运行李上限额度：计重制地区以5公斤为级距，每人最多可加购上限为50公斤；计件制地区每人最多可加购2件，加购之每件行李重量仍以实际搭乘之舱等限制为规范。单件托运行李不得超过32公斤，否则需要分装行李。\n\n
+        6. 特殊行李（超长/宽、单件超重、高尔夫球具、宠物及客舱占位行李）均不适用预购额外托运行李额度，请依照本公司特殊行李托运规定办理。\n\n
+        7. 请注意若旅客行程为香港-雅加达，或由以下机场出发/抵达者暂不提供网路预购行李：\n\n●大陆地区：大连、福州、海口、合肥、南昌、梅县、宁波、三亚、威海、温州、无锡、徐州、盐城、扬州\n\n●东南亚地区：帛琉。\n\n
+        8. 若您的机票行程涵盖美加航点且多点停留者，不提供预购超额行李服务。\n\n
+        9. 「乐GO」（无托运行李）票种不适用本预购优惠方案，若需加购行李请依原票种规定办理加购作业。\n\n
+        10. 若需更改使用航班（注）则必须于原订航班起飞前且于上班时间内联系华航客服中心，或于分公司城区柜台完成更改作业。\n
+        （注）：更改使用航班限相同起讫航点，或机票可允许互搭之以下航线：\n\n●台湾-广州/深圳可搭乘台湾-香港\n\n●桃园-浦东可互搭松山-虹桥\n\n●桃园-成田可互搭松山-羽田\n\n●桃园-仁川可互搭松山-金浦\n\n
+        11. 旅客持有之机票一经使用，则已购买之超额行李将不可办理退费。若机票尚未使用，且欲办理超额行李退费者，请自购买日起2年内至华航分公司城区柜台办理退费，退费时将以购买金额之30%作为手续费。\n\n
+        12. 预购额外托运行李服务适用本航其他所有运输条款。\n\n
+        13. 中华航空保留随时解释、修改、或取消以上条款的权利。</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules">退款规则</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules_content">
+        1. 如欲申请使用支付宝帐户付款的机票退票，请与您大陆地区出发站的华航或华信办事处联系。 \n\n
+        2. 限持华航(297) / 华信(803)机票所加购之超额行李。\n\n
+        3. 超额行李退费申请开放自购买日期起2年内未使用，逾期将恕不受理申请退费。\n\n
+        4. 超额行李费用无法于购买当日申请退费，敬请于购买日次一天申请。\n\n
+        5. 所有网上退费款项，将退还至原付款人之信用卡卡号或交易帐户。\n\n
+        6. 使用信用卡付款并办理退费者，我们将在九天之内向金融处理机构提出申请，惟实际退费日期仍须依发卡银行之规定与合约内容而定。\n\n
+        7. 购买出发往返美国之超额行李于48小时以内申请退费，将可获得全额退费。\n\n
+        8. 购买韩国出发的超额行李，若于购票后7天内办理退费，将可获得全额退费。</string>
+    <!-- / 是超連結區塊符號 -->
+    <string name="trip_detail_passenger_bag_term_and_conditions">我已清楚阅读/购买须知/，并同意遵守相关规定。</string>
+</resources>

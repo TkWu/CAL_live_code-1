@@ -1,0 +1,42 @@
+{
+  "rt_code": "000",
+  "rt_msg": "查詢成功。",
+  "rt_data": {
+    "pnr_id": "5QRD8O",
+    "itinerary_seq": 2,
+    "flight_date": "2016-05-17",
+    "flight_num": "0159",
+    "flight_sector": "KIXTPE",
+    "pax_seat_class": "C",
+    "passangers": [
+      {
+        "pax_seq": 1,
+        "pax_subseq": 1,
+        "pax_first_name": "TEST",
+        "pax_last_name": "CHIANG",
+        "ssr_seq": 36,
+        "pono_number": "125783",
+        "breakfast_detail": {
+          "is_order": false,
+          "detail": null
+        },
+        "lunch_detail": {
+          "is_order": true,
+          "detail": {
+            "meal_seq": "1",
+            "meal_content_seq": "A",
+            "meal_code": "CLDMCCH001072",
+            "mealtype_code": "L",
+            "mealtype_desc": "午餐",
+            "meal_name": "XO醬燒豬肉 佐黃金炒飯 炒鮮蔬",
+            "is_menu_only": false
+          }
+        },
+        "dinner_detail": {
+          "is_order": false,
+          "detail": null
+        }
+      }
+    ]
+  }
+}

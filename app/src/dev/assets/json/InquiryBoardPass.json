@@ -1,0 +1,157 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "Pnr_Info": [
+      {
+        "Pnr_Id": "5NQXQB",
+        "rt_code": "000",
+        "rt_msg": "OK",
+        "Itinerary": [
+          {
+            "Departure_Date": "2016-07-08",
+            "Departure_Time": "17:00",
+            "Departure_Station": "TPE",
+            "Departure_Station_Name2": null,
+            "Arrival_Time": "18:30",
+            "Arrival_Station": "HKG",
+            "Arrival_Station_Name2": null,
+            "Airlines": "CI",
+            "Flight_Number": "1900",
+            "Class_Of_Service": "Y",
+            "Class_Of_Service_Desc": "經濟艙",
+            "Boarding_Gate": null,
+            "Boarding_Date": "2016-07-08",
+            "Boarding_Time": "16:20",
+            "Depature_Terminal": "1",
+            "Pax_Info": [
+              {
+                "First_Name": "TEST",
+                "Last_Name": "OK",
+                "Seat_Number": "024D",
+                "Boarding_Pass": "M1CHIANG/TEST         E5OT5F7 TPEHKGCI 1900 190Y024D0000 18A>518                        2A2972400840102     CI WB0000000        20K ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "Y",
+                "Lounge": null,
+                "Is_Print_BP": "N",
+                "Is_Check_In": "Y",
+                "Is_Display_Boarding_Pass": "Y",
+                "Boarding_Pass_SP": "caerulea"
+              },
+              {
+                "First_Name": "TEST",
+                "Last_Name": "CHIANG",
+                "Seat_Number": "024D",
+                "Boarding_Pass": "M1CHIANG/TEST         E5OT5F7 TPEHKGCI 1900 190Y024D0000 18A>518                        2A2972400840102     CI WB0000000        20K ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "Y",
+                "Lounge": null,
+                "Is_Print_BP": "N",
+                "Is_Check_In": "Y",
+                "Is_Display_Boarding_Pass": "Y",
+                "Boarding_Pass_SP": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Pnr_Id": "5NQWK8",
+        "rt_code": "000",
+        "rt_msg": "OK",
+        "Itinerary": [
+          {
+            "Departure_Date": "2016-07-08",
+            "Departure_Time": "17:00",
+            "Departure_Station": "TPE",
+            "Departure_Station_Name2": null,
+            "Arrival_Time": "18:30",
+            "Arrival_Station": "HKG",
+            "Arrival_Station_Name2": null,
+            "Airlines": "CI",
+            "Flight_Number": "1900",
+            "Class_Of_Service": "Y",
+            "Class_Of_Service_Desc": "經濟艙",
+            "Boarding_Gate": null,
+            "Boarding_Date": "2016-07-08",
+            "Boarding_Time": "16:20",
+            "Depature_Terminal": "1",
+            "Pax_Info": [
+              {
+                "First_Name": "TEST",
+                "Last_Name": "CHIANG",
+                "Seat_Number": "024D",
+                "Boarding_Pass": "M1CHIANG/TEST         E5OT5F7 TPEHKGCI 1900 190Y024D0000 18A>518                        2A2972400840102     CI WB0000000        20K ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "Y",
+                "Lounge": null,
+                "Is_Print_BP": "N",
+                "Is_Check_In": "Y"
+              },
+              {
+                "First_Name": "TEST",
+                "Last_Name": "CHIANG",
+                "Seat_Number": "024D",
+                "Boarding_Pass": "M1CHIANG/TEST         E5OT5F7 TPEHKGCI 1900 190Y024D0000 18A>518                        2A2972400840102     CI WB0000000        20K ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "Y",
+                "Lounge": null,
+                "Is_Print_BP": "N",
+                "Is_Check_In": "Y"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Pnr_Id": "5ODR5B",
+        "rt_code": "-999",
+        "rt_msg": "No Data Found",
+        "Itinerary": [
+        ]
+      },
+      {
+        "Pnr_Id": "5OT5F7",
+        "rt_code": "000",
+        "rt_msg": "OK",
+        "Itinerary": [
+          {
+            "Departure_Date": "2016-07-08",
+            "Departure_Time": "17:00",
+            "Departure_Station": "TPE",
+            "Departure_Station_Name2": null,
+            "Arrival_Time": "18:30",
+            "Arrival_Station": "HKG",
+            "Arrival_Station_Name2": null,
+            "Airlines": "CI",
+            "Flight_Number": "1900",
+            "Class_Of_Service": "Y",
+            "Class_Of_Service_Desc": "經濟艙",
+            "Boarding_Gate": null,
+            "Boarding_Date": "2016-07-08",
+            "Boarding_Time": "16:20",
+            "Depature_Terminal": "1",
+            "Pax_Info": [
+              {
+                "First_Name": "TEST",
+                "Last_Name": "CHIANG",
+                "Seat_Number": "024D",
+                "Boarding_Pass": "M1CHIANG/TEST         E5OT5F7 TPEHKGCI 1900 190Y024D0000 18A>518                        2A2972400840102     CI WB0000000        20K ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "Y",
+                "Lounge": null,
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

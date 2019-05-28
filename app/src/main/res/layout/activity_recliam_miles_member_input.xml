@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_login"
+                android:fitsSystemWindows="true">
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true" >
+    </ci.ui.view.NavigationBar>
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20px"
+            android:textColor="@color/white_four"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20px"
+            android:text="@string/member_detail"
+            style="@style/regular" />
+
+        <LinearLayout
+            android:id="@+id/ll_member_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26.3px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_vertical"
+                android:text="@string/name"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_member_name"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:textSize="16px"
+                android:gravity="right"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_vertical"
+                android:text="YuRong Cheng"
+                android:layout_marginLeft="40px"
+                style="@style/light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_member_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.7px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_vertical"
+                android:text="@string/member_no"
+                style="@style/light" />
+
+            <TextView
+                android:id="@+id/tv_member_no"
+                android:layout_width="130px"
+                android:layout_height="wrap_content"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:text="CK0000000"
+                android:layout_marginLeft="40px"
+                style="@style/light" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/text_feild_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="49.7px">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4px">
+            <ImageView
+                android:id="@+id/iv_checkbox"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:src="@drawable/btn_checkbox_off"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_vertical"
+                android:text="@string/update_email_to_my_personal"
+                android:layout_marginLeft="8px"
+                style="@style/light" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginBottom="30px"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        android:text="@string/next"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        android:textAllCaps="false"
+        style="@style/regular" />
+
+</RelativeLayout>
+
+    <!--android:layout_below="@+id/toolbar"-->

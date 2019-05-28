@@ -1,0 +1,84 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "flight_item": "3",
+      "flight_desc": "酬賓獎項轉讓",
+      "flight_duedate": "",
+      "flight_awdno": "135309240",
+      "flight_date": "2013-11-21",
+      "flight_mileage": "21,000",
+      "flight_remark": "",
+      "ticket": "",
+      "nominee": "KANG/CHIFEN",
+      "card_no": "CT1537582",
+      "bnsusg": "TK"
+    },
+    {
+      "flight_item": "3",
+      "flight_desc": "酬賓獎項轉讓",
+      "flight_duedate": "",
+      "flight_awdno": "135309330",
+      "flight_date": "2013-11-21",
+      "flight_mileage": "21,000",
+      "flight_remark": "",
+      "ticket": "",
+      "nominee": "CHU/ANNEY",
+      "card_no": "CT4498615",
+      "bnsusg": "TK"
+    },
+    {
+      "flight_item": "3",
+      "flight_desc": "酬賓獎項轉讓",
+      "flight_duedate": "",
+      "flight_awdno": "135399060",
+      "flight_date": "2013-12-09",
+      "flight_mileage": "30,000",
+      "flight_remark": "",
+      "ticket": "",
+      "nominee": "CHU/APRILY",
+      "card_no": "CT5071386",
+      "bnsusg": "TK"
+    },
+    {
+      "flight_item": "3",
+      "flight_desc": "酬賓獎項轉讓",
+      "flight_duedate": "",
+      "flight_awdno": "136831836",
+      "flight_date": "2014-09-04",
+      "flight_mileage": "35,000",
+      "flight_remark": "",
+      "ticket": "",
+      "nominee": "KANG/CHIFEN",
+      "card_no": "CT1537582",
+      "bnsusg": "TK"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "座艙升等",
+      "flight_duedate": "2016-02-25",
+      "flight_awdno": "137904671",
+      "flight_date": "2015-02-25",
+      "flight_mileage": "20,000",
+      "flight_remark": "未使用",
+      "ticket": "",
+      "nominee": "",
+      "card_no": "",
+      "bnsusg": "UP"
+    },
+    {
+      "flight_item": "1",
+      "flight_desc": "座艙升等",
+      "flight_duedate": "2017-03-15",
+      "flight_awdno": "140322565",
+      "flight_date": "2016-03-15",
+      "flight_mileage": "60,000",
+      "flight_remark": "未使用",
+      "ticket": "",
+      "nominee": "",
+      "card_no": "",
+      "bnsusg": "UP"
+    }
+  ]
+}

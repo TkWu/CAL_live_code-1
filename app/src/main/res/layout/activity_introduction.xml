@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_about">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true" >
+    </ci.ui.view.NavigationBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none"
+        android:layout_marginTop="20px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="300px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white_four"
+                android:textSize="20px"
+                android:text="@string/welcome_to_china_airlines"
+                style="@style/regular" />
+
+            <TextView
+                android:layout_width="300px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16px"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white_four"
+                android:textSize="16px"
+                android:text="@string/welcome_message_notice"
+                style="@style/light" />
+
+            <FrameLayout
+                android:id="@+id/fl_youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:layout_marginRight="10px"
+                android:layout_marginLeft="10px"
+                android:layout_gravity="center_horizontal"/>
+            
+            <ImageView
+                android:id="@+id/iv_youtube"
+                android:layout_width="47px"
+                android:layout_height="19.7px"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:layout_marginTop="30px"
+                android:src="@drawable/img_logo_youtube"/>
+
+            <TextView
+                android:id="@+id/tv_china_airlines"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4px"
+                android:layout_marginBottom="30px"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white_four"
+                android:textSize="14.7px"
+                android:text="@string/china_airlines"
+                style="@style/light" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

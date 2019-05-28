@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:background="@color/black_30">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="300px"
+            android:layout_height="22.7px"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            android:textSize="16px"
+            android:gravity="center_vertical"
+            android:textColor="@color/white_four"
+            style="@style/regular" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_bag"
+        android:layout_below="@+id/rl_title"
+        android:layout_width="320px"
+        android:layout_height="35px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="40px"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="86.7px"
+            android:layout_height="26.7px"
+            android:layout_marginLeft="10px"
+            android:textSize="18px"
+            android:textColor="@color/white_four"
+            android:text="30公斤"
+            android:gravity="center_vertical"
+            style="@style/light" />
+
+        <TextView
+            android:id="@+id/tv_ebamount"
+            android:layout_width="180px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="16px"
+            android:layout_alignBottom="@+id/tv_value"
+            android:layout_marginRight="10px"
+            android:textColor="@color/white_four"
+            android:gravity="center_vertical|right"
+            android:alpha="0.8"
+            android:text="TWD 2,400"
+            style="@style/light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.4"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_four"/>
+    </RelativeLayout>
+
+</LinearLayout>

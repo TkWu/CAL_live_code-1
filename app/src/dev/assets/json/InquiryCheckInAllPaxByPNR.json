@@ -1,0 +1,104 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "pax_info": [
+      {
+        "First_Name": "YIFAN",
+        "Last_Name": "CHANG",
+        "Uci": "205047CE0003CC5C",
+        "Pnr_Id": "22IYRR",
+        "Itinerary_Info": [
+          {
+            "Segment_Number": "1",
+            "Departure_Date": "2016-06-25",
+            "Departure_Time": "7:45",
+            "Departure_Station": "TPE",
+            "Departure_Station_Name": "台北(桃園)",
+            "Arrival_Date": "2016-06-25",
+            "Arrival_Time": "11:10",
+            "Arrival_Station": "ICN",
+            "Arrival_Station_Name": "首爾(仁川)",
+            "Airlines": "CI",
+            "Airlines_Name": "中華航空公司",
+            "Flight_Number": "160",
+            "Did": "2002B7CE001ACF90",
+            "Is_Black": "N",
+            "Is_Check_In": "N",
+            "Is_Do_Check_In": "Y",
+            "Boarding_Pass": "M1CHANG/FUYA          E3WI4MM TPEICNCI 0160 177Y015A0000 18A>518                        2A2971721525918     CI WE1603664        30K ",
+            "Seat_Number": "015A",
+            "Boarding_Gate": "",
+            "Boarding_Date": "2016-06-25",
+            "Boarding_Time": "7:05",
+            "Check_In_Counter": null,
+            "Oids": [],
+            "Apis": [
+              {
+                "Pax_Sex": "F",
+                "Pax_Birth": "",
+                "Resident_Country": [
+                  ""
+                ],
+                "Nationality": "",
+                "Document_Type": "",
+                "Document_No": "",
+                "Docuemnt_Eff_Date": "",
+                "Issue_Country": ""
+              }
+            ],
+            "Doca": null
+          }
+        ]
+      },
+      {
+        "First_Name": "YUANCHI",
+        "Last_Name": "CHANG",
+        "Uci": "205047CE0003CC5D",
+        "Pnr_Id": "22IYRR",
+        "Itinerary_Info": [
+          {
+            "Segment_Number": "1",
+            "Departure_Date": "2016-06-25",
+            "Departure_Time": "7:45",
+            "Departure_Station": "TPE",
+            "Departure_Station_Name": "台北(桃園)",
+            "Arrival_Date": "2016-06-25",
+            "Arrival_Time": "11:10",
+            "Arrival_Station": "ICN",
+            "Arrival_Station_Name": "首爾(仁川)",
+            "Airlines": "CI",
+            "Airlines_Name": "中華航空公司",
+            "Flight_Number": "160",
+            "Did": "2002B7CE001ACF91",
+            "Is_Black": "N",
+            "Is_Check_In": "Y",
+            "Is_Do_Check_In": "Y",
+            "Boarding_Pass": "M1HSIEH/POYA          E3WI4MM TPEICNCI 0160 177Y015B0000 18A>518                        2A2971721525919     CI WE1603326        30K ",
+            "Seat_Number": "015B",
+            "Boarding_Gate": "",
+            "Boarding_Date": "2016-06-25",
+            "Boarding_Time": "7:05",
+            "Check_In_Counter": null,
+            "Oids": [],
+            "Apis": [
+              {
+                "Pax_Sex": "F",
+                "Pax_Birth": "",
+                "Resident_Country": [
+                  ""
+                ],
+                "Nationality": "",
+                "Document_Type": "",
+                "Document_No": "",
+                "Docuemnt_Eff_Date": "",
+                "Issue_Country": ""
+              }
+            ],
+            "Doca": null
+          }
+        ]
+      }
+    ]
+  }
+}

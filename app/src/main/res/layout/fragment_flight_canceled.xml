@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/tv_prompt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/please_confirm_your_new_flight"
+        android:textColor="@color/white_four"
+        android:textSize="20sp"
+        style="@style/regular" />
+
+    <TextView
+        android:id="@+id/tv_prompt_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_prompt_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="16dp"
+        android:text="We apologize for the cancellation of your flight CI116 due to the Dujuan typhoon. we rearrange your flight to CI332 departs at 14:15. Please confirm it if you agree to change."
+        android:textColor="@color/white_four"
+        android:textSize="16sp"
+        style="@style/light" />
+
+    <TextView
+        android:id="@+id/tv_your_new_flight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_prompt_msg"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/your_new_flight"
+        android:textColor="@color/white_four"
+        android:textSize="16sp"
+        style="@style/regular" />
+
+    <FrameLayout
+        android:id="@+id/fl_flightInfo"
+        android:layout_below="@id/tv_your_new_flight"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_if"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="129.3dp"
+        android:text="@string/flight_cancel_message"
+        android:textColor="@color/white_four"
+        android:textSize="16sp"
+        style="@style/regular" />
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="69.3dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_disagree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_disagree"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_btn_blue_selector"
+                android:text="@string/disagree"
+                android:textColor="@color/white_four"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                style="@style/regular" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+            <Button
+                android:id="@+id/btn_agree"
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_btn_pink_agree_selector"
+                android:text="@string/agree"
+                android:textColor="@color/white_four"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                style="@style/regular" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_decide_leter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_decide_leter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/decide_later"
+            android:textColor="@color/white_four"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            style="@style/regular" />
+
+        <ImageButton
+            android:id="@+id/ibtn_decide_leter"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_transparent_press_black20"
+            android:src="@drawable/ic_arrow"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+</RelativeLayout>

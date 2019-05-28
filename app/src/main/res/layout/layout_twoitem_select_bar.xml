@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root">
+
+    <ImageButton
+        android:layout_width="24px"
+        android:layout_height="24px"
+        android:id="@+id/iv_leftbtn"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/bg_btn_radio_selector"
+        android:background="@color/transparent"
+        android:layout_marginRight="8px"/>
+
+    <TextView
+        android:layout_width="110px"
+        android:layout_height="wrap_content"
+        android:text="@string/male"
+        android:id="@+id/tv_leftText"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iv_leftbtn"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        android:singleLine="true"
+        android:ellipsize="end"
+        style="@style/light" />
+
+    <TextView
+        android:layout_width="110px"
+        android:layout_height="wrap_content"
+        android:text="@string/female"
+        android:id="@+id/tv_rightText"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        android:singleLine="true"
+        android:ellipsize="end"
+        style="@style/light" />
+
+    <ImageButton
+        android:layout_width="24px"
+        android:layout_height="24px"
+        android:id="@+id/iv_rightbtn"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/tv_rightText"
+        android:src="@drawable/bg_btn_radio_selector"
+        android:background="@color/transparent"
+        android:layout_marginRight="8px" />
+</RelativeLayout>

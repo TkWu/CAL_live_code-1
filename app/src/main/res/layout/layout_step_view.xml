@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llayout_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/tv_StepText"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:layout_above="@+id/img_Step"
+        android:textColor="@color/white_four"
+        style="@style/regular" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_done"
+        android:src="@drawable/ic_done_2"
+        android:layout_above="@+id/img_Step"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_Step"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:background="@color/transparent"
+        android:src="@drawable/img_steps_1" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<resources>
+    <string name="boardingpass_background_notes_title">Hinweise</string>
+    <string name="boardingpass_background_notes_content">
+	• Für die Erstattung von Geschäftsreisekosten können Sie vor dem Boarding einen Screenshot Ihrer mobilen Bordkarte erhalten. Nach dem Boarding können Sie sich an ein Büro von China Airlines wenden, um eine Boardingbestätigung anzufordern. (https://www.china-airlines.com/us/en/fly/on-board/invoice-application-form)\n\n
+	• Bitte legen Sie Ihr Reisedokument mindestens 30 Minuten vor dem Abflug beim Schalter des Gates vor und legen Sie diese Bordkarte beim Boarding vor.\n\n
+	• Die richtige Gate-Nummer entnehmen Sie dem Fluginformationssystem am Flughafen.\n\n
+	• Checken Sie Ihr Gepäck mindestens 1 Stunde vor der Abflugzeit am Flughafen ein (Sie können sich an den eCheck-in-Schalter am Schalter B am Flughafen KHH wenden), bevor Sie mit der Einwanderungs- und Sicherheitskontrolle fortfahren.\n\n
+	• Aus betrieblichen Gründen behalten wir uns das Recht vor, den Flugzeugtyp, die Abflugzeit und Ihre Sitzplatzzuweisung ohne vorherige Ankündigung zu ändern.\n• Derzeit ist der Selbstdruck-Bordkartenservice nicht für Passagiere verfügbar, die am Flughafen Hongkong umsteigen.\n\n
+	• Passagiere mit elektronischen Tickets, die per Kreditkarte bezahlt wurden, müssen für den ersten Flug des Reiseplans laut Buchungsdatensatz eine Kreditkartenprüfung am Check-in-Schalter oder am Gate am Flughafen durchführen. Wenn die Kreditkartenüberprüfung nicht ordnungsgemäß abgeschlossen wurde, wird ihnen andererseits am Flughafen das Boarding verwehrt oder sie müssen ein neues Ticket für die Buchung kaufen. Weitere Informationen zu den Zahlungsverfahren von Drittanbietern finden Sie auf der Website von China Airlines (https://www.china-airlines.com/us/en/fly/prepare-for-the-fly/information-for-travellers/Notice-for-Credit-Card-Payment). </string>
+</resources>

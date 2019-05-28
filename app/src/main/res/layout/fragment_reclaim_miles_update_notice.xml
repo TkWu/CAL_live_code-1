@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:background="@color/black_60">
+
+    <LinearLayout
+        android:id="@+id/ll_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:text="@string/your_miles_has_been_update"
+            android:textColor="@color/white_four"
+            android:textSize="16sp"
+            style="@style/regular" />
+
+        <TextView
+            android:id="@+id/tv_down"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:alpha="0.86"
+            android:text="@string/miles_have_been_imported_to_your_account"
+            android:textColor="@color/white_four"
+            android:textSize="14sp"
+            style="@style/light" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@color/transparent">
+
+        <Button
+            android:id="@+id/btn_my_miles"
+            android:layout_width="72dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_transparent_press_drak_grey"
+            android:gravity="center"
+            android:text="@string/my_miles"
+            android:textColor="@color/white_four"
+            android:textSize="13sp"
+            style="@style/light" />
+    </RelativeLayout>
+
+</RelativeLayout>

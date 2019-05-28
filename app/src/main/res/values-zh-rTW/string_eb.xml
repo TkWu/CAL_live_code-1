@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trip_detail_passenger_bag_pay_add_excess_readme">預購超額托運行李說明</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_production_readme">商品介紹</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_production_content_url">https://www.china-airlines.com/tw/zh/fly/prepare-for-the-fly/baggage/excess-baggage</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_notes">注意事項</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_notes_content">
+        1. 您持有的有效機票需為華航(297)/華信(803)開立之機票（嬰兒票不適用），且限搭乘中華航空(CI)、華信航空(AE)自營班號或兩航(CI&#38;AE)共用班號之營運航班，不包括您旅途航程中其他之航空公司航班。若您的行程中分持兩本票者將不提供此項服務。\n\n
+        2. 預購額外託運行李必須於航班起飛前24小時於本公司官網完成加購手續，若於24小時內，則需依照一般超重（件）行李價格於機場支付費用。\n\n
+        3. 超額託運行李額度限本人使用，不可轉讓或分享他人使用。購買額度一經使用後，若有剩餘額度恕不辦理退費或挪作其他航程使用。\n\n
+        4. 預購超額行李額度以「單一航段」為購買基礎，且每位旅客各航段限購買一次，請特別留意您所購買的使用航段。\n\n
+        5. 購買超額託運行李上限額度：計重制地區以5公斤為級距，每人最多可加購上限為50公斤；計件制地區每人最多可加購2件，加購之每件行李重量仍以實際搭乘之艙等限制為規範。單件託運行李不得超過32公斤，否則需要分裝行李。\n\n
+        6. 特殊行李（超長/寬、單件超重、高爾夫球具、寵物及客艙佔位行李）均不適用預購額外託運行李額度，請依照本公司特殊行李託運規定辦理。\n\n
+        7. 請注意若旅客行程為香港-雅加達，或由以下機場出發/抵達者暫不提供網路預購行李：\n\n●大陸地區：大連、福州、海口、合肥、南昌、梅縣、寧波、三亞、威海、溫州、無錫、徐州、鹽城、揚州\n\n●東南亞地區：帛琉。\n\n
+        8. 若您的機票行程涵蓋美加航點且多點停留者，不提供預購超額行李服務。\n\n
+        9. 「樂GO」（無託運行李）票種不適用本預購優惠方案，若需加購行李請依原票種規定辦理加購作業。\n\n
+        10. 若需更改使用航班（註）則必須於原訂航班起飛前且於上班時間內聯繫華航客服中心，或於分公司城區櫃台完成更改作業。（註）：更改使用航班限相同起訖航點，或機票可允許互搭之以下航線：\n\n●台灣-廣州/深圳可搭乘台灣-香港\n\n●桃園-浦東可互搭松山-虹橋\n\n●桃園-成田可互搭松山-羽田\n\n●桃園-仁川可互搭松山-金浦\n\n
+        11. 旅客持有之機票一經使用，則已購買之超額行李將不可辦理退費。若機票尚未使用，且欲辦理超額行李退費者，請自購買日起2年內至華航分公司城區櫃檯辦理退費，退費時將以購買金額之30%作為手續費。\n\n
+        12. 預購額外託運行李服務適用本航其他所有運輸條款。\n\n
+        13. 中華航空保留隨時解釋、修改、或取消以上條款的權利。</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules">退貨規則</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules_content">
+        1. 如欲申請使用支付寶帳戶付款的機票退票，請與您大陸地區出發站的華航或華信辦事處聯繫。\n\n
+        2. 限持華航(297) / 華信(803)機票所加購之超額行李。\n\n
+        3. 超額行李退費申請開放自購買日期起2年內未使用，逾期將恕不受理申請退費。\n\n
+        4. 超額行李費用無法於購買當日申請退費，敬請於購買日次一天申請。\n\n
+        5. 所有網上退費款項，將退還至原付款人之信用卡卡號或交易帳戶。\n\n
+        6. 使用信用卡付款並辦理退費者，我們將在九天之內向金融處理機構提出申請，惟實際退費日期仍須依發卡銀行之規定與合約內容而定。\n\n
+        7. 購買出發往返美國之超額行李於48小時以內申請退費，將可獲得全額退費。\n\n
+        8. 購買韓國出發的超額行李，若於購票後7天內辦理退費，將可獲得全額退費。</string>
+    <!-- / 是超連結區塊符號 -->
+    <string name="trip_detail_passenger_bag_term_and_conditions">我已清楚閱讀/購買須知/，並同意遵守相關規定。</string>
+</resources>

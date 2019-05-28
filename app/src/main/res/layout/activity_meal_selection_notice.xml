@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true"></ci.ui.view.NavigationBar>
+
+    <LinearLayout
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:background="@color/black_30"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/regular"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="18px"
+            android:layout_marginTop="18px"
+            android:gravity="left"
+            android:text="@string/meal_selection_notice_title"
+            android:textColor="@color/white_four"
+            android:textSize="20px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.15"
+            android:background="@color/white_four" />
+
+        <TextView
+            android:id="@+id/notice_content"
+            style="@style/light"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="40px"
+            android:gravity="left"
+            android:lineSpacingExtra="10px"
+            android:textColor="@color/white_four"
+            android:textSize="16px" />
+
+    </LinearLayout>
+
+</LinearLayout>

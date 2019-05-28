@@ -1,0 +1,294 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "Pnr_Info": [
+      {
+        "Pnr_Id": "2QU4RH",
+        "rt_code": "000",
+        "rt_msg": "OK",
+        "Itinerary": [
+          {
+            "Departure_Date": "2016-04-22",
+            "Departure_Time": "5:30",
+            "Departure_Station": "MYR",
+            "Arrival_Time": "6:29",
+            "Arrival_Station": "CLT",
+            "Airlines": "AA",
+            "Flight_Number": "5357",
+            "Class_Of_Service": "Q",
+            "Class_Of_Service_Desc": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Departure_Terminal": "",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH MYRCLTAA 5357 113Q00000000 18A>518                        2A0067790349828                             ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "N",
+                "Lounge": null,
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N",
+                "Card_Type": []
+              }
+            ]
+          },
+          {
+            "Departure_Date": "2016-04-22",
+            "Departure_Time": "7:30",
+            "Departure_Station": "CLT",
+            "Arrival_Time": "9:49",
+            "Arrival_Station": "LAX",
+            "Airlines": "AA",
+            "Flight_Number": "1993",
+            "Class_Of_Service": "Q",
+            "Class_Of_Service_Desc": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Departure_Terminal": "",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH CLTLAXAA 1993 113Q00000000 18A>518                        2A0067790349828                             ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "N",
+                "Lounge": "N",
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N",
+                "Card_Type": []
+              }
+            ]
+          },
+          {
+            "Departure_Date": "2016-04-23",
+            "Departure_Time": "16:00",
+            "Departure_Station": "NRT",
+            "Arrival_Time": "19:15",
+            "Arrival_Station": "TPE",
+            "Airlines": "DL",
+            "Flight_Number": "167",
+            "Class_Of_Service": "T",
+            "Class_Of_Service_Desc": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Departure_Terminal": "",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH NRTTPEDL 0167 114T00000000 18A>518                        2A0067790349828                             ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "N",
+                "Lounge": "N",
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N",
+                "Card_Type": []
+              }
+            ]
+          },
+          {
+            "Departure_Date": "2016-08-08",
+            "Departure_Time": "22:37",
+            "Departure_Station": "LAX",
+            "Arrival_Time": "6:19",
+            "Arrival_Station": "CLT",
+            "Airlines": "AA",
+            "Flight_Number": "640",
+            "Class_Of_Service": "Q",
+            "Class_Of_Service_Desc": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Departure_Terminal": "",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH LAXCLTAA 0640 221Q00000000 18A>518                        2A0067790349828                             ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "N",
+                "Lounge": "N",
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N",
+                "Card_Type": []
+              }
+            ]
+          },
+          {
+            "Departure_Date": "2016-08-09",
+            "Departure_Time": "7:47",
+            "Departure_Station": "CLT",
+            "Arrival_Time": "8:46",
+            "Arrival_Station": "MYR",
+            "Airlines": "AA",
+            "Flight_Number": "4059",
+            "Class_Of_Service": "Q",
+            "Class_Of_Service_Desc": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Departure_Terminal": "",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH CLTMYRAA 4059 222Q00000000 18A>518                        2A0067790349828                             ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "N",
+                "Lounge": "N",
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N",
+                "Card_Type": []
+              }
+            ]
+          },
+          {
+            "Departure_Date": "2016-08-12",
+            "Departure_Time": "8:55",
+            "Departure_Station": "TPE",
+            "Arrival_Time": "13:15",
+            "Arrival_Station": "NRT",
+            "Airlines": "CI",
+            "Flight_Number": "100",
+            "Class_Of_Service": "Y",
+            "Class_Of_Service_Desc": "經濟艙",
+            "Boarding_Gate": "",
+            "Boarding_Date": "2016-08-12",
+            "Boarding_Time": "8:15",
+            "Departure_Terminal": "2",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "038E",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH TPENRTCI 0100 225Y038E0002 18A>518                        2A0067790349828                         2PC ",
+                "Seat_Zone": null,
+                "Seq_No": "002",
+                "Sky_Priority": "N",
+                "Lounge": "N",
+                "Is_Print_BP": "Y",
+                "Is_Check_In": "Y",
+                "Card_Type": []
+              }
+            ]
+          },
+          {
+            "Departure_Date": "2016-08-12",
+            "Departure_Time": "16:15",
+            "Departure_Station": "NRT",
+            "Arrival_Time": "15:48",
+            "Arrival_Station": "ATL",
+            "Airlines": "DL",
+            "Flight_Number": "296",
+            "Class_Of_Service": "T",
+            "Class_Of_Service_Desc": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Departure_Terminal": "",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH NRTATLDL 0296 225T00000000 18A>518                        2A0067790349828                             ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "N",
+                "Lounge": "N",
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N",
+                "Card_Type": []
+              }
+            ]
+          },
+          {
+            "Departure_Date": "2016-08-12",
+            "Departure_Time": "17:40",
+            "Departure_Station": "ATL",
+            "Arrival_Time": "19:06",
+            "Arrival_Station": "MYR",
+            "Airlines": "DL",
+            "Flight_Number": "5330",
+            "Class_Of_Service": "T",
+            "Class_Of_Service_Desc": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Departure_Terminal": "",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH ATLMYRDL 5330 225T00000000 18A>518                        2A0067790349828                             ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "N",
+                "Lounge": "N",
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N",
+                "Card_Type": []
+              }
+            ]
+          },
+          {
+            "Departure_Date": "2016-08-13",
+            "Departure_Time": "10:59",
+            "Departure_Station": "DCA",
+            "Arrival_Time": "12:10",
+            "Arrival_Station": "LGA",
+            "Airlines": "DL",
+            "Flight_Number": "2712",
+            "Class_Of_Service": "T",
+            "Class_Of_Service_Desc": "",
+            "Boarding_Gate": "",
+            "Boarding_Date": "",
+            "Boarding_Time": "",
+            "Departure_Terminal": "",
+            "Equiment": null,
+            "Pax_Info": [
+              {
+                "First_Name": "YENCHEN",
+                "Last_Name": "WANG",
+                "Seat_Number": "",
+                "Boarding_Pass": "M1WANG/YENCHEN        E2QU4RH DCALGADL 2712 226T00000000 18A>518                        2A0067790349828                             ",
+                "Seat_Zone": null,
+                "Seq_No": "",
+                "Sky_Priority": "N",
+                "Lounge": "N",
+                "Is_Print_BP": "N",
+                "Is_Check_In": "N",
+                "Card_Type": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<resources>
+	<string name="trip_detail_passenger_bag_pay_add_excess_readme">Anleitung für vorausbezahltes Übergepäck</string>
+	<string name="trip_detail_passenger_bag_pay_add_excess_production_readme">Produkt</string>
+	<string name="trip_detail_passenger_bag_pay_add_excess_production_content_url">https://www.china-airlines.com/us/en/fly/prepare-for-the-fly/baggage/excess-baggage</string>
+	<string name="trip_detail_passenger_bag_pay_add_excess_notes">Allgemeine Geschäftsbedingungen</string>
+	<string name="trip_detail_passenger_bag_pay_add_excess_notes_content">
+	1. Vorausbezahltes Übergepäck steht Passagieren (Kleinkinder ausgeschlossen) mit Flugtickets von China Airlines (297) und Mandarin Airlines (803) zur Verfügung und gilt nicht für Codesharing-Flüge von Partner-Fluggesellschaften. Mit separaten Tickets kann dieser Service nicht genutzt werden.\n\n
+	2. Sie können Übergepäck bis zu 24 Stunden vor Abflug unter china-airlines.com im Voraus bezahlen. Für zusätzliches Gepäck (bei Überschreitung des vorausbezahlten Übergepäcks), das innerhalb von 24 Stunden am Flughafen eingecheckt wird, wird eine höhere Übergepäckgebühr verrechnet.\n\n
+	3. Das vorausbezahlte Übergepäck ist persönlich und nicht übertragbar. Das vorausbezahlte Übergepäck kann nach der Verwendung nicht erstattet oder auf andere Flüge übertragen werden.\n\n
+	4. Das vorausbezahlte Übergepäck gilt für einen einzelnen Sektor bis zum Ort des Zwischenstopps oder dem Zielflughafen. Bitte beachten Sie, dass jeder Passagier für jede Richtung nur einmal von dem Service Gebrauch machen kann.\n\n
+	5. Für Reisen, bei denen das Gewichtskonzept gilt, können Sie eine zusätzliche Gewichtszugabe in Einheiten von 5 kg bis zu maximal 50 kg pro Flug im Voraus bezahlen. Das Höchstgewicht pro aufgegebenem Gepäckstück darf 32 kg nicht überschreiten. Für Flüge in die/aus den USA oder nach/von Kanada können Sie Zusatzgepäck mit bis zu 2 Gepäckstücken im Voraus bezahlen. Das Höchstgewicht pro Gepäckstück hängt von Ihrer Reiseklasse ab.\n\n
+	6. Das vorausbezahlte Übergepäck umfasst kein Gepäck mit Übergröße oder -gewicht, keine Golfausrüstung, keine Tiere (Haustiere) und kein Handgepäck. Weitere Informationen finden Sie in unseren Gepäckinformationen.\n\n
+	7. Wenn Fluggäste auf dem Abschnitt Hongkong-Jakarta reisen und/oder von einem der nachfolgend aufgelisteten Flughäfen abfliegen oder dort landen, können sie online keine Übergepäckkontingente erwerben.\n\n
+	● Festlandchina: Dalian, Fuzhou, Haikou, Hefei, Nanchang, Meixian, Ningbo, Sanya, Weihai, Wenzhou, Wuxi, Xuzhou, Yancheng, Yangzhou\n\n
+	● Südostasien: Palau\n\n
+	8. Auf internationalen Flügen mit mehreren Zwischenstopps in die/aus den USA oder nach/von Kanada ist der vorausbezahlte Übergepäckservice nicht verfügbar.\n\n
+	9. Wenn Sie mit dem Tarif „Let’s GO“ (nur Handgepäck) reisen, darf kein vorausbezahltes Übergepäck mitgeführt werden. Sie können Gepäck über die Buchungsanfrage bezahlen.\n\n
+	10. Wenn Sie Ihren Flug umbuchen müssen, kontaktieren Sie bitte den Kundenservice von China Airlines während der üblichen Geschäftszeiten oder besuchen Sie eine CI-Filiale, um die Änderungen vor Ihrem ursprünglichen Abflugzeitpunkt vornehmen zu lassen. Ihr Abflug- und Zielflughafen dürfen sich jedoch nicht ändern, es sei denn, Sie wollen für Ihre Tickets folgende Routenänderungen vornehmen:\n\n
+	● Taiwan-Guangzhou/Shenzhen kann zu Taiwan-Hongkong geändert werden.\n\n
+	● Taoyuan-Pudong ist austauschbar mit Songshan-Hongqiao.\n\n
+	● Taoyuan-Narita ist austauschbar mit Songshan-Haneda.\n\n
+	● Taoyuan-Incheon ist austauschbar mit Songshan-Gimpo.\n\n
+	11. Wenden Sie sich bitte innerhalb von 2 Jahren nach dem Kauf an die Zweigstelle von China Airlines, um eine Rückerstattung für Übergepäck zu beantragen. Das vorausbezahlte Übergepäck kann nach der Verwendung des Tickets nicht zurückerstattet werden. Es wird eine Servicegebühr in Höhe von 30 % des vorausbezahlten Kontingents erhoben.\n\n
+	12. Das gesamte Gepäck unterliegt den Allgemeinen Beförderungsbedingungen für Passagiere und Gepäck von China Airlines.\n\n
+	13. China Airlines behält sich das Recht vor, Tarife für Zusatzgepäck sowie die mit dem Kauf von Zusatzgepäck verbundenen Geschäftsbedingungen jederzeit mit oder ohne vorherige Ankündigung zu ändern.</string>
+	<string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules">Rückerstattungsvorschriften</string>
+	<string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules_content">
+	1. Wenn Sie eine Rückerstattung der Tickets möchten, die Sie mit Alipay bezahlt haben, wenden Sie sich bitte an die Zweigstelle von China Airlines oder das Büro von Mandarin Airlines.\n\n
+	2. Ihre Tickets sollten entweder von China Airlines (297) oder Mandarin Airlines (803) ausgestellt worden sein.\n\n
+	3. Online-Erstattungen sind nur für ungenutzte Gutscheine für Übergepäck innerhalb von zwei Jahren ab Ausstellungsdatum möglich.\n\n
+	4. Der Antrag auf Erstattung des Übergepäckgutscheins kann nur am Tag nach der Buchung angewendet werden.\n\n
+	5. Der Erstattungsbetrag wird dem ursprünglichen Karteninhaber auf die Karte, mit der die Bezahlung des Tickets vorgenommen wurde, gutgeschrieben.\n\n
+	6. Sobald wir Ihren Antrag erhalten haben, werden wir die Rückerstattung so schnell wie möglich veranlassen. Die Dauer der Erstattung unterliegt den Bearbeitungsverfahren der kartenausstellenden Banken. Die Servicegebühr für die Rückerstattung wird vom ursprünglichen Betrag abgezogen.\n\n
+	7. Tickets in die/aus den USA werden ohne Servicegebühr erstattet, wenn der Rückerstattungsantrag innerhalb von 48 Stunden nach dem Ticketkauf gestellt wird.\n\n
+	8. Tickets ab Korea werden ohne Servicegebühr erstattet, wenn der Rückerstattungsantrag innerhalb von 7 Tagen nach dem Ticketkauf gestellt wird</string>
+	<string name="trip_detail_passenger_bag_term_and_conditions">Ich bestätige, dass ich die /Allgemeinen Geschäftsbedingungen/ für den Kauf von Waren gelesen habe und damit einverstanden bin.</string>
+</resources>

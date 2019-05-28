@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_login"
+                android:fitsSystemWindows="true">
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true" >
+    </ci.ui.view.NavigationBar>
+    <ci.ui.view.ShadowBar.ShadowBarScrollview
+        android:id="@+id/scrollview"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/rl_finish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:focusableInTouchMode="true">
+
+    </ci.ui.view.ShadowBar.ShadowBarScrollview>
+
+    <RelativeLayout
+        android:id="@+id/rl_finish"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="100px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px">
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_btn_pinkish_red_selector"
+            android:text="@string/finish"
+            android:textColor="@color/white_four"
+            android:textSize="16px"
+            android:textAllCaps="false"
+            style="@style/regular" />
+    </RelativeLayout>
+
+</RelativeLayout>

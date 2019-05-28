@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:text="@string/home_page_button_find_my_booking"
+        android:id="@+id/btnTop"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white_four"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        style="@style/regular" />
+
+    <Button
+        android:layout_width="261dp"
+        android:layout_height="41dp"
+        android:text="@string/home_page_explore_destinations"
+        android:id="@+id/btnBottom"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white_four"
+        android:background="@drawable/btn_home_explore_destinayions"
+        style="@style/regular" />
+
+</LinearLayout>

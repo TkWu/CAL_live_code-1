@@ -1,0 +1,1134 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "country_name": "中華民國",
+      "country_cd": "TW",
+      "country_name_e": "TAIWAN",
+      "country_phone_cd": "886"
+    },
+    {
+      "country_name": "中國大陸",
+      "country_cd": "CN",
+      "country_name_e": "MAINLAND CHINA",
+      "country_phone_cd": "86"
+    },
+    {
+      "country_name": "香港",
+      "country_cd": "HK",
+      "country_name_e": "HONG KONG",
+      "country_phone_cd": "852"
+    },
+    {
+      "country_name": "澳門",
+      "country_cd": "MO",
+      "country_name_e": "MACAU",
+      "country_phone_cd": "853"
+    },
+    {
+      "country_name": "ALBANIA",
+      "country_cd": "AL",
+      "country_name_e": "ALBANIA",
+      "country_phone_cd": "355"
+    },
+    {
+      "country_name": "ALGERIA",
+      "country_cd": "DZ",
+      "country_name_e": "ALGERIA",
+      "country_phone_cd": "213"
+    },
+    {
+      "country_name": "AMERICAN SAMOA(U.S.A.)",
+      "country_cd": "AS",
+      "country_name_e": "AMERICAN SAMOA(U.S.A.)",
+      "country_phone_cd": "684"
+    },
+    {
+      "country_name": "ANDORRA",
+      "country_cd": "AB",
+      "country_name_e": "ANDORRA",
+      "country_phone_cd": ""
+    },
+    {
+      "country_name": "ANGOLA",
+      "country_cd": "AO",
+      "country_name_e": "ANGOLA",
+      "country_phone_cd": "224"
+    },
+    {
+      "country_name": "ARGENTINA",
+      "country_cd": "AR",
+      "country_name_e": "ARGENTINA",
+      "country_phone_cd": "54"
+    },
+    {
+      "country_name": "ARUBA",
+      "country_cd": "AW",
+      "country_name_e": "ARUBA",
+      "country_phone_cd": "297"
+    },
+    {
+      "country_name": "AUSTRALIA",
+      "country_cd": "AU",
+      "country_name_e": "AUSTRALIA",
+      "country_phone_cd": "61"
+    },
+    {
+      "country_name": "AUSTRIA",
+      "country_cd": "AT",
+      "country_name_e": "AUSTRIA",
+      "country_phone_cd": "43"
+    },
+    {
+      "country_name": "BAHAMAS",
+      "country_cd": "BS",
+      "country_name_e": "BAHAMAS",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "BAHRAIN",
+      "country_cd": "BH",
+      "country_name_e": "BAHRAIN",
+      "country_phone_cd": "973"
+    },
+    {
+      "country_name": "BANGLADESH",
+      "country_cd": "BD",
+      "country_name_e": "BANGLADESH",
+      "country_phone_cd": "880"
+    },
+    {
+      "country_name": "BARBADOS",
+      "country_cd": "BB",
+      "country_name_e": "BARBADOS",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "BELARUS",
+      "country_cd": "BY",
+      "country_name_e": "BELARUS",
+      "country_phone_cd": "375"
+    },
+    {
+      "country_name": "BELGIUM",
+      "country_cd": "BE",
+      "country_name_e": "BELGIUM",
+      "country_phone_cd": "32"
+    },
+    {
+      "country_name": "BELIZE",
+      "country_cd": "BZ",
+      "country_name_e": "BELIZE",
+      "country_phone_cd": "501"
+    },
+    {
+      "country_name": "BENIN",
+      "country_cd": "BJ",
+      "country_name_e": "BENIN",
+      "country_phone_cd": "229"
+    },
+    {
+      "country_name": "BERMUDA IS.",
+      "country_cd": "BM",
+      "country_name_e": "BERMUDA IS.",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "BHUTAN",
+      "country_cd": "BT",
+      "country_name_e": "BHUTAN",
+      "country_phone_cd": "975"
+    },
+    {
+      "country_name": "BOLIVIA",
+      "country_cd": "BO",
+      "country_name_e": "BOLIVIA",
+      "country_phone_cd": "591"
+    },
+    {
+      "country_name": "BOSNIA-HERZEGOVINA REP.",
+      "country_cd": "BA",
+      "country_name_e": "BOSNIA-HERZEGOVINA REP.",
+      "country_phone_cd": "387"
+    },
+    {
+      "country_name": "BOTSWANA",
+      "country_cd": "BW",
+      "country_name_e": "BOTSWANA",
+      "country_phone_cd": "267"
+    },
+    {
+      "country_name": "BRAZIL",
+      "country_cd": "BR",
+      "country_name_e": "BRAZIL",
+      "country_phone_cd": "55"
+    },
+    {
+      "country_name": "BRUNEI",
+      "country_cd": "BN",
+      "country_name_e": "BRUNEI",
+      "country_phone_cd": "673"
+    },
+    {
+      "country_name": "BULGARIA",
+      "country_cd": "BG",
+      "country_name_e": "BULGARIA",
+      "country_phone_cd": "359"
+    },
+    {
+      "country_name": "BURKINA FASO",
+      "country_cd": "BF",
+      "country_name_e": "BURKINA FASO",
+      "country_phone_cd": "226"
+    },
+    {
+      "country_name": "CAMBODIA(KAMPUCHEA)",
+      "country_cd": "KH",
+      "country_name_e": "CAMBODIA(KAMPUCHEA)",
+      "country_phone_cd": "855"
+    },
+    {
+      "country_name": "CAMEROON",
+      "country_cd": "CM",
+      "country_name_e": "CAMEROON",
+      "country_phone_cd": "237"
+    },
+    {
+      "country_name": "CANADA",
+      "country_cd": "CA",
+      "country_name_e": "CANADA",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "CAYMAN ISLANDS",
+      "country_cd": "KY",
+      "country_name_e": "CAYMAN ISLANDS",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "CHILE",
+      "country_cd": "CL",
+      "country_name_e": "CHILE",
+      "country_phone_cd": "56"
+    },
+    {
+      "country_name": "COLOMBIA",
+      "country_cd": "CO",
+      "country_name_e": "COLOMBIA",
+      "country_phone_cd": "57"
+    },
+    {
+      "country_name": "CONGO",
+      "country_cd": "CG",
+      "country_name_e": "CONGO",
+      "country_phone_cd": "242"
+    },
+    {
+      "country_name": "COSTA RICA",
+      "country_cd": "CR",
+      "country_name_e": "COSTA RICA",
+      "country_phone_cd": "506"
+    },
+    {
+      "country_name": "CROATIA",
+      "country_cd": "HR",
+      "country_name_e": "CROATIA",
+      "country_phone_cd": "385"
+    },
+    {
+      "country_name": "CYPRUS",
+      "country_cd": "CY",
+      "country_name_e": "CYPRUS",
+      "country_phone_cd": "357"
+    },
+    {
+      "country_name": "CZECH REP.",
+      "country_cd": "CZ",
+      "country_name_e": "CZECH REP.",
+      "country_phone_cd": "420"
+    },
+    {
+      "country_name": "CZECHOSLOVAKIA",
+      "country_cd": "CS",
+      "country_name_e": "CZECHOSLOVAKIA",
+      "country_phone_cd": "420"
+    },
+    {
+      "country_name": "DENMARK",
+      "country_cd": "DK",
+      "country_name_e": "DENMARK",
+      "country_phone_cd": "45"
+    },
+    {
+      "country_name": "DOMINICA",
+      "country_cd": "DM",
+      "country_name_e": "DOMINICA",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "DOMINICAN REP.",
+      "country_cd": "DO",
+      "country_name_e": "DOMINICAN REP.",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "ECUADOR",
+      "country_cd": "EC",
+      "country_name_e": "ECUADOR",
+      "country_phone_cd": "593"
+    },
+    {
+      "country_name": "EGYPT",
+      "country_cd": "EG",
+      "country_name_e": "EGYPT",
+      "country_phone_cd": "20"
+    },
+    {
+      "country_name": "EL SALVADOR",
+      "country_cd": "SV",
+      "country_name_e": "EL SALVADOR",
+      "country_phone_cd": "503"
+    },
+    {
+      "country_name": "ESTONIA",
+      "country_cd": "EE",
+      "country_name_e": "ESTONIA",
+      "country_phone_cd": "372"
+    },
+    {
+      "country_name": "ETHIOPIA",
+      "country_cd": "ET",
+      "country_name_e": "ETHIOPIA",
+      "country_phone_cd": "251"
+    },
+    {
+      "country_name": "FIJI",
+      "country_cd": "FJ",
+      "country_name_e": "FIJI",
+      "country_phone_cd": "679"
+    },
+    {
+      "country_name": "FINLAND",
+      "country_cd": "FI",
+      "country_name_e": "FINLAND",
+      "country_phone_cd": "358"
+    },
+    {
+      "country_name": "FRANCE",
+      "country_cd": "FR",
+      "country_name_e": "FRANCE",
+      "country_phone_cd": "33"
+    },
+    {
+      "country_name": "GABON",
+      "country_cd": "GA",
+      "country_name_e": "GABON",
+      "country_phone_cd": "241"
+    },
+    {
+      "country_name": "GAMBIA",
+      "country_cd": "GM",
+      "country_name_e": "GAMBIA",
+      "country_phone_cd": "220"
+    },
+    {
+      "country_name": "GERMANY",
+      "country_cd": "DE",
+      "country_name_e": "GERMANY",
+      "country_phone_cd": "49"
+    },
+    {
+      "country_name": "GHANA",
+      "country_cd": "GH",
+      "country_name_e": "GHANA",
+      "country_phone_cd": "233"
+    },
+    {
+      "country_name": "GRENADA",
+      "country_cd": "GD",
+      "country_name_e": "GRENADA",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "GUADELOUPE",
+      "country_cd": "GP",
+      "country_name_e": "GUADELOUPE",
+      "country_phone_cd": "590"
+    },
+    {
+      "country_name": "GUAM",
+      "country_cd": "GU",
+      "country_name_e": "GUAM",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "GUATEMALA",
+      "country_cd": "GT",
+      "country_name_e": "GUATEMALA",
+      "country_phone_cd": "502"
+    },
+    {
+      "country_name": "GUINEA",
+      "country_cd": "GN",
+      "country_name_e": "GUINEA",
+      "country_phone_cd": "224"
+    },
+    {
+      "country_name": "GUYANA",
+      "country_cd": "GY",
+      "country_name_e": "GUYANA",
+      "country_phone_cd": "592"
+    },
+    {
+      "country_name": "HAITI",
+      "country_cd": "HT",
+      "country_name_e": "HAITI",
+      "country_phone_cd": "509"
+    },
+    {
+      "country_name": "HELLENIC(GREEK)",
+      "country_cd": "GR",
+      "country_name_e": "HELLENIC(GREEK)",
+      "country_phone_cd": "30"
+    },
+    {
+      "country_name": "HONDURAS",
+      "country_cd": "HN",
+      "country_name_e": "HONDURAS",
+      "country_phone_cd": "504"
+    },
+    {
+      "country_name": "HUNGARY",
+      "country_cd": "HU",
+      "country_name_e": "HUNGARY",
+      "country_phone_cd": "36"
+    },
+    {
+      "country_name": "ICELAND",
+      "country_cd": "IS",
+      "country_name_e": "ICELAND",
+      "country_phone_cd": "354"
+    },
+    {
+      "country_name": "INDIA",
+      "country_cd": "IN",
+      "country_name_e": "INDIA",
+      "country_phone_cd": "91"
+    },
+    {
+      "country_name": "INDONESIA",
+      "country_cd": "ID",
+      "country_name_e": "INDONESIA",
+      "country_phone_cd": "62"
+    },
+    {
+      "country_name": "IRAN",
+      "country_cd": "IR",
+      "country_name_e": "IRAN",
+      "country_phone_cd": "98"
+    },
+    {
+      "country_name": "IRAQ",
+      "country_cd": "IQ",
+      "country_name_e": "IRAQ",
+      "country_phone_cd": "964"
+    },
+    {
+      "country_name": "IRELAND",
+      "country_cd": "IE",
+      "country_name_e": "IRELAND",
+      "country_phone_cd": "353"
+    },
+    {
+      "country_name": "ISRAEL",
+      "country_cd": "IL",
+      "country_name_e": "ISRAEL",
+      "country_phone_cd": "972"
+    },
+    {
+      "country_name": "ITALY",
+      "country_cd": "IT",
+      "country_name_e": "ITALY",
+      "country_phone_cd": "39"
+    },
+    {
+      "country_name": "IVORY COAST",
+      "country_cd": "CI",
+      "country_name_e": "IVORY COAST",
+      "country_phone_cd": "225"
+    },
+    {
+      "country_name": "JAMAICA",
+      "country_cd": "JM",
+      "country_name_e": "JAMAICA",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "JAPAN",
+      "country_cd": "JP",
+      "country_name_e": "JAPAN",
+      "country_phone_cd": "81"
+    },
+    {
+      "country_name": "JORDAN",
+      "country_cd": "JO",
+      "country_name_e": "JORDAN",
+      "country_phone_cd": "962"
+    },
+    {
+      "country_name": "KAZAKHSTAN",
+      "country_cd": "KZ",
+      "country_name_e": "KAZAKHSTAN",
+      "country_phone_cd": "7"
+    },
+    {
+      "country_name": "KENYA",
+      "country_cd": "KE",
+      "country_name_e": "KENYA",
+      "country_phone_cd": "254"
+    },
+    {
+      "country_name": "KIRIBATI REP.",
+      "country_cd": "KI",
+      "country_name_e": "KIRIBATI REP.",
+      "country_phone_cd": "686"
+    },
+    {
+      "country_name": "KOSOVO",
+      "country_cd": "RK",
+      "country_name_e": "KOSOVO",
+      "country_phone_cd": "381"
+    },
+    {
+      "country_name": "KUWAIT",
+      "country_cd": "KW",
+      "country_name_e": "KUWAIT",
+      "country_phone_cd": "965"
+    },
+    {
+      "country_name": "LAOS",
+      "country_cd": "LA",
+      "country_name_e": "LAOS",
+      "country_phone_cd": "856"
+    },
+    {
+      "country_name": "LATVIA",
+      "country_cd": "LV",
+      "country_name_e": "LATVIA",
+      "country_phone_cd": "371"
+    },
+    {
+      "country_name": "LEBANON REP.",
+      "country_cd": "LB",
+      "country_name_e": "LEBANON REP.",
+      "country_phone_cd": "961"
+    },
+    {
+      "country_name": "LIECHTENSTEIN",
+      "country_cd": "LI",
+      "country_name_e": "LIECHTENSTEIN",
+      "country_phone_cd": "41"
+    },
+    {
+      "country_name": "LITHUANIA",
+      "country_cd": "LT",
+      "country_name_e": "LITHUANIA",
+      "country_phone_cd": "370"
+    },
+    {
+      "country_name": "LUXEMBOURG",
+      "country_cd": "LU",
+      "country_name_e": "LUXEMBOURG",
+      "country_phone_cd": "352"
+    },
+    {
+      "country_name": "MACEDONIA REP.",
+      "country_cd": "MK",
+      "country_name_e": "MACEDONIA REP.",
+      "country_phone_cd": "389"
+    },
+    {
+      "country_name": "MADAGASCAR",
+      "country_cd": "MG",
+      "country_name_e": "MADAGASCAR",
+      "country_phone_cd": "261"
+    },
+    {
+      "country_name": "MALAWI",
+      "country_cd": "MW",
+      "country_name_e": "MALAWI",
+      "country_phone_cd": "265"
+    },
+    {
+      "country_name": "MALAYSIA",
+      "country_cd": "MY",
+      "country_name_e": "MALAYSIA",
+      "country_phone_cd": "60"
+    },
+    {
+      "country_name": "MALDIVES",
+      "country_cd": "MV",
+      "country_name_e": "MALDIVES",
+      "country_phone_cd": "960"
+    },
+    {
+      "country_name": "MALI REP.",
+      "country_cd": "ML",
+      "country_name_e": "MALI REP.",
+      "country_phone_cd": "223"
+    },
+    {
+      "country_name": "MALTA",
+      "country_cd": "MT",
+      "country_name_e": "MALTA",
+      "country_phone_cd": "356"
+    },
+    {
+      "country_name": "MARSHALL ISLANDS",
+      "country_cd": "MH",
+      "country_name_e": "MARSHALL ISLANDS",
+      "country_phone_cd": "692"
+    },
+    {
+      "country_name": "MARTINIQUE ISLAND",
+      "country_cd": "MQ",
+      "country_name_e": "MARTINIQUE ISLAND",
+      "country_phone_cd": "596"
+    },
+    {
+      "country_name": "MAURITIUS",
+      "country_cd": "MU",
+      "country_name_e": "MAURITIUS",
+      "country_phone_cd": "230"
+    },
+    {
+      "country_name": "MEXICO",
+      "country_cd": "MX",
+      "country_name_e": "MEXICO",
+      "country_phone_cd": "52"
+    },
+    {
+      "country_name": "MICRONESIA",
+      "country_cd": "FM",
+      "country_name_e": "MICRONESIA",
+      "country_phone_cd": "691"
+    },
+    {
+      "country_name": "MOLDOVA REP.",
+      "country_cd": "MD",
+      "country_name_e": "MOLDOVA REP.",
+      "country_phone_cd": "373"
+    },
+    {
+      "country_name": "MONACO",
+      "country_cd": "MC",
+      "country_name_e": "MONACO",
+      "country_phone_cd": "377"
+    },
+    {
+      "country_name": "MONGOLIA",
+      "country_cd": "MN",
+      "country_name_e": "MONGOLIA",
+      "country_phone_cd": "976"
+    },
+    {
+      "country_name": "MOROCCO",
+      "country_cd": "MA",
+      "country_name_e": "MOROCCO",
+      "country_phone_cd": "212"
+    },
+    {
+      "country_name": "MOZAMBIQUE",
+      "country_cd": "MZ",
+      "country_name_e": "MOZAMBIQUE",
+      "country_phone_cd": "258"
+    },
+    {
+      "country_name": "MYANMAR(BURMA)",
+      "country_cd": "MM",
+      "country_name_e": "MYANMAR(BURMA)",
+      "country_phone_cd": "95"
+    },
+    {
+      "country_name": "NAMIBIA",
+      "country_cd": "NA",
+      "country_name_e": "NAMIBIA",
+      "country_phone_cd": "264"
+    },
+    {
+      "country_name": "NAURU REP.",
+      "country_cd": "NR",
+      "country_name_e": "NAURU REP.",
+      "country_phone_cd": "674"
+    },
+    {
+      "country_name": "NEPAL",
+      "country_cd": "NP",
+      "country_name_e": "NEPAL",
+      "country_phone_cd": "977"
+    },
+    {
+      "country_name": "NETHERLANDS",
+      "country_cd": "NL",
+      "country_name_e": "NETHERLANDS",
+      "country_phone_cd": "31"
+    },
+    {
+      "country_name": "NEW CALEDONIA",
+      "country_cd": "NC",
+      "country_name_e": "NEW CALEDONIA",
+      "country_phone_cd": "687"
+    },
+    {
+      "country_name": "NEW ZEALAND",
+      "country_cd": "NZ",
+      "country_name_e": "NEW ZEALAND",
+      "country_phone_cd": "64"
+    },
+    {
+      "country_name": "NICARAGUA",
+      "country_cd": "NI",
+      "country_name_e": "NICARAGUA",
+      "country_phone_cd": "505"
+    },
+    {
+      "country_name": "NIGER",
+      "country_cd": "NE",
+      "country_name_e": "NIGER",
+      "country_phone_cd": "227"
+    },
+    {
+      "country_name": "NIGERIA",
+      "country_cd": "NG",
+      "country_name_e": "NIGERIA",
+      "country_phone_cd": "234"
+    },
+    {
+      "country_name": "NORTH KOREA",
+      "country_cd": "KP",
+      "country_name_e": "NORTH KOREA",
+      "country_phone_cd": "850"
+    },
+    {
+      "country_name": "NORWAY",
+      "country_cd": "NO",
+      "country_name_e": "NORWAY",
+      "country_phone_cd": "47"
+    },
+    {
+      "country_name": "PAKISTAN",
+      "country_cd": "PK",
+      "country_name_e": "PAKISTAN",
+      "country_phone_cd": "92"
+    },
+    {
+      "country_name": "PALAU",
+      "country_cd": "PW",
+      "country_name_e": "PALAU",
+      "country_phone_cd": "680"
+    },
+    {
+      "country_name": "PANAMA",
+      "country_cd": "PA",
+      "country_name_e": "PANAMA",
+      "country_phone_cd": "507"
+    },
+    {
+      "country_name": "PARAGUAY",
+      "country_cd": "PY",
+      "country_name_e": "PARAGUAY",
+      "country_phone_cd": "595"
+    },
+    {
+      "country_name": "PERU",
+      "country_cd": "PE",
+      "country_name_e": "PERU",
+      "country_phone_cd": "51"
+    },
+    {
+      "country_name": "PHILIPPINES",
+      "country_cd": "PH",
+      "country_name_e": "PHILIPPINES",
+      "country_phone_cd": "63"
+    },
+    {
+      "country_name": "POLAND",
+      "country_cd": "PL",
+      "country_name_e": "POLAND",
+      "country_phone_cd": "48"
+    },
+    {
+      "country_name": "PORTUGAL",
+      "country_cd": "PT",
+      "country_name_e": "PORTUGAL",
+      "country_phone_cd": "351"
+    },
+    {
+      "country_name": "PUERTO RICO",
+      "country_cd": "PR",
+      "country_name_e": "PUERTO RICO",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "PUPUA NEW GUINEA",
+      "country_cd": "PG",
+      "country_name_e": "PUPUA NEW GUINEA",
+      "country_phone_cd": "675"
+    },
+    {
+      "country_name": "QATAR",
+      "country_cd": "QA",
+      "country_name_e": "QATAR",
+      "country_phone_cd": "974"
+    },
+    {
+      "country_name": "R.S.A.(SOUTH AFRICA)",
+      "country_cd": "ZA",
+      "country_name_e": "R.S.A.(SOUTH AFRICA)",
+      "country_phone_cd": "27"
+    },
+    {
+      "country_name": "REPUBLIC OF ARMENIA",
+      "country_cd": "AM",
+      "country_name_e": "REPUBLIC OF ARMENIA",
+      "country_phone_cd": "374"
+    },
+    {
+      "country_name": "REUNION ISLAND",
+      "country_cd": "RE",
+      "country_name_e": "REUNION ISLAND",
+      "country_phone_cd": "262"
+    },
+    {
+      "country_name": "ROMANIA",
+      "country_cd": "RO",
+      "country_name_e": "ROMANIA",
+      "country_phone_cd": "40"
+    },
+    {
+      "country_name": "RUSSIA",
+      "country_cd": "RU",
+      "country_name_e": "RUSSIA",
+      "country_phone_cd": "7"
+    },
+    {
+      "country_name": "SAIPAN MARIANA IS.",
+      "country_cd": "MP",
+      "country_name_e": "SAIPAN MARIANA IS.",
+      "country_phone_cd": "670"
+    },
+    {
+      "country_name": "SAN MARINO",
+      "country_cd": "SM",
+      "country_name_e": "SAN MARINO",
+      "country_phone_cd": "378"
+    },
+    {
+      "country_name": "SAO TOME E PRINCIPE",
+      "country_cd": "ST",
+      "country_name_e": "SAO TOME E PRINCIPE",
+      "country_phone_cd": "239"
+    },
+    {
+      "country_name": "SAUDI ARABIA",
+      "country_cd": "SA",
+      "country_name_e": "SAUDI ARABIA",
+      "country_phone_cd": "966"
+    },
+    {
+      "country_name": "SENEGAL",
+      "country_cd": "SN",
+      "country_name_e": "SENEGAL",
+      "country_phone_cd": "221"
+    },
+    {
+      "country_name": "SEYCHELLES",
+      "country_cd": "SC",
+      "country_name_e": "SEYCHELLES",
+      "country_phone_cd": "248"
+    },
+    {
+      "country_name": "SINGAPORE",
+      "country_cd": "SG",
+      "country_name_e": "SINGAPORE",
+      "country_phone_cd": "65"
+    },
+    {
+      "country_name": "SLOVAK",
+      "country_cd": "SK",
+      "country_name_e": "SLOVAK",
+      "country_phone_cd": "421"
+    },
+    {
+      "country_name": "SLOVENIA",
+      "country_cd": "SI",
+      "country_name_e": "SLOVENIA",
+      "country_phone_cd": "386"
+    },
+    {
+      "country_name": "SOLOMON ISLAND",
+      "country_cd": "SB",
+      "country_name_e": "SOLOMON ISLAND",
+      "country_phone_cd": "677"
+    },
+    {
+      "country_name": "SOUTH KOREA",
+      "country_cd": "KR",
+      "country_name_e": "SOUTH KOREA",
+      "country_phone_cd": "82"
+    },
+    {
+      "country_name": "SPAIN(ESPANA)",
+      "country_cd": "ES",
+      "country_name_e": "SPAIN(ESPANA)",
+      "country_phone_cd": "34"
+    },
+    {
+      "country_name": "SRI LANKA",
+      "country_cd": "LK",
+      "country_name_e": "SRI LANKA",
+      "country_phone_cd": "94"
+    },
+    {
+      "country_name": "ST. KITTS ST. NEVIS",
+      "country_cd": "KN",
+      "country_name_e": "ST. KITTS ST. NEVIS",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "ST. LUCIA",
+      "country_cd": "LC",
+      "country_name_e": "ST. LUCIA",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "ST. VINCENT",
+      "country_cd": "VC",
+      "country_name_e": "ST. VINCENT",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "SUDAN",
+      "country_cd": "SD",
+      "country_name_e": "SUDAN",
+      "country_phone_cd": "249"
+    },
+    {
+      "country_name": "SURINAM REP.",
+      "country_cd": "SR",
+      "country_name_e": "SURINAM REP.",
+      "country_phone_cd": "597"
+    },
+    {
+      "country_name": "SWAZILAMD",
+      "country_cd": "SZ",
+      "country_name_e": "SWAZILAMD",
+      "country_phone_cd": "268"
+    },
+    {
+      "country_name": "SWEDEN",
+      "country_cd": "SE",
+      "country_name_e": "SWEDEN",
+      "country_phone_cd": "46"
+    },
+    {
+      "country_name": "SWITZERLAND",
+      "country_cd": "CH",
+      "country_name_e": "SWITZERLAND",
+      "country_phone_cd": "41"
+    },
+    {
+      "country_name": "SYRIA",
+      "country_cd": "SY",
+      "country_name_e": "SYRIA",
+      "country_phone_cd": "963"
+    },
+    {
+      "country_name": "TAHITI (FRENCH POLYNESIA)",
+      "country_cd": "PF",
+      "country_name_e": "TAHITI (FRENCH POLYNESIA)",
+      "country_phone_cd": "689"
+    },
+    {
+      "country_name": "TAJIKISTAN",
+      "country_cd": "TJ",
+      "country_name_e": "TAJIKISTAN",
+      "country_phone_cd": "992"
+    },
+    {
+      "country_name": "TANZANIA",
+      "country_cd": "TZ",
+      "country_name_e": "TANZANIA",
+      "country_phone_cd": "255"
+    },
+    {
+      "country_name": "THAILAND",
+      "country_cd": "TH",
+      "country_name_e": "THAILAND",
+      "country_phone_cd": "66"
+    },
+    {
+      "country_name": "TOGO REP.",
+      "country_cd": "TG",
+      "country_name_e": "TOGO REP.",
+      "country_phone_cd": "228"
+    },
+    {
+      "country_name": "TONGA",
+      "country_cd": "TO",
+      "country_name_e": "TONGA",
+      "country_phone_cd": "676"
+    },
+    {
+      "country_name": "TRINIDAD & TOBAGO",
+      "country_cd": "TT",
+      "country_name_e": "TRINIDAD & TOBAGO",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "TUNISIA",
+      "country_cd": "TN",
+      "country_name_e": "TUNISIA",
+      "country_phone_cd": "216"
+    },
+    {
+      "country_name": "TURKEY",
+      "country_cd": "TR",
+      "country_name_e": "TURKEY",
+      "country_phone_cd": "90"
+    },
+    {
+      "country_name": "TURKS AND CAICOS IS.",
+      "country_cd": "TC",
+      "country_name_e": "TURKS AND CAICOS IS.",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "TUVALU",
+      "country_cd": "TV",
+      "country_name_e": "TUVALU",
+      "country_phone_cd": "688"
+    },
+    {
+      "country_name": "U. S. A.",
+      "country_cd": "US",
+      "country_name_e": "U. S. A.",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "U.A.E.",
+      "country_cd": "AE",
+      "country_name_e": "U.A.E.",
+      "country_phone_cd": "971"
+    },
+    {
+      "country_name": "U.S.A. VIRGIN ISLAND",
+      "country_cd": "VI",
+      "country_name_e": "U.S.A. VIRGIN ISLAND",
+      "country_phone_cd": "1"
+    },
+    {
+      "country_name": "UGANDA",
+      "country_cd": "UG",
+      "country_name_e": "UGANDA",
+      "country_phone_cd": "256"
+    },
+    {
+      "country_name": "UKRAINE",
+      "country_cd": "UA",
+      "country_name_e": "UKRAINE",
+      "country_phone_cd": "380"
+    },
+    {
+      "country_name": "UNITED KINGDOM",
+      "country_cd": "GB",
+      "country_name_e": "UNITED KINGDOM",
+      "country_phone_cd": "44"
+    },
+    {
+      "country_name": "URUGUAY",
+      "country_cd": "UY",
+      "country_name_e": "URUGUAY",
+      "country_phone_cd": "598"
+    },
+    {
+      "country_name": "UZBEKISTAN",
+      "country_cd": "UZ",
+      "country_name_e": "UZBEKISTAN",
+      "country_phone_cd": "998"
+    },
+    {
+      "country_name": "VANUATU",
+      "country_cd": "VU",
+      "country_name_e": "VANUATU",
+      "country_phone_cd": "678"
+    },
+    {
+      "country_name": "VATICAN",
+      "country_cd": "VA",
+      "country_name_e": "VATICAN",
+      "country_phone_cd": "39"
+    },
+    {
+      "country_name": "VENEZUELA",
+      "country_cd": "VE",
+      "country_name_e": "VENEZUELA",
+      "country_phone_cd": "58"
+    },
+    {
+      "country_name": "VIETNAM",
+      "country_cd": "VN",
+      "country_name_e": "VIETNAM",
+      "country_phone_cd": "84"
+    },
+    {
+      "country_name": "WESTERN SAMOA",
+      "country_cd": "WS",
+      "country_name_e": "WESTERN SAMOA",
+      "country_phone_cd": "685"
+    },
+    {
+      "country_name": "YEMEN REP.",
+      "country_cd": "YE",
+      "country_name_e": "YEMEN REP.",
+      "country_phone_cd": "967"
+    },
+    {
+      "country_name": "YUGOSLAVIA",
+      "country_cd": "YU",
+      "country_name_e": "YUGOSLAVIA",
+      "country_phone_cd": "381"
+    },
+    {
+      "country_name": "ZAIRE",
+      "country_cd": "ZR",
+      "country_name_e": "ZAIRE",
+      "country_phone_cd": "243"
+    },
+    {
+      "country_name": "ZAMBIA",
+      "country_cd": "ZM",
+      "country_name_e": "ZAMBIA",
+      "country_phone_cd": "260"
+    },
+    {
+      "country_name": "ZIMBABWE",
+      "country_cd": "ZW",
+      "country_name_e": "ZIMBABWE",
+      "country_phone_cd": "263"
+    },
+    {
+      "country_name": "fffff",
+      "country_cd": "BC",
+      "country_name_e": "fffff",
+      "country_phone_cd": ""
+    },
+    {
+      "country_name": "test",
+      "country_cd": "AZ",
+      "country_name_e": "test",
+      "country_phone_cd": ""
+    }
+  ]
+}

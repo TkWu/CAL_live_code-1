@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_text"
+        android:layout_width="290dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="@string/input_detail_hello"
+            android:textColor="@color/white_four"
+            android:textSize="20sp"
+            style="@style/regular"/>
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_below="@+id/tv_hello"
+            android:text="@string/menu_welcome_tag"
+            android:textColor="@color/white_four"
+            android:textSize="20sp"
+            style="@style/light"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="123dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:splitMotionEvents="false">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/bg_sidemenu_btn_selector"
+            android:gravity="center_vertical|center_horizontal"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:singleLine="true"
+            android:text="@string/menu_log_in"
+            android:textAllCaps="false"
+            android:textColor="@color/white_four"
+            android:textSize="20sp"
+            style="@style/light" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_sidemenu_btn_selector"
+            android:gravity="center_vertical|center_horizontal"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:singleLine="true"
+            android:text="@string/menu_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/white_four"
+            android:textSize="20sp"
+            style="@style/light" />
+    </LinearLayout>
+</RelativeLayout>

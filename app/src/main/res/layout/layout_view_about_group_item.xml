@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_30"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:gravity="center_vertical"
+        android:text="@string/contact_us"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        style="@style/regular" />
+
+</RelativeLayout>

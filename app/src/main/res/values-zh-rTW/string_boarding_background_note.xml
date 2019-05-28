@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boardingpass_background_notes_title">注意事項</string>
+    <string name="boardingpass_background_notes_content">
+        • 若需以登機證做為公差報帳依據，搭機前請自行將電子登機證透過截圖方式進行保存，搭機後另可至中華航空各營業處所申請搭機證明( https://www.china-airlines.com/tw/zh/fly/on-board/invoice-application-form )。\n\n
+        • 請在航班啟航前最少30分鐘於登機門服務櫃檯出示旅行證件並於登機塒出示本登機證。\n\n
+        • 正確之登機門號碼請參考機場航班資訊系統。\n\n
+        • 如您有託運行李，請務必於起飛前1小時至機場本公司報到櫃檯辦理後(小港國際機場B櫃檯前方設有專屬快速服務櫃檯），再接受證照及安全檢查。 \n\n
+        • 本公司保有權利因應飛機調度，而更動起飛時問，及調整旅客指定座位。 \n\n
+        • 目前「預辦登機」自助列印登機證服務不適用於香港機場轉機之旅客。\n\n
+        • 以信用卡購買電子機票旅客必須於訂位紀錄中第一段行程啟程地之機場報到櫃檯或登機門完成「核對信用卡」手續，未依規定完成核對手續者，將導致旅客必須在機場另行購買適用機票，方可成行，信用卡代購須知請參閱華航網站 ( https://www.china-airlines.com/tw/zh/fly/prepare-for-the-fly/information-for-travellers/Notice-for-Credit-Card-Payment )。\n
+        </string>
+</resources>

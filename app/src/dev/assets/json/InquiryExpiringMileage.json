@@ -1,0 +1,30 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "expire_date": "2016-05-31",
+      "mileage": "2066"
+    },
+    {
+      "expire_date": "2016-06-30",
+      "mileage": "18126"
+    },
+    {
+      "expire_date": "2016-07-31",
+      "mileage": "14138"
+    },
+    {
+      "expire_date": "2016-08-31",
+      "mileage": "370"
+    },
+    {
+      "expire_date": "2016-09-30",
+      "mileage": "1500"
+    },
+    {
+      "expire_date": "2016-10-31",
+      "mileage": "275"
+    }
+  ]
+}

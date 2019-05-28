@@ -1,0 +1,32 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": {
+    "guard_last_name": "",
+    "guard_card_no": "",
+    "rcv_email": "Y",
+    "con_facebook": "Y",
+    "google_mail": "N",
+    "birth_date": "1969-11-22",
+    "google_uid": "N",
+    "surname": "MR",
+    "Seat_Code": "NSSW",
+    "id_num": "F127753131",
+    "con_google": "N",
+    "Passport": "",
+    "email": "wiilin@softmobile.com.tw",
+    "cell_city": "886",
+    "guard_first_name": "",
+    "facebook_mail": "ya790504@hotmail.com",
+    "Meal_Type": "BBML",
+    "nation_code": "TW",
+    "chin_name": "林威達",
+    "last_name": "WU",
+    "city": "",
+    "guard_birth_date": "",
+    "cell_num": "0921575551",
+    "rcv_sms": "Y",
+    "facebook_uid": "10206089786711317",
+    "first_name": "ALBERT"
+  }
+}

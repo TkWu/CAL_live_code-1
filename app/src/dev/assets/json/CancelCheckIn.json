@@ -1,0 +1,26 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "Pax_Info": [
+      {
+        "First_Name": "YENCHEN",
+        "Last_Name": "WANG",
+        "Uci": "200197B7000D07E3",
+        "Pnr_Id": "2QU4RH",
+        "Itinerary_Info": [
+          {
+            "Did": "2002E7C300229245",
+            "Departure_Station": "TPE",
+            "Arrival_Station": "NRT",
+            "rt_code": "000",
+            "rt_msg": "OK",
+            "Step": " Cancel Check In",
+            "Segment_Number": null,
+            "Seat_Number": null
+          }
+        ]
+      }
+    ]
+  }
+}

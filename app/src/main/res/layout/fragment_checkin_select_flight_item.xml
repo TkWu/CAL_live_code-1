@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/imgBtnCheckBox"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_checkbox_on"
+            android:background="@color/transparent"
+            android:clickable="false"/>
+
+        <ci.ui.FlightCard.CICheckInFlightCardView
+            android:id="@+id/vflightCard"
+            android:layout_height="match_parent"
+            android:layout_width="276dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+        </ci.ui.FlightCard.CICheckInFlightCardView>
+    </RelativeLayout>
+</LinearLayout>

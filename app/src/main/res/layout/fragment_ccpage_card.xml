@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_view_passenger_inquiry_excess_baggage_info_total_card"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:background="@color/black_30">
+        <TextView
+            android:layout_width="300px"
+            android:layout_height="22.7px"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            android:textSize="16px"
+            android:gravity="center_vertical"
+            android:text="@string/trip_detail_passenger_bag_select_pay_mode"
+            android:textColor="@color/white_four"
+            style="@style/regular" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37.7px"
+            android:layout_marginBottom="37.7px"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="300px"
+                android:layout_height="41px"
+                android:orientation="horizontal">
+                
+                <ImageButton
+                    android:id="@+id/ib_cc"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:src="@drawable/btn_radio_on"
+                    android:background="@color/transparent"/>
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="22.7px"
+                    android:singleLine="true"
+                    android:layout_centerInParent="true"
+                    android:textSize="16px"
+                    android:layout_marginLeft="10px"
+                    android:gravity="center_vertical"
+                    android:text="@string/trip_detail_passenger_bag_credit_card"
+                    android:textColor="@color/white_four"
+                    style="@style/regular" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:alpha="0.4"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white_four"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32px"
+        android:layout_below="@+id/layout"
+        android:background="@color/black_30">
+        <TextView
+            android:layout_width="300px"
+            android:layout_height="22.7px"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            android:textSize="16px"
+            android:gravity="center_vertical"
+            android:text="@string/trip_detail_passenger_bag_credit_card_data"
+            android:textColor="@color/white_four"
+            style="@style/regular" />
+    </RelativeLayout>
+
+    <ci.ui.WebView.CIWebView
+        android:id="@+id/ciwebview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

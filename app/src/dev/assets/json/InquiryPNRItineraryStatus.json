@@ -1,0 +1,10 @@
+{
+  "rt_code": "000",
+  "rt_msg": "OK",
+  "rt_data": {
+    "PNR_Status": {
+      "Status_Code": "4",
+      "PNR_Id": "22IYRR"
+    }
+  }
+}

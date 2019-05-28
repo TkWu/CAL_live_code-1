@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/country_name"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_country_from"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:textColor="@color/white_four" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_country_from_detail"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/tv_country_from"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:textColor="@color/white_four" />-->
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/airplane_image"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@drawable/ic_flight_from_to_4"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_country_to"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:textColor="@color/white_four" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_country_to_detail"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/tv_country_to"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:textColor="@color/white_four" />-->
+
+    <!--</RelativeLayout>-->
+
+    <ci.ui.TimeTable.CIATtimeTableList
+        android:id="@+id/ls_timetable_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/transparent"
+        android:listSelector="@color/transparent"
+        />
+
+    <View
+        android:id="@+id/vGradient"
+        android:layout_width="match_parent"
+        android:layout_height="16px"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/ls_timetable_result"
+        android:background="@drawable/bg_listview_bottom_gradient" />
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/root"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/ll_textfeild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20px"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fragment1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6px">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6px">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:orientation="horizontal">
+
+            <!--//644336 20190322 行李追蹤注意事項更改顯示方式-->
+            <!--<TextView-->
+            <!--android:id="@+id/tv_can_find_the_trip"-->
+            <!--android:layout_width="298px"-->
+            <!--android:layout_height="19.3px"-->
+            <!--android:textSize="16px"-->
+            <!--android:textColor="@color/white_four"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:gravity="right|center"-->
+            <!--android:text="@string/find_my_booking_baggage_notes"-->
+            <!--android:layout_marginLeft="30px"-->
+            <!--style="@style/regular" />-->
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_arrow"-->
+            <!--android:layout_width="17px"-->
+            <!--android:layout_height="17px"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:src="@drawable/ic_arrow"-->
+            <!--android:background="@drawable/bg_transparent_press_black20"-->
+            <!--android:scaleType="fitXY"/>-->
+            <TextView
+                android:id="@+id/tv_can_find_the_trip"
+                android:layout_width="298px"
+                android:layout_height="19.3px"
+                android:textSize="16px"
+                android:textColor="@color/white_four"
+                android:layout_gravity="center_vertical"
+                android:gravity="right|center"
+                android:text="@string/find_my_booking_baggage_notes"
+                android:layout_marginLeft="30px"
+                android:visibility="gone"
+                style="@style/regular" />
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="17px"
+                android:layout_height="17px"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow"
+                android:background="@drawable/bg_transparent_press_black20"
+                android:visibility="gone"
+                android:scaleType="fitXY"/>
+            <!--//644336 20190322 行李追蹤注意事項更改顯示方式-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_findmybooking_retrieve"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginBottom="164.7px"
+        android:minHeight="0px"
+        android:minWidth="0px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_btn_pinkish_red_selector"
+        android:text="@string/find_my_booking_button"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        style="@style/regular" />
+
+</RelativeLayout>

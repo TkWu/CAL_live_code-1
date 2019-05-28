@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_msg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_not_find"
+            style="@style/regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white_four"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75.3dp">
+
+        <View
+            android:id="@+id/vline1"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_alignTop="@+id/ll_add"
+            android:background="@color/white_30"></View>
+
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_30"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/tv_add"
+                style="@style/regular"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/my_trips_can_not_find_the_trip"
+                android:textColor="@color/white_four"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_add"
+                style="@style/light"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_sidemenu_btn_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:singleLine="true"
+                android:text="@string/my_trips_add_flight"
+                android:textColor="@color/white_four"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/vline2"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_alignBottom="@+id/ll_add"
+            android:background="@color/white_30"></View>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

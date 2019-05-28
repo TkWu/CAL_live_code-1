@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_60">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40px"
+        android:orientation="vertical"
+        android:paddingLeft="10px"
+        android:paddingRight="10px">
+
+        <LinearLayout
+            android:id="@+id/ll_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_miles_detail_card_head_radius"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="18px"
+                android:gravity="center_horizontal"
+                android:text="@string/member_card_detail"
+                android:textColor="@color/black_one"
+                android:textSize="20px"
+                style="@style/regular" />
+
+            <ImageView
+                android:id="@+id/iv_qrcode"
+                android:layout_width="186.7px"
+                android:layout_height="186.7px"
+                android:layout_below="@+id/tv_title"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_iv_grey_line"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="213.3px"
+                android:layout_height="31.3px"
+                android:layout_below="@+id/iv_qrcode"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16px"
+                android:gravity="center_horizontal"
+                android:text="@string/this_qrcode_contains_your_personal_infor"
+                android:textColor="@color/grey_four"
+                android:textSize="13px"
+                style="@style/light" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="21.3px"
+                android:alpha="0.2"
+                android:background="@color/warm_grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:paddingLeft="20px"
+                android:paddingRight="20px">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19.3px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/name"
+                    android:textColor="@color/grey_four"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+                <TextView
+                    android:id="@+id/tv_name_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19.3px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="YuRong Cheng"
+                    android:textColor="@color/black_one"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:alpha="0.4"
+                android:background="@color/warm_grey_50" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:paddingLeft="20px"
+                android:paddingRight="20px">
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19.3px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/member_card_type"
+                    android:textColor="@color/grey_four"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+                <TextView
+                    android:id="@+id/tv_type_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19.3px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/card_type_gold"
+                    android:textColor="@color/black_one"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+                <ImageView
+                    android:id="@+id/iv_card"
+                    android:layout_width="26.7px"
+                    android:layout_height="18px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10px"
+                    android:layout_toLeftOf="@id/tv_type_data"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:alpha="0.4"
+                android:background="@color/warm_grey_50" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:paddingLeft="20px"
+                android:paddingRight="20px">
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19.3px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/member_card_number"
+                    android:textColor="@color/grey_four"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+                <TextView
+                    android:id="@+id/tv_number_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19.3px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="WC00000000"
+                    android:textColor="@color/black_one"
+                    android:textSize="16px"
+                    style="@style/light" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_logo"
+            android:layout_width="match_parent"
+            android:layout_height="32px"
+            android:background="@drawable/bg_personal_member_card_detail_bosy">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="125px"
+                android:layout_height="18px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20px"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_china_airlines_littile" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ibtn_close"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16px"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_btn_about_delete_onclick" />
+
+</RelativeLayout>

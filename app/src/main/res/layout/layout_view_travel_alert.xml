@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_travel_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_30"
+        android:paddingBottom="40dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:gravity="center_vertical|right"
+            android:minHeight="16dp"
+            android:text="2016/03/04 20:50"
+            android:textColor="@color/white_four"
+            android:textSize="13sp"
+            style="@style/light" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_date_time"
+            android:layout_marginTop="14dp"
+            android:minHeight="24dp"
+            android:text="Air Traffic Control at Hong Kong"
+            android:textColor="@color/white_four"
+            android:textSize="20sp"
+            style="@style/regular" />
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="16dp"
+            android:alpha="0.8"
+            android:text="Due to the traffic issue at the Hong Kong airport. The flight below will be delayed or canceled. We apologize for your inconvinience. \n\nCI335 (cancelled) \nCI221 (delayed) \nCI54 (delayed) \nCI113  (delayed)"
+            android:textColor="@color/white_four"
+            android:textSize="16sp"
+            style="@style/light" />
+    </RelativeLayout>
+</LinearLayout>

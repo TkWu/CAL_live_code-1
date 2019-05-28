@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/rlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px">
+
+        <ci.ui.MealCard.CICheckImageButton
+            android:id="@+id/image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10px"
+            android:background="@color/transparent"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_checkbox_off"
+            android:clickable="false"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17.3px"
+            android:layout_marginRight="10px"
+            android:layout_toRightOf="@+id/image_button"
+            android:text="YuRong Cheng"
+            android:textColor="@color/white_four"
+            android:textSize="18px" />
+
+        <LinearLayout
+            android:id="@+id/llayout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="4px"
+            android:layout_toRightOf="@+id/image_button"
+            android:orientation="vertical">
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/item_breakfast"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/breakfast"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="@string/breakfast"-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/breakfast_dash"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@+id/breakfast"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="- "-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/breakfast_select"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@+id/breakfast_dash"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="@string/unselected"-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/item_lunch"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/lunch"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="@string/lunch"-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/lunch_dash"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@+id/lunch"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="- "-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/lunch_select"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@+id/lunch_dash"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="@string/unselected"-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/item_dinner"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/dinner"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="@string/dinner"-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/dinner_dash"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@+id/dinner"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="- "-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/dinner_select"-->
+                    <!--style="@style/regular"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@+id/dinner_dash"-->
+                    <!--android:alpha="0.69"-->
+                    <!--android:text="@string/unselected"-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="13px" />-->
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vline"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="17.3px"
+            android:layout_below="@+id/llayout_content"
+            android:alpha="0.4"
+            android:background="@color/white_four" />
+    </RelativeLayout>
+</LinearLayout>

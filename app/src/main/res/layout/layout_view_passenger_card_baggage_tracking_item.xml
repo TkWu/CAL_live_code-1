@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_bag_tracking_item"
+            android:layout_width="158px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/light"
+                android:layout_width="match_parent"
+                android:layout_height="16px"
+                android:gravity="start|center"
+                android:text="@string/trip_detail_passenger_tracking_title"
+                android:textColor="@color/brownish_grey"
+                android:textSize="13px"/>
+
+            <TextView
+                android:id="@+id/tv_value"
+                style="@style/light"
+                android:layout_width="match_parent"
+                android:layout_height="19px"
+                android:gravity="start|center"
+                android:text="20Kg"
+                android:textColor="@color/black_one"
+                android:textSize="16px"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_bag_search"
+            style="@style/regular"
+            android:layout_width="80px"
+            android:layout_height="32px"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_passenger_btn_selector"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/search"
+            android:textAllCaps="false"
+            android:textColor="@color/french_blue"
+            android:textSize="13px"/>
+
+    </RelativeLayout>
+</RelativeLayout>
