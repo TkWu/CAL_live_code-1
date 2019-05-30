@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true">
+
+    <ci.ui.view.NavigationBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:layout_alignParentTop="true"
+        >
+    </ci.ui.view.NavigationBar>
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="113.3px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px"
+        android:text="@string/add_apis_notice"
+        android:textColor="@color/white_four"
+        android:textSize="16px"
+        android:layout_below="@id/toolbar"
+        style="@style/light" />
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:background="@color/white_30"
+        android:layout_height="0.7px"
+        android:layout_below="@+id/tv_msg"/>
+
+    <ListView
+        android:id="@+id/activity_list_view_sign_up_select_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_line"
+        android:divider="@color/white_30"
+        android:dividerHeight="0.7px"
+        android:scrollbars="none">
+    </ListView>
+</RelativeLayout>

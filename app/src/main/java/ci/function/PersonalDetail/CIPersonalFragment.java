@@ -27,6 +27,7 @@ import ci.function.Base.BaseFragment;
 import ci.function.Core.CIApplication;
 import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
+import ci.function.PersonalDetail.APIS.CIAddSaveAPISActivity;
 import ci.function.PersonalDetail.APIS.CIPersonalAPISDetialActivity;
 import ci.function.PersonalDetail.APIS.CIPersonalAddAPISActivity;
 import ci.function.PersonalDetail.APIS.CIPersonalCompanionsAPISListActivity;
@@ -160,6 +161,18 @@ public class CIPersonalFragment extends BaseFragment implements
     private CIApisCardView.OnPersonalApisCardViewListener m_OnPersonalApisCardViewListener = new CIApisCardView.OnPersonalApisCardViewListener() {
         @Override
         public void OnAddPersonalAPISClick() {
+//            Intent intent = new Intent();
+//            intent.putExtra(
+//                    UiMessageDef.BUNDLE_ACTIVITY_MODE,
+//                    CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS.name());
+//            Bundle bundle = new Bundle();
+//            bundle.putSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE, CIApisDocmuntTextFieldFragment.EType.Personal);
+//            intent.putExtras(bundle);
+//            intent.setClass(getActivity(), CIPersonalAddAPISActivity.class);
+//            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
+//            getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+
+
             Intent intent = new Intent();
             intent.putExtra(
                     UiMessageDef.BUNDLE_ACTIVITY_MODE,
@@ -167,7 +180,7 @@ public class CIPersonalFragment extends BaseFragment implements
             Bundle bundle = new Bundle();
             bundle.putSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE, CIApisDocmuntTextFieldFragment.EType.Personal);
             intent.putExtras(bundle);
-            intent.setClass(getActivity(), CIPersonalAddAPISActivity.class);
+            intent.setClass(getActivity(), CIAddSaveAPISActivity.class);
             startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
         }

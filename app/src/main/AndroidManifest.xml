@@ -310,6 +310,12 @@
             android:label=""
             android:screenOrientation="portrait" />
         <activity
+            android:name="ci.function.PersonalDetail.APIS.CIAddSaveAPISActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:hardwareAccelerated="true"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity
             android:name="ci.function.BoardingPassEWallet.BoardingPass.CIBoardingPassCardActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
@@ -564,6 +570,8 @@
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
+
+
 
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for

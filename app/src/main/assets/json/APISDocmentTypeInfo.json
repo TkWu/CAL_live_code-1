@@ -3,6 +3,13 @@
   "rt_msg": "成功。",
   "rt_data": [
     {
+      "code_1A": "N",
+      "name_tw": "基本資料",
+      "name_cn": "基本資料",
+      "name_en": "基本資料",
+      "name_jp": "基本資料"
+    },
+    {
       "code_1A": "P",
       "name_tw": "護照",
       "name_cn": "护照",
