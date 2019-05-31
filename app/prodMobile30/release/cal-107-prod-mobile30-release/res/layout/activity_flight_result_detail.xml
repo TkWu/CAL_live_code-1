@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ffa8cbff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/img_bg_map" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_map" android:scaleType="fitXY" android:layout_below="@id/toolbar" />
+        <FrameLayout android:id="@id/fl_map" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" />
+        <Button android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/track" android:background="@drawable/bg_track_btn" android:layout_width="72.0px" android:layout_height="32.0px" android:layout_marginTop="13.699982px" android:layout_marginRight="16.0px" android:text="@string/track" android:layout_alignParentRight="true" />
+        <FrameLayout android:id="@id/fl_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" android:layout_centerHorizontal="true" />
+        <View android:id="@id/vGradient" android:background="@drawable/bg_listview_bottom_gradient" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="16.0px" android:layout_alignBottom="@id/fl_content" />
+    </RelativeLayout>
+</RelativeLayout>

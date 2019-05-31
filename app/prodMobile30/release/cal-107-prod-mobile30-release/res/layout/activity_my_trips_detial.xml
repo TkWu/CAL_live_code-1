@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@color/baby_blue" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <ImageView android:id="@id/img_bg_map" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_map" android:scaleType="fitXY" android:layout_below="@id/toolbar" />
+    <FrameLayout android:id="@id/fl_map" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" />
+    <Button android:textSize="13.0px" android:textColor="@color/white_four" android:ellipsize="end" android:id="@id/btn_track" android:background="@drawable/bg_btn_trip_track_selector" android:layout_width="72.0px" android:layout_height="32.0px" android:layout_marginTop="13.699982px" android:layout_marginRight="16.0px" android:text="@string/trip_detail_home_page_trip_track" android:maxLines="1" android:layout_alignParentRight="true" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="70.0px" android:src="@drawable/bg_drakish_blue_gradient" android:scaleType="fitXY" android:layout_below="@id/toolbar" />
+    <android.support.design.widget.TabLayout android:id="@id/tabLayout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar" app:tabIndicatorColor="@android:color/white" app:tabMaxWidth="0.0dip" style="@style/MyCustomTabLayout" />
+    <android.support.v4.view.ViewPager android:id="@id/viewPager" android:paddingTop="23.5px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tabLayout" android:splitMotionEvents="false" />
+</RelativeLayout>

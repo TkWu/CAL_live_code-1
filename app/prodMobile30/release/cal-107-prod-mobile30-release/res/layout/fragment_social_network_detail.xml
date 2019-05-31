@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_bg" android:background="@drawable/bg_login" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:id="@id/tv_prompt_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:layout_marginTop="20.0px" android:layout_marginRight="30.0px" android:text="@string/make_you_login_quickly" style="@style/regular" />
+    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_prompt_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:layout_marginTop="16.299988px" android:layout_marginRight="30.0px" android:text="@string/make_you_login_quickly_notice_msg" android:layout_below="@id/tv_prompt_title" style="@style/light" />
+    <FrameLayout android:id="@id/fl_social_network" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginRight="10.0px" android:layout_marginBottom="176.29999px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

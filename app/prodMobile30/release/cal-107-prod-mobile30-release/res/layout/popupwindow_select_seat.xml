@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_black" android:background="@color/black_60" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlayout_card" android:background="@drawable/bg_boarding_with_qrcode" android:layout_width="340.0px" android:layout_height="504.0px" android:layout_marginLeft="10.0px" android:layout_marginTop="40.0px" android:layout_marginRight="10.0px" android:layout_centerHorizontal="true">
+        <WebView android:id="@id/select_seat_webview" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/ivbtn_close" android:background="@color/transparent" android:layout_width="40.0px" android:layout_height="40.0px" android:layout_marginBottom="16.0px" android:src="@drawable/bg_btn_about_delete_onclick" android:scaleType="fitXY" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

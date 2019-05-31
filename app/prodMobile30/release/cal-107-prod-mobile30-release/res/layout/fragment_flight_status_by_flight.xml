@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/root" android:paddingLeft="20.0px" android:paddingTop="26.0px" android:paddingRight="20.0px" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/button_ci" android:background="@drawable/btn_flight_number_enable" android:layout_width="40.0px" android:layout_height="40.0px" android:layout_marginLeft="10.0px" android:layout_marginTop="16.0px">
+        <TextView android:textSize="18.0px" android:textColor="@color/french_blue" android:id="@id/text_ci" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CI" android:layout_centerInParent="true" style="@style/regular" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/button_ae" android:background="@drawable/btn_flight_number_n" android:layout_width="40.0px" android:layout_height="40.0px" android:layout_marginLeft="10.0px" android:layout_marginTop="16.0px">
+        <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:id="@id/text_ae" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AE" android:layout_centerInParent="true" style="@style/regular" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/fragment1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginStart="20.0px" />
+</LinearLayout>

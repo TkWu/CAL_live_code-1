@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlayout_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.299988dip" android:layout_alignParentTop="true" />
+        <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" />
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:id="@id/llayout_left" android:background="#ff000000" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent">
+        <fragment android:name="ci.function.Main.LeftDrawerFragment" android:id="@id/drawer_left" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="end" android:orientation="vertical" android:id="@id/llayout_right" android:background="#ff000000" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent">
+        <fragment android:name="ci.function.Main.RightDrawerFragment" android:id="@id/drawer_right" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

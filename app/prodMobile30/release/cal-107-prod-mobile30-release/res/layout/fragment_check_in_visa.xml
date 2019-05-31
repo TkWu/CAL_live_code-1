@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/llayout_root" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="19.0px" android:textColor="@color/white_four" android:gravity="start|center" android:id="@id/tv_text" android:background="@color/black_30" android:layout_width="fill_parent" android:layout_height="32.0px" android:text="" android:singleLine="true" android:paddingStart="30.0px" android:paddingEnd="30.0px" style="@style/regular" />
+    <FrameLayout android:id="@id/flayout_doc_no" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0px" android:layout_marginRight="30.0px" android:layout_marginStart="30.0px" />
+    <FrameLayout android:id="@id/flayout_expiry_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0px" android:layout_marginRight="30.0px" android:layout_marginBottom="9.0px" android:layout_marginStart="30.0px" />
+</LinearLayout>

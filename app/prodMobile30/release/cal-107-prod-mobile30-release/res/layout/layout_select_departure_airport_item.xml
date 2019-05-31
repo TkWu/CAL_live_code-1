@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_transparent_press_black20" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:textColor="#ffffffff" android:id="@id/iv_locate" android:background="@drawable/ic_locate" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginLeft="30.0px" android:layout_marginTop="23.0px" />
+    <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:id="@id/tv_airport" android:layout_width="226.0px" android:layout_height="21.699982px" android:layout_marginLeft="10.0px" android:layout_marginTop="14.299988px" android:text="Bergstrom Int" android:singleLine="true" android:layout_toRightOf="@id/iv_locate" />
+    <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tv_city_name" android:layout_width="226.0px" android:layout_height="wrap_content" android:layout_marginTop="4.0px" android:text="Bergstrom Int" android:singleLine="true" android:layout_below="@id/tv_airport" android:layout_alignLeft="@id/tv_airport" />
+    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_city_abbreviation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.599976px" android:layout_marginRight="30.0px" android:layout_alignParentRight="true" />
+</RelativeLayout>

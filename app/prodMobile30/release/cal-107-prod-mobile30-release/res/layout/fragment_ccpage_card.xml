@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/layout_view_passenger_inquiry_excess_baggage_info_total_card" />
+    <RelativeLayout android:background="@color/black_30" android:layout_width="fill_parent" android:layout_height="32.0px">
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:layout_width="300.0px" android:layout_height="22.699982px" android:text="@string/trip_detail_passenger_bag_select_pay_mode" android:singleLine="true" android:layout_centerInParent="true" style="@style/regular" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="37.69998px" android:layout_marginBottom="37.69998px">
+            <LinearLayout android:orientation="horizontal" android:layout_width="300.0px" android:layout_height="41.0px">
+                <ImageButton android:id="@id/ib_cc" android:background="@color/transparent" android:layout_width="24.0px" android:layout_height="24.0px" android:src="@drawable/btn_radio_on" />
+                <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:layout_width="300.0px" android:layout_height="22.699982px" android:layout_marginLeft="10.0px" android:text="@string/trip_detail_passenger_bag_credit_card" android:singleLine="true" android:layout_centerInParent="true" style="@style/regular" />
+            </LinearLayout>
+            <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" android:alpha="0.4" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:background="@color/black_30" android:layout_width="fill_parent" android:layout_height="32.0px" android:layout_below="@id/layout">
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:layout_width="300.0px" android:layout_height="22.699982px" android:text="@string/trip_detail_passenger_bag_credit_card_data" android:singleLine="true" android:layout_centerInParent="true" style="@style/regular" />
+    </RelativeLayout>
+    <ci.ui.WebView.CIWebView android:layout_gravity="center_horizontal" android:id="@id/ciwebview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

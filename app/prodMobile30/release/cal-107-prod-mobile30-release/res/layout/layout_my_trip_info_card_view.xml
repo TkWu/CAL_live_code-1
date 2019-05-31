@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_card" android:background="@drawable/btn_my_trips_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_trip_card" android:paddingLeft="20.0dip" android:layout_width="307.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:textColor="@color/black_two" android:id="@id/tv_airliner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="17.299988dip" android:layout_marginRight="7.6999817dip" android:text="China Airlines - CI 160" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/regular" />
+        <RelativeLayout android:id="@id/rl_flight_from_to" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginRight="7.6999817dip" android:layout_below="@id/tv_airliner">
+            <TextView android:textSize="22.0sp" android:textColor="@color/black_one" android:id="@id/tv_from" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Taipei" android:singleLine="true" android:layout_toLeftOf="@id/iv_flight" android:layout_centerVertical="true" style="@style/regular" />
+            <ImageView android:id="@id/iv_flight" android:layout_width="21.299988dip" android:layout_height="21.299988dip" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:src="@drawable/ic_flight_from_to_2" android:scaleType="fitXY" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="22.0sp" android:textColor="@color/black_one" android:id="@id/tv_to" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Fukuoka" android:singleLine="true" android:layout_toRightOf="@id/iv_flight" android:layout_centerVertical="true" style="@style/regular" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_flight_from_to_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.6999817dip" android:layout_marginRight="7.6999817dip" android:layout_marginBottom="17.299988dip" android:layout_below="@id/rl_flight_from_to">
+            <ImageView android:id="@id/iv_from_time" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/ic_departure_5" android:scaleType="fitXY" android:layout_centerVertical="true" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/french_blue" android:id="@id/tv_from_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="08:10" android:layout_toRightOf="@id/iv_from_time" android:layout_centerVertical="true" style="@style/regular" />
+            <View android:id="@id/v_flight" android:background="@color/transparent" android:layout_width="21.299988dip" android:layout_height="21.299988dip" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/iv_to_time" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/ic_arrival_5" android:scaleType="fitXY" android:layout_toRightOf="@id/v_flight" android:layout_centerVertical="true" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/french_blue" android:id="@id/tv_to_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="23:00" android:layout_toRightOf="@id/iv_to_time" android:layout_centerVertical="true" style="@style/regular" />
+            <TextView android:textSize="14.0px" android:textColor="@color/french_blue" android:id="@id/tv_tomorrow_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0px" android:layout_toRightOf="@id/tv_to_time" android:layout_alignParentBottom="true" android:layout_centerVertical="true" style="@style/regular" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_arrow" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/vline" android:background="@color/french_blue_50" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/iv_arrow" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_card_arrow" android:scaleType="fitXY" android:layout_toRightOf="@id/vline" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_bookticet_data" android:layout_width="fill_parent" android:layout_height="64.0px">
+        <LinearLayout android:orientation="vertical" android:id="@id/rl_bookticet_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.899994px" android:layout_centerVertical="true">
+            <TextView android:textSize="13.0px" android:textColor="#ff656565" android:id="@id/tv_bookticet_num_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/booking_no" style="@style/regular" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:id="@id/tv_bookticet_num_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0px" style="@style/regular" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/rl_bookticet_cabin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:textSize="13.0px" android:textColor="#ff656565" android:layout_gravity="center" android:id="@id/tv_bookticet_cabin_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/booking_cabin" style="@style/regular" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:layout_gravity="center" android:id="@id/tv_bookticet_cabin_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0px" style="@style/regular" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_membercard_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="19.899994px" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <TextView android:textSize="13.0px" android:textColor="#ff656565" android:layout_gravity="end" android:id="@id/tv_membercard_num_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/member_no" style="@style/regular" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:layout_gravity="end" android:id="@id/tv_membercard_num_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0px" style="@style/regular" />
+        </LinearLayout>
+        <View android:id="@id/v_line" android:background="@color/warm_grey_50" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_bag_data" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0px" android:textColor="@color/brownish_grey" android:id="@id/tv_bag_receipt_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="16.699982px" android:layout_marginRight="20.0px" android:text="@string/bag_receipt" style="@style/regular" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_no_have_bag_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38.299988px" android:layout_below="@id/tv_bag_receipt_title" android:layout_alignStart="@id/tv_bag_receipt_title">
+            <ImageView android:id="@id/iv_no_have_bag" android:layout_width="31.699982px" android:layout_height="31.699982px" android:src="@drawable/ic_boardingpass_baggage" android:scaleType="fitXY" android:layout_below="@id/rl_head" />
+            <TextView android:textSize="13.0px" android:textColor="@color/warm_grey" android:layout_gravity="center_vertical" android:id="@id/tv_no_have_bag_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:text="@string/now_no_have_bag" style="@style/regular" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_barcode_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.299988px" android:layout_below="@id/tv_bag_receipt_title" android:layout_alignStart="@id/tv_bag_receipt_title" android:layout_alignEnd="@id/tv_bag_receipt_title" />
+    </RelativeLayout>
+</LinearLayout>

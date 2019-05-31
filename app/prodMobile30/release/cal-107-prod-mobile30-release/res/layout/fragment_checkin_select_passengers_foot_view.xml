@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/rlayout_bg" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <ImageButton android:id="@id/imgBtnCheckBox" android:background="@color/transparent" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/btn_add_n" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/tv_Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="30.0dip" android:text="New Text" android:layout_centerVertical="true" android:layout_toEndOf="@id/imgBtnCheckBox" android:layout_alignParentEnd="true" style="@style/light" />
+    </RelativeLayout>
+    <View android:id="@id/vDiv" android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="0.70000005dip" android:alpha="0.3" />
+</LinearLayout>

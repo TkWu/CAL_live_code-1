@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fragment1" android:paddingRight="72.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="26.0px" />
+    <ImageButton android:id="@id/btn_change_airport" android:background="@drawable/btn_transform_n" android:layout_width="32.0px" android:layout_height="32.0px" android:layout_marginTop="71.29999px" android:layout_marginRight="20.0px" android:layout_alignParentRight="true" />
+    <FrameLayout android:id="@id/fragment2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="10.299988px" android:layout_marginRight="72.0px" android:layout_below="@id/fragment1" />
+    <FrameLayout android:id="@id/fragment3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="10.299988px" android:layout_marginRight="20.0px" android:layout_below="@id/fragment2" />
+    <FrameLayout android:id="@id/fragment4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="10.299988px" android:layout_marginRight="20.0px" android:layout_below="@id/fragment3" />
+</RelativeLayout>

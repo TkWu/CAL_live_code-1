@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.TimeTable.CIATtimeTableList android:id="@id/ls_timetable_result" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@color/transparent" android:divider="@color/transparent" />
+    <View android:id="@id/vGradient" android:background="@drawable/bg_listview_bottom_gradient" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="16.0px" android:layout_alignBottom="@id/ls_timetable_result" />
+</RelativeLayout>

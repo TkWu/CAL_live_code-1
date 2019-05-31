@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_fail" android:layout_width="48.0px" android:layout_height="48.0px" android:layout_marginTop="20.0px" android:src="@drawable/img_step_alert" android:scaleType="fitXY" />
+    <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:text="@string/trip_detail_passenger_bag_fail_title" style="@style/regular" />
+    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_msg" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="16.0px" android:text="信息代碼：0000000000" style="@style/light" />
+</LinearLayout>

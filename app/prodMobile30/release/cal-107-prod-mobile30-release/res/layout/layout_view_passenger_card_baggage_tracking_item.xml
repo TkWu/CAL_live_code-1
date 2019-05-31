@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_bag_tracking_item" android:layout_width="158.0px" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentStart="true">
+            <TextView android:textSize="13.0px" android:textColor="@color/brownish_grey" android:gravity="start|center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="16.0px" android:text="@string/trip_detail_passenger_tracking_title" style="@style/light" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="start|center" android:id="@id/tv_value" android:layout_width="fill_parent" android:layout_height="19.0px" android:text="20Kg" style="@style/light" />
+        </LinearLayout>
+        <Button android:textSize="13.0px" android:textColor="@color/french_blue" android:id="@id/btn_bag_search" android:background="@drawable/bg_passenger_btn_selector" android:layout_width="80.0px" android:layout_height="32.0px" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="@string/search" android:layout_centerVertical="true" android:textAllCaps="false" android:layout_alignParentEnd="true" style="@style/regular" />
+    </RelativeLayout>
+</RelativeLayout>

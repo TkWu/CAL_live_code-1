@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:layout_marginTop="20.0px" android:layout_marginRight="30.0px">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="22.699982px">
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="bottom" android:id="@id/tv_hello" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/input_detail_hello" style="@style/light" />
+            <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:gravity="bottom" android:id="@id/tv_username" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0px" android:text="CAL" style="@style/medium" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="bottom" android:id="@id/tv_comma" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/input_detail_comma" style="@style/light" />
+        </LinearLayout>
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_update_phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0px" android:text="@string/input_detail_update_phone_msg" style="@style/light" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/fl_new_phone_country" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:layout_below="@id/ll_text" android:layout_centerHorizontal="true" />
+    <FrameLayout android:id="@id/fl_new_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0px" android:layout_below="@id/fl_new_phone_country" android:layout_centerHorizontal="true" />
+    <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_send" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="320.0px" android:layout_height="40.0px" android:layout_marginBottom="30.0px" android:text="@string/input_detail_send" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:textAllCaps="false" style="@style/regular" />
+</RelativeLayout>

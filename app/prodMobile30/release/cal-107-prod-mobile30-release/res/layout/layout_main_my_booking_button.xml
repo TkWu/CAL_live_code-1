@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:id="@id/btnTop" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="260.0dip" android:layout_height="40.0dip" android:text="@string/home_page_button_find_my_booking" style="@style/regular" />
+    <Button android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:id="@id/btnBottom" android:background="@drawable/btn_home_explore_destinayions" android:layout_width="261.0dip" android:layout_height="41.0dip" android:layout_marginTop="20.0dip" android:text="@string/home_page_explore_destinations" style="@style/regular" />
+</LinearLayout>

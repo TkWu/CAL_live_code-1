@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:layout_marginTop="20.0px" android:layout_marginRight="30.0px" android:text="@string/input_detail_request_user_id" style="@style/light" />
+    <FrameLayout android:id="@id/fl_identity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="336.6953px" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_send" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="320.0px" android:layout_height="40.0px" android:layout_marginBottom="30.0px" android:text="@string/inquiry_input_box_send" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:textAllCaps="false" style="@style/regular" />
+</RelativeLayout>

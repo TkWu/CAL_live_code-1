@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_head" android:background="@drawable/bg_boardimg_pass_head_radius" android:layout_width="fill_parent" android:layout_height="203.69998px" android:layout_marginTop="3.0px" />
+    <ImageView android:id="@id/iv_hole" android:layout_width="fill_parent" android:layout_height="12.0px" android:src="@drawable/bg_card_hole_" android:scaleType="fitXY" android:layout_below="@id/rl_head" />
+    <RelativeLayout android:id="@id/rl_bottom" android:background="@drawable/bg_boardimg_pass_body_radius" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/iv_hole" android:layout_alignBottom="@id/ll_msg" />
+    <ImageView android:id="@id/iv_coupon" android:layout_width="fill_parent" android:layout_height="140.0px" android:layout_marginTop="0.0px" android:src="@drawable/promotions_img_test" android:scaleType="fitXY" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:id="@id/rl_discount" android:background="@drawable/img_coupon_tag" android:layout_width="196.69998px" android:layout_height="34.0px" android:layout_marginTop="106.0px" android:layout_alignParentRight="true">
+        <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tv_discount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="23.699982px" android:layout_marginTop="12.299988px" android:layout_marginBottom="6.0px" android:text="@string/discount" style="@style/light" />
+        <TextView android:textSize="24.0px" android:textColor="@color/white_four" android:id="@id/tv_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0px" android:text="10%" android:layout_toLeftOf="@id/tv_off" android:layout_centerVertical="true" style="@style/bold" />
+        <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tv_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.299988px" android:layout_marginRight="10.0px" android:layout_marginBottom="6.0px" android:text="OFF" android:layout_alignParentRight="true" android:layout_centerVertical="false" style="@style/bold" />
+    </RelativeLayout>
+    <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:id="@id/tv_title" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="150.0px" android:text="Duty Free Goods Discount , Free" android:layout_centerHorizontal="true" style="@style/regular" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <TextView android:textSize="13.0px" android:textColor="@color/grey_four" android:id="@id/tv_sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="182.6px" android:text="@string/valid_date" style="@style/light" />
+        <TextView android:textSize="13.0px" android:textColor="@color/grey_four" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0px" android:layout_marginTop="182.6px" android:text="2015/10/13, CI65" style="@style/light" />
+    </LinearLayout>
+    <ci.ui.view.DashedLine android:id="@id/dl_top" android:layout_width="327.0px" android:layout_height="1.0px" android:layout_marginTop="211.5px" android:layout_centerHorizontal="true" app:dl_color="@color/warm_grey" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_list" android:paddingTop="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dl_top">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_flight" android:visibility="gone" android:layout_width="300.0px" android:layout_height="60.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/grey_four" android:layout_gravity="center_vertical" android:id="@id/tv_flight_no" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="@string/trips_detail_flight_number" style="@style/light" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_flight_no_data" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="CI 116" style="@style/light" />
+        </LinearLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/v_line" android:background="@color/warm_grey_50" android:visibility="gone" android:layout_width="300.0px" android:layout_height="1.0px" android:alpha="0.4" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_barcode" android:layout_width="300.0px" android:layout_height="96.0px">
+            <ImageView android:id="@id/iv_barcode" android:layout_width="270.0px" android:layout_height="56.0px" android:src="@drawable/bg_sidemenu_btn_check" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+    <ci.ui.view.DashedLine android:id="@id/dl_bottom" android:layout_width="340.0px" android:layout_height="1.0px" android:layout_below="@id/ll_list" android:layout_centerHorizontal="true" app:dl_color="@color/warm_grey" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_msg" android:padding="20.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="65.0px" android:layout_below="@id/dl_bottom">
+        <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:id="@id/tv_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/enjoy_discount" style="@style/regular" />
+        <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:id="@id/tv_excludeditem" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0px" style="@style/regular" />
+    </LinearLayout>
+</RelativeLayout>

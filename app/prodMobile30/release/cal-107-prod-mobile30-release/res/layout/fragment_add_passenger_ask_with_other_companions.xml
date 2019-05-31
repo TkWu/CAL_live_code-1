@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_login" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0px" android:layout_below="@id/toolbar" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_ask_with_companions_img" android:layout_width="160.0px" android:layout_height="126.69998px" android:src="@drawable/img_add_passengers" android:scaleType="fitXY" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_ask" android:visibility="visible" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="25.0px" android:layout_centerHorizontal="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="30.0px">
+                <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/become_a_dynasty_flyer_hello" style="@style/regular" />
+                <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:id="@id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:text="Kevin Cheng" style="@style/regular" />
+            </LinearLayout>
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_ask_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0px" android:text="@string/find_my_booking_traveling_with_other_companions" style="@style/regular" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_social_disconnect" android:visibility="gone" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="25.0px" android:layout_centerHorizontal="true">
+            <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:id="@id/tv_disconnect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="24.0px" android:text="@string/are_you_sure_you_want_to_disconnect" style="@style/regular" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_hi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0px" android:minHeight="22.699982px" android:text="@string/connecting_to_social_account_makes_you_log_in_more_easier" style="@style/regular" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_ask_change_email" android:layout_width="340.0px" android:layout_height="55.0px" android:layout_marginBottom="15.0px" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_no" android:background="@drawable/bg_btn_blue_selector" android:layout_width="150.0px" android:layout_height="40.0px" android:layout_marginLeft="10.0px" android:text="@string/no" android:layout_centerInParent="true" style="@style/regular" />
+        <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_yes" android:background="@drawable/bg_btn_pink_agree_selector" android:layout_width="150.0px" android:layout_height="40.0px" android:layout_marginLeft="20.0px" android:text="@string/yes" style="@style/regular" />
+    </LinearLayout>
+</RelativeLayout>

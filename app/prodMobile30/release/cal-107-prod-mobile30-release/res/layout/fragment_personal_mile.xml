@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="340.0px" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@drawable/bg_miles_detail_card_head_radius" android:layout_width="fill_parent" android:layout_height="64.0px">
+            <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:gravity="center|left" android:id="@id/tv_title" android:layout_width="300.0px" android:layout_height="wrap_content" android:text="@string/miles_progress" android:layout_centerInParent="true" style="@style/regular" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@drawable/bg_manage_miles_body_radius" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0px" android:textColor="@color/pinkish_red" android:id="@id/tv_renewal_or_upgrade_complete_content" android:visibility="gone" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="16.0px" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:lineSpacingExtra="3.0px" style="@style/light" />
+            <LinearLayout android:orientation="vertical" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="16.0px" android:layout_below="@id/tv_renewal_or_upgrade_complete_content" android:layout_centerHorizontal="true">
+                <TextView android:textSize="13.0px" android:textColor="@color/warm_grey_two" android:id="@id/tv_miles_progress_notice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/miles_progress_notice_msg" android:lineSpacingExtra="3.0px" style="@style/light" />
+                <FrameLayout android:id="@id/fl_select_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0px" />
+                <View android:layout_width="fill_parent" android:layout_height="14.0px" />
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_renewal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="13.0px" android:textColor="@color/warm_grey_two" android:id="@id/tv_renewal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/renewal" style="@style/light" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="6.0px">
+                        <TextView android:textSize="20.0px" android:textColor="@color/french_blue" android:id="@id/tv_renewal_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/miles_percent" style="@style/light" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="12.0px" android:layout_marginTop="4.0px">
+                        <View android:background="@drawable/bg_progress_radius_10_2_fill_frech_blue_15_broders_frech_blue" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                        <View android:id="@id/v_renewal_progress" android:background="@drawable/bg_progress_radius_10_2_fill_frech_blue_broders_frech_blue" android:layout_width="150.0px" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="6.0px">
+                        <TextView android:textSize="13.0px" android:textColor="@color/brownish_grey" android:id="@id/tv_personal_detail_due" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/personal_detail_due" android:layout_toStartOf="@id/tv_renewal_date" style="@style/light" />
+                        <TextView android:textSize="13.0px" android:textColor="@color/black_one" android:id="@id/tv_renewal_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10 Oct, 2018" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:alpha="0.8" style="@style/regular" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:id="@id/v_middim_margin" android:layout_width="fill_parent" android:layout_height="18.0px" />
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_upgrade" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="13.0px" android:textColor="@color/warm_grey_two" android:id="@id/tv_upgrade" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/upgrade" style="@style/light" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="6.0px">
+                        <TextView android:textSize="20.0px" android:textColor="@color/french_blue" android:id="@id/tv_upgrade_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/miles_percent" style="@style/light" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="12.0px" android:layout_marginTop="4.0px">
+                        <View android:background="@drawable/bg_progress_radius_10_2_fill_frech_blue_15_broders_frech_blue" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                        <View android:id="@id/v_upgrade_progress" android:background="@drawable/bg_progress_radius_10_2_fill_frech_blue_broders_frech_blue" android:layout_width="150.0px" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="6.0px">
+                        <TextView android:textSize="13.0px" android:textColor="@color/black_one" android:id="@id/tv_upgrade_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upgrade_tag" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:alpha="0.8" style="@style/regular" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:layout_width="fill_parent" android:layout_height="30.0px" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

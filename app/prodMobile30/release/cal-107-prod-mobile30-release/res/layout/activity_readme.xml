@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_login" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="18.299988px" android:layout_marginBottom="18.299988px" android:layout_below="@id/toolbar">
+        <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="fill_parent">
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT" style="@style/light" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

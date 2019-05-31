@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tv_meal_desc" android:layout_width="fill_parent" android:layout_height="15.699982px" android:layout_marginTop="12.0px" android:text="@string/lunch" android:alpha="0.8" style="@style/light" />
+    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="bottom" android:id="@id/tv_meal_name" android:layout_width="fill_parent" android:layout_height="19.299988px" android:layout_marginTop="1.0px" android:singleLine="true" style="@style/light" />
+    <View android:id="@id/vline" android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="0.70000005px" android:layout_marginTop="12.0px" android:alpha="0.4" />
+</LinearLayout>

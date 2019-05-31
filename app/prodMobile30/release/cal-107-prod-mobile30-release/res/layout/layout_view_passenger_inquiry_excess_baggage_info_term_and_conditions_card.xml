@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:layout_gravity="left" android:id="@id/iv_terms_and_conditions" android:background="@drawable/bg_transparent_press_black20" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginLeft="30.0px" android:src="@drawable/btn_checkbox_off" android:scaleType="fitXY" />
+    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:layout_gravity="center|left" android:id="@id/tv_terms_and_conditions" android:layout_width="268.0px" android:layout_height="wrap_content" android:layout_marginLeft="8.0px" android:text="@string/trip_detail_passenger_bag_term_and_conditions" android:alpha="0.8" style="@style/light" />
+</LinearLayout>

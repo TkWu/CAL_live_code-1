@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_big_category" android:background="@color/black_30" android:layout_width="fill_parent" android:layout_height="32.0px">
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center" android:id="@id/tv_big_category" android:layout_width="wrap_content" android:layout_height="22.699982px" android:layout_marginLeft="30.0px" android:layout_marginRight="30.0px" android:text="Area nearby" android:maxLines="1" android:singleLine="true" android:layout_centerInParent="true" style="@style/regular" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_county_category" android:background="@color/white_20" android:layout_width="fill_parent" android:layout_height="32.0px">
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center" android:id="@id/tv_county_category" android:layout_width="wrap_content" android:layout_height="22.699982px" android:layout_marginLeft="30.0px" android:layout_marginRight="30.0px" android:text="Taiwan" android:maxLines="1" android:singleLine="true" android:layout_centerInParent="true" style="@style/light" />
+    </RelativeLayout>
+</LinearLayout>

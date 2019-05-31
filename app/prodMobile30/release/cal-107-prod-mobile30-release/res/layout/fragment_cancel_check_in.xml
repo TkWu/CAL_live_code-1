@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="30.0px" android:textColor="@color/white_four" android:gravity="center_horizontal" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="30.0px" android:text="@string/select_passenager" style="@style/regular" />
+    <FrameLayout android:id="@id/fl_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rl_done" android:layout_below="@id/tv_title" />
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/rl_done" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/btn_done" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="320.0dip" android:layout_height="40.0dip" android:text="@string/done" android:layout_centerHorizontal="true" android:textAllCaps="false" style="@style/regular" />
+    </RelativeLayout>
+</RelativeLayout>

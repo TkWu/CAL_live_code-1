@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_lowest_layer" android:visibility="visible" android:layout_width="200.0px" android:layout_height="200.0px" android:src="@drawable/icon_loading_lowest_layer" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/img_background" android:visibility="gone" android:layout_width="200.0px" android:layout_height="200.0px" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/img_loading" android:layout_width="200.0px" android:layout_height="200.0px" android:src="@drawable/icon_loading" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <TextView android:textColor="@color/white" android:id="@id/tv_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading" android:layout_below="@id/img_loading" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_about" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:layout_below="@id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="fill_parent" android:text="@string/welcome_to_china_airlines" style="@style/regular" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="fill_parent" android:layout_marginTop="16.0px" android:text="@string/welcome_message_notice" style="@style/light" />
+            <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/fl_youtube" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="10.0px" android:layout_marginRight="10.0px" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_youtube" android:layout_width="47.0px" android:layout_height="19.699982px" android:layout_marginTop="30.0px" android:src="@drawable/img_logo_youtube" android:scaleType="fitXY" />
+            <TextView android:textSize="14.699982px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:id="@id/tv_china_airlines" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="4.0px" android:layout_marginBottom="30.0px" android:text="@string/china_airlines" style="@style/light" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

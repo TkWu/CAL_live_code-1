@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/sv_select_seat" android:paddingLeft="8.0px" android:paddingRight="8.0px" android:focusable="true" android:focusableInTouchMode="true" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <View android:id="@id/vGradient" android:background="@drawable/bg_listview_bottom_gradient" android:layout_width="fill_parent" android:layout_height="16.0px" android:layout_alignBottom="@id/sv_select_seat" />
+    <View android:id="@id/vGradient2" android:background="@drawable/bg_select_seat_gradient" android:layout_width="fill_parent" android:layout_height="16.0px" android:layout_alignTop="@id/sv_select_seat" />
+</RelativeLayout>

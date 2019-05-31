@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rlayout_meal_card_bg" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/llayout_meal_card_head" android:background="@drawable/bg_meal_card_item_radius" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginRight="10.0px" android:layout_marginBottom="10.0px">
+        <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:ellipsize="end" android:id="@id/tv_meal_card_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0px" android:text="YuRong Cheng" android:singleLine="true" style="@style/regular" />
+        <LinearLayout android:orientation="vertical" android:id="@id/llayout_meal_card_body" android:background="@drawable/bg_layout_list_item_bottom_coner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

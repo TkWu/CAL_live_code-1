@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_login" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/rlayout_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:id="@id/tv_sign_up_success_welcome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/sign_uregistration_finished_dynasty_flyer_num" style="@style/light" />
+        <TextView android:textSize="24.0px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:id="@id/tv_card_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.399994px" android:text="CT1234567" style="@style/light" />
+        <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/rl_dynasty_flyer_card" android:layout_width="236.0px" android:layout_height="148.0px" android:layout_marginTop="24.299988px">
+            <ImageView android:id="@id/iv_card_type" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/img_dynasty_flyer" />
+            <TextView android:textSize="11.0px" android:textColor="@color/dark_slate_blue_two" android:id="@id/tv_card_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0px" android:layout_marginTop="74.0px" android:text="PENG, CHARLES\nCT 1234567\nTHRU  2012-12" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/regular" />
+        </RelativeLayout>
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/sign_uregistration_finished_enjoy_our_service" style="@style/light" />
+    </LinearLayout>
+    <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_signup_back_home" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="fill_parent" android:layout_height="40.0px" android:layout_marginLeft="20.0px" android:layout_marginRight="20.0px" android:layout_marginBottom="30.0px" android:text="@string/back_to_home" android:layout_alignParentBottom="true" android:layout_centerInParent="true" android:layout_centerHorizontal="true" style="@style/regular" />
+</RelativeLayout>

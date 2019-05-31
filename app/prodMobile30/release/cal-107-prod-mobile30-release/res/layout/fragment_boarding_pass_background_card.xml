@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:paddingLeft="10.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/rl_boarding_pass" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rl_head" android:background="@drawable/bg_boardimg_pass_head_radius" android:layout_width="fill_parent" android:layout_height="74.5px" />
+        <ImageView android:id="@id/iv_hole" android:layout_width="fill_parent" android:layout_height="12.0px" android:src="@drawable/bg_card_hole" android:scaleType="fitXY" android:layout_below="@id/rl_head" />
+        <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:id="@id/tv_name" android:layout_width="240.0px" android:layout_height="24.0px" android:layout_marginLeft="20.0px" android:layout_marginTop="23.0px" style="@style/regular" />
+        <TextView android:textSize="13.0px" android:textColor="@color/black_one" android:id="@id/tv_bookticket" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="54.5px" android:layout_alignLeft="@id/tv_name" style="@style/light" />
+        <ImageView android:id="@id/iv_boarding_pass_info" android:background="@drawable/ic_boardingpass_info" android:layout_width="32.0px" android:layout_height="32.0px" android:layout_marginTop="21.0px" android:layout_marginRight="20.0px" android:scaleType="fitXY" android:layout_alignParentEnd="true" />
+        <ci.ui.view.DashedLine android:id="@id/dl" android:layout_width="319.1953px" android:layout_height="1.0px" android:layout_marginTop="80.0px" android:layout_centerHorizontal="true" app:dl_color="@color/greyish_two" />
+        <ci.ui.view.ShadowBar.ShadowBarScrollview android:id="@id/sv_bottom" android:background="@drawable/bg_boardimg_pass_body_radius" android:layout_width="fill_parent" android:layout_height="417.0px" android:layout_below="@id/iv_hole" />
+    </RelativeLayout>
+</LinearLayout>

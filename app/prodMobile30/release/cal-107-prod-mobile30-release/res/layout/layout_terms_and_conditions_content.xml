@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll" android:background="@color/black_30" android:layout_width="360.0px" android:layout_height="wrap_content" android:layout_marginTop="10.0px">
+        <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:id="@id/tv_item_title" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:layout_marginBottom="18.0px" android:text="@string/Qualifications_title" style="@style/regular" />
+        <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.15" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:id="@id/tv_item_content" android:layout_width="300.0px" android:layout_height="wrap_content" android:text="@string/Qualifications_content" android:lineSpacingExtra="10.0px" style="@style/light" />
+    </LinearLayout>
+</LinearLayout>

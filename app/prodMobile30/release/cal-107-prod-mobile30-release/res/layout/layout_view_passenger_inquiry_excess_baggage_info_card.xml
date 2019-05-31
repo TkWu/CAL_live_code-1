@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_name" android:background="@color/black_30" android:layout_width="fill_parent" android:layout_height="32.0px">
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:id="@id/name" android:layout_width="300.0px" android:layout_height="22.699982px" android:singleLine="true" android:layout_centerInParent="true" style="@style/regular" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/rl_add_bag" android:layout_width="320.0px" android:layout_height="35.0px" android:layout_marginTop="20.0px" android:layout_marginBottom="40.0px" android:layout_below="@id/rl_title">
+        <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:id="@id/tv_value" android:layout_width="86.69998px" android:layout_height="26.699982px" android:layout_marginLeft="10.0px" android:text="30公斤" style="@style/light" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center|right" android:id="@id/tv_ebamount" android:layout_width="180.0px" android:layout_height="wrap_content" android:layout_marginRight="10.0px" android:text="TWD 2,400" android:layout_alignBottom="@id/tv_value" android:alpha="0.8" android:layout_alignParentEnd="true" style="@style/light" />
+        <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" android:alpha="0.4" />
+    </RelativeLayout>
+</LinearLayout>

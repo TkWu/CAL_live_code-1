@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_login" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <ImageView android:id="@id/iv_success" android:layout_width="71.19998dip" android:layout_height="71.19998dip" android:layout_marginTop="57.099976dip" android:src="@drawable/img_done" android:layout_below="@id/toolbar" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="35.69998dip" android:layout_marginRight="30.0dip" android:layout_below="@id/iv_success">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white_four" android:layout_gravity="center" android:id="@id/tv_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reclaim_completed_message" android:lineSpacingExtra="6.6999817sp" style="@style/light" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/rl_ok" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="30.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/btn_ok" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="320.0dip" android:layout_height="40.0dip" android:layout_marginTop="40.0dip" android:text="@string/back_to_manage_miles" android:layout_centerHorizontal="true" android:textAllCaps="false" style="@style/regular" />
+    </RelativeLayout>
+</RelativeLayout>

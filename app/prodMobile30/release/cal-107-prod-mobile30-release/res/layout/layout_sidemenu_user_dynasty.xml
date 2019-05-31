@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_photo_dynasty" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginTop="18.0dip" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/iv_default_dynasty" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/img_avatar_not_logged_in" android:scaleType="fitXY" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/iv_userphoto_dynasty" android:background="@color/transparent" android:layout_width="60.0dip" android:layout_height="60.0dip" android:scaleType="fitXY" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="20.0sp" android:textColor="@color/white_four" android:gravity="center" android:id="@id/tv_username_dynasty" android:layout_width="260.0dip" android:layout_height="25.299988dip" android:layout_marginTop="90.0dip" android:text="User Name" android:singleLine="true" android:layout_centerHorizontal="true" style="@style/light" />
+    <RelativeLayout android:gravity="center" android:id="@id/rl_detail" android:layout_width="260.0dip" android:layout_height="wrap_content" android:layout_marginTop="131.69998dip" android:layout_centerHorizontal="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_card" android:background="@color/transparent" android:layout_width="26.699982dip" android:layout_height="18.0dip" android:layout_marginRight="6.0dip" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white_four" android:id="@id/tv_card_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WC0000000" android:singleLine="true" android:alpha="0.8" style="@style/light" />
+        </LinearLayout>
+        <View android:id="@id/view" android:background="@color/white_four" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="16.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:alpha="0.6" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/white_four" android:id="@id/tv_miles" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.199982dip" android:text="@string/menu_miles" android:singleLine="true" android:layout_toRightOf="@id/view" android:layout_centerVertical="true" android:alpha="0.8" style="@style/light" />
+    </RelativeLayout>
+</RelativeLayout>

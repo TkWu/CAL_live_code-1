@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0px" android:layout_marginBottom="16.0px">
+        <View android:id="@id/v_leftline" android:background="@color/white_20" android:layout_width="80.0px" android:layout_height="0.70000005px" android:layout_marginLeft="10.0px" android:layout_centerVertical="true" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_horizontal" android:id="@id/tv_centerline" android:layout_width="137.29999px" android:layout_height="wrap_content" android:layout_marginLeft="13.0px" android:layout_marginRight="13.0px" android:layout_toRightOf="@id/v_leftline" />
+        <View android:id="@id/v_rightline" android:background="@color/white_20" android:layout_width="80.0px" android:layout_height="0.70000005px" android:layout_marginRight="10.0px" android:layout_toRightOf="@id/tv_centerline" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_day" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_title" />
+</RelativeLayout>

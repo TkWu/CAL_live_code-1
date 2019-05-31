@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/btn_home_shortcut_bar_background" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlayout_left_button" android:background="@drawable/btn_home_shortcut_bar_button_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/img_bookticket" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/ic_book_flight" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textColor="@color/white_four" android:id="@id/tv_bookticket" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/home_page_button_book_ticket" android:layout_below="@id/img_bookticket" android:layout_centerHorizontal="true" style="@style/light" />
+    </RelativeLayout>
+    <View android:background="@color/white_30" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/rlayout_center_button" android:background="@drawable/btn_home_shortcut_bar_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/img_flightstatus" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/ic_flight_status" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textColor="@color/white_four" android:id="@id/tv_flight_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/flight_status" android:layout_below="@id/img_flightstatus" android:layout_centerHorizontal="true" style="@style/light" />
+    </RelativeLayout>
+    <View android:background="@color/white_30" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/rlayout_right_button" android:background="@drawable/btn_home_shortcut_bar_button_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/img_timetable" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:src="@drawable/ic_timetablet" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textColor="@color/white_four" android:id="@id/tv_timetable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/home_page_timetable" android:layout_below="@id/img_timetable" android:layout_centerHorizontal="true" style="@style/light" />
+    </RelativeLayout>
+</LinearLayout>

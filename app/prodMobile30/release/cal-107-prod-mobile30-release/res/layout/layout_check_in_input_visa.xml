@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/llayout_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:gravity="center|left" android:id="@id/tv_name" android:background="@color/black_30" android:layout_width="fill_parent" android:layout_height="50.0px" android:text="Passenger Name" android:singleLine="true" android:layout_centerVertical="true" android:paddingStart="30.0px" android:paddingEnd="30.0px" style="@style/regular" />
+    <LinearLayout android:orientation="vertical" android:id="@id/llayout_content" android:paddingTop="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

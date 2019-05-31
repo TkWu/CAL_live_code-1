@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tvDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dinner" android:alpha="0.69" style="@style/regular" />
+    <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tvDash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" - " android:layout_toRightOf="@id/tvDesc" android:alpha="0.69" style="@style/regular" />
+    <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tvMealName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/unselected" android:layout_toRightOf="@id/tvDash" android:alpha="0.69" style="@style/regular" />
+</RelativeLayout>

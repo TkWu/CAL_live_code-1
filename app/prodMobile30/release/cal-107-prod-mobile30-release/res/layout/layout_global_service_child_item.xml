@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rl_phone_click" android:background="@drawable/bg_transparent_press_black20" android:clickable="true" android:layout_width="80.0px" android:layout_height="92.0px">
+            <ImageView android:id="@id/iv_ic_phone" android:layout_width="28.0px" android:layout_height="28.0px" android:src="@drawable/ic_phone" android:scaleType="fitXY" android:layout_centerInParent="true" />
+            <View android:id="@id/view_line_v" android:background="@color/white_30" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_below="@id/rl" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_map_click" android:background="@drawable/bg_transparent_press_black20" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0px" android:layout_centerVertical="true">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:ellipsize="end" android:gravity="left" android:id="@id/tv_city_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Taipei" android:singleLine="true" android:layout_centerVertical="true" style="@style/regular" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/tv_ic_locate_2" android:visibility="visible" android:layout_width="18.0px" android:layout_height="18.0px" android:layout_marginLeft="6.0px" android:src="@drawable/ic_locate_2" android:scaleType="fitXY" />
+                </LinearLayout>
+                <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:ellipsize="end" android:gravity="left" android:id="@id/tv_address" android:layout_width="196.0px" android:layout_height="wrap_content" android:layout_marginTop="4.0px" android:text="No.131, Sec.4, Nanjing E. Rd., Taipei City 104, Taiwan " android:maxLines="3" android:layout_centerVertical="true" style="@style/regular" />
+            </LinearLayout>
+            <ImageView android:id="@id/iv_ic_list_arrow" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginLeft="20.0px" android:src="@drawable/ic_list_arrow" android:scaleType="fitXY" android:layout_toRightOf="@id/ll_location" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/view_line_h" android:background="@color/white_30" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>
