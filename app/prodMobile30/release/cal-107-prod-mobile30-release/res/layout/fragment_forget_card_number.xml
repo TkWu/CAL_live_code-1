@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="30.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/tv_prompt_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/inquiry_card_number_prompt_msg" style="@style/light" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_textfeild" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_textview" android:layout_centerHorizontal="true">
+        <FrameLayout android:id="@id/fl_account" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" />
+        <FrameLayout android:id="@id/fl_last_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" />
+        <FrameLayout android:id="@id/fl_first_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" />
+        <FrameLayout android:id="@id/fl_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/rl_send" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/btn_send" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="320.0dip" android:layout_height="40.0dip" android:text="@string/inquiry_input_box_send" android:layout_centerHorizontal="true" android:textAllCaps="false" style="@style/regular" />
+    </RelativeLayout>
+</RelativeLayout>

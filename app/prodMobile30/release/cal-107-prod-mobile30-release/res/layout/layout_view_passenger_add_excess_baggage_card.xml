@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_name" android:background="@color/black_30" android:layout_width="fill_parent" android:layout_height="32.0px">
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:id="@id/name" android:layout_width="300.0px" android:layout_height="22.699982px" android:singleLine="true" android:layout_centerInParent="true" style="@style/regular" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/rl_add_bag" android:layout_width="320.0px" android:layout_height="36.299988px" android:layout_marginTop="19.699982px" android:layout_marginBottom="20.0px" android:layout_below="@id/rl_title">
+        <ImageButton android:id="@id/ib_decrease" android:background="@drawable/btn_decrease_n" android:layout_width="48.0px" android:layout_height="32.0px" android:src="@drawable/btn_press_decrease_icon" android:layout_alignParentLeft="true" />
+        <ImageButton android:id="@id/ib_add" android:background="@drawable/btn_add_2_n" android:layout_width="48.0px" android:layout_height="32.0px" android:src="@drawable/btn_press_add_icon" android:layout_alignParentRight="true" />
+        <TextView android:textSize="24.0px" android:textColor="@color/white_four" android:id="@id/tv_value" android:layout_width="40.0px" android:layout_height="28.699982px" android:layout_marginLeft="56.299988px" android:text="0" android:layout_toRightOf="@id/ib_decrease" style="@style/light" />
+        <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:id="@id/tv_unit" android:layout_width="92.29999px" android:layout_height="28.699982px" android:layout_marginRight="7.6999817px" android:text="Kg" android:layout_toLeftOf="@id/ib_add" style="@style/light" />
+        <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" android:alpha="0.4" />
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/rl_msg" android:background="@drawable/bg_passengers_messenger" android:visibility="visible" android:layout_width="320.0px" android:layout_height="36.0px" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_alerts" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginLeft="10.0px" android:src="@drawable/ic_travel_alerts" />
+        <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:layout_gravity="center_vertical" android:id="@id/tv_msg" android:layout_width="266.0px" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:text="error" style="@style/regular" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="20.0px" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_flight_tab_flight_support" android:layout_width="340.0px" android:layout_height="190.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/llayout_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.299988px">
+        <View android:id="@id/v_title" android:background="@drawable/trip_detail_view_blue" android:layout_width="2.0px" android:layout_height="16.0px" android:layout_marginTop="11.0px" />
+        <TextView android:textSize="16.0px" android:textColor="@color/french_blue" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.299988px" android:layout_marginTop="9.0px" android:text="@string/trips_detail_extra_services" style="@style/regular" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0px" android:layout_marginTop="40.0px" android:layout_marginRight="20.0px">
+        <RelativeLayout android:id="@id/rl_global_service_hotline_click" android:background="@drawable/bg_transparent_press_black20" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/global_service_hotline" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/light" />
+            <ImageView android:id="@id/iv_ic_list_arrow_g1" android:background="@drawable/ic_list_arrow_g" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/vline_meal" android:background="@drawable/bg_passenger_card_line_50" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.39" />
+        <RelativeLayout android:id="@id/rl_phone_click" android:background="@drawable/bg_transparent_press_black20" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0px" android:layout_marginTop="20.0px">
+            <View android:background="@drawable/bg_french_blue_stroke_radius3dp_width1dp" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/iv_ic_phone_b" android:background="@drawable/ic_phone_b" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginLeft="58.799988px" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_toRightOf="@id/iv_ic_phone_b" android:layout_centerVertical="true">
+                <TextView android:textSize="16.0px" android:textColor="@color/french_blue" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_flight_support_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/regular" />
+                <TextView android:textSize="16.0px" android:textColor="@color/french_blue" android:gravity="center_vertical" android:id="@id/tv_flight_support_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:alpha="0.69" style="@style/regular" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <ProgressBar android:id="@id/progressBar" android:visibility="gone" android:layout_width="40.0px" android:layout_height="40.0px" android:layout_marginBottom="25.0px" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

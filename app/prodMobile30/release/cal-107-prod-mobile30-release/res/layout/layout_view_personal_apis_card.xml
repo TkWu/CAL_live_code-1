@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/personal_apis_card_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_head" android:background="@drawable/bg_miles_detail_card_head_radius" android:paddingLeft="20.0px" android:layout_width="fill_parent" android:layout_height="64.0px">
+        <LinearLayout android:orientation="vertical" android:layout_width="256.0px" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="24.0px" android:text="@string/my_apis" android:singleLine="true" style="@style/regular" />
+            <TextView android:textSize="13.0px" android:textColor="@color/grey_four" android:id="@id/tv_sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0px" android:minHeight="16.0px" android:text="@string/advance_passenger_information_system" style="@style/light" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|right" android:orientation="vertical" android:id="@id/ll_add" android:paddingRight="20.0px" android:layout_width="64.0px" android:layout_height="64.0px" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageButton android:id="@id/ibtn_add" android:background="@drawable/bg_transparent_press_black20" android:clickable="false" android:layout_width="24.0px" android:layout_height="24.0px" android:src="@drawable/ic_add_g" android:scaleType="fitXY" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_body" android:background="@drawable/bg_manage_miles_body_radius" android:paddingBottom="20.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_head">
+        <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/tv_no_api" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="28.0px" android:layout_marginRight="20.0px" android:layout_marginBottom="8.0px" android:text="@string/no_apis" style="@style/light" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_bg" android:background="@drawable/bg_about" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ExpandableListView android:layout_gravity="center_horizontal" android:id="@id/elv" android:background="@color/transparent" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/transparent" android:drawSelectorOnTop="false" android:groupIndicator="@null" android:divider="@null" android:dividerHeight="0.0dip" android:choiceMode="singleChoice" android:splitMotionEvents="false" />
+    <ProgressBar android:id="@id/progressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+</RelativeLayout>

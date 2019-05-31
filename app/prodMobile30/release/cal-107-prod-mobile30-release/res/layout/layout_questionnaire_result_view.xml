@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:padding="0.0px" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center_horizontal" android:id="@id/v_line_top" android:background="@color/warm_grey_50" android:visibility="gone" android:layout_width="300.0dip" android:layout_height="1.0dip" android:alpha="0.4" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_progress" android:paddingTop="20.299988dip" android:paddingBottom="20.299988dip" android:layout_width="300.0dip" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0dip" android:textColor="@color/black_one" android:layout_gravity="center_vertical" android:id="@id/tv_question" android:layout_width="180.0dip" android:layout_height="wrap_content" android:text="question  " style="@style/light" />
+        <RelativeLayout android:id="@id/rl_progressBar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="11.0dip">
+            <ProgressBar android:id="@id/progressBar" android:layout_width="100.0dip" android:layout_height="wrap_content" android:progressDrawable="@drawable/seekbar_progress_default" android:layout_centerVertical="true" style="?android:progressBarStyleHorizontal" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:layout_gravity="center_horizontal" android:id="@id/v_line_bottom" android:background="@color/warm_grey_50" android:layout_width="300.0dip" android:layout_height="1.0dip" android:alpha="0.4" />
+</LinearLayout>

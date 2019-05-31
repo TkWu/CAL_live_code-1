@@ -1,0 +1,117 @@
+﻿{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "code_1A": "P",
+      "name_tw": "護照",
+      "name_cn": "护照",
+      "name_en": "Passport",
+      "name_jp": "パスポート"
+    },
+    {
+      "code_1A": "C",
+	  "issued_country": "USA",
+      "name_tw": "美國永久居民卡",
+      "name_cn": "美国永久居民卡",
+      "name_en": "United States Permanent Resident Card",
+      "name_jp": "United States Permanent Resident Card"
+    },
+	{
+      "code_1A": "C",
+	  "issued_country": "CAN",
+      "name_tw": "加拿大永久居民卡",
+      "name_cn": "加拿大永久居民卡",
+      "name_en": "Canada Permanent Resident Card",
+      "name_jp": "Canada Permanent Resident Card"
+    },
+    {
+      "code_1A": "CT",
+	  "issued_country": "CHN",
+      "name_tw": "臺灣居民來往大陸通行證(臺胞證)",
+      "name_cn": "台湾居民来往大陆通行证(台胞证)",
+      "name_en": "Mainland Travel Permit for Taiwan Residents",
+      "name_jp": "Mainland Travel Permit for Taiwan Residents"
+    },
+    {
+      "code_1A": "F",
+	  "issued_country": "TWN",
+      "name_tw": "中華民國國民身分證",
+      "name_cn": "中华民国国民身分证",
+      "name_en": "Republic of China National ID Card",
+      "name_jp": "Republic of China National ID Card"
+    },
+    {
+      "code_1A": "CD",
+	  "issued_country": "CHN",
+      "name_tw": "大陸居民往來臺灣通行證",
+      "name_cn": "大陆居民往来台湾通行证",
+      "name_en": "Mainland Residents Traveling to Taiwan Permit",
+      "name_jp": "Mainland Residents Traveling to Taiwan Permit"
+    },
+    {
+      "code_1A": "PL",
+	  "issued_country": "CHN",
+      "name_tw": "中華人民共和國出入境通行證",
+      "name_cn": "中华人民共和国出入境通行证",
+      "name_en": "People's Republic of China Entry and Exit Permit",
+      "name_jp": "People's Republic of China Entry and Exit Permit"
+    },
+    {
+      "code_1A": "PT",
+	  "issued_country": "CHN",
+      "name_tw": "中華人民共和國旅行證",
+      "name_cn": "中华人民共和国旅行证",
+      "name_en": "People's Republic of China Travel Document",
+      "name_jp": "People's Republic of China Travel Document"
+    },
+    {
+      "code_1A": "S",
+	  "issued_country": "CHN",
+      "name_tw": "中華人民共和國海員證",
+      "name_cn": "中华人民共和国海员证",
+      "name_en": "People's Republic of China Seafarer's Passport",
+      "name_jp": "People's Republic of China Seafarer's Passport"
+    },
+    {
+      "code_1A": "Q",
+	  "issued_country": "CHN",
+      "name_tw": "前往港澳通行證",
+      "name_cn": "前往港澳通行证",
+      "name_en": "People's Republic of China Permit for Proceeding to Hong Kong and Macao",
+      "name_jp": "People's Republic of China Permit for Proceeding to Hong Kong and Macao"
+    },
+    {
+      "code_1A": "CA",
+	  "issued_country": "CHN",
+      "name_tw": "因公往來香港澳門特別行政區通行證",
+      "name_cn": "因公往来香港澳门特别行政区通行证",
+      "name_en": "Exit-entry Permit for Travelling to and from Hong Kong and Macao for official purposes",
+      "name_jp": "Exit-entry Permit for Travelling to and from Hong Kong and Macao for official purposes"
+    },
+    {
+      "code_1A": "W",
+	  "issued_country": "CHN",
+      "name_tw": "往來港澳通行證",
+      "name_cn": "往来港澳通行证",
+      "name_en": "Exit-Entry Permit for Travelling to and from Hong Kong and Macao",
+      "name_jp": "Exit-Entry Permit for Travelling to and from Hong Kong and Macao"
+    },
+    {
+      "code_1A": "CC",
+	  "issued_country": "CHN",
+      "name_tw": "港澳同胞回鄉證、港澳居民來往內地通行證",
+      "name_cn": "港澳同胞回乡证、港澳居民来往内地通行证",
+      "name_en": "Mainland Travel Permit for Hong Kong and Macao Residents",
+      "name_jp": "Mainland Travel Permit for Hong Kong and Macao Residents"
+    },
+    {
+      "code_1A": "CN",
+	  "issued_country": "TWN",
+      "name_tw": "中華民國臺灣地區入出境許可證(入臺證)",
+      "name_cn": "中华民国臺湾地区入出境许可证(入台证)",
+      "name_en": "Exit & Entry Permit Taiwan Republic Of China",
+      "name_jp": "Exit & Entry Permit Taiwan Republic Of China"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_about" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="233.29999px" android:layout_below="@id/toolbar" />
+    <ProgressBar android:id="@id/proBar_load" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="4.0px" android:progressDrawable="@drawable/progress_bar" android:layout_below="@id/toolbar" style="?android:progressBarStyleHorizontal" />
+    <Button android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/btn_get_directions" android:background="@drawable/bg_btn_radius_17dp_black_60" android:layout_width="104.0px" android:layout_height="24.0px" android:layout_marginTop="10.0px" android:layout_marginRight="10.0px" android:minWidth="0.0px" android:minHeight="0.0px" android:text="@string/about_get_directions" android:layout_below="@id/toolbar" android:layout_alignParentRight="true" style="@style/light" />
+    <ScrollView android:id="@id/scrollview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/webview" android:layout_centerHorizontal="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="300.0px" android:layout_height="100.0px">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_locate" android:layout_width="34.69998px" android:layout_height="34.69998px" android:src="@drawable/ic_locate" android:scaleType="fitXY" />
+                <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/tv_address_value" android:layout_width="255.29999px" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:text="No.131, Sec.4, Nanjing E. Rd.,Taipei City 104, Taiwan.," android:maxLines="4" style="@style/regular" />
+            </LinearLayout>
+            <RelativeLayout android:layout_gravity="center" android:id="@id/rl_fax" android:layout_width="300.0px" android:layout_height="93.29999px">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:layout_gravity="center_vertical" android:id="@id/tv_fax" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ticketing_fax" style="@style/regular" />
+                    <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tv_fax_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0px" android:text="886-2-514-5549" android:alpha="0.8" style="@style/regular" />
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.3" />
+            <RelativeLayout android:layout_gravity="center" android:id="@id/rl_counter_service" android:layout_width="300.0px" android:layout_height="93.29999px">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:layout_gravity="center_vertical" android:id="@id/tv_counter_service" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/counter_service" style="@style/regular" />
+                    <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tv_counter_service_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0px" android:text="Mon-Fri, 08:30~17:30" android:alpha="0.8" style="@style/regular" />
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.3" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

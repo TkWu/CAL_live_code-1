@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlayout_bg" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_centerVertical="true">
+        <ImageView android:id="@id/img_icon" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:src="@drawable/ic_boarding_pass" android:layout_centerVertical="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="false" />
+        <TextView android:textColor="@color/white_four" android:id="@id/tvText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="@string/menu_title_homepage" android:singleLine="true" android:layout_centerVertical="true" android:layout_toEndOf="@id/img_icon" style="@style/light" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white_four" android:gravity="center" android:id="@id/tvNum" android:background="@drawable/ic_number_circle_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.299988dip" android:text="2" android:layout_centerVertical="true" android:layout_toEndOf="@id/tvText" style="@style/regular" />
+    </RelativeLayout>
+</LinearLayout>

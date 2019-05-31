@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:textColor="@color/warm_grey_two" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_day" android:layout_width="50.0dip" android:layout_height="15.699982dip" android:text="Day" style="@style/light" />
+    <ImageView android:layout_gravity="center" android:id="@id/iv_day" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="4.299988dip" android:layout_marginBottom="2.2999878dip" android:src="@drawable/ic_weather_01" />
+    <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:textColor="@color/black_two" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_day_high" android:layout_width="wrap_content" android:layout_height="15.699982dip" android:text="high" style="@style/light" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/warm_grey_two" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_day_low" android:layout_width="wrap_content" android:layout_height="15.699982dip" android:layout_marginLeft="3.0dip" android:text="low" style="@style/light" />
+    </LinearLayout>
+</LinearLayout>

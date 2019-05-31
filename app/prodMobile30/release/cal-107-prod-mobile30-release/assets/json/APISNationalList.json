@@ -1,0 +1,2130 @@
+{
+  "rt_code": "000",
+  "rt_msg": "成功。",
+  "rt_data": [
+    {
+      "country_cd": "TW",
+      "resident_cd": "TWN",
+      "issue_cd": "TWN",
+      "name_tw": "臺灣",
+      "name_cn": "台湾",
+      "name_en": "Taiwan",
+      "name_jp": "台湾"
+    },
+    {
+      "country_cd": "CN",
+      "resident_cd": "CHN",
+      "issue_cd": "CHN",
+      "name_tw": "中國大陸",
+      "name_cn": "中国大陆",
+      "name_en": "China",
+      "name_jp": "中国"
+    },
+    {
+      "country_cd": "HK",
+      "resident_cd": "HKG",
+      "issue_cd": "HKG",
+      "name_tw": "香港",
+      "name_cn": "香港",
+      "name_en": "Hong Kong",
+      "name_jp": "香港"
+    },
+    {
+      "country_cd": "MO",
+      "resident_cd": "MAC",
+      "issue_cd": "MAC",
+      "name_tw": "澳門特別行政區",
+      "name_cn": "澳门特别行政区",
+      "name_en": "Macao - SAR of China",
+      "name_jp": "マカオ"
+    },
+    {
+      "country_cd": "US",
+      "resident_cd": "USA",
+      "issue_cd": "USA",
+      "name_tw": "美國",
+      "name_cn": "美国",
+      "name_en": "United States Of America",
+      "name_jp": "アメリカ合衆国"
+    },
+    {
+      "country_cd": "JP",
+      "resident_cd": "JPN",
+      "issue_cd": "JPN",
+      "name_tw": "日本",
+      "name_cn": "日本",
+      "name_en": "Japan",
+      "name_jp": "日本"
+    },
+    {
+      "country_cd": "KR",
+      "resident_cd": "KOR",
+      "issue_cd": "KOR",
+      "name_tw": "韓國",
+      "name_cn": "韩国",
+      "name_en": "Republic of Korea",
+      "name_jp": "韩国"
+    },
+    {
+      "country_cd": "MY",
+      "resident_cd": "MYS",
+      "issue_cd": "MYS",
+      "name_tw": "馬來西亞",
+      "name_cn": "马来西亚",
+      "name_en": "Malaysia",
+      "name_jp": "マレーシア"
+    },
+    {
+      "country_cd": "SG",
+      "resident_cd": "SGP",
+      "issue_cd": "SGP",
+      "name_tw": "新加坡",
+      "name_cn": "新加坡",
+      "name_en": "Singapore",
+      "name_jp": "シンガポール"
+    },
+    {
+      "country_cd": "ID",
+      "resident_cd": "IDN",
+      "issue_cd": "IDN",
+      "name_tw": "印尼",
+      "name_cn": "印尼",
+      "name_en": "Indonesia",
+      "name_jp": "インドネシア"
+    },
+    {
+      "country_cd": "VN",
+      "resident_cd": "VNM",
+      "issue_cd": "VNM",
+      "name_tw": "越南",
+      "name_cn": "越南",
+      "name_en": "Vietnam",
+      "name_jp": "ベトナム"
+    },
+    {
+      "country_cd": "TH",
+      "resident_cd": "THA",
+      "issue_cd": "THA",
+      "name_tw": "泰國",
+      "name_cn": "泰国",
+      "name_en": "Thailand",
+      "name_jp": "タイ"
+    },
+    {
+      "country_cd": "NZ",
+      "resident_cd": "NZL",
+      "issue_cd": "NZL",
+      "name_tw": "紐西蘭",
+      "name_cn": "新西兰",
+      "name_en": "New Zealand",
+      "name_jp": "ニュージーランド"
+    },
+    {
+      "country_cd": "AU",
+      "resident_cd": "AUS",
+      "issue_cd": "AUS",
+      "name_tw": "澳洲",
+      "name_cn": "澳洲",
+      "name_en": "Australia",
+      "name_jp": "オーストラリア"
+    },
+	{
+      "country_cd": "AF",
+      "resident_cd": "AFG",
+      "issue_cd": "AFG",
+      "name_tw": "阿富汗",
+      "name_cn": "阿富汗",
+      "name_en": "Afghanistan",
+      "name_jp": "アフガニスタン"
+    },
+    {
+      "country_cd": "AL",
+      "resident_cd": "ALB",
+      "issue_cd": "ALB",
+      "name_tw": "阿爾巴尼亞",
+      "name_cn": "阿尔巴尼亚",
+      "name_en": "Albania",
+      "name_jp": "アルバニア"
+    },
+    {
+      "country_cd": "DZ",
+      "resident_cd": "DZA",
+      "issue_cd": "DZA",
+      "name_tw": "阿爾及利亞",
+      "name_cn": "阿尔及利亚",
+      "name_en": "Algeria",
+      "name_jp": "アルジェリア"
+    },
+    {
+      "country_cd": "AS",
+      "resident_cd": "ASM",
+      "issue_cd": "ASM",
+      "name_tw": "美屬薩摩亞",
+      "name_cn": "美属萨摩亚",
+      "name_en": "American Samoa",
+      "name_jp": "アメリカ领サモア诸岛"
+    },
+    {
+      "country_cd": "AD",
+      "resident_cd": "AND",
+      "issue_cd": "AND",
+      "name_tw": "安多拉",
+      "name_cn": "安多拉",
+      "name_en": "Andorra",
+      "name_jp": "アンドラ"
+    },
+    {
+      "country_cd": "AO",
+      "resident_cd": "AGO",
+      "issue_cd": "AGO",
+      "name_tw": "安哥拉",
+      "name_cn": "安哥拉",
+      "name_en": "Angola",
+      "name_jp": "アンゴラ"
+    },
+    {
+      "country_cd": "AI",
+      "resident_cd": "AIA",
+      "issue_cd": "AIA",
+      "name_tw": "安吉拉",
+      "name_cn": "安吉拉",
+      "name_en": "Anguilla",
+      "name_jp": "アングイラ"
+    },
+    {
+      "country_cd": "AQ",
+      "resident_cd": "ATA",
+      "issue_cd": "ATA",
+      "name_tw": "南極洲",
+      "name_cn": "南极洲",
+      "name_en": "Antarctic",
+      "name_jp": "南极"
+    },
+    {
+      "country_cd": "AG",
+      "resident_cd": "ATG",
+      "issue_cd": "ATG",
+      "name_tw": "安地卡與巴布達",
+      "name_cn": "安地卡与巴布达",
+      "name_en": "Antigua and Barbuda",
+      "name_jp": "アンチグアバーブーダ"
+    },
+    {
+      "country_cd": "AR",
+      "resident_cd": "ARG",
+      "issue_cd": "ARG",
+      "name_tw": "阿根廷",
+      "name_cn": "阿根廷",
+      "name_en": "Argentina",
+      "name_jp": "アルゼンチン"
+    },
+    {
+      "country_cd": "AM",
+      "resident_cd": "ARM",
+      "issue_cd": "ARM",
+      "name_tw": "亞美尼亞",
+      "name_cn": "亚美尼亚",
+      "name_en": "Armenia",
+      "name_jp": "アルメニア"
+    },
+    {
+      "country_cd": "AW",
+      "resident_cd": "ABW",
+      "issue_cd": "ABW",
+      "name_tw": "阿魯巴",
+      "name_cn": "阿鲁巴",
+      "name_en": "Aruba",
+      "name_jp": "アルーバ"
+    },
+    {
+      "country_cd": "AT",
+      "resident_cd": "AUT",
+      "issue_cd": "AUT",
+      "name_tw": "奧地利",
+      "name_cn": "奥地利",
+      "name_en": "Austria",
+      "name_jp": "オーストリア"
+    },
+    {
+      "country_cd": "AZ",
+      "resident_cd": "AZE",
+      "issue_cd": "AZE",
+      "name_tw": "亞塞拜然",
+      "name_cn": "亚塞拜然",
+      "name_en": "Azerbaijan",
+      "name_jp": "アゼルバイジャン"
+    },
+    {
+      "country_cd": "BS",
+      "resident_cd": "BHS",
+      "issue_cd": "BHS",
+      "name_tw": "巴哈馬",
+      "name_cn": "巴哈马",
+      "name_en": "Bahamas",
+      "name_jp": "バハマ"
+    },
+    {
+      "country_cd": "BH",
+      "resident_cd": "BHR",
+      "issue_cd": "BHR",
+      "name_tw": "巴林",
+      "name_cn": "巴林",
+      "name_en": "Bahrain",
+      "name_jp": "バーレーン"
+    },
+    {
+      "country_cd": "BD",
+      "resident_cd": "BGD",
+      "issue_cd": "BGD",
+      "name_tw": "孟加拉",
+      "name_cn": "孟加拉",
+      "name_en": "Bangladesh",
+      "name_jp": "バングラデシュ"
+    },
+    {
+      "country_cd": "BB",
+      "resident_cd": "BRB",
+      "issue_cd": "BRB",
+      "name_tw": "巴貝多",
+      "name_cn": "巴贝多",
+      "name_en": "Barbados",
+      "name_jp": "バルバドス"
+    },
+    {
+      "country_cd": "BY",
+      "resident_cd": "BLR",
+      "issue_cd": "BLR",
+      "name_tw": "白俄羅斯",
+      "name_cn": "白俄罗斯",
+      "name_en": "Belarus",
+      "name_jp": "ベラルーシ"
+    },
+    {
+      "country_cd": "BE",
+      "resident_cd": "BEL",
+      "issue_cd": "BEL",
+      "name_tw": "比利時",
+      "name_cn": "比利时",
+      "name_en": "Belgium",
+      "name_jp": "ベルギー"
+    },
+    {
+      "country_cd": "BZ",
+      "resident_cd": "BLZ",
+      "issue_cd": "BLZ",
+      "name_tw": "貝裏斯",
+      "name_cn": "贝里斯",
+      "name_en": "Belize",
+      "name_jp": "ベリーズ"
+    },
+    {
+      "country_cd": "BJ",
+      "resident_cd": "BEN",
+      "issue_cd": "BEN",
+      "name_tw": "貝南",
+      "name_cn": "贝南",
+      "name_en": "Benin",
+      "name_jp": "ベニン"
+    },
+    {
+      "country_cd": "BM",
+      "resident_cd": "BMU",
+      "issue_cd": "BMU",
+      "name_tw": "百慕達",
+      "name_cn": "百慕达",
+      "name_en": "Bermuda",
+      "name_jp": "イギリス领バミューダ群岛"
+    },
+    {
+      "country_cd": "BT",
+      "resident_cd": "BTN",
+      "issue_cd": "BTN",
+      "name_tw": "不丹",
+      "name_cn": "不丹",
+      "name_en": "Bhutan",
+      "name_jp": "ブータン"
+    },
+    {
+      "country_cd": "BO",
+      "resident_cd": "BOL",
+      "issue_cd": "BOL",
+      "name_tw": "玻利維亞",
+      "name_cn": "玻利维亚",
+      "name_en": "Bolivia",
+      "name_jp": "ボリビア"
+    },
+    {
+      "country_cd": "BQ",
+      "resident_cd": "BES",
+      "issue_cd": "BES",
+      "name_tw": "博奈爾、聖尤斯特歇斯和薩巴",
+      "name_cn": "博奈尔、圣尤斯特歇斯和萨巴",
+      "name_en": "Bonaire St Eustatius And Saba",
+      "name_jp": "ボネール岛、セントユースタティウスとサバ"
+    },
+    {
+      "country_cd": "BA",
+      "resident_cd": "BIH",
+      "issue_cd": "BIH",
+      "name_tw": "波士尼亞赫塞哥維納",
+      "name_cn": "波士尼亚赫塞哥维纳",
+      "name_en": "Bosnia-Herzegovina",
+      "name_jp": "ボスニア・ヘルツェゴビナ"
+    },
+    {
+      "country_cd": "BW",
+      "resident_cd": "BWA",
+      "issue_cd": "BWA",
+      "name_tw": "波劄那",
+      "name_cn": "波札那",
+      "name_en": "Botswana",
+      "name_jp": "ボツワナ"
+    },
+    {
+      "country_cd": "BR",
+      "resident_cd": "BRA",
+      "issue_cd": "BRA",
+      "name_tw": "巴西",
+      "name_cn": "巴西",
+      "name_en": "Brazil",
+      "name_jp": "ブラジル"
+    },
+    {
+      "country_cd": "BN",
+      "resident_cd": "BRN",
+      "issue_cd": "BRN",
+      "name_tw": "汶萊",
+      "name_cn": "文莱",
+      "name_en": "Brunei Darussalam",
+      "name_jp": "ブルネイ"
+    },
+    {
+      "country_cd": "BG",
+      "resident_cd": "BGR",
+      "issue_cd": "BGR",
+      "name_tw": "保加利亞",
+      "name_cn": "保加利亚",
+      "name_en": "Bulgaria",
+      "name_jp": "ブルガリア"
+    },
+    {
+      "country_cd": "BF",
+      "resident_cd": "BFA",
+      "issue_cd": "BFA",
+      "name_tw": "布吉納法索",
+      "name_cn": "布吉纳法索",
+      "name_en": "Burkina Faso",
+      "name_jp": "ブルキナファソ"
+    },
+    {
+      "country_cd": "BI",
+      "resident_cd": "BDI",
+      "issue_cd": "BDI",
+      "name_tw": "蒲隆地",
+      "name_cn": "蒲隆地",
+      "name_en": "Burundi",
+      "name_jp": "ブルンジ"
+    },
+    {
+      "country_cd": "KH",
+      "resident_cd": "KHM",
+      "issue_cd": "KHM",
+      "name_tw": "柬埔寨",
+      "name_cn": "柬埔寨",
+      "name_en": "Cambodia",
+      "name_jp": "カンボジア"
+    },
+    {
+      "country_cd": "CM",
+      "resident_cd": "CMR",
+      "issue_cd": "CMR",
+      "name_tw": "喀麥隆",
+      "name_cn": "喀麦隆",
+      "name_en": "Cameroon",
+      "name_jp": "カメルーン"
+    },
+    {
+      "country_cd": "CA",
+      "resident_cd": "CAN",
+      "issue_cd": "CAN",
+      "name_tw": "加拿大",
+      "name_cn": "加拿大",
+      "name_en": "Canada",
+      "name_jp": "カナダ"
+    },
+    {
+      "country_cd": "CV",
+      "resident_cd": "CPV",
+      "issue_cd": "CPV",
+      "name_tw": "維德角",
+      "name_cn": "维德角",
+      "name_en": "Cape Verde",
+      "name_jp": "カーボテルデ"
+    },
+    {
+      "country_cd": "KY",
+      "resident_cd": "CYM",
+      "issue_cd": "CYM",
+      "name_tw": "凱門群島",
+      "name_cn": "凯门群岛",
+      "name_en": "Cayman Islands",
+      "name_jp": "イギリス领ケイマン诸岛"
+    },
+    {
+      "country_cd": "CF",
+      "resident_cd": "CAF",
+      "issue_cd": "CAF",
+      "name_tw": "中非共和國",
+      "name_cn": "中非共和国",
+      "name_en": "Central African Republic",
+      "name_jp": "中央アフリカ"
+    },
+    {
+      "country_cd": "TD",
+      "resident_cd": "TCD",
+      "issue_cd": "TCD",
+      "name_tw": "查德",
+      "name_cn": "查德",
+      "name_en": "Chad",
+      "name_jp": "チャド"
+    },
+    {
+      "country_cd": "CL",
+      "resident_cd": "CHL",
+      "issue_cd": "CHL",
+      "name_tw": "智利",
+      "name_cn": "智利",
+      "name_en": "Chile",
+      "name_jp": "チリ"
+    },
+    {
+      "country_cd": "CX",
+      "resident_cd": "CXR",
+      "issue_cd": "CXR",
+      "name_tw": "克裏斯馬斯群島",
+      "name_cn": "克里斯马斯群岛",
+      "name_en": "Christmas Island",
+      "name_jp": "クリスマス诸岛"
+    },
+    {
+      "country_cd": "CC",
+      "resident_cd": "CCK",
+      "issue_cd": "CCK",
+      "name_tw": "可哥斯群島",
+      "name_cn": "可可斯群岛",
+      "name_en": "Cocos Islands",
+      "name_jp": "ココス诸岛"
+    },
+    {
+      "country_cd": "CO",
+      "resident_cd": "COL",
+      "issue_cd": "COL",
+      "name_tw": "哥倫比亞",
+      "name_cn": "哥伦比亚",
+      "name_en": "Colombia",
+      "name_jp": "コロンビア"
+    },
+    {
+      "country_cd": "KM",
+      "resident_cd": "COM",
+      "issue_cd": "COM",
+      "name_tw": "葛摩",
+      "name_cn": "葛摩",
+      "name_en": "Comoros",
+      "name_jp": "コモロ"
+    },
+    {
+      "country_cd": "CD",
+      "resident_cd": "COD",
+      "issue_cd": "COD",
+      "name_tw": "剛果民主共和國",
+      "name_cn": "刚果民主共和国",
+      "name_en": "Democratic Republic of the Cong",
+      "name_jp": "コンゴ民主共和国"
+    },
+    {
+      "country_cd": "CG",
+      "resident_cd": "COG",
+      "issue_cd": "COG",
+      "name_tw": "剛果布拉薩",
+      "name_cn": "刚果布拉萨",
+      "name_en": "Republic of the Cong",
+      "name_jp": "コンゴ"
+    },
+    {
+      "country_cd": "CK",
+      "resident_cd": "COK",
+      "issue_cd": "COK",
+      "name_tw": "庫克群島",
+      "name_cn": "库克群岛",
+      "name_en": "Cook Islands",
+      "name_jp": "クック诸岛"
+    },
+    {
+      "country_cd": "CR",
+      "resident_cd": "CRI",
+      "issue_cd": "CRI",
+      "name_tw": "哥斯大黎加",
+      "name_cn": "哥斯达黎加",
+      "name_en": "Costa Rica",
+      "name_jp": "コスタリカ"
+    },
+    {
+      "country_cd": "CI",
+      "resident_cd": "CIV",
+      "issue_cd": "CIV",
+      "name_tw": "象牙海岸",
+      "name_cn": "科特迪瓦",
+      "name_en": "Cote d'Ivoire",
+      "name_jp": "コートジボワール"
+    },
+    {
+      "country_cd": "HR",
+      "resident_cd": "HRV",
+      "issue_cd": "HRV",
+      "name_tw": "克羅埃西亞",
+      "name_cn": "克罗埃西亚",
+      "name_en": "Croatia",
+      "name_jp": "クロアチア"
+    },
+    {
+      "country_cd": "CU",
+      "resident_cd": "CUB",
+      "issue_cd": "CUB",
+      "name_tw": "古巴",
+      "name_cn": "古巴",
+      "name_en": "Cuba",
+      "name_jp": "キューバ"
+    },
+    {
+      "country_cd": "CW",
+      "resident_cd": "CUW",
+      "issue_cd": "CUW",
+      "name_tw": "庫拉索島",
+      "name_cn": "库拉索岛",
+      "name_en": "Curaçao",
+      "name_jp": "キュラソー岛"
+    },
+    {
+      "country_cd": "CY",
+      "resident_cd": "CYP",
+      "issue_cd": "CYP",
+      "name_tw": "賽普勒斯",
+      "name_cn": "塞浦路斯",
+      "name_en": "Cyprus",
+      "name_jp": "キプロス"
+    },
+    {
+      "country_cd": "CZ",
+      "resident_cd": "CZE",
+      "issue_cd": "CZE",
+      "name_tw": "捷克共和國",
+      "name_cn": "捷克共和国",
+      "name_en": "Czech Republic",
+      "name_jp": "チェコ共和国"
+    },
+    {
+      "country_cd": "DK",
+      "resident_cd": "DNK",
+      "issue_cd": "DNK",
+      "name_tw": "丹麥",
+      "name_cn": "丹麦",
+      "name_en": "Denmark",
+      "name_jp": "デンマーク"
+    },
+    {
+      "country_cd": "DJ",
+      "resident_cd": "DJI",
+      "issue_cd": "DJI",
+      "name_tw": "吉布地",
+      "name_cn": "吉布地",
+      "name_en": "Djibouti",
+      "name_jp": "ジブチ"
+    },
+    {
+      "country_cd": "DM",
+      "resident_cd": "DMA",
+      "issue_cd": "DMA",
+      "name_tw": "多明尼加",
+      "name_cn": "多米尼加",
+      "name_en": "Dominica",
+      "name_jp": "ドミニカ"
+    },
+    {
+      "country_cd": "DO",
+      "resident_cd": "DOM",
+      "issue_cd": "DOM",
+      "name_tw": "多明尼加共和國",
+      "name_cn": "多米尼加共和国",
+      "name_en": "Dominican Republic",
+      "name_jp": "ドミニカ共和国"
+    },
+    {
+      "country_cd": "EC",
+      "resident_cd": "ECU",
+      "issue_cd": "ECU",
+      "name_tw": "厄瓜多",
+      "name_cn": "厄瓜多",
+      "name_en": "Ecuador",
+      "name_jp": "エクアドル"
+    },
+    {
+      "country_cd": "EG",
+      "resident_cd": "EGY",
+      "issue_cd": "EGY",
+      "name_tw": "埃及",
+      "name_cn": "埃及",
+      "name_en": "Egypt",
+      "name_jp": "エジプト"
+    },
+    {
+      "country_cd": "SV",
+      "resident_cd": "SLV",
+      "issue_cd": "SLV",
+      "name_tw": "薩爾瓦多",
+      "name_cn": "萨尔瓦多",
+      "name_en": "El Salvador",
+      "name_jp": "エルサルバドル"
+    },
+    {
+      "country_cd": "GQ",
+      "resident_cd": "GNQ",
+      "issue_cd": "GNQ",
+      "name_tw": "赤道幾內亞",
+      "name_cn": "赤道几内亚",
+      "name_en": "Equatorial Guinea",
+      "name_jp": "赤道ギニア"
+    },
+    {
+      "country_cd": "ER",
+      "resident_cd": "ERI",
+      "issue_cd": "ERI",
+      "name_tw": "厄立垂亞",
+      "name_cn": "厄立垂亚",
+      "name_en": "Eritrea",
+      "name_jp": "エリトリア"
+    },
+    {
+      "country_cd": "EE",
+      "resident_cd": "EST",
+      "issue_cd": "EST",
+      "name_tw": "愛沙尼亞",
+      "name_cn": "爱沙尼亚",
+      "name_en": "Estonia",
+      "name_jp": "エストニア"
+    },
+    {
+      "country_cd": "ET",
+      "resident_cd": "ETH",
+      "issue_cd": "ETH",
+      "name_tw": "衣索匹亞",
+      "name_cn": "衣索匹亚",
+      "name_en": "Ethiopia",
+      "name_jp": "エチオピア"
+    },
+    {
+      "country_cd": "FK",
+      "resident_cd": "FLK",
+      "issue_cd": "FLK",
+      "name_tw": "福克蘭群島",
+      "name_cn": "福克兰群岛",
+      "name_en": "Falkland Islands",
+      "name_jp": "フォークランド诸岛"
+    },
+    {
+      "country_cd": "FO",
+      "resident_cd": "FRO",
+      "issue_cd": "FRO",
+      "name_tw": "法洛伊群島",
+      "name_cn": "法洛伊群岛",
+      "name_en": "Faroe Islands",
+      "name_jp": "フェロー诸岛"
+    },
+    {
+      "country_cd": "FJ",
+      "resident_cd": "FJI",
+      "issue_cd": "FJI",
+      "name_tw": "斐濟群島",
+      "name_cn": "斐济群岛",
+      "name_en": "Fiji",
+      "name_jp": "フィジー"
+    },
+    {
+      "country_cd": "FI",
+      "resident_cd": "FIN",
+      "issue_cd": "FIN",
+      "name_tw": "芬蘭",
+      "name_cn": "芬兰",
+      "name_en": "Finland",
+      "name_jp": "フィンランド"
+    },
+    {
+      "country_cd": "FR",
+      "resident_cd": "FRA",
+      "issue_cd": "FRA",
+      "name_tw": "法國",
+      "name_cn": "法国",
+      "name_en": "France",
+      "name_jp": "フランス"
+    },
+    {
+      "country_cd": "GF",
+      "resident_cd": "GUF",
+      "issue_cd": "GUF",
+      "name_tw": "法屬圭亞那",
+      "name_cn": "法属圭亚那",
+      "name_en": "French Guiana",
+      "name_jp": "フランス领ギアナ"
+    },
+    {
+      "country_cd": "PF",
+      "resident_cd": "PYF",
+      "issue_cd": "PYF",
+      "name_tw": "法屬玻裏尼西亞",
+      "name_cn": "法属玻里尼西亚",
+      "name_en": "French Polynesia",
+      "name_jp": "フランス领ポリネシア"
+    },
+    {
+      "country_cd": "GA",
+      "resident_cd": "GAB",
+      "issue_cd": "GAB",
+      "name_tw": "加彭",
+      "name_cn": "加彭",
+      "name_en": "Gabon",
+      "name_jp": "ガボン"
+    },
+    {
+      "country_cd": "GM",
+      "resident_cd": "GMB",
+      "issue_cd": "GMB",
+      "name_tw": "甘比亞",
+      "name_cn": "甘比亚",
+      "name_en": "Gambia",
+      "name_jp": "ガンビア"
+    },
+    {
+      "country_cd": "GE",
+      "resident_cd": "GEO",
+      "issue_cd": "GEO",
+      "name_tw": "喬治亞",
+      "name_cn": "乔治亚",
+      "name_en": "Georgia",
+      "name_jp": "グルジア"
+    },
+    {
+      "country_cd": "DE",
+      "resident_cd": "DEU",
+      "issue_cd": "DEU",
+      "name_tw": "德國",
+      "name_cn": "德国",
+      "name_en": "Germany",
+      "name_jp": "ドイツ"
+    },
+    {
+      "country_cd": "GH",
+      "resident_cd": "GHA",
+      "issue_cd": "GHA",
+      "name_tw": "迦納",
+      "name_cn": "迦纳",
+      "name_en": "Ghana",
+      "name_jp": "ガーナ"
+    },
+    {
+      "country_cd": "GI",
+      "resident_cd": "GIB",
+      "issue_cd": "GIB",
+      "name_tw": "吉布羅陀",
+      "name_cn": "吉布罗陀",
+      "name_en": "Gibraltar",
+      "name_jp": "ジブラルタル"
+    },
+    {
+      "country_cd": "GR",
+      "resident_cd": "GRC",
+      "issue_cd": "GRC",
+      "name_tw": "希臘",
+      "name_cn": "希腊",
+      "name_en": "Greece",
+      "name_jp": "ギリシャ"
+    },
+    {
+      "country_cd": "GL",
+      "resident_cd": "GRL",
+      "issue_cd": "GRL",
+      "name_tw": "格陵蘭",
+      "name_cn": "格陵兰",
+      "name_en": "Greenland",
+      "name_jp": "グリーンランド"
+    },
+    {
+      "country_cd": "GD",
+      "resident_cd": "GRD",
+      "issue_cd": "GRD",
+      "name_tw": "格瑞那達",
+      "name_cn": "格瑞那达",
+      "name_en": "Grenada",
+      "name_jp": "グレナダ"
+    },
+    {
+      "country_cd": "GP",
+      "resident_cd": "GLP",
+      "issue_cd": "GLP",
+      "name_tw": "哥德普洛",
+      "name_cn": "哥德普洛",
+      "name_en": "Guadeloupe",
+      "name_jp": "グアドループ岛"
+    },
+    {
+      "country_cd": "GU",
+      "resident_cd": "GUM",
+      "issue_cd": "GUM",
+      "name_tw": "關島",
+      "name_cn": "关岛",
+      "name_en": "Guam",
+      "name_jp": "グアム"
+    },
+    {
+      "country_cd": "GT",
+      "resident_cd": "GTM",
+      "issue_cd": "GTM",
+      "name_tw": "瓜地馬拉",
+      "name_cn": "危地马拉",
+      "name_en": "Guatemala",
+      "name_jp": "グァテマラ"
+    },
+    {
+      "country_cd": "GN",
+      "resident_cd": "GIN",
+      "issue_cd": "GIN",
+      "name_tw": "幾內亞",
+      "name_cn": "几内亚",
+      "name_en": "Guinea",
+      "name_jp": "ギニア"
+    },
+    {
+      "country_cd": "GY",
+      "resident_cd": "GUY",
+      "issue_cd": "GUY",
+      "name_tw": "幾內亞比索",
+      "name_cn": "几内亚比索",
+      "name_en": "Guinea Bissau",
+      "name_jp": "ギニアビサウ"
+    },
+    {
+      "country_cd": "GU",
+      "resident_cd": "GUM",
+      "issue_cd": "GUM",
+      "name_tw": "圭亞那",
+      "name_cn": "圭亚那",
+      "name_en": "Guyana",
+      "name_jp": "ガイアナ"
+    },
+    {
+      "country_cd": "HT",
+      "resident_cd": "HTI",
+      "issue_cd": "HTI",
+      "name_tw": "海地",
+      "name_cn": "海地",
+      "name_en": "Haiti",
+      "name_jp": "ハイチ"
+    },
+    {
+      "country_cd": "HN",
+      "resident_cd": "HND",
+      "issue_cd": "HND",
+      "name_tw": "宏都拉斯",
+      "name_cn": "宏都拉斯",
+      "name_en": "Honduras",
+      "name_jp": "ホンジュラス"
+    },
+    {
+      "country_cd": "HU",
+      "resident_cd": "HUN",
+      "issue_cd": "HUN",
+      "name_tw": "匈牙利",
+      "name_cn": "匈牙利",
+      "name_en": "Hungary",
+      "name_jp": "ハンガリー"
+    },
+    {
+      "country_cd": "IS",
+      "resident_cd": "ISL",
+      "issue_cd": "ISL",
+      "name_tw": "冰島",
+      "name_cn": "冰岛",
+      "name_en": "Iceland",
+      "name_jp": "アイスランド"
+    },
+    {
+      "country_cd": "IN",
+      "resident_cd": "IND",
+      "issue_cd": "IND",
+      "name_tw": "印度",
+      "name_cn": "印度",
+      "name_en": "India",
+      "name_jp": "インド"
+    },
+    {
+      "country_cd": "IR",
+      "resident_cd": "IRN",
+      "issue_cd": "IRN",
+      "name_tw": "伊朗",
+      "name_cn": "伊朗",
+      "name_en": "Iran",
+      "name_jp": "イラン"
+    },
+    {
+      "country_cd": "IQ",
+      "resident_cd": "IRQ",
+      "issue_cd": "IRQ",
+      "name_tw": "伊拉克",
+      "name_cn": "伊拉克",
+      "name_en": "Iraq",
+      "name_jp": "イラク"
+    },
+    {
+      "country_cd": "IE",
+      "resident_cd": "IRL",
+      "issue_cd": "IRL",
+      "name_tw": "愛爾蘭",
+      "name_cn": "爱尔兰",
+      "name_en": "Ireland",
+      "name_jp": "アイルランド"
+    },
+    {
+      "country_cd": "IL",
+      "resident_cd": "ISR",
+      "issue_cd": "ISR",
+      "name_tw": "以色列",
+      "name_cn": "以色列",
+      "name_en": "Israel",
+      "name_jp": "イスラエル"
+    },
+    {
+      "country_cd": "IT",
+      "resident_cd": "ITA",
+      "issue_cd": "ITA",
+      "name_tw": "義大利",
+      "name_cn": "意大利",
+      "name_en": "Italy",
+      "name_jp": "イタリア"
+    },
+    {
+      "country_cd": "JM",
+      "resident_cd": "JAM",
+      "issue_cd": "JAM",
+      "name_tw": "牙買加",
+      "name_cn": "牙买加",
+      "name_en": "Jamaica",
+      "name_jp": "ジャマイカ"
+    },
+    {
+      "country_cd": "JO",
+      "resident_cd": "JOR",
+      "issue_cd": "JOR",
+      "name_tw": "約旦",
+      "name_cn": "约旦",
+      "name_en": "Jordan",
+      "name_jp": "ヨルダン"
+    },
+    {
+      "country_cd": "KZ",
+      "resident_cd": "KAZ",
+      "issue_cd": "KAZ",
+      "name_tw": "哈薩克",
+      "name_cn": "哈萨克",
+      "name_en": "Kazakhstan",
+      "name_jp": "カザフスタン"
+    },
+    {
+      "country_cd": "KE",
+      "resident_cd": "KEN",
+      "issue_cd": "KEN",
+      "name_tw": "肯亞",
+      "name_cn": "肯亚",
+      "name_en": "Kenya",
+      "name_jp": "ケニア"
+    },
+    {
+      "country_cd": "KI",
+      "resident_cd": "KIR",
+      "issue_cd": "KIR",
+      "name_tw": "吉裏巴斯",
+      "name_cn": "吉里巴斯",
+      "name_en": "Kiribati",
+      "name_jp": "キリバス"
+    },
+    {
+      "country_cd": "KP",
+      "resident_cd": "PRK",
+      "issue_cd": "PRK",
+      "name_tw": "北韓",
+      "name_cn": "北韩",
+      "name_en": "Democratic People's Republic of Korea",
+      "name_jp": "北朝鲜"
+    },
+    {
+      "country_cd": "KW",
+      "resident_cd": "KWT",
+      "issue_cd": "KWT",
+      "name_tw": "科威特",
+      "name_cn": "科威特",
+      "name_en": "Kuwait",
+      "name_jp": "クウェート"
+    },
+    {
+      "country_cd": "KG",
+      "resident_cd": "KGZ",
+      "issue_cd": "KGZ",
+      "name_tw": "吉爾吉斯",
+      "name_cn": "吉尔吉斯",
+      "name_en": "Kyrgyzstan",
+      "name_jp": "キルギスタン"
+    },
+    {
+      "country_cd": "LA",
+      "resident_cd": "LAO",
+      "issue_cd": "LAO",
+      "name_tw": "寮國",
+      "name_cn": "老挝",
+      "name_en": "Lao",
+      "name_jp": "ラオス"
+    },
+    {
+      "country_cd": "LV",
+      "resident_cd": "LVA",
+      "issue_cd": "LVA",
+      "name_tw": "拉脫維亞",
+      "name_cn": "拉脱维亚",
+      "name_en": "Latvia",
+      "name_jp": "ラトビア"
+    },
+    {
+      "country_cd": "LB",
+      "resident_cd": "LBN",
+      "issue_cd": "LBN",
+      "name_tw": "黎巴嫩",
+      "name_cn": "黎巴嫩",
+      "name_en": "Lebanon",
+      "name_jp": "レバノン"
+    },
+    {
+      "country_cd": "LS",
+      "resident_cd": "LSO",
+      "issue_cd": "LSO",
+      "name_tw": "賴索托",
+      "name_cn": "赖索托",
+      "name_en": "Lesotho",
+      "name_jp": "レソト"
+    },
+    {
+      "country_cd": "LR",
+      "resident_cd": "LBR",
+      "issue_cd": "LBR",
+      "name_tw": "賴比瑞亞",
+      "name_cn": "赖比瑞亚",
+      "name_en": "Liberia",
+      "name_jp": "リベリア"
+    },
+    {
+      "country_cd": "LY",
+      "resident_cd": "LBY",
+      "issue_cd": "LBY",
+      "name_tw": "利比亞",
+      "name_cn": "利比亚",
+      "name_en": "Libya",
+      "name_jp": "リビア"
+    },
+    {
+      "country_cd": "LI",
+      "resident_cd": "LIE",
+      "issue_cd": "LIE",
+      "name_tw": "列支敦斯登",
+      "name_cn": "列支敦斯登",
+      "name_en": "Liechtenstein",
+      "name_jp": "リヒテンシュタイン"
+    },
+    {
+      "country_cd": "LT",
+      "resident_cd": "LTU",
+      "issue_cd": "LTU",
+      "name_tw": "立陶宛",
+      "name_cn": "立陶宛",
+      "name_en": "Lithuania",
+      "name_jp": "リトアニア"
+    },
+    {
+      "country_cd": "LU",
+      "resident_cd": "LUX",
+      "issue_cd": "LUX",
+      "name_tw": "盧森堡",
+      "name_cn": "卢森堡",
+      "name_en": "Luxembourg",
+      "name_jp": "ルクセンブルク"
+    },
+    {
+      "country_cd": "UA",
+      "resident_cd": "UKR",
+      "issue_cd": "UKR",
+      "name_tw": "馬其頓",
+      "name_cn": "马其顿",
+      "name_en": "Macedonia - Fyrom",
+      "name_jp": "マケドニア共和国"
+    },
+    {
+      "country_cd": "MG",
+      "resident_cd": "MDG",
+      "issue_cd": "MDG",
+      "name_tw": "馬達加斯加",
+      "name_cn": "马达加斯加",
+      "name_en": "Madagascar Island",
+      "name_jp": "マダガスカル"
+    },
+    {
+      "country_cd": "MW",
+      "resident_cd": "MWI",
+      "issue_cd": "MWI",
+      "name_tw": "馬拉威",
+      "name_cn": "马拉威",
+      "name_en": "Malawi",
+      "name_jp": "マラウィ"
+    },
+    {
+      "country_cd": "MV",
+      "resident_cd": "MDV",
+      "issue_cd": "MDV",
+      "name_tw": "馬爾地夫",
+      "name_cn": "马尔地夫",
+      "name_en": "Maldives Islands",
+      "name_jp": "モルディブ"
+    },
+    {
+      "country_cd": "ML",
+      "resident_cd": "MLI",
+      "issue_cd": "MLI",
+      "name_tw": "馬利",
+      "name_cn": "马利",
+      "name_en": "Mali",
+      "name_jp": "マリ"
+    },
+    {
+      "country_cd": "MT",
+      "resident_cd": "MLT",
+      "issue_cd": "MLT",
+      "name_tw": "馬爾他",
+      "name_cn": "马耳他",
+      "name_en": "Malta",
+      "name_jp": "マルタ共和国"
+    },
+    {
+      "country_cd": "MH",
+      "resident_cd": "MHL",
+      "issue_cd": "MHL",
+      "name_tw": "馬紹爾群島",
+      "name_cn": "马绍尔群岛",
+      "name_en": "Marshall Islands",
+      "name_jp": "マーシャル诸岛"
+    },
+    {
+      "country_cd": "MQ",
+      "resident_cd": "MTQ",
+      "issue_cd": "MTQ",
+      "name_tw": "馬汀尼克島",
+      "name_cn": "马汀尼克岛",
+      "name_en": "Martinique",
+      "name_jp": "マルチニーク岛"
+    },
+    {
+      "country_cd": "MR",
+      "resident_cd": "MRT",
+      "issue_cd": "MRT",
+      "name_tw": "茅利塔尼亞",
+      "name_cn": "毛里塔尼亚",
+      "name_en": "Mauritania",
+      "name_jp": "モーリタニア"
+    },
+    {
+      "country_cd": "MU",
+      "resident_cd": "MUS",
+      "issue_cd": "MUS",
+      "name_tw": "模裏西斯",
+      "name_cn": "模里西斯",
+      "name_en": "Mauritius Island",
+      "name_jp": "モーリシャス"
+    },
+    {
+      "country_cd": "UA",
+      "resident_cd": "UKR",
+      "issue_cd": "UKR",
+      "name_tw": "馬友特島",
+      "name_cn": "马友特岛",
+      "name_en": "Mayotte",
+      "name_jp": "マヨット岛"
+    },
+    {
+      "country_cd": "MX",
+      "resident_cd": "MEX",
+      "issue_cd": "MEX",
+      "name_tw": "墨西哥",
+      "name_cn": "墨西哥",
+      "name_en": "Mexico",
+      "name_jp": "メキシコ"
+    },
+    {
+      "country_cd": "FM",
+      "resident_cd": "FSM",
+      "issue_cd": "FSM",
+      "name_tw": "密克羅尼西亞",
+      "name_cn": "密克罗尼西亚",
+      "name_en": "Micronesia",
+      "name_jp": "ミクロネシア连邦"
+    },
+    {
+      "country_cd": "MD",
+      "resident_cd": "MDA",
+      "issue_cd": "MDA",
+      "name_tw": "莫爾達瓦",
+      "name_cn": "摩尔多瓦",
+      "name_en": "Moldova",
+      "name_jp": "モルドバ"
+    },
+    {
+      "country_cd": "MC",
+      "resident_cd": "MCO",
+      "issue_cd": "MCO",
+      "name_tw": "摩納哥",
+      "name_cn": "摩纳哥",
+      "name_en": "Monaco",
+      "name_jp": "モナコ"
+    },
+    {
+      "country_cd": "MN",
+      "resident_cd": "MNG",
+      "issue_cd": "MNG",
+      "name_tw": "外蒙古",
+      "name_cn": "外蒙古",
+      "name_en": "Mongolia",
+      "name_jp": "モンゴル"
+    },
+    {
+      "country_cd": "ME",
+      "resident_cd": "MNE",
+      "issue_cd": "MNE",
+      "name_tw": "黑山",
+      "name_cn": "黑山",
+      "name_en": "Montenegro",
+      "name_jp": "モンテネグロ"
+    },
+    {
+      "country_cd": "MS",
+      "resident_cd": "MSR",
+      "issue_cd": "MSR",
+      "name_tw": "曼斯達拉",
+      "name_cn": "曼斯达拉",
+      "name_en": "Montserrat",
+      "name_jp": "モンセラト"
+    },
+    {
+      "country_cd": "MA",
+      "resident_cd": "MAR",
+      "issue_cd": "MAR",
+      "name_tw": "摩洛哥",
+      "name_cn": "摩洛哥",
+      "name_en": "Morocco",
+      "name_jp": "モロッコ"
+    },
+    {
+      "country_cd": "MZ",
+      "resident_cd": "MOZ",
+      "issue_cd": "MOZ",
+      "name_tw": "莫三比克",
+      "name_cn": "莫桑比克",
+      "name_en": "Mozambique",
+      "name_jp": "モザンビーク"
+    },
+    {
+      "country_cd": "MM",
+      "resident_cd": "MMR",
+      "issue_cd": "MMR",
+      "name_tw": "緬甸",
+      "name_cn": "缅甸",
+      "name_en": "Myanmar",
+      "name_jp": "ミャンマー"
+    },
+    {
+      "country_cd": "NA",
+      "resident_cd": "NAM",
+      "issue_cd": "NAM",
+      "name_tw": "那米比亞",
+      "name_cn": "那米比亚",
+      "name_en": "Namibia",
+      "name_jp": "ナミビア"
+    },
+    {
+      "country_cd": "NR",
+      "resident_cd": "NRU",
+      "issue_cd": "NRU",
+      "name_tw": "諾魯",
+      "name_cn": "诺鲁",
+      "name_en": "Nauru",
+      "name_jp": "ナウル"
+    },
+    {
+      "country_cd": "NP",
+      "resident_cd": "NPL",
+      "issue_cd": "NPL",
+      "name_tw": "尼泊爾",
+      "name_cn": "尼泊尔",
+      "name_en": "Nepal",
+      "name_jp": "ネパール"
+    },
+    {
+      "country_cd": "NL",
+      "resident_cd": "NLD",
+      "issue_cd": "NLD",
+      "name_tw": "荷蘭",
+      "name_cn": "荷兰",
+      "name_en": "Netherlands",
+      "name_jp": "オランダ"
+    },
+    {
+      "country_cd": "NC",
+      "resident_cd": "NCL",
+      "issue_cd": "NCL",
+      "name_tw": "新喀裏多尼亞島",
+      "name_cn": "新喀里多尼亚岛",
+      "name_en": "New Caledonia",
+      "name_jp": "ニューカレドニア"
+    },
+    {
+      "country_cd": "NI",
+      "resident_cd": "NIC",
+      "issue_cd": "NIC",
+      "name_tw": "尼加拉瓜",
+      "name_cn": "尼加拉瓜",
+      "name_en": "Nicaragua",
+      "name_jp": "ニカラグア"
+    },
+    {
+      "country_cd": "NE",
+      "resident_cd": "NER",
+      "issue_cd": "NER",
+      "name_tw": "尼日",
+      "name_cn": "尼日",
+      "name_en": "Niger",
+      "name_jp": "ニジェール"
+    },
+    {
+      "country_cd": "NG",
+      "resident_cd": "NGA",
+      "issue_cd": "NGA",
+      "name_tw": "奈及利亞",
+      "name_cn": "奈及利亚",
+      "name_en": "Nigeria",
+      "name_jp": "ナイジェリア"
+    },
+    {
+      "country_cd": "NU",
+      "resident_cd": "NIU",
+      "issue_cd": "NIU",
+      "name_tw": "尼維",
+      "name_cn": "尼维",
+      "name_en": "Niue",
+      "name_jp": "ニウエ"
+    },
+    {
+      "country_cd": "NF",
+      "resident_cd": "NFK",
+      "issue_cd": "NFK",
+      "name_tw": "諾福克群島",
+      "name_cn": "诺福克群岛",
+      "name_en": "Norfolk Island",
+      "name_jp": "ノーフォーク岛"
+    },
+    {
+      "country_cd": "MP",
+      "resident_cd": "MNP",
+      "issue_cd": "MNP",
+      "name_tw": "北馬裏亞那群島",
+      "name_cn": "北马里亚那群岛",
+      "name_en": "Northern Mariana Islands",
+      "name_jp": "北マリアナ诸岛"
+    },
+    {
+      "country_cd": "NO",
+      "resident_cd": "NOR",
+      "issue_cd": "NOR",
+      "name_tw": "挪威",
+      "name_cn": "挪威",
+      "name_en": "Norway",
+      "name_jp": "ノルウェー"
+    },
+    {
+      "country_cd": "OM",
+      "resident_cd": "OMN",
+      "issue_cd": "OMN",
+      "name_tw": "阿曼",
+      "name_cn": "阿曼",
+      "name_en": "Oman",
+      "name_jp": "オマーン"
+    },
+    {
+      "country_cd": "PK",
+      "resident_cd": "PAK",
+      "issue_cd": "PAK",
+      "name_tw": "巴基斯坦",
+      "name_cn": "巴基斯坦",
+      "name_en": "Pakistan",
+      "name_jp": "パキスタン"
+    },
+    {
+      "country_cd": "PW",
+      "resident_cd": "PLW",
+      "issue_cd": "PLW",
+      "name_tw": "帛琉",
+      "name_cn": "帛琉",
+      "name_en": "Palau Islands",
+      "name_jp": "パラオ"
+    },
+    {
+      "country_cd": "PL",
+      "resident_cd": "PLE",
+      "issue_cd": "PLE",
+      "name_tw": "巴勒斯坦",
+      "name_cn": "巴勒斯坦",
+      "name_en": "Palestine - State Of",
+      "name_jp": "パレスチナ"
+    },
+    {
+      "country_cd": "PA",
+      "resident_cd": "PAN",
+      "issue_cd": "PAN",
+      "name_tw": "巴拿馬",
+      "name_cn": "巴拿马",
+      "name_en": "Panama",
+      "name_jp": "パナマ"
+    },
+    {
+      "country_cd": "PG",
+      "resident_cd": "PNG",
+      "issue_cd": "PNG",
+      "name_tw": "巴布亞紐幾內亞",
+      "name_cn": "巴布亚纽几内亚",
+      "name_en": "Papua New Guinea",
+      "name_jp": "パプアニューギニア"
+    },
+    {
+      "country_cd": "PY",
+      "resident_cd": "PRY",
+      "issue_cd": "PRY",
+      "name_tw": "巴拉圭",
+      "name_cn": "巴拉圭",
+      "name_en": "Paraguay",
+      "name_jp": "パラグアイ"
+    },
+    {
+      "country_cd": "PE",
+      "resident_cd": "PER",
+      "issue_cd": "PER",
+      "name_tw": "秘魯",
+      "name_cn": "秘鲁",
+      "name_en": "Peru",
+      "name_jp": "ペルー"
+    },
+    {
+      "country_cd": "PH",
+      "resident_cd": "PHL",
+      "issue_cd": "PHL",
+      "name_tw": "菲律賓",
+      "name_cn": "菲律宾",
+      "name_en": "Philippines",
+      "name_jp": "フィリピン"
+    },
+    {
+      "country_cd": "PL",
+      "resident_cd": "POL",
+      "issue_cd": "POL",
+      "name_tw": "波蘭",
+      "name_cn": "波兰",
+      "name_en": "Poland",
+      "name_jp": "ポーランド"
+    },
+    {
+      "country_cd": "PT",
+      "resident_cd": "PRT",
+      "issue_cd": "PRT",
+      "name_tw": "葡萄牙",
+      "name_cn": "葡萄牙",
+      "name_en": "Portugal",
+      "name_jp": "ポルトガル"
+    },
+    {
+      "country_cd": "PR",
+      "resident_cd": "PRI",
+      "issue_cd": "PRI",
+      "name_tw": "波多黎各",
+      "name_cn": "波多黎各",
+      "name_en": "Puerto Rico",
+      "name_jp": "プエルトリコ"
+    },
+    {
+      "country_cd": "QA",
+      "resident_cd": "QAT",
+      "issue_cd": "QAT",
+      "name_tw": "卡達",
+      "name_cn": "卡达",
+      "name_en": "Qatar",
+      "name_jp": "カタール"
+    },
+    {
+      "country_cd": "RE",
+      "resident_cd": "REU",
+      "issue_cd": "REU",
+      "name_tw": "留尼旺島",
+      "name_cn": "留尼旺岛",
+      "name_en": "Reunion Island",
+      "name_jp": "レユニオン"
+    },
+    {
+      "country_cd": "RO",
+      "resident_cd": "ROU",
+      "issue_cd": "ROU",
+      "name_tw": "羅馬尼亞",
+      "name_cn": "罗马尼亚",
+      "name_en": "Romania",
+      "name_jp": "ルーマニア"
+    },
+    {
+      "country_cd": "RU",
+      "resident_cd": "RUS",
+      "issue_cd": "RUS",
+      "name_tw": "俄羅斯",
+      "name_cn": "俄罗斯",
+      "name_en": "Russia",
+      "name_jp": "ロシア"
+    },
+    {
+      "country_cd": "RW",
+      "resident_cd": "RWA",
+      "issue_cd": "RWA",
+      "name_tw": "盧安達",
+      "name_cn": "卢安达",
+      "name_en": "Rwanda",
+      "name_jp": "ルワンダ"
+    },
+    {
+      "country_cd": "WS",
+      "resident_cd": "WSM",
+      "issue_cd": "WSM",
+      "name_tw": "薩摩亞群島",
+      "name_cn": "萨摩亚群岛",
+      "name_en": "Samoa",
+      "name_jp": "サモア"
+    },
+    {
+      "country_cd": "SM",
+      "resident_cd": "SMR",
+      "issue_cd": "SMR",
+      "name_tw": "聖馬利諾",
+      "name_cn": "圣马利诺",
+      "name_en": "San Marino",
+      "name_jp": "サンマリノ"
+    },
+    {
+      "country_cd": "ST",
+      "resident_cd": "STP",
+      "issue_cd": "STP",
+      "name_tw": "聖多美普林西比",
+      "name_cn": "圣多美普林西比",
+      "name_en": "Sao Tome and Principe Islands",
+      "name_jp": "サントメプリンシペ"
+    },
+    {
+      "country_cd": "SA",
+      "resident_cd": "SAU",
+      "issue_cd": "SAU",
+      "name_tw": "沙烏地阿拉伯",
+      "name_cn": "沙特阿拉伯",
+      "name_en": "Saudi Arabia",
+      "name_jp": "サウジアラビア"
+    },
+    {
+      "country_cd": "SN",
+      "resident_cd": "SEN",
+      "issue_cd": "SEN",
+      "name_tw": "塞內加爾",
+      "name_cn": "塞内加尔",
+      "name_en": "Senegal",
+      "name_jp": "セネガル"
+    },
+    {
+      "country_cd": "RS",
+      "resident_cd": "SRB",
+      "issue_cd": "SRB",
+      "name_tw": "塞爾維亞",
+      "name_cn": "塞尔维亚",
+      "name_en": "Serbia",
+      "name_jp": "セルビア"
+    },
+    {
+      "country_cd": "SC",
+      "resident_cd": "SYC",
+      "issue_cd": "SYC",
+      "name_tw": "塞席爾群島",
+      "name_cn": "塞席尔群岛",
+      "name_en": "Seychelles Islands",
+      "name_jp": "セーシェル"
+    },
+    {
+      "country_cd": "SL",
+      "resident_cd": "SLE",
+      "issue_cd": "SLE",
+      "name_tw": "獅子山",
+      "name_cn": "狮子山",
+      "name_en": "Sierra Leone",
+      "name_jp": "シエラレオネ"
+    },
+    {
+      "country_cd": "SX",
+      "resident_cd": "SXM",
+      "issue_cd": "SXM",
+      "name_tw": "聖馬丁",
+      "name_cn": "圣马丁",
+      "name_en": "Sint Maarten",
+      "name_jp": "セント・マーチン岛"
+    },
+    {
+      "country_cd": "SK",
+      "resident_cd": "SVK",
+      "issue_cd": "SVK",
+      "name_tw": "斯洛伐克",
+      "name_cn": "斯洛伐克",
+      "name_en": "Slovakia",
+      "name_jp": "スロバキア"
+    },
+    {
+      "country_cd": "SI",
+      "resident_cd": "SVN",
+      "issue_cd": "SVN",
+      "name_tw": "斯洛維尼亞",
+      "name_cn": "斯洛维尼亚",
+      "name_en": "Slovenia",
+      "name_jp": "スロベニア"
+    },
+    {
+      "country_cd": "SB",
+      "resident_cd": "SLB",
+      "issue_cd": "SLB",
+      "name_tw": "索羅門群島",
+      "name_cn": "索罗门群岛",
+      "name_en": "Solomon Islands",
+      "name_jp": "ソロモン诸岛"
+    },
+    {
+      "country_cd": "SO",
+      "resident_cd": "SOM",
+      "issue_cd": "SOM",
+      "name_tw": "索馬利亞",
+      "name_cn": "索马利亚",
+      "name_en": "Somalia",
+      "name_jp": "ソマリア"
+    },
+    {
+      "country_cd": "ZA",
+      "resident_cd": "ZAF",
+      "issue_cd": "ZAF",
+      "name_tw": "南非",
+      "name_cn": "南非",
+      "name_en": "South Africa",
+      "name_jp": "南アフリカ"
+    },
+    {
+      "country_cd": "SS",
+      "resident_cd": "SSD",
+      "issue_cd": "SSD",
+      "name_tw": "南蘇丹共和國",
+      "name_cn": "南苏丹共和国",
+      "name_en": "South Sudan",
+      "name_jp": "南スーダン"
+    },
+    {
+      "country_cd": "ES",
+      "resident_cd": "ESP",
+      "issue_cd": "ESP",
+      "name_tw": "西班牙",
+      "name_cn": "西班牙",
+      "name_en": "Spain",
+      "name_jp": "スペイン"
+    },
+    {
+      "country_cd": "LK",
+      "resident_cd": "LKA",
+      "issue_cd": "LKA",
+      "name_tw": "斯里蘭卡",
+      "name_cn": "斯里兰卡",
+      "name_en": "Sri Lanka",
+      "name_jp": "スリランカ"
+    },
+    {
+      "country_cd": "SH",
+      "resident_cd": "SHN",
+      "issue_cd": "SHN",
+      "name_tw": "聖海倫",
+      "name_cn": "圣海伦",
+      "name_en": "St. Helena Island",
+      "name_jp": "セントヘレナ"
+    },
+    {
+      "country_cd": "KN",
+      "resident_cd": "KNA",
+      "issue_cd": "KNA",
+      "name_tw": "聖啟玆和奈維斯島",
+      "name_cn": "圣启玆和奈维斯岛",
+      "name_en": "St. Kitts",
+      "name_jp": "セントクリストファー岛"
+    },
+    {
+      "country_cd": "LC",
+      "resident_cd": "LCA",
+      "issue_cd": "LCA",
+      "name_tw": "聖露西亞",
+      "name_cn": "圣露西亚",
+      "name_en": "St. Lucia",
+      "name_jp": "セントルシア"
+    },
+    {
+      "country_cd": "PM",
+      "resident_cd": "SPM",
+      "issue_cd": "SPM",
+      "name_tw": "聖彼爾及米可龍",
+      "name_cn": "圣彼尔及米可龙",
+      "name_en": "St. Pierre and Miquelon",
+      "name_jp": "サンピエール岛、ミケロン岛"
+    },
+    {
+      "country_cd": "VC",
+      "resident_cd": "VCT",
+      "issue_cd": "VCT",
+      "name_tw": "聖文森及格瑞那丁",
+      "name_cn": "圣文森及格瑞那丁",
+      "name_en": "St. Vincent",
+      "name_jp": "セントビンセント・グレナディーン诸岛"
+    },
+    {
+      "country_cd": "SD",
+      "resident_cd": "SDN",
+      "issue_cd": "SDN",
+      "name_tw": "蘇丹",
+      "name_cn": "苏丹",
+      "name_en": "Sudan",
+      "name_jp": "スーダン"
+    },
+    {
+      "country_cd": "SR",
+      "resident_cd": "SUR",
+      "issue_cd": "SUR",
+      "name_tw": "蘇利南",
+      "name_cn": "苏利南",
+      "name_en": "Suriname",
+      "name_jp": "スリナム"
+    },
+    {
+      "country_cd": "SZ",
+      "resident_cd": "SWZ",
+      "issue_cd": "SWZ",
+      "name_tw": "史瓦濟蘭",
+      "name_cn": "史瓦济兰",
+      "name_en": "Swaziland",
+      "name_jp": "スワジランド"
+    },
+    {
+      "country_cd": "SE",
+      "resident_cd": "SWE",
+      "issue_cd": "SWE",
+      "name_tw": "瑞典",
+      "name_cn": "瑞典",
+      "name_en": "Sweden",
+      "name_jp": "スウェーデン"
+    },
+    {
+      "country_cd": "CH",
+      "resident_cd": "CHE",
+      "issue_cd": "CHE",
+      "name_tw": "瑞士",
+      "name_cn": "瑞士",
+      "name_en": "Switzerland",
+      "name_jp": "スイス"
+    },
+    {
+      "country_cd": "SY",
+      "resident_cd": "SYR",
+      "issue_cd": "SYR",
+      "name_tw": "敘利亞",
+      "name_cn": "叙利亚",
+      "name_en": "Syrian Arab Republic",
+      "name_jp": "シリア"
+    },
+    {
+      "country_cd": "TJ",
+      "resident_cd": "TJK",
+      "issue_cd": "TJK",
+      "name_tw": "塔吉克",
+      "name_cn": "塔吉克",
+      "name_en": "Tajikistan",
+      "name_jp": "タジキスタン"
+    },
+    {
+      "country_cd": "TZ",
+      "resident_cd": "TZA",
+      "issue_cd": "TZA",
+      "name_tw": "坦尚尼亞",
+      "name_cn": "坦尚尼亚",
+      "name_en": "Tanzania",
+      "name_jp": "タンザニア"
+    },
+    {
+      "country_cd": "UA",
+      "resident_cd": "TMP",
+      "issue_cd": "TMP",
+      "name_tw": "東帝汶",
+      "name_cn": "东帝汶",
+      "name_en": "Timor Leste",
+      "name_jp": "东ティモール"
+    },
+    {
+      "country_cd": "TG",
+      "resident_cd": "TGO",
+      "issue_cd": "TGO",
+      "name_tw": "多哥",
+      "name_cn": "多哥",
+      "name_en": "Togo",
+      "name_jp": "トーゴ"
+    },
+    {
+      "country_cd": "UA",
+      "resident_cd": "UKR",
+      "issue_cd": "UKR",
+      "name_tw": "土克勞",
+      "name_cn": "土克劳",
+      "name_en": "Tokelau",
+      "name_jp": "トケラウ诸岛"
+    },
+    {
+      "country_cd": "TO",
+      "resident_cd": "TON",
+      "issue_cd": "TON",
+      "name_tw": "東加",
+      "name_cn": "东加",
+      "name_en": "Tonga",
+      "name_jp": "トンガ"
+    },
+    {
+      "country_cd": "TT",
+      "resident_cd": "TTO",
+      "issue_cd": "TTO",
+      "name_tw": "千裏達與托巴哥",
+      "name_cn": "千里达与托巴哥",
+      "name_en": "Trinidad and Tobago",
+      "name_jp": "トリニダードトバコ"
+    },
+    {
+      "country_cd": "TN",
+      "resident_cd": "TUN",
+      "issue_cd": "TUN",
+      "name_tw": "突尼西亞",
+      "name_cn": "突尼西亚",
+      "name_en": "Tunisia",
+      "name_jp": "チュニジア"
+    },
+    {
+      "country_cd": "TR",
+      "resident_cd": "TUR",
+      "issue_cd": "TUR",
+      "name_tw": "土耳其",
+      "name_cn": "土耳其",
+      "name_en": "Turkey",
+      "name_jp": "トルコ"
+    },
+    {
+      "country_cd": "TM",
+      "resident_cd": "TKM",
+      "issue_cd": "TKM",
+      "name_tw": "土庫曼",
+      "name_cn": "土库曼",
+      "name_en": "Turkmenistan",
+      "name_jp": "トルクメニスタン"
+    },
+    {
+      "country_cd": "TC",
+      "resident_cd": "TCA",
+      "issue_cd": "TCA",
+      "name_tw": "土克斯及開科斯群島",
+      "name_cn": "土克斯及开科斯群岛",
+      "name_en": "Turks and Caicos Islands",
+      "name_jp": "タークスおよびカイコス诸岛"
+    },
+    {
+      "country_cd": "TV",
+      "resident_cd": "TUV",
+      "issue_cd": "TUV",
+      "name_tw": "吐瓦魯",
+      "name_cn": "吐瓦鲁",
+      "name_en": "Tuvalu",
+      "name_jp": "ツバル"
+    },
+    {
+      "country_cd": "UM",
+      "resident_cd": "UMI",
+      "issue_cd": "UMI",
+      "name_tw": "美國邊遠小島",
+      "name_cn": "美国边远小岛",
+      "name_en": "U.S. Minor Outlying Islands",
+      "name_jp": "アメリカ领マイナーアウトレイイング诸岛"
+    },
+    {
+      "country_cd": "UG",
+      "resident_cd": "UGA",
+      "issue_cd": "UGA",
+      "name_tw": "烏幹達",
+      "name_cn": "乌干达",
+      "name_en": "Uganda",
+      "name_jp": "ウガンダ"
+    },
+    {
+      "country_cd": "UA",
+      "resident_cd": "UKR",
+      "issue_cd": "UKR",
+      "name_tw": "烏克蘭",
+      "name_cn": "乌克兰",
+      "name_en": "Ukraine",
+      "name_jp": "ウクライナ"
+    },
+    {
+      "country_cd": "AE",
+      "resident_cd": "ARE",
+      "issue_cd": "ARE",
+      "name_tw": "阿拉伯聯合大公國",
+      "name_cn": "阿拉伯联合大公国",
+      "name_en": "United Arab Emirates",
+      "name_jp": "アラブ首长国连邦"
+    },
+    {
+      "country_cd": "GB",
+      "resident_cd": "GBR",
+      "issue_cd": "GBR",
+      "name_tw": "英國",
+      "name_cn": "英国",
+      "name_en": "United Kingdom",
+      "name_jp": "イギリス"
+    },
+    {
+      "country_cd": "UY",
+      "resident_cd": "URY",
+      "issue_cd": "URY",
+      "name_tw": "烏拉圭",
+      "name_cn": "乌拉圭",
+      "name_en": "Uruguay",
+      "name_jp": "ウルグアイ"
+    },
+    {
+      "country_cd": "UZ",
+      "resident_cd": "UZB",
+      "issue_cd": "UZB",
+      "name_tw": "烏茲別克",
+      "name_cn": "乌兹别克",
+      "name_en": "Uzbekistan",
+      "name_jp": "ウズベキスタン"
+    },
+    {
+      "country_cd": "VU",
+      "resident_cd": "VUT",
+      "issue_cd": "VUT",
+      "name_tw": "萬那杜",
+      "name_cn": "万那杜",
+      "name_en": "Vanuatu",
+      "name_jp": "バヌアツ"
+    },
+    {
+      "country_cd": "VA",
+      "resident_cd": "VAT",
+      "issue_cd": "VAT",
+      "name_tw": "梵帝崗",
+      "name_cn": "梵帝岗",
+      "name_en": "Vatican",
+      "name_jp": "バチカン市国"
+    },
+    {
+      "country_cd": "VE",
+      "resident_cd": "VEN",
+      "issue_cd": "VEN",
+      "name_tw": "委內瑞拉",
+      "name_cn": "委内瑞拉",
+      "name_en": "Venezuela",
+      "name_jp": "ベネズエラ"
+    },
+    {
+      "country_cd": "VG",
+      "resident_cd": "VGB",
+      "issue_cd": "VGB",
+      "name_tw": "英屬維京群島",
+      "name_cn": "英属维京群岛",
+      "name_en": "Virgin Islands-British",
+      "name_jp": "イギリス领ヴァージン诸岛"
+    },
+    {
+      "country_cd": "VI",
+      "resident_cd": "VIR",
+      "issue_cd": "VIR",
+      "name_tw": "美屬維京群島",
+      "name_cn": "美属维京群岛",
+      "name_en": "Virgin Islands-United States",
+      "name_jp": "アメリカ领ヴァージン诸岛"
+    },
+    {
+      "country_cd": "WF",
+      "resident_cd": "WLF",
+      "issue_cd": "WLF",
+      "name_tw": "瓦利斯和福杜納群島",
+      "name_cn": "瓦利斯和福杜纳群岛",
+      "name_en": "Wallis and Futuna Islands",
+      "name_jp": "ワリーエフトゥーナ诸岛"
+    },
+    {
+      "country_cd": "EH",
+      "resident_cd": "ESH",
+      "issue_cd": "ESH",
+      "name_tw": "西撒哈拉",
+      "name_cn": "西撒哈拉",
+      "name_en": "Western Sahara",
+      "name_jp": "西サハラ"
+    },
+    {
+      "country_cd": "YE",
+      "resident_cd": "YEM",
+      "issue_cd": "YEM",
+      "name_tw": "葉門",
+      "name_cn": "也门",
+      "name_en": "Yemen Republic",
+      "name_jp": "イエメン"
+    },
+    {
+      "country_cd": "ZM",
+      "resident_cd": "ZMB",
+      "issue_cd": "ZMB",
+      "name_tw": "尚比亞",
+      "name_cn": "赞比亚",
+      "name_en": "Zambia",
+      "name_jp": "ザンビア"
+    },
+    {
+      "country_cd": "ZW",
+      "resident_cd": "ZWE",
+      "issue_cd": "ZWE",
+      "name_tw": "辛巴威",
+      "name_cn": "津巴布韦",
+      "name_en": "Zimbabwe",
+      "name_jp": "ジンバブエ"
+    }
+  ]
+}

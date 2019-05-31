@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout_root" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_bg" android:background="@drawable/bg_alert_msg_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textColor="@color/black_one" android:gravity="center" android:id="@id/tv_Title" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="注意" style="@style/regular" />
+        <View android:id="@id/vHeadlineDiv" android:background="@color/alert_dialog_div" android:layout_width="fill_parent" android:layout_height="3.0px" />
+        <TextView android:textColor="@color/black_one" android:gravity="center" android:id="@id/textView_Content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="message" android:lineSpacingMultiplier="1.2" style="@style/regular" />
+        <View android:id="@id/vHDiv" android:background="@color/alert_dialog_div" android:layout_width="fill_parent" android:layout_height="2.0px" />
+        <LinearLayout android:gravity="center" android:id="@id/layout_button" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <Button android:textColor="@color/black_one" android:id="@id/button_No" android:background="@drawable/bg_alert_msg_dialog_button_left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="No" android:layout_weight="1.0" style="@style/regular" />
+            <View android:id="@id/vVDiv" android:background="@color/alert_dialog_div" android:layout_width="2.0px" android:layout_height="fill_parent" />
+            <Button android:textColor="@color/black_one" android:id="@id/button_Yes" android:background="@drawable/bg_alert_msg_dialog_button_right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Yes" android:layout_weight="1.0" style="@style/regular" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

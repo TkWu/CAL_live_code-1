@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_eight_day" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/llayout_select_search_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginRight="20.0px">
+        <RelativeLayout android:id="@id/rlayout_departure_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/radio_departure_date" android:background="@drawable/btn_radio_on" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginRight="8.0px" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_departure_date" android:layout_width="120.0px" android:layout_height="wrap_content" android:text="@string/departure_date" android:layout_toRightOf="@id/radio_departure_date" android:layout_centerVertical="true" style="@style/light" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/rlayout_arrival_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_toRightOf="@id/rlayout_departure_date">
+            <ImageView android:id="@id/radio_arrival_date" android:background="@drawable/btn_radio_off" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginRight="8.0px" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_arrival_date" android:layout_width="120.0px" android:layout_height="wrap_content" android:text="@string/arrival_date" android:layout_toRightOf="@id/radio_arrival_date" android:layout_centerVertical="true" style="@style/light" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_select_eight_day_black_30" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="10.0px" android:layout_marginRight="10.0px">
+        <RelativeLayout android:id="@id/rlayout_title_month" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0px">
+            <View android:id="@id/line_title1" android:background="#30ffffff" android:layout_width="90.0px" android:layout_height="0.70000005px" android:layout_marginLeft="30.099976px" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/white_four" android:gravity="center_horizontal" android:id="@id/tv_month_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" style="@style/light" />
+            <View android:id="@id/line_title2" android:background="#30ffffff" android:layout_width="90.0px" android:layout_height="0.70000005px" android:layout_marginRight="30.0px" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:layout_width="fill_parent" android:layout_height="16.0px" />
+        <GridView android:id="@id/grid_eight_day" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="34.0px" android:layout_marginRight="34.0px" android:numColumns="4" />
+        <View android:layout_width="fill_parent" android:layout_height="9.299988px" />
+    </LinearLayout>
+</LinearLayout>

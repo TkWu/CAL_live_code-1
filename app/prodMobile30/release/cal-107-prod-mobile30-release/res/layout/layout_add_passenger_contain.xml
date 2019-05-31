@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="42.69998px" android:layout_marginTop="20.0px" android:text="Add passengers’ name to manage in the\nsame trip" style="@style/regular" />
+    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center|left" android:id="@id/tv_add_head" android:background="@color/black_30" android:paddingLeft="30.0px" android:layout_width="fill_parent" android:layout_height="32.0px" android:layout_marginTop="40.0px" android:text="@string/add_passenager_passenager_x" style="@style/regular" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/fragment1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0px" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_add" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/img_add" android:background="@drawable/bg_transparent_press_black20" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginLeft="30.0px" android:src="@drawable/btn_add_n" android:scaleType="fitXY" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tv_add" android:paddingLeft="10.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_passenager_add_more" style="@style/light" />
+    </LinearLayout>
+</LinearLayout>

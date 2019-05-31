@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apis_document_list">
+        <item>Passport</item>
+        <item>US Permanent Resident Card</item>
+        <item>MPTS</item>
+        <item>Mainland Residents Traveling to Taiwan Pass</item>
+    </string-array>
+    <string-array name="book_ticket_cabin_list">
+        <item>Economy</item>
+        <item>Premium Economy</item>
+        <item>Business</item>
+    </string-array>
+    <string-array name="miles_progress_pull_down">
+        <item>Accumulated Miles</item>
+        <item>Qualified Business Class Flights</item>
+        <item>Qualified Weighted Flights</item>
+        <item>Weighted Trip Counts of CI / AE</item>
+    </string-array>
+    <string-array name="sign_up_address_type_list">
+        <item>住家地址</item>
+        <item>公司地址</item>
+    </string-array>
+    <string-array name="sign_up_address_type_list_code">
+        <item>H</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="sign_up_contry_code_list">
+        <item>\ 886</item>
+        <item>\ 81</item>
+        <item>\ 86</item>
+        <item>\ 1</item>
+        <item>\ 1</item>
+        <item>\ 82</item>
+        <item>\ 692</item>
+        <item>\ 65</item>
+        <item>\ 44</item>
+        <item>\ 33</item>
+        <item>\ 66</item>
+        <item>\ 62</item>
+        <item>\ 91</item>
+        <item>\ 49</item>
+        <item>\ 56</item>
+        <item>\ 420</item>
+        <item>\ 30</item>
+        <item>\ 39</item>
+        <item>\ 41</item>
+        <item>\ 31</item>
+    </string-array>
+    <string-array name="sign_up_nationality_list">
+        <item>台灣</item>
+        <item>日本</item>
+        <item>中國大陸</item>
+        <item>美國</item>
+        <item>加拿大</item>
+        <item>韓國</item>
+        <item>馬來西亞</item>
+        <item>新加坡</item>
+        <item>泰國</item>
+        <item>印尼</item>
+        <item>法國</item>
+        <item>英國</item>
+        <item>紐西蘭</item>
+        <item>德國</item>
+        <item>智利</item>
+        <item>捷克</item>
+        <item>希臘</item>
+        <item>義大利</item>
+        <item>瑞士</item>
+        <item>荷蘭</item>
+    </string-array>
+    <string-array name="sign_up_salutation_list">
+        <item>Mr</item>
+        <item>Ms</item>
+    </string-array>
+    <string-array name="sign_up_special_seat_list">
+        <item>No Preference</item>
+        <item>Aisle</item>
+        <item>Window</item>
+    </string-array>
+</resources>

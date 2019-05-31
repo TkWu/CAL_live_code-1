@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_textfeild" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:layout_centerHorizontal="true">
+        <FrameLayout android:id="@id/fragment1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@id/fragment2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0px" />
+        <FrameLayout android:id="@id/fragment3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0px" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center|right" android:layout_gravity="center_vertical" android:id="@id/tv_can_find_the_trip" android:visibility="gone" android:layout_width="298.0px" android:layout_height="19.299988px" android:layout_marginLeft="30.0px" android:text="@string/find_my_booking_notes" style="@style/regular" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_arrow" android:background="@drawable/bg_transparent_press_black20" android:visibility="gone" android:layout_width="17.0px" android:layout_height="17.0px" android:src="@drawable/ic_arrow" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_findmybooking_retrieve" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="fill_parent" android:layout_height="40.0px" android:layout_marginLeft="20.0px" android:layout_marginRight="20.0px" android:layout_marginBottom="164.69998px" android:minWidth="0.0px" android:minHeight="0.0px" android:text="@string/find_my_booking_button" android:layout_alignParentBottom="true" android:layout_centerInParent="true" style="@style/regular" />
+</RelativeLayout>

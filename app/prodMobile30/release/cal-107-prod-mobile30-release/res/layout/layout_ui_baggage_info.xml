@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_content" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_dangerous_tc_1" android:adjustViewBounds="true" />
+    <RelativeLayout android:id="@id/rlayout_checkbox" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="50.0dip">
+        <ImageButton android:id="@id/imgbtn_checkbox" android:background="@color/transparent" android:clickable="false" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="30.0dip" android:src="@drawable/btn_checkbox_off" android:layout_alignTop="@id/tv_notice" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/tv_notice" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="62.0dip" android:layout_marginRight="30.0dip" android:text="@string/prohibit_product_claim_notice" style="@style/medium" />
+    </RelativeLayout>
+</LinearLayout>

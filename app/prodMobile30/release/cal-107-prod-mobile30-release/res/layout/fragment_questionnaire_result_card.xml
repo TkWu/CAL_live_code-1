@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:paddingLeft="10.0px" android:paddingTop="40.0px" android:paddingRight="10.0px" android:paddingBottom="72.0px" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl" android:background="@drawable/bg_questionnaire_head_radius" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:gravity="center_horizontal" android:id="@id/question_title" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:layout_marginBottom="19.299988px" android:text="Your rate finished" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/regular" />
+        <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/question_title" />
+        <View android:id="@id/vGradient" android:background="@drawable/bg_listview_bottom_gradient" android:layout_width="fill_parent" android:layout_height="16.0px" android:layout_alignBottom="@id/recycler_view" />
+    </RelativeLayout>
+</LinearLayout>

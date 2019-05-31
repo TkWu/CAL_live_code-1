@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="340.0px" android:layout_height="260.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="340.0px" android:layout_height="180.0px">
+        <ImageView android:id="@id/iv_flight_status" android:layout_width="338.0px" android:layout_height="178.0px" android:src="@drawable/sample_flight_status" android:scaleType="fitXY" android:layout_centerInParent="true" />
+        <View android:background="@drawable/bg_flight_tab_flight_status_up_part_inside_line" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="11.0px" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <View android:layout_gravity="center_vertical" android:background="@color/white_four" android:layout_width="2.0px" android:layout_height="16.0px" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0px" android:text="@string/flight_status" style="@style/regular" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_vertical" android:background="@drawable/bg_flight_tab_flight_status_down_part_inside_line" android:layout_width="340.0px" android:layout_height="80.0px">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <RelativeLayout android:orientation="horizontal" android:id="@id/rl_flight_status_click" android:background="@drawable/bg_transparent_press_black20" android:clickable="true" android:layout_width="180.0px" android:layout_height="40.0px">
+                <View android:background="@drawable/bg_btn_flight_tab_flight_status_down_part" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_ic_flight_status_b" android:layout_width="24.0px" android:layout_height="24.0px" android:src="@drawable/ic_flight_status_b" />
+                    <TextView android:textSize="14.0px" android:textColor="@color/french_blue" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="90.0px" android:layout_height="wrap_content" android:layout_marginLeft="6.6999817px" android:text="@string/flight_status" style="@style/regular" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_share_click" android:background="@drawable/bg_transparent_press_black20" android:clickable="true" android:layout_width="100.0px" android:layout_height="40.0px" android:layout_marginLeft="20.0px">
+                <View android:background="@drawable/bg_btn_flight_tab_flight_status_down_part" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_ic_share_b" android:layout_width="24.0px" android:layout_height="24.0px" android:src="@drawable/ic_share_b" />
+                    <TextView android:textSize="14.0px" android:textColor="@color/french_blue" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.6999817px" android:text="@string/share" style="@style/regular" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

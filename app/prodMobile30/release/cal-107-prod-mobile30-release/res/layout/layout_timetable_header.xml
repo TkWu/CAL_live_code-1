@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/llayout_date" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/white_four" android:layout_width="33.299988px" android:layout_height="0.70000005px" android:alpha="0.3" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_horizontal" android:id="@id/tv_depart_date" android:layout_width="206.0px" android:layout_height="wrap_content" android:shadowColor="#4d00062c" android:shadowRadius="3.0" style="@style/regular" />
+        <View android:background="@color/white_four" android:layout_width="33.299988px" android:layout_height="0.70000005px" android:alpha="0.3" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/country_name" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="46.69998px" android:textColor="@color/white_four" android:id="@id/tv_country_from" android:layout_width="126.69998px" android:layout_height="56.0px" android:layout_marginLeft="20.0px" android:layout_marginTop="20.0px" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/light" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:ellipsize="end" android:id="@id/tv_country_from_detail" android:layout_width="164.0px" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:maxHeight="38.69998px" android:minHeight="19.299988px" android:maxLines="2" android:minLines="1" android:singleLine="false" android:layout_below="@id/tv_country_from" android:layout_alignParentLeft="true" style="@style/regular" />
+        <ImageView android:id="@id/airplane_image" android:background="@drawable/ic_flight_from_to_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0px" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="46.69998px" android:textColor="@color/white_four" android:gravity="center|right" android:id="@id/tv_country_to" android:layout_width="126.69998px" android:layout_height="56.0px" android:layout_marginTop="20.0px" android:layout_marginRight="20.0px" android:singleLine="true" android:layout_alignParentRight="true" style="@style/light" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:ellipsize="end" android:gravity="right" android:id="@id/tv_country_to_detail" android:layout_width="164.0px" android:layout_height="wrap_content" android:layout_marginRight="20.0px" android:maxHeight="38.69998px" android:minHeight="19.299988px" android:maxLines="2" android:minLines="1" android:singleLine="false" android:layout_below="@id/tv_country_to" android:layout_alignParentRight="true" style="@style/regular" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/bottom_divider" android:layout_width="fill_parent" android:layout_height="24.0px" />
+</LinearLayout>

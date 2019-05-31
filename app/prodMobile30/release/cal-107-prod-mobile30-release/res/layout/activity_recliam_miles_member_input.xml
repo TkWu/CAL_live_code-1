@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root" android:background="@drawable/bg_login" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar">
+        <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/member_detail" style="@style/regular" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/ll_member_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:layout_marginTop="26.299988px" android:layout_marginRight="30.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:layout_gravity="center_vertical" android:layout_width="130.0px" android:layout_height="wrap_content" android:text="@string/name" style="@style/light" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_member_name" android:layout_width="130.0px" android:layout_height="wrap_content" android:layout_marginLeft="40.0px" android:text="YuRong Cheng" style="@style/light" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/ll_member_no" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:layout_marginTop="19.699982px" android:layout_marginRight="30.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:layout_gravity="center_vertical" android:layout_width="130.0px" android:layout_height="wrap_content" android:text="@string/member_no" style="@style/light" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_member_no" android:layout_width="130.0px" android:layout_height="wrap_content" android:layout_marginLeft="40.0px" android:text="CK0000000" style="@style/light" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/text_feild_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="49.69998px" android:layout_marginRight="20.0px" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:layout_marginTop="4.0px" android:layout_marginRight="30.0px">
+            <ImageView android:id="@id/iv_checkbox" android:background="@drawable/bg_transparent_press_black20" android:layout_width="24.0px" android:layout_height="24.0px" android:src="@drawable/btn_checkbox_off" />
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0px" android:text="@string/update_email_to_my_personal" style="@style/light" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_next" android:background="@drawable/bg_btn_pinkish_red_selector" android:layout_width="fill_parent" android:layout_height="40.0px" android:layout_marginLeft="20.0px" android:layout_marginRight="20.0px" android:layout_marginBottom="30.0px" android:text="@string/next" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/regular" />
+</RelativeLayout>

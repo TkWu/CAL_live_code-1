@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apis_document_list">
+        <item>パスポート</item>
+        <item>米国の永住権</item>
+        <item>MTPを</item>
+        <item>台湾峠に旅行する本土の住民</item>
+    </string-array>
+    <string-array name="book_ticket_cabin_list">
+        <item>エコノミ</item>
+        <item>プレミアムエコノミークラス</item>
+        <item>ビジネス</item>
+    </string-array>
+    <string-array name="miles_progress_pull_down">
+        <item>積算マイル</item>
+        <item>ビジネスクラストリップカウント</item>
+        <item>トリップカウント</item>
+        <item>CI / AE 自社運航便トリップカウント</item>
+    </string-array>
+    <string-array name="sign_up_address_type_list">
+        <item>居住地</item>
+        <item>勤務先住所</item>
+    </string-array>
+    <string-array name="sign_up_salutation_list">
+        <item>Mr</item>
+        <item>Ms</item>
+    </string-array>
+    <string-array name="sign_up_special_seat_list">
+        <item>指定なし</item>
+        <item>通路</item>
+        <item>窓</item>
+    </string-array>
+</resources>

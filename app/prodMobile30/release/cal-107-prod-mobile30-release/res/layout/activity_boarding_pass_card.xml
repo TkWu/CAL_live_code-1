@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_black" android:background="@color/black_60" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlayout_pagecontrol" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="6.0px" android:layout_marginTop="24.0px" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/llayout_dots" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/img_doc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shape_pagecontrol" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView android:id="@id/iv_flip" android:layout_width="26.699982px" android:layout_height="26.699982px" android:layout_marginTop="9.299988px" android:src="@drawable/ic_boardingpass_flip" android:scaleType="fitXY" android:layout_alignParentTop="true" android:layout_marginEnd="18.0px" android:layout_alignParentEnd="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_vp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0px" android:layout_centerHorizontal="true">
+        <android.support.v4.view.ViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageButton android:id="@id/ibtn_close" android:background="@color/transparent" android:layout_width="40.0px" android:layout_height="40.0px" android:layout_marginBottom="16.0px" android:src="@drawable/bg_btn_about_delete_onclick" android:scaleType="fitXY" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <ImageButton android:id="@id/ibtn_screenshot" android:background="@color/transparent" android:visibility="visible" android:layout_width="26.699982px" android:layout_height="26.699982px" android:layout_marginBottom="16.0px" android:src="@drawable/ic_screenshot_w" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

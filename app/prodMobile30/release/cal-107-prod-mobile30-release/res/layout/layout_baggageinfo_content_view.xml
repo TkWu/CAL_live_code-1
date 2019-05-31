@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rlayout_root" android:paddingLeft="20.0px" android:paddingRight="20.0px" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0px" android:textColor="@color/french_blue" android:gravity="center|left" android:id="@id/tv_departure_station" android:layout_width="45.0px" android:layout_height="25.0px" android:text="TPE" android:layout_alignParentTop="true" android:lineSpacingExtra="3.0999756sp" android:layout_alignParentStart="true" style="@style/regular" />
+    <RelativeLayout android:id="@id/rlayout_img" android:layout_width="24.0px" android:layout_height="84.0px" android:layout_marginLeft="6.0px" android:layout_toRightOf="@id/tv_departure_station" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/img_baggage" android:layout_width="24.0px" android:layout_height="24.0px" android:src="@drawable/ic_baggage_b" android:scaleType="fitXY" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+        <ImageView android:id="@id/img_arrow" android:layout_width="8.0px" android:layout_height="45.69998px" android:layout_marginTop="6.0px" android:src="@drawable/ic_baggage_track_arrow" android:scaleType="fitXY" android:layout_below="@id/img_baggage" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView android:textSize="16.0px" android:textColor="@color/french_blue" android:gravity="center|left" android:id="@id/tv_bag_status" android:layout_width="fill_parent" android:layout_height="25.0px" android:layout_marginLeft="18.0px" android:text="行李已上飛機" android:layout_toRightOf="@id/rlayout_img" android:layout_alignParentTop="true" android:lineSpacingExtra="8.799988sp" android:layout_alignParentEnd="true" style="@style/regular" />
+    <TextView android:textSize="13.0px" android:textColor="@color/warm_grey" android:gravity="center|left" android:id="@id/tv_Execute_Time" android:layout_width="fill_parent" android:layout_height="21.0px" android:text="行李已上飛機" android:layout_below="@id/tv_bag_status" android:layout_alignLeft="@id/tv_bag_status" android:lineSpacingExtra="8.799988sp" style="@style/light" />
+</RelativeLayout>

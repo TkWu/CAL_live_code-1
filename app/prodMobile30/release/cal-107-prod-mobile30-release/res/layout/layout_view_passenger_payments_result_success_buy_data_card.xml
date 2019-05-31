@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/card_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/ll_flight_data" android:background="@drawable/bg_manage_miles_head_radius" android:layout_width="fill_parent" android:layout_height="45.69998px">
+        <TextView android:textSize="20.0px" android:textColor="@color/black_two" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_name" android:layout_width="290.0px" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:text="First Last Name First Last Name First Last Name" android:lines="1" android:layout_centerVertical="true" style="@style/regular" />
+        <ImageView android:id="@id/iv_ewallet" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginRight="20.0px" android:src="@drawable/ic_extra_services_b_copy_4" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_list" android:background="@drawable/bg_manage_miles_body_radius" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_flight_data">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/ll_totol" android:layout_width="fill_parent" android:layout_height="50.0px" android:layout_marginLeft="20.0px" android:layout_marginRight="20.0px" android:splitMotionEvents="false">
+            <TextView android:textSize="16.0px" android:textColor="@color/brownish_grey" android:gravity="center|left" android:id="@id/tv_bag_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trip_detail_passenger_bag_pay_add_excess_bag" android:layout_centerVertical="true" style="@style/light" />
+            <TextView android:textSize="18.0px" android:textColor="@color/black_one" android:ellipsize="end" android:gravity="center|right" android:id="@id/tv_bag_value" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="TWD 8,888" android:lines="1" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/light" />
+            <include android:id="@id/v_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/layout_view_line" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/ll_person" android:layout_width="fill_parent" android:layout_height="50.0px" android:layout_marginLeft="20.0px" android:layout_marginRight="20.0px" android:splitMotionEvents="false">
+            <TextView android:textSize="16.0px" android:textColor="@color/brownish_grey" android:gravity="center|left" android:id="@id/tv_price_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trip_detail_passenger_bag_pay_add_excess_price" android:layout_centerVertical="true" style="@style/light" />
+            <TextView android:textSize="18.0px" android:textColor="@color/black_one" android:ellipsize="end" android:gravity="center|right" android:id="@id/tv_price_value" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="TWD 8,888" android:lines="1" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/light" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="@drawable/bg_transparent_press_black20" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/ll_flight_data" android:layout_alignBottom="@id/ll_list" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_login" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/rlayout_home_notes" android:background="@color/black_30" android:layout_width="360.0px" android:layout_height="wrap_content" android:layout_marginTop="10.0px">
+                <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:layout_marginBottom="18.0px" android:text="@string/find_my_booking_notes" style="@style/regular" />
+                <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.15" />
+                <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:id="@id/tv_content" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/find_my_booking_notes_content" android:lineSpacingExtra="10.0px" style="@style/light" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/rlayout_checkin_notes" android:layout_width="360.0px" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@color/black_30" android:layout_width="360.0px" android:layout_height="wrap_content" android:layout_marginTop="10.0px">
+                    <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:layout_marginBottom="18.0px" android:text="@string/find_my_booking_notes_us_visa_waiver_program" style="@style/regular" />
+                    <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.15" />
+                    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:id="@id/tv_content_us_visa_waiver" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/find_my_booking_notes_us_visa_waiver_program_content" android:lineSpacingExtra="10.0px" style="@style/light" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@color/black_30" android:layout_width="360.0px" android:layout_height="wrap_content" android:layout_marginTop="10.0px">
+                    <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:layout_marginBottom="18.0px" android:text="@string/find_my_booking_notes" style="@style/regular" />
+                    <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.15" />
+                    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/find_my_booking_notes2_content" android:lineSpacingExtra="10.0px" style="@style/light" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@color/black_30" android:layout_width="360.0px" android:layout_height="wrap_content" android:layout_marginTop="10.0px">
+                    <TextView android:textSize="20.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:layout_marginBottom="18.0px" android:text="@string/find_my_booking_baggage_notes_2" style="@style/regular" />
+                    <View android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.15" />
+                    <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="left" android:layout_gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/find_my_booking_notes_content" android:lineSpacingExtra="10.0px" style="@style/light" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

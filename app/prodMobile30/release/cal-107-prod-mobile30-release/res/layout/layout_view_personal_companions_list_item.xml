@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlayout" android:background="@drawable/bg_transparent_press_black20" android:paddingLeft="30.0px" android:paddingTop="16.0px" android:paddingRight="20.0px" android:paddingBottom="15.699982px" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/ibtn_arrow" android:background="@color/transparent" android:layout_width="24.0px" android:layout_height="24.0px" android:src="@drawable/ic_list_arrow" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="266.0px" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ibtn_arrow" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:ellipsize="end" android:id="@id/tv_apis_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="19.299988px" android:text="@string/passport" android:maxLines="2" style="@style/regular" />
+            <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tv_apis_no" android:layout_width="fill_parent" android:layout_height="16.0px" android:layout_marginTop="3.0px" android:text="@string/passport" android:alpha="0.8" style="@style/regular" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/vDiv" android:background="@color/white_four" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.3" />
+</LinearLayout>

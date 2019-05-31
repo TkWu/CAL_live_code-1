@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <inset android:drawable="@drawable/btn_radio_on" android:insetRight="10.0dip" />
+    </item>
+    <item android:state_checked="false">
+        <inset android:drawable="@drawable/btn_radio_off" android:insetRight="10.0dip" />
+    </item>
+</selector>

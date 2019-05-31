@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apis_document_list">
+        <item>Passport</item>
+        <item>US Permanent Resident Card</item>
+        <item>MPTS</item>
+        <item>Mainland Residents Traveling to Taiwan Pass</item>
+    </string-array>
+    <string-array name="book_ticket_cabin_list">
+        <item>Economy</item>
+        <item>Premium Economy</item>
+        <item>Business</item>
+    </string-array>
+    <string-array name="miles_progress_pull_down">
+        <item>Accumulated Miles</item>
+        <item>Qualified Business Class Flights</item>
+        <item>Qualified Weighted Flights</item>
+        <item>Weighted Trip Counts of CI / AE</item>
+    </string-array>
+    <string-array name="sign_up_address_type_list">
+        <item>Home Address</item>
+        <item>Business Address</item>
+    </string-array>
+    <string-array name="sign_up_salutation_list">
+        <item>Mr</item>
+        <item>Ms</item>
+    </string-array>
+    <string-array name="sign_up_special_seat_list">
+        <item>No Preference</item>
+        <item>Aisle</item>
+        <item>Window</item>
+    </string-array>
+</resources>

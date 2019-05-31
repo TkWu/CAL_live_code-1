@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/rlayout_seat" android:background="@drawable/btn_main_meal_seat_select" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginLeft="45.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/tv_seat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/seat" android:layout_alignParentLeft="false" android:layout_alignParentTop="false" android:layout_centerInParent="true" style="@style/regular" />
+        <ImageView android:id="@id/img_seat" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_seat" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/img_seat_add" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_done" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/rlayout_meal" android:background="@drawable/btn_main_meal_seat_unselect" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginRight="45.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/tv_meal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/meal" android:layout_centerInParent="true" style="@style/regular" />
+        <ImageView android:id="@id/img_meal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_meal" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/img_meal_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_add" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

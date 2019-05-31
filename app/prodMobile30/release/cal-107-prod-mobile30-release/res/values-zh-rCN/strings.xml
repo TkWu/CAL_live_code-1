@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="CancelCheckIn_SuccessMsg">完成取消报到</string>
+    <string name="Conditions_Membership_Data_Privacy_Security_Statement_content">"●知识产权
+
+ 中华航空致力于保护您的个人信息隐私，希望您能知道您的相关权利，从而安心使用中华航空公司（以下简称“我们”）为您提供的各项与网络有关的服务。此外，为加强信息保护，在本网站的部分范围，您必须提供个人可识别及确认的信息才能进入。
+
+ ●顾客资料的收集
+
+ 我们将在网站、手机 APP、票务柜台及服务中心的特定范围内，通过下列方式收集您的个人信息(包括但不限于)
+
+ 1. 申请“华夏会员”
+
+ 2. 网上订位、购票
+
+ 3. 行程管理及加购服务
+
+ 4. 机场作业（包含座位分配和行李服务）
+
+ 5. 华旅旅游行程规划
+
+ 6. 使用华夏会员的互动服务及所提供的会员旅游信息
+
+ 7. 短信发送服务
+
+ 8. 网络购物及活动
+
+ 9. 营销服务
+
+ 10. 客户服务
+
+ 通过上述信息收集方式，我们可能会收集到您的个人信息（包括但不限于），类别如下：
+
+ 1. 个人信息
+
+ 2. 财务信息
+
+ 3. 政府资料信息
+
+ 4. 个人描述
+
+ 5. 家庭其他成员情况
+
+ 6. 旅行及其他迁徙情况
+
+ 7. 休闲活动及兴趣
+
+ 8. 职业
+
+ 9. 赔偿
+
+ 10. 健康纪录
+
+ 11. 儿童信息
+
+ 12. 未分类之信息
+
+ 所包含个人信息(包括但不限于)，
+ 姓名、护照中英文姓名、生日、国籍、身份证号码、护照号码、居住国家、邮寄地址、电子邮箱帐号、电话号码、传真号码、移动电话号码、华夏会员卡号及个人密码、信用卡资料（包括持卡人姓名、信用卡号码及信用卡有效期）、公司名称、公司地址、行业类别及职位、受让人的姓名及华夏会员卡号、惯用语言、特别饮食、座位及旅游喜好、健康及儿童信息、网络位址及 Cookie、其他信息如服务录音、案件报告、其他任何可直接或间接辨识的个人之信息。若您不能提供有关服务范围所需的个人信息，将有可能无法完成您所需要的部份网上服务。
+
+ 中华航空有时也会要求您更新您的个人信息。您的预订信息或航班行程计划可能会根据法律规定向海关和移民相关部门披露，因此需确保您的预订详情或航班行程计划中的个人信息为最新、完整且正确。
+
+ 中华航空需要您的协助，以确保您的个人信息是最新、完整且正确。如果您的个人信息发生变化，请联系中华航空公司并提供您的最新客户信息。如果您是华夏会员或旅客，您可以随时通过登录中华航空网站上的帐户来更新您的个人信息。
+
+ ●顾客资料的使用
+
+ 我们对顾客信息的使用，将限制在管理业务所需的范围内，主要是用于提升服务品质及加强个性化服务：
+
+ 1. 在线票务处理（包含个性化服务、值机及相关信息输入）
+
+ 2. 评估及处理华夏会员入会申请
+
+ 3. 华夏会员业务运作，包括里程累积数、华夏会籍记录、里程兑换记录、程转让记录
+
+ 4. 处理您的旅程安排及您所购买的商品及服务，包含网络购物、预购商品
+
+ 5. 处理会员及旅客的网上服务、信息通知服务、优惠服务、推广服务
+
+ 6. 提升服务的市场调查及问卷
+
+ 7. 我们可能将收集到您的信息提供给我们的联营公司，附属公司及其他商业合作机构（包含联名卡合作银行），以便上述公司及机构为您处理信息及提供相关服务。
+
+ 我们保证未经您的同意，不会将您的个人信息透漏给与本服务或交易无关的第三方。
+
+ 当您通过中华航空网站预订或购买非由中华航空负责销售的旅游相关产品或服务（租车、酒店或其他与旅游相关的产品（如当地运输服务）），因为可能是通过其他企业的交易平台，所以您所输入的个人信息将有可能被与旅游相关的产品和服务企业所收集，以用于提供后续相关服务。个人信息将用于我们全球分公司及票务柜台，以便提供相关服务。
+
+ 信息利用及保存期间随特定收集目的的终止而终止，或依据各国相关个人信息保护条例或法令及协议，或因特定目的之业务需求为期限。
+
+ ●旅客个人信息的权利
+
+ 旅客或会员依相关个人信息保护规定，可通过网站相关功能或联系我们全球各地的服务中心行使以下权利；经确认身份后，将迅速进行处理。如因无法确定信息当事人真实身份，我们将无法配合旅客隐私权主张，敬请见谅，
+
+ 1. 查询或请求阅览。
+ 2. 请求复制文件。
+ 3. 请求补充或更正。
+ 4. 请求停止搜集、处理或利用。
+ 5. 请求限制处理。
+ 6. 限制自动决策。
+ 7. 请求删除。
+ 8. 请求信息导出。
+
+ ●客户信息查阅
+
+ 在您向我们提交申请后，华航同意审查我们持有的个人信息。在法律许可情况下，中华航空有权对此服务收取合理的服务费。在特殊情况下，中华航空保留拒绝您查阅您个人信息的权利，并根据适用法律向您提供回复。
+
+ 特殊情况（法律要求）包括：
+
+ a）调查机构或政府机构反对中华航空遵守客户要求；
+ b）根据华航的合理判断和/或评估，相信该信息可能会影响人身安全；
+ c）收集到的信息违反协议，涉嫌欺诈活动或非法活动有关的目的。
+
+ ●客户信息保存
+
+ 为了达到收集信息之目的和中华航空法务和商业目的或相关法律目的，华航将在必要的时间内继续保留您的客户信息。
+
+ 在销毁客户信息时，我们会依据相关法律采取商业上合理且技术上可行的措施，以确保个人信息不会被回复或复制。
+
+ ●信息分析与自动化决策
+
+ 是指中华航空及相关企业或其他商业合作机构的营销活动。我们将使用前述部分信息（包含但不限于交易金额及旅游行程）来获取特定信息以了解消费者行为，并可能将这些信息传送给我们的服务供应商，以提供更佳、更个性化的交易及各类服务。
+
+ ●Cookie 及 IP 地址应用
+
+ Cookies 是网站服务器为了读取并区别使用者的不同喜好，经由浏览器写入使用者硬盘的一些简短信息，包含网页追踪码用以追踪第三方网站网络广告链接至中华航空网站的访问量及使用情况，如不同意，将无法正常使用相关购票网站或移动版网页。
+ IP 地址是由互联网网络服务供应商自动分配给使用者电脑的互联网网络地址。此 IP 地址在使用者访问中华航空网站及移动版网页时，会连同访问时间及访问页面被一同记录在服务器日志中。
+ 华航在其网站上使用 Cookie 用于以下目的：
+
+ 1. 技术使用
+ 能够有效运作的中华航空网站，包括但不限于： 
+ a）控制网站流量，确保所有用户拥有相同的稳定可靠的服务；
+ b）限制场地重要区域的流动并保持其运营水平。
+
+ 2. 易于使用
+ Cookie 允许您更轻松地浏览网页，包括但不限于：
+ a）记住您选择的语言和国家并提供相关内容； 
+ b）跟踪您登录中华航空华夏会员帐号；和 
+ c）预订航班时，提供与您的位置最相关的出发机场。 
+
+ 3. 跟踪和营销 
+ 我们的网站上收集有关您的浏览和交易活动的相关统计资料，并为您提供更合适的信息，包括但不限于： 
+ a）通过问卷收集您的满意度资料；和 
+ b）了解您如何浏览我们的网站和交易行为以提高可用性。 
+ c）允许公司的网站为营销目的提供不同版本的网页； 
+ d）允许第三方提供适当的广告并追踪其有效性；和 
+ e）根据您在我们网站和特定网页上的浏览行为提供相关产品信息。
+
+ ●链接到其他网站
+
+ 我们的网站内容包含其他网站的链接，各网站均采用各自不同的隐私保护条款。当您离开我们的网站而进入其他网站时，应继续提高警觉，并阅览其他网站的隐私保护条款。我们对发送至上述网站的信息不能作出任何管控和保障。
+
+ ●电子邮件的发送
+
+ 我们根据“顾客信息的收集”取得您的电子邮件地址，为提供更丰富的服务或优惠权益，我们将向您发送与上述内容相关的电子邮件，并在该电子邮件内注明是由我们所发送的。
+
+ ●保护隐私权/安全声明的修订
+
+ 我们可直接按照修订本的保护隐私权/安全声明内容执行，新的内容将会在此网页上发布。当我们在使用顾客信息的规定上作出大的修改时，为了维护您的权益，我们会在网页上张贴公告，让您知晓相关事项，而且为保持在网上所收集信息的准确性，以及防止未经授权的登录行为，并确保数据的正当使用，我们采取了适当的电子及管理措施。当您输入敏感信息，例如信用卡细节，信息将在发送到互联网之前自动转变成密码。
+
+ ●顾客的自我保护
+
+ 请妥善保管您的个人登录信息，不要将任何个人信息提供给其他任何人。在您完成网上订票、购物、会员联系等相关信息变动的程序后，请务必记得注销。如果您是与他人共用计算机或使用公共计算机，切记要关闭浏览器窗口，以防止他人搜集并使用您的个人信息。请在正常销售渠道购买本公司国际机票，如：华航网站、华航各地营业网点、华旅网际旅行社及各大旅行社等，以确保您的个人消费权益。
+
+ ●适用法律和管辖法院
+
+ 因本网站造成的争议和诉讼均以中华民国法律为依据，并以台湾台北地方法院为第一审管辖法院。
+
+ *如您对我们的安全声明及隐私保护政策有任何意见，欢迎与我们联系。
+
+"</string>
+    <string name="Conditions_Membership_Data_Privacy_Security_Statement_title">中华航空保护隐私及资料保安政策</string>
+    <string name="Conditions_Membership_Privileges_and_Obligations_content">"•注意事项
+
+ 1. 为维护会员权益，每位华夏会员仅得有一个会员卡号，请勿重覆申请。
+
+ 2. 英文姓名请填写护照上的英文姓名。为确保您的飞行哩程能自动累计至会员帐户，请于订位时，使用会员卡上之英文姓名，并告知服务人员您的会员卡号。
+
+ 3. 网上申请及核发的华夏会员卡号，立即有效。哩程累积自申请入会后开始计算，若您在申请前六个月内，曾搭乘华航或华信航空相关定期班机，可申请哩程补登，您亦可选择于会员服务进行线上补登。
+
+ 4. 网上申请入会，请妥善保管您的密码。使用密码进入会员服务所进行的各项查询或服务，都将被视为是该会员本人之行为，故勿将密码提供他人知道或使用。
+
+ •会员相关权益与义务
+
+ 1. 会员卡仅限会员本人使用，且每一会员只能拥有一个会员卡号。会员如连续三年未有哩程记录，中华航空将终止该会员之会员资格，其帐户下之哩程亦同时失效，恕不另行通知。
+
+ 2. 会员如违反「华夏哩程酬宾计划」规定、程序或者申报任何不实资料，将导致会员丧失会员资格以及累积的哩程；对于违规事件所获得的不当利益，中华航空保留法律追诉权。会员如因哩程酬宾作业的疏失而权益受损时，中华航空之责任范围仅限于与该权益相等之补偿。
+
+ 3. 酬宾奖项如因相关法令规定应予课徵服务费或税款时，应由会员自行负担。
+
+ 4. 为保障会员权益，本公司不接受会员以旅馆或旅行社的地址或邮政信箱做为联络之依据。会员地址如有变更，应立即通知本公司予以更正，如须修改电子邮件信箱，会员可自行于华航网页登入华夏会员服务更新，或填写「华夏会员更改资料申请表」，另附会员本人护照或身分证影本(影本上需有本人签名)传真、e-Mail 或邮寄上述资料向本公司各地会员服务专线办理。因地址或电子邮件信箱错误而导致的邮件遗失或延误，中华航空概不负责。
+
+ 5. 中华航空有权限制各班机使用座舱升等或酬宾机票的人数。
+
+ 6. 中华航空保留修订或终止本计划之权利，并拥有会员卡之所有权，会员须依中华航空之规定行使权利。若会员涉及下列情事者，中华航空可于事前通知或不通知的状况下，随时中止会员资格。若本公司受到损害时，会员亦应赔偿损失：
+
+ (1) 以不正当手段累积个人哩程而获利者(包括冒名累积哩程，出售酬宾奖项等)，本公司得取消其会员资格与累积之哩程。对于已经使用于换奖的哩程，亦需赔偿等值的金额。
+
+ (2) 无理要求给予非属会员应享之权益，或不遵守机舱内或贵宾室等场所之使用规定，而造成本公司值勤人员之困扰。
+
+ (3) 言行有危害飞行安全之虞或侵害其他乘客之权益者。
+
+ (4) 不实或不当言词中伤本公司商誉者。
+
+ (5) 其他不当使用或滥用会员权益之行为者。
+
+ 7. 「华夏哩程酬宾计划」所开发之合作哩程，其目的是加强会员服务，扩大会员累积哩程之基础。并未涉及合作企业之价格与作业程序。对于任何交易纠纷，会员必须直接向该合作企业提出申诉。合作内容以中华航空与合作企业签订之合约为准，合作内容如有变更，恕不另行通知。
+
+ 8. 会员之哩程、换奖、礼遇等所属权益，均依「华夏哩程酬宾计划」会员权益手册之规定办理。
+
+ 9. 会员欲更改个人资料中的中/英文姓名、生日、台湾身份证字号、地址、电邮地址、护照号码、电话，需依规定填写「华夏会员之当事人个资权利行使申请表」提出申请。
+
+"</string>
+    <string name="Conditions_Membership_Privileges_and_Obligations_title">注意事项及会员相关权益与义务</string>
+    <string name="Departure">出发</string>
+    <string name="Qualifications_content">"•华夏卡会员
+
+ 1. 凡年满二岁，且未曾申请过华夏会员者，均可申请加入华夏卡会员。
+
+ 2. 12岁以下之华夏会员，需提出监护人，监护人也必须是本公司会员。
+
+"</string>
+    <string name="Qualifications_title">申请资格</string>
+    <string name="Return">回程</string>
+    <string name="SelectMeal_Label_PleaseSelectBreakfast">请选择您的早餐</string>
+    <string name="SelectMeal_Label_PleaseSelectDinner">请选择你的晚餐</string>
+    <string name="SelectMeal_Label_PleaseSelectLunch">请选择你的午餐</string>
+    <string name="SelectMeal_Label_PleaseSelectR">请选择你的便餐</string>
+    <string name="SelectMeal_NotSelectedMeal">您尚未选择餐点，是否前往下一步？</string>
+    <string name="SelectMeal_NotSelectedPassenger">您尚未选择旅客</string>
+    <string name="SelectMeal_delete_meal">是否确认取消餐点？</string>
+    <string name="abc_action_bar_home_description">转到主屏幕</string>
+    <string name="abc_action_bar_home_description_format">%1$s：%2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s - %2$s：%3$s</string>
+    <string name="abc_action_bar_up_description">转到上一层级</string>
+    <string name="abc_action_menu_overflow_description">更多选项</string>
+    <string name="abc_action_mode_done">完成</string>
+    <string name="abc_activity_chooser_view_see_all">查看全部</string>
+    <string name="abc_activitychooserview_choose_application">选择应用</string>
+    <string name="abc_capital_off">关闭</string>
+    <string name="abc_capital_on">开启</string>
+    <string name="abc_search_hint">搜索…</string>
+    <string name="abc_searchview_description_clear">清除查询</string>
+    <string name="abc_searchview_description_query">搜索查询</string>
+    <string name="abc_searchview_description_search">搜索</string>
+    <string name="abc_searchview_description_submit">提交查询</string>
+    <string name="abc_searchview_description_voice">语音搜索</string>
+    <string name="abc_shareactionprovider_share_with">分享方式</string>
+    <string name="abc_shareactionprovider_share_with_application">通过%s分享</string>
+    <string name="abc_toolbar_collapse_description">收起</string>
+    <string name="about_ai_service">智能客服</string>
+    <string name="about_get_directions">开启导航</string>
+    <string name="about_us">华航简介</string>
+    <string name="account_security">帐号安全</string>
+    <string name="actual">实际</string>
+    <string name="add_apis">新增旅行证件</string>
+    <string name="add_apis_notice">某些国家/地区要求旅客提供额外旅行证件资讯(旅客资讯预报系统)，您可储存您的旅行证件资讯以快速轻松办理预办登机</string>
+    <string name="add_flight_info_alert_msg">新增航班之前，请先完成新增上述必填栏位</string>
+    <string name="add_member_card">登录会员卡号</string>
+    <string name="add_more_flight">新增航班</string>
+    <string name="add_multi_flight">航段 (%1$d/%2$d)</string>
+    <string name="add_passenager">新增旅客</string>
+    <string name="add_passenager_add_more">新增旅客</string>
+    <string name="add_passenager_add_travel_companion_to_app">新增同行旅客</string>
+    <string name="add_passenager_passenager_x">旅客 %1$d</string>
+    <string name="add_passenager_title">新增旅客</string>
+    <string name="add_to_calendar">添加至行事历</string>
+    <string name="add_to_calendar_add_confirm">新增</string>
+    <string name="add_to_calendar_content_success">行程已成功新增至行事历。提醒将于预办登机服务开始</string>
+    <string name="add_to_calendar_notes">若有变更，请先移除此活动并至中华航空App重新添加至行事历，谢谢。</string>
+    <string name="add_to_calendar_title_success">新增成功</string>
+    <string name="addapis_label_address">目的地地址(仅至美国需填写)</string>
+    <string name="adults">成人</string>
+    <string name="advance_passenger_information_system">(旅客资讯预报系统)</string>
+    <string name="agree">接受</string>
+    <string name="aircraft_type">机型:</string>
+    <string name="airport_name_code">机场名称/代码</string>
+    <string name="alert_cannot">不能</string>
+    <string name="alert_select_meal">选餐</string>
+    <string name="alert_select_seat">选位</string>
+    <string name="all_airport">所有机场</string>
+    <string name="all_area">所有地区</string>
+    <string name="apis_add_this_travel_doc_to_my_account">新增旅行证件至我的帐号</string>
+    <string name="apis_address_country">国家/地区</string>
+    <string name="apis_save_change">储存变更至此旅行证件</string>
+    <string name="app_eshopping_desc">华航 Sky Boutique预订提供快速而简便的方式让您使用中华航空手机服务。</string>
+    <string name="app_eshopping_name">华航 Sky Boutique</string>
+    <string name="app_exquisitetravel_desc">以年度景点手册为主要内容所推出的互动式内容行动平台。</string>
+    <string name="app_exquisitetravel_name">华航精緻旅游行动平台</string>
+    <string name="apply_password">重新申请密码</string>
+    <string name="apply_password_inquiry">申请密码</string>
+    <string name="apply_password_success_note">请填妥下列栏位，以便登录您的会员密码。</string>
+    <string name="are_you_sure_you_want_to_disconnect">是否确认中断连结%1$s的社群帐号？</string>
+    <string name="arrival_airport">抵达机场</string>
+    <string name="arrival_date">抵达日</string>
+    <string name="available">可用</string>
+    <string name="award_no">核奖号码</string>
+    <string name="awards_received">酬宾奖项受让</string>
+    <string name="awards_redeem_date">奖项/兑换日期</string>
+    <string name="awards_transfer">酬宾奖项转让</string>
+    <string name="awards_transfer_date">奖项/转让日期</string>
+    <string name="back_to_boarding_pass">回到登机证/票券夹</string>
+    <string name="back_to_home">回到首页</string>
+    <string name="back_to_manage_miles">回到哩程管理</string>
+    <string name="back_to_mytrips">回到行程管理</string>
+    <string name="back_to_personal_detail">回到个人资讯</string>
+    <string name="back_to_trip_detail">回到行程管理</string>
+    <string name="bag_receipt">"託運行李资讯
+(非正式收据)"</string>
+    <string name="bag_to">目的地:</string>
+    <string name="baggage_booking_ref_hint">订位代号</string>
+    <string name="baggage_carousel">行李提领转盘</string>
+    <string name="baggage_info_content_baggage_status">行李状态</string>
+    <string name="baggage_info_content_baggage_tag">行李牌号码</string>
+    <string name="baggage_tag_ref_hint">行李牌号码</string>
+    <string name="baggage_tracking_can_not_find_button_find">查询行李</string>
+    <string name="baggage_tracking_can_not_find_you_baggage">沒有您的行李吗?</string>
+    <string name="baggage_tracking_service_type">行李贴条</string>
+    <string name="bagtag_camera_permissions_msg">请同意授权存取权限，以便开启相机扫描行李条码。请前往装置设定开启相机授权服务。</string>
+    <string name="become_a_dynasty_flyer_already_have_account">已是华夏会员？</string>
+    <string name="become_a_dynasty_flyer_hello">您好</string>
+    <string name="become_a_dynasty_flyer_not_now">略过</string>
+    <string name="become_a_dynasty_flyer_prompt_msg">使用您的社群帐号加入会员，立即享用一键登入及个人化贴心服务</string>
+    <string name="become_a_dynasty_flyer_sign_up">加入会员</string>
+    <string name="become_a_dynasty_flyer_title">加入「华夏哩程酬宾计划」</string>
+    <string name="boarding">登机时间</string>
+    <string name="boarding_gate_change_xx">登机门变更至 %1$s 登机门</string>
+    <string name="boarding_pass">登机证</string>
+    <string name="boarding_pass_airport">机场</string>
+    <string name="boarding_pass_authorization_code">授权代码</string>
+    <string name="boarding_pass_baggage_tracking_text">行李追踪</string>
+    <string name="boarding_pass_date_time">日期/时间</string>
+    <string name="boarding_pass_departure_station">出发车站</string>
+    <string name="boarding_pass_e_miscellaneous_no">电子收费凭证编号</string>
+    <string name="boarding_pass_ewallet_title">登机证/票券夹</string>
+    <string name="boarding_pass_expired">(过期)</string>
+    <string name="boarding_pass_extra_services_thsr_notice">"旅客取票需知
+ • 您须于所订高铁车次发车前40分钟，至高铁车站之自动售票机输入高铁订位代号及取票旅客护照或身份证字号后四码)，或其售票窗口出示高铁订位代号及取票旅客护照或身份证字号，取票搭乘；或更早至便利商店(全家/7-11/莱尔富/OK超商)取票，并支付每张车票手续费10元(去回票以2张计算)。
+ • 如有问题，请您拨打本公司客服专线412-9000(手机请拨02-4129000)。"</string>
+    <string name="boarding_pass_extra_services_vip_notice">"注意事项
+ •华航贵宾室使用券不可退还,且于购买后不可更改日期。"</string>
+    <string name="boarding_pass_extra_services_wifi_notice">"注意事项
+ 1. 机上Wi-Fi服务目前仅限于波音B777/A350机种上使用。
+ 2. 机上Wi-Fi使用券出售后恕不接受退费。
+ 联系我们请电邮至WiFiOnboard@China-Airlines.com。"</string>
+    <string name="boarding_pass_flight_no">航班编号</string>
+    <string name="boarding_pass_gate">登机门:</string>
+    <string name="boarding_pass_item">项目</string>
+    <string name="boarding_pass_order_no">订单编号</string>
+    <string name="boarding_pass_seat_no">座位</string>
+    <string name="boarding_pass_tab_boarding_pass">登机证</string>
+    <string name="boarding_pass_tab_coupon">优惠券</string>
+    <string name="boarding_pass_tab_services">加购票券</string>
+    <string name="boarding_pass_terminal">航厦:</string>
+    <string name="boarding_pass_train_class">车次/舱等</string>
+    <string name="boarding_pass_wifi_expiry_date">使用期限</string>
+    <string name="boarding_pass_wifi_item">机上Wi-Fi项目</string>
+    <string name="boarding_start_at_gate_xx">请于 %1$s 前往 %2$s 登机门</string>
+    <string name="boarding_with_qrcode">电子登机证</string>
+    <string name="boardingpass_background_notes_content">"• 若需以登机证作为公差报帐依据，搭机前请自行将电子登机证透过截图方式进行保存，搭机后另可至中华航空各营业处所申请搭机证明。( https://www.china-airlines.com/cn/zh/fly/on-board/invoice-application-form )
+
+ • 请在航班启航前最少30分钟于登机门服务柜台出示旅行证件并于登机时出示本登机证。
+
+ • 正确之登机门号码请参考机场航班资讯系统。
+
+ • 如您有托运行李，请务必于起飞前1小时至机场本公司报到柜台办理后（小港国际机场B柜台前方设有专属快速服务柜台），再接受证照及安全检查。
+
+ • 本公司保有权利因应飞机调度，而更动起飞时间，及调整旅客指定座位。
+
+ • 目前「预办登机」自助列印登机证服务不适用于香港机场转机之旅客。
+
+ • 以信用卡购买电子机票旅客必须于订位纪录中第一段行程启程地之机场报到柜台或登机门完成「核对信用卡」手续，未依规定完成核对手续者，将导致旅客必须在机场另行购买适用机票，方可成行，信用卡代购须知请参阅华航网站 ( https://www.china-airlines.com/cn/zh/fly/prepare-for-the-fly/information-for-travellers/Notice-for-Credit-Card-Payment )。
+"</string>
+    <string name="boardingpass_background_notes_title">注意事项</string>
+    <string name="boardingpass_print">列印</string>
+    <string name="book_ticket">订位购票</string>
+    <string name="book_ticket_error_1">您选择的出发时间早于前一航班的抵达时间，请重新选择</string>
+    <string name="book_ticket_error_2">两个航段(出发/抵达机场)不可重复，请重新选择</string>
+    <string name="book_ticket_error_3">请输入旅客人数</string>
+    <string name="book_ticket_error_4">旅客人数不符规定，请重新选择</string>
+    <string name="book_ticket_error_5">出发机场不可与抵达机场相同</string>
+    <string name="book_ticket_error_6">抵达时间不可早于出发时间，请重新选择</string>
+    <string name="book_ticket_max_number_of_adults">成人旅客人数不可超过4人</string>
+    <string name="book_ticket_max_number_of_children">儿童旅客人数不可超过3人</string>
+    <string name="book_ticket_max_number_of_infants">婴儿旅客人数不可大于成人旅客人数</string>
+    <string name="book_ticket_max_number_of_passengers">旅客总人数不可超过9人</string>
+    <string name="book_ticket_more_options">不同城市进出？<u>多个目的地和中途停留</u></string>
+    <string name="book_ticket_more_options_underline">多个目的地和中途停留</string>
+    <string name="book_ticket_multi_stop_flight">多航段航班 %1$d</string>
+    <string name="booking_cabin">订位舱等</string>
+    <string name="booking_no">订位代号</string>
+    <string name="bookticket_cabin_class">客舱级别</string>
+    <string name="bookticket_corporate_id_code">企业会员帐号 (选填)</string>
+    <string name="bookticket_corporate_id_title">企业会员帐号</string>
+    <string name="bookticket_promotion_code">促销代码 (选填)</string>
+    <string name="bookticket_promotion_code_msg">促销机位数量有限，亦可能无法适用于所有航班。折扣无法与其他优惠合并使用，且可能不适用于婴儿及儿童票。</string>
+    <string name="bookticket_promotion_code_title">促销代码</string>
+    <string name="braoding_pass_screenshots_fail">截图失敗</string>
+    <string name="braoding_pass_screenshots_name">%1$s-%2$s-_%3$s_boarding_pass</string>
+    <string name="braoding_pass_screenshots_success">"截图成功
+若航班有异动,需重新截图"</string>
+    <string name="breakfast">早餐</string>
+    <string name="button_seat_confirm">确认变更</string>
+    <string name="by_flight">航班编号</string>
+    <string name="by_route">航线</string>
+    <string name="cabin">客舱</string>
+    <string name="cabin_class">客舱级别:</string>
+    <string name="call">拨打</string>
+    <string name="can_not_find_any_passenger">查无可新增的旅客资讯</string>
+    <string name="cancel">取消</string>
+    <string name="cancel_check_in">取消报到</string>
+    <string name="cancel_check_in_alert_msg">是否取消预办登机?</string>
+    <string name="cancel_check_in_flight">取消报到 (%1$s ➞ %2$s)</string>
+    <string name="cancellation_completed">取消完成</string>
+    <string name="card_type_blue">晶钻卡</string>
+    <string name="card_type_gold">金卡</string>
+    <string name="card_type_gray">华夏卡</string>
+    <string name="card_type_green">翡翠卡</string>
+    <string name="change">变更</string>
+    <string name="change_flight">变更我的航班</string>
+    <string name="change_has_been_saved_successfully">已成功储存变更</string>
+    <string name="change_password"><u>变更密码</u></string>
+    <string name="change_password_completed_message">密码修改成功</string>
+    <string name="change_password_prompt_msg">请填妥下列栏位，完成申请后，我们会立即将密码寄至您的电子邮件帐号</string>
+    <string name="check_in">预办登机</string>
+    <string name="check_in_apis_have_can_c">持有枫叶卡</string>
+    <string name="check_in_apis_have_ct">未持有台胞证</string>
+    <string name="check_in_apis_non_ct">持有台胞证</string>
+    <string name="check_in_boarding_pass">登机证</string>
+    <string name="check_in_completed">完成报到</string>
+    <string name="check_in_counter">报到柜台</string>
+    <string name="check_in_creditcard_verification">请于柜台/登机门验证信用卡</string>
+    <string name="check_in_dabgerous_goods_info">旅客行李须知</string>
+    <string name="check_in_failure">预办登机失败! 请至机场报到柜台完成报到。</string>
+    <string name="check_in_have_flight">预办登机 (%1$s ➞ %2$s)</string>
+    <string name="check_in_input_apis_doc">签证资讯1</string>
+    <string name="check_in_input_apis_second_doc">签证资讯2</string>
+    <string name="check_in_input_visa">输入签证资料</string>
+    <string name="check_in_pnr_passenger_over_limit">旅客人数超过九人</string>
+    <string name="check_in_seat_allocated_erro">座位分配异常，请至报到柜台办理</string>
+    <string name="check_in_select_flight">选择航班</string>
+    <string name="check_in_visa_date_of_expiry">签证效期</string>
+    <string name="check_in_visa_document_number">签证号码</string>
+    <string name="check_in_visa_index_title">签证</string>
+    <string name="check_the_tracking">航班追踪</string>
+    <string name="check_the_tracking_notice">航班追踪将显示于首页，您可同时追踪达3 航班資訊。</string>
+    <string name="children">儿童</string>
+    <string name="china_airlines">中华航空</string>
+    <string name="china_airlines_app">其他中华航空App</string>
+    <string name="china_airlines_instroduction">关于华航</string>
+    <string name="city">输入城市名(e.g.台北)</string>
+    <string name="city_county_district">(乡、镇)市</string>
+    <string name="city_stat">州 名</string>
+    <string name="closed_on_holidays">国定假日属非营业时间</string>
+    <string name="collect_boardingpass_at_airport_before">报到完成，请于 %1$s 前托运行李，领取登机证。</string>
+    <string name="com_facebook_device_auth_instructions">请用智能手机或电脑访问 &lt;b>facebook.com/device&lt;/b>，然后输入验证码：</string>
+    <string name="com_facebook_image_download_unknown_error">下载图片时出现意外错误。</string>
+    <string name="com_facebook_internet_permission_error_message">Web 登录需要互联网许可</string>
+    <string name="com_facebook_internet_permission_error_title">AndroidManifest 错误</string>
+    <string name="com_facebook_like_button_liked">赞了</string>
+    <string name="com_facebook_like_button_not_liked">赞</string>
+    <string name="com_facebook_loading">正在加载...</string>
+    <string name="com_facebook_loginview_cancel_action">取消</string>
+    <string name="com_facebook_loginview_log_in_button">登录</string>
+    <string name="com_facebook_loginview_log_in_button_long">使用 Facebook 登录</string>
+    <string name="com_facebook_loginview_log_out_action">退出</string>
+    <string name="com_facebook_loginview_log_out_button">退出</string>
+    <string name="com_facebook_loginview_logged_in_as">已以%1$s 身份登录</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">已使用 Facebook 登录</string>
+    <string name="com_facebook_send_button_text">发送</string>
+    <string name="com_facebook_share_button_text">分享</string>
+    <string name="com_facebook_tooltip_default">新增功能！一切任您掌控 — 选择您想通过应用分享的信息。</string>
+    <string name="common_google_play_services_enable_button">启用</string>
+    <string name="common_google_play_services_enable_text">您必须先启用 Google Play 服务，然后才能运行%1$s。</string>
+    <string name="common_google_play_services_enable_title">启用 Google Play 服务</string>
+    <string name="common_google_play_services_install_button">安装</string>
+    <string name="common_google_play_services_install_text">您的设备没有安装 Google Play 服务，因此无法运行%1$s。</string>
+    <string name="common_google_play_services_install_title">获取 Google Play 服务</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play 服务的适用范围</string>
+    <string name="common_google_play_services_notification_ticker">Google Play服务出错</string>
+    <string name="common_google_play_services_unknown_issue">%1$s无法访问 Google Play 服务，请重试。</string>
+    <string name="common_google_play_services_unsupported_text">您的设备不支持 Google Play 服务，因此无法运行%1$s。</string>
+    <string name="common_google_play_services_update_button">更新</string>
+    <string name="common_google_play_services_update_text">您必须先更新 Google Play 服务，然后才能运行%1$s。</string>
+    <string name="common_google_play_services_update_title">更新 Google Play 服务</string>
+    <string name="common_google_play_services_updating_text">Google Play 服务当前正在更新，因此您无法运行%1$s。</string>
+    <string name="common_google_play_services_wear_update_text">必须使用新版 Google Play 服务。该服务很快就会自行更新。</string>
+    <string name="common_open_on_phone">在手机上打开</string>
+    <string name="common_signin_button_text">登录</string>
+    <string name="common_signin_button_text_long">使用 Google 帐号登录</string>
+    <string name="companions_apis">同行旅客的旅行证件</string>
+    <string name="completed">符合资格</string>
+    <string name="complimentary_beverage">优待餐点</string>
+    <string name="complimentary_upgrade">优待座舱升等</string>
+    <string name="confirm">确认</string>
+    <string name="congratulations_eligible_to_renew_gold_membership">恭喜! 您已符合续卡资格</string>
+    <string name="congratulations_eligible_to_upgrade_to_emerald_membership">恭喜! 您已符合晋升资格</string>
+    <string name="connect_to_others">连结至其他社群媒体</string>
+    <string name="connected">连结</string>
+    <string name="connecting_to_social_account_makes_you_log_in_more_easier">连结您的社群媒体帐号，立即享用一键登入及个人化贴心服务。</string>
+    <string name="contact_us">联系我们</string>
+    <string name="counter_service">柜台服务:</string>
+    <string name="country_of_issuance">发证国家/地区</string>
+    <string name="customer_center_will_cantact_you">客服人员将联络您并为您安排新的行程</string>
+    <string name="customer_services">旅客服务</string>
+    <string name="date">日期</string>
+    <string name="date_of_birth">生日:</string>
+    <string name="date_of_expiry">效期截止日期</string>
+    <string name="day">天</string>
+    <string name="decide_later">稍后确认</string>
+    <string name="def_member_ship_card_number">会员卡号</string>
+    <string name="delay">误点</string>
+    <string name="delete_apis_cancel">取消</string>
+    <string name="delete_apis_delete">删除</string>
+    <string name="delete_apis_msg">"将删除此旅行证件资讯，删除后将无法还原。
+是否确认删除此旅行证件？"</string>
+    <string name="delete_apis_title">删除旅行证件</string>
+    <string name="depart_on">出发日</string>
+    <string name="departure_airport">出发机场</string>
+    <string name="departure_date">出发日</string>
+    <string name="departure_date_Fri">五</string>
+    <string name="departure_date_Mon">一</string>
+    <string name="departure_date_Sat">六</string>
+    <string name="departure_date_Sun">日</string>
+    <string name="departure_date_Thu">四</string>
+    <string name="departure_date_Tue">二</string>
+    <string name="departure_date_Wed">三</string>
+    <string name="departure_date_only_within_6_months">出发日(6 个月内)</string>
+    <string name="departure_time_delays">出发时间延误至 %1$s</string>
+    <string name="description_accumulation_date">说明/累积日期</string>
+    <string name="dinner">晚餐</string>
+    <string name="disagree">拒绝</string>
+    <string name="disconnect">中断连结</string>
+    <string name="disconnect_social_account">中断连结社群帐号</string>
+    <string name="discount">折扣优惠:</string>
+    <string name="document_detail">证件资讯</string>
+    <string name="document_number">证件号码</string>
+    <string name="document_type">证件类别</string>
+    <string name="done">完成</string>
+    <string name="dont_remind_me_again">了解，不需再提醒我</string>
+    <string name="download_airport_data_fail">下載機場資料失敗</string>
+    <string name="download_print_reminder">请前往华航企业网站下载并列印连结文件</string>
+    <string name="due_date">有效期限</string>
+    <string name="due_to_local_government_regulations">请洽机场柜台领取登机证。</string>
+    <string name="eb_amount">加购金额</string>
+    <string name="eb_bag">加购数量</string>
+    <string name="eb_extra_baggage">预购超额行李</string>
+    <string name="eb_flight_info">适用航班</string>
+    <string name="eb_seq">序号</string>
+    <string name="economy">经济舱</string>
+    <string name="edit">编辑</string>
+    <string name="editapis_alert_message_do_not_save_and_upload_your_apis">"储存您的旅行证件资讯以供未来使用。
+是否储存此资讯?"</string>
+    <string name="editapis_alert_message_save_and_upload_your_apis">"储存并上传您的旅行证件资讯以供未来使用。
+是否储存并上传此资讯?"</string>
+    <string name="editapis_alert_title_save_and_upload_apis">储存并上传旅行证件</string>
+    <string name="editapis_alert_title_save_and_upload_your_apis">储存并上传旅行证件</string>
+    <string name="email">电子邮件</string>
+    <string name="enjoy_discount">享有空中免税商品%1$s%2$s购物优惠.</string>
+    <string name="enjoy_more_time_at_your_destination">提早抵达享受更多旅游时间</string>
+    <string name="error">失败</string>
+    <string name="estimated_time">预定时间</string>
+    <string name="event_bonus">活动奖励</string>
+    <string name="ewallet_notice">注: 此票券必须与航班机票一并使用，如有疑虑或问题，请联系中华航空。</string>
+    <string name="excess_baggage">超重行李</string>
+    <string name="exit">离开</string>
+    <string name="exit_app_message">您是否要离开？</string>
+    <string name="explore_destination_link">https://www.china-airlines.com/cn/zh/discover/promotion</string>
+    <string name="extra_baggage">预购託运行李</string>
+    <string name="extra_service_content_eco_travel">小花邀請花粉們一起實踐零碳飛行~「環保旅程碳抵換計畫」</string>
+    <string name="extra_service_content_extra_baggage">若您需额外的托运行李额度，可于班机起飞前24小时前以优惠价进行加购。</string>
+    <string name="extra_service_content_family_couch">华航提供亚洲独家亲子卧舱，长途旅行加购亲子卧舱就能让您一路舒服地躺着飞到目的地。</string>
+    <string name="extra_service_content_hsr">旅客于开立机票后之次日，即可以优惠价格订位加购高铁车票。</string>
+    <string name="extra_service_content_wifi">中华航空欢迎您使用机上Wi-Fi Onboard服务，让您尽情享受与地面零时差的空中漫游。</string>
+    <string name="extra_service_title_eco_travel">環保旅程 - ECO Travel 碳抵換計畫</string>
+    <string name="extra_service_title_extra_baggage">预购额外托运行李额度</string>
+    <string name="extra_service_title_family_couch">加购亲子卧舱</string>
+    <string name="extra_service_title_hsr">高铁附加服务系统</string>
+    <string name="extra_service_title_wifi">机上Wi-Fi加购</string>
+    <string name="extra_services">加购服务</string>
+    <string name="extra_services_award_no">核奖号码</string>
+    <string name="extra_services_eco_travel_link">https://china-airlines.co2analytics.com/</string>
+    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/tw/zh/booking/manage-booking/reservation-booking-inquiry</string>
+    <string name="extra_services_family_couch_link">https://calee.china-airlines.com/FC_DOT/Agreement.aspx?lang=zh-CN&amp;country=cn&amp;locale=zh</string>
+    <string name="extra_services_flight_number">航班编号</string>
+    <string name="extra_services_have_not_booked_a_hsr_ticket">需要预订高铁车票吗?</string>
+    <string name="extra_services_hsr_link">https://calee.china-airlines.com/CITHSR_AMA?country=cn&amp;locale=zh</string>
+    <string name="extra_services_msg">中华航空行动装置App附有多种服务选项，为您带来更丰富的旅行体验。</string>
+    <string name="extra_services_wifi_link">https://calde.china-airlines.com/Flywifi/Agreement.aspx?lang=zh-TW&amp;country=cn&amp;locale=zh</string>
+    <string name="facebook">Facebook</string>
+    <string name="family_couch">亲子卧舱</string>
+    <string name="fb_message">线上客服(Taiwan Only)</string>
+    <string name="fcm_fallback_notification_channel_label">其他</string>
+    <string name="female">女性</string>
+    <string name="fill_new_form_apis">填写新增旅行证件</string>
+    <string name="find_flight">查询航班</string>
+    <string name="find_my_baggage_twoitem_left_text">订位代号</string>
+    <string name="find_my_baggage_twoitem_right_text">行李牌号码</string>
+    <string name="find_my_booking_baggage_notes">注意事项</string>
+    <string name="find_my_booking_baggage_notes_2">备注</string>
+    <string name="find_my_booking_baggage_notes_content">"
+ 1. 目前仅提供由桃园/首尔/新加坡/法兰克福/纽约/旧金山出发，并于划位柜台完成报到及讬运行李之旅客查询行李状态。
+
+ 2. 开放可查询时间为班机抵站后3天内。
+
+ 3. 所有行李动态的显示时间为查询机场位置的当地时间。
+
+ 4. 若行程中包含中华航空公司以外或其连接中华航空以外的航空公司，行李动态追踪信息将无法显示， 请与主要乘载的航空公司联系，了解您的行李状态。
+
+"</string>
+    <string name="find_my_booking_baggage_notes_content_2">"
+ * 订位代号：6码英数字的组合(例如：000000)
+
+ * 行李牌号码：2码航空公司英文代码+6码数字的组合(例如：CI123456)
+
+"</string>
+    <string name="find_my_booking_button">查询</string>
+    <string name="find_my_booking_notes">注意事项</string>
+    <string name="find_my_booking_notes2_content">"
+ • 目前预办登机不提供餐点或轮椅等特殊要求，如有需要请在未完成预办登机前先洽华航订位单位，如已完成预办登机则请径赴机场向报到柜台提出需求。
+
+ • 目前开放在同一订位记录内9人或9人以下华航国际线班机(但不包含非中华航空飞航之联营航班)旅客于起飞前1.5至48小时，可办理预办登机。
+
+ • 预办登机服务不适用订位舱等为G 的旅客。
+
+ • 如果您不适用『自助列印登机牌』及『电子登机牌』服务，使用本系统完成报到后，仍必须配合各机场作业时间，于班机起飞至少约1至2小时前（详情请参考列印功能网页之注意事项内容），至机场本公司柜台领取登机牌，与办理行李托运等事宜（小港国际机场B柜台前方设有专属快速服务柜台，可径赴该柜台办理），并配合机场安全检查。
+
+ • 由罗马出发之18岁以下单独旅行之旅客因受限当地政府规定恕无法适用本公司『预办登机』服务。
+
+"</string>
+    <string name="find_my_booking_notes_content">"
+ 1. 订位代号含英文字母或数字共六码。
+
+ 2. 如您的订位代​​号含有一位以上的旅客，请输入其中一位旅客姓名。
+
+"</string>
+    <string name="find_my_booking_notes_us_visa_waiver_program">入境美国免签</string>
+    <string name="find_my_booking_notes_us_visa_waiver_program_content">"
+ • 自2009年1月12日起，凡持免美签护照之旅客，在您搭机至美国前，请务必至「美国海关及边境保护局」ESTA网站(Electronic System for Travel Authorization)登录您的护照号码及相关资料成功后始得登机，提醒您授权许可的作业时间可能需72小时。
+
+"</string>
+    <string name="find_my_booking_title">查询行程</string>
+    <string name="find_my_booking_traveling_with_other_companions">此趟航班是否有同行旅客?!</string>
+    <string name="finish">送出</string>
+    <string name="first_flight_detail">航班资讯 第 %1$s 段</string>
+    <string name="flight_boarding_gate_change_xx">%1$s 登机门变更至 %2$s 登机门</string>
+    <string name="flight_cancel_message">若您希望安排其他行程，客服人员将联络您并为您安排新的航班。</string>
+    <string name="flight_cancel_please_confirm_new_flight">%1$s 航班取消，请确认变更至 %2$s 航班</string>
+    <string name="flight_notification">推播通知</string>
+    <string name="flight_number">航班编号</string>
+    <string name="flight_status">航班动态</string>
+    <string name="flight_status_arrived_on_time">已抵达</string>
+    <string name="flight_status_delay">延迟</string>
+    <string name="flight_status_flight_result">航班动态</string>
+    <string name="flight_status_on_time">准时</string>
+    <string name="flights">旅次</string>
+    <string name="flights_percent">%1$s / %2$s 旅次</string>
+    <string name="fly_date">飞行日:</string>
+    <string name="fly_time">飞行时间:</string>
+    <string name="from">出发机场</string>
+    <string name="fullweek">飞行日</string>
+    <string name="gate">登机门</string>
+    <string name="gdpr_title">信息安全保护政策</string>
+    <string name="gdpr_url">https://mobile30.china-airlines.com/mobile30/redirurl/gdpr.aspx?lang=CN&amp;uuid=</string>
+    <string name="get_boarding_pass_at_airport">前往机场领取登机证</string>
+    <string name="global_branch_office">全球营业所</string>
+    <string name="global_customer_service">全球营业所</string>
+    <string name="global_service_hotline">全球营业所</string>
+    <string name="google_play_error">"错误讯息  +
+                            请确认已完成安装Google Play并将您的装置连结至​​网路。  +
+                            若错误讯息持续发生，请联系开发人员。"</string>
+    <string name="google_plus">Google+</string>
+    <string name="gps_connection_exception_warning">GPS连线异常</string>
+    <string name="gps_permissions_msg">请同意授权存取权限，以便存取您的地点。请前往装置设定开启GPS定位服务。</string>
+    <string name="gps_position_fail">GPS定位失敗</string>
+    <string name="gps_positioning">GPS定位中</string>
+    <string name="gps_press_enable_gps_service">请开启GPS定位服务</string>
+    <string name="guardian_details">监护人资讯</string>
+    <string name="home_page_already_have_a_trip">已有订位行程?</string>
+    <string name="home_page_button_book_ticket">订位购票</string>
+    <string name="home_page_button_extra_services">加购服务</string>
+    <string name="home_page_button_find_my_booking">查询行程</string>
+    <string name="home_page_button_flight_status">航班动态</string>
+    <string name="home_page_button_view_my_booking">检视行程</string>
+    <string name="home_page_explore_destinations">个人化推荐</string>
+    <string name="home_page_have_ticket_long_time_ago">前往%1$s的航班将于%2$s后出发</string>
+    <string name="home_page_promotion_link_1">https://mobile30.china-airlines.com/CMS_1/SI_Discover1.html</string>
+    <string name="home_page_promotion_link_2">https://mobile30.china-airlines.com/CMS_1/SI_Discover2.html</string>
+    <string name="home_page_promotion_link_3">https://mobile30.china-airlines.com/CMS_1/SI_eShopping.html</string>
+    <string name="home_page_promotion_link_4">https://mobile30.china-airlines.com/CMS_1/SI_wifi.html</string>
+    <string name="home_page_promotion_title">独享促销</string>
+    <string name="home_page_refresh">重新整理</string>
+    <string name="home_page_seat_meal_airline_cantnot_select_meal">非中华航空航班未开放选餐</string>
+    <string name="home_page_seat_meal_airline_cantnot_select_seat">非中华航空航班未开放选位</string>
+    <string name="home_page_seat_meal_cabin_cannot_selectmeal">舱等不能选餐</string>
+    <string name="home_page_seat_meal_cabin_cannot_selectseat">舱等不能选位</string>
+    <string name="home_page_seat_meal_no_select_meal_time">未达选餐时间</string>
+    <string name="home_page_seat_meal_no_select_seat_time">未达选位时间</string>
+    <string name="home_page_select_meal">请您在 %1$s 前预选餐点。</string>
+    <string name="home_page_timetable">时刻表</string>
+    <string name="home_terminal">航厦</string>
+    <string name="hours">小时</string>
+    <string name="hours_unit">%1$d 小时</string>
+    <string name="id">帐号</string>
+    <string name="identity_card_no">身分证字号:</string>
+    <string name="in_flight">航程中</string>
+    <string name="infants">婴儿</string>
+    <string name="input_apis">输入旅行证件</string>
+    <string name="input_detail_comma">，</string>
+    <string name="input_detail_email_hint">新增电子邮件帐号</string>
+    <string name="input_detail_hello">您好</string>
+    <string name="input_detail_identity_hint">身分证字号 / 护照号码</string>
+    <string name="input_detail_phone_hint">新增行动电话</string>
+    <string name="input_detail_request_user_id">此姓名与生日已与一个以上的会员卡号连结，请提供您的身分证字号/护照号码。</string>
+    <string name="input_detail_send">变更</string>
+    <string name="input_detail_title">个人资讯</string>
+    <string name="input_detail_update_email_msg">"您是否与其他人共享此电子邮件?
+%1$s 此电子邮件已与一个以上的会员卡号连结，请更新您的电子邮件资讯"</string>
+    <string name="input_detail_update_phone_msg">"您是否与其他人共享此行动电话?
+%1$s 此行动电话已与一个以上的会员卡号连结，请更新您的行动电话资讯。"</string>
+    <string name="inquiry_card_number_inquiry_successfully">我们已将华夏会员卡号寄至您的电子邮件帐号</string>
+    <string name="inquiry_card_number_prompt_msg">请填妥下列栏位，完成申请后，我们会立即将华夏会员卡号寄至您的电子邮件帐号</string>
+    <string name="inquiry_card_number_title">卡号查询</string>
+    <string name="inquiry_input_box_account_hint">会员卡号/电子邮件/行动电话(含国码)</string>
+    <string name="inquiry_input_box_date_of_birth_hint">生日</string>
+    <string name="inquiry_input_box_first_name_hint">护照英文名字</string>
+    <string name="inquiry_input_box_last_name_hint">护照英文姓氏</string>
+    <string name="inquiry_input_box_send">送出</string>
+    <string name="inquiry_password_inquiry_successfully">我们已将密码寄至您的电子邮件帐号及行动电话。</string>
+    <string name="inquiry_password_prompt_msg">请填妥下列栏位，完成申请后，我们会立即将密码寄至您的电子邮件帐号。</string>
+    <string name="inquiry_password_title">密码查询</string>
+    <string name="international_call">国际电话</string>
+    <string name="international_call_msg">"提醒您，旅行期间依国家地区拨打电话可能产生漫游费或额外费用
+
+"</string>
+    <string name="is_there_a_green_card">持有绿卡</string>
+    <string name="join_member">加入会员</string>
+    <string name="language_cn">简体中文</string>
+    <string name="language_en">英文</string>
+    <string name="language_ge">Deutsch</string>
+    <string name="language_jp">日本語</string>
+    <string name="language_setting">語言设定(Language Setting)</string>
+    <string name="language_tw">繁體中文</string>
+    <string name="loading">载入中...</string>
+    <string name="login_success">已成功登入!</string>
+    <string name="lounge_area">华航贵宾室 - 商务区</string>
+    <string name="lower_deck">主要</string>
+    <string name="lunch">午餐</string>
+    <string name="mainland_residents_traveling_to_taiwan_pass">大陆居民往来台湾通行证</string>
+    <string name="make_you_login_quickly">一键登入</string>
+    <string name="make_you_login_quickly_notice_msg">选择连结至华夏会员帐号的社群媒体帐号</string>
+    <string name="male">男性</string>
+    <string name="manage_miles">哩程管理</string>
+    <string name="manage_miles_cardnumber">卡号</string>
+    <string name="manage_miles_cardtype">卡别</string>
+    <string name="manage_miles_miles_unit">哩</string>
+    <string name="manage_miles_nominee">受让人</string>
+    <string name="manage_miles_not_find">查无哩程资料</string>
+    <string name="manage_miles_ticket_number">机票号码</string>
+    <string name="managemiles_tab_accumulation">累积记录</string>
+    <string name="managemiles_tab_award_transfer">受让奖项</string>
+    <string name="managemiles_tab_redeem">兑奖纪录</string>
+    <string name="meal">餐点</string>
+    <string name="meal_selection_notice">预选餐点须知</string>
+    <string name="meal_selection_notice_title">豪华商务舱及商务舱旅客</string>
+    <string name="member_card_detail">会员卡资讯</string>
+    <string name="member_card_number">会员卡号</string>
+    <string name="member_card_type">会员卡别</string>
+    <string name="member_detail">个人资讯</string>
+    <string name="member_logifacebook">Facebook</string>
+    <string name="member_login_booking_ref_ticket">订位代号/机票号码</string>
+    <string name="member_login_booking_ref_ticket_hint">订位代号 / 机票号码</string>
+    <string name="member_login_forget">忘记登入资讯?</string>
+    <string name="member_login_google_plus">Google</string>
+    <string name="member_login_input_box_account_hint">会员卡号/电子邮件/行动电话(含国码)</string>
+    <string name="member_login_input_box_password_hint">密码</string>
+    <string name="member_login_input_correvt_format_msg">格式无效</string>
+    <string name="member_login_keep_logged_in">保持登入状态</string>
+    <string name="member_login_log_in">登入</string>
+    <string name="member_login_member">会员</string>
+    <string name="member_login_new_to_here">还不是华夏会员?</string>
+    <string name="member_login_or">或</string>
+    <string name="member_login_please_enter">请输入有效的会员卡号码/email/手机号码 (国码+号码)</string>
+    <string name="member_login_sign_up">加入会员</string>
+    <string name="member_login_title">会员登入</string>
+    <string name="member_no">会员卡号</string>
+    <string name="menu_become_a_dynasty_flyer">加入「华夏哩程酬宾计划」</string>
+    <string name="menu_log_in">登入</string>
+    <string name="menu_log_out">登出</string>
+    <string name="menu_miles">%s 哩</string>
+    <string name="menu_sign_up">加入会员</string>
+    <string name="menu_title_about">联系我们</string>
+    <string name="menu_title_ai_service">智能客服</string>
+    <string name="menu_title_baggage_tracking">行李追踪</string>
+    <string name="menu_title_boarding_pass_ewallet">登机证/票券夹</string>
+    <string name="menu_title_book_ticket">订位购票</string>
+    <string name="menu_title_check_in">预办登机</string>
+    <string name="menu_title_e_shopping">华航 Sky Boutique</string>
+    <string name="menu_title_extra_services">加购服务</string>
+    <string name="menu_title_flight_status">航班动态</string>
+    <string name="menu_title_homepage">首页</string>
+    <string name="menu_title_manage_miles">哩程管理</string>
+    <string name="menu_title_my_trips">行程管理</string>
+    <string name="menu_title_personal_detail">个人资讯</string>
+    <string name="menu_title_promotions">个人化推荐</string>
+    <string name="menu_title_setting">设定(Settings)</string>
+    <string name="menu_title_timetable">时刻表</string>
+    <string name="menu_welcome_tag">欢迎搭乘中华航空</string>
+    <string name="messenger_send_button_text">发送</string>
+    <string name="miles">哩</string>
+    <string name="miles_activity">哩程明细</string>
+    <string name="miles_completed">累积哩程</string>
+    <string name="miles_have_been_imported_to_your_account">%1$s (%2$s-%3$s) 航班共计 %4$s 哩已累积至您的帐号。</string>
+    <string name="miles_overdue_in_6_months">6个月内即将到期哩程余额</string>
+    <string name="miles_percent">%1$s / %2$s 哩</string>
+    <string name="miles_progress">哩程概况</string>
+    <string name="miles_progress_notice_msg">会籍晋升与续卡时，除『累积哩程』、『商务旅次』、『加权旅次』任一项目需符合条件外，亦须累积『华航/ 华信自营航班加权旅次』达6 次；达成前述条件后，会籍晋升将于次月1 日生效，会籍续卡将于会籍届期时之次月1 日生效。</string>
+    <string name="minute">分钟</string>
+    <string name="minute_unit">%1$d 分</string>
+    <string name="mobile_phone">行动电话号码:</string>
+    <string name="month">个月</string>
+    <string name="more">更多</string>
+    <string name="my_apis">旅行证件</string>
+    <string name="my_miles">哩程管理</string>
+    <string name="my_others_trips">其他行程</string>
+    <string name="my_trip_ae">华信航空公司</string>
+    <string name="my_trip_ci">中华航空公司</string>
+    <string name="my_trips_add_flight">查询行程</string>
+    <string name="my_trips_can_not_find_the_trip">找不到您的行程?</string>
+    <string name="my_trips_can_not_find_your_reservayion_number">找不到您的订位代​​号?</string>
+    <string name="my_trips_detail_add_passenger">新增同行旅客</string>
+    <string name="my_trips_layover">%1$d 转机点 (%2$s):</string>
+    <string name="my_trips_linked_successfully">已成功连结航班资讯!</string>
+    <string name="my_trips_not_find">查无行程</string>
+    <string name="my_trips_past_trips">历史纪录</string>
+    <string name="my_trips_title">行程管理</string>
+    <string name="my_trips_upcoming_trips">近期行程</string>
+    <string name="name">会员姓名</string>
+    <string name="nearest_office">最近的办事处</string>
+    <string name="need_to_book_hsr_ticket">需要预订高铁车票吗?</string>
+    <string name="need_xxx_miles">尚需 %1$d 哩</string>
+    <string name="new_password">*新密码</string>
+    <string name="next">下一步</string>
+    <string name="next_flight">下一段航班</string>
+    <string name="no">否</string>
+    <string name="no_apis">无旅行证件</string>
+    <string name="no_checkin_flight_available">无可预办登机航班</string>
+    <string name="no_companions_apis">無同行旅客的旅行證件</string>
+    <string name="no_match_data">查无资料</string>
+    <string name="no_matching_result_found">依据查询条件调整查询日期如下</string>
+    <string name="no_matching_result_found_title">对不起，未能找到合适资料。</string>
+    <string name="nominator">转让人</string>
+    <string name="non_ci_and_ae_alert_dialog">仅提供华航自营班机之动态</string>
+    <string name="normal_meal">一般餐</string>
+    <string name="not_check_agree">请勾选已清楚阅读并同意遵守相关规定</string>
+    <string name="not_connect">无连线</string>
+    <string name="not_depart_yet">尚未抵达</string>
+    <string name="not_in_use">未使用奖项</string>
+    <string name="notice">注</string>
+    <string name="notice_message_content_1">1. 若您在6 个月内搭乘华航/华信自营航班(机票号码开头297/803) 但未累积哩程，请输入相关资料即可办理哩程补登</string>
+    <string name="notice_message_content_2">2. 使用订位舱等G/X/O/A/S/L 的机票不予累积哩程</string>
+    <string name="now_no_have_bag">無託運行李</string>
+    <string name="occupied">没有提供</string>
+    <string name="off">Off</string>
+    <string name="old_password">*旧密码</string>
+    <string name="on">On</string>
+    <string name="one_way">单程</string>
+    <string name="online_check_in_is_not_available">此航班未开放预办登机</string>
+    <string name="online_check_in_is_now_open">已开放预办登机!</string>
+    <string name="open_id_membership">•华夏会员</string>
+    <string name="open_id_membership_note1">1. 凡年满二岁，且未曾申请过华夏会员者，均可申请加入华夏卡会员。</string>
+    <string name="open_id_membership_note2">2. 12岁以下之华夏会员，需提出监护人，监护人也必须是本公司会员。</string>
+    <string name="open_id_qualifications">申请资格</string>
+    <string name="out_of_memory_error">对不起，记忆体不足， n即将退出程式，是否重新启动？</string>
+    <string name="overbooking_fly_earlier_msg_title">您是否愿意变更至较早出发的航班?</string>
+    <string name="overbooking_fly_earlier_subtitle">您及同行旅客姓名可搭乘较早出发的航班，并可享有以下优待:</string>
+    <string name="partner_seat">同行旅客座位</string>
+    <string name="partner_skyteam">天合联盟合作伙伴</string>
+    <string name="passengers">旅客人数</string>
+    <string name="passengers_and_booking_rules"><u>行程资讯</u></string>
+    <string name="passport">护照</string>
+    <string name="passport_chinese_name">护照中文姓名:</string>
+    <string name="passport_no">护照号码:</string>
+    <string name="password">密码</string>
+    <string name="passwords_are_different">密码与确认密码不同</string>
+    <string name="permissions_error">无开启权限，无法使用此功能</string>
+    <string name="personal_detail">个人资讯</string>
+    <string name="personal_detail_due">有效期限:</string>
+    <string name="personal_email">电子邮件:</string>
+    <string name="personal_valid_date">卡别效期:</string>
+    <string name="please_arrive_at_the_airport_before">请于 %1$s 前抵达机场</string>
+    <string name="please_confirm_your_new_flight">请确认您的最新航班</string>
+    <string name="please_fill_all_text_field_that_must_to_fill">请填写所有必填栏位</string>
+    <string name="please_input_field">请输入 %1$s 栏位</string>
+    <string name="please_input_pnr">请输入订位代号/机票号码</string>
+    <string name="please_login">请登入!</string>
+    <string name="please_select_flight">请选择航班</string>
+    <string name="please_select_passenger">请选择旅客</string>
+    <string name="pnr_not_found">查无相关资料</string>
+    <string name="point_balance">哩程余额</string>
+    <string name="preference">喜好选择</string>
+    <string name="previous">上一步</string>
+    <string name="profile">个人资讯</string>
+    <string name="prohibit_product_claim_notice">我已清楚阅读上述旅客行李须知，并同意遵守相关规定。</string>
+    <string name="prohibit_product_claim_notice_underline">同意禁止产品索赔</string>
+    <string name="purchase_date">加购日期</string>
+    <string name="qrcode">二维条码</string>
+    <string name="rate_this_trip">問卷</string>
+    <string name="rate_this_trip_info_url">https://mobile30.china-airlines.com/mobile30/redirurl/quesrule.aspx?lang=SI</string>
+    <string name="re_enter_new_password">*重新输入新密码</string>
+    <string name="recent">近期查询</string>
+    <string name="reclaim_completed_message">哩程补登将于4 周内完成核对并予以更正。</string>
+    <string name="reclaim_miles">哩程补登</string>
+    <string name="recover_account_apply_password">申请密码</string>
+    <string name="recover_account_forget_card_number">忘记会员卡号</string>
+    <string name="recover_account_forget_password">忘记密码</string>
+    <string name="recover_account_prompt_msg">忘记您的会员卡号? 请选择以下项目查询。</string>
+    <string name="recover_account_prompt_title">选择您所需查询的登入资讯。</string>
+    <string name="recover_account_title">登入查询</string>
+    <string name="redeem_miles">酬宾奖项兑换</string>
+    <string name="redeem_now">立即兑换</string>
+    <string name="remind">提醒讯息</string>
+    <string name="renewal">续卡</string>
+    <string name="resident_country">居住国家/地区</string>
+    <string name="return_date">回程日</string>
+    <string name="roaming_additional_fees_warning">提醒您，旅行期间依国家地区拨打电话可能产生漫游费或额外费用</string>
+    <string name="round_trip">来回</string>
+    <string name="route_map_3d">天合联盟航网地图</string>
+    <string name="save">储存</string>
+    <string name="scan_the_qrcode_boarding_pass">已完成报到，点击首页QR Code开启登机证。</string>
+    <string name="scheduled">表定</string>
+    <string name="scheme_auth_eshopping_button_agree">同意</string>
+    <string name="scheme_auth_eshopping_name">Sky Boutique</string>
+    <string name="scheme_auth_eshopping_note" />
+    <string name="scheme_auth_eshopping_note_text">中华航空App 将与 华航 Sky Boutique(预订) 共享您的个人资</string>
+    <string name="scheme_auth_eshopping_title">使用 中华航空App 登录</string>
+    <string name="search">查询</string>
+    <string name="search_menu_title">搜索</string>
+    <string name="seat">座位</string>
+    <string name="seat_selection_result">预选座位</string>
+    <string name="select">选择</string>
+    <string name="select_airport_search">机场名称/代码</string>
+    <string name="select_airport_section_airports_nearby">邻近机场</string>
+    <string name="select_airport_section_all_airports">所有机场</string>
+    <string name="select_airport_section_recent">近期查询</string>
+    <string name="select_arrival_airport_title">选择抵达机场</string>
+    <string name="select_arrival_date_title">选择回程日期</string>
+    <string name="select_departure_airport_title">选择出发机场</string>
+    <string name="select_departure_date_title">选择出发日期</string>
+    <string name="select_error_msg">请选择</string>
+    <string name="select_flight">选择航班</string>
+    <string name="select_meal_flight">预选餐点 (%1$s ➞ %2$s)</string>
+    <string name="select_passenager">选择旅客</string>
+    <string name="select_seat">座位选择</string>
+    <string name="select_seat_flight">座位选择 (%1$s ➞ %2$s)</string>
+    <string name="selected_date_is_incorrect">选择日期无效</string>
+    <string name="seq">序号:</string>
+    <string name="share">分享</string>
+    <string name="sidemenu_promotions_link">https://www.china-airlines.com/cn/zh/discover/promotion</string>
+    <string name="sign_up_account_information">会员密码</string>
+    <string name="sign_up_address_info">额外地址资讯</string>
+    <string name="sign_up_address_type">住家/公司地址</string>
+    <string name="sign_up_city">所居住之县市</string>
+    <string name="sign_up_city_state">City/State</string>
+    <string name="sign_up_confirm_button">加入会员</string>
+    <string name="sign_up_confirm_password">确认密码</string>
+    <string name="sign_up_contact_information">联络资讯</string>
+    <string name="sign_up_country">居住国家/地区</string>
+    <string name="sign_up_county">乡镇市区</string>
+    <string name="sign_up_date_of_birth_hint">生日</string>
+    <string name="sign_up_email_address">电子邮件</string>
+    <string name="sign_up_first_name">护照英文名字</string>
+    <string name="sign_up_home_nearest_area">Please Select the Nearest Area to Your Mailing Address</string>
+    <string name="sign_up_identity_card_no">身分证字号</string>
+    <string name="sign_up_last_name">护照英文姓氏</string>
+    <string name="sign_up_mailing_address">邮寄地址</string>
+    <string name="sign_up_mobile_num_country_code">行动电话国码</string>
+    <string name="sign_up_mobile_number">行动电话号码</string>
+    <string name="sign_up_monthly_mileage_summary_will_be_sent">本公司将以电子邮件寄送每月「哩程记录表」，请确实填写电子邮件帐号</string>
+    <string name="sign_up_nationality">国家/地区</string>
+    <string name="sign_up_nearest_area">请选择您最临近的城市</string>
+    <string name="sign_up_nearest_area_en">the Nearest Area</string>
+    <string name="sign_up_only_chinese">护照中文姓名只能输入中文</string>
+    <string name="sign_up_passport_NO">*护照号码</string>
+    <string name="sign_up_passport_chinese_name">护照中文姓名</string>
+    <string name="sign_up_passport_name">护照英文姓名</string>
+    <string name="sign_up_password">密码</string>
+    <string name="sign_up_password_prompt_case">密码长度最少为6~10 码，需包含英文及数字，英文大小写视为不同字，并请勿使用特殊字元。</string>
+    <string name="sign_up_personal_detail">个人资讯</string>
+    <string name="sign_up_preferences">喜好选择</string>
+    <string name="sign_up_receive_promotion_email">我愿意收到华航寄送的各项电子邮件讯息及优惠活动通知</string>
+    <string name="sign_up_receive_sms">我愿意收到华航寄送的手机简讯通知</string>
+    <string name="sign_up_salutation">称谓</string>
+    <string name="sign_up_street">路名</string>
+    <string name="sign_up_street1">Street</string>
+    <string name="sign_up_street1_note">邮寄地址请以英文字体输入。ex. 131, Section 3, Nanking East Road</string>
+    <string name="sign_up_street2">Street 2</string>
+    <string name="sign_up_street3">Street 3</string>
+    <string name="sign_up_street_number">门牌号码</string>
+    <string name="sign_up_terms_and_conditions_title">注意事项及相关权益与义务</string>
+    <string name="sign_up_title">加入会员</string>
+    <string name="sign_up_trem_and_conditions">我已清楚阅读/注意事项及会员相关权益与义务和中华航空保护隐私及资料保安政策/，并同意遵守相关规定。</string>
+    <string name="sign_up_zip_code">邮递区号</string>
+    <string name="sign_up_zip_code_en">Zip Code</string>
+    <string name="sign_uregistration_finished_dynasty_flyer_num">谢谢您!您的华夏会员卡号为</string>
+    <string name="sign_uregistration_finished_enjoy_our_service">中华航空祝您旅途愉快!</string>
+    <string name="social_network">社群媒体</string>
+    <string name="social_network_facebook">Facebook:</string>
+    <string name="social_network_google_plus">Google:</string>
+    <string name="special_meal_preference">特别餐点需求</string>
+    <string name="special_seat_preference">座位喜好</string>
+    <string name="start_page_cancel">取消</string>
+    <string name="start_page_more">更多</string>
+    <string name="start_page_update">更新</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="street">门牌号码及街(路)名</string>
+    <string name="suggested_to_change_your_membership_mail">您的會員電子郵件是 %1$s。 建議依你的會員資料更改為%2$s。</string>
+    <string name="system_dismiss">略过</string>
+    <string name="system_no_network_connection">无网路连线</string>
+    <string name="system_no_network_connection_message">请连线到无线网路或行动资料网路以更新您的资讯</string>
+    <string name="system_settings">设定</string>
+    <string name="system_time_out">连线逾时</string>
+    <string name="tai_bao_cheng">台胞证</string>
+    <string name="terminal">航厦 %1$s</string>
+    <string name="textfield_placeholder_invalidformatmesseage">%1$s栏位: 格式无效</string>
+    <string name="this_qrcode_contains_your_personal_infor">此二维条码含有会员卡资讯</string>
+    <string name="ticket_awards">酬宾机票</string>
+    <string name="ticket_issued">已使用奖项</string>
+    <string name="ticket_modifly">更改行程</string>
+    <string name="ticket_number">机票号码:</string>
+    <string name="ticketing_fax">票务传真:</string>
+    <string name="time_in_flight">飞行时间:</string>
+    <string name="time_remaining">抵达剩余飞行时间:</string>
+    <string name="time_to_destination_at_xx">抵达剩余飞行时间: %1$s</string>
+    <string name="timetable_detail_operated_by">承运:</string>
+    <string name="timetable_operated_by">承运 %s</string>
+    <string name="timetable_title">时刻表</string>
+    <string name="to">抵达机场</string>
+    <string name="track">追踪</string>
+    <string name="tracked">追踪中</string>
+    <string name="tracked_flight_status">航班追踪</string>
+    <string name="transfer">转让</string>
+    <string name="transition_infomation">"转机航班: 请于 %1$s 前往
+第 %2$s 航厦 %3$s 登机门"</string>
+    <string name="travel_alert">旅游讯息</string>
+    <string name="travel_alert_count">您有 %1$s 则旅游讯息</string>
+    <string name="trip_detail_can_not_cancel_check_in">无法取消预办登机</string>
+    <string name="trip_detail_can_not_check_in">无法预办登机</string>
+    <string name="trip_detail_home_page_trip_finish">该航段已过期无法钉选于主页</string>
+    <string name="trip_detail_home_page_trip_track">钉选</string>
+    <string name="trip_detail_home_page_trip_tracked">已钉选</string>
+    <string name="trip_detail_passenger_add_bag_btn">乐GO</string>
+    <string name="trip_detail_passenger_add_excess_bag_btn">加购</string>
+    <string name="trip_detail_passenger_add_excess_bag_title">预购超额行李</string>
+    <string name="trip_detail_passenger_bag_confirm_pay">确认付款</string>
+    <string name="trip_detail_passenger_bag_credit_card">信用卡</string>
+    <string name="trip_detail_passenger_bag_credit_card_data">信用卡资料</string>
+    <string name="trip_detail_passenger_bag_eb_total">总加购金额</string>
+    <string name="trip_detail_passenger_bag_ewallet">票券</string>
+    <string name="trip_detail_passenger_bag_fail_title">加购失败</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_bag">加购数量:</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_notes">注意事项</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_notes_content">"1. 您持有的有效机票需为华航(297)/华信(803)开立之机票（婴儿票不适用），且限搭乘中华航空(CI)、华信航空(AE)自营班号或两航(CI&amp;AE)共用班号之营运航班，不包括您旅途航程中其他之航空公司航班。若您的行程中分持两本票者将不提供此项服务。
+
+ 2. 预购额外托运行李必须于航班起飞前24小时于本公司官网完成加购手续，若于24小时内，则需依照一般超重（件）行李价格于机场支付费用。
+
+ 3. 超额托运行李额度限本人使用，不可转让或分享他人使用。购买额度一经使用后，若有剩余额度恕不办理退费或挪作其他航程使用。
+
+ 4. 预购超额行李额度以「单一航段」为购买基础，且每位旅客各航段限购买一次，请特别留意您所购买的使用航段。
+
+ 5. 购买超额托运行李上限额度：计重制地区以5公斤为级距，每人最多可加购上限为50公斤；计件制地区每人最多可加购2件，加购之每件行李重量仍以实际搭乘之舱等限制为规范。单件托运行李不得超过32公斤，否则需要分装行李。
+
+ 6. 特殊行李（超长/宽、单件超重、高尔夫球具、宠物及客舱占位行李）均不适用预购额外托运行李额度，请依照本公司特殊行李托运规定办理。
+
+ 7. 请注意若旅客行程为香港-雅加达，或由以下机场出发/抵达者暂不提供网路预购行李：
+
+●大陆地区：大连、福州、海口、合肥、南昌、梅县、宁波、三亚、威海、温州、无锡、徐州、盐城、扬州
+
+●东南亚地区：帛琉。
+
+ 8. 若您的机票行程涵盖美加航点且多点停留者，不提供预购超额行李服务。
+
+ 9. 「乐GO」（无托运行李）票种不适用本预购优惠方案，若需加购行李请依原票种规定办理加购作业。
+
+ 10. 若需更改使用航班（注）则必须于原订航班起飞前且于上班时间内联系华航客服中心，或于分公司城区柜台完成更改作业。
+ （注）：更改使用航班限相同起讫航点，或机票可允许互搭之以下航线：
+
+●台湾-广州/深圳可搭乘台湾-香港
+
+●桃园-浦东可互搭松山-虹桥
+
+●桃园-成田可互搭松山-羽田
+
+●桃园-仁川可互搭松山-金浦
+
+ 11. 旅客持有之机票一经使用，则已购买之超额行李将不可办理退费。若机票尚未使用，且欲办理超额行李退费者，请自购买日起2年内至华航分公司城区柜台办理退费，退费时将以购买金额之30%作为手续费。
+
+ 12. 预购额外托运行李服务适用本航其他所有运输条款。
+
+ 13. 中华航空保留随时解释、修改、或取消以上条款的权利。"</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_price">加购金额:</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_production_content_url">https://www.china-airlines.com/cn/zh/fly/prepare-for-the-fly/baggage/excess-baggage</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_production_readme">商品介紹</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_readme">预购超额托运行李说明</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules">退款规则</string>
+    <string name="trip_detail_passenger_bag_pay_add_excess_returned_purchase_rules_content">"1. 如欲申请使用支付宝帐户付款的机票退票，请与您大陆地区出发站的华航或华信办事处联系。 
+
+ 2. 限持华航(297) / 华信(803)机票所加购之超额行李。
+
+ 3. 超额行李退费申请开放自购买日期起2年内未使用，逾期将恕不受理申请退费。
+
+ 4. 超额行李费用无法于购买当日申请退费，敬请于购买日次一天申请。
+
+ 5. 所有网上退费款项，将退还至原付款人之信用卡卡号或交易帐户。
+
+ 6. 使用信用卡付款并办理退费者，我们将在九天之内向金融处理机构提出申请，惟实际退费日期仍须依发卡银行之规定与合约内容而定。
+
+ 7. 购买出发往返美国之超额行李于48小时以内申请退费，将可获得全额退费。
+
+ 8. 购买韩国出发的超额行李，若于购票后7天内办理退费，将可获得全额退费。"</string>
+    <string name="trip_detail_passenger_bag_pay_final_page">付款结果</string>
+    <string name="trip_detail_passenger_bag_pay_title">付款資料</string>
+    <string name="trip_detail_passenger_bag_pay_total">总加购金额:</string>
+    <string name="trip_detail_passenger_bag_select_pay_mode">请选取付款方式</string>
+    <string name="trip_detail_passenger_bag_success_msg">您的票券已收纳于票券夹中</string>
+    <string name="trip_detail_passenger_bag_success_title">加购成功</string>
+    <string name="trip_detail_passenger_bag_term_and_conditions">我已清楚阅读/购买须知/，并同意遵守相关规定。</string>
+    <string name="trip_detail_passenger_bag_url">https://www.china-airlines.com/jp/jp/booking/manage-booking/reservation-booking-inquiry</string>
+    <string name="trip_detail_passenger_free_bag_title">托运行李</string>
+    <string name="trip_detail_passenger_not_find">查无旅客</string>
+    <string name="trip_detail_passenger_tracking_title">行李追踪</string>
+    <string name="trips_detail_airlines">航空公司:</string>
+    <string name="trips_detail_anwser_title">Your rate finished</string>
+    <string name="trips_detail_business">商务舱</string>
+    <string name="trips_detail_edit">编辑</string>
+    <string name="trips_detail_extra_services">旅客服务</string>
+    <string name="trips_detail_flight_number">航班编号:</string>
+    <string name="trips_detail_hsr">高铁车票</string>
+    <string name="trips_detail_info_add_new_item">新增项目</string>
+    <string name="trips_detail_info_airport_floor_map">机场楼层平面图</string>
+    <string name="trips_detail_info_airport_information">机场资讯</string>
+    <string name="trips_detail_info_airport_office_website">机场官方网站</string>
+    <string name="trips_detail_info_amenities">设施与服务</string>
+    <string name="trips_detail_info_currency">外币汇率</string>
+    <string name="trips_detail_info_delete">删除</string>
+    <string name="trips_detail_info_location_map">机场位置地图</string>
+    <string name="trips_detail_info_luggage_infor">行李资讯</string>
+    <string name="trips_detail_info_travel_checklist">旅游清单</string>
+    <string name="trips_detail_info_travel_hint">旅游提醒</string>
+    <string name="trips_detail_info_update_date">更新日期</string>
+    <string name="trips_detail_info_vip_lounge_infor">华航贵宾室资讯</string>
+    <string name="trips_detail_invalid">未开放</string>
+    <string name="trips_detail_luggage_PC">件</string>
+    <string name="trips_detail_luggage_kg">公斤</string>
+    <string name="trips_detail_premium_economy">豪华经济舱</string>
+    <string name="trips_detail_reference_no">订位代号:</string>
+    <string name="trips_detail_seat_a">走道</string>
+    <string name="trips_detail_seat_w">靠窗</string>
+    <string name="trips_detail_select">请选择</string>
+    <string name="trips_detail_share_info_description">点选连结查询最新航班动态。</string>
+    <string name="trips_detail_tab_flight">航班</string>
+    <string name="trips_detail_tab_information">资讯</string>
+    <string name="trips_detail_tab_passenger">旅客(%1$d)</string>
+    <string name="trips_detail_taipei_support_number">未定義</string>
+    <string name="trips_detail_title">%1$s ➞ %2$s</string>
+    <string name="trips_detail_travel_time">飞行时间:</string>
+    <string name="trips_detail_view">检视</string>
+    <string name="unselected">未选择</string>
+    <string name="update_email_to_my_personal">更新电子邮件至我的个人资讯</string>
+    <string name="update_xxx_ago">更新时间 %1$s日以前</string>
+    <string name="upgrade">晋升</string>
+    <string name="upgrade_awards">座舱升等</string>
+    <string name="upgrade_tag">注：商务旅次计算仅限搭乘华航或华信航空国际线自营班机适用。</string>
+    <string name="upper_deck">上层</string>
+    <string name="usa_permanent_resident_card">美国永久居留证</string>
+    <string name="use_saved_apis">使用已存旅行证件</string>
+    <string name="valid_date">效期:</string>
+    <string name="vegetarian_exclusive">网路独享餐</string>
+    <string name="vegetarian_exclusive_summary">从台北桃园出发的班机，我们严选在地食材，为您精心设计五款『健康蔬食』网路独享菜单。</string>
+    <string name="view">检视</string>
+    <string name="vip_lounge">华航贵宾室</string>
+    <string name="vip_lounge_content">貴賓休息室为您提供一个轻松的氛围與點餐服务。</string>
+    <string name="vip_lounge_use">贵宾室使用</string>
+    <string name="warning">警示</string>
+    <string name="weather">气象资讯</string>
+    <string name="weather_code_0">龙卷风</string>
+    <string name="weather_code_1">热带风暴</string>
+    <string name="weather_code_10">冻雨</string>
+    <string name="weather_code_11">阵雨</string>
+    <string name="weather_code_12">阵雨</string>
+    <string name="weather_code_13">阵雪</string>
+    <string name="weather_code_14">轻阵雪</string>
+    <string name="weather_code_15">高吹雪</string>
+    <string name="weather_code_16">雪</string>
+    <string name="weather_code_17">冰雹</string>
+    <string name="weather_code_18">霰</string>
+    <string name="weather_code_19">尘</string>
+    <string name="weather_code_2">飓风</string>
+    <string name="weather_code_20">有雾</string>
+    <string name="weather_code_21">霾</string>
+    <string name="weather_code_22">雾</string>
+    <string name="weather_code_23">大风</string>
+    <string name="weather_code_24">有风</string>
+    <string name="weather_code_25">冷</string>
+    <string name="weather_code_26">多云</string>
+    <string name="weather_code_27">多云时阴(夜间)</string>
+    <string name="weather_code_28">多云时阴(日间)</string>
+    <string name="weather_code_29">多云(夜间)</string>
+    <string name="weather_code_3">剧烈雷雨</string>
+    <string name="weather_code_30">多云(日间)</string>
+    <string name="weather_code_31">晴(夜间)</string>
+    <string name="weather_code_32">晴朗</string>
+    <string name="weather_code_3200">查无资料</string>
+    <string name="weather_code_33">晴(夜间)</string>
+    <string name="weather_code_34">晴(日间)</string>
+    <string name="weather_code_35">雨夹雹</string>
+    <string name="weather_code_36">热</string>
+    <string name="weather_code_37">偶雷雨</string>
+    <string name="weather_code_38">局部雷雨</string>
+    <string name="weather_code_39">局部雷雨</string>
+    <string name="weather_code_4">雷雨</string>
+    <string name="weather_code_40">局部阵雨</string>
+    <string name="weather_code_41">大雪</string>
+    <string name="weather_code_42">局部阵雪</string>
+    <string name="weather_code_43">大雪</string>
+    <string name="weather_code_44">多云</string>
+    <string name="weather_code_45">雷阵雨</string>
+    <string name="weather_code_46">阵雪</string>
+    <string name="weather_code_47">偶雷阵雨</string>
+    <string name="weather_code_5">雨夹雪</string>
+    <string name="weather_code_6">雨夹霙</string>
+    <string name="weather_code_7">雪夹霙</string>
+    <string name="weather_code_8">冻毛雨</string>
+    <string name="weather_code_9">毛雨</string>
+    <string name="weather_currently">气象:</string>
+    <string name="weather_day_Fri">五</string>
+    <string name="weather_day_Mon">一</string>
+    <string name="weather_day_Sat">六</string>
+    <string name="weather_day_Sun">日</string>
+    <string name="weather_day_Thu">四</string>
+    <string name="weather_day_Tue">二</string>
+    <string name="weather_day_Wed">三</string>
+    <string name="weather_humidity">湿度:</string>
+    <string name="weather_now">現在</string>
+    <string name="weather_url">https://weather.com/zh-CN/weather/5day/l/</string>
+    <string name="weather_visibility">能见度:</string>
+    <string name="weather_visibility_unit">公里</string>
+    <string name="web_only">仅限网路使用</string>
+    <string name="welcome_message_notice">我们很荣幸能向您介绍中华航空，请前往中华航空YouTube频道了解更多。</string>
+    <string name="welcome_to_china_airlines">欢迎搭乘中华航空</string>
+    <string name="welcome_xxx_baggage_at_xxx">"欢迎来到%1$s!
+请前往 %2$s 号转盘提领您的行李"</string>
+    <string name="wifi">機内Wi-Fi</string>
+    <string name="yes">是</string>
+    <string name="you_are_eligible_miles">您已符合酬宾奖项兑换资格</string>
+    <string name="youngadults">青少年</string>
+    <string name="your_meal_selection_is_completed">已完成您的预选餐点</string>
+    <string name="your_miles_has_been_update">更新哩程</string>
+    <string name="your_new_flight">您的最新航班</string>
+    <string name="your_seat">您的座位</string>
+    <string name="your_seat_selection_is_completed">已完成您的预选座位</string>
+    <string name="zip_code">邮递区号</string>
+    <string name="zone">Zone</string>
+    <string name="zxing_app_name">条码扫描器</string>
+    <string name="zxing_button_ok">确定</string>
+    <string name="zxing_msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="zxing_msg_default_status">请将条码置于取景框内扫描。</string>
+</resources>

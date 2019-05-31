@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_login" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="30.0px" android:paddingRight="30.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0px" android:layout_below="@id/toolbar" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_icon" android:layout_width="90.0px" android:layout_height="90.0px" android:src="@drawable/ic_eshopping_app_icon" android:scaleType="fitXY" />
+        <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0px" android:text="@string/scheme_auth_eshopping_name" style="@style/light" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/scheme_auth_eshopping_note" style="@style/light" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/scheme_auth_eshopping_note_text" style="@style/medium" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_ask_change_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0px" android:layout_alignParentBottom="true" android:layout_centerInParent="true">
+        <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_cancel" android:background="@drawable/bg_btn_blue_selector" android:layout_width="150.0px" android:layout_height="40.0px" android:minWidth="0.0px" android:minHeight="0.0px" android:text="@string/cancel" android:layout_marginEnd="10.0px" style="@style/regular" />
+        <Button android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/btn_confirm" android:background="@drawable/bg_btn_pink_agree_selector" android:layout_width="150.0px" android:layout_height="40.0px" android:minWidth="0.0px" android:minHeight="0.0px" android:text="@string/scheme_auth_eshopping_button_agree" android:layout_marginStart="10.0px" style="@style/regular" />
+    </LinearLayout>
+</RelativeLayout>

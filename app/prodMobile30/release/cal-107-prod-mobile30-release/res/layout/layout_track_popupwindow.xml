@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_black" android:background="@color/black_60" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlayout_card" android:background="@drawable/bg_boarding_with_qrcode" android:paddingLeft="20.0px" android:paddingTop="18.0px" android:paddingRight="20.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0px" android:layout_marginTop="40.0px" android:layout_marginRight="10.0px" android:layout_marginBottom="72.0px" android:layout_centerHorizontal="true">
+        <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:gravity="center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/check_the_tracking" android:singleLine="true" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="left" android:id="@id/tv_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:text="@string/check_the_tracking_notice" android:singleLine="false" android:layout_below="@id/tv_title" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/iv_Image" android:background="@color/transparent" android:layout_width="200.0px" android:layout_height="344.0px" android:src="@drawable/img_sample_tracking" android:scaleType="fitXY" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />/></RelativeLayout>
+    <ImageButton android:id="@id/ivbtn_close" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0px" android:src="@drawable/bg_btn_about_delete_onclick" android:scaleType="fitXY" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

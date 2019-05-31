@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_root" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@color/black_30" android:layout_width="fill_parent" android:layout_height="32.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_vertical" android:id="@id/tv_item" android:layout_width="fill_parent" android:layout_height="22.699982px" android:layout_marginLeft="30.0px" android:layout_marginRight="30.0px" android:singleLine="true" android:layout_centerVertical="true" style="@style/regular" />
+            <ImageView android:id="@id/iv_garbage" android:background="@drawable/bg_transparent_press_black20" android:visibility="gone" android:layout_width="24.0px" android:layout_height="24.0px" android:layout_marginRight="19.0px" android:src="@drawable/ic_garbage_w" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/fragment1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="20.0px" android:layout_marginRight="20.0px" />
+        <FrameLayout android:id="@id/fragment2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="6.0px" android:layout_marginRight="20.0px" />
+        <FrameLayout android:id="@id/fragment3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="6.0px" android:layout_marginRight="20.0px" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginRight="20.0px">
+            <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_flight_nubmer_ci" android:layout_width="40.0px" android:layout_height="40.0px" android:src="@drawable/btn_flight_number_enable" android:scaleType="fitXY" />
+                <TextView android:textSize="18.0px" android:textColor="@color/french_blue" android:id="@id/tv_ci" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CI" android:layout_centerInParent="true" style="@style/regular" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_flight_nubmer_ae" android:layout_width="40.0px" android:layout_height="40.0px" android:src="@drawable/btn_flight_number_n" android:scaleType="fitXY" />
+                <TextView android:textSize="18.0px" android:textColor="@color/white_four" android:id="@id/tv_ae" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AE" android:layout_centerInParent="true" style="@style/regular" />
+            </RelativeLayout>
+            <FrameLayout android:layout_gravity="center_vertical" android:id="@id/fragment4" android:layout_width="200.0px" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="5.0px" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/fragment5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:layout_marginTop="6.299988px" android:layout_marginRight="20.0px" />
+    </LinearLayout>
+</RelativeLayout>

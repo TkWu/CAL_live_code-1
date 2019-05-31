@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/coupon_card_root" android:paddingLeft="10.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="485.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.ShadowBar.ShadowBarScrollview android:id="@id/shadowlayout" android:layout_width="fill_parent" android:layout_height="485.0px" android:layout_centerVertical="true" />
+</RelativeLayout>

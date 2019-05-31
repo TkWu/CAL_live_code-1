@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rlayout_head" android:background="@color/transparent" android:layout_width="340.0px" android:layout_height="9.5px" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_Date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Oct 12, 2015" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/regular" />
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:id="@id/tv_goto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0px" android:text="@string/trips_detail_title" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/light" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/llayout_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rlayout_head" android:layout_centerHorizontal="true" android:splitMotionEvents="false" />
+    <View android:id="@id/v_line" android:layout_width="fill_parent" android:layout_height="30.0px" android:layout_below="@id/llayout_body" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/llayout_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlayout_bg" android:layout_width="fill_parent" android:layout_height="17.399994dip">
+        <View android:id="@id/vline" android:background="@drawable/bg_sidemenu_group_line" android:layout_width="fill_parent" android:layout_height="1.3999939dip" android:layout_centerVertical="true" android:alpha="0.6" />
+    </RelativeLayout>
+</LinearLayout>

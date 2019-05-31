@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rlayout_seat_item" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/white_four" android:gravity="center" android:id="@id/tv_seat" android:layout_width="30.0px" android:layout_height="30.0px" android:layout_centerInParent="true" style="@style/light" />
+    <FrameLayout android:id="@id/seat_image" android:layout_width="30.0px" android:layout_height="30.0px" />
+</RelativeLayout>

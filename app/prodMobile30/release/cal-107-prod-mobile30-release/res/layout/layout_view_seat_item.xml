@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_seat_item" android:padding="3.0px" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_num" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="0" style="@style/regular" />
+    </FrameLayout>
+</LinearLayout>

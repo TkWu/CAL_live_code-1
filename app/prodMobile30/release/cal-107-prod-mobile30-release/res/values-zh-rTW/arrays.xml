@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apis_document_list">
+        <item>護照</item>
+        <item>美國永久居留證</item>
+        <item>台胞證</item>
+        <item>大陸居民往來台灣通行證</item>
+    </string-array>
+    <string-array name="book_ticket_cabin_list">
+        <item>經濟艙</item>
+        <item>豪華經濟艙</item>
+        <item>商務艙</item>
+    </string-array>
+    <string-array name="miles_progress_pull_down">
+        <item>累積哩程</item>
+        <item>商務旅次</item>
+        <item>加權旅次</item>
+        <item>華航 / 華信自營航班加權旅次</item>
+    </string-array>
+    <string-array name="sign_up_address_type_list">
+        <item>住家地址</item>
+        <item>公司地址</item>
+    </string-array>
+    <string-array name="sign_up_salutation_list">
+        <item>先生</item>
+        <item>小姐</item>
+    </string-array>
+    <string-array name="sign_up_special_seat_list">
+        <item>無</item>
+        <item>走道</item>
+        <item>窗戶</item>
+    </string-array>
+</resources>

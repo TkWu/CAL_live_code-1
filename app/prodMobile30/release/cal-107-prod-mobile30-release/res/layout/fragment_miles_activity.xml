@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/cl_bg" android:background="@drawable/bg_login" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="170.0px" app:elevation="0.0dip" app:theme="@style/AppTheme.Base">
+        <android.support.design.widget.CollapsingToolbarLayout android:id="@id/toolbarCollapse" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="141.0px" app:layout_scrollFlags="exitUntilCollapsed|scroll">
+            <TextView android:textSize="16.0px" android:textColor="@color/white_four" android:gravity="center_horizontal" android:layout_gravity="center|top" android:id="@id/tv_miles" android:layout_width="fill_parent" android:layout_height="48.0px" android:layout_marginLeft="30.0px" android:layout_marginTop="40.0px" android:layout_marginRight="30.0px" android:layout_marginBottom="53.0px" android:text="@string/menu_miles" android:layout_centerHorizontal="true" style="@style/light" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.design.widget.TabLayout android:id="@id/tabLayout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="29.0px" android:layout_alignParentBottom="true" app:tabIndicatorColor="@android:color/white" style="@style/MyCustomTabLayout" />
+            </RelativeLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v4.view.ViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="22.0px" android:layout_below="@id/tabLayout" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

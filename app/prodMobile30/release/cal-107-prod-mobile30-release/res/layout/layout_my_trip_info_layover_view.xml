@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_layover" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ci.ui.view.DashedLine android:id="@id/dl_top" android:layout_width="fill_parent" android:layout_height="1.0dip" android:alpha="0.5" app:dl_color="@color/black_three" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/black_three" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tv_layover" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="17.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="4.0dip" android:text="@string/my_trips_layover" android:singleLine="true" style="@style/light" />
+        <ci.ui.view.DashedLine android:id="@id/dl_bottom" android:layout_width="fill_parent" android:layout_height="1.0dip" android:alpha="0.5" app:dl_color="@color/black_three" />
+    </LinearLayout>
+</LinearLayout>

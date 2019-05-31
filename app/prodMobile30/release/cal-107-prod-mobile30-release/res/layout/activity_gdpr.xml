@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ci.function.Start.CIGDPRWebView android:id="@id/gdpr" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" />
+</RelativeLayout>

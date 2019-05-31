@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlayout_bg" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/ivBlurrBg" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/transparent" android:scaleType="fitXY" android:adjustViewBounds="false" />
+        <ScrollView android:id="@id/bg_scrollview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/llayout_scrollview" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/flayout_main_page" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/flayout_flightInfo" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include android:id="@id/vShortcutBar" android:layout_width="fill_parent" android:layout_height="60.0dip" layout="@layout/layout_main_shortcut_button_bar" />
+                <View android:id="@id/vDiv" android:layout_width="fill_parent" android:layout_height="10.0px" />
+                <FrameLayout android:id="@id/track_card_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/flayout_webview1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/flayout_webview2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/flayout_webview3" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/flayout_webview4" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <View android:id="@id/vDiv2" android:layout_width="fill_parent" android:layout_height="10.0px" />
+            </LinearLayout>
+        </ScrollView>
+        <FrameLayout android:id="@id/flayout_notice" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

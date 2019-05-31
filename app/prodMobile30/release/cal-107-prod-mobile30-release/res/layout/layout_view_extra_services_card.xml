@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_head" android:background="@drawable/bg_boardimg_pass_head_radius" android:layout_width="fill_parent" android:layout_height="94.5px" />
+    <ImageView android:id="@id/iv_used" android:layout_width="80.69998px" android:layout_height="68.69998px" android:layout_marginLeft="171.19998px" android:layout_marginTop="15.699982px" android:src="@drawable/img_used_en" android:scaleType="fitXY" />
+    <ImageView android:id="@id/iv_hole" android:layout_width="fill_parent" android:layout_height="12.0px" android:src="@drawable/bg_card_hole_" android:scaleType="fitXY" android:layout_below="@id/rl_head" />
+    <ImageView android:id="@id/iv_blue" android:layout_width="80.0px" android:layout_height="100.0px" android:src="@drawable/bg_extra_services_card_blue" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+    <TextView android:textSize="20.0px" android:textColor="@color/black_one" android:id="@id/tv_name" android:layout_width="220.0px" android:layout_height="28.699982px" android:layout_marginLeft="20.0px" android:layout_marginTop="28.0px" android:text="YuRong Cheng" style="@style/regular" />
+    <TextView android:textSize="13.0px" android:textColor="@color/grey_four" android:id="@id/tv_no" android:layout_width="220.0px" android:layout_height="16.0px" android:layout_marginLeft="20.0px" android:layout_marginTop="22.299988px" android:text="\ 36551895412" android:layout_below="@id/tv_name" style="@style/light" />
+    <View android:background="@color/french_blue" android:layout_width="1.0px" android:layout_height="100.0px" android:layout_toLeftOf="@id/ll_service" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_service" android:layout_width="80.0px" android:layout_height="100.0px" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/iv_service" android:layout_width="32.0px" android:layout_height="32.0px" android:src="@drawable/ic_baggage_b_services" android:scaleType="fitXY" />
+        <TextView android:textSize="13.0px" android:textColor="@color/french_blue" android:gravity="center" android:id="@id/tv_service" android:layout_width="60.0px" android:layout_height="wrap_content" android:layout_marginTop="10.0px" android:text="@string/extra_baggage" style="@style/regular" />
+    </LinearLayout>
+    <ci.ui.view.DashedLine android:id="@id/dl" android:layout_width="327.0px" android:layout_height="1.0px" android:layout_marginTop="100.0px" android:layout_centerHorizontal="true" app:dl_color="@color/warm_grey" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_list" android:background="@color/white_six" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/iv_hole">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_line1" android:layout_width="300.0px" android:layout_height="50.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/grey_four" android:layout_gravity="center_vertical" android:id="@id/tv_line1" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="@string/extra_services_award_no" style="@style/light" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_line1_data" android:layout_width="150.0px" android:layout_height="wrap_content" style="@style/light" />
+        </LinearLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/v_line1" android:background="@color/warm_grey_50" android:layout_width="300.0px" android:layout_height="1.0px" android:alpha="0.4" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_line2" android:layout_width="300.0px" android:layout_height="50.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/grey_four" android:layout_gravity="center_vertical" android:id="@id/tv_line2" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="@string/extra_services_flight_number" style="@style/light" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_line2_data" android:layout_width="150.0px" android:layout_height="wrap_content" style="@style/light" />
+        </LinearLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/v_line2" android:background="@color/warm_grey_50" android:layout_width="300.0px" android:layout_height="1.0px" android:alpha="0.4" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_line3" android:layout_width="300.0px" android:layout_height="50.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/grey_four" android:layout_gravity="center_vertical" android:id="@id/tv_line3" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="@string/extra_services_flight_number" style="@style/light" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_line3_data" android:layout_width="150.0px" android:layout_height="wrap_content" style="@style/light" />
+        </LinearLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/v_line3" android:background="@color/warm_grey_50" android:layout_width="300.0px" android:layout_height="1.0px" android:alpha="0.4" />
+        <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/rl_line4" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_barcode" android:visibility="gone" android:layout_width="300.0px" android:layout_height="96.0px">
+                <ImageView android:id="@id/iv_barcode" android:layout_width="270.0px" android:layout_height="56.0px" android:src="@drawable/bg_sidemenu_btn_check" android:scaleType="fitXY" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_line4" android:layout_width="300.0px" android:layout_height="50.0px" android:layout_centerHorizontal="true">
+                <TextView android:textSize="16.0px" android:textColor="@color/grey_four" android:layout_gravity="center_vertical" android:id="@id/tv_line4" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="@string/extra_services_flight_number" style="@style/light" />
+                <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_line4_data" android:layout_width="150.0px" android:layout_height="wrap_content" style="@style/light" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/v_line4" android:background="@color/warm_grey_50" android:layout_width="300.0px" android:layout_height="1.0px" android:alpha="0.4" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_line5" android:layout_width="300.0px" android:layout_height="50.0px">
+            <TextView android:textSize="16.0px" android:textColor="@color/grey_four" android:layout_gravity="center_vertical" android:id="@id/tv_line5" android:layout_width="150.0px" android:layout_height="wrap_content" android:text="@string/extra_services_flight_number" style="@style/light" />
+            <TextView android:textSize="16.0px" android:textColor="@color/black_one" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/tv_line5_data" android:layout_width="150.0px" android:layout_height="wrap_content" style="@style/light" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_logo" android:background="@drawable/bg_personal_member_card_detail_bosy" android:layout_width="fill_parent" android:layout_height="32.0px" android:layout_below="@id/ll_list">
+        <ImageView android:id="@id/iv_logo" android:layout_width="130.0px" android:layout_height="20.0px" android:layout_marginLeft="20.0px" android:src="@drawable/logo_china_airlines_boarding_pass" android:scaleType="fitXY" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="13.0px" android:textColor="@color/white_four" android:id="@id/tv_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0px" android:minHeight="0.0px" android:layout_below="@id/rl_logo" style="@style/regular" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apis_document_list">
+        <item>护照</item>
+        <item>美国永久居留证</item>
+        <item>台胞证</item>
+        <item>大陆居民往来台湾通行证</item>
+    </string-array>
+    <string-array name="book_ticket_cabin_list">
+        <item>经济舱</item>
+        <item>豪华经济舱</item>
+        <item>商务舱</item>
+    </string-array>
+    <string-array name="miles_progress_pull_down">
+        <item>累积哩程</item>
+        <item>商务旅次</item>
+        <item>加权旅次</item>
+        <item>华航 / 华信自营航班加权旅次</item>
+    </string-array>
+    <string-array name="sign_up_address_type_list">
+        <item>住家地址</item>
+        <item>公司地址</item>
+    </string-array>
+    <string-array name="sign_up_salutation_list">
+        <item>先生</item>
+        <item>小姐</item>
+    </string-array>
+    <string-array name="sign_up_special_seat_list">
+        <item>无</item>
+        <item>走道</item>
+        <item>窗戶</item>
+    </string-array>
+</resources>

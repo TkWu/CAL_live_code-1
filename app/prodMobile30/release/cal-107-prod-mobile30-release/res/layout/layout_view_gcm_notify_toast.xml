@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@color/black_60" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@color/white_four" android:gravity="center|left" android:id="@id/tv_msg" android:layout_width="228.0dip" android:layout_height="60.0dip" android:layout_marginLeft="20.0dip" android:text="@string/miles_have_been_imported_to_your_account" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:alpha="0.86" style="@style/light" />
+    <Button android:textSize="13.0sp" android:textColor="@color/white_four" android:gravity="center" android:id="@id/btn_go" android:background="@drawable/bg_transparent_press_drak_grey" android:clickable="true" android:layout_width="72.0dip" android:layout_height="32.0dip" android:layout_marginRight="20.0dip" android:text="Go" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/light" />
+</RelativeLayout>

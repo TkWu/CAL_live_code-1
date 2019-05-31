@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="320.0px" android:layout_height="wrap_content" android:splitMotionEvents="false">
+        <RelativeLayout android:id="@id/rl_left_bg" android:background="@drawable/bg_btn_right_radius_french_blue_40" android:layout_width="159.5px" android:layout_height="40.0px">
+            <TextView android:textSize="14.0px" android:textColor="@color/white_four" android:gravity="center" android:id="@id/tv_left_item" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="left item" android:singleLine="true" android:layout_centerVertical="true" style="@style/regular" />
+        </RelativeLayout>
+        <View android:id="@id/v_line1" android:background="@color/white_four" android:layout_width="1.0px" android:layout_height="40.0px" />
+        <RelativeLayout android:id="@id/rl_right_bg" android:background="@drawable/bg_btn_right_radius_white" android:layout_width="fill_parent" android:layout_height="40.0px">
+            <TextView android:textSize="14.0px" android:textColor="@color/french_blue" android:gravity="center" android:id="@id/tv_right_item" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="right item" android:singleLine="true" android:layout_centerVertical="true" style="@style/regular" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/v_bg" android:background="@drawable/bg_btn_radius_white" android:layout_width="320.0px" android:layout_height="40.0px" />
+</RelativeLayout>

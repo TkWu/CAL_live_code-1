@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_world_map" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ci.ui.view.NavigationBar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0px" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/put_pop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/toolbar" />
+    <FrameLayout android:id="@id/fl_select" android:paddingLeft="20.0px" android:paddingRight="20.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0px" android:layout_below="@id/toolbar" />
+    <FrameLayout android:id="@id/fl_content" android:paddingTop="12.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/fl_select" />
+</RelativeLayout>

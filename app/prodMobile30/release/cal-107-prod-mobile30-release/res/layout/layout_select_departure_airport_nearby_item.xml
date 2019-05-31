@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_transparent_press_black20" android:clickable="true" android:layout_width="fill_parent" android:layout_height="70.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="@color/white_four" android:id="@id/tv_top_text" android:layout_width="226.0dip" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="14.299988dip" android:text="Bergstrom Int" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/white_four" android:id="@id/tv_bottom_text" android:layout_width="226.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="14.0dip" android:text="Bergstrom Int" android:layout_below="@id/tv_top_text" android:layout_alignLeft="@id/tv_top_text" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/white_four" android:id="@id/tv_right_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.599976dip" android:layout_marginRight="30.0dip" android:text="Bergstrom Int" android:layout_alignParentRight="true" />
+</RelativeLayout>
