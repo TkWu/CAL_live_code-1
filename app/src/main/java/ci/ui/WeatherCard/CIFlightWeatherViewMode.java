@@ -215,7 +215,8 @@ public class CIFlightWeatherViewMode {
         byte[] nonce = new byte[32];
         Random rand = new Random();
         rand.nextBytes(nonce);
-        String oauthNonce = new String(nonce).replaceAll("\\W", "");
+        //String oauthNonce = new String(nonce).replaceAll("\\W", "");
+        String oauthNonce = timestamp+"";
 
         List<String> parameters = new ArrayList<>();
         parameters.add("oauth_consumer_key=" + CONSUMER_KEY);
