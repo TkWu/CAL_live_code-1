@@ -215,7 +215,9 @@ public class CIFlightWeatherViewMode {
         byte[] nonce = new byte[32];
         Random rand = new Random();
         rand.nextBytes(nonce);
-        String oauthNonce = new String(nonce).replaceAll("\\W", "");
+        //String oauthNonce = new String(nonce).replaceAll("\\W", "");
+        //20190603 因上面寫法會有 ＷＥＡＴＨＥＲ ＡＰI 無法辨認的亂碼,因此改用下面寫法
+        String oauthNonce = timestamp+"";
 
         List<String> parameters = new ArrayList<>();
         parameters.add("oauth_consumer_key=" + CONSUMER_KEY);
