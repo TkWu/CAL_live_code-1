@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.util.Log;
 
 import ci.function.Core.SLog;
 
@@ -62,7 +63,7 @@ public class CIFlightWeatherViewMode {
 
                 //欲查詢天氣的地名
                 //String strLocation = strLocations[0];
-                SLog.d("[CAL]", "weather location lat= " + strLatitude + " long= " + strLongitude);
+                SLog.d("[CAL]", "weather location lat= " + strLatitude + " lon= " + strLongitude);
 
                 //地名帶入YQL語法內
                 //String strYQL = String.format(YQL, strLocation);
@@ -126,6 +127,49 @@ public class CIFlightWeatherViewMode {
 
 
                 try {
+//                    URL url = new URL(targetUrl);
+//
+//                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+//                    conn.setRequestMethod("GET");
+//                    conn.setRequestProperty("Authorization", getAuthHeader(strLATLONG));
+//                    conn.setRequestProperty("X-Yahoo-App-Id", appId);
+//                    conn.setRequestProperty("Content-Type", "application/json");
+//                    conn.setUseCaches(false);
+//
+//                    URLConnection connection = url.openConnection();
+//                    connection.setConnectTimeout(30000);
+//                    connection.setReadTimeout(30000);
+//                    connection.setUseCaches(false);
+//                    conn.connect();
+//                    //Get Response code
+//                    int status = conn.getResponseCode();
+//                    Log.d("weather status code", status + "");
+//
+//                    InputStream inputStream = conn.getInputStream();
+//
+//                    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+//                    StringBuilder strResult = new StringBuilder();
+//                    String strLine;
+//                    while ((strLine = reader.readLine()) != null) {
+//                        strResult.append(strLine);
+//                    }
+//                    reader.close();
+//
+//                    Log.d("weather strResult", "" + strResult.toString());
+//                    JSONObject jsResult = new JSONObject(strResult.toString());
+//                    Log.d("weather result", "" + jsResult.toString());
+//                    Log.d("weather jsResult", "" + jsResult.toString());
+
+//                    JSONObject joQueryResults = jsResult.optJSONObject("query");
+//                    int iCount = joQueryResults.optInt("count");
+//
+//                    if (iCount == 0) {
+//                        //查不到天氣資料
+//                        resultData.m_strError = CIApplication.getContext().getString(R.string.no_match_data);
+//                    }else {
+//                        JSONObject joWeatherResp = joQueryResults.optJSONObject("results").optJSONObject("channel");
+//                        resultData.DecodeJSON(joWeatherResp);
+//                    }
                     URL url = new URL(targetUrl);
 
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -135,14 +179,10 @@ public class CIFlightWeatherViewMode {
                     conn.setRequestProperty("Content-Type", "application/json");
                     conn.setUseCaches(false);
 
-                    URLConnection connection = url.openConnection();
-                    connection.setConnectTimeout(30000);
-                    connection.setReadTimeout(30000);
-                    connection.setUseCaches(false);
                     conn.connect();
                     //Get Response code
                     int status = conn.getResponseCode();
-                    SLog.d("weather status code", status + "");
+                    SLog.d("weather status code", status+"");
 
                     InputStream inputStream = conn.getInputStream();
 
@@ -154,32 +194,9 @@ public class CIFlightWeatherViewMode {
                     }
                     reader.close();
 
-                    SLog.d("weather strResult", "" + strResult.toString());
                     JSONObject jsResult = new JSONObject(strResult.toString());
-                    SLog.d("weather result", "" + jsResult.toString());
-                    SLog.d("weather jsResult", "" + jsResult.toString());
 
-                    JSONObject joQueryResults = jsResult.optJSONObject("query");
-                    int iCount = joQueryResults.optInt("count");
                     resultData.DecodeJSON(jsResult);
-
-                    if (iCount == 0) {
-                        //查不到天氣資料
-                        resultData.m_strError = CIApplication.getContext().getString(R.string.no_match_data);
-                    } else {
-                        JSONObject joWeatherResp = joQueryResults.optJSONObject("results").optJSONObject("channel");
-                        resultData.DecodeJSON(joWeatherResp);
-                    }
-//                    JSONObject joQueryResults = jsResult.optJSONObject("query");
-//                    int iCount = joQueryResults.optInt("count");
-//
-//                    if (iCount == 0) {
-//                        //查不到天氣資料
-//                        resultData.m_strError = CIApplication.getContext().getString(R.string.no_match_data);
-//                    }else {
-//                        JSONObject joWeatherResp = joQueryResults.optJSONObject("results").optJSONObject("channel");
-//                        resultData.DecodeJSON(joWeatherResp);
-//                    }
 
                 } catch (Exception e) {
                     resultData = new CIWeatherResp();
@@ -216,7 +233,6 @@ public class CIFlightWeatherViewMode {
         Random rand = new Random();
         rand.nextBytes(nonce);
         //String oauthNonce = new String(nonce).replaceAll("\\W", "");
-        //20190603 因上面寫法會有 ＷＥＡＴＨＥＲ ＡＰI 無法辨認的亂碼,因此改用下面寫法
         String oauthNonce = timestamp+"";
 
         List<String> parameters = new ArrayList<>();
@@ -266,7 +282,7 @@ public class CIFlightWeatherViewMode {
                 "oauth_signature=\"" + signature + "\", " +
                 "oauth_version=\"1.0\"";
 
-        SLog.d("weather string", authorizationLine);
+        //SLog.d("weather string", authorizationLine);
 
         return authorizationLine;
 

@@ -89,15 +89,13 @@ public class CIWeatherResp {
         String strCountry       = joLocation.optString("country");
         //城市
         String strCity          = joLocation.optString("city");
+
         m_strLocation           = strCity;
         //String.format("%s, %s", locationData.optString("city"), (region.length() != 0 ? region : country));
 
-        //氣象查詢結果
-        //JSONObject joItem       = data.optJSONObject("item");
         //未來五天的天氣預測
-        //m_Forecast              = new CIWeatherResp_Forecast();
-        //m_Forecast.DecodeJSON(joItem.optJSONArray("forecast"));
-        //m_Forecast.DecodeJSON(data.optJSONArray("forecasts"));
+        m_Forecast              = new CIWeatherResp_Forecast();
+        m_Forecast.DecodeJSON(data.optJSONArray("forecasts"));
 
         //當前氣象
         JSONObject joItem       = data.optJSONObject("current_observation");
@@ -106,7 +104,6 @@ public class CIWeatherResp {
         m_Condition.DecodeJSON(joItem.optJSONObject("condition"));
 
         //大氣資料
-        //JSONObject joAtmosphere = data.optJSONObject("atmosphere");
         JSONObject joAtmosphere = joItem.optJSONObject("atmosphere");
         //濕度
         m_strHumidity           = joAtmosphere.optString("humidity");
