@@ -13,7 +13,7 @@ import java.util.Date;
 public abstract class SFestival implements IFestival{
 
     private static  ArrayList<IFestival> m_arrayList = new ArrayList<>();
-    
+
 
     @Override
     public boolean isBetweenDate() {
