@@ -323,7 +323,7 @@ public class CIExtraServicesFragment extends BaseFragment {
             int itop = m_vScaleDef.getLayoutHeight(10.7);
             int ibottom = m_vScaleDef.getLayoutHeight(10);
             viewholder.rlayout_Summary.setPadding(iwidth, itop, iwidth, ibottom);
-            m_vScaleDef.setTextSize(20, viewholder.tvTitle);
+            m_vScaleDef.setTextSize(18, viewholder.tvTitle);
             viewholder.tvTitle.setText( m_alData.get(iIndex-1).getTitle() );
             m_vScaleDef.setTextSize(13, viewholder.tvSummary);
             viewholder.tvSummary.setText( m_alData.get(iIndex-1).getContent() );
