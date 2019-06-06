@@ -21,6 +21,7 @@ import ci.function.Core.SLog;
 public class CICertificateManager {
     //憑證名稱不能包含 * 字元
     public static final String CAL_CERT = "certificate/china-airlines.com.cer";
+    public static final String CAL_CERT_NEW = "certificate/BASE64_X509.cer";
     public static final String CAL_BOOKING_CERT = "certificate/www.china-airlines.com.cer";
     public static final String GOOGLE_CERT = "certificate/GIAG3.cer";
     public static final String CAL_AI_CERT = "certificate/CALAICS01TCHINA-AIRLINESCOM.der";
