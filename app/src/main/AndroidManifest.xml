@@ -3,41 +3,28 @@
     package="com.chinaairlines.mobile30"
     android:versionCode="3"
     android:versionName="@string/app_version_name">
-
     <!-- 網路權限 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- WIFI權限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- WIFI權限 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!-- 取得帳戶名稱 -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <!-- 取得GPS位置權限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 取得帳戶名稱 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- 取得GPS位置權限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <!-- 設定推播震動權限 -->
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <!--644336 2019 2月3月 截圖 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/><!--允許寫入外部儲存-->
-
-    <!--&lt;!&ndash; 使用GCM &ndash;&gt;-->
-    <!--<permission-->
-        <!--android:name="com.chinaairlines.mobile30.permission.C2D_MESSAGE"-->
-        <!--android:protectionLevel="signature" />-->
-
-    <!--<uses-permission android:name="com.chinaairlines.mobile30.permission.C2D_MESSAGE" />-->
-    <!--<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />-->
-    <!--&lt;!&ndash; 使用GCM &ndash;&gt;-->
-
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- 設定推播震動權限 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 644336 2019 2月3月 截圖 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允許寫入外部儲存 -->
+    <!-- &lt;!&ndash; 使用GCM &ndash;&gt; -->
+    <!-- <permission -->
+    <!-- android:name="com.chinaairlines.mobile30.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+    <!-- <uses-permission android:name="com.chinaairlines.mobile30.permission.C2D_MESSAGE" /> -->
+    <!-- <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> -->
+    <!-- &lt;!&ndash; 使用GCM &ndash;&gt; -->
     <!-- 向SD卡中的寫入權限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 在SD卡中創建和刪除文件的權限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-
-    <!-- 讀取Task 的權限, 判斷 activity 是否啟動 -->
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 在SD卡中創建和刪除文件的權限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 讀取Task 的權限, 判斷 activity 是否啟動 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -45,22 +32,25 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_app"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
         <activity
             android:name="ci.function.Start.CIStartActivity"
             android:label="@string/app_name"
-            android:theme="@style/StartAppTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.BROWSER"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSER" />
+                <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="@string/scheme" />
             </intent-filter>
         </activity>
@@ -69,8 +59,8 @@
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label="@string/menu_title_homepage"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustPan"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="ci.function.Signup.CISignUpActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
@@ -310,7 +300,12 @@
             android:label=""
             android:screenOrientation="portrait" />
         <activity
-            android:name="ci.function.PersonalDetail.APIS.CIAddSaveAPISActivity"
+            android:name="ci.function.PersonalDetail.APIS.CIAddSaveAPISDocTypeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:hardwareAccelerated="true"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity android:name="ci.function.PersonalDetail.APIS.CIPersonalAddSaveAPISActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:hardwareAccelerated="true"
             android:label=""
@@ -375,8 +370,10 @@
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
-            <meta-data android:name="@string/minVersion" android:value="8"/>
-            </activity>
+            <meta-data
+                android:name="@string/minVersion"
+                android:value="8" />
+        </activity>
         <activity
             android:name="ci.function.About.CIIntroductionActvity"
             android:configChanges="keyboard|keyboardHidden|orientation"
@@ -389,71 +386,86 @@
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.SeatSelection.CISelectSeatActivity"
+        <activity
+            android:name="ci.function.SeatSelection.CISelectSeatActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.SeatSelection.CISelectSeatResultActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:label=""
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-        <activity android:name="ci.function.SpecialCondition.CICustomerSupportActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:label=""
-            android:screenOrientation="portrait" />
-        <activity android:name="ci.ui.WebView.CIWithoutInternetActivity"
+        <activity
+            android:name="ci.function.SeatSelection.CISelectSeatResultActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.MyTrips.CIFindMyBookingNotesActivity"
+        <activity
+            android:name="ci.function.SpecialCondition.CICustomerSupportActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="ci.ui.WebView.CIWithoutInternetActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.MealSelection.CIMealSelectionNoticeActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:label=""
-            android:screenOrientation="portrait" />
-        <activity android:name="ci.function.PersonalDetail.APIS.CIAPISDocmuntTypeSelectMenuActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:label=""
-            android:screenOrientation="portrait" />
-        <activity android:name="ci.function.PersonalDetail.APIS.CIApisStateSelectMenuActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:label=""
-            android:screenOrientation="portrait" />
-        <activity android:name="ci.function.Checkin.CICheckInCompleteCardActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:label=""
-            android:screenOrientation="portrait" />
-        <activity android:name="ci.function.SeatSelection.CISelectSeatMapActivity"
+        <activity
+            android:name="ci.function.MyTrips.CIFindMyBookingNotesActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.ManageMiles.MilesDetailCard.CIMilesDetailCardActivity"
+        <activity
+            android:name="ci.function.MealSelection.CIMealSelectionNoticeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="ci.function.PersonalDetail.APIS.CIAPISDocmuntTypeSelectMenuActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="ci.function.PersonalDetail.APIS.CIApisStateSelectMenuActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="ci.function.Checkin.CICheckInCompleteCardActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="ci.function.SeatSelection.CISelectSeatMapActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.PersonalDetail.QRCode.CIPersonalQRCodeActivity"
+        <activity
+            android:name="ci.function.ManageMiles.MilesDetailCard.CIMilesDetailCardActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.FlightStatus.CITrackActivity"
+        <activity
+            android:name="ci.function.PersonalDetail.QRCode.CIPersonalQRCodeActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.BoardingPassEWallet.CIBoardingWithQRCodeActivity"
+        <activity
+            android:name="ci.function.FlightStatus.CITrackActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="ci.function.SeatSelection.CISelectSeatMapWebActivity"
+        <activity
+            android:name="ci.function.BoardingPassEWallet.CIBoardingWithQRCodeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="ci.function.SeatSelection.CISelectSeatMapWebActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
@@ -463,159 +475,142 @@
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.MyTrips.Detail.CIQuestionnaireActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.MyTrips.Detail.AddBaggage.CIAddExcessBaggageActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.MyTrips.Detail.AddBaggage.CIInquiryExcessBaggageInfoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.MyTrips.Detail.AddBaggage.CICCPageActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.MyTrips.Detail.AddBaggage.CIPaymentsResultActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.MyTrips.Detail.AddBaggage.CIAddExcessReadmeActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.MyTrips.Detail.common.CIReadmeActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.BoardingPassEWallet.BoardingPass.CIBoardingPassCardReadmeActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.ui.WebView.CIWebviewReadmeActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.Login.CISchemeLoginActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.Checkin.ADC.CICheckInVISAActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.BaggageTrack.CIBaggageInfoContentActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.BaggageTrack.CIBaggageTrackingListActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.BaggageTrack.CIFindMyBaggageActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.BaggageTrack.CIScannerBaggageTagActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:hardwareAccelerated="true"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="ci.function.Signup.CIAddressSelectMenuActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:hardwareAccelerated="true"
             android:label=""
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
-
-
+            android:screenOrientation="portrait" />
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
-
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-
-        <!-- 華航給的Map所需設定的Activity及元資料 package path:ci/ui/CAL_Map-->
-        <activity android:name="ci.ui.CAL_Map.MapActivity"
+            android:value="@string/facebook_app_id" /> <!-- 華航給的Map所需設定的Activity及元資料 package path:ci/ui/CAL_Map -->
+        <activity
+            android:name="ci.ui.CAL_Map.MapActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""
-            android:screenOrientation="portrait" />
-
-        <!--<meta-data-->
-            <!--android:name="com.google.android.gms.version"-->
-            <!--android:value="@integer/google_play_services_version" />-->
-
+            android:screenOrientation="portrait" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.version" -->
+        <!-- android:value="@integer/google_play_services_version" /> -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_map_api_key" />
-        <!-- 華航給的Map所需設定的Activity及元資料-->
-
-        <!--crashlytics-->
+            android:value="@string/google_map_api_key" /> <!-- 華航給的Map所需設定的Activity及元資料 -->
+        <!-- crashlytics -->
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="c0994426f4dc6068f9bd3f417bd8a8344668d493" />
-
-
-        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
-        See README(https://goo.gl/l4GJaQ) for more. -->
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+        See README(https://goo.gl/l4GJaQ) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_launcher_app" />
-        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
-             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/greyish" />
-
-
-        <!-- 使用GCM
+        <!--
+ 使用GCM
         <receiver
             android:name="com.google.android.gms.gcm.GcmReceiver"
             android:exported="true"
@@ -625,33 +620,30 @@
             </intent-filter>
         </receiver>
         -->
-
-        <!--<receiver-->
-            <!--android:name=".MrqGcmIntentService"-->
-            <!--android:permission="com.google.android.c2dm.permission.SEND" >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
-
-                <!--<category android:name="com.chinaairlines.mobile30" />-->
-            <!--</intent-filter>-->
-        <!--</receiver>-->
-
-        <!--<service-->
-            <!--android:name=".MyInstanceIDListenerService"-->
-            <!--android:exported="false" >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.google.android.gms.iid.InstanceID" />-->
-            <!--</intent-filter>-->
-        <!--</service>-->
+        <!-- <receiver -->
+        <!-- android:name=".MrqGcmIntentService" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- <category android:name="com.chinaairlines.mobile30" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <service -->
+        <!-- android:name=".MyInstanceIDListenerService" -->
+        <!-- android:exported="false" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.gms.iid.InstanceID" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
         <!-- [END instanceId_listener] -->
-        <!--<service-->
-            <!--android:name=".RegistrationIntentService"-->
-            <!--android:exported="false" >-->
-        <!--</service>-->
+        <!-- <service -->
+        <!-- android:name=".RegistrationIntentService" -->
+        <!-- android:exported="false" > -->
+        <!-- </service> -->
         <!-- 使用GCM -->
         <!-- 推播使用 -->
         <receiver
-            android:name="com.chinaairlines.mobile30.CIInternalNotificationReceiver"
+            android:name=".CIInternalNotificationReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -664,14 +656,11 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-
-        <service
-            android:name=".FcmMessageService">
+        <service android:name=".FcmMessageService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>
