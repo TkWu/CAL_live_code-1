@@ -110,85 +110,115 @@
 
             </LinearLayout>
 
-            <ci.ui.view.TwoItemSelectBar
-                android:id="@+id/v_gender"
-                android:layout_width="match_parent"
-                android:layout_height="24px"
-                android:layout_below="@id/ll_companions_name"
-                android:layout_marginLeft="30px"
-                android:layout_marginRight="26px"
-                android:layout_marginTop="20px">
-
-            </ci.ui.view.TwoItemSelectBar>
-
-            <FrameLayout
-                android:id="@+id/flayout_birthday"
+            <LinearLayout
+                android:id="@+id/ll_basic_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/v_gender"
-                android:layout_marginLeft="20px"
-                android:layout_marginRight="20px"
-                android:layout_marginTop="22px" />
+                android:layout_marginTop="20px"
+                android:layout_below="@id/tv_document"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <FrameLayout
-                android:id="@+id/flayout_country"
+                <ci.ui.view.TwoItemSelectBar
+                    android:id="@+id/v_basic_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="24px"
+                    android:layout_below="@id/ll_companions_name"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="26px"
+                    android:layout_marginTop="20px">
+
+                </ci.ui.view.TwoItemSelectBar>
+
+                <FrameLayout
+                    android:id="@+id/flayout_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_gender"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="22px" />
+
+                <FrameLayout
+                    android:id="@+id/flayout_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flayout_birthday"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="22px" />
+
+                <FrameLayout
+                    android:id="@+id/flayout_nationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flayout_country"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="9px" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_document_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/flayout_birthday"
-                android:layout_marginLeft="20px"
-                android:layout_marginRight="20px"
-                android:layout_marginTop="22px" />
+                android:layout_marginTop="20px"
+                android:layout_below="@id/tv_document"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <ci.ui.view.TwoItemSelectBar
+                    android:id="@+id/v_doc_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="24px"
+                    android:layout_below="@id/ll_companions_name"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="26px"
+                    android:layout_marginTop="20px">
 
-            <FrameLayout
-                android:id="@+id/flayout_nationality"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/flayout_country"
-                android:layout_marginLeft="20px"
-                android:layout_marginRight="20px"
-                android:layout_marginTop="9px" />
+                </ci.ui.view.TwoItemSelectBar>
+                <FrameLayout
+                    android:id="@+id/flayout_doc_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flayout_nationality"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="9px" />
 
-            <FrameLayout
-                android:id="@+id/flayout_doc_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/flayout_nationality"
-                android:layout_marginLeft="20px"
-                android:layout_marginRight="20px"
-                android:layout_marginTop="9px" />
+                <FrameLayout
+                    android:id="@+id/flayout_doc_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flayout_doc_type"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="9px" />
 
-            <FrameLayout
-                android:id="@+id/flayout_doc_no"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/flayout_doc_type"
-                android:layout_marginLeft="20px"
-                android:layout_marginRight="20px"
-                android:layout_marginTop="9px" />
+                <FrameLayout
+                    android:id="@+id/flayout_issue_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flayout_doc_no"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="9px" />
 
-            <FrameLayout
-                android:id="@+id/flayout_issue_country"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/flayout_doc_no"
-                android:layout_marginLeft="20px"
-                android:layout_marginRight="20px"
-                android:layout_marginTop="9px" />
-
-            <FrameLayout
-                android:id="@+id/flayout_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/flayout_issue_country"
-                android:layout_marginLeft="20px"
-                android:layout_marginRight="20px"
-                android:layout_marginTop="9px" />
-
+                <FrameLayout
+                    android:id="@+id/flayout_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flayout_issue_country"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="9px" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/llayout_Address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/flayout_date"
+                android:layout_below="@id/ll_document_info"
                 android:layout_marginTop="40px"
                 android:orientation="vertical"
                 android:visibility="gone">

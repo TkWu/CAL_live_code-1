@@ -18,7 +18,6 @@ import java.util.Iterator;
 import java.util.Locale;
 
 import ci.function.Core.CIApplication;
-import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.TextField.Adapter.CIMenusAdapter;
 import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
@@ -28,7 +27,7 @@ import ci.ui.view.NavigationBar;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Presenter.CIAPISPresenter;
 
-public class CIAddSaveAPISActivity extends BaseActivity {
+public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
 
     private NavigationBar.onNavigationbarParameter m_onNavigationParameter = new NavigationBar.onNavigationbarParameter() {
 
@@ -81,12 +80,16 @@ public class CIAddSaveAPISActivity extends BaseActivity {
     private ArrayList<CIApisDocmuntTypeEntity> m_arRetainDocmuntType    = null;
 
     private ArrayList<String>                   m_arString              = null;
-    public NavigationBar m_Navigationbar     = null;
-    private CIMenusAdapter m_adapter           = null,
-                           m_retainAdapter     = null;
+    public  NavigationBar m_Navigationbar     = null;
+    private CIMenusAdapter m_adapter           = null;
+
     private String                              m_strHint           = "";
     public static final String                  VALUE               = "VALUE";
-    public static final String                  DOCUMUNT_TYPE       = "DOCUMUNT_TYPE";
+    public static final String                  APIS_TYPE           = "APIS_TYPE";
+
+    public enum EType{
+        Personal, CheckIn
+    }
 
     private HashSet<String> m_filter = null;
     private HashSet<CIApisDocmuntTypeEntity> m_SelectList = null;
@@ -94,16 +97,11 @@ public class CIAddSaveAPISActivity extends BaseActivity {
     private CIPersonalAddAPISActivity.CIPersonalAddAPISType m_type = CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS;
     private CIApisDocmuntTextFieldFragment.EType m_apisType = null;
 
-    public enum CIPersonalAddAPISType {
-        ADD_MY_APIS, EDIT_MY_APIS, ADD_COMPANAIONS_APIS, EDIT_COMPANAIONS_APIS;
-    }
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         String mode = getIntent().getStringExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE);
         m_apisType = (CIApisDocmuntTextFieldFragment.EType)getIntent()
-                .getSerializableExtra(CIApisDocmuntTextFieldFragment.APIS_TYPE);
+                .getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
         if (null != mode) {
             m_type = CIPersonalAddAPISActivity.CIPersonalAddAPISType.valueOf(mode);
         }
@@ -141,7 +139,6 @@ public class CIAddSaveAPISActivity extends BaseActivity {
 //            m_arDocmuntType = new ArrayList<>();
 //        }
         m_arDocmuntType = CIAPISPresenter.getInstance().fetchAllApisList();
-        SLog.d("m_arDocmuntType: "+m_arDocmuntType.size());
         m_arRetainDocmuntType = (ArrayList<CIApisDocmuntTypeEntity>)m_arDocmuntType.clone();
 
         m_arString      = new ArrayList<>();
@@ -185,12 +182,10 @@ public class CIAddSaveAPISActivity extends BaseActivity {
         for( CIApisDocmuntTypeEntity data : m_arDocmuntType ) {
             m_arString.add(data.getName(locale));
         }
-        SLog.d("m_arString: "+m_arString.size());
 
         m_adapter = new CIMenusAdapter(this,
                 m_arString,
                 R.layout.list_item_textfeild_fullpage_menu);
-        m_retainAdapter = (CIMenusAdapter) m_adapter.clone();
         m_listView.setAdapter(m_adapter);
         m_Navigationbar = (NavigationBar) findViewById(R.id.toolbar);
     }
@@ -207,17 +202,23 @@ public class CIAddSaveAPISActivity extends BaseActivity {
         m_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent();
                 String text = (String) m_adapter.getItem(position);
+                Intent intent = new Intent();
 
+                Bundle bundle = new Bundle();
+                //要改
+                bundle.putSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE, CIApisDocmuntTextFieldFragment.EType.Personal);
+                bundle.putSerializable(UiMessageDef.BUNDLE_ACTIVITY_MODE,
+                        CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS.name());
+                bundle.putSerializable(VALUE, text);
+                bundle.putSerializable(DOCUMUNT_TYPE, m_arDocmuntType.get(position).code_1A);
 
-                intent.putExtra(VALUE, text);
-
-                intent.putExtra(DOCUMUNT_TYPE, m_arDocmuntType.get(position).code_1A);
-
-                setResult(RESULT_OK, intent);
+                intent.putExtras(bundle);
+                intent.setClass(CIAddSaveAPISDocTypeActivity.this, CIPersonalAddSaveAPISActivity.class);
+                //要改
+                startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
                 finish();
-                overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
+                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
             }
         });
     }

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,9 +26,10 @@ import ci.function.Base.BaseFragment;
 import ci.function.Core.CIApplication;
 import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
-import ci.function.PersonalDetail.APIS.CIAddSaveAPISActivity;
+import ci.function.PersonalDetail.APIS.CIAddSaveAPISDocTypeActivity;
 import ci.function.PersonalDetail.APIS.CIPersonalAPISDetialActivity;
 import ci.function.PersonalDetail.APIS.CIPersonalAddAPISActivity;
+import ci.function.PersonalDetail.APIS.CIPersonalAddSaveAPISActivity;
 import ci.function.PersonalDetail.APIS.CIPersonalCompanionsAPISListActivity;
 import ci.function.PersonalDetail.QRCode.CIPersonalQRCodeActivity;
 import ci.function.PersonalDetail.SocialNetwork.CISocialNetworkDetailActivity;
@@ -176,12 +176,22 @@ public class CIPersonalFragment extends BaseFragment implements
             Intent intent = new Intent();
             intent.putExtra(
                     UiMessageDef.BUNDLE_ACTIVITY_MODE,
-                    CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS.name());
+                    CIPersonalAddSaveAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS.name());
+            /* CIPersonalAddAPISType:     ADD_MY_APIS,
+                                          EDIT_MY_APIS,
+                                          ADD_COMPANAIONS_APIS,
+                                          EDIT_COMPANAIONS_APIS
+            */
+
             Bundle bundle = new Bundle();
-            bundle.putSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE, CIApisDocmuntTextFieldFragment.EType.Personal);
+            bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_TYPE, CIAddSaveAPISDocTypeActivity.EType.Personal);
+            /*
+               CIAddSaveAPISDocTypeActivity.EType: Personal, CheckIn
+             */
+
             intent.putExtras(bundle);
-            intent.setClass(getActivity(), CIAddSaveAPISActivity.class);
-            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
+            intent.setClass(getActivity(), CIAddSaveAPISDocTypeActivity.class);
+            startActivity(intent);
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
         }
 

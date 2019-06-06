@@ -50,16 +50,16 @@
 
     <string name="scheme" translatable="false">calmobile30uat</string>
     <string name="scheme_eshopping" translatable="false">caleshoppinguat</string>
-    <string name="scheme_eshopping_source" translatable="false" >eshopping</string>
-    <string name="scheme_eshopping_action" translatable="false" >login</string>
+    <string name="scheme_eshopping_source" translatable="false">eshopping</string>
+    <string name="scheme_eshopping_action" translatable="false">login</string>
     <string name="eshopping_packagename" translatable="false">com.chinaairlines.caleshopping</string>
     <string name="exquisitetravel_packagename" translatable="false">tw.com.mook.exquisitetravel</string>
 
     <!--20190227 高層要的小圖示-->
     <string name="facebook_packagename" translatable="false">com.facebook.katana</string>
-    <string name="facebook_deeplink_global"  translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/chinaairlines.travelchannel</string>
-    <string name="facebook_deeplink_US"  translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/ChinaAirlinesUS</string>
-    <string name="facebook_deeplink_JP"  translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/ChinaAirlinesJapan</string>
+    <string name="facebook_deeplink_global" translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/chinaairlines.travelchannel</string>
+    <string name="facebook_deeplink_US" translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/ChinaAirlinesUS</string>
+    <string name="facebook_deeplink_JP" translatable="false">fb://facewebmodal/f?href=https://www.facebook.com/ChinaAirlinesJapan</string>
     <string name="facebook_fanpage_global" translatable="false">https://www.facebook.com/chinaairlines.travelchannel/</string>
     <string name="facebook_fanpage_US" translatable="false">https://www.facebook.com/ChinaAirlinesUS/</string>
     <string name="facebook_fanpage_JP" translatable="false">https://www.facebook.com/ChinaAirlinesJapan/</string>
