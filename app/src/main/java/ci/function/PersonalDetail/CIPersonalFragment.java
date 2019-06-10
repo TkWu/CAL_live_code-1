@@ -22,8 +22,6 @@ import com.chinaairlines.mobile30.R;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.TimeZone;
 
 import ci.function.Base.BaseFragment;
 import ci.function.Core.CIApplication;
@@ -782,76 +780,29 @@ public class CIPersonalFragment extends BaseFragment implements
 
     }
 
-    private boolean isDateNowBiggerThanUpdatetime() {
-        boolean isBigger = false;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String cer_update_date_utc = "2019-06-13 16:00:00";
-        sdf.setTimeZone(TimeZone.getTimeZone("gmt"));
-        String gmtTimeNow = sdf.format(new Date());
-
-        Date dt1 = null;
-        Date dt2 = null;
-
-        try {
-            dt1 = sdf.parse(gmtTimeNow);
-            dt2 = sdf.parse(cer_update_date_utc);
-        } catch (java.text.ParseException e) {
-            e.printStackTrace();
-        }
-        if (dt1.getTime() > dt2.getTime()) {
-            isBigger = true;
-        } else if (dt1.getTime() < dt2.getTime()) {
-            isBigger = false;
-        }
-        return isBigger;
-    }
-
     private int getCarResourceId() {
         //設定畫面資訊
         int     iResource   = R.drawable.img_dynasty_flyer_paragon_personal;
         String  strCardType = CIApplication.getLoginInfo().GetCardType();
 
-        if (isDateNowBiggerThanUpdatetime()) {
-            switch (strCardType) {
-                case CICardType.DYNA:
-                    m_tvCardData_cardvalid.setVisibility(View.GONE);
-                    iResource = R.drawable.img_dynasty_flyer_personal;
-                    break;
-                case CICardType.EMER:
-                    m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
-                    iResource = R.drawable.img_dynasty_flyer_emerald_personal;
-                    break;
-                case CICardType.GOLD:
-                    m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
-                    iResource = R.drawable.img_dynasty_flyer_gold_personal;
-                    break;
-                case CICardType.PARA:
-                    m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
-                    iResource = R.drawable.img_dynasty_flyer_paragon_personal;
-                    break;
-            }
-        }else{
-            switch (strCardType) {
-                case CICardType.DYNA:
-                    m_tvCardData_cardvalid.setVisibility(View.GONE);
-                    iResource = R.drawable.img_dynasty_flyer_personal_o;
-                    break;
-                case CICardType.EMER:
-                    m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
-                    iResource = R.drawable.img_dynasty_flyer_emerald_personal_o;
-                    break;
-                case CICardType.GOLD:
-                    m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
-                    iResource = R.drawable.img_dynasty_flyer_gold_personal_o;
-                    break;
-                case CICardType.PARA:
-                    m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
-                    iResource = R.drawable.img_dynasty_flyer_paragon_personal_o;
-                    break;
-
-            }
+        switch (strCardType) {
+            case CICardType.DYNA:
+                m_tvCardData_cardvalid.setVisibility(View.GONE);
+                iResource = R.drawable.img_dynasty_flyer_personal;
+                break;
+            case CICardType.EMER:
+                m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
+                iResource = R.drawable.img_dynasty_flyer_emerald_personal;
+                break;
+            case CICardType.GOLD:
+                m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
+                iResource = R.drawable.img_dynasty_flyer_gold_personal;
+                break;
+            case CICardType.PARA:
+                m_tvCardData_cardvalid.setVisibility(View.VISIBLE);
+                iResource = R.drawable.img_dynasty_flyer_paragon_personal;
+                break;
         }
-
 
         return iResource;
     }
