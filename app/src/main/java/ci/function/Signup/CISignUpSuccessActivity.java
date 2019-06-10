@@ -6,10 +6,15 @@ import android.os.Message;
 import android.support.v4.app.FragmentManager;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chinaairlines.mobile30.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 import ci.function.Core.CIApplication;
 import ci.function.Main.BaseActivity;
@@ -117,6 +122,7 @@ public class CISignUpSuccessActivity extends BaseActivity implements View.OnClic
 
     private TextView        m_tvCardNo      = null;
     private TextView        m_tvCardMsg     = null;
+    private ImageView       m_imCardType    = null;
 
     private int m_iViewId = 0;
     @Override
@@ -141,6 +147,7 @@ public class CISignUpSuccessActivity extends BaseActivity implements View.OnClic
 
         m_tvCardNo          = (TextView) findViewById(R.id.tv_card_no);
         m_tvCardMsg         = (TextView) findViewById(R.id.tv_card_msg);
+        m_imCardType        = (ImageView) findViewById(R.id.iv_card_type);
 
         switch (m_iViewId) {
             case ViewIdDef.VIEW_ID_MY_TRIPS:
@@ -176,6 +183,12 @@ public class CISignUpSuccessActivity extends BaseActivity implements View.OnClic
 
             //註冊完成自動幫用戶登入系統
             CILoginWSPresenter.getInstance(m_LoginWsListener).LoginWithCombineSocialFromWS(req);
+        }
+
+        if(isDateNowBiggerThanUpdatetime()){
+            m_imCardType.setImageResource(R.drawable.img_dynasty_flyer);
+        }else{
+            m_imCardType.setImageResource(R.drawable.img_dynasty_flyer_o);
         }
     }
 
@@ -231,5 +244,29 @@ public class CISignUpSuccessActivity extends BaseActivity implements View.OnClic
         super.onDestroy();
         CILoginWSPresenter.getInstance(null);
 
+    }
+
+    private boolean isDateNowBiggerThanUpdatetime() {
+        boolean isBigger = false;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String cer_update_date_utc = "2019-06-13 16:00:00";
+        sdf.setTimeZone(TimeZone.getTimeZone("gmt"));
+        String gmtTimeNow = sdf.format(new Date());
+
+        Date dt1 = null;
+        Date dt2 = null;
+
+        try {
+            dt1 = sdf.parse(gmtTimeNow);
+            dt2 = sdf.parse(cer_update_date_utc);
+        } catch (java.text.ParseException e) {
+            e.printStackTrace();
+        }
+        if (dt1.getTime() > dt2.getTime()) {
+            isBigger = true;
+        } else if (dt1.getTime() < dt2.getTime()) {
+            isBigger = false;
+        }
+        return isBigger;
     }
 }
