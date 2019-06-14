@@ -119,6 +119,13 @@
       "name_cn": "中华民国臺湾地区入出境许可证(入台证)",
       "name_en": "Exit & Entry Permit Taiwan Republic Of China",
       "name_jp": "Exit & Entry Permit Taiwan Republic Of China"
+    },
+    {
+      "code_1A": "A",
+      "name_tw": "美國地址",
+      "name_cn": "美國地址",
+      "name_en": "美國地址",
+      "name_jp": "美國地址"
     }
   ]
 }

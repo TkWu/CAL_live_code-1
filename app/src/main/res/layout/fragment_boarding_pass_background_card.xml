@@ -30,8 +30,6 @@
             android:scaleType="fitXY"
             android:src="@drawable/bg_card_hole"/>
 
-
-
         <TextView
             android:id="@+id/tv_name"
             style="@style/regular"
