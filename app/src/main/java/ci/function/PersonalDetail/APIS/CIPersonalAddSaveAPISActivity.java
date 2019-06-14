@@ -22,8 +22,10 @@ import java.util.HashSet;
 import java.util.Locale;
 
 import ci.function.Core.CIApplication;
+import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.TextField.Base.CITextFieldFragment;
+import ci.ui.TextField.CIAccountTextFieldFragment;
 import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ui.TextField.CIApisNationalTextFieldFragment;
 import ci.ui.TextField.CIApisStateTextFieldFragment;
@@ -236,9 +238,10 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private static final int ISSUE_CD       = 2;
 //    private static final int COUNTRY_CD     = 0;
 
-    private CIPersonalAddAPISType m_type = CIPersonalAddAPISType.ADD_MY_APIS;
-    private CIApisDocmuntTextFieldFragment.EType m_apisType = null;
+    private CIPersonalAddAPISType m_type;
+    private CIAddSaveAPISDocTypeActivity.EType m_apis_fun_entrance = null;
     private String m_strAPISName = "";
+    private String m_strAPISCode = "";
     private String m_strUserName = "";
 //    private String[] m_strData;
 
@@ -250,21 +253,30 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
     private RelativeLayout              m_rlayout                           = null;
 
-    private TextView                    m_tvMsg                             = null;
+//    private TextView                    m_tvMsg                             = null;
     private TextView                    m_tvName                            = null;
 
-    private LinearLayout                m_llayout_name                      = null;
+    private LinearLayout                m_ll_companions_name                     = null;
     private CITextFieldFragment         m_FirstNamefragment                 = null,
                                         m_LastNamefragment                  = null;
 
-    private TwoItemSelectBar            m_vGender                           = null;
+    private LinearLayout                m_ll_doc_info                         = null;
+    private CITextFieldFragment         m_DocumentTypefragment              = null,
+                                        m_DocumentFreeNamefragment          = null;
+
+    private LinearLayout                m_ll_basic_info                       = null;
+    private TwoItemSelectBar            m_v_basic_gender                      = null;
     private CITextFieldFragment         m_DateOfBirthdayfragment            = null,
                                         m_ResidentCountryFragment           = null,
-                                        m_Nationalityfragment               = null,
-                                        m_DocumentTypefragment              = null,
-                                        m_DocumentNoFragment                = null,
+                                        m_Nationalityfragment               = null;
+
+
+    private LinearLayout                m_ll_document_info                    = null;
+    private TwoItemSelectBar            m_v_doc_gender                        = null;
+    private CITextFieldFragment         m_DocumentNoFragment                = null,
                                         m_IssueCountryFragment              = null,
                                         m_DocExpiryDatefragment             = null;
+
 
     private LinearLayout                m_llayout_Address_Info              = null;
     private CITextFieldFragment         m_AddressNationalityfragment        = null,
@@ -287,16 +299,25 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        String mode = getIntent().getStringExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE);
-        m_apisType = (CIApisDocmuntTextFieldFragment.EType)getIntent()
-                .getSerializableExtra(CIApisDocmuntTextFieldFragment.APIS_TYPE);
+        String mode = getIntent().getStringExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE);//APIS功能(新增／編輯  自己／同行)
         if (null != mode) {
             m_type = CIPersonalAddAPISType.valueOf(mode);
         }
+        SLog.d("m_type: "+m_type.name());
 
-        String strAPISName = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_TAG);
+        m_apis_fun_entrance = (CIAddSaveAPISDocTypeActivity.EType)getIntent()       //APIS編輯進入點  個人資訊／報到時
+                .getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE);
+
+
+        String strAPISName = getIntent().getExtras().getString(CIAddSaveAPISDocTypeActivity.AOIS_OBJ_VALUE); //APIS名稱(針對語系)
+
         if (null != strAPISName && 0 < strAPISName.length()) {
             m_strAPISName = strAPISName;
+        }
+
+        String strData = getIntent().getExtras().getString(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
+        if (null != strData) {
+            m_strAPISCode = strData;
         }
 
         String strUserName = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
@@ -304,12 +325,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             m_strUserName = strUserName;
         }else {
             m_strUserName = CIApplication.getLoginInfo().GetUserName();
-        }
-
-        String strData = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_DATA_TAG);
-        if (null != strData) {
-//            m_strData = strData.split(";");
-            m_apisEntity = GsonTool.toObject(strData,CIApisEntity.class);
         }
 
         super.onCreate(savedInstanceState);
@@ -324,18 +339,18 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     @Override
     protected void initialLayoutComponent() {
 
-        if( m_arApisDocmuntList == null || m_arApisDocmuntList.size() == 0 ) {
-            m_arApisDocmuntList = CIAPISPresenter.getInstance().fetchApisList();
-        }
-
-        String[] apisDocmuntList = new String[m_arApisDocmuntList.size()];
-        for( int iPos = 0; iPos < m_arApisDocmuntList.size() ; iPos++ ) {
-            String strName = m_arApisDocmuntList.get(iPos).getName(CIApplication.getLanguageInfo().getLanguage_Locale());
-            apisDocmuntList[iPos] = strName;
-        }
-        if( m_apisDocmuntType == null ) {
-            m_apisDocmuntType = CIAPISPresenter.getInstance().fetchApisDocmuntMap();
-        }
+//        if( m_arApisDocmuntList == null || m_arApisDocmuntList.size() == 0 ) {
+//            m_arApisDocmuntList = CIAPISPresenter.getInstance().fetchApisList();
+//        }
+//
+//        String[] apisDocmuntList = new String[m_arApisDocmuntList.size()];
+//        for( int iPos = 0; iPos < m_arApisDocmuntList.size() ; iPos++ ) {
+//            String strName = m_arApisDocmuntList.get(iPos).getName(CIApplication.getLanguageInfo().getLanguage_Locale());
+//            apisDocmuntList[iPos] = strName;
+//        }
+//        if( m_apisDocmuntType == null ) {
+//            m_apisDocmuntType = CIAPISPresenter.getInstance().fetchApisDocmuntMap();
+//        }
 
         m_Navigationbar = (NavigationBar) findViewById(R.id.toolbar);
         m_flayout_Content = (FrameLayout) findViewById(R.id.container);
@@ -343,53 +358,63 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         View ViewContent = View.inflate(this, R.layout.fragment_personal_add_save_apis, null);
         m_flayout_Content.addView(ViewContent);
 
-//        m_sv            = (ScrollView) ViewContent.findViewById(R.id.sv_root);
-//        m_bitmap        = ImageHandle.getLocalBitmap(m_Context, R.drawable.bg_login, 1);
-//        Drawable drawable = new BitmapDrawable(m_Context.getResources(), m_bitmap);
-//        m_sv.setBackground(drawable);
-
-        m_vGender       = (TwoItemSelectBar) ViewContent.findViewById(R.id.v_gender);
-        m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
+////        m_sv            = (ScrollView) ViewContent.findViewById(R.id.sv_root);
+////        m_bitmap        = ImageHandle.getLocalBitmap(m_Context, R.drawable.bg_login, 1);
+////        Drawable drawable = new BitmapDrawable(m_Context.getResources(), m_bitmap);
+////        m_sv.setBackground(drawable);
+//
+//        m_vGender       = (TwoItemSelectBar) ViewContent.findViewById(R.id.v_gender);
+//        m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
 
         m_rlayout                   = (RelativeLayout) ViewContent.findViewById(R.id.rlayout);
         m_rlayout.setOnTouchListener(this);
 
-        m_tvMsg                     = (TextView) ViewContent.findViewById(R.id.tv_msg);
+//        m_tvMsg                     = (TextView) ViewContent.findViewById(R.id.tv_msg);
         m_tvName                    = (TextView) ViewContent.findViewById(R.id.tv_name);
         if ( 0 < m_strUserName.length())
             m_tvName.setText(m_strUserName);
+        SLog.d("m_type"+m_strUserName);
 
-        m_llayout_name              = (LinearLayout)ViewContent.findViewById(R.id.ll_companions_name);
+        m_ll_companions_name        = (LinearLayout)ViewContent.findViewById(R.id.ll_companions_name);
         m_FirstNamefragment         = CIOnlyEnglishTextFieldFragment.newInstance("*" + getString(R.string.sign_up_first_name));
         m_LastNamefragment          = CIOnlyEnglishTextFieldFragment.newInstance("*" + getString(R.string.sign_up_last_name));
 
+        m_ll_doc_info               = (LinearLayout)ViewContent.findViewById(R.id.ll_doc_info);
+        m_DocumentTypefragment      = CICustomTextFieldFragment.newInstance( "*" + m_strAPISName, CITextFieldFragment.TypeMode.ONLY_DISPLAY);
+        m_DocumentFreeNamefragment  = CICustomTextFieldFragment.newInstance("*" + getString(R.string.document_type), CITextFieldFragment.TypeMode.NORMAL);
+
+        m_ll_basic_info             = (LinearLayout)ViewContent.findViewById(R.id.ll_basic_info);
+        m_v_basic_gender            = (TwoItemSelectBar) ViewContent.findViewById(R.id.v_basic_gender);
+        m_v_basic_gender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
         m_DateOfBirthdayfragment    = CIDateOfBirthdayTextFieldFragment.newInstance("*"+getString(R.string.inquiry_input_box_date_of_birth_hint));
         m_ResidentCountryFragment   = CIApisNationalTextFieldFragment.newInstance("*" + getString(R.string.resident_country),CIApisNationalTextFieldFragment.EMode.ResidentNational);
         m_Nationalityfragment       = CIApisNationalTextFieldFragment.newInstance("*" + getString(R.string.sign_up_nationality),CIApisNationalTextFieldFragment.EMode.IssueNational);
 
-        m_DocumentTypefragment      = CIApisDocmuntTextFieldFragment.newInstance( "*" + getString(R.string.document_type), m_apisType);
 
-        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
-            HashSet<String> docTypeList = CIAPISPresenter.getInstance().getMyApisExistDocumentTypeList(CIApplication.getLoginInfo().GetUserMemberCardNo());
-            if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type && null != m_apisEntity ) {
-                docTypeList.remove(m_apisEntity.doc_type);
-            }
-            ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeFilter(docTypeList);
-        }
+        m_ll_document_info          = (LinearLayout)ViewContent.findViewById(R.id.ll_document_info);
+        m_v_doc_gender              = (TwoItemSelectBar) ViewContent.findViewById(R.id.v_basic_gender);
+        m_v_doc_gender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
+
+//        m_DocumentTypefragment      = CIApisDocmuntTextFieldFragment.newInstance( "*" + getString(R.string.document_type), m_apisType);
+//
+//        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
+//            HashSet<String> docTypeList = CIAPISPresenter.getInstance().getMyApisExistDocumentTypeList(CIApplication.getLoginInfo().GetUserMemberCardNo());
+//            if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type && null != m_apisEntity ) {
+//                docTypeList.remove(m_apisEntity.doc_type);
+//            }
+//            ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeFilter(docTypeList);
+//        }
 
         m_DocumentNoFragment        = CIPassportNumberFieldText.newInstance("*" + getString(R.string.document_number));
         m_IssueCountryFragment      = CIApisNationalTextFieldFragment.newInstance("*" + getString(R.string.country_of_issuance), CIApisNationalTextFieldFragment.EMode.IssueNational);
         m_DocExpiryDatefragment     = CIDateOfExpiryTextFieldFragment.newInstance("*" + getString(R.string.date_of_expiry));
 
         m_llayout_Address_Info      = (LinearLayout)ViewContent.findViewById(R.id.llayout_Address);
-
         //顯示Address 欄位
-        m_llayout_Address_Info.setVisibility(View.VISIBLE);
-
-
+        //m_llayout_Address_Info.setVisibility(View.VISIBLE);
         m_AddressNationalityfragment= CIApisNationalTextFieldFragment.newInstance("*" + getString(R.string.apis_address_country),CIApisNationalTextFieldFragment.EMode.IssueNational);
         m_CityStatfragment          = CIApisStateTextFieldFragment.newInstance("*" + getString(R.string.city_stat));
-        m_CityCountyDistrictfragment= CICustomTextFieldFragment.newInstance("*" + getString(R.string.city_county_district),NORMAL);
+        m_CityCountyDistrictfragment= CICustomTextFieldFragment.newInstance("*" + getString(R.string.city_county_district),  CITextFieldFragment.TypeMode.NORMAL);
         m_Streetfragment            = CIPassportNumberFieldText.newInstance("*" + getString(R.string.street));
         m_ZipCodeFragment           = CIPassportNumberFieldText.newInstance("*" + getString(R.string.zip_code));
 
@@ -403,29 +428,39 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     protected void setTextSizeAndLayoutParams(ViewScaleDef vScaleDef) {
         vScaleDef.selfAdjustAllView(m_flayout_Content);
 
-        m_tvMsg.setMinHeight(vScaleDef.getLayoutHeight(113.3));
+        m_ll_doc_info.setVisibility(View.VISIBLE);
 
-        switch (m_type){
+        switch (m_strAPISCode) {
+            case "N":
+                m_ll_basic_info.setVisibility(View.VISIBLE);
+                m_ll_document_info.setVisibility(View.GONE);
+                m_llayout_Address_Info.setVisibility(View.GONE);
+                break;
+            case "A":
+                m_ll_basic_info.setVisibility(View.GONE);
+                m_ll_document_info.setVisibility(View.GONE);
+                m_llayout_Address_Info.setVisibility(View.VISIBLE);
+                break;
+            default:
+                m_ll_basic_info.setVisibility(View.GONE);
+                m_ll_document_info.setVisibility(View.VISIBLE);
+                m_llayout_Address_Info.setVisibility(View.GONE);
+                break;
+        }
+
+        switch (m_type) {
             case ADD_MY_APIS:
                 m_tvName.setVisibility(View.VISIBLE);
-                m_llayout_name.setVisibility(View.GONE);
-                m_tvMsg.setVisibility(View.VISIBLE);
-                break;
-            case EDIT_MY_APIS:
-                m_tvName.setVisibility(View.VISIBLE);
-                m_llayout_name.setVisibility(View.GONE);
-                m_tvMsg.setVisibility(View.GONE);
-                break;
+                m_ll_companions_name.setVisibility(View.GONE);
             case ADD_COMPANAIONS_APIS:
                 m_tvName.setVisibility(View.GONE);
-                m_llayout_name.setVisibility(View.VISIBLE);
-                m_tvMsg.setVisibility(View.VISIBLE);
-                break;
-            case EDIT_COMPANAIONS_APIS:
+                m_ll_companions_name.setVisibility(View.VISIBLE);
+            case EDIT_MY_APIS:
                 m_tvName.setVisibility(View.VISIBLE);
-                m_llayout_name.setVisibility(View.GONE);
-                m_tvMsg.setVisibility(View.GONE);
-                break;
+                m_ll_companions_name.setVisibility(View.GONE);
+            case EDIT_COMPANAIONS_APIS:
+                m_tvName.setVisibility(View.GONE);
+                m_ll_companions_name.setVisibility(View.VISIBLE);
         }
     }
 
@@ -447,10 +482,14 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         fragmentTransaction.replace( R.id.flayout_firstname,    m_FirstNamefragment,        m_FirstNamefragment.toString());
         fragmentTransaction.replace( R.id.flayout_lastname,     m_LastNamefragment,         m_LastNamefragment.toString());
 
+        fragmentTransaction.replace( R.id.flayout_doc_type,     m_DocumentTypefragment,         m_DocumentTypefragment.toString());
+        fragmentTransaction.replace( R.id.flayout_doc_freename,     m_DocumentFreeNamefragment,         m_DocumentFreeNamefragment.toString());
+
+
         fragmentTransaction.replace( R.id.flayout_birthday,     m_DateOfBirthdayfragment,   m_DateOfBirthdayfragment.toString());
         fragmentTransaction.replace( R.id.flayout_country,      m_ResidentCountryFragment,  m_ResidentCountryFragment.toString());
         fragmentTransaction.replace( R.id.flayout_nationality,  m_Nationalityfragment,      m_Nationalityfragment.toString());
-        fragmentTransaction.replace( R.id.flayout_doc_type,     m_DocumentTypefragment,     m_DocumentTypefragment.toString());
+        //fragmentTransaction.replace( R.id.flayout_doc_type,     m_DocumentTypefragment,     m_DocumentTypefragment.toString());
         fragmentTransaction.replace( R.id.flayout_doc_no,       m_DocumentNoFragment,       m_DocumentNoFragment.toString());
         fragmentTransaction.replace( R.id.flayout_issue_country,m_IssueCountryFragment,     m_IssueCountryFragment.toString());
         fragmentTransaction.replace( R.id.flayout_date,         m_DocExpiryDatefragment,    m_DocExpiryDatefragment.toString());
@@ -577,70 +616,70 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private void setAPISData() {
 
         //Set Membership data
-        if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type
-                || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
-
-            final String strGender = m_apisEntity.sex ;
-            if( CIApisEntity.SEX_FEMALE.equals(strGender) ) {
-                m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.RIGHT);
-            } else {
-                m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
-            }
-
-
-            m_DateOfBirthdayfragment.setText(m_apisEntity.birthday);
-            ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).setFormatedDate(m_apisEntity.birthday);
-
-        }
-
-        if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
-            m_FirstNamefragment.setText(m_apisEntity.first_name );
-            m_FirstNamefragment.setLock(true);
-
-            m_LastNamefragment.setText( m_apisEntity.last_name );
-            m_LastNamefragment.setLock(true);
-        }
-
-        m_ResidentCountryFragment.setText(getCountryName(m_apisEntity.resident_city, RESIDENT_CD));
-        ((CIApisNationalTextFieldFragment) m_ResidentCountryFragment).setCountryCd(m_apisEntity.resident_city);
-
-        m_Nationalityfragment.setText(getCountryName(m_apisEntity.nationality, ISSUE_CD));
-        ((CIApisNationalTextFieldFragment) m_Nationalityfragment).setCountryCd(m_apisEntity.nationality);
-
-        m_DocumentTypefragment.setText(getDocmuntName(m_apisEntity.doc_type));
-        ((CIApisDocmuntTextFieldFragment) m_DocumentTypefragment).setDocmuntType(m_apisEntity.doc_type);
-        m_DocumentTypefragment.setLock(true);
-
-
-        m_DocumentNoFragment.setText(m_apisEntity.doc_no);
-
-        m_IssueCountryFragment.setText(getCountryName(m_apisEntity.issue_country, ISSUE_CD));
-        ((CIApisNationalTextFieldFragment) m_IssueCountryFragment).setCountryCd(m_apisEntity.issue_country);
-
-
-        ((CIDateOfExpiryTextFieldFragment)m_DocExpiryDatefragment).setFormatedDate(m_apisEntity.doc_expired_date);
-        m_DocExpiryDatefragment.setText( m_apisEntity.doc_expired_date );
-
-        //設定City/State
-        if( !TextUtils.isEmpty(m_apisEntity.addr_state)) {
-            ((CIApisStateTextFieldFragment) m_CityStatfragment).setStateCode(m_apisEntity.addr_state);
-            m_CityStatfragment.setText(getStateName(m_apisEntity.addr_state));//getCountryName(m_apisEntity.addr_state,COUNTRY_CD) );
-        }
-
-        //設定City/Country/District
-        if( !TextUtils.isEmpty(m_apisEntity.addr_city)) {
-            m_CityCountyDistrictfragment.setText(m_apisEntity.addr_city);
-        }
-
-        //設定street
-        if( !TextUtils.isEmpty(m_apisEntity.addr_street)) {
-            m_Streetfragment.setText( m_apisEntity.addr_street);
-        }
-
-        //設定 zipcode
-        if( !TextUtils.isEmpty(m_apisEntity.addr_zipcode)) {
-            m_ZipCodeFragment.setText( m_apisEntity.addr_zipcode);
-        }
+//        if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type
+//                || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+//
+//            final String strGender = m_apisEntity.sex ;
+//            if( CIApisEntity.SEX_FEMALE.equals(strGender) ) {
+//                m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.RIGHT);
+//            } else {
+//                m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
+//            }
+//
+//
+//            m_DateOfBirthdayfragment.setText(m_apisEntity.birthday);
+//            ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).setFormatedDate(m_apisEntity.birthday);
+//
+//        }
+//
+//        if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+//            m_FirstNamefragment.setText(m_apisEntity.first_name );
+//            m_FirstNamefragment.setLock(true);
+//
+//            m_LastNamefragment.setText( m_apisEntity.last_name );
+//            m_LastNamefragment.setLock(true);
+//        }
+//
+//        m_ResidentCountryFragment.setText(getCountryName(m_apisEntity.resident_city, RESIDENT_CD));
+//        ((CIApisNationalTextFieldFragment) m_ResidentCountryFragment).setCountryCd(m_apisEntity.resident_city);
+//
+//        m_Nationalityfragment.setText(getCountryName(m_apisEntity.nationality, ISSUE_CD));
+//        ((CIApisNationalTextFieldFragment) m_Nationalityfragment).setCountryCd(m_apisEntity.nationality);
+//
+//        m_DocumentTypefragment.setText(getDocmuntName(m_apisEntity.doc_type));
+//        ((CIApisDocmuntTextFieldFragment) m_DocumentTypefragment).setDocmuntType(m_apisEntity.doc_type);
+//        m_DocumentTypefragment.setLock(true);
+//
+//
+//        m_DocumentNoFragment.setText(m_apisEntity.doc_no);
+//
+//        m_IssueCountryFragment.setText(getCountryName(m_apisEntity.issue_country, ISSUE_CD));
+//        ((CIApisNationalTextFieldFragment) m_IssueCountryFragment).setCountryCd(m_apisEntity.issue_country);
+//
+//
+//        ((CIDateOfExpiryTextFieldFragment)m_DocExpiryDatefragment).setFormatedDate(m_apisEntity.doc_expired_date);
+//        m_DocExpiryDatefragment.setText( m_apisEntity.doc_expired_date );
+//
+//        //設定City/State
+//        if( !TextUtils.isEmpty(m_apisEntity.addr_state)) {
+//            ((CIApisStateTextFieldFragment) m_CityStatfragment).setStateCode(m_apisEntity.addr_state);
+//            m_CityStatfragment.setText(getStateName(m_apisEntity.addr_state));//getCountryName(m_apisEntity.addr_state,COUNTRY_CD) );
+//        }
+//
+//        //設定City/Country/District
+//        if( !TextUtils.isEmpty(m_apisEntity.addr_city)) {
+//            m_CityCountyDistrictfragment.setText(m_apisEntity.addr_city);
+//        }
+//
+//        //設定street
+//        if( !TextUtils.isEmpty(m_apisEntity.addr_street)) {
+//            m_Streetfragment.setText( m_apisEntity.addr_street);
+//        }
+//
+//        //設定 zipcode
+//        if( !TextUtils.isEmpty(m_apisEntity.addr_zipcode)) {
+//            m_ZipCodeFragment.setText( m_apisEntity.addr_zipcode);
+//        }
 
     }
 
@@ -684,7 +723,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 sendUpdateApisFromWS();
 
             } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type) {
-                saveCompanionsApisFromDB( getApisEntity() );
+                //要改
+                //saveCompanionsApisFromDB( getApisEntity() );
             }
 
         }
@@ -709,13 +749,14 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         @Override
         public void onAlertMsgDialog_Confirm() {
             //2016-07-22 第二次詢問只需要儲存, 不需要上傳
-            saveCompanionsApisFromDB(getApisEntity());
+            //要改
+            //saveCompanionsApisFromDB(getApisEntity());
             //sendInsertApisFromWS();
         }
 
         @Override
         public void onAlertMsgDialogg_Cancel() {
-            CIPersonalAddAPISActivity.this.finish();
+            CIPersonalAddSaveAPISActivity.this.finish();
         }
     };
 
@@ -784,11 +825,11 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
         }
 
-        if(TwoItemSelectBar.ESelectSMode.LEFT == m_vGender.getSelectModeParam() ) {
-            ciApisEntity.sex = CIApisEntity.SEX_MALE;
-        } else {
-            ciApisEntity.sex = CIApisEntity.SEX_FEMALE;
-        }
+//        if(TwoItemSelectBar.ESelectSMode.LEFT == m_vGender.getSelectModeParam() ) {
+//            ciApisEntity.sex = CIApisEntity.SEX_MALE;
+//        } else {
+//            ciApisEntity.sex = CIApisEntity.SEX_FEMALE;
+//        }
 
         ciApisEntity.birthday = ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).getFormatedDate();//CIApplication.getLoginInfo().GetBirthday();
 

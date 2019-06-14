@@ -20,7 +20,6 @@ import java.util.Locale;
 import ci.function.Core.CIApplication;
 import ci.function.Main.BaseActivity;
 import ci.ui.TextField.Adapter.CIMenusAdapter;
-import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.view.NavigationBar;
@@ -84,8 +83,9 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
     private CIMenusAdapter m_adapter           = null;
 
     private String                              m_strHint           = "";
-    public static final String                  VALUE               = "VALUE";
+    public static final String                  AOIS_OBJ_VALUE      = "AOIS_OBJ_VALUE";
     public static final String                  APIS_TYPE           = "APIS_TYPE";
+    public static final String                  APIS_FUN_ENTRANCE   = "APIS_FUN_ENTRANCE";
 
     public enum EType{
         Personal, CheckIn
@@ -95,12 +95,12 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
     private HashSet<CIApisDocmuntTypeEntity> m_SelectList = null;
 
     private CIPersonalAddAPISActivity.CIPersonalAddAPISType m_type = CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS;
-    private CIApisDocmuntTextFieldFragment.EType m_apisType = null;
+    private CIAddSaveAPISDocTypeActivity.EType m_apisType = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         String mode = getIntent().getStringExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE);
-        m_apisType = (CIApisDocmuntTextFieldFragment.EType)getIntent()
+        m_apisType = (CIAddSaveAPISDocTypeActivity.EType)getIntent()
                 .getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
         if (null != mode) {
             m_type = CIPersonalAddAPISActivity.CIPersonalAddAPISType.valueOf(mode);
@@ -205,13 +205,13 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
                 String text = (String) m_adapter.getItem(position);
                 Intent intent = new Intent();
 
+                intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE,
+                        CIPersonalAddSaveAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS.name()); //功能
                 Bundle bundle = new Bundle();
                 //要改
-                bundle.putSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE, CIApisDocmuntTextFieldFragment.EType.Personal);
-                bundle.putSerializable(UiMessageDef.BUNDLE_ACTIVITY_MODE,
-                        CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS.name());
-                bundle.putSerializable(VALUE, text);
-                bundle.putSerializable(DOCUMUNT_TYPE, m_arDocmuntType.get(position).code_1A);
+                bundle.putSerializable(APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal);//個人／checkin入口分類
+                bundle.putSerializable(AOIS_OBJ_VALUE, text);                                          //文件語系名稱
+                bundle.putSerializable(APIS_TYPE, m_arDocmuntType.get(position).code_1A);              //文件類型(代碼)
 
                 intent.putExtras(bundle);
                 intent.setClass(CIAddSaveAPISDocTypeActivity.this, CIPersonalAddSaveAPISActivity.class);

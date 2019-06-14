@@ -1354,7 +1354,7 @@ public class CISignUpActivity extends BaseActivity
             }
 
             /**城市英文姓名，國家為TW、CN以外時必填*/
-            if ( TextUtils.isEmpty(m_AddressCityFragment.getText()) ){
+            if ( TextUtils.isEmpty(m_AddressCityStateTextFragment.getText()) ){
                 return false;
             }
 

@@ -40,25 +40,24 @@
             android:focusable="true"
             android:focusableInTouchMode="true">
 
-            <TextView
-                android:id="@+id/tv_msg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="113.3px"
-                android:layout_marginLeft="30px"
-                android:layout_marginRight="30px"
-                android:layout_marginTop="20px"
-                android:layout_marginBottom="20px"
-                android:text="@string/add_apis_notice"
-                android:textColor="@color/white_four"
-                android:textSize="16px"
-                style="@style/light" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_msg"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:minHeight="113.3px"-->
+                <!--android:layout_marginLeft="30px"-->
+                <!--android:layout_marginRight="30px"-->
+                <!--android:layout_marginTop="20px"-->
+                <!--android:layout_marginBottom="20px"-->
+                <!--android:text="@string/add_apis_notice"-->
+                <!--android:textColor="@color/white_four"-->
+                <!--android:textSize="16px"-->
+                <!--style="@style/light" />-->
 
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_msg"
                 android:layout_marginLeft="30px"
                 android:layout_marginRight="30px"
                 android:layout_marginTop="20px"
@@ -68,28 +67,28 @@
                 android:textSize="20px"
                 style="@style/regular" />
 
-            <TextView
-                android:id="@+id/tv_document"
-                android:layout_width="match_parent"
-                android:layout_height="32px"
-                android:layout_below="@+id/tv_name"
-                android:layout_marginTop="20px"
-                android:background="@color/black_30"
-                android:gravity="center_vertical|left"
-                android:paddingEnd="30px"
-                android:paddingStart="30px"
-                android:singleLine="true"
-                android:text="@string/document_detail"
-                android:textColor="@color/white_four"
-                android:textSize="16px"
-                style="@style/regular" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_document"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="32px"-->
+                <!--android:layout_below="@+id/tv_name"-->
+                <!--android:layout_marginTop="20px"-->
+                <!--android:background="@color/black_30"-->
+                <!--android:gravity="center_vertical|left"-->
+                <!--android:paddingEnd="30px"-->
+                <!--android:paddingStart="30px"-->
+                <!--android:singleLine="true"-->
+                <!--android:text="@string/document_detail"-->
+                <!--android:textColor="@color/white_four"-->
+                <!--android:textSize="16px"-->
+                <!--style="@style/regular" />-->
 
             <LinearLayout
                 android:id="@+id/ll_companions_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20px"
-                android:layout_below="@id/tv_document"
+                android:layout_below="@id/tv_name"
                 android:orientation="vertical"
                 android:visibility="gone">
 
@@ -107,7 +106,31 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20px"
                     android:layout_marginRight="20px" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/ll_doc_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_below="@id/ll_companions_name"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <FrameLayout
+                    android:id="@+id/flayout_doc_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="9px" />
+
+                <FrameLayout
+                    android:id="@+id/flayout_doc_freename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="9px" />
             </LinearLayout>
 
             <LinearLayout
@@ -115,15 +138,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20px"
-                android:layout_below="@id/tv_document"
+                android:layout_below="@id/ll_doc_info"
                 android:orientation="vertical"
-                android:visibility="gone">
+                >
 
                 <ci.ui.view.TwoItemSelectBar
                     android:id="@+id/v_basic_gender"
                     android:layout_width="match_parent"
                     android:layout_height="24px"
-                    android:layout_below="@id/ll_companions_name"
+                    android:layout_below="@id/ll_doc_info"
                     android:layout_marginLeft="30px"
                     android:layout_marginRight="26px"
                     android:layout_marginTop="20px">
@@ -134,7 +157,7 @@
                     android:id="@+id/flayout_birthday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/v_gender"
+                    android:layout_below="@id/v_basic_gender"
                     android:layout_marginLeft="20px"
                     android:layout_marginRight="20px"
                     android:layout_marginTop="22px" />
@@ -159,39 +182,30 @@
 
             </LinearLayout>
 
-
             <LinearLayout
                 android:id="@+id/ll_document_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20px"
-                android:layout_below="@id/tv_document"
+                android:layout_below="@id/ll_doc_info"
                 android:orientation="vertical"
                 android:visibility="gone">
+
                 <ci.ui.view.TwoItemSelectBar
                     android:id="@+id/v_doc_gender"
                     android:layout_width="match_parent"
                     android:layout_height="24px"
-                    android:layout_below="@id/ll_companions_name"
+                    android:layout_below="@id/ll_doc_info"
                     android:layout_marginLeft="30px"
                     android:layout_marginRight="26px"
                     android:layout_marginTop="20px">
-
                 </ci.ui.view.TwoItemSelectBar>
-                <FrameLayout
-                    android:id="@+id/flayout_doc_type"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/flayout_nationality"
-                    android:layout_marginLeft="20px"
-                    android:layout_marginRight="20px"
-                    android:layout_marginTop="9px" />
 
                 <FrameLayout
                     android:id="@+id/flayout_doc_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/flayout_doc_type"
+                    android:layout_below="@id/v_doc_gender"
                     android:layout_marginLeft="20px"
                     android:layout_marginRight="20px"
                     android:layout_marginTop="9px" />
@@ -214,6 +228,7 @@
                     android:layout_marginRight="20px"
                     android:layout_marginTop="9px" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/llayout_Address"
                 android:layout_width="match_parent"
@@ -223,20 +238,20 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <TextView
-                    android:id="@+id/tv_address"
-                    android:layout_width="match_parent"
-                    android:layout_height="32px"
-                    android:layout_centerVertical="true"
-                    android:background="@color/black_30"
-                    android:gravity="center_vertical|left"
-                    android:paddingEnd="30px"
-                    android:paddingStart="30px"
-                    android:singleLine="true"
-                    android:text="@string/addapis_label_address"
-                    android:textColor="@color/white_four"
-                    android:textSize="16px"
-                    style="@style/regular" />
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_address"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="32px"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:background="@color/black_30"-->
+                    <!--android:gravity="center_vertical|left"-->
+                    <!--android:paddingEnd="30px"-->
+                    <!--android:paddingStart="30px"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:text="@string/addapis_label_address"-->
+                    <!--android:textColor="@color/white_four"-->
+                    <!--android:textSize="16px"-->
+                    <!--style="@style/regular" />-->
 
                 <FrameLayout
                     android:id="@+id/flayout_address_Nationality"
