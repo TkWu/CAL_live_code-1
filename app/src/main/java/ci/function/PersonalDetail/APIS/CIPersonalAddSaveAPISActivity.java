@@ -452,15 +452,19 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             case ADD_MY_APIS:
                 m_tvName.setVisibility(View.VISIBLE);
                 m_ll_companions_name.setVisibility(View.GONE);
+                break;
             case ADD_COMPANAIONS_APIS:
                 m_tvName.setVisibility(View.GONE);
                 m_ll_companions_name.setVisibility(View.VISIBLE);
+                break;
             case EDIT_MY_APIS:
                 m_tvName.setVisibility(View.VISIBLE);
                 m_ll_companions_name.setVisibility(View.GONE);
+                break;
             case EDIT_COMPANAIONS_APIS:
                 m_tvName.setVisibility(View.GONE);
                 m_ll_companions_name.setVisibility(View.VISIBLE);
+                break;
         }
     }
 
@@ -484,7 +488,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
         fragmentTransaction.replace( R.id.flayout_doc_type,     m_DocumentTypefragment,         m_DocumentTypefragment.toString());
         fragmentTransaction.replace( R.id.flayout_doc_freename,     m_DocumentFreeNamefragment,         m_DocumentFreeNamefragment.toString());
-
 
         fragmentTransaction.replace( R.id.flayout_birthday,     m_DateOfBirthdayfragment,   m_DateOfBirthdayfragment.toString());
         fragmentTransaction.replace( R.id.flayout_country,      m_ResidentCountryFragment,  m_ResidentCountryFragment.toString());
