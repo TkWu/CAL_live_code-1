@@ -240,6 +240,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
     private CIPersonalAddAPISType m_type;
     private CIAddSaveAPISDocTypeActivity.EType m_apis_fun_entrance = null;
+    private CIApisDocmuntTextFieldFragment.EType m_apisType = null;
+
     private String m_strAPISName = "";
     private String m_strAPISCode = "";
     private String m_strUserName = "";
@@ -260,9 +262,9 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private CITextFieldFragment         m_FirstNamefragment                 = null,
                                         m_LastNamefragment                  = null;
 
-    private LinearLayout                m_ll_doc_info                         = null;
-    private CITextFieldFragment         m_DocumentTypefragment              = null,
-                                        m_DocumentFreeNamefragment          = null;
+    private LinearLayout                    m_ll_doc_info                   = null;
+    private CIApisDocmuntTextFieldFragment  m_DocumentTypefragment          = null;
+    private CITextFieldFragment         m_DocumentFreeNamefragment          = null;
 
     private LinearLayout                m_ll_basic_info                       = null;
     private TwoItemSelectBar            m_v_basic_gender                      = null;
@@ -289,7 +291,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
     private String                      m_errorMsg                          = null;
 
-    private HashMap<String, CIApisDocmuntTypeEntity>    m_apisDocmuntType   = null;
+    //private HashMap<String, CIApisDocmuntTypeEntity>    m_apisDocmuntType   = null;
+    private CIApisDocmuntTypeEntity                     m_apisDocmuntType   = null;
     private ArrayList<CIApisDocmuntTypeEntity>          m_arApisDocmuntList = null;
     private CIApisEntity                                m_apisEntity        = null;
     private CIApisEntity                                m_newApisEntity     = null;
@@ -305,14 +308,15 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         }
         SLog.d("m_type: "+m_type.name());
 
-        m_apis_fun_entrance = (CIAddSaveAPISDocTypeActivity.EType)getIntent()       //APIS編輯進入點  個人資訊／報到時
-                .getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE);
+        String fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
+        m_apis_fun_entrance = CIAddSaveAPISDocTypeActivity.EType.valueOf(fun_entry);
+        m_apisType = CIApisDocmuntTextFieldFragment.EType.valueOf(fun_entry);
 
+        m_apisDocmuntType = (CIApisDocmuntTypeEntity)getIntent().getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE); //APIS類型物件
 
-        String strAPISName = getIntent().getExtras().getString(CIAddSaveAPISDocTypeActivity.AOIS_OBJ_VALUE); //APIS名稱(針對語系)
-
-        if (null != strAPISName && 0 < strAPISName.length()) {
-            m_strAPISName = strAPISName;
+        if (null != m_apisDocmuntType) {
+            Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
+            m_strAPISName = m_apisDocmuntType.getName(locale);
         }
 
         String strData = getIntent().getExtras().getString(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
@@ -380,7 +384,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         m_LastNamefragment          = CIOnlyEnglishTextFieldFragment.newInstance("*" + getString(R.string.sign_up_last_name));
 
         m_ll_doc_info               = (LinearLayout)ViewContent.findViewById(R.id.ll_doc_info);
-        m_DocumentTypefragment      = CICustomTextFieldFragment.newInstance( "*" + m_strAPISName, CITextFieldFragment.TypeMode.ONLY_DISPLAY);
+        m_DocumentTypefragment      = CIApisDocmuntTextFieldFragment.newInstance( "*" + getString(R.string.document_type), m_apisType);
         m_DocumentFreeNamefragment  = CICustomTextFieldFragment.newInstance("*" + getString(R.string.document_type), CITextFieldFragment.TypeMode.NORMAL);
 
         m_ll_basic_info             = (LinearLayout)ViewContent.findViewById(R.id.ll_basic_info);
@@ -608,7 +612,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             m_ZipCodeFragment.setMaxLenght(5);
         }
 
-        if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+        if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type
+        ||CIPersonalAddAPISType.ADD_MY_APIS == m_type) {
             setAPISData();
         }
 
@@ -649,9 +654,9 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 //        m_Nationalityfragment.setText(getCountryName(m_apisEntity.nationality, ISSUE_CD));
 //        ((CIApisNationalTextFieldFragment) m_Nationalityfragment).setCountryCd(m_apisEntity.nationality);
 //
-//        m_DocumentTypefragment.setText(getDocmuntName(m_apisEntity.doc_type));
-//        ((CIApisDocmuntTextFieldFragment) m_DocumentTypefragment).setDocmuntType(m_apisEntity.doc_type);
-//        m_DocumentTypefragment.setLock(true);
+        m_DocumentTypefragment.setText(getDocmuntName(m_apisEntity.doc_type));
+        ((CIApisDocmuntTextFieldFragment) m_DocumentTypefragment).setDocmuntType(m_apisEntity.doc_type);
+        m_DocumentTypefragment.setLock(true);
 //
 //
 //        m_DocumentNoFragment.setText(m_apisEntity.doc_no);
