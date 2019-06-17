@@ -83,7 +83,7 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
     private CIMenusAdapter m_adapter           = null;
 
     private String                              m_strHint           = "";
-    public static final String                  AOIS_OBJ_VALUE      = "AOIS_OBJ_VALUE";
+    public static final String                  APIS_OBJ_VALUE      = "APIS_OBJ_VALUE";
     public static final String                  APIS_TYPE           = "APIS_TYPE";
     public static final String                  APIS_FUN_ENTRANCE   = "APIS_FUN_ENTRANCE";
 
@@ -202,15 +202,19 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
         m_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String text = (String) m_adapter.getItem(position);
+//                String text = (String) m_adapter.getItem(position);
+
+                CIApisDocmuntTypeEntity data = m_arDocmuntType.get(position);
+
                 Intent intent = new Intent();
 
                 intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE,
                         CIPersonalAddSaveAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS.name()); //功能
+                intent.putExtra(APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
+
                 Bundle bundle = new Bundle();
                 //要改
-                bundle.putSerializable(APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal);//個人／checkin入口分類
-                bundle.putSerializable(AOIS_OBJ_VALUE, text);                                          //文件語系名稱
+                bundle.putSerializable(APIS_OBJ_VALUE, data);                                          //文件物件
                 bundle.putSerializable(APIS_TYPE, m_arDocmuntType.get(position).code_1A);              //文件類型(代碼)
 
                 intent.putExtras(bundle);
