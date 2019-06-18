@@ -1104,4 +1104,5 @@
     <!--643924 NoShowFee_WS_URL -->
     <string name="noshowfee_url">https://calec.china-airlines.com/NoShowFee/PNRQuery.aspx?lang=en-us&#038;country=us&#038;locale=en</string>
 
+    <string name="apis_my_freename_hint">自訂證件名稱</string>
 </resources>
