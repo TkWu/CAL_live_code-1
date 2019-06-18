@@ -1082,5 +1082,6 @@
     <string name="braoding_pass_screenshots_success">截圖成功\n若航班有異動,需重新截圖</string>
     <string name="braoding_pass_screenshots_fail">截圖失敗</string>
     <string name="permissions_error">無開啟權限，無法使用此功能</string>
+    <string name="apis_my_freename_hint">自訂證件名稱</string>
 
 </resources>

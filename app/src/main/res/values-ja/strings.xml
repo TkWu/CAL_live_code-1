@@ -1090,5 +1090,6 @@
     <string name="braoding_pass_screenshots_success">スクリーンショット 成功。\nフライトスケジュールに変更があった場合、自動で更新はされません。お客様ご自身でスクリーンショットを削除し、再度追加してください。</string>
     <string name="braoding_pass_screenshots_fail">スクリーンショット 失敗</string>
     <string name="permissions_error">本機能の使用権限がありません</string>
+    <string name="apis_my_freename_hint">自訂證件名稱</string>
 </resources>
 

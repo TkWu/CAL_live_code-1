@@ -817,6 +817,7 @@
     <string name="passport">Passport</string>
     <string name="usa_permanent_resident_card">US Permanent Resident Card</string>
     <string name="companions_apis">Companion\'s Document</string>
+    <string name="apis_my_freename_hint">自訂證件名稱</string>
     <string name="advance_passenger_information_system">(Advance Passenger Information System)</string>
     <string name="member_card_detail">Membership Card Details</string>
     <string name="this_qrcode_contains_your_personal_infor">This QR code contains your membership card details</string>

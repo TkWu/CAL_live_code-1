@@ -197,16 +197,36 @@ public class CIPersonalFragment extends BaseFragment implements
 
         @Override
         public void OnAddCompanionsAPISClick() {
+//            Intent intent = new Intent();
+//            intent.putExtra(
+//                    UiMessageDef.BUNDLE_ACTIVITY_MODE,
+//                    CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_COMPANAIONS_APIS.name());
+//            intent.setClass(getActivity(), CIPersonalAddAPISActivity.class);
+//            Bundle bundle = new Bundle();
+//            bundle.putSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE, CIApisDocmuntTextFieldFragment.EType.Personal);
+//            intent.putExtras(bundle);
+//            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG);
+//
+//            getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
             Intent intent = new Intent();
             intent.putExtra(
                     UiMessageDef.BUNDLE_ACTIVITY_MODE,
-                    CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_COMPANAIONS_APIS.name());
-            intent.setClass(getActivity(), CIPersonalAddAPISActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE, CIApisDocmuntTextFieldFragment.EType.Personal);
-            intent.putExtras(bundle);
-            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG);
+                    CIPersonalAddSaveAPISActivity.CIPersonalAddAPISType.ADD_COMPANAIONS_APIS.name());
+            /* CIPersonalAddAPISType:     ADD_MY_APIS,
+                                          EDIT_MY_APIS,
+                                          ADD_COMPANAIONS_APIS,
+                                          EDIT_COMPANAIONS_APIS
+            */
 
+            Bundle bundle = new Bundle();
+            bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_TYPE, CIAddSaveAPISDocTypeActivity.EType.Personal);
+            /*
+               CIAddSaveAPISDocTypeActivity.EType: Personal, CheckIn
+             */
+
+            intent.putExtras(bundle);
+            intent.setClass(getActivity(), CIAddSaveAPISDocTypeActivity.class);
+            startActivity(intent);
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
         }
 
