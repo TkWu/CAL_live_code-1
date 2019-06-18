@@ -1354,10 +1354,10 @@ public class CISignUpActivity extends BaseActivity
             }
 
             /**城市英文姓名，國家為TW、CN以外時必填*/
-            if ( TextUtils.isEmpty(m_AddressCityFragment.getText()) ){
+            if ( TextUtils.isEmpty(m_AddressCityStateTextFragment.getText()) ){
                 return false;
             }
-
+            
             /**路名名稱，為TW、CN以外的國家時必填*/
             if ( TextUtils.isEmpty(m_AddressStreet1Fragment.getText()) ){
                 return false;
