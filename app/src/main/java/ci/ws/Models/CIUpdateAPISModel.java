@@ -10,6 +10,7 @@ import ci.ws.Models.cores.CIWSBaseModel;
 import ci.ws.Models.entities.CIApisEntity;
 import ci.ws.Models.entities.CIApisList;
 import ci.ws.Models.entities.CIApisResp;
+import ci.ws.Models.entities.CINApisEntity;
 import ci.ws.Models.entities.CIWSResult;
 import ci.ws.cores.CIWSShareManager;
 import ci.ws.cores.object.GsonTool;
@@ -41,7 +42,9 @@ public class CIUpdateAPISModel extends CIWSBaseModel {
     }
 
     private UpdateApisCallBack m_callback = null;
-    private static final String API_NAME = "/CIAPP/api/UpdateApis";
+    //private static final String API_NAME = "/CIAPP/api/UpdateApis";
+    private static final String API_NAME = "/CIAPP/api/AddApis";
+
 
     private enum eParaTag {
 
@@ -83,7 +86,7 @@ public class CIUpdateAPISModel extends CIWSBaseModel {
         this.DoConnection();
     }
 
-    public void UpdateApisFromWS(String strCardNo, CIApisEntity ciApisEntity) {
+    public void UpdateApisFromWS(String strCardNo, CINApisEntity ciApisEntity) {
         try {
 
             String strRequest = GsonTool.toJson(ciApisEntity);

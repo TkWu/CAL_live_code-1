@@ -1,69 +1,72 @@
 package ci.ws.Models.entities;
 
-
 import android.text.TextUtils;
-
 import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 import java.util.ArrayList;
 
 public class CINApisEntity implements Cloneable {
 
-    public CINApisEntity()
-    {
-        paxInfo = new ArrayList();
-    }
-    private String id;
+//    //private String id;
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setId(String strCardNo, String strDocType) {
-        if (TextUtils.isEmpty(strCardNo) || TextUtils.isEmpty(strDocType)) {
-            return;
-        }
-
-        StringBuffer sb = new StringBuffer();
-        this.id = sb.append(strCardNo).append(":").append(strDocType).toString();
+    public void setLanguage(String language) {
+        this.language = language;
     }
 
-    public String getId() {
-        return id;
+    public void setMode(String mode) {
+        this.mode = mode;
     }
 
-    public void addInfos(PaxInfoObj _input){
-        if (this.paxInfo != null){
-            paxInfo.add(_input);
-        }
-    }
+//    public void setId(String strCardNo, String strDocType) {
+//        if (TextUtils.isEmpty(strCardNo) || TextUtils.isEmpty(strDocType)) {
+//            return;
+//        }
+//
+//        StringBuffer sb = new StringBuffer();
+//        this.id = sb.append(strCardNo).append(":").append(strDocType).toString();
+//    }
+
+//    public String getId() {
+//        return id;
+//    }
+//
+
     /**
      * 男性
      */
     public static final String SEX_MALE = "M";
+
     /**
      * 女性
      */
     public static final String SEX_FEMALE = "F";
 
     /**
-     * 使用者會員卡號
+     * APIS info Object
      */
     @Expose
-    public String cardNo = "123";
+    public ApisInfoObj apisInfo = new ApisInfoObj();
 
     /**
-     * 行動裝置 deviceid
+     * API MODE
      */
     @Expose
-    public String deviceId = "456";
+    public String mode = "";
 
     /**
-     * PAX陣列
+     * API MODE
+    */
+    @Expose
+    public String language = "";
+
+    /**
+     * API VERSION
      */
     @Expose
-    public ArrayList paxInfo;
+    public final String version = "1.0.0";
 
     @Override
     public Object clone() {
@@ -75,31 +78,32 @@ public class CINApisEntity implements Cloneable {
         }
     }
 
-    public class basicDocuments{
-        public String gender = "123";
-        public String birthday = "123";
-        public String residence = "123";
-        public String nationality = "123";
+    public class BasicDocuments{
+        public String gender = "gender";
+        public String birthday = "birthday";
+        public String residence = "residence";
+        public String nationality = "nationality";
     }
 
-    public class otherDocuments{
-        public String documentNo = "123";
-        public String expireDay = "123";
-        public String issueCountry = "123";
+    public class OtherDocuments{
+        public String documentNo = "documentNo";
+        public String expireDay = "expireDay";
+        public String issueCountry = "issueCountry";
     }
 
-    public class docas{
-        public String country = "123";
-        public String state = "123";
-        public String city = "123";
-        public String address = "123";
-        public String zipcode = "123";
+    public class Docas{
+        public String country = "country";
+        public String state = "state";
+        public String city = "city";
+        public String address = "address";
+        public String zipcode = "zipcode";
     }
+
 
     public class PaxInfoObj{
-        public String firstName = "GGG";
-        public String lastName = "HHH";
-        public ArrayList ArrdocumentInfos = new ArrayList();
+        public String firstName = "firstName";
+        public String lastName = "lastName";
+        public ArrayList documentInfos = new ArrayList();
 
 
         public void setName(String input_firstName, String input_lastName){
@@ -108,26 +112,115 @@ public class CINApisEntity implements Cloneable {
         }
         public void addDocumentInfos(Object _input_documentInfosObj) {
 
-            if (ArrdocumentInfos != null) {
-                ArrdocumentInfos.add((_input_documentInfosObj));
+            if (documentInfos != null) {
+                documentInfos.add(_input_documentInfosObj);
             }
         }
     }
 
 
-    public class DocumentInfosObj{
-        public String documentType = "YRTH";
-        public String documentName = "YRdgfdsog";
-        public Object documentTypeObj;
+    public class basicDocuments_obj{
+        /**
+         * 文件類型
+         */
+        @Expose
+        public final String documentType = "N";
+        /**
+         * 文件自訂名稱
+         */
+        @Expose
+        public String documentName = "documentName";
+        /**
+         * 行動裝置 deviceid
+         */
+        @Expose
+        public String deviceId = "deviceId";
+        /**
+         * 文件物件內容
+         */
+        @Expose
+        public BasicDocuments basicDocuments;
 
-        public DocumentInfosObj(String docType) {
-            switch (docType){
-                case "A":
-                    documentTypeObj = new basicDocuments();
-                case "N":
-                    documentTypeObj = new docas();
-                default:
-                    documentTypeObj = new otherDocuments();
+        public basicDocuments_obj() {
+            basicDocuments = new BasicDocuments();
+        }
+    }
+
+    public class otherDocuments_obj{
+        /**
+         * 文件類型
+         */
+        @Expose
+        public String documentType = "";
+        /**
+         * 文件自訂名稱
+         */
+        @Expose
+        public String documentName = "documentName";
+        /**
+         * 行動裝置 deviceid
+         */
+        @Expose
+        public String deviceId = "deviceId";
+        /**
+         * 文件物件內容
+         */
+        @Expose
+        public OtherDocuments otherDocuments;
+
+        public otherDocuments_obj() {
+            otherDocuments = new OtherDocuments();
+        }
+
+    }
+
+    public class docas_obj{
+        /**
+         * 文件類型
+         */
+        @Expose
+        public String documentType = "A";
+        /**
+         * 文件自訂名稱
+         */
+        @Expose
+        public String documentName = "documentName";
+        /**
+         * 行動裝置 deviceid
+         */
+        @Expose
+        public String deviceId = "deviceId";
+        /**
+         * 文件物件內容
+         */
+        @Expose
+        public Docas docas;
+
+        public docas_obj() {
+            docas = new Docas();
+        }
+    }
+
+    public class ApisInfoObj {
+        /**
+         * 使用者會員卡號
+         */
+        @Expose
+        public String cardNo = "cardNo";
+
+        /**
+         * PAX陣列
+         */
+        @Expose
+        public ArrayList paxInfo;
+
+        public ApisInfoObj() {
+            paxInfo = new ArrayList();
+        }
+
+        public void addInfos(PaxInfoObj _input){
+            if (this.paxInfo != null){
+                paxInfo.add(_input);
             }
         }
     }

@@ -772,7 +772,7 @@ public class CIPersonalAddAPISActivity extends BaseActivity implements
 
         setMyApisEntity(ciApisEntity);
 
-        CIAPISPresenter.getInstance().InsertApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
+        //CIAPISPresenter.getInstance().InsertApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
 
     }
 
@@ -871,7 +871,7 @@ public class CIPersonalAddAPISActivity extends BaseActivity implements
 
         setMyApisEntity(ciApisEntity);
 
-        CIAPISPresenter.getInstance().UpdateApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
+        //CIAPISPresenter.getInstance().UpdateApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
     }
 
     @Override

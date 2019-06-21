@@ -26,7 +26,6 @@ public class CILanguageInfo {
     private String   LANGUAGE_TAG = "App_Language";
 
     public static enum eLANGUAGE{
-
         TAIWAN,
         CHINA,
         ENGLISH,
