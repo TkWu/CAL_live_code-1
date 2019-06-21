@@ -7,6 +7,7 @@ import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
 import ci.ws.Models.entities.CIApisEntity;
 import ci.ws.Models.entities.CIApisResp;
+import ci.ws.Models.entities.CINApisEntity;
 import ci.ws.Models.entities.CIWSResult;
 import ci.ws.cores.CIWSShareManager;
 import ci.ws.cores.object.GsonTool;
@@ -19,7 +20,7 @@ import ci.ws.define.WSConfig;
 public class CIInsertAPISModel extends CIWSBaseModel{
 
 
-    private static final String API_NAME = "/CIAPP/api/InsertApis";
+    private static final String API_NAME = "/CIAPP/api/AddApis";
 
     private InsertApisCallBack m_callback = null;
 
@@ -66,7 +67,7 @@ public class CIInsertAPISModel extends CIWSBaseModel{
         this.m_callback = callback;
     }
 
-    public void InsertApisFromWS( String strCardNo, CIApisEntity apisEntity ){
+    public void InsertApisFromWS( String strCardNo, CINApisEntity apisEntity ){
 
 //        strCardno = "WD9751004";
 //        apisEntity.doc_type = "P";

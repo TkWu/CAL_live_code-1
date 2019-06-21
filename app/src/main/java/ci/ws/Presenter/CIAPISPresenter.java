@@ -22,6 +22,7 @@ import ci.ws.Models.entities.CIApisResp;
 import ci.ws.Models.entities.CIApisStateEntity;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Models.entities.CICompanionApisNameEntity;
+import ci.ws.Models.entities.CINApisEntity;
 import ci.ws.Presenter.Listener.CIInquiryApisListListener;
 import ci.ws.define.CIWSResultCode;
 
@@ -77,7 +78,7 @@ public class CIAPISPresenter {
         }
     }
 
-    public void InsertApisFromWS( String strCardNo,CIInquiryApisListListener listener , CIApisEntity ciApisEntity ) {
+    public void InsertApisFromWS( String strCardNo,CIInquiryApisListListener listener , CINApisEntity ciApisEntity ) {
 
         if( null == m_insertApisModel ) {
             m_insertApisModel = new CIInsertAPISModel(m_insertCallback);
@@ -90,7 +91,7 @@ public class CIAPISPresenter {
         }
     }
 
-    public void UpdateApisFromWS( String strCardNo,CIInquiryApisListListener listener , CIApisEntity ciApisEntity ) {
+    public void UpdateApisFromWS( String strCardNo,CIInquiryApisListListener listener , CINApisEntity ciApisEntity ) {
         if( null == m_UpdateApisModel ) {
             m_UpdateApisModel = new CIUpdateAPISModel(m_updateCallback);
         }

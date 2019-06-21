@@ -158,7 +158,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         @Override
         public void InsertApidSuccess(String rt_code, String rt_msg) {
 
-            CIAPISPresenter.getInstance().saveMyApis(m_newApisEntity);
+            //CIAPISPresenter.getInstance().saveMyApis(m_newApisEntity);
 
             setResult(RESULT_OK);
             CIPersonalAddSaveAPISActivity.this.finish();
@@ -175,7 +175,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         @Override
         public void UpdateApisSuccess(String rt_code, String rt_msg) {
 
-            CIAPISPresenter.getInstance().saveMyApis(m_newApisEntity);
+            //CIAPISPresenter.getInstance().saveMyApis(m_newApisEntity);
 
             setResult(RESULT_OK);
             CIPersonalAddSaveAPISActivity.this.finish();
@@ -232,7 +232,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     };
 
     public enum CIPersonalAddAPISType {
-        ADD_MY_APIS, EDIT_MY_APIS, ADD_COMPANAIONS_APIS, EDIT_COMPANAIONS_APIS;
+        ADD_MY_APIS, EDIT_MY_APIS, ADD_COMPANAIONS_APIS, EDIT_COMPANAIONS_APIS, DELETE_MY_APIS, DELETE_COMPANAIONS_APIS;
     }
 
     private static final int RESIDENT_CD    = 1;
@@ -295,7 +295,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private CIApisDocmuntTypeEntity                     m_apisDocmuntType   = null;
     private ArrayList<CIApisDocmuntTypeEntity>          m_arApisDocmuntList = null;
     private CIApisEntity                                m_apisEntity        = null;
-    private CIApisEntity                                m_newApisEntity     = null;
+    private CINApisEntity                               m_newApisEntity     = null;
     private ArrayList<CIApisNationalEntity>             m_arApisNationList  = null;
     private boolean                                     m_bInitializedAPIS  = false;
 
@@ -467,6 +467,10 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             case EDIT_COMPANAIONS_APIS:
                 m_tvName.setVisibility(View.GONE);
                 m_ll_companions_name.setVisibility(View.VISIBLE);
+                break;
+            case DELETE_MY_APIS:
+                break;
+            case DELETE_COMPANAIONS_APIS:
                 break;
         }
     }
@@ -736,37 +740,48 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     @Override
     public void onClick(View v) {
         if (R.id.btn_finish == v.getId()){
-            CINApisEntity tmp = new CINApisEntity();
+//            CINApisEntity topObject = new CINApisEntity();
+//
+//            CINApisEntity.PaxInfoObj tmpPaxInfoObj = topObject.new PaxInfoObj();
+//
+//            //地址物件
+//            CINApisEntity.docas_obj tmpDocumentInfosObj = topObject.new docas_obj();
+//
+//            //基本資料物件
+//            CINApisEntity.basicDocuments_obj tmpBasicDocumentsObj = topObject.new basicDocuments_obj();
+//
+//            //其他證件物件
+//            CINApisEntity.otherDocuments_obj tmpOtherDocumentsObj = topObject.new otherDocuments_obj();
+//
+//            tmpPaxInfoObj.addDocumentInfos(tmpDocumentInfosObj);
+//            tmpPaxInfoObj.addDocumentInfos(tmpBasicDocumentsObj);
+//            tmpPaxInfoObj.addDocumentInfos(tmpOtherDocumentsObj);
+//
+//            topObject.apisInfo.addInfos(tmpPaxInfoObj);
+//
+//            String strRequest = GsonTool.toJson(topObject);
 
-            CINApisEntity.PaxInfoObj tmpPaxInfoObj = tmp.new PaxInfoObj();
-            tmp.addInfos(tmpPaxInfoObj);
 
-            CINApisEntity.DocumentInfosObj tmpDocumentInfosObj = tmp.new DocumentInfosObj("A");
-            tmpPaxInfoObj.addDocumentInfos(tmpDocumentInfosObj);
 
-            String strRequest = GsonTool.toJson(tmp);
-            SLog.d("strRequest: "+strRequest);
+            if( false == isFillCompleteAndCorrect() ) {
 
-//            if( false == isFillCompleteAndCorrect() ) {
-//
-//                showDialog(getString(R.string.warning),
-//                        m_errorMsg);
-//                return;
-//
-//            } else if( CIPersonalAddAPISType.ADD_MY_APIS == m_type ) {
-//                showDialog(getString(R.string.editapis_alert_title_save_and_upload_your_apis),
-//                        getString(R.string.editapis_alert_message_save_and_upload_your_apis),
-//                        getString(R.string.confirm), getString(R.string.cancel),
-//                        onAlertAddMyApisDialogListener);
-//
-//
-//            } else if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
-//                sendUpdateApisFromWS();
-//
-//            } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type) {
-//                //要改
-//                //saveCompanionsApisFromDB( getApisEntity() );
-//            }
+                showDialog(getString(R.string.warning),
+                        m_errorMsg);
+                return;
+
+            } else if( CIPersonalAddAPISType.ADD_MY_APIS == m_type ) {
+                showDialog(getString(R.string.editapis_alert_title_save_and_upload_your_apis),
+                        getString(R.string.editapis_alert_message_save_and_upload_your_apis),
+                        getString(R.string.confirm), getString(R.string.cancel),
+                        onAlertAddMyApisDialogListener);
+
+            } else if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
+                sendUpdateApisFromWS();
+
+            } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type) {
+                //要改
+                //saveCompanionsApisFromDB( getApisEntity() );
+            }
 
         }
     }
@@ -774,7 +789,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private CIAlertDialog.OnAlertMsgDialogListener onAlertAddMyApisDialogListener = new CIAlertDialog.OnAlertMsgDialogListener() {
         @Override
         public void onAlertMsgDialog_Confirm() {
-            sendInsertApisFromWS();
+            sendUpdateApisFromWS();
+            //sendInsertApisFromWS();
         }
 
         @Override
@@ -803,106 +819,193 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
     private void sendInsertApisFromWS() {
 
-        CIApisEntity ciApisEntity = getApisEntity();
-
-        setMyApisEntity(ciApisEntity);
-
-        CIAPISPresenter.getInstance().InsertApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
+//        CIApisEntity ciApisEntity = getApisEntity();
+//
+//        setMyApisEntity(ciApisEntity);
+//
+//        CIAPISPresenter.getInstance().InsertApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
 
     }
 
-    private void setMyApisEntity(CIApisEntity data) {
+    private void setMyApisEntity(CINApisEntity data) {
 
         if( m_newApisEntity != null ){
             m_newApisEntity = null;
         }
 
-        m_newApisEntity = (CIApisEntity)data.clone();
+        m_newApisEntity = (CINApisEntity)data.clone();
 
-        m_newApisEntity.card_no =  CIApplication.getLoginInfo().GetUserMemberCardNo();
-
-        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type) {
-            m_newApisEntity.setId(m_newApisEntity.card_no, m_newApisEntity.doc_type);
-        } else if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ){
-            m_newApisEntity.setId(m_apisEntity.card_no, m_apisEntity.doc_type);
-        }
+//        m_newApisEntity.card_no =  CIApplication.getLoginInfo().GetUserMemberCardNo();
+//
+//        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type) {
+//            m_newApisEntity.setId(m_newApisEntity.card_no, m_newApisEntity.doc_type);
+//        } else if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ){
+//            m_newApisEntity.setId(m_apisEntity.card_no, m_apisEntity.doc_type);
+//        }
     }
 
-    private CIApisEntity getApisEntity() {
-        /** 居住國家必選 */
-        String strResidentCountryCd = ((CIApisNationalTextFieldFragment)m_ResidentCountryFragment).getCountryCd();
+    private CINApisEntity getApisEntity() {
+        CINApisEntity ciApisEntity = new CINApisEntity();
 
-        /** 國籍必選 */
-        String strNationality = ((CIApisNationalTextFieldFragment)m_Nationalityfragment).getCountryCd();
+       //ciApisEntity.setId(CIApplication.getLoginInfo().GetUserMemberCardNo());
 
-        /** 證件類別必選 */
-        String strDocumentType = ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).getDocmuntType();
+        Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
+        ciApisEntity.setLanguage(locale.toString());
 
-        /** 證件號碼必填 */
-        String strDocumentNo = m_DocumentNoFragment.getText();
+        CINApisEntity.PaxInfoObj PaxInfoObj = ciApisEntity.new PaxInfoObj();
 
-        /** 發證國家必選 */
-        String strIssueCountryCd = ((CIApisNationalTextFieldFragment)m_IssueCountryFragment).getCountryCd();
-
-        /** 效期截止日期必選 */
-        String strExpiryDate = ((CIDateOfExpiryTextFieldFragment)m_DocExpiryDatefragment).getFormatedDate();
-
-
-        CIApisEntity ciApisEntity = new CIApisEntity();
-        ciApisEntity.doc_type = strDocumentType;
-        ciApisEntity.nationality = strNationality;
-        ciApisEntity.doc_expired_date = strExpiryDate;
-        ciApisEntity.resident_city = strResidentCountryCd;
-        ciApisEntity.issue_country = strIssueCountryCd;
-        ciApisEntity.doc_no = strDocumentNo;
-
-        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
-            ciApisEntity.first_name = CIApplication.getLoginInfo().GetUserFirstName();//CIApplication.getLoginInfo().GetUserProfileFirstName();
-            ciApisEntity.last_name = CIApplication.getLoginInfo().GetUserLastName();//CIApplication.getLoginInfo().GetUserProfileLastName();
-
-        } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
-            ciApisEntity.first_name = m_FirstNamefragment.getText();
-            ciApisEntity.last_name = m_LastNamefragment.getText();
-
+        switch (m_type){
+            case ADD_MY_APIS:
+                ciApisEntity.setMode("I");
+                PaxInfoObj.setName(CIApplication.getLoginInfo().GetUserFirstName(), CIApplication.getLoginInfo().GetUserLastName());
+                break;
+            case ADD_COMPANAIONS_APIS:
+                ciApisEntity.setMode("I");
+                break;
+            case EDIT_MY_APIS:
+                ciApisEntity.setMode("U");
+                PaxInfoObj.setName(CIApplication.getLoginInfo().GetUserFirstName(), CIApplication.getLoginInfo().GetUserLastName());
+                break;
+            case EDIT_COMPANAIONS_APIS:
+                ciApisEntity.setMode("U");
+                break;
+            case DELETE_MY_APIS:
+                ciApisEntity.setMode("D");
+                break;
+            case DELETE_COMPANAIONS_APIS:
+                ciApisEntity.setMode("D");
+                break;
         }
 
-//        if(TwoItemSelectBar.ESelectSMode.LEFT == m_vGender.getSelectModeParam() ) {
-//            ciApisEntity.sex = CIApisEntity.SEX_MALE;
-//        } else {
-//            ciApisEntity.sex = CIApisEntity.SEX_FEMALE;
+        SLog.d("m_strAPISCode: "+m_strAPISCode);
+        switch(m_strAPISCode) {
+            case "A":
+                //地址物件
+                CINApisEntity.docas_obj DocumentInfosObj = ciApisEntity.new docas_obj();
+                DocumentInfosObj.documentName = m_DocumentFreeNamefragment.getText();
+                DocumentInfosObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
+            case "N":
+                //基本資料物件
+                CINApisEntity.basicDocuments_obj BasicDocumentsObj = ciApisEntity.new basicDocuments_obj();
+                BasicDocumentsObj.documentName = m_DocumentFreeNamefragment.getText();
+                BasicDocumentsObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
+
+                BasicDocumentsObj.basicDocuments.birthday = ((CIDateOfBirthdayTextFieldFragment) m_DateOfBirthdayfragment).getFormatedDate();
+
+                if(TwoItemSelectBar.ESelectSMode.LEFT == m_v_basic_gender.getSelectModeParam() ) {
+                    BasicDocumentsObj.basicDocuments.gender = CIApisEntity.SEX_MALE;
+                } else {
+                    BasicDocumentsObj.basicDocuments.gender = CIApisEntity.SEX_FEMALE;
+                }
+
+                BasicDocumentsObj.basicDocuments.nationality = ((CIApisNationalTextFieldFragment) m_Nationalityfragment).getCountryCd();
+                BasicDocumentsObj.basicDocuments.residence = ((CIApisNationalTextFieldFragment) m_ResidentCountryFragment).getCountryCd();
+
+                PaxInfoObj.addDocumentInfos(BasicDocumentsObj);
+                break;
+            default:
+                //其他證件物件
+                CINApisEntity.otherDocuments_obj OtherDocumentsObj = ciApisEntity.new otherDocuments_obj();
+                OtherDocumentsObj.documentName = m_DocumentFreeNamefragment.getText();
+                OtherDocumentsObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
+                OtherDocumentsObj.documentType = m_strAPISCode;
+
+//                /** 證件號碼必填 */
+//                String strDocumentNo = m_DocumentNoFragment.getText();
+//                if (TextUtils.isEmpty(strDocumentNo)) {
+//                    return false;
+//                }
+//
+//                /** 發證國家必選 */
+//                String strIssueCountryCd = ((CIApisNationalTextFieldFragment) m_IssueCountryFragment).getCountryCd();
+//                if (TextUtils.isEmpty(strIssueCountryCd)) {
+//                    return false;
+//                }
+//
+//                /** 效期截止日期必選 */
+//                String strExpiryDate = ((CIDateOfExpiryTextFieldFragment) m_DocExpiryDatefragment).getFormatedDate();
+//                if (TextUtils.isEmpty(strExpiryDate)) {
+//                    return false;
+//                }
+                break;
+
+        }
+//        /** 居住國家必選 */
+//        String strResidentCountryCd = ((CIApisNationalTextFieldFragment)m_ResidentCountryFragment).getCountryCd();
+//
+//        /** 國籍必選 */
+//        String strNationality = ((CIApisNationalTextFieldFragment)m_Nationalityfragment).getCountryCd();
+//
+//        /** 證件類別必選 */
+//        String strDocumentType = ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).getDocmuntType();
+//
+//        /** 證件號碼必填 */
+//        String strDocumentNo = m_DocumentNoFragment.getText();
+//
+//        /** 發證國家必選 */
+//        String strIssueCountryCd = ((CIApisNationalTextFieldFragment)m_IssueCountryFragment).getCountryCd();
+//
+//        /** 效期截止日期必選 */
+//        String strExpiryDate = ((CIDateOfExpiryTextFieldFragment)m_DocExpiryDatefragment).getFormatedDate();
+//
+//
+//        CIApisEntity ciApisEntity = new CIApisEntity();
+//        ciApisEntity.doc_type = strDocumentType;
+//        ciApisEntity.nationality = strNationality;
+//        ciApisEntity.doc_expired_date = strExpiryDate;
+//        ciApisEntity.resident_city = strResidentCountryCd;
+//        ciApisEntity.issue_country = strIssueCountryCd;
+//        ciApisEntity.doc_no = strDocumentNo;
+//
+//        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
+//            ciApisEntity.first_name = CIApplication.getLoginInfo().GetUserFirstName();//CIApplication.getLoginInfo().GetUserProfileFirstName();
+//            ciApisEntity.last_name = CIApplication.getLoginInfo().GetUserLastName();//CIApplication.getLoginInfo().GetUserProfileLastName();
+//
+//        } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+//            ciApisEntity.first_name = m_FirstNamefragment.getText();
+//            ciApisEntity.last_name = m_LastNamefragment.getText();
+//
 //        }
-
-        ciApisEntity.birthday = ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).getFormatedDate();//CIApplication.getLoginInfo().GetBirthday();
-
-
-        String strAddrCountry = ((CIApisNationalTextFieldFragment)m_AddressNationalityfragment).getCountryCd();
-        if( TextUtils.isEmpty(strAddrCountry) ) {
-            strAddrCountry = "";
-        }
-        ciApisEntity.addr_country = strAddrCountry;
-
-        String strAddrState = ((CIApisStateTextFieldFragment)m_CityStatfragment).getStateCode();
-        if( TextUtils.isEmpty(strAddrState) ) {
-            strAddrState = "";
-        }
-        ciApisEntity.addr_state = strAddrState;
-
-        String strAddrCity = m_CityCountyDistrictfragment.getText();
-        ciApisEntity.addr_city = strAddrCity;
-
-        String strAddrStreet = m_Streetfragment.getText();
-        ciApisEntity.addr_street = strAddrStreet;
-
-        String strAddrZipcode = m_ZipCodeFragment.getText();
-        ciApisEntity.addr_zipcode = strAddrZipcode;
-
+//
+////        if(TwoItemSelectBar.ESelectSMode.LEFT == m_vGender.getSelectModeParam() ) {
+////            ciApisEntity.sex = CIApisEntity.SEX_MALE;
+////        } else {
+////            ciApisEntity.sex = CIApisEntity.SEX_FEMALE;
+////        }
+//
+//        ciApisEntity.birthday = ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).getFormatedDate();//CIApplication.getLoginInfo().GetBirthday();
+//
+//
+//        String strAddrCountry = ((CIApisNationalTextFieldFragment)m_AddressNationalityfragment).getCountryCd();
+//        if( TextUtils.isEmpty(strAddrCountry) ) {
+//            strAddrCountry = "";
+//        }
+//        ciApisEntity.addr_country = strAddrCountry;
+//
+//        String strAddrState = ((CIApisStateTextFieldFragment)m_CityStatfragment).getStateCode();
+//        if( TextUtils.isEmpty(strAddrState) ) {
+//            strAddrState = "";
+//        }
+//        ciApisEntity.addr_state = strAddrState;
+//
+//        String strAddrCity = m_CityCountyDistrictfragment.getText();
+//        ciApisEntity.addr_city = strAddrCity;
+//
+//        String strAddrStreet = m_Streetfragment.getText();
+//        ciApisEntity.addr_street = strAddrStreet;
+//
+//        String strAddrZipcode = m_ZipCodeFragment.getText();
+//        ciApisEntity.addr_zipcode = strAddrZipcode;
+        ciApisEntity.apisInfo.addInfos(PaxInfoObj);
+        String strRequest = GsonTool.toJson(ciApisEntity);
+        SLog.d("strRequest: "+strRequest);
         return ciApisEntity;
     }
 
 
     private void sendUpdateApisFromWS() {
 
-        CIApisEntity ciApisEntity = getApisEntity();
+        CINApisEntity ciApisEntity = getApisEntity();
 
         setMyApisEntity(ciApisEntity);
 
@@ -934,50 +1037,50 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                     return false;
                 }
             }
-            switch(m_strAPISCode){
+            switch(m_strAPISCode) {
                 case "A":
+
+                case "N":
                     /** 出生日期必填*/
-                    String strBirthday = ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).getFormatedDate();
-                    if( TextUtils.isEmpty(strBirthday) ) {
+                    String strBirthday = ((CIDateOfBirthdayTextFieldFragment) m_DateOfBirthdayfragment).getFormatedDate();
+                    if (TextUtils.isEmpty(strBirthday)) {
                         return false;
                     }
 
                     /** 居住國家必選 */
-                    String strCountryCd = ((CIApisNationalTextFieldFragment)m_ResidentCountryFragment).getCountryCd();
-                    if( TextUtils.isEmpty(strCountryCd) ) {
+                    String strCountryCd = ((CIApisNationalTextFieldFragment) m_ResidentCountryFragment).getCountryCd();
+                    if (TextUtils.isEmpty(strCountryCd)) {
                         return false;
                     }
 
                     /** 國籍必選 */
-                    String strNationality = ((CIApisNationalTextFieldFragment)m_Nationalityfragment).getCountryCd();
-                    if( TextUtils.isEmpty(strNationality) ) {
+                    String strNationality = ((CIApisNationalTextFieldFragment) m_Nationalityfragment).getCountryCd();
+                    if (TextUtils.isEmpty(strNationality)) {
                         return false;
                     }
-                    break;
-                case "N":
                     break;
                 default:
                     /** 證件號碼必填 */
                     String strDocumentNo = m_DocumentNoFragment.getText();
-                    if( TextUtils.isEmpty(strDocumentNo) ) {
+                    if (TextUtils.isEmpty(strDocumentNo)) {
                         return false;
                     }
 
                     /** 發證國家必選 */
-                    String strIssueCountryCd = ((CIApisNationalTextFieldFragment)m_IssueCountryFragment).getCountryCd();
-                    if( TextUtils.isEmpty(strIssueCountryCd) ) {
+                    String strIssueCountryCd = ((CIApisNationalTextFieldFragment) m_IssueCountryFragment).getCountryCd();
+                    if (TextUtils.isEmpty(strIssueCountryCd)) {
                         return false;
                     }
 
                     /** 效期截止日期必選 */
-                    String strExpiryDate = ((CIDateOfExpiryTextFieldFragment)m_DocExpiryDatefragment).getFormatedDate();
-                    if( TextUtils.isEmpty(strExpiryDate) ) {
+                    String strExpiryDate = ((CIDateOfExpiryTextFieldFragment) m_DocExpiryDatefragment).getFormatedDate();
+                    if (TextUtils.isEmpty(strExpiryDate)) {
                         return false;
                     }
                     break;
+
             }
         }
-
 
 
         if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
@@ -989,9 +1092,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             }
 
         }
-
-
-
 
 //        /** 證件類別必選 */
 //        String strDocumentType = ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).getDocmuntType();
