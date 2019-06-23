@@ -62,11 +62,6 @@ public class CINApisEntity implements Cloneable {
     @Expose
     public String language = "";
 
-    /**
-     * API VERSION
-     */
-    @Expose
-    public final String version = "1.0.0";
 
     @Override
     public Object clone() {
@@ -86,6 +81,7 @@ public class CINApisEntity implements Cloneable {
     }
 
     public class OtherDocuments{
+        public String gender = "gender";
         public String documentNo = "documentNo";
         public String expireDay = "expireDay";
         public String issueCountry = "issueCountry";
