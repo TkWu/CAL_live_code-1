@@ -808,7 +808,9 @@ public class CIPersonalFragment extends BaseFragment implements
         queryAndUpdateCompanionsApisView();
 
         //Inquiry Apis list
-        CIAPISPresenter.getInstance().InquiryMyApisListFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+        //CIAPISPresenter.getInstance().InquiryMyApisListFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+        CIAPISPresenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+
 
         //Inquiry Profile
         CIProfilePresenter.getInstance(m_InquiryProfileListener).InquiryProfileFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo());
@@ -933,9 +935,9 @@ public class CIPersonalFragment extends BaseFragment implements
         @Override
         public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisResp apis) {
 
-            saveMyApisFromDB(apis.arApisList);
+            //saveMyApisFromDB(apis.arApisList);
 
-            updateMyApisView(apis.arApisList);
+            //updateMyApisView(apis.arApisList);
         }
 
         @Override

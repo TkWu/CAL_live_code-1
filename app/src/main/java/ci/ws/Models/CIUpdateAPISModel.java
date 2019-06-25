@@ -1,16 +1,11 @@
 package ci.ws.Models;
 
-import com.google.gson.Gson;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
-import ci.ws.Models.entities.CIApisEntity;
-import ci.ws.Models.entities.CIApisList;
-import ci.ws.Models.entities.CIApisResp;
-import ci.ws.Models.entities.CINApisEntity;
+import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIWSResult;
 import ci.ws.cores.CIWSShareManager;
 import ci.ws.cores.object.GsonTool;
@@ -86,7 +81,7 @@ public class CIUpdateAPISModel extends CIWSBaseModel {
         this.DoConnection();
     }
 
-    public void UpdateApisFromWS(String strCardNo, CINApisEntity ciApisEntity) {
+    public void UpdateApisFromWS(String strCardNo, CIApisAddEntity ciApisEntity) {
         try {
 
             String strRequest = GsonTool.toJson(ciApisEntity);

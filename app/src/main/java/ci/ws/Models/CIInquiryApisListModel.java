@@ -26,6 +26,7 @@ import ci.ws.Models.entities.CIApisEntity;
 import ci.ws.Models.entities.CIApisList;
 import ci.ws.Models.entities.CIApisNationalEntity;
 import ci.ws.Models.entities.CIApisNationalList;
+import ci.ws.Models.entities.CIApisQryEntity;
 import ci.ws.Models.entities.CIApisResp;
 import ci.ws.Models.entities.CIApisStateEntity;
 import ci.ws.Models.entities.CIApisStateList;
@@ -68,7 +69,8 @@ public class CIInquiryApisListModel extends CIWSBaseModel {
     }
 
     private InquiryApisListCallBack m_callback = null;
-    private static final String API_NAME = "/CIAPP/api/InquiryApis";
+    //private static final String API_NAME = "/CIAPP/api/InquiryApis";
+    private static final String API_NAME = "/CIAPP/api/QueryApis";
 
     private RuntimeExceptionDao<CIApisEntity, String> m_dao
             = CIApplication.getDbManager().getRuntimeExceptionDao(CIApisEntity.class);
@@ -119,17 +121,22 @@ public class CIInquiryApisListModel extends CIWSBaseModel {
         this.DoConnection();
     }
 
-    public void InsertApisFromWS(String strCardNo, CIApisEntity ciApisEntity) {
-        try {
+    public void InquiryApisNewFromWS(String strCardNo) {
 
-            String strRequest = GsonTool.toJson(ciApisEntity);
+        CIApisQryEntity ciApisQryEntity = new CIApisQryEntity();
+        ciApisQryEntity.language = CIApplication.getLanguageInfo().getWSLanguage();
+        ciApisQryEntity.apisInfo.cardNo = strCardNo;
+
+
+        try {
+            String strRequest = GsonTool.toJson(ciApisQryEntity);
 
             m_jsBody = new JSONObject(strRequest);
 
-            m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
-            m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
-            m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
-            m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
+//            m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
+//            m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
+//            m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
+//            m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
             m_jsBody.put( eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
         } catch (JSONException e) {
             e.printStackTrace();
@@ -137,6 +144,26 @@ public class CIInquiryApisListModel extends CIWSBaseModel {
 
         this.DoConnection();
     }
+
+
+//    public void InsertApisFromWS(String strCardNo, CIApisEntity ciApisEntity) {
+//        try {
+//
+//            String strRequest = GsonTool.toJson(ciApisEntity);
+//
+//            m_jsBody = new JSONObject(strRequest);
+//
+//            m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
+//            m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
+//            m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
+//            m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
+//            m_jsBody.put( eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//
+//        this.DoConnection();
+//    }
 
     @Override
     protected void DecodeResponse_Success(CIWSResult respBody, String code) {

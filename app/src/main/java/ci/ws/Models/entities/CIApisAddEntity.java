@@ -4,13 +4,7 @@ import android.text.TextUtils;
 import com.google.gson.annotations.Expose;
 import java.util.ArrayList;
 
-public class CINApisEntity implements Cloneable {
-
-//    //private String id;
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
+public class CIApisAddEntity implements Cloneable {
 
     public void setLanguage(String language) {
         this.language = language;
@@ -19,20 +13,6 @@ public class CINApisEntity implements Cloneable {
     public void setMode(String mode) {
         this.mode = mode;
     }
-
-//    public void setId(String strCardNo, String strDocType) {
-//        if (TextUtils.isEmpty(strCardNo) || TextUtils.isEmpty(strDocType)) {
-//            return;
-//        }
-//
-//        StringBuffer sb = new StringBuffer();
-//        this.id = sb.append(strCardNo).append(":").append(strDocType).toString();
-//    }
-
-//    public String getId() {
-//        return id;
-//    }
-//
 
     /**
      * 男性
@@ -81,7 +61,6 @@ public class CINApisEntity implements Cloneable {
     }
 
     public class OtherDocuments{
-        public String gender = "gender";
         public String documentNo = "documentNo";
         public String expireDay = "expireDay";
         public String issueCountry = "issueCountry";
@@ -202,7 +181,7 @@ public class CINApisEntity implements Cloneable {
          * 使用者會員卡號
          */
         @Expose
-        public String cardNo = "cardNo";
+        public String cardNo = "";
 
         /**
          * PAX陣列
@@ -219,5 +198,6 @@ public class CINApisEntity implements Cloneable {
                 paxInfo.add(_input);
             }
         }
+
     }
 }

@@ -22,7 +22,7 @@ import ci.ws.Models.entities.CIApisResp;
 import ci.ws.Models.entities.CIApisStateEntity;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Models.entities.CICompanionApisNameEntity;
-import ci.ws.Models.entities.CINApisEntity;
+import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Presenter.Listener.CIInquiryApisListListener;
 import ci.ws.define.CIWSResultCode;
 
@@ -78,7 +78,22 @@ public class CIAPISPresenter {
         }
     }
 
-    public void InsertApisFromWS( String strCardNo,CIInquiryApisListListener listener , CINApisEntity ciApisEntity ) {
+
+    public void InquiryMyApisListNewFromWS( String strCardNo,CIInquiryApisListListener listener ){
+
+        if ( null == m_ApisModel ){
+            m_ApisModel = new CIInquiryApisListModel(m_modelCallback);
+        }
+
+        s_Instance.setCallbackListener(listener);
+
+        m_ApisModel.InquiryApisNewFromWS(strCardNo);
+        if(null != m_Listener){
+            m_Listener.showProgress();
+        }
+    }
+
+    public void InsertApisFromWS( String strCardNo,CIInquiryApisListListener listener , CIApisAddEntity ciApisEntity ) {
 
         if( null == m_insertApisModel ) {
             m_insertApisModel = new CIInsertAPISModel(m_insertCallback);
@@ -91,7 +106,7 @@ public class CIAPISPresenter {
         }
     }
 
-    public void UpdateApisFromWS( String strCardNo,CIInquiryApisListListener listener , CINApisEntity ciApisEntity ) {
+    public void UpdateApisFromWS( String strCardNo,CIInquiryApisListListener listener , CIApisAddEntity ciApisEntity ) {
         if( null == m_UpdateApisModel ) {
             m_UpdateApisModel = new CIUpdateAPISModel(m_updateCallback);
         }

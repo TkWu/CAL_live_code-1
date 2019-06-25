@@ -3,13 +3,9 @@ package ci.ws.Models;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
-import ci.ws.Models.entities.CIApisEntity;
-import ci.ws.Models.entities.CIApisResp;
-import ci.ws.Models.entities.CINApisEntity;
+import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIWSResult;
-import ci.ws.cores.CIWSShareManager;
 import ci.ws.cores.object.GsonTool;
 import ci.ws.define.CIWSResultCode;
 import ci.ws.define.WSConfig;
@@ -67,7 +63,7 @@ public class CIInsertAPISModel extends CIWSBaseModel{
         this.m_callback = callback;
     }
 
-    public void InsertApisFromWS( String strCardNo, CINApisEntity apisEntity ){
+    public void InsertApisFromWS( String strCardNo, CIApisAddEntity apisEntity ){
 
 //        strCardno = "WD9751004";
 //        apisEntity.doc_type = "P";

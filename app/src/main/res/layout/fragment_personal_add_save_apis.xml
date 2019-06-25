@@ -191,21 +191,11 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <ci.ui.view.TwoItemSelectBar
-                    android:id="@+id/v_doc_gender"
-                    android:layout_width="match_parent"
-                    android:layout_height="24px"
-                    android:layout_below="@id/ll_doc_info"
-                    android:layout_marginLeft="30px"
-                    android:layout_marginRight="26px"
-                    android:layout_marginTop="20px">
-                </ci.ui.view.TwoItemSelectBar>
-
                 <FrameLayout
                     android:id="@+id/flayout_doc_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/v_doc_gender"
+                    android:layout_below="@id/ll_doc_info"
                     android:layout_marginLeft="20px"
                     android:layout_marginRight="20px"
                     android:layout_marginTop="9px" />
