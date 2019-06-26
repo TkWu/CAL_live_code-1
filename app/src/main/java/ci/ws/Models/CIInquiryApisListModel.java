@@ -20,16 +20,20 @@ import java.util.HashMap;
 
 import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
+import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisDocmuntTypeList;
 import ci.ws.Models.entities.CIApisEntity;
+import ci.ws.Models.entities.CIApisInfodata;
 import ci.ws.Models.entities.CIApisList;
 import ci.ws.Models.entities.CIApisNationalEntity;
 import ci.ws.Models.entities.CIApisNationalList;
 import ci.ws.Models.entities.CIApisQryEntity;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIApisResp;
 import ci.ws.Models.entities.CIApisStateEntity;
 import ci.ws.Models.entities.CIApisStateList;
+import ci.ws.Models.entities.CIApispaxInfo;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Models.entities.CICompanionApisNameEntity;
 import ci.ws.Models.entities.CIWSResult;
@@ -58,6 +62,8 @@ public class CIInquiryApisListModel extends CIWSBaseModel {
          * @param rt_msg    result msg
          */
         void onInquiryApisListSuccess( String rt_code, String rt_msg, final CIApisResp apis );
+
+        void onInquiryApisListNewSuccess( String rt_code, String rt_msg, final CIApisQryRespEntity apis );
         /**
          * 失敗由此訊息通知,
          * rt_code 規則同api文件
@@ -169,21 +175,23 @@ public class CIInquiryApisListModel extends CIWSBaseModel {
     protected void DecodeResponse_Success(CIWSResult respBody, String code) {
 
         Gson gson = new Gson();
-        CIApisResp apisResp = new CIApisResp();
+
+        CIApisQryRespEntity apisResp = new CIApisQryRespEntity();
 
         try{
-            apisResp.arApisList = gson.fromJson( respBody.strData, CIApisList.class);
+            apisResp = gson.fromJson( respBody.strData, CIApisQryRespEntity.class);
         } catch ( Exception e ){
             e.printStackTrace();
         }
 
-        if ( null == apisResp.arApisList ){
+        if ( null == apisResp ){
             SendError_Response_data_null();
             return;
         }
 
         if ( null != m_callback ){
-            m_callback.onInquiryApisListSuccess(respBody.rt_code, respBody.rt_msg, apisResp);
+            //m_callback.onInquiryApisListSuccess(respBody.rt_code, respBody.rt_msg, apisResp);
+            m_callback.onInquiryApisListNewSuccess(respBody.rt_code, respBody.rt_msg, apisResp);
         }
     }
 
@@ -552,6 +560,10 @@ public class CIInquiryApisListModel extends CIWSBaseModel {
         }
 
         return null;
+    }
+
+    private void parseNewApisJson(){
+
     }
 
 }

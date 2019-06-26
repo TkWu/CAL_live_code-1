@@ -1,12 +1,16 @@
 package ci.ws.Presenter.Listener;
 
+import ci.ws.Models.entities.CIApisInfodata;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIApisResp;
 
 /**
  * Created by joannyang on 16/5/23.
  */
 public interface CIInquiryApisListListener {
-    void InquiryApisSuccess(String rt_code, String rt_msg, final CIApisResp apis);
+    void InquiryApisSuccess(String rt_code, String rt_msg, final CIApisQryRespEntity apis);
+
+    //void InquiryApisNewSuccess(String rt_code, String rt_msg, final CIApisInfodata apis);
 
     void InquiryApisError(String rt_code, String rt_msg);
 

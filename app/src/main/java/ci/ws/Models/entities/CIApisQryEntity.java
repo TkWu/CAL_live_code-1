@@ -15,6 +15,7 @@ public class CIApisQryEntity implements Cloneable {
      */
     @Expose
     public CIApisQryEntity.ApisInfoObj apisInfo = new CIApisQryEntity.ApisInfoObj();
+
     public class ApisInfoObj {
         /**
          * 使用者會員卡號

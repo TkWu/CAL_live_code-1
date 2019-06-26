@@ -37,8 +37,11 @@ import ci.ui.view.NavigationBar;
 import ci.ui.view.TwoItemSelectBar;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisEntity;
+import ci.ws.Models.entities.CIApisInfodata;
 import ci.ws.Models.entities.CIApisNationalEntity;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIApisResp;
+import ci.ws.Models.entities.CIApispaxInfo;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Presenter.CIAPISPresenter;
@@ -146,7 +149,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
     private CIInquiryApisListListener m_onInquiryApisListListener = new CIInquiryApisListListener() {
         @Override
-        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisResp apis) { }
+        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisQryRespEntity apis) { }
 
         @Override
         public void InquiryApisError(String rt_code, String rt_msg) { }
@@ -844,7 +847,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
         ciApisEntity.setLanguage(CIApplication.getLanguageInfo().getWSLanguage());
 
-        CIApisAddEntity.PaxInfoObj PaxInfoObj = ciApisEntity.new PaxInfoObj();
+        CIApispaxInfo PaxInfoObj = new CIApispaxInfo();
 
         switch (m_type){
             case ADD_MY_APIS:
@@ -873,7 +876,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         switch(m_strAPISCode) {
             case "A":
                 //地址物件
-                CIApisAddEntity.docas_obj DocumentInfosObj = ciApisEntity.new docas_obj();
+                CIApispaxInfo.docas_obj DocumentInfosObj = PaxInfoObj.new docas_obj();
                 DocumentInfosObj.documentName = m_DocumentFreeNamefragment.getText();
                 DocumentInfosObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
 
@@ -887,7 +890,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 break;
             case "N":
                 //基本資料物件
-                CIApisAddEntity.basicDocuments_obj BasicDocumentsObj = ciApisEntity.new basicDocuments_obj();
+                CIApispaxInfo.basicDocuments_obj BasicDocumentsObj = PaxInfoObj.new basicDocuments_obj();
                 BasicDocumentsObj.documentName = m_DocumentFreeNamefragment.getText();
                 BasicDocumentsObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
 
@@ -907,7 +910,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             default:
                 //其他證件物件
                 //"code_1A": C:加拿大 CG: 綠卡
-                CIApisAddEntity.otherDocuments_obj OtherDocumentsObj = ciApisEntity.new otherDocuments_obj();
+                CIApispaxInfo.otherDocuments_obj OtherDocumentsObj = PaxInfoObj.new otherDocuments_obj();
                 OtherDocumentsObj.documentName = m_DocumentFreeNamefragment.getText();
                 OtherDocumentsObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
                 OtherDocumentsObj.documentType = m_strAPISCode;
