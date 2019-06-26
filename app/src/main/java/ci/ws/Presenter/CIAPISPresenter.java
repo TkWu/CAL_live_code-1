@@ -16,8 +16,10 @@ import ci.ws.Models.CIUpdateAPISModel;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisDocmuntTypeList;
 import ci.ws.Models.entities.CIApisEntity;
+import ci.ws.Models.entities.CIApisInfodata;
 import ci.ws.Models.entities.CIApisNationalEntity;
 import ci.ws.Models.entities.CIApisNationalList;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIApisResp;
 import ci.ws.Models.entities.CIApisStateEntity;
 import ci.ws.Models.entities.CICompanionApisEntity;
@@ -312,13 +314,27 @@ public class CIAPISPresenter {
 
     CIInquiryApisListModel.InquiryApisListCallBack m_modelCallback = new CIInquiryApisListModel.InquiryApisListCallBack() {
         @Override
-        public void onInquiryApisListSuccess(final String rt_code, final String rt_msg, final CIApisResp apis) {
+        public void onInquiryApisListNewSuccess(final String rt_code, final String rt_msg, final CIApisQryRespEntity apis) {
 
             s_hdUIThreadhandler.post(new Runnable() {
                 @Override
                 public void run() {
                     if ( null != m_Listener ){
                         m_Listener.InquiryApisSuccess(rt_code, rt_msg, apis);
+                        m_Listener.hideProgress();
+                    }
+                }
+            });
+
+        }
+        @Override
+        public void onInquiryApisListSuccess(final String rt_code, final String rt_msg, final CIApisResp apis) {
+
+            s_hdUIThreadhandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    if ( null != m_Listener ){
+                        //m_Listener.InquiryApisSuccess(rt_code, rt_msg, apis);
                         m_Listener.hideProgress();
                     }
                 }

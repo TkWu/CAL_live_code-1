@@ -39,7 +39,9 @@ import ci.ui.view.NavigationBar;
 import ci.ui.view.TwoItemSelectBar;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisEntity;
+import ci.ws.Models.entities.CIApisInfodata;
 import ci.ws.Models.entities.CIApisNationalEntity;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIApisResp;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Presenter.CIAPISPresenter;
@@ -167,7 +169,7 @@ public class CIPersonalAddAPISActivity extends BaseActivity implements
 
     private CIInquiryApisListListener m_onInquiryApisListListener = new CIInquiryApisListListener() {
         @Override
-        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisResp apis) { }
+        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisQryRespEntity apis) { }
 
         @Override
         public void InquiryApisError(String rt_code, String rt_msg) { }

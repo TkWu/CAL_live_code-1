@@ -45,7 +45,10 @@ import ci.ui.object.CILoginInfo;
 import ci.ui.toast.CIToastView;
 import ci.ui.view.ImageHandle;
 import ci.ws.Models.entities.CIApisEntity;
+import ci.ws.Models.entities.CIApisInfodata;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIApisResp;
+import ci.ws.Models.entities.CIApispaxInfo;
 import ci.ws.Models.entities.CICompanionApisNameEntity;
 import ci.ws.Models.entities.CIExpiringMileageResp;
 import ci.ws.Models.entities.CIInquiryAwardRecordRespList;
@@ -932,17 +935,27 @@ public class CIPersonalFragment extends BaseFragment implements
     }
 
     private CIInquiryApisListListener m_InquiryApisListListener = new CIInquiryApisListListener() {
+//        @Override
+//        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisResp apis) {
+//
+//            saveMyApisFromDB(apis.arApisList);
+//
+//            updateMyApisView(apis.arApisList);
+//        }
+
         @Override
-        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisResp apis) {
+        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisQryRespEntity apis) {
 
-            //saveMyApisFromDB(apis.arApisList);
+            //saveMyApisFromDB(apis.paxInfo);
 
-            //updateMyApisView(apis.arApisList);
+            SLog.d("is apis null?: "+ (apis== null));
+            //在這裡
+            updateMyApisView(apis.paxInfo);
         }
 
         @Override
         public void InquiryApisError(String rt_code, String rt_msg) {
-        updateMyApisView(new ArrayList<CIApisEntity>());
+        updateMyApisView(new ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo>());
         
             showDialog(getString(R.string.warning),
                     rt_msg,
@@ -1007,20 +1020,37 @@ public class CIPersonalFragment extends BaseFragment implements
         }
     };
 
-    private void updateMyApisView(ArrayList<CIApisEntity> ar_apisList) {
-        if( m_flMyApisView.getChildCount() > 0 ) {
-
-            CIApisCardView myApisView = (CIApisCardView)m_flMyApisView.getChildAt(0);
-
-            if( null == ar_apisList ) {
-                myApisView.setVisibility(View.GONE);
-            } else {
-                myApisView.setVisibility(View.VISIBLE);
-                myApisView.notifyMyApisDataUpdate(ar_apisList);
-            }
+    private void updateMyApisView(ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> ar_apisList) {
+        if (ar_apisList != null) {
+            SLog.d("updateMyApisView: " + ar_apisList.get(0).documentInfos.size());
         }
-
+//        if( m_flMyApisView.getChildCount() > 0 ) {
+//
+//            CIApisCardView myApisView = (CIApisCardView)m_flMyApisView.getChildAt(0);
+//
+//            if( null == ar_apisList ) {
+//                myApisView.setVisibility(View.GONE);
+//            } else {
+//                myApisView.setVisibility(View.VISIBLE);
+//                myApisView.notifyMyApisDataUpdate(ar_apisList);
+//            }
+//        }
     }
+
+//    private void updateMyApisView(ArrayList<CIApisEntity> ar_apisList) {
+//        if( m_flMyApisView.getChildCount() > 0 ) {
+//
+//            CIApisCardView myApisView = (CIApisCardView)m_flMyApisView.getChildAt(0);
+//
+//            if( null == ar_apisList ) {
+//                myApisView.setVisibility(View.GONE);
+//            } else {
+//                myApisView.setVisibility(View.VISIBLE);
+//                myApisView.notifyMyApisDataUpdate(ar_apisList);
+//            }
+//        }
+//
+//    }
 
     private void saveMyApisFromDB(ArrayList<CIApisEntity> ar_apisList) {
 
