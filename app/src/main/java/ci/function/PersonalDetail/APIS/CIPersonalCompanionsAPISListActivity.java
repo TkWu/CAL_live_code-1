@@ -19,17 +19,21 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chinaairlines.mobile30.R;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
 import ci.function.Core.CIApplication;
+import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.ApisCard.item.CIApisCardViewItem;
+import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.view.ImageHandle;
 import ci.ui.view.NavigationBar;
 import ci.ws.Models.entities.CIApisEntity;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Presenter.CIAPISPresenter;
 import ci.ws.cores.object.GsonTool;
@@ -91,24 +95,55 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
 
     private ArrayList<CICompanionApisEntity> m_arCompanionsApisList = null;
 
+    private CIApisQryRespEntity.CIApisRespPaxInfo companionApisEntity = null;
     private String m_strFullName = null;
+
+    private CIApisDocmuntTextFieldFragment.EType m_apisType = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        String strUserName = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
-        if (null != strUserName) {
-            String[] strTags = strUserName.split("&");
-            m_strUserName = strTags[0];
-            m_strFullName = strTags[1];
+        //ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo>
+//        intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE, CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_MY_APIS.name()); //功能
+//        intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
+//        intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, strCompanionName);
+//
+//        String mode = getIntent().getStringExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE);//APIS功能(新增／編輯  自己／同行)
+//        if (null != mode) {
+//            m_type = CIPersonalAddSaveAPISActivity.CIPersonalAddAPISType.valueOf(mode);
+//        }
+//        SLog.d("m_type: "+m_type.name());
 
-            m_arCompanionsApisList = CIAPISPresenter.getInstance().getCompanionsApisListWithFullName(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_strFullName);
+        String fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
+        m_apisType = CIApisDocmuntTextFieldFragment.EType.valueOf(fun_entry);
+
+        String s_CompanionApisEntity = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE);//同行者ＡＰＩＳ物件
+        if (null != s_CompanionApisEntity) {
+            Gson gson = new Gson();
+
+            try{
+                companionApisEntity = gson.fromJson(s_CompanionApisEntity, CIApisQryRespEntity.CIApisRespPaxInfo.class);
+            } catch ( Exception e ){
+                e.printStackTrace();
+            }
         }
 
-        String strAPISNames = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_TAG);
-        if (null != strAPISNames) {
-            m_strAPISNames = strAPISNames.split(" / ");
-        }
+
+
+
+//        String strUserName = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
+//        if (null != strUserName) {
+//            String[] strTags = strUserName.split("&");
+//            m_strUserName = strTags[0];
+//            m_strFullName = strTags[1];
+//
+//            m_arCompanionsApisList = CIAPISPresenter.getInstance().getCompanionsApisListWithFullName(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_strFullName);
+//        }
+//
+//        String strAPISNames = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_TAG);
+//        if (null != strAPISNames) {
+//            m_strAPISNames = strAPISNames.split(" / ");
+//        }
 
         super.onCreate(savedInstanceState);
     }

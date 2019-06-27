@@ -723,6 +723,7 @@
     <string name="female">女性</string>
     <string name="resident_country">居住國家/地區</string>
     <string name="document_type">證件類別</string>
+    <string name="document_type1">類別</string>
     <string name="document_number">證件號碼</string>
     <string name="country_of_issuance">發證國家/地區</string>
     <string name="date_of_expiry">效期截止日期</string>

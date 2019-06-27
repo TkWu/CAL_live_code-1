@@ -37,19 +37,20 @@ import ci.function.Signup.CISignUpActivity;
 import ci.ui.ApisCard.CIApisCardView;
 import ci.ui.SocialNetworkCard.CIPersonalSocialNetworkView;
 import ci.ui.SocialNetworkCard.CIPersonalSocialNetworkView.OnPersonalSocialNetworkViewListener;
-import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.object.AppInfo;
 import ci.ui.object.CILoginInfo;
 import ci.ui.toast.CIToastView;
 import ci.ui.view.ImageHandle;
-import ci.ws.Models.entities.CIApisEntity;
+import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
+import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisInfodata;
-import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIApisResp;
 import ci.ws.Models.entities.CIApispaxInfo;
 import ci.ws.Models.entities.CICompanionApisNameEntity;
+import ci.ws.Models.entities.CIApisEntity;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIExpiringMileageResp;
 import ci.ws.Models.entities.CIInquiryAwardRecordRespList;
 import ci.ws.Models.entities.CIMileageRecordResp;
@@ -234,29 +235,42 @@ public class CIPersonalFragment extends BaseFragment implements
         }
 
         @Override
-        public void OnPersonalAPISDetailClick(String strAPISName) {
-            Intent intent = new Intent();
-            intent.putExtra(
-                    UiMessageDef.BUNDLE_ACTIVITY_MODE,
-                    CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_MY_APIS.name());
-            intent.putExtra(
-                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG,
-                    CIApplication.getLoginInfo().GetUserName());
-            intent.putExtra(
-                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_TAG, strAPISName);
-            intent.setClass(getActivity(), CIPersonalAPISDetialActivity.class);
-            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);
+        public void OnPersonalAPISDetailClick(String strAPISObjJson) {
+//      public void OnPersonalAPISDetailClick(String strAPISName) {
+//            Intent intent = new Intent();
+//            intent.putExtra(
+//                    UiMessageDef.BUNDLE_ACTIVITY_MODE,
+//                    CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_MY_APIS.name());
+//            intent.putExtra(
+//                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG,
+//                    CIApplication.getLoginInfo().GetUserName());
+//            intent.putExtra(
+//                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_TAG, strAPISName);
+//            intent.setClass(getActivity(), CIPersonalAPISDetialActivity.class);
+//            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);
 
+            Intent intent = new Intent();
+            intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE, CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_MY_APIS.name()); //功能
+            intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
+            intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, strAPISObjJson);
+
+            intent.setClass(getActivity(), CIPersonalAddSaveAPISActivity.class);
+            //要改
+            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
         }
 
         @Override
-        public void OnCompanionsAPISDetailClick(String strCompanionName, String strAPISNameS) {
+        //public void OnCompanionsAPISDetailClick(String strCompanionName, String strAPISNameS) {
+        public void OnCompanionsAPISDetailClick(String strCompanionName) {
             Intent intent = new Intent();
-            intent.putExtra(
-                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG, strCompanionName);
-            intent.putExtra(
-                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_TAG, strAPISNameS);
+//            intent.putExtra(
+//                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG, strCompanionName);
+//            intent.putExtra(
+//                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_TAG, strAPISNameS);
+            intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE, CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_MY_APIS.name()); //功能
+            intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
+            intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, strCompanionName);
             intent.setClass(getActivity(), CIPersonalCompanionsAPISListActivity.class);
             startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_COMPANIONS_APIS_TAG);
 
@@ -808,7 +822,7 @@ public class CIPersonalFragment extends BaseFragment implements
         //重建CompanionsApisView
         setCompanionsApisView();
         //更新CompanionsApisView
-        queryAndUpdateCompanionsApisView();
+        queryAndUpdateCompanionsApisView(null);
 
         //Inquiry Apis list
         //CIAPISPresenter.getInstance().InquiryMyApisListFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
@@ -948,9 +962,8 @@ public class CIPersonalFragment extends BaseFragment implements
 
             //saveMyApisFromDB(apis.paxInfo);
 
-            SLog.d("is apis null?: "+ (apis== null));
-            //在這裡
             updateMyApisView(apis.paxInfo);
+            queryAndUpdateCompanionsApisView(apis.paxInfo);
         }
 
         @Override
@@ -1021,20 +1034,25 @@ public class CIPersonalFragment extends BaseFragment implements
     };
 
     private void updateMyApisView(ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> ar_apisList) {
-        if (ar_apisList != null) {
-            SLog.d("updateMyApisView: " + ar_apisList.get(0).documentInfos.size());
+        if( m_flMyApisView.getChildCount() > 0 ) {
+
+            CIApisCardView myApisView = (CIApisCardView)m_flMyApisView.getChildAt(0);
+
+            if( null == ar_apisList ) {
+                myApisView.setVisibility(View.GONE);
+            } else {
+                myApisView.setVisibility(View.VISIBLE);
+                //myApisView.notifyMyApisDataUpdate(ar_apisList);
+
+                for (CIApisQryRespEntity.CIApisRespPaxInfo mpasinfo : ar_apisList) {
+                    if (mpasinfo.firstName.equals(CIApplication.getLoginInfo().GetUserFirstName())&&
+                            mpasinfo.lastName.equals(CIApplication.getLoginInfo().GetUserLastName())
+                    ){
+                        myApisView.notifyMyApisDataUpdate(mpasinfo.documentInfos);
+                    }
+                }
+            }
         }
-//        if( m_flMyApisView.getChildCount() > 0 ) {
-//
-//            CIApisCardView myApisView = (CIApisCardView)m_flMyApisView.getChildAt(0);
-//
-//            if( null == ar_apisList ) {
-//                myApisView.setVisibility(View.GONE);
-//            } else {
-//                myApisView.setVisibility(View.VISIBLE);
-//                myApisView.notifyMyApisDataUpdate(ar_apisList);
-//            }
-//        }
     }
 
 //    private void updateMyApisView(ArrayList<CIApisEntity> ar_apisList) {
@@ -1078,19 +1096,45 @@ public class CIPersonalFragment extends BaseFragment implements
 
     }
 
-    private void queryAndUpdateCompanionsApisView() {
+//    private void queryAndUpdateCompanionsApisView() {
+//        if( m_flCompanionsApisView.getChildCount() > 0 ) {
+//
+//            CIApisCardView companionsApisView = (CIApisCardView)m_flCompanionsApisView.getChildAt(0);
+//            companionsApisView.setVisibility(View.GONE);
+//
+//            ArrayList<CICompanionApisNameEntity> ar_apisList =
+//                    CIAPISPresenter.getInstance().getCompanionApisList(CIApplication.getLoginInfo().GetUserMemberCardNo());
+//
+//            companionsApisView.setVisibility(View.VISIBLE);
+//            companionsApisView.notifyCompanionApisDataUpdate(ar_apisList);
+//        }
+//    }
 
-
+    private void queryAndUpdateCompanionsApisView(ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> ar_apisList) {
         if( m_flCompanionsApisView.getChildCount() > 0 ) {
 
             CIApisCardView companionsApisView = (CIApisCardView)m_flCompanionsApisView.getChildAt(0);
-            companionsApisView.setVisibility(View.GONE);
+            if( null == ar_apisList ) {
 
-            ArrayList<CICompanionApisNameEntity> ar_apisList =
-                    CIAPISPresenter.getInstance().getCompanionApisList(CIApplication.getLoginInfo().GetUserMemberCardNo());
+                companionsApisView.setVisibility(View.GONE);
+            }else{
+                ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> m_ar_apisList = new ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo>();
 
-            companionsApisView.setVisibility(View.VISIBLE);
-            companionsApisView.notifyCompanionApisDataUpdate(ar_apisList);
+                for (CIApisQryRespEntity.CIApisRespPaxInfo mpasinfo : ar_apisList) {
+                    if (!mpasinfo.firstName.equals(CIApplication.getLoginInfo().GetUserFirstName()) ||
+                            mpasinfo.lastName.equals(CIApplication.getLoginInfo().GetUserLastName())
+                    ) {
+                        m_ar_apisList.add(mpasinfo);
+                    }
+                }
+                companionsApisView.setVisibility(View.VISIBLE);
+                companionsApisView.notifyCompanionApisDataUpdate(m_ar_apisList);
+            }
+
+//            ArrayList<CICompanionApisNameEntity> ar_apisList =
+//                    CIAPISPresenter.getInstance().getCompanionApisList(CIApplication.getLoginInfo().GetUserMemberCardNo());
+
+
 
         }
     }
@@ -1155,7 +1199,7 @@ public class CIPersonalFragment extends BaseFragment implements
             //重建CompanionsApisView
             setCompanionsApisView();
             //更新CompanionsApisView
-            queryAndUpdateCompanionsApisView();
+            queryAndUpdateCompanionsApisView(null);
         } else if ( requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_PROFILE_EDIT &&
                 resultCode == getActivity().RESULT_OK) {
 

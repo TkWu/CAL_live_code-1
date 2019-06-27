@@ -871,6 +871,7 @@
     <string name="female">Female</string>
     <string name="resident_country">Country/Region of Residence</string>
     <string name="document_type">Document Type</string>
+    <string name="document_type1">Type</string>
     <string name="document_number">Document No.</string>
     <string name="country_of_issuance">Country/Region of Issuance</string>
     <string name="date_of_expiry">Date of Expiry</string>

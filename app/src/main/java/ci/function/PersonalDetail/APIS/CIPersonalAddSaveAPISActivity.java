@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chinaairlines.mobile30.R;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -294,7 +295,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private CIApisDocmuntTypeEntity                     m_apisDocmuntType   = null;
     private ArrayList<CIApisDocmuntTypeEntity>          m_arApisDocmuntList = null;
     private CIApisEntity                                m_apisEntity        = null;
-    private CIApisAddEntity m_newApisEntity     = null;
+    private CIApisAddEntity                             m_newApisEntity     = null;
+    private CIApisQryRespEntity.ApisRespDocObj          m_editMyApisEntity  = null;
     private ArrayList<CIApisNationalEntity>             m_arApisNationList  = null;
     private boolean                                     m_bInitializedAPIS  = false;
 
@@ -306,29 +308,64 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             m_type = CIPersonalAddAPISType.valueOf(mode);
         }
         SLog.d("m_type: "+m_type.name());
+        String fun_entry = "";
 
-        String fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
-        m_apisType = CIApisDocmuntTextFieldFragment.EType.valueOf(fun_entry);
+        switch (m_type) {
+            case ADD_MY_APIS:
+                fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
+                m_apisType = CIApisDocmuntTextFieldFragment.EType.valueOf(fun_entry);
 
-        m_apisDocmuntType = (CIApisDocmuntTypeEntity)getIntent().getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE); //APIS類型物件
+                m_apisDocmuntType = (CIApisDocmuntTypeEntity)getIntent().getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE); //APIS類型物件
 
-        if (null != m_apisDocmuntType) {
-            Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
-            SLog.d("locale: "+locale);
-            m_strAPISName = m_apisDocmuntType.getName(locale);
+                if (null != m_apisDocmuntType) {
+                    Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
+                    SLog.d("locale: "+locale);
+                    m_strAPISName = m_apisDocmuntType.getName(locale);
+                }
+
+                String strData = getIntent().getExtras().getString(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
+                if (null != strData) {
+                    m_strAPISCode = strData;
+                }
+
+                String strUserName = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
+                if (null != strUserName && 0 < strUserName.length()) {
+                    m_strUserName = strUserName;
+                }else {
+                    m_strUserName = CIApplication.getLoginInfo().GetUserName();
+                }
+                break;
+
+            case ADD_COMPANAIONS_APIS:
+                m_tvName.setVisibility(View.GONE);
+                m_ll_companions_name.setVisibility(View.VISIBLE);
+                break;
+            case EDIT_MY_APIS:
+                fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
+                String edtmy_apis = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE);
+                if (edtmy_apis != null) {
+                    Gson gson = new Gson();
+
+                    try{
+                        m_editMyApisEntity = gson.fromJson(edtmy_apis, CIApisQryRespEntity.ApisRespDocObj.class);
+                    } catch ( Exception e ){
+                        e.printStackTrace();
+                    }
+                }
+
+                break;
+            case EDIT_COMPANAIONS_APIS:
+                m_tvName.setVisibility(View.GONE);
+                m_ll_companions_name.setVisibility(View.VISIBLE);
+                break;
+            case DELETE_MY_APIS:
+                break;
+            case DELETE_COMPANAIONS_APIS:
+                break;
         }
 
-        String strData = getIntent().getExtras().getString(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
-        if (null != strData) {
-            m_strAPISCode = strData;
-        }
 
-        String strUserName = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
-        if (null != strUserName && 0 < strUserName.length()) {
-            m_strUserName = strUserName;
-        }else {
-            m_strUserName = CIApplication.getLoginInfo().GetUserName();
-        }
+
 
         super.onCreate(savedInstanceState);
 

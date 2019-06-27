@@ -727,6 +727,7 @@
     <string name="female">女性</string>
     <string name="resident_country">お住まいの国/地域</string>
     <string name="document_type">渡航書類のタイプ</string>
+    <string name="document_type1">タイプ</string>
     <string name="document_number">渡航書類の番号</string>
     <string name="country_of_issuance">発行国/地域</string>
     <string name="date_of_expiry">有効期限</string>
