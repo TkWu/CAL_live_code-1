@@ -114,6 +114,7 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
 //        }
 //        SLog.d("m_type: "+m_type.name());
 
+        //在這邊
         String fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
         m_apisType = CIApisDocmuntTextFieldFragment.EType.valueOf(fun_entry);
 
