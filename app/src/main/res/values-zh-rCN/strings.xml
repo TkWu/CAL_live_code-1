@@ -740,6 +740,7 @@
     <string name="female">女性</string>
     <string name="resident_country">居住国家/地区</string>
     <string name="document_type">证件类别</string>
+    <string name="document_type1">类别</string>
     <string name="document_number">证件号码</string>
     <string name="country_of_issuance">发证国家/地区</string>
     <string name="date_of_expiry">效期截止日期</string>

@@ -23,6 +23,7 @@ import ci.ui.define.ViewScaleDef;
 import ci.ui.object.AppInfo;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisEntity;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CICompanionApisNameEntity;
 import ci.ws.Presenter.CIAPISPresenter;
 import ci.ws.cores.object.GsonTool;
@@ -44,7 +45,8 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
         //按下個人資料的詳細資訊
         void OnPersonalAPISDetailClick(String strAPISName);
         //按下旅客的詳細資訊
-        void OnCompanionsAPISDetailClick(String strCompanionsName, String strAPISNames);
+        //void OnCompanionsAPISDetailClick(String strCompanionsName, String strAPISNames);
+        void OnCompanionsAPISDetailClick(String strCompanionsName);
     }
 
     private OnPersonalApisCardViewListener m_Listener = null;
@@ -69,9 +71,9 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
 
     private ArrayList<CIApisCardViewItem> m_alData = new ArrayList<>();
 
-    private ArrayList<CIApisEntity> m_ar_apisList = null;
+    private ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_apisList = null;
 
-    private ArrayList<CICompanionApisNameEntity> m_arCompanionApisList = null;
+    private ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> m_arCompanionApisList = null;
 
     private static HashMap<String, CIApisDocmuntTypeEntity> m_apisDocTypeList = null;
 
@@ -148,13 +150,18 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
 //            m_rlayout.setTag(m_alData.get(i).GetHeadText()+";"+m_alData.get(i).GetBodyText());
 
             if( CIApisCardType.MY_APIS == m_type ) {
-                CIApisEntity apisEntity = m_ar_apisList.get(i);
+                CIApisQryRespEntity.ApisRespDocObj apisEntity = m_ar_apisList.get(i);
 //            m_rlayout.setTag( getTag(apisEntity) );
                 m_rlayout.setTag(apisEntity);
             } else if( CIApisCardType.COMPANIONS_APIS == m_type ) {
-                CICompanionApisNameEntity arCompanionApisList = m_arCompanionApisList.get(i);
-//                m_rlayout.setTag(arCompanionApisList);
-                m_rlayout.setTag( m_alData.get(i).GetHeadText() + "&" + arCompanionApisList.full_name + ";" + m_alData.get(i).GetBodyText() );
+                //CICompanionApisNameEntity arCompanionApisList = m_arCompanionApisList.get(i);
+                //m_rlayout.setTag(arCompanionApisList);
+//                for(CIApisQryRespEntity.CIApisRespPaxInfo paxinfo : ar_apisList ) {
+//                    for (CIApisQryRespEntity.ApisRespDocObj apis : paxinfo.documentInfos) {
+//                    }
+//                }
+//                m_rlayout.setTag( m_alData.get(i).GetHeadText() + "&" + arCompanionApisList.full_name + ";" + m_alData.get(i).GetBodyText() );
+                m_rlayout.setTag(m_arCompanionApisList.get(i));
             }
 
             m_rlayout.setOnClickListener(this);
@@ -196,7 +203,7 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
         return GsonTool.toJson(apisEntity);
     }
 
-    public void notifyMyApisDataUpdate(ArrayList<CIApisEntity> ar_apisList) {
+    public void notifyMyApisDataUpdate(ArrayList<CIApisQryRespEntity.ApisRespDocObj> ar_apisList) {
 
         m_alData.clear();
 
@@ -204,18 +211,18 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
             m_ar_apisList.clear();
         }
 
-        m_ar_apisList = (ArrayList<CIApisEntity>) ar_apisList.clone();
+        m_ar_apisList = (ArrayList<CIApisQryRespEntity.ApisRespDocObj>) ar_apisList.clone();
 
-        for(CIApisEntity apis : ar_apisList ) {
+        for(CIApisQryRespEntity.ApisRespDocObj apis : ar_apisList ) {
 
-            String strPassport = getDocTypeName(apis.doc_type);
+            String strPassport = getDocTypeName(apis.documentName);
 
             if( TextUtils.isEmpty(strPassport) ) {
-                strPassport = apis.doc_type;
+                strPassport = apis.documentName;
             }
 
             m_alData.add(new CIApisCardViewItem(
-                    strPassport, getResources().getString(R.string.document_number)+": "+apis.doc_no));
+                    strPassport, getResources().getString(R.string.document_type1)+": "+getDocTypeName(apis.documentType)));
         }
 
 
@@ -236,7 +243,7 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
         return "";
     }
 
-    public void notifyCompanionApisDataUpdate(ArrayList<CICompanionApisNameEntity> ar_apisList) {
+    public void notifyCompanionApisDataUpdate(ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> ar_apisList) {
         m_alData.clear();
 
         if( m_arCompanionApisList != null ) {
@@ -245,19 +252,18 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
 
 
         if( null != ar_apisList ) {
-            m_arCompanionApisList = (ArrayList<CICompanionApisNameEntity>) ar_apisList.clone();
+            m_arCompanionApisList = (ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo>) ar_apisList.clone();
 
-
-            for (CICompanionApisNameEntity companionName : ar_apisList) {
+            for(CIApisQryRespEntity.CIApisRespPaxInfo paxinfo : ar_apisList ) {
 
                 StringBuffer sbPassport = new StringBuffer();
-                for (CIApisEntity apis : companionName.arCompanionApisList) {
+                for (CIApisQryRespEntity.ApisRespDocObj apis : paxinfo.documentInfos) {
 
                     if( null == apis ) {
                         continue;
                     }
 
-                    String strPassport = getDocTypeName(apis.doc_type);
+                    String strPassport = getDocTypeName(apis.documentType);
 
                     if (TextUtils.isEmpty(strPassport)) {
                         continue;
@@ -271,10 +277,9 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
                 }
 
                 m_alData.add(new CIApisCardViewItem(
-                        companionName.display_name, sbPassport.toString()));
+                        paxinfo.firstName+" "+paxinfo.lastName, sbPassport.toString()));
             }
         }
-
 
         refreshView();
     }
@@ -334,25 +339,39 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
             case R.id.rlayout:
 
                 String strTag = "";
-                String strApisName = "";
+//                String strApisName = "";
+//                if( CIApisCardType.MY_APIS == m_type ) {
+//
+//                    CIApisEntity apisEntity = (CIApisEntity)v.getTag();
+//                    strTag = getTag(apisEntity);
+//
+//                } else if( CIApisCardType.COMPANIONS_APIS == m_type ) {
+//                    String[] arTags = ((String)v.getTag()).split(";");
+//                    strTag = arTags[0];
+//                    strApisName = arTags[1];
+//
+//                }
                 if( CIApisCardType.MY_APIS == m_type ) {
 
-                    CIApisEntity apisEntity = (CIApisEntity)v.getTag();
+                    CIApisQryRespEntity.ApisRespDocObj apisEntity = (CIApisQryRespEntity.ApisRespDocObj)v.getTag();
                     strTag = getTag(apisEntity);
 
                 } else if( CIApisCardType.COMPANIONS_APIS == m_type ) {
-                    String[] arTags = ((String)v.getTag()).split(";");
-                    strTag = arTags[0];
-                    strApisName = arTags[1];
-
+                    CIApisQryRespEntity.CIApisRespPaxInfo paxInfo = (CIApisQryRespEntity.CIApisRespPaxInfo)v.getTag();
+                    strTag = getTag(paxInfo);
                 }
 
-               SLog.d(AppInfo.APP_LOG_TAG, m_type.toString() + strTag);
+                SLog.d(AppInfo.APP_LOG_TAG, m_type.toString() + strTag);
 
+//                if (m_type.equals(CIApisCardType.MY_APIS)) {
+//                    m_Listener.OnPersonalAPISDetailClick(strTag);
+//                } else {
+//                    m_Listener.OnCompanionsAPISDetailClick(strTag, strApisName);
+//                }
                 if (m_type.equals(CIApisCardType.MY_APIS)) {
                     m_Listener.OnPersonalAPISDetailClick(strTag);
                 } else {
-                    m_Listener.OnCompanionsAPISDetailClick(strTag, strApisName);
+                    m_Listener.OnCompanionsAPISDetailClick(strTag);
                 }
                 break;
         }

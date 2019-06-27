@@ -666,6 +666,7 @@
     <string name="female">Weiblich</string>
     <string name="resident_country">Land/Region Ihres Wohnsitzes</string>
     <string name="document_type">Dokumenttyp</string>
+    <string name="document_type1">Typ</string>
     <string name="document_number">Dokumentnummer</string>
     <string name="country_of_issuance">Ausstellungsland/-region</string>
     <string name="date_of_expiry">Ablaufdatum</string>
