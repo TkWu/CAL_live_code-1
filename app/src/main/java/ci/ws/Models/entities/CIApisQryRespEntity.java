@@ -2,6 +2,7 @@ package ci.ws.Models.entities;
 
 import com.google.gson.annotations.Expose;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class CIApisQryRespEntity {
@@ -35,7 +36,7 @@ public class CIApisQryRespEntity {
 
     }
 
-    public class ApisRespDocObj {
+    public class ApisRespDocObj implements Serializable {
         /**
          * 證件序號
          */
