@@ -2,6 +2,7 @@ package ci.ws.Models.entities;
 
 import com.google.gson.annotations.Expose;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class CIApispaxInfo {
@@ -108,20 +109,20 @@ public class CIApispaxInfo {
     }
 
 
-    public class BasicDocuments{
+    public class BasicDocuments implements Serializable {
         public String gender = "gender";
         public String birthday = "birthday";
         public String residence = "residence";
         public String nationality = "nationality";
     }
 
-    public class OtherDocuments{
+    public class OtherDocuments implements Serializable {
         public String documentNo = "documentNo";
         public String expireDay = "expireDay";
         public String issueCountry = "issueCountry";
     }
 
-    public class Docas{
+    public class Docas implements Serializable {
         public String country = "country";
         public String state = "state";
         public String city = "city";

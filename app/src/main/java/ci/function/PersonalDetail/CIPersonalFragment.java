@@ -262,7 +262,7 @@ public class CIPersonalFragment extends BaseFragment implements
 
         @Override
         //public void OnCompanionsAPISDetailClick(String strCompanionName, String strAPISNameS) {
-        public void OnCompanionsAPISDetailClick(String strCompanionName) {
+        public void OnCompanionsAPISDetailClick(String strCompanionDocName) {
             Intent intent = new Intent();
 //            intent.putExtra(
 //                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG, strCompanionName);
@@ -270,7 +270,7 @@ public class CIPersonalFragment extends BaseFragment implements
 //                    UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_TAG, strAPISNameS);
             intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE, CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_MY_APIS.name()); //功能
             intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
-            intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, strCompanionName);
+            intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, strCompanionDocName);
             intent.setClass(getActivity(), CIPersonalCompanionsAPISListActivity.class);
             startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_COMPANIONS_APIS_TAG);
 

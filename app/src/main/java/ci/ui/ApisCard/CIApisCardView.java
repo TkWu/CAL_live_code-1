@@ -142,48 +142,72 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
             m_tvNoApis.setVisibility(GONE);
         }
 
-        for (int i = 0; i < m_alData.size(); i++) {
+        SLog.d("m_type "+ m_type);
+        switch (m_type) {
+            case MY_APIS:
+                SLog.d("MY_APIS: "+m_ar_apisList.size()+" "+m_alData.size());
+                for (int i = 0; i < m_alData.size(); i++) {
 
-            View vApisData = m_layoutInflater.inflate(R.layout.layout_view_personal_apis_card_item, null);
-            m_ibtnArrow = (ImageButton) vApisData.findViewById(R.id.ibtn_arrow);
-            m_rlayout = (RelativeLayout) vApisData.findViewById(R.id.rlayout);
-//            m_rlayout.setTag(m_alData.get(i).GetHeadText()+";"+m_alData.get(i).GetBodyText());
+                    View vApisData = m_layoutInflater.inflate(R.layout.layout_view_personal_apis_card_item, null);
+                    m_ibtnArrow = (ImageButton) vApisData.findViewById(R.id.ibtn_arrow);
+                    m_rlayout = (RelativeLayout) vApisData.findViewById(R.id.rlayout);
 
-            if( CIApisCardType.MY_APIS == m_type ) {
-                CIApisQryRespEntity.ApisRespDocObj apisEntity = m_ar_apisList.get(i);
-//            m_rlayout.setTag( getTag(apisEntity) );
-                m_rlayout.setTag(apisEntity);
-            } else if( CIApisCardType.COMPANIONS_APIS == m_type ) {
-                //CICompanionApisNameEntity arCompanionApisList = m_arCompanionApisList.get(i);
-                //m_rlayout.setTag(arCompanionApisList);
-//                for(CIApisQryRespEntity.CIApisRespPaxInfo paxinfo : ar_apisList ) {
-//                    for (CIApisQryRespEntity.ApisRespDocObj apis : paxinfo.documentInfos) {
-//                    }
-//                }
-//                m_rlayout.setTag( m_alData.get(i).GetHeadText() + "&" + arCompanionApisList.full_name + ";" + m_alData.get(i).GetBodyText() );
-                m_rlayout.setTag(m_arCompanionApisList.get(i));
-            }
+                    CIApisQryRespEntity.ApisRespDocObj apisEntity = m_ar_apisList.get(i);
+                    m_rlayout.setTag(apisEntity);
+                    m_rlayout.setOnClickListener(this);
 
-            m_rlayout.setOnClickListener(this);
+                    TextView tvHead = (TextView) vApisData.findViewById(R.id.tv_head);
+                    tvHead.setText(m_alData.get(i).GetHeadText());
+                    TextView tvBody = (TextView) vApisData.findViewById(R.id.tv_body);
+                    tvBody.setText(m_alData.get(i).GetBodyText());
 
-            TextView tvHead = (TextView) vApisData.findViewById(R.id.tv_head);
-            tvHead.setText(m_alData.get(i).GetHeadText());
-            TextView tvBody = (TextView) vApisData.findViewById(R.id.tv_body);
-            tvBody.setText(m_alData.get(i).GetBodyText());
+                    m_llBody.addView(vApisData);
 
-            m_llBody.addView(vApisData);
+                    ViewScaleDef.getInstance(m_Context).selfAdjustAllView(vApisData.findViewById(R.id.personal_apis_card_item_root));
+                    ViewScaleDef.getInstance(m_Context).selfAdjustSameScaleView(
+                            m_ibtnArrow, DEF_IMG_WIDTH, DEF_IMG_WIDTH);
 
-            ViewScaleDef.getInstance(m_Context).selfAdjustAllView(vApisData.findViewById(R.id.personal_apis_card_item_root));
-            ViewScaleDef.getInstance(m_Context).selfAdjustSameScaleView(
-                    m_ibtnArrow, DEF_IMG_WIDTH, DEF_IMG_WIDTH);
+                    View vMarginTop = (View) vApisData.findViewById(R.id.v_marginTop);
+                    if ( 0 == i ){
+                        vMarginTop.setVisibility(VISIBLE);
+                    }else {
+                        vMarginTop.setVisibility(GONE);
+                    }
+                }
+                break;
+            case COMPANIONS_APIS:
+                SLog.d("COMPANIONS_APIS: "+m_arCompanionApisList.size()+" "+m_alData.size());
+                for (int i = 0; i < m_alData.size(); i++) {
 
-            View vMarginTop = (View) vApisData.findViewById(R.id.v_marginTop);
-            if ( 0 == i ){
-                vMarginTop.setVisibility(VISIBLE);
-            }else {
-                vMarginTop.setVisibility(GONE);
-            }
+                    View vApisData = m_layoutInflater.inflate(R.layout.layout_view_personal_apis_card_item, null);
+                    m_ibtnArrow = (ImageButton) vApisData.findViewById(R.id.ibtn_arrow);
+                    m_rlayout = (RelativeLayout) vApisData.findViewById(R.id.rlayout);
+
+                    m_rlayout.setTag(m_arCompanionApisList.get(i));
+                    m_rlayout.setOnClickListener(this);
+
+                    TextView tvHead = (TextView) vApisData.findViewById(R.id.tv_head);
+                    tvHead.setText(m_alData.get(i).GetHeadText());
+                    TextView tvBody = (TextView) vApisData.findViewById(R.id.tv_body);
+                    tvBody.setText(m_alData.get(i).GetBodyText());
+
+                    m_llBody.addView(vApisData);
+
+                    ViewScaleDef.getInstance(m_Context).selfAdjustAllView(vApisData.findViewById(R.id.personal_apis_card_item_root));
+                    ViewScaleDef.getInstance(m_Context).selfAdjustSameScaleView(
+                            m_ibtnArrow, DEF_IMG_WIDTH, DEF_IMG_WIDTH);
+
+                    View vMarginTop = (View) vApisData.findViewById(R.id.v_marginTop);
+                    if ( 0 == i ){
+                        vMarginTop.setVisibility(VISIBLE);
+                    }else {
+                        vMarginTop.setVisibility(GONE);
+                    }
+                }
+                break;
         }
+
+
 
         //MyApis新增四筆後隱藏新增[+]按鈕
         //2016/06/22 改為不隱藏新增[+]按鈕
@@ -254,8 +278,17 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
         if( null != ar_apisList ) {
             m_arCompanionApisList = (ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo>) ar_apisList.clone();
 
-            for(CIApisQryRespEntity.CIApisRespPaxInfo paxinfo : ar_apisList ) {
+            for(CIApisQryRespEntity.CIApisRespPaxInfo paxinfo : m_arCompanionApisList ) {
 
+                if (paxinfo.firstName.equals(CIApplication.getLoginInfo().GetUserFirstName()) &&
+                        paxinfo.lastName.equals(CIApplication.getLoginInfo().GetUserLastName()))
+                {
+                    m_arCompanionApisList.remove(paxinfo);
+                    break;
+                }
+            }
+
+            for(CIApisQryRespEntity.CIApisRespPaxInfo paxinfo : m_arCompanionApisList ) {
                 StringBuffer sbPassport = new StringBuffer();
                 for (CIApisQryRespEntity.ApisRespDocObj apis : paxinfo.documentInfos) {
 
@@ -275,7 +308,6 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
                         sbPassport.append(strPassport);
                     }
                 }
-
                 m_alData.add(new CIApisCardViewItem(
                         paxinfo.firstName+" "+paxinfo.lastName, sbPassport.toString()));
             }

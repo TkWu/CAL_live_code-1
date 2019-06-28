@@ -1,5 +1,6 @@
 package ci.function.PersonalDetail.APIS;
 
+import android.content.Intent;
 import android.os.Message;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -296,7 +297,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private ArrayList<CIApisDocmuntTypeEntity>          m_arApisDocmuntList = null;
     private CIApisEntity                                m_apisEntity        = null;
     private CIApisAddEntity                             m_newApisEntity     = null;
-    private CIApisQryRespEntity.ApisRespDocObj          m_editMyApisEntity  = null;
+    private CIApisQryRespEntity.ApisRespDocObj          m_editApisEntity    = null;
     private ArrayList<CIApisNationalEntity>             m_arApisNationList  = null;
     private boolean                                     m_bInitializedAPIS  = false;
 
@@ -308,13 +309,12 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             m_type = CIPersonalAddAPISType.valueOf(mode);
         }
         SLog.d("m_type: "+m_type.name());
-        String fun_entry = "";
+        String fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
+        m_apisType = CIApisDocmuntTextFieldFragment.EType.valueOf(fun_entry);
+
 
         switch (m_type) {
             case ADD_MY_APIS:
-                fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
-                m_apisType = CIApisDocmuntTextFieldFragment.EType.valueOf(fun_entry);
-
                 m_apisDocmuntType = (CIApisDocmuntTypeEntity)getIntent().getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE); //APIS類型物件
 
                 if (null != m_apisDocmuntType) {
@@ -341,7 +341,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 m_ll_companions_name.setVisibility(View.VISIBLE);
                 break;
             case EDIT_MY_APIS:
-                fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
                 String edtmy_apis = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE);
                 if (edtmy_apis != null) {
                     Gson gson = new Gson();
@@ -357,6 +356,24 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             case EDIT_COMPANAIONS_APIS:
                 m_tvName.setVisibility(View.GONE);
                 m_ll_companions_name.setVisibility(View.VISIBLE);
+
+                String tmp_companyname = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
+                if (tmp_companyname != null) {
+                    m_strUserName = tmp_companyname;
+                }
+
+
+                m_editApisEntity
+                        
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, ar_companionApis.get(position));
+
+                intent.putExtras(bundle);
+                intent.setClass(m_Context, CIPersonalAddSaveAPISActivity.class);
+                //要改
+                startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);
+                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+
                 break;
             case DELETE_MY_APIS:
                 break;
