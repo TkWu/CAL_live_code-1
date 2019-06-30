@@ -57,7 +57,7 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
 
         @Override
         public String GetTitle() {
-            return m_strUserName.replace(":"," ");
+            return m_strUserName.replace(":","/");
         }
     };
 
@@ -305,7 +305,7 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent();
-                    intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE, CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_MY_APIS.name()); //功能
+                    intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE, CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS.name()); //功能
                     intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
                     intent.putExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG, m_strUserName);//個人／checkin入口分類
 
