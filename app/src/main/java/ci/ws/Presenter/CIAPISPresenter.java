@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import ci.function.Core.SLog;
 import ci.ws.Models.CIDeleteAPISModel;
 import ci.ws.Models.CIInquiryApisListModel;
 import ci.ws.Models.CIInsertAPISModel;
@@ -430,6 +431,7 @@ public class CIAPISPresenter {
                 public void run() {
                     if ( null != m_Listener ){
                         m_Listener.UpdateApisError(rt_code, rt_msg);
+                        SLog.d("rt_code: "+rt_code+" rt_msg: "+rt_msg);
                         m_Listener.hideProgress();
                     }
                 }

@@ -337,8 +337,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 break;
 
             case ADD_COMPANAIONS_APIS:
-                m_tvName.setVisibility(View.GONE);
-                m_ll_companions_name.setVisibility(View.VISIBLE);
+//                m_tvName.setVisibility(View.GONE);
+//                m_ll_companions_name.setVisibility(View.VISIBLE);
                 break;
             case EDIT_MY_APIS:
                 String edtmy_apis = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE);
@@ -346,7 +346,9 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                     Gson gson = new Gson();
 
                     try{
-                        m_editMyApisEntity = gson.fromJson(edtmy_apis, CIApisQryRespEntity.ApisRespDocObj.class);
+                        m_editApisEntity = gson.fromJson(edtmy_apis, CIApisQryRespEntity.ApisRespDocObj.class);
+                        m_strAPISName = m_editApisEntity.documentName;
+                        m_strAPISCode = m_editApisEntity.documentType;
                     } catch ( Exception e ){
                         e.printStackTrace();
                     }
@@ -354,25 +356,19 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
                 break;
             case EDIT_COMPANAIONS_APIS:
-                m_tvName.setVisibility(View.GONE);
-                m_ll_companions_name.setVisibility(View.VISIBLE);
 
                 String tmp_companyname = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
                 if (tmp_companyname != null) {
                     m_strUserName = tmp_companyname;
                 }
 
+                m_editApisEntity = (CIApisQryRespEntity.ApisRespDocObj)getIntent().getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE); //APIS類型物件
 
-                m_editApisEntity
-                        
-                Bundle bundle = new Bundle();
-                bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, ar_companionApis.get(position));
-
-                intent.putExtras(bundle);
-                intent.setClass(m_Context, CIPersonalAddSaveAPISActivity.class);
-                //要改
-                startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);
-                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+                if (m_editApisEntity != null)
+                {
+                    m_strAPISName = m_editApisEntity.documentName;
+                    m_strAPISCode = m_editApisEntity.documentType;
+                }
 
                 break;
             case DELETE_MY_APIS:
@@ -692,82 +688,78 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 break;
         }
 
-//        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type){
-//
-//        }else{
-//
-//        }
     }
     private void setEditAPISData() {
 
         //Set Membership data
-//        if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type
-//                || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
-//
-//            final String strGender = m_apisEntity.sex ;
-//            if( CIApisEntity.SEX_FEMALE.equals(strGender) ) {
-//                m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.RIGHT);
-//            } else {
-//                m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
-//            }
-//
-//
-//            m_DateOfBirthdayfragment.setText(m_apisEntity.birthday);
-//            ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).setFormatedDate(m_apisEntity.birthday);
-//
-//        }
-//
-//        if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
-//            m_FirstNamefragment.setText(m_apisEntity.first_name );
-//            m_FirstNamefragment.setLock(true);
-//
-//            m_LastNamefragment.setText( m_apisEntity.last_name );
-//            m_LastNamefragment.setLock(true);
-//        }
-//
-//        m_ResidentCountryFragment.setText(getCountryName(m_apisEntity.resident_city, RESIDENT_CD));
-//        ((CIApisNationalTextFieldFragment) m_ResidentCountryFragment).setCountryCd(m_apisEntity.resident_city);
-//
-//        m_Nationalityfragment.setText(getCountryName(m_apisEntity.nationality, ISSUE_CD));
-//        ((CIApisNationalTextFieldFragment) m_Nationalityfragment).setCountryCd(m_apisEntity.nationality);
-//
-        m_DocumentTypefragment.setText(m_strAPISName);
+        if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+            String[] companysname = m_strUserName.split(":");
+            m_FirstNamefragment.setText(companysname[0]);
+            m_FirstNamefragment.setLock(true);
+
+            m_LastNamefragment.setText( companysname[1]);
+            m_LastNamefragment.setLock(true);
+        }
+
+        m_DocumentTypefragment.setText(getDocmuntName(m_strAPISCode));
         ((CIApisDocmuntTextFieldFragment) m_DocumentTypefragment).setDocmuntType(m_strAPISCode);
         m_DocumentTypefragment.setLock(true);
 
         m_DocumentFreeNamefragment.setText(m_strAPISName);
-//
-//
-//        m_DocumentNoFragment.setText(m_apisEntity.doc_no);
-//
-//        m_IssueCountryFragment.setText(getCountryName(m_apisEntity.issue_country, ISSUE_CD));
-//        ((CIApisNationalTextFieldFragment) m_IssueCountryFragment).setCountryCd(m_apisEntity.issue_country);
-//
-//
-//        ((CIDateOfExpiryTextFieldFragment)m_DocExpiryDatefragment).setFormatedDate(m_apisEntity.doc_expired_date);
-//        m_DocExpiryDatefragment.setText( m_apisEntity.doc_expired_date );
-//
-//        //設定City/State
-//        if( !TextUtils.isEmpty(m_apisEntity.addr_state)) {
-//            ((CIApisStateTextFieldFragment) m_CityStatfragment).setStateCode(m_apisEntity.addr_state);
-//            m_CityStatfragment.setText(getStateName(m_apisEntity.addr_state));//getCountryName(m_apisEntity.addr_state,COUNTRY_CD) );
-//        }
-//
-//        //設定City/Country/District
-//        if( !TextUtils.isEmpty(m_apisEntity.addr_city)) {
-//            m_CityCountyDistrictfragment.setText(m_apisEntity.addr_city);
-//        }
-//
-//        //設定street
-//        if( !TextUtils.isEmpty(m_apisEntity.addr_street)) {
-//            m_Streetfragment.setText( m_apisEntity.addr_street);
-//        }
-//
-//        //設定 zipcode
-//        if( !TextUtils.isEmpty(m_apisEntity.addr_zipcode)) {
-//            m_ZipCodeFragment.setText( m_apisEntity.addr_zipcode);
-//        }
 
+
+        switch(m_strAPISCode) {
+            case "A":
+                //地址物件
+                //設定City/State
+                if( !TextUtils.isEmpty(m_editApisEntity.docas.state)) {
+                    ((CIApisStateTextFieldFragment) m_CityStatfragment).setStateCode(m_editApisEntity.docas.state);
+                    m_CityStatfragment.setText(getStateName(m_editApisEntity.docas.state));//getCountryName(m_apisEntity.addr_state,COUNTRY_CD) );
+                }
+
+                //設定City/Country/District
+                if( !TextUtils.isEmpty(m_editApisEntity.docas.city)) {
+                    m_CityCountyDistrictfragment.setText(m_editApisEntity.docas.city);
+                }
+
+                //設定street
+                if( !TextUtils.isEmpty(m_editApisEntity.docas.address)) {
+                    m_Streetfragment.setText( m_editApisEntity.docas.address);
+                }
+
+                //設定 zipcode
+                if( !TextUtils.isEmpty(m_editApisEntity.docas.zipcode)) {
+                    m_ZipCodeFragment.setText( m_editApisEntity.docas.zipcode);
+                }
+                break;
+            case "N":
+                final String strGender = m_editApisEntity.basicDocuments.gender;
+                if( CIApisEntity.SEX_FEMALE.equals(strGender) ) {
+                    m_v_basic_gender.setSelectMode(TwoItemSelectBar.ESelectSMode.RIGHT);
+                } else {
+                    m_v_basic_gender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
+                }
+
+                m_DateOfBirthdayfragment.setText(m_editApisEntity.basicDocuments.birthday);
+                ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).setFormatedDate(m_editApisEntity.basicDocuments.birthday);
+
+                m_ResidentCountryFragment.setText(getCountryName(m_editApisEntity.basicDocuments.residence, RESIDENT_CD));
+                ((CIApisNationalTextFieldFragment) m_ResidentCountryFragment).setCountryCd(m_editApisEntity.basicDocuments.residence);
+
+                m_Nationalityfragment.setText(getCountryName(m_editApisEntity.basicDocuments.nationality, ISSUE_CD));
+                ((CIApisNationalTextFieldFragment) m_Nationalityfragment).setCountryCd(m_editApisEntity.basicDocuments.nationality);
+
+                break;
+            default:
+                m_DocumentNoFragment.setText(m_editApisEntity.otherDocuments.documentNo);
+
+                ((CIDateOfExpiryTextFieldFragment)m_DocExpiryDatefragment).setFormatedDate(m_editApisEntity.otherDocuments.expireDay);
+                m_DocExpiryDatefragment.setText(m_editApisEntity.otherDocuments.expireDay);
+
+
+                m_IssueCountryFragment.setText(getCountryName(m_editApisEntity.otherDocuments.issueCountry, ISSUE_CD));
+                ((CIApisNationalTextFieldFragment) m_IssueCountryFragment).setCountryCd(m_editApisEntity.otherDocuments.issueCountry);
+        }
     }
 
     @Override
@@ -821,13 +813,15 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                         m_errorMsg);
                 return;
 
-            } else if( CIPersonalAddAPISType.ADD_MY_APIS == m_type ) {
+            } else if( CIPersonalAddAPISType.ADD_MY_APIS == m_type ||
+                    CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type) {
                 showDialog(getString(R.string.editapis_alert_title_save_and_upload_your_apis),
                         getString(R.string.editapis_alert_message_save_and_upload_your_apis),
                         getString(R.string.confirm), getString(R.string.cancel),
                         onAlertAddMyApisDialogListener);
 
-            } else if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
+            } else if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type
+                    || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
                 sendUpdateApisFromWS();
 
             } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type) {
@@ -1021,15 +1015,15 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 //        ciApisEntity.issue_country = strIssueCountryCd;
 //        ciApisEntity.doc_no = strDocumentNo;
 //
-//        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
-//            ciApisEntity.first_name = CIApplication.getLoginInfo().GetUserFirstName();//CIApplication.getLoginInfo().GetUserProfileFirstName();
-//            ciApisEntity.last_name = CIApplication.getLoginInfo().GetUserLastName();//CIApplication.getLoginInfo().GetUserProfileLastName();
-//
-//        } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
-//            ciApisEntity.first_name = m_FirstNamefragment.getText();
-//            ciApisEntity.last_name = m_LastNamefragment.getText();
-//
-//        }
+        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
+            PaxInfoObj.firstName = CIApplication.getLoginInfo().GetUserFirstName();//CIApplication.getLoginInfo().GetUserProfileFirstName();
+            PaxInfoObj.lastName = CIApplication.getLoginInfo().GetUserLastName();//CIApplication.getLoginInfo().GetUserProfileLastName();
+
+        } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+            PaxInfoObj.firstName = m_FirstNamefragment.getText();
+            PaxInfoObj.lastName = m_LastNamefragment.getText();
+
+        }
 //
 ////        if(TwoItemSelectBar.ESelectSMode.LEFT == m_vGender.getSelectModeParam() ) {
 ////            ciApisEntity.sex = CIApisEntity.SEX_MALE;
@@ -1070,12 +1064,17 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
 
     private void sendUpdateApisFromWS() {
-
         CIApisAddEntity ciApisEntity = getApisEntity();
 
         setMyApisEntity(ciApisEntity);
 
         CIAPISPresenter.getInstance().UpdateApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
+
+//        CIApisAddEntity ciApisEntity = getApisEntity();
+//
+//        setMyApisEntity(ciApisEntity);
+//
+//        CIAPISPresenter.getInstance().UpdateApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
     }
 
     @Override
