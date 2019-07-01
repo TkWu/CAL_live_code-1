@@ -17,7 +17,6 @@ import ci.ws.Models.CIUpdateAPISModel;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisDocmuntTypeList;
 import ci.ws.Models.entities.CIApisEntity;
-import ci.ws.Models.entities.CIApisInfodata;
 import ci.ws.Models.entities.CIApisNationalEntity;
 import ci.ws.Models.entities.CIApisNationalList;
 import ci.ws.Models.entities.CIApisQryRespEntity;
@@ -431,7 +430,6 @@ public class CIAPISPresenter {
                 public void run() {
                     if ( null != m_Listener ){
                         m_Listener.UpdateApisError(rt_code, rt_msg);
-                        SLog.d("rt_code: "+rt_code+" rt_msg: "+rt_msg);
                         m_Listener.hideProgress();
                     }
                 }

@@ -220,9 +220,17 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
                 bundle.putSerializable(APIS_TYPE, m_arDocmuntType.get(position).code_1A);              //文件類型(代碼)
 
                 intent.putExtras(bundle);
+
                 intent.setClass(CIAddSaveAPISDocTypeActivity.this, CIPersonalAddSaveAPISActivity.class);
-                //要改
-                startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
+
+                if (CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type){
+                    startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG);
+                }
+
+                if (CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS == m_type){
+                    startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
+                }
+
                 finish();
                 overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
             }

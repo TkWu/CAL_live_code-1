@@ -73,7 +73,7 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
 
     private ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_apisList = null;
 
-    private ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> m_arCompanionApisList = null;
+    private ArrayList<CIApisQryRespEntity.CIApispaxInfo> m_arCompanionApisList = null;
 
     private static HashMap<String, CIApisDocmuntTypeEntity> m_apisDocTypeList = null;
 
@@ -267,7 +267,7 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
         return "";
     }
 
-    public void notifyCompanionApisDataUpdate(ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> ar_apisList) {
+    public void notifyCompanionApisDataUpdate(ArrayList<CIApisQryRespEntity.CIApispaxInfo> ar_apisList) {
         m_alData.clear();
 
         if( m_arCompanionApisList != null ) {
@@ -276,9 +276,9 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
 
 
         if( null != ar_apisList ) {
-            m_arCompanionApisList = (ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo>) ar_apisList.clone();
+            m_arCompanionApisList = (ArrayList<CIApisQryRespEntity.CIApispaxInfo>) ar_apisList.clone();
 
-            for(CIApisQryRespEntity.CIApisRespPaxInfo paxinfo : m_arCompanionApisList ) {
+            for(CIApisQryRespEntity.CIApispaxInfo paxinfo : m_arCompanionApisList ) {
 
                 if (paxinfo.firstName.equals(CIApplication.getLoginInfo().GetUserFirstName()) &&
                         paxinfo.lastName.equals(CIApplication.getLoginInfo().GetUserLastName()))
@@ -288,7 +288,7 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
                 }
             }
 
-            for(CIApisQryRespEntity.CIApisRespPaxInfo paxinfo : m_arCompanionApisList ) {
+            for(CIApisQryRespEntity.CIApispaxInfo paxinfo : m_arCompanionApisList ) {
                 StringBuffer sbPassport = new StringBuffer();
                 for (CIApisQryRespEntity.ApisRespDocObj apis : paxinfo.documentInfos) {
 
@@ -389,7 +389,7 @@ public class CIApisCardView extends BaseView implements View.OnClickListener {
                     strTag = getTag(apisEntity);
 
                 } else if( CIApisCardType.COMPANIONS_APIS == m_type ) {
-                    CIApisQryRespEntity.CIApisRespPaxInfo paxInfo = (CIApisQryRespEntity.CIApisRespPaxInfo)v.getTag();
+                    CIApisQryRespEntity.CIApispaxInfo paxInfo = (CIApisQryRespEntity.CIApispaxInfo)v.getTag();
                     strTag = getTag(paxInfo);
                 }
 

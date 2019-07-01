@@ -97,7 +97,7 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
 
     private ArrayList<CICompanionApisEntity> m_arCompanionsApisList = null;
 
-    private CIApisQryRespEntity.CIApisRespPaxInfo companionApisEntity = null;
+    private CIApisQryRespEntity.CIApispaxInfo companionApisEntity = null;
     private ArrayList<CIApisQryRespEntity.ApisRespDocObj> ar_companionApis = null;
     private String m_strFullName = null;
 
@@ -139,7 +139,7 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
             Gson gson = new Gson();
 
             try{
-                companionApisEntity = gson.fromJson(s_CompanionApisEntity, CIApisQryRespEntity.CIApisRespPaxInfo.class);
+                companionApisEntity = gson.fromJson(s_CompanionApisEntity, CIApisQryRespEntity.CIApispaxInfo.class);
                 m_strUserName = companionApisEntity.firstName+ ":"+companionApisEntity.lastName;
             } catch ( Exception e ){
                 e.printStackTrace();

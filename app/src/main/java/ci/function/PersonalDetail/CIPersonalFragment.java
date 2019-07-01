@@ -45,9 +45,7 @@ import ci.ui.toast.CIToastView;
 import ci.ui.view.ImageHandle;
 import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
-import ci.ws.Models.entities.CIApisInfodata;
 import ci.ws.Models.entities.CIApisResp;
-import ci.ws.Models.entities.CIApispaxInfo;
 import ci.ws.Models.entities.CICompanionApisNameEntity;
 import ci.ws.Models.entities.CIApisEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
@@ -195,6 +193,7 @@ public class CIPersonalFragment extends BaseFragment implements
 
             intent.putExtras(bundle);
             intent.setClass(getActivity(), CIAddSaveAPISDocTypeActivity.class);
+            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
             startActivity(intent);
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
         }
@@ -229,6 +228,7 @@ public class CIPersonalFragment extends BaseFragment implements
              */
 
             intent.putExtras(bundle);
+            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG);
             intent.setClass(getActivity(), CIAddSaveAPISDocTypeActivity.class);
             startActivity(intent);
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
@@ -968,7 +968,7 @@ public class CIPersonalFragment extends BaseFragment implements
 
         @Override
         public void InquiryApisError(String rt_code, String rt_msg) {
-        updateMyApisView(new ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo>());
+        updateMyApisView(new ArrayList<CIApisQryRespEntity.CIApispaxInfo>());
         
             showDialog(getString(R.string.warning),
                     rt_msg,
@@ -1033,7 +1033,7 @@ public class CIPersonalFragment extends BaseFragment implements
         }
     };
 
-    private void updateMyApisView(ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> ar_apisList) {
+    private void updateMyApisView(ArrayList<CIApisQryRespEntity.CIApispaxInfo> ar_apisList) {
         if( m_flMyApisView.getChildCount() > 0 ) {
 
             CIApisCardView myApisView = (CIApisCardView)m_flMyApisView.getChildAt(0);
@@ -1044,7 +1044,7 @@ public class CIPersonalFragment extends BaseFragment implements
                 myApisView.setVisibility(View.VISIBLE);
                 //myApisView.notifyMyApisDataUpdate(ar_apisList);
 
-                for (CIApisQryRespEntity.CIApisRespPaxInfo mpasinfo : ar_apisList) {
+                for (CIApisQryRespEntity.CIApispaxInfo mpasinfo : ar_apisList) {
                     if (mpasinfo.firstName.equals(CIApplication.getLoginInfo().GetUserFirstName())&&
                             mpasinfo.lastName.equals(CIApplication.getLoginInfo().GetUserLastName())
                     ){
@@ -1110,7 +1110,7 @@ public class CIPersonalFragment extends BaseFragment implements
 //        }
 //    }
 
-    private void queryAndUpdateCompanionsApisView(ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> ar_apisList) {
+    private void queryAndUpdateCompanionsApisView(ArrayList<CIApisQryRespEntity.CIApispaxInfo> ar_apisList) {
         if( m_flCompanionsApisView.getChildCount() > 0 ) {
 
             CIApisCardView companionsApisView = (CIApisCardView)m_flCompanionsApisView.getChildAt(0);
@@ -1118,9 +1118,9 @@ public class CIPersonalFragment extends BaseFragment implements
 
                 companionsApisView.setVisibility(View.GONE);
             }else{
-                ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo> m_ar_apisList = new ArrayList<CIApisQryRespEntity.CIApisRespPaxInfo>();
+                ArrayList<CIApisQryRespEntity.CIApispaxInfo> m_ar_apisList = new ArrayList<CIApisQryRespEntity.CIApispaxInfo>();
 
-                for (CIApisQryRespEntity.CIApisRespPaxInfo mpasinfo : ar_apisList) {
+                for (CIApisQryRespEntity.CIApispaxInfo mpasinfo : ar_apisList) {
                     if (!mpasinfo.firstName.equals(CIApplication.getLoginInfo().GetUserFirstName()) ||
                             mpasinfo.lastName.equals(CIApplication.getLoginInfo().GetUserLastName())
                     ) {
