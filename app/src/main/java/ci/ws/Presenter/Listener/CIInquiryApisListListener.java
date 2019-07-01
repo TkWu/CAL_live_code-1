@@ -1,8 +1,6 @@
 package ci.ws.Presenter.Listener;
 
-import ci.ws.Models.entities.CIApisInfodata;
 import ci.ws.Models.entities.CIApisQryRespEntity;
-import ci.ws.Models.entities.CIApisResp;
 
 /**
  * Created by joannyang on 16/5/23.

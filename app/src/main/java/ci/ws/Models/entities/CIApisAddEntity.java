@@ -26,7 +26,7 @@ public class CIApisAddEntity implements Cloneable {
      * APIS info Object
      */
     @Expose
-    public CIApisInfodata apisInfo = new CIApisInfodata();
+    public CIApisQryRespEntity apisInfo = new CIApisQryRespEntity();
 
     /**
      * API MODE

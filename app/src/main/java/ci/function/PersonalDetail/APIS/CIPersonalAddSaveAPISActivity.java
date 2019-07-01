@@ -1,6 +1,5 @@
 package ci.function.PersonalDetail.APIS;
 
-import android.content.Intent;
 import android.os.Message;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -39,11 +38,8 @@ import ci.ui.view.NavigationBar;
 import ci.ui.view.TwoItemSelectBar;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisEntity;
-import ci.ws.Models.entities.CIApisInfodata;
 import ci.ws.Models.entities.CIApisNationalEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
-import ci.ws.Models.entities.CIApisResp;
-import ci.ws.Models.entities.CIApispaxInfo;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Presenter.CIAPISPresenter;
@@ -246,17 +242,13 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private String m_strAPISName = "";
     private String m_strAPISCode = "";
     private String m_strUserName = "";
-//    private String[] m_strData;
 
     public NavigationBar                m_Navigationbar                     = null;
     public FrameLayout                  m_flayout_Content                   = null;
 
-//    private Bitmap              m_bitmap                            = null;
-//    private ScrollView          m_sv                                = null;
 
     private RelativeLayout              m_rlayout                           = null;
 
-//    private TextView                    m_tvMsg                             = null;
     private TextView                    m_tvName                            = null;
 
     private LinearLayout                m_ll_companions_name                     = null;
@@ -292,7 +284,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
     private String                      m_errorMsg                          = null;
 
-    //private HashMap<String, CIApisDocmuntTypeEntity>    m_apisDocmuntType   = null;
     private CIApisDocmuntTypeEntity                     m_apisDocmuntType   = null;
     private ArrayList<CIApisDocmuntTypeEntity>          m_arApisDocmuntList = null;
     private CIApisEntity                                m_apisEntity        = null;
@@ -319,7 +310,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
                 if (null != m_apisDocmuntType) {
                     Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
-                    SLog.d("locale: "+locale);
                     m_strAPISName = m_apisDocmuntType.getName(locale);
                 }
 
@@ -391,38 +381,15 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
     @Override
     protected void initialLayoutComponent() {
-
-//        if( m_arApisDocmuntList == null || m_arApisDocmuntList.size() == 0 ) {
-//            m_arApisDocmuntList = CIAPISPresenter.getInstance().fetchApisList();
-//        }
-//
-//        String[] apisDocmuntList = new String[m_arApisDocmuntList.size()];
-//        for( int iPos = 0; iPos < m_arApisDocmuntList.size() ; iPos++ ) {
-//            String strName = m_arApisDocmuntList.get(iPos).getName(CIApplication.getLanguageInfo().getLanguage_Locale());
-//            apisDocmuntList[iPos] = strName;
-//        }
-//        if( m_apisDocmuntType == null ) {
-//            m_apisDocmuntType = CIAPISPresenter.getInstance().fetchApisDocmuntMap();
-//        }
-
         m_Navigationbar = (NavigationBar) findViewById(R.id.toolbar);
         m_flayout_Content = (FrameLayout) findViewById(R.id.container);
 
         View ViewContent = View.inflate(this, R.layout.fragment_personal_add_save_apis, null);
         m_flayout_Content.addView(ViewContent);
 
-////        m_sv            = (ScrollView) ViewContent.findViewById(R.id.sv_root);
-////        m_bitmap        = ImageHandle.getLocalBitmap(m_Context, R.drawable.bg_login, 1);
-////        Drawable drawable = new BitmapDrawable(m_Context.getResources(), m_bitmap);
-////        m_sv.setBackground(drawable);
-//
-//        m_vGender       = (TwoItemSelectBar) ViewContent.findViewById(R.id.v_gender);
-//        m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
-
         m_rlayout                   = (RelativeLayout) ViewContent.findViewById(R.id.rlayout);
         m_rlayout.setOnTouchListener(this);
 
-//        m_tvMsg                     = (TextView) ViewContent.findViewById(R.id.tv_msg);
         m_tvName                    = (TextView) ViewContent.findViewById(R.id.tv_name);
         if ( 0 < m_strUserName.length())
             m_tvName.setText(m_strUserName);
@@ -446,23 +413,11 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
         m_ll_document_info          = (LinearLayout)ViewContent.findViewById(R.id.ll_document_info);
 
-//        m_DocumentTypefragment      = CIApisDocmuntTextFieldFragment.newInstance( "*" + getString(R.string.document_type), m_apisType);
-//
-//        if( CIPersonalAddAPISType.ADD_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
-//            HashSet<String> docTypeList = CIAPISPresenter.getInstance().getMyApisExistDocumentTypeList(CIApplication.getLoginInfo().GetUserMemberCardNo());
-//            if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type && null != m_apisEntity ) {
-//                docTypeList.remove(m_apisEntity.doc_type);
-//            }
-//            ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeFilter(docTypeList);
-//        }
-
         m_DocumentNoFragment        = CIPassportNumberFieldText.newInstance("*" + getString(R.string.document_number));
         m_IssueCountryFragment      = CIApisNationalTextFieldFragment.newInstance("*" + getString(R.string.country_of_issuance), CIApisNationalTextFieldFragment.EMode.IssueNational);
         m_DocExpiryDatefragment     = CIDateOfExpiryTextFieldFragment.newInstance("*" + getString(R.string.date_of_expiry));
 
         m_llayout_Address_Info      = (LinearLayout)ViewContent.findViewById(R.id.llayout_Address);
-        //顯示Address 欄位
-        //m_llayout_Address_Info.setVisibility(View.VISIBLE);
 
         m_AddressNationalityfragment= CIApisNationalTextFieldFragment.newInstance("*" + getString(R.string.apis_address_country),CIApisNationalTextFieldFragment.EMode.IssueNational);
         m_CityStatfragment          = CIApisStateTextFieldFragment.newInstance("*" + getString(R.string.city_stat));
@@ -895,7 +850,9 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
         ciApisEntity.setLanguage(CIApplication.getLanguageInfo().getWSLanguage());
 
-        CIApispaxInfo PaxInfoObj = new CIApispaxInfo();
+        CIApisQryRespEntity qryObj = new CIApisQryRespEntity();
+
+        CIApisQryRespEntity.CIApispaxInfo PaxInfoObj = qryObj.new CIApispaxInfo();
 
         switch (m_type){
             case ADD_MY_APIS:
@@ -924,9 +881,11 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         switch(m_strAPISCode) {
             case "A":
                 //地址物件
-                CIApispaxInfo.docas_obj DocumentInfosObj = PaxInfoObj.new docas_obj();
+                CIApisQryRespEntity.ApisRespDocObj DocumentInfosObj = qryObj.new ApisRespDocObj();
+                DocumentInfosObj.docas = PaxInfoObj.new Docas();
                 DocumentInfosObj.documentName = m_DocumentFreeNamefragment.getText();
                 DocumentInfosObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
+                DocumentInfosObj.documentType = m_strAPISCode;
 
                 DocumentInfosObj.docas.country = ((CIApisNationalTextFieldFragment)m_AddressNationalityfragment).getCountryCd();
                 DocumentInfosObj.docas.state = ((CIApisStateTextFieldFragment)m_CityStatfragment).getStateCode();
@@ -934,13 +893,20 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 DocumentInfosObj.docas.address = m_Streetfragment.getText();
                 DocumentInfosObj.docas.zipcode = m_ZipCodeFragment.getText();
 
+
+                if( CIPersonalAddAPISType.ADD_MY_APIS != m_type && CIPersonalAddAPISType.ADD_COMPANAIONS_APIS != m_type ) {
+                    DocumentInfosObj.SEQ = m_editApisEntity.SEQ;
+                }
+
                 PaxInfoObj.addDocumentInfos(DocumentInfosObj);
                 break;
             case "N":
                 //基本資料物件
-                CIApispaxInfo.basicDocuments_obj BasicDocumentsObj = PaxInfoObj.new basicDocuments_obj();
+                CIApisQryRespEntity.ApisRespDocObj BasicDocumentsObj = qryObj.new ApisRespDocObj();
+                BasicDocumentsObj.basicDocuments = PaxInfoObj.new BasicDocuments();
                 BasicDocumentsObj.documentName = m_DocumentFreeNamefragment.getText();
                 BasicDocumentsObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
+                BasicDocumentsObj.documentType = m_strAPISCode;
 
                 BasicDocumentsObj.basicDocuments.birthday = ((CIDateOfBirthdayTextFieldFragment) m_DateOfBirthdayfragment).getFormatedDate();
 
@@ -953,12 +919,17 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 BasicDocumentsObj.basicDocuments.nationality = ((CIApisNationalTextFieldFragment) m_Nationalityfragment).getCountryCd();
                 BasicDocumentsObj.basicDocuments.residence = ((CIApisNationalTextFieldFragment) m_ResidentCountryFragment).getCountryCd();
 
+                if( CIPersonalAddAPISType.ADD_MY_APIS != m_type && CIPersonalAddAPISType.ADD_COMPANAIONS_APIS != m_type ) {
+                    BasicDocumentsObj.SEQ = m_editApisEntity.SEQ;
+                }
+
                 PaxInfoObj.addDocumentInfos(BasicDocumentsObj);
                 break;
             default:
                 //其他證件物件
                 //"code_1A": C:加拿大 CG: 綠卡
-                CIApispaxInfo.otherDocuments_obj OtherDocumentsObj = PaxInfoObj.new otherDocuments_obj();
+                CIApisQryRespEntity.ApisRespDocObj OtherDocumentsObj = qryObj.new ApisRespDocObj();
+                OtherDocumentsObj.otherDocuments = PaxInfoObj.new OtherDocuments();
                 OtherDocumentsObj.documentName = m_DocumentFreeNamefragment.getText();
                 OtherDocumentsObj.deviceId = CIApplication.getDeviceInfo().getAndroidId();
                 OtherDocumentsObj.documentType = m_strAPISCode;
@@ -967,54 +938,13 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 OtherDocumentsObj.otherDocuments.expireDay = ((CIDateOfExpiryTextFieldFragment) m_DocExpiryDatefragment).getFormatedDate();
                 OtherDocumentsObj.otherDocuments.issueCountry = ((CIApisNationalTextFieldFragment) m_IssueCountryFragment).getCountryCd();
 
+                if( CIPersonalAddAPISType.ADD_MY_APIS != m_type && CIPersonalAddAPISType.ADD_COMPANAIONS_APIS != m_type ) {
+                    OtherDocumentsObj.SEQ = m_editApisEntity.SEQ;
+                }
                 PaxInfoObj.addDocumentInfos(OtherDocumentsObj);
-//                /** 證件號碼必填 */
-//                String strDocumentNo = m_DocumentNoFragment.getText();
-//                if (TextUtils.isEmpty(strDocumentNo)) {
-//                    return false;
-//                }
-//
-//                /** 發證國家必選 */
-//                String strIssueCountryCd = ((CIApisNationalTextFieldFragment) m_IssueCountryFragment).getCountryCd();
-//                if (TextUtils.isEmpty(strIssueCountryCd)) {
-//                    return false;
-//                }
-//
-//                /** 效期截止日期必選 */
-//                String strExpiryDate = ((CIDateOfExpiryTextFieldFragment) m_DocExpiryDatefragment).getFormatedDate();
-//                if (TextUtils.isEmpty(strExpiryDate)) {
-//                    return false;
-//                }
                 break;
-
         }
-//        /** 居住國家必選 */
-//        String strResidentCountryCd = ((CIApisNationalTextFieldFragment)m_ResidentCountryFragment).getCountryCd();
-//
-//        /** 國籍必選 */
-//        String strNationality = ((CIApisNationalTextFieldFragment)m_Nationalityfragment).getCountryCd();
-//
-//        /** 證件類別必選 */
-//        String strDocumentType = ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).getDocmuntType();
-//
-//        /** 證件號碼必填 */
-//        String strDocumentNo = m_DocumentNoFragment.getText();
-//
-//        /** 發證國家必選 */
-//        String strIssueCountryCd = ((CIApisNationalTextFieldFragment)m_IssueCountryFragment).getCountryCd();
-//
-//        /** 效期截止日期必選 */
-//        String strExpiryDate = ((CIDateOfExpiryTextFieldFragment)m_DocExpiryDatefragment).getFormatedDate();
-//
-//
-//        CIApisEntity ciApisEntity = new CIApisEntity();
-//        ciApisEntity.doc_type = strDocumentType;
-//        ciApisEntity.nationality = strNationality;
-//        ciApisEntity.doc_expired_date = strExpiryDate;
-//        ciApisEntity.resident_city = strResidentCountryCd;
-//        ciApisEntity.issue_country = strIssueCountryCd;
-//        ciApisEntity.doc_no = strDocumentNo;
-//
+
         if( CIPersonalAddAPISType.ADD_MY_APIS == m_type || CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
             PaxInfoObj.firstName = CIApplication.getLoginInfo().GetUserFirstName();//CIApplication.getLoginInfo().GetUserProfileFirstName();
             PaxInfoObj.lastName = CIApplication.getLoginInfo().GetUserLastName();//CIApplication.getLoginInfo().GetUserProfileLastName();
@@ -1024,37 +954,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             PaxInfoObj.lastName = m_LastNamefragment.getText();
 
         }
-//
-////        if(TwoItemSelectBar.ESelectSMode.LEFT == m_vGender.getSelectModeParam() ) {
-////            ciApisEntity.sex = CIApisEntity.SEX_MALE;
-////        } else {
-////            ciApisEntity.sex = CIApisEntity.SEX_FEMALE;
-////        }
-//
-//        ciApisEntity.birthday = ((CIDateOfBirthdayTextFieldFragment)m_DateOfBirthdayfragment).getFormatedDate();//CIApplication.getLoginInfo().GetBirthday();
-//
-//
-//        String strAddrCountry = ((CIApisNationalTextFieldFragment)m_AddressNationalityfragment).getCountryCd();
-//        if( TextUtils.isEmpty(strAddrCountry) ) {
-//            strAddrCountry = "";
-//        }
-//        ciApisEntity.addr_country = strAddrCountry;
-//
-//        String strAddrState = ((CIApisStateTextFieldFragment)m_CityStatfragment).getStateCode();
-//        if( TextUtils.isEmpty(strAddrState) ) {
-//            strAddrState = "";
-//        }
-//        ciApisEntity.addr_state = strAddrState;
-//
-//        String strAddrCity = m_CityCountyDistrictfragment.getText();
-//        ciApisEntity.addr_city = strAddrCity;
-//
-//        String strAddrStreet = m_Streetfragment.getText();
-//        ciApisEntity.addr_street = strAddrStreet;
-//
-//        String strAddrZipcode = m_ZipCodeFragment.getText();
-//        ciApisEntity.addr_zipcode = strAddrZipcode;
-        ciApisEntity.apisInfo.addInfos(PaxInfoObj);
+        ciApisEntity.apisInfo.addInfosObj(PaxInfoObj);
         ciApisEntity.apisInfo.cardNo = CIApplication.getLoginInfo().GetUserMemberCardNo();
 
         String strRequest = GsonTool.toJson(ciApisEntity);
@@ -1069,12 +969,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         setMyApisEntity(ciApisEntity);
 
         CIAPISPresenter.getInstance().UpdateApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
-
-//        CIApisAddEntity ciApisEntity = getApisEntity();
-//
-//        setMyApisEntity(ciApisEntity);
-//
-//        CIAPISPresenter.getInstance().UpdateApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
     }
 
     @Override
