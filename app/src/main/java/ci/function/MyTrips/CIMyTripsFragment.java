@@ -417,7 +417,10 @@ public class CIMyTripsFragment extends BaseFragment implements TwoItemNavigation
 
     private List<CIInquiryTripEntity>               m_listPNR           = new ArrayList<CIInquiryTripEntity>();
     private CITripbyCardReq                         m_tripbyCardReq     = new CITripbyCardReq();
-    private final static String                     PAGE_COUNT          = "10";
+    //20190701 旅客 ＰＮＲ行程過多造成time out 而無法取得資料
+    //改為一頁取５個
+    //private final static String                     PAGE_COUNT          = "10";
+    private final static String                     PAGE_COUNT          = "5";
     private int                                     m_iPageNumberU      = 1;
     private int                                     m_iPageNumberP      = 1;
 

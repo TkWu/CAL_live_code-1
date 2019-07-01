@@ -13,7 +13,9 @@ public class WSConfig extends BaseWSConfig{
 
     public static final String HEADER_KEY_AUTH          = "Authorization";
 
-    public static final int    DEF_CONNECTION_TIME_OUT = 30 * 1000;
+    //20190701 旅客 ＰＮＲ行程過多造成time out 而無法取得資料
+    //延長到１分鐘
+    public static final int    DEF_CONNECTION_TIME_OUT = 60 * 1000;
     public static final int    DEF_READ_TIME_OUT       = 30 * 1000;
 
     public static final String DEF_API_VERSION      = "1.0.0.0";
