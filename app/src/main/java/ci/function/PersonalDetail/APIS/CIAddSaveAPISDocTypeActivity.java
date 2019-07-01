@@ -238,6 +238,17 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if ((requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG ||
+                requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG) &&
+                resultCode == RESULT_OK){
+            setResult(RESULT_OK);
+            CIAddSaveAPISDocTypeActivity.this.finish();
+        }
+    }
+
+    @Override
     public void onBackPressed() {
         finish();
         overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
