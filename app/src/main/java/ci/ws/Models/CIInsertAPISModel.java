@@ -3,6 +3,7 @@ package ci.ws.Models;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
 import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIWSResult;
@@ -45,6 +46,8 @@ public class CIInsertAPISModel extends CIWSBaseModel{
         culture_info("culture_info"),
         device_id("device_id"),
         version("version"),
+        language("language"),
+        mode("mode"),
         card_no("card_no");
 
         private String strTag = "";
@@ -81,6 +84,8 @@ public class CIInsertAPISModel extends CIWSBaseModel{
             //m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
             //m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
             //m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
+            m_jsBody.put( eParaTag.mode.getString(),     "I");
+            m_jsBody.put( eParaTag.language.getString(), CIApplication.getLanguageInfo().getWSLanguage());
             m_jsBody.put( eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
 
         } catch (JSONException e) {

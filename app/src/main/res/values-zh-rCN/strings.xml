@@ -730,6 +730,7 @@
     <string name="input_apis">输入旅行证件</string>
     <string name="use_saved_apis">使用已存旅行证件</string>
     <string name="fill_new_form_apis">填写新增旅行证件</string>
+    <string name="gender">性別</string>
     <string name="male">男性</string>
     <string name="female">女性</string>
     <string name="resident_country">居住国家/地区</string>

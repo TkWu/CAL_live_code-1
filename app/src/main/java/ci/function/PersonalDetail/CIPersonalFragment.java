@@ -186,7 +186,7 @@ public class CIPersonalFragment extends BaseFragment implements
             */
 
             Bundle bundle = new Bundle();
-            bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_TYPE, CIAddSaveAPISDocTypeActivity.EType.Personal);
+            bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal);
             /*
                CIAddSaveAPISDocTypeActivity.EType: Personal, CheckIn
              */
@@ -194,7 +194,7 @@ public class CIPersonalFragment extends BaseFragment implements
             intent.putExtras(bundle);
             intent.setClass(getActivity(), CIAddSaveAPISDocTypeActivity.class);
             startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
-            startActivity(intent);
+
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
         }
 
@@ -222,15 +222,14 @@ public class CIPersonalFragment extends BaseFragment implements
             */
 
             Bundle bundle = new Bundle();
-            bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_TYPE, CIAddSaveAPISDocTypeActivity.EType.Personal);
+            bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal);
             /*
                CIAddSaveAPISDocTypeActivity.EType: Personal, CheckIn
              */
 
             intent.putExtras(bundle);
-            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG);
             intent.setClass(getActivity(), CIAddSaveAPISDocTypeActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG);
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
         }
 
@@ -254,7 +253,7 @@ public class CIPersonalFragment extends BaseFragment implements
             intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
             intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, strAPISObjJson);
 
-            intent.setClass(getActivity(), CIPersonalAddSaveAPISActivity.class);
+            intent.setClass(getActivity(), CIPersonalAPISDetialActivity.class);
             //要改
             startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);
             getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
@@ -828,7 +827,6 @@ public class CIPersonalFragment extends BaseFragment implements
         //CIAPISPresenter.getInstance().InquiryMyApisListFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
         CIAPISPresenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
 
-
         //Inquiry Profile
         CIProfilePresenter.getInstance(m_InquiryProfileListener).InquiryProfileFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo());
 
@@ -961,7 +959,6 @@ public class CIPersonalFragment extends BaseFragment implements
         public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisQryRespEntity apis) {
 
             //saveMyApisFromDB(apis.paxInfo);
-
             updateMyApisView(apis.paxInfo);
             queryAndUpdateCompanionsApisView(apis.paxInfo);
         }
@@ -1096,10 +1093,28 @@ public class CIPersonalFragment extends BaseFragment implements
 
     }
 
-//    private void queryAndUpdateCompanionsApisView() {
-//        if( m_flCompanionsApisView.getChildCount() > 0 ) {
-//
-//            CIApisCardView companionsApisView = (CIApisCardView)m_flCompanionsApisView.getChildAt(0);
+    private void queryAndUpdateCompanionsApisView(ArrayList<CIApisQryRespEntity.CIApispaxInfo> ar_apisList) {
+        if( m_flCompanionsApisView.getChildCount() > 0 ) {
+
+            CIApisCardView companionsApisView = (CIApisCardView)m_flCompanionsApisView.getChildAt(0);
+            if( null == ar_apisList ) {
+                companionsApisView.setVisibility(View.GONE);
+            } else {
+                companionsApisView.setVisibility(View.VISIBLE);
+
+                for (CIApisQryRespEntity.CIApispaxInfo mpasinfo : ar_apisList) {
+                    if (mpasinfo.firstName.equals(CIApplication.getLoginInfo().GetUserFirstName())&&
+                            mpasinfo.lastName.equals(CIApplication.getLoginInfo().GetUserLastName())
+                    ){
+                        ar_apisList.remove(mpasinfo);
+                        break;
+                    }
+                }
+
+                companionsApisView.notifyCompanionApisDataUpdate(ar_apisList);
+            }
+
+
 //            companionsApisView.setVisibility(View.GONE);
 //
 //            ArrayList<CICompanionApisNameEntity> ar_apisList =
@@ -1107,38 +1122,8 @@ public class CIPersonalFragment extends BaseFragment implements
 //
 //            companionsApisView.setVisibility(View.VISIBLE);
 //            companionsApisView.notifyCompanionApisDataUpdate(ar_apisList);
-//        }
-//    }
-
-    private void queryAndUpdateCompanionsApisView(ArrayList<CIApisQryRespEntity.CIApispaxInfo> ar_apisList) {
-        if( m_flCompanionsApisView.getChildCount() > 0 ) {
-
-            CIApisCardView companionsApisView = (CIApisCardView)m_flCompanionsApisView.getChildAt(0);
-            if( null == ar_apisList ) {
-
-                companionsApisView.setVisibility(View.GONE);
-            }else{
-                ArrayList<CIApisQryRespEntity.CIApispaxInfo> m_ar_apisList = new ArrayList<CIApisQryRespEntity.CIApispaxInfo>();
-
-                for (CIApisQryRespEntity.CIApispaxInfo mpasinfo : ar_apisList) {
-                    if (!mpasinfo.firstName.equals(CIApplication.getLoginInfo().GetUserFirstName()) ||
-                            mpasinfo.lastName.equals(CIApplication.getLoginInfo().GetUserLastName())
-                    ) {
-                        m_ar_apisList.add(mpasinfo);
-                    }
-                }
-                companionsApisView.setVisibility(View.VISIBLE);
-                companionsApisView.notifyCompanionApisDataUpdate(m_ar_apisList);
-            }
-
-//            ArrayList<CICompanionApisNameEntity> ar_apisList =
-//                    CIAPISPresenter.getInstance().getCompanionApisList(CIApplication.getLoginInfo().GetUserMemberCardNo());
-
-
-
         }
     }
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -1175,7 +1160,8 @@ public class CIPersonalFragment extends BaseFragment implements
             updateMyApisView(null);
 
             //Inquiry Apis list
-            CIAPISPresenter.getInstance().InquiryMyApisListFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+            //CIAPISPresenter.getInstance().InquiryMyApisListFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+            CIAPISPresenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
 
         }else if (requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG &&
                 resultCode == getActivity().RESULT_OK){
@@ -1187,7 +1173,8 @@ public class CIPersonalFragment extends BaseFragment implements
             updateMyApisView(null);
 
             //Inquiry Apis list
-            CIAPISPresenter.getInstance().InquiryMyApisListFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+            //CIAPISPresenter.getInstance().InquiryMyApisListFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+            CIAPISPresenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
 
         } else if( (requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG
                 || requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_COMPANIONS_APIS_TAG ) &&
@@ -1199,7 +1186,9 @@ public class CIPersonalFragment extends BaseFragment implements
             //重建CompanionsApisView
             setCompanionsApisView();
             //更新CompanionsApisView
-            queryAndUpdateCompanionsApisView(null);
+            //queryAndUpdateCompanionsApisView();
+            CIAPISPresenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+
         } else if ( requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_PROFILE_EDIT &&
                 resultCode == getActivity().RESULT_OK) {
 

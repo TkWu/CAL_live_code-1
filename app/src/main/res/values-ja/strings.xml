@@ -723,6 +723,7 @@
     <string name="input_apis">渡航書類の入力</string>
     <string name="use_saved_apis">渡航書類を適用</string>
     <string name="fill_new_form_apis">新しい渡航文書を入力</string>
+    <string name="gender">性別</string>
     <string name="male">男性</string>
     <string name="female">女性</string>
     <string name="resident_country">お住まいの国/地域</string>

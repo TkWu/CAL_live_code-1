@@ -18,6 +18,7 @@ import java.util.Iterator;
 import java.util.Locale;
 
 import ci.function.Core.CIApplication;
+import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.TextField.Adapter.CIMenusAdapter;
 import ci.ui.define.UiMessageDef;
@@ -88,7 +89,7 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
 
     private String m_strHint = "";
     public static final String APIS_OBJ_VALUE = "APIS_OBJ_VALUE";
-    public static final String APIS_TYPE = "APIS_TYPE";
+    //public static final String APIS_TYPE = "APIS_TYPE";
     public static final String APIS_FUN_ENTRANCE = "APIS_FUN_ENTRANCE";
 
     public enum EType {
@@ -99,13 +100,13 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
     private HashSet<CIApisDocmuntTypeEntity> m_SelectList = null;
 
     private CIPersonalAddAPISActivity.CIPersonalAddAPISType m_type = null;
-    private CIAddSaveAPISDocTypeActivity.EType m_apisType = null;
+//    private CIAddSaveAPISDocTypeActivity.EType m_apisType = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         String mode = getIntent().getStringExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE);
-        m_apisType = (CIAddSaveAPISDocTypeActivity.EType) getIntent()
-                .getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
+//        m_apisType = (CIAddSaveAPISDocTypeActivity.EType) getIntent()
+//                .getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
         if (null != mode) {
             m_type = CIPersonalAddAPISActivity.CIPersonalAddAPISType.valueOf(mode);
         }
@@ -205,8 +206,6 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
         m_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String text = (String) m_adapter.getItem(position);
-
                 CIApisDocmuntTypeEntity data = m_arDocmuntType.get(position);
 
                 Intent intent = new Intent();
@@ -215,9 +214,8 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
                 intent.putExtra(APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
 
                 Bundle bundle = new Bundle();
-                //要改
+
                 bundle.putSerializable(APIS_OBJ_VALUE, data);                                          //文件物件
-                bundle.putSerializable(APIS_TYPE, m_arDocmuntType.get(position).code_1A);              //文件類型(代碼)
 
                 intent.putExtras(bundle);
 
@@ -230,8 +228,6 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
                 if (CIPersonalAddAPISActivity.CIPersonalAddAPISType.ADD_MY_APIS == m_type){
                     startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG);
                 }
-
-                finish();
                 overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
             }
         });
@@ -239,6 +235,7 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        SLog.i("CIAddSaveAPISDocType result", ":" + requestCode + "," + resultCode);
         super.onActivityResult(requestCode, resultCode, data);
         if ((requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG ||
                 requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG) &&

@@ -655,6 +655,7 @@
     <string name="input_apis">Reiseunterlagen eingeben</string>
     <string name="use_saved_apis">Gespeichertes Dokument verwenden</string>
     <string name="fill_new_form_apis">Neues Dokument ausfüllen</string>
+    <string name="gender">性別</string>
     <string name="male">Männlich</string>
     <string name="female">Weiblich</string>
     <string name="resident_country">Land/Region Ihres Wohnsitzes</string>

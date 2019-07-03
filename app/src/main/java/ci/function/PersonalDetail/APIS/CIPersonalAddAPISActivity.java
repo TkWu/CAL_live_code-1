@@ -99,38 +99,38 @@ public class CIPersonalAddAPISActivity extends BaseActivity implements
                 @Override
                 public void onAlertMsgDialog_Confirm() {
 
-                    if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
-                        CIAPISPresenter.getInstance().DeleteApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_apisEntity.doc_type, m_onInquiryApisListListener);
-
-                    } else if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
-
-                        CICompanionApisEntity entity = new CICompanionApisEntity();
-
-                        entity.doc_type         = m_apisEntity.doc_type;
-                        entity.doc_no           = m_apisEntity.doc_no;
-                        entity.nationality      = m_apisEntity.nationality;
-                        entity.doc_expired_date = m_apisEntity.doc_expired_date;
-                        entity.issue_country    = m_apisEntity.issue_country;
-                        entity.resident_city    = m_apisEntity.resident_city;
-                        entity.last_name        = m_apisEntity.last_name;
-                        entity.first_name       = m_apisEntity.first_name;
-                        entity.birthday         = m_apisEntity.birthday;
-                        entity.sex              = m_apisEntity.sex;
-                        entity.addr_street      = m_apisEntity.addr_street;
-                        entity.addr_city        = m_apisEntity.addr_city;
-                        entity.addr_state       = m_apisEntity.addr_state;
-                        entity.addr_country     = m_apisEntity.addr_country;
-                        entity.addr_zipcode     = m_apisEntity.addr_zipcode;
-                        entity.card_no          = CIApplication.getLoginInfo().GetUserMemberCardNo();
-                        entity.full_name        = (TextUtils.isEmpty(entity.first_name)? "" : entity.first_name.toUpperCase()) + (TextUtils.isEmpty(entity.last_name)? "" : entity.last_name.toUpperCase() );
-                        entity.setId(entity.full_name, entity.card_no, entity.doc_type);
-
-                        CIAPISPresenter.getInstance().deleteCompanionApis(entity);
-
-                        setResult(RESULT_OK);
-                        CIPersonalAddAPISActivity.this.finish();
-
-                    }
+//                    if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
+//                        CIAPISPresenter.getInstance().DeleteApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_apisEntity.doc_type, m_onInquiryApisListListener);
+//
+//                    } else if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+//
+//                        CICompanionApisEntity entity = new CICompanionApisEntity();
+//
+//                        entity.doc_type         = m_apisEntity.doc_type;
+//                        entity.doc_no           = m_apisEntity.doc_no;
+//                        entity.nationality      = m_apisEntity.nationality;
+//                        entity.doc_expired_date = m_apisEntity.doc_expired_date;
+//                        entity.issue_country    = m_apisEntity.issue_country;
+//                        entity.resident_city    = m_apisEntity.resident_city;
+//                        entity.last_name        = m_apisEntity.last_name;
+//                        entity.first_name       = m_apisEntity.first_name;
+//                        entity.birthday         = m_apisEntity.birthday;
+//                        entity.sex              = m_apisEntity.sex;
+//                        entity.addr_street      = m_apisEntity.addr_street;
+//                        entity.addr_city        = m_apisEntity.addr_city;
+//                        entity.addr_state       = m_apisEntity.addr_state;
+//                        entity.addr_country     = m_apisEntity.addr_country;
+//                        entity.addr_zipcode     = m_apisEntity.addr_zipcode;
+//                        entity.card_no          = CIApplication.getLoginInfo().GetUserMemberCardNo();
+//                        entity.full_name        = (TextUtils.isEmpty(entity.first_name)? "" : entity.first_name.toUpperCase()) + (TextUtils.isEmpty(entity.last_name)? "" : entity.last_name.toUpperCase() );
+//                        entity.setId(entity.full_name, entity.card_no, entity.doc_type);
+//
+//                        CIAPISPresenter.getInstance().deleteCompanionApis(entity);
+//
+//                        setResult(RESULT_OK);
+//                        CIPersonalAddAPISActivity.this.finish();
+//
+//                    }
                 }
 
                 @Override

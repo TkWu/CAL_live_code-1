@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true">
 
     <include
-        layout="@layout/fragment_personal_profile"
+        layout="@layout/fragment_apis_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20px"
