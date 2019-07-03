@@ -91,39 +91,44 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             CIAlertDialog dialog = new CIAlertDialog(m_Context, new CIAlertDialog.OnAlertMsgDialogListener() {
                 @Override
                 public void onAlertMsgDialog_Confirm() {
+                    CIApisAddEntity ciApisEntity = getApisEntity();
 
-                    if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
-                        CIAPISPresenter.getInstance().DeleteApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_apisEntity.doc_type, m_onInquiryApisListListener);
+                    setMyApisEntity(ciApisEntity);
 
-                    } else if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+                    CIAPISPresenter.getInstance().DeleteApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
 
-                        CICompanionApisEntity entity = new CICompanionApisEntity();
 
-                        entity.doc_type         = m_apisEntity.doc_type;
-                        entity.doc_no           = m_apisEntity.doc_no;
-                        entity.nationality      = m_apisEntity.nationality;
-                        entity.doc_expired_date = m_apisEntity.doc_expired_date;
-                        entity.issue_country    = m_apisEntity.issue_country;
-                        entity.resident_city    = m_apisEntity.resident_city;
-                        entity.last_name        = m_apisEntity.last_name;
-                        entity.first_name       = m_apisEntity.first_name;
-                        entity.birthday         = m_apisEntity.birthday;
-                        entity.sex              = m_apisEntity.sex;
-                        entity.addr_street      = m_apisEntity.addr_street;
-                        entity.addr_city        = m_apisEntity.addr_city;
-                        entity.addr_state       = m_apisEntity.addr_state;
-                        entity.addr_country     = m_apisEntity.addr_country;
-                        entity.addr_zipcode     = m_apisEntity.addr_zipcode;
-                        entity.card_no          = CIApplication.getLoginInfo().GetUserMemberCardNo();
-                        entity.full_name        = (TextUtils.isEmpty(entity.first_name)? "" : entity.first_name.toUpperCase()) + (TextUtils.isEmpty(entity.last_name)? "" : entity.last_name.toUpperCase() );
-                        entity.setId(entity.full_name, entity.card_no, entity.doc_type);
-
-                        CIAPISPresenter.getInstance().deleteCompanionApis(entity);
-
-                        setResult(RESULT_OK);
-                        CIPersonalAddSaveAPISActivity.this.finish();
-
-                    }
+//                    if( CIPersonalAddAPISType.EDIT_MY_APIS == m_type ) {
+//                        CIAPISPresenter.getInstance().DeleteApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_apisEntity.doc_type, m_onInquiryApisListListener);
+//
+//                    } else if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+//
+//                        CICompanionApisEntity entity = new CICompanionApisEntity();
+//
+//                        entity.doc_type         = m_apisEntity.doc_type;
+//                        entity.doc_no           = m_apisEntity.doc_no;
+//                        entity.nationality      = m_apisEntity.nationality;
+//                        entity.doc_expired_date = m_apisEntity.doc_expired_date;
+//                        entity.issue_country    = m_apisEntity.issue_country;
+//                        entity.resident_city    = m_apisEntity.resident_city;
+//                        entity.last_name        = m_apisEntity.last_name;
+//                        entity.first_name       = m_apisEntity.first_name;
+//                        entity.birthday         = m_apisEntity.birthday;
+//                        entity.sex              = m_apisEntity.sex;
+//                        entity.addr_street      = m_apisEntity.addr_street;
+//                        entity.addr_city        = m_apisEntity.addr_city;
+//                        entity.addr_state       = m_apisEntity.addr_state;
+//                        entity.addr_country     = m_apisEntity.addr_country;
+//                        entity.addr_zipcode     = m_apisEntity.addr_zipcode;
+//                        entity.card_no          = CIApplication.getLoginInfo().GetUserMemberCardNo();
+//                        entity.full_name        = (TextUtils.isEmpty(entity.first_name)? "" : entity.first_name.toUpperCase()) + (TextUtils.isEmpty(entity.last_name)? "" : entity.last_name.toUpperCase() );
+//                        entity.setId(entity.full_name, entity.card_no, entity.doc_type);
+//
+//                        CIAPISPresenter.getInstance().deleteCompanionApis(entity);
+//
+//                        setResult(RESULT_OK);
+//                        CIPersonalAddSaveAPISActivity.this.finish();
+//                    }
                 }
 
                 @Override
@@ -155,9 +160,10 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         @Override
         public void InsertApidSuccess(String rt_code, String rt_msg) {
 
-            //CIAPISPresenter.getInstance().saveMyApis(m_newApisEntity);
+            //CIAPISPresenter.getInstance().saveMyApis(m_apisEntity);
 
             setResult(RESULT_OK);
+            SLog.d("InsertApidSuccess result: "+RESULT_OK);
             CIPersonalAddSaveAPISActivity.this.finish();
         }
 
@@ -173,8 +179,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         public void UpdateApisSuccess(String rt_code, String rt_msg) {
 
             //CIAPISPresenter.getInstance().saveMyApis(m_newApisEntity);
-
             setResult(RESULT_OK);
+            SLog.d("UpdateApisSuccess result: "+RESULT_OK);
             CIPersonalAddSaveAPISActivity.this.finish();
         }
         //要改
@@ -197,11 +203,10 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         //要改
         @Override
         public void DeleteApisSuccess(String rt_code, String rt_msg) {
-
-            CIAPISPresenter.getInstance().deleteMyApis(m_apisEntity);
+            //CIAPISPresenter.getInstance().deleteMyApis(m_apisEntity);
             //刪除
             setResult(RESULT_OK);
-
+            SLog.d("DeleteApisSuccess result:"+ RESULT_OK);
             CIPersonalAddSaveAPISActivity.this.finish();
         }
 
@@ -229,7 +234,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     };
 
     public enum CIPersonalAddAPISType {
-        ADD_MY_APIS, EDIT_MY_APIS, ADD_COMPANAIONS_APIS, EDIT_COMPANAIONS_APIS, DELETE_MY_APIS, DELETE_COMPANAIONS_APIS;
+        ADD_MY_APIS, EDIT_MY_APIS, ADD_COMPANAIONS_APIS, EDIT_COMPANAIONS_APIS
     }
 
     private static final int RESIDENT_CD    = 1;
@@ -311,11 +316,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 if (null != m_apisDocmuntType) {
                     Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
                     m_strAPISName = m_apisDocmuntType.getName(locale);
-                }
-
-                String strData = getIntent().getExtras().getString(CIAddSaveAPISDocTypeActivity.APIS_TYPE);
-                if (null != strData) {
-                    m_strAPISCode = strData;
+                    m_strAPISCode = m_apisDocmuntType.code_1A;
                 }
 
                 String strUserName = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
@@ -327,8 +328,14 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 break;
 
             case ADD_COMPANAIONS_APIS:
-//                m_tvName.setVisibility(View.GONE);
-//                m_ll_companions_name.setVisibility(View.VISIBLE);
+                m_apisDocmuntType = (CIApisDocmuntTypeEntity)getIntent().getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE); //APIS類型物件
+
+                if (null != m_apisDocmuntType) {
+                    Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
+                    m_strAPISName = m_apisDocmuntType.getName(locale);
+                    m_strAPISCode = m_apisDocmuntType.code_1A;
+                }
+
                 break;
             case EDIT_MY_APIS:
                 String edtmy_apis = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE);
@@ -360,10 +367,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                     m_strAPISCode = m_editApisEntity.documentType;
                 }
 
-                break;
-            case DELETE_MY_APIS:
-                break;
-            case DELETE_COMPANAIONS_APIS:
                 break;
         }
 
@@ -471,10 +474,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             case EDIT_COMPANAIONS_APIS:
                 m_tvName.setVisibility(View.GONE);
                 m_ll_companions_name.setVisibility(View.VISIBLE);
-                break;
-            case DELETE_MY_APIS:
-                break;
-            case DELETE_COMPANAIONS_APIS:
                 break;
         }
     }
@@ -779,7 +778,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                     || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
                 sendUpdateApisFromWS();
 
-            } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type) {
+//            } else if( CIPersonalAddAPISType.ADD_COMPANAIONS_APIS == m_type || CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type) {
                 //要改
                 //saveCompanionsApisFromDB( getApisEntity() );
             }
@@ -848,34 +847,9 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private CIApisAddEntity getApisEntity() {
         CIApisAddEntity ciApisEntity = new CIApisAddEntity();
 
-        ciApisEntity.setLanguage(CIApplication.getLanguageInfo().getWSLanguage());
-
         CIApisQryRespEntity qryObj = new CIApisQryRespEntity();
 
         CIApisQryRespEntity.CIApispaxInfo PaxInfoObj = qryObj.new CIApispaxInfo();
-
-        switch (m_type){
-            case ADD_MY_APIS:
-                ciApisEntity.setMode("I");
-                PaxInfoObj.setName(CIApplication.getLoginInfo().GetUserFirstName(), CIApplication.getLoginInfo().GetUserLastName());
-                break;
-            case ADD_COMPANAIONS_APIS:
-                ciApisEntity.setMode("I");
-                break;
-            case EDIT_MY_APIS:
-                ciApisEntity.setMode("U");
-                PaxInfoObj.setName(CIApplication.getLoginInfo().GetUserFirstName(), CIApplication.getLoginInfo().GetUserLastName());
-                break;
-            case EDIT_COMPANAIONS_APIS:
-                ciApisEntity.setMode("U");
-                break;
-            case DELETE_MY_APIS:
-                ciApisEntity.setMode("D");
-                break;
-            case DELETE_COMPANAIONS_APIS:
-                ciApisEntity.setMode("D");
-                break;
-        }
 
         SLog.d("m_strAPISCode: "+m_strAPISCode);
         switch(m_strAPISCode) {
@@ -892,7 +866,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 DocumentInfosObj.docas.city = m_CityCountyDistrictfragment.getText();
                 DocumentInfosObj.docas.address = m_Streetfragment.getText();
                 DocumentInfosObj.docas.zipcode = m_ZipCodeFragment.getText();
-
 
                 if( CIPersonalAddAPISType.ADD_MY_APIS != m_type && CIPersonalAddAPISType.ADD_COMPANAIONS_APIS != m_type ) {
                     DocumentInfosObj.SEQ = m_editApisEntity.SEQ;

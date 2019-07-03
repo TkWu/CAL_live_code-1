@@ -7,7 +7,6 @@ import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
 import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIWSResult;
-import ci.ws.cores.CIWSShareManager;
 import ci.ws.cores.object.GsonTool;
 import ci.ws.define.WSConfig;
 
@@ -47,7 +46,9 @@ public class CIUpdateAPISModel extends CIWSBaseModel {
         culture_info("culture_info"),
         device_id("device_id"),
         version("version"),
-        card_no("card_no");
+        card_no("card_no"),
+        language("language"),
+        mode("mode");
 
         private String strTag = "";
 
@@ -65,21 +66,21 @@ public class CIUpdateAPISModel extends CIWSBaseModel {
 
     public CIUpdateAPISModel(UpdateApisCallBack listener ){ this.m_callback = listener; }
 
-    public void UpdateApisFromWS(String strCardNo) {
-
-        m_jsBody = new JSONObject();
-        try {
-            m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
-            m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
-            m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
-            m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
-            m_jsBody.put( eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        this.DoConnection();
-    }
+//    public void UpdateApisFromWS(String strCardNo) {
+//
+//        m_jsBody = new JSONObject();
+//        try {
+//            m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
+//            m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
+//            m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
+//            m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
+//            m_jsBody.put( eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//
+//        this.DoConnection();
+//    }
 
     public void UpdateApisFromWS(String strCardNo, CIApisAddEntity apisEntity) {
         try {
@@ -90,12 +91,13 @@ public class CIUpdateAPISModel extends CIWSBaseModel {
             //m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
             //m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
             //m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
+            m_jsBody.put( eParaTag.mode.getString(),     "U");
+            m_jsBody.put( eParaTag.language.getString(), CIApplication.getLanguageInfo().getWSLanguage());
             m_jsBody.put( eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
 
         this.DoConnection();
     }

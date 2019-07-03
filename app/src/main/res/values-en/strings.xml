@@ -725,6 +725,7 @@
     <string name="input_apis">Enter my travel document</string>
     <string name="use_saved_apis">Use saved document</string>
     <string name="fill_new_form_apis">Fill in new document</string>
+    <string name="gender">Gender</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="resident_country">Country/Region of Residence</string>

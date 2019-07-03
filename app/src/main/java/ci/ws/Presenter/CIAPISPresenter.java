@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import ci.function.Core.SLog;
 import ci.ws.Models.CIDeleteAPISModel;
 import ci.ws.Models.CIInquiryApisListModel;
 import ci.ws.Models.CIInsertAPISModel;
@@ -65,22 +64,22 @@ public class CIAPISPresenter {
 
     public CIAPISPresenter() { }
 
+//    /**取得Apis列表*/
+//    public void InquiryMyApisListFromWS( String strCardNo,CIInquiryApisListListener listener ){
+//
+//        if ( null == m_ApisModel ){
+//            m_ApisModel = new CIInquiryApisListModel(m_modelCallback);
+//        }
+//
+//        s_Instance.setCallbackListener(listener);
+//
+//        m_ApisModel.InquiryApisFromWS(strCardNo);
+//        if(null != m_Listener){
+//            m_Listener.showProgress();
+//        }
+//    }
+
     /**取得Apis列表*/
-    public void InquiryMyApisListFromWS( String strCardNo,CIInquiryApisListListener listener ){
-
-        if ( null == m_ApisModel ){
-            m_ApisModel = new CIInquiryApisListModel(m_modelCallback);
-        }
-
-        s_Instance.setCallbackListener(listener);
-
-        m_ApisModel.InquiryApisFromWS(strCardNo);
-        if(null != m_Listener){
-            m_Listener.showProgress();
-        }
-    }
-
-
     public void InquiryMyApisListNewFromWS( String strCardNo,CIInquiryApisListListener listener ){
 
         if ( null == m_ApisModel ){
@@ -133,18 +132,29 @@ public class CIAPISPresenter {
         }
     }
 
-    public void DeleteApisFromWS(String strCardNo, String strDocType, CIInquiryApisListListener listener) {
+    public void DeleteApisFromWS( String strCardNo,CIInquiryApisListListener listener , CIApisAddEntity ciApisEntity ) {
         if( null == m_DeleteApisModel ) {
             m_DeleteApisModel = new CIDeleteAPISModel(m_deleteCallback);
         }
-
         s_Instance.setCallbackListener(listener);
 
-        m_DeleteApisModel.DeleteApisFromWS(strCardNo, strDocType);
+        m_DeleteApisModel.DeleteApisFromWS(strCardNo, ciApisEntity);
         if(null != m_Listener){
             m_Listener.showProgress();
         }
     }
+//    public void DeleteApisFromWS(String strCardNo, String strDocType, CIInquiryApisListListener listener) {
+//        if( null == m_DeleteApisModel ) {
+//            m_DeleteApisModel = new CIDeleteAPISModel(m_deleteCallback);
+//        }
+//
+//        s_Instance.setCallbackListener(listener);
+//
+//        m_DeleteApisModel.DeleteApisFromWS(strCardNo, strDocType);
+//        if(null != m_Listener){
+//            m_Listener.showProgress();
+//        }
+//    }
 
     /**取消WS*/
     public void InquiryApisListCancel(){

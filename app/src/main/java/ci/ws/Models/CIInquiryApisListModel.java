@@ -126,12 +126,9 @@ public class CIInquiryApisListModel extends CIWSBaseModel {
     }
 
     public void InquiryApisNewFromWS(String strCardNo) {
-
         CIApisQryEntity ciApisQryEntity = new CIApisQryEntity();
         ciApisQryEntity.language = CIApplication.getLanguageInfo().getWSLanguage();
         ciApisQryEntity.apisInfo.cardNo = strCardNo;
-
-
         try {
             String strRequest = GsonTool.toJson(ciApisQryEntity);
 
