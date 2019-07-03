@@ -73,6 +73,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
     private TwoItemSelectBar        m_vGender   = null;
     private CITextFieldFragment     //m_APISDocumentFragment            = null,
+                                    m_BasicDocumentTypefragment         = null,
                                     m_DateOfBirthdayfragment            = null,
                                     m_ResidentCountryFragment           = null,
                                     m_Nationalityfragment               = null,
@@ -313,6 +314,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             docTypeList[iPos] = m_arApis.get(iPos).docTypeName;
         }
 
+        m_BasicDocumentTypefragment = CIApisDocmuntTextFieldFragment.newInstance("*"+getString(R.string.document_type),CIApisDocmuntTextFieldFragment.EType.CheckIn);
         m_DateOfBirthdayfragment    = CIDateOfBirthdayTextFieldFragment.newInstance("*"+getString(R.string.inquiry_input_box_date_of_birth_hint));
         m_ResidentCountryFragment   = CIApisNationalTextFieldFragment.newInstance("*"+getString(R.string.resident_country), CIApisNationalTextFieldFragment.EMode.ResidentNational);
         m_Nationalityfragment       = CIApisNationalTextFieldFragment.newInstance("*"+getString(R.string.sign_up_nationality), CIApisNationalTextFieldFragment.EMode.IssueNational);
@@ -391,6 +393,8 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     protected void registerFragment(FragmentManager fragmentManager) {
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        fragmentTransaction.replace( R.id.flayout_basicdoctype,     m_BasicDocumentTypefragment,   m_BasicDocumentTypefragment.toString());
 
         fragmentTransaction.replace( R.id.flayout_birthday,     m_DateOfBirthdayfragment,   m_DateOfBirthdayfragment.toString());
         fragmentTransaction.replace( R.id.flayout_country,      m_ResidentCountryFragment,  m_ResidentCountryFragment.toString());
