@@ -792,7 +792,6 @@ public class CICheckInActivity extends BaseActivity {
         } else if( STEP_COMPLETED == m_iCurrStep ) {
 
         }
-SLog.d("isFillCompleteAndCorrect: "+m_iCurrStep+" "+bIsComplete);
         return bIsComplete;
     }
 
