@@ -80,12 +80,10 @@ public class CIInputAPISFragment extends BaseFragment {
 
     @Override
     protected void initialLayoutComponent(LayoutInflater inflater, View view) {
-
         m_shadowScrollView  = (ShadowBarScrollview)view.findViewById(R.id.shadowlayout);
         m_progressBar       = (ProgressBar)view.findViewById(R.id.progress_bar);
         m_ScrollView        = m_shadowScrollView.getScrollView();
         m_llayout_Content   = m_shadowScrollView.getContentView();
-
     }
 
     @Override
@@ -248,7 +246,6 @@ public class CIInputAPISFragment extends BaseFragment {
         }
 
     }
-
 
     public void setPassengerInfoList(CICheckInAllPaxResp CheckInResp, boolean bArrivalUSA) {
 

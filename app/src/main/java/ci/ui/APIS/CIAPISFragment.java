@@ -187,6 +187,12 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
     }
 
+    private void addApis(ArrayList<CIApisQryRespEntity.ApisRespDocObj> SaveAPIS) {
+        if( null == SaveAPIS ) {
+            return;
+        }
+
+    }
     private void addApis(CICheckInApisEntity Apis, CICheckInDocaEntity Doca ) {
         if( null == m_arApis ) {
             m_arApis = new ArrayList<>();
@@ -270,6 +276,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
         CICheckInApisEntity Apis = null;
         CICheckInDocaEntity Doca = null;
+        ArrayList<CIApisQryRespEntity.ApisRespDocObj> SavedAPIS = null;
 
         Bundle bundle = getArguments();
         if ( null != bundle ){
@@ -278,6 +285,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             m_strLastName = bundle.getString(BUNDLE_PARA_LASTNAME, "");
             Apis = (CICheckInApisEntity)bundle.getSerializable(BUNDLE_PARA_APIS);
             Doca = (CICheckInDocaEntity)bundle.getSerializable(BUNDLE_PARA_DOCA);
+            SavedAPIS = (ArrayList<CIApisQryRespEntity.ApisRespDocObj>)bundle.getSerializable(BUNDLE_SAVED_APIS);
             m_arItinerary_InfoList = (ArrayList<CICheckInPax_ItineraryInfoEntity>)bundle.getSerializable(BUNDLE_PARA_ITINERARY_INFO);
         }
 
@@ -291,7 +299,8 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             m_bIsMyApis = false;
         }
 
-        addApis(Apis,Doca);
+        //addApis(Apis,Doca);
+        AddApis(SavedAPIS);
 
     }
 
