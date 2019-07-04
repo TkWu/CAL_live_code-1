@@ -65,6 +65,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     public static final String BUNDLE_PARA_LASTNAME         = "LastName";
     public static final String BUNDLE_PARA_APIS             = "Apis";
     public static final String BUNDLE_PARA_DOCA             = "Doca";
+    public static final String BUNDLE_SAVED_APIS            = "SavedApis";
     public static final String BUNDLE_PARA_ITINERARY_INFO   = "CICheckInPax_ItineraryInfoEntity";
 
 
