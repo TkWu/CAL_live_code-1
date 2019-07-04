@@ -22,12 +22,15 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import ci.function.Checkin.ADC.CICheckInVISAActivity;
+import ci.function.Core.CIApplication;
+import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.object.CIPNRStatusManager;
 import ci.ui.view.NavigationBar;
 import ci.ui.view.StepHorizontalView;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CICheckInPax_ItineraryInfoEntity;
 import ci.ws.Models.entities.CICheckIn_ItineraryInfo_Req;
 import ci.ws.Models.entities.CICheckIn_ItineraryInfo_Resp;
@@ -44,11 +47,13 @@ import ci.ws.Models.entities.CIFlightStationEntity;
 import ci.ws.Models.entities.CIMarkBPAsPrintedEntity;
 import ci.ws.Models.entities.CIMarkBPAsPrinted_Pax_Info;
 import ci.ws.Models.entities.CIMarkBP_Pax_ItineraryInfo;
+import ci.ws.Presenter.CIAPISPresenter;
 import ci.ws.Presenter.CICheckInPresenter;
 import ci.ws.Presenter.CIInquiryCheckInPresenter;
 import ci.ws.Presenter.CIInquiryFlightStationPresenter;
 import ci.ws.Presenter.CIMarkBPAsPrintedPresenter;
 import ci.ws.Presenter.Listener.CICheckInListener;
+import ci.ws.Presenter.Listener.CIInquiryApisListListener;
 import ci.ws.Presenter.Listener.CIInquiryCheckInListener;
 import ci.ws.Presenter.Listener.CIInquiryFlightStatusStationListener;
 import ci.ws.Presenter.Listener.CIMarkBPAsPrintedListener;
@@ -114,6 +119,9 @@ public class CICheckInActivity extends BaseActivity {
 
     //2016-07-15 ryan 調整Check-in Presenter 使用方式
     private CIInquiryCheckInPresenter m_InquiryCheckInPresenter = null;
+
+    private CIAPISPresenter apis_presenter = null;
+    private CIApisQryRespEntity saved_apis_resonse = null;
 
     private CIInquiryFlightStationPresenter m_inquiryFlightStationPresenter = null;
 
@@ -405,6 +413,8 @@ public class CICheckInActivity extends BaseActivity {
         m_InquiryCheckInPresenter = new CIInquiryCheckInPresenter(m_InquiryCheckInListener);
 
         m_inquiryFlightStationPresenter = CIInquiryFlightStationPresenter.getInstance(flightStatusStationListener,CIInquiryFlightStationPresenter.ESource.TimeTable);
+
+        apis_presenter = new CIAPISPresenter();
     }
 
     @Override
@@ -474,6 +484,7 @@ public class CICheckInActivity extends BaseActivity {
                 break;
             case STEP_PROHIBIT_PRODUCT :
                 {
+                    SLog.d("onNextStep(FragmentManager) + m_iCurrStep: "+m_iCurrStep);
                     m_tvTitle.setText(R.string.check_in_dabgerous_goods_info);
                     //
                     m_ProhibitProductClaimFragment = new CIProhibitProductClaimFragment();
@@ -489,6 +500,7 @@ public class CICheckInActivity extends BaseActivity {
                     //
                     m_InputAPISFragment = new CIInputAPISFragment();
                     m_InputAPISFragment.setPassengerInfoList(m_arPassenger, m_enRouteType);
+                    m_InputAPISFragment.setSavedAPIS(saved_apis_resonse);
                     //m_InputAPISFragment.setPassengerInfoList(m_arPassenger,m_bArrivalUSA);
                     fragment = m_InputAPISFragment;
                     strTag  = m_InputAPISFragment.toString();
@@ -572,10 +584,10 @@ public class CICheckInActivity extends BaseActivity {
 
     private void onNextStep() {
 
-        if( STEP_SELECT_FLIGHT == m_iCurrStep) {
+        if (STEP_SELECT_FLIGHT == m_iCurrStep) {
 
             //紀錄選擇的航班
-            if( null != m_SelectFlightFragment ) {
+            if (null != m_SelectFlightFragment) {
                 m_arSelectedFlights = m_SelectFlightFragment.getSelectedFlightList();
 
                 //2018-08-22 新增五大航線組合，移至APIS內判斷
@@ -586,19 +598,25 @@ public class CICheckInActivity extends BaseActivity {
 //                        break;
 //                    }
 //                }
-                if( null != m_arSelectedFlights && 0 < m_arSelectedFlights.m_Itinerary_InfoList.size()) {
+                if (null != m_arSelectedFlights && 0 < m_arSelectedFlights.m_Itinerary_InfoList.size()) {
                     m_strDeparture = m_arSelectedFlights.m_Itinerary_InfoList.get(0).Departure_Station;
-                    m_strArrive = m_arSelectedFlights.m_Itinerary_InfoList.get( (m_arSelectedFlights.m_Itinerary_InfoList.size()-1) ).Arrival_Station;
+                    m_strArrive = m_arSelectedFlights.m_Itinerary_InfoList.get((m_arSelectedFlights.m_Itinerary_InfoList.size() - 1)).Arrival_Station;
                 }
             }
 
-            if( null == m_inquiryFlightStationPresenter.getAllDepatureStationList() ) {
+            if (null == m_inquiryFlightStationPresenter.getAllDepatureStationList()) {
                 getAllDepatureStationListFromDB();
             } else {
                 m_InquiryCheckInPresenter.InquiryCheckInAllPaxByPNRFromWS(m_arSelectedFlights.Pnr_Id, m_SelectFlightFragment.getSelectedFlightSegmentNoList());
             }
 
-        } else if( STEP_INPUT_APIS == m_iCurrStep ) {
+        }
+        else if( STEP_PROHIBIT_PRODUCT == m_iCurrStep ) {
+            SLog.d("onNextStep() + m_iCurrStep: "+m_iCurrStep);
+            apis_presenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+
+        }
+        else if( STEP_INPUT_APIS == m_iCurrStep ) {
 
             if( null != m_InputAPISFragment ) {
                 ArrayList<HashMap<String,Object>> arInputApis = m_InputAPISFragment.getInputApisList();
@@ -774,7 +792,7 @@ public class CICheckInActivity extends BaseActivity {
         } else if( STEP_COMPLETED == m_iCurrStep ) {
 
         }
-
+SLog.d("isFillCompleteAndCorrect: "+m_iCurrStep+" "+bIsComplete);
         return bIsComplete;
     }
 
@@ -1260,4 +1278,99 @@ public class CICheckInActivity extends BaseActivity {
         CICheckInPresenter.getInstance(m_CheckInListener).CheckInFromWS(m_arInputApisPaxInfo);
 
     }
+
+    /**
+     * 修改流程
+     * 於危險品畫面取得已儲存的ＡＰＩＳ資料
+     * **/
+    private CIInquiryApisListListener m_InquiryApisListListener = new CIInquiryApisListListener() {
+//        @Override
+//        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisResp apis) {
+//
+//            saveMyApisFromDB(apis.arApisList);
+//
+//            updateMyApisView(apis.arApisList);
+//        }
+
+        @Override
+        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisQryRespEntity apis) {
+            if (apis != null) {
+                saved_apis_resonse = apis;
+            }
+
+            m_iCurrStep = m_vStepHorizontalView.setNextSteps();
+            onNextStep(getSupportFragmentManager(), m_iCurrStep);
+            //onNextStep(getSupportFragmentManager(), m_iCurrStep);
+            //saveMyApisFromDB(apis.paxInfo);
+            //updateMyApisView(apis.paxInfo);
+            //queryAndUpdateCompanionsApisView(apis.paxInfo);
+        }
+
+        @Override
+        public void InquiryApisError(String rt_code, String rt_msg) {
+            //updateMyApisView(new ArrayList<CIApisQryRespEntity.CIApispaxInfo>());
+
+//            showDialog(getString(R.string.warning),
+//                    rt_msg,
+//                    getString(R.string.confirm));
+
+            m_iCurrStep = m_vStepHorizontalView.setNextSteps();
+            onNextStep(getSupportFragmentManager(), m_iCurrStep);
+        }
+
+        @Override
+        public void InsertApidSuccess(String rt_code, String rt_msg) {
+
+        }
+
+        @Override
+        public void InsertApisError(String rt_code, String rt_msg) {
+
+        }
+
+        @Override
+        public void UpdateApisSuccess(String rt_code, String rt_msg) {
+
+        }
+
+        @Override
+        public void UpdateApisError(String rt_code, String rt_msg) {
+
+        }
+
+        @Override
+        public void InsertUpdateApisSuccess(String rt_code, String rt_msg) {
+
+        }
+
+        @Override
+        public void InsertUpdateApisError(String rt_code, String rt_msg) {
+
+        }
+
+        @Override
+        public void DeleteApisSuccess(String rt_code, String rt_msg) {
+
+        }
+
+        @Override
+        public void DeleteApisError(String rt_code, String rt_msg) {
+
+        }
+
+        @Override
+        public void showProgress() {
+            //showProgress();
+        }
+
+        @Override
+        public void hideProgress() {
+
+        }
+
+        @Override
+        public void onAuthorizationFailedError(String rt_code, String rt_msg) {
+//            isProcessWSErrCode(rt_code, rt_msg);
+        }
+    };
 }

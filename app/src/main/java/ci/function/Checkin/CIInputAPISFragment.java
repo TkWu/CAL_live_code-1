@@ -21,9 +21,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import ci.function.Base.BaseFragment;
+import ci.function.Core.SLog;
 import ci.ui.APIS.CIAPISFragment;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.view.ShadowBar.ShadowBarScrollview;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CICheckInApisEntity;
 import ci.ws.Models.entities.CICheckInDocaEntity;
 import ci.ws.Models.entities.CICheckInPax_ItineraryInfoEntity;
@@ -51,6 +53,7 @@ public class CIInputAPISFragment extends BaseFragment {
         CICheckInDocaEntity Doca;
         //2018-08-28 新增五大航線組合，故直接將航線資訊傳入
         ArrayList<CICheckInPax_ItineraryInfoEntity> m_Itinerary_InfoList;
+        ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_arApisRespDocObj;
     }
 
     private ShadowBarScrollview     m_shadowScrollView  = null;
@@ -60,6 +63,7 @@ public class CIInputAPISFragment extends BaseFragment {
     //假資料
     private ArrayList<APISHolder>   m_arAPISList        = null;
     private ArrayList<viewHolder>   m_arAPISHolderList  = null;
+
 //    private boolean                 m_bArrivalUSA       = false;
 //    private String                  m_strArrivalStation = null;
 
@@ -133,6 +137,7 @@ public class CIInputAPISFragment extends BaseFragment {
                 args.putString( CIAPISFragment.BUNDLE_PARA_LASTNAME,            apisHolder.strLastName);
                 args.putSerializable( CIAPISFragment.BUNDLE_PARA_APIS,          apisHolder.Apis);
                 args.putSerializable( CIAPISFragment.BUNDLE_PARA_DOCA,          apisHolder.Doca);
+                args.putSerializable( CIAPISFragment.BUNDLE_SAVED_APIS,         apisHolder.m_arApisRespDocObj);
                 args.putSerializable( CIAPISFragment.BUNDLE_PARA_ITINERARY_INFO,apisHolder.m_Itinerary_InfoList);
                 vholder.fragment.setArguments(args);
                 //
@@ -219,6 +224,31 @@ public class CIInputAPISFragment extends BaseFragment {
         }
 
     }
+
+    public void setSavedAPIS(CIApisQryRespEntity savedAPISEntity) {
+        if (savedAPISEntity == null) {
+            return;
+        }
+
+        for (APISHolder apisEntity: m_arAPISList) {
+            for (CIApisQryRespEntity.CIApispaxInfo paxEntity: savedAPISEntity.paxInfo) {
+                if (apisEntity.strFirstName.equals(paxEntity.firstName) &&
+                        apisEntity.strLastName.equals(paxEntity.lastName)) {
+                    apisEntity.m_arApisRespDocObj = paxEntity.documentInfos;
+                    SLog.d("apisEntity.m_arApisRespDocObj: "+apisEntity.m_arApisRespDocObj.size());
+                    break;
+                }else{
+                    if (m_arAPISList.indexOf(apisEntity) == m_arAPISList.size()-1) {
+                        apisEntity.m_arApisRespDocObj =null;
+                    }else{
+                        continue;
+                    }
+                }
+            }
+        }
+
+    }
+
 
     public void setPassengerInfoList(CICheckInAllPaxResp CheckInResp, boolean bArrivalUSA) {
 
