@@ -425,6 +425,11 @@
             android:label=""
             android:screenOrientation="portrait" />
         <activity
+            android:name="ci.function.Checkin.CIAPISCheckInDocmuntTypeSelectMenuActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
             android:name="ci.function.PersonalDetail.APIS.CIApisStateSelectMenuActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:label=""

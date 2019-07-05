@@ -8,11 +8,13 @@ import com.chinaairlines.mobile30.R;
 
 import java.util.HashSet;
 
+import ci.function.Checkin.CIAPISCheckInDocmuntTypeSelectMenuActivity;
 import ci.function.Core.CIApplication;
 import ci.function.PersonalDetail.APIS.CIAPISDocmuntTypeSelectMenuActivity;
 import ci.ui.TextField.Base.CITextFieldFragment;
 import ci.ui.define.UiMessageDef;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 
 /**
  * Created by joannyang on 16/5/26.
@@ -27,6 +29,9 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
 
     //可選清單，會將總表濾掉，只留下可選擇清單
     private HashSet<CIApisDocmuntTypeEntity> m_SelectList = null;
+
+    //新增已存清單
+    private HashSet<CIApisQryRespEntity.ApisRespDocObj> m_SavedList = null;
 
     public enum EType{
         Personal, CheckIn
@@ -63,6 +68,11 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
         m_SelectList = selectHash;
     }
 
+    /**已儲存的清單*/
+    public void setSavedDocmuntSelectList(HashSet<CIApisQryRespEntity.ApisRespDocObj> selectHash) {
+        m_SavedList = selectHash;
+    }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -77,15 +87,17 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
     };
 
     private void fullPageMenu() {
-        changeActivity(CIAPISDocmuntTypeSelectMenuActivity.class);
+        changeActivity(CIAPISCheckInDocmuntTypeSelectMenuActivity.class);
     }
 
     private void changeActivity(Class clazz) {
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
         bundle.putString(UiMessageDef.BUNDLE_ACTIVITY_DATA_HINT, getArguments().get(TEXT_HINT).toString());
-        bundle.putSerializable(CIAPISDocmuntTypeSelectMenuActivity.BUNDLE_ACTIVITY_DATA_FILTER_LIST, m_filter);
-        bundle.putSerializable(CIAPISDocmuntTypeSelectMenuActivity.BUNDLE_ACTIVITY_DATA_SELECT_LIST, m_SelectList);
+        bundle.putSerializable(CIAPISCheckInDocmuntTypeSelectMenuActivity.BUNDLE_ACTIVITY_DATA_FILTER_LIST, m_filter);
+        bundle.putSerializable(CIAPISCheckInDocmuntTypeSelectMenuActivity.BUNDLE_ACTIVITY_DATA_SELECT_LIST, m_SelectList);
+        bundle.putSerializable(CIAPISCheckInDocmuntTypeSelectMenuActivity.BUNDLE_ACTIVITY_DATA_SAVED_LIST, m_SavedList);
+
         bundle.putSerializable(APIS_TYPE, getArguments().getSerializable(APIS_TYPE));
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

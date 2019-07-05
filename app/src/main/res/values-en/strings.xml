@@ -1050,8 +1050,12 @@
     <string name="scheme_auth_eshopping_button_agree">Agree</string>
 
     <!-- Check-in 預辦登機+ADC -->
+    <string name="check_in_doc_reminder">請確認以下資料與您本次行程的旅行證件相符，\n<b>若資料不正確，將會影響您的行程。</b></string>
+    <string name="check_in_input_basic_doc">基本資料</string>
     <string name="check_in_input_apis_doc">Document Details 1</string>
     <string name="check_in_input_apis_second_doc">Document Details 2</string>
+    <string name="check_in_input_apis_select_saved">使用已儲存的證件</string>
+    <string name="check_in_input_apis_input_others">輸入其他證件</string>
     <string name="check_in_input_visa">Visa Details</string>
     <string name="check_in_visa_index_title">Visa</string>
     <string name="check_in_visa_document_number">Visa No.</string>

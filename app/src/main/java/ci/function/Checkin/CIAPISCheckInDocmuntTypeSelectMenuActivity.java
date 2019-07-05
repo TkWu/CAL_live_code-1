@@ -8,10 +8,8 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
 
 import com.chinaairlines.mobile30.R;
 
@@ -24,82 +22,202 @@ import java.util.Locale;
 import ci.function.Core.CIApplication;
 import ci.function.Main.BaseActivity;
 import ci.ui.TextField.Adapter.CIMenusAdapter;
+import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
-import ci.ui.object.CIAirportDataManager;
 import ci.ui.view.NavigationBar;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Presenter.CIAPISPresenter;
-import ci.ws.Presenter.Listener.CIInquiryApisListListener;
 
 
-public class CIAPISCheckInDocmuntTypeSelectMenuActivity
-{
-//    extends
-//} BaseActivity implements TextWatcher {
-//
-//
-//    private NavigationBar           m_Navigationbar    = null;
-//    private ExpandableListView m_expandableListView    = null;
-//    private EditText                m_etSearch;
-//
-//    public  boolean haveSavedApis                        = false;
-//
-//    private ArrayList<GroupItem>    m_Items            = null,
-//                                    m_ItemSearch       = null;
-//
-//    private List<CIApisQryRespEntity.CIApispaxInfo> savedDocs;
-//    private List<CIApisDocmuntTypeEntity> allDocs;
-//
-//    public class GroupItem {
-//        public String  apis_group;
-//        public ArrayList<ChildItem> childItems;
-//    }
-//
-//    public class ChildItem {
-//        public int index;
-//    }
-//
-//    private CIAPISPresenter apis_presenter_= null;
-//
-//    private CIAPISCheckInDocmuntTypeListAdapter m_Adpater   = null;
-//
-//    @Override
-//    protected int getLayoutResourceId() {
-//        return R.layout.activity_select_checkin_apis;
-//    }
-//
-//
-//    @Override
-//    protected void initialLayoutComponent() {
-//
-//
-//        m_Navigationbar = (NavigationBar) findViewById(R.id.toolbar);
-//        m_expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-//        m_etSearch = (EditText) findViewById(R.id.et_search);
-//
-//        m_expandableListView.setDivider(null);
-//
-//        //撈取presenter
-//        apis_presenter_ = new CIAPISPresenter();
-//
-//        m_Items = new ArrayList<>();
-//
-//        m_Items.clear();
-//
-//        showProgressDialog(progressDlgListener);
-////
-////        m_manager = new CIAirportDataManager(m_managerCallBack);
-////
-////        m_manager.fetchAirportData(getIntent().getExtras().getBoolean(IS_TO_FRAGMENT, false),
-////                getIntent().getExtras().getString(IAIT),
-////                getIntent().getExtras().getInt(ESOURCE, 3));
-////
-////        ciInquiryFlightStationPresenter = m_manager.getFlightStationPresenter();
-//
-//    }
-//
+
+public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
+
+    public static final String                  BUNDLE_ACTIVITY_DATA_FILTER_LIST = "ActivityFilterList";
+    public static final String                  BUNDLE_ACTIVITY_DATA_SELECT_LIST = "ActivitySelectList";
+    public static final String                  BUNDLE_ACTIVITY_DATA_SAVED_LIST  = "ActivitySavedList";
+
+    private NavigationBar           m_Navigationbar    = null;
+    private ExpandableListView m_expandableListView    = null;
+    private EditText                m_etSearch;
+
+    public  boolean haveSavedApis                        = false;
+
+    private ArrayList<GroupItem>    m_Items            = null;
+
+    private ArrayList<CIApisQryRespEntity.ApisRespDocObj> SavedDocs;
+
+    private ArrayList<CIApisDocmuntTypeEntity> AllDocs;
+
+    private ArrayList<String>                   m_arString              = null;
+
+    private String                              m_strHint           = "";
+    private CIApisDocmuntTextFieldFragment.EType m_apisType         = null;
+    public static final String                  VALUE               = "VALUE";
+    public static final String                  DOCUMUNT_TYPE       = "DOCUMUNT_TYPE";
+
+    private HashSet<CIApisDocmuntTypeEntity> m_SelectList = null;
+    private HashSet<CIApisQryRespEntity.ApisRespDocObj> m_SelectSavedList = null;
+
+    public class GroupItem {
+        public String  apis_group_name;
+        public ArrayList<Object> childItems;
+    }
+
+    public class ChildItem {
+        public Object childObj;
+    }
+
+    private CIAPISPresenter apis_presenter = null;
+
+    private CIAPISCheckInDocmuntTypeListAdapter m_Adpater = null;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        Bundle bundle = getIntent().getExtras();
+        if(null != bundle){
+            m_strHint = bundle.getString(UiMessageDef.BUNDLE_ACTIVITY_DATA_HINT);
+            if(!TextUtils.isEmpty(m_strHint)){
+                m_strHint = m_strHint.replace("*", "");
+            }
+
+            m_apisType = (CIApisDocmuntTextFieldFragment.EType)bundle.getSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE);
+
+            m_SelectList = (HashSet<CIApisDocmuntTypeEntity>)bundle.getSerializable(BUNDLE_ACTIVITY_DATA_SELECT_LIST);
+            m_SelectSavedList = (HashSet<CIApisQryRespEntity.ApisRespDocObj>)bundle.getSerializable(BUNDLE_ACTIVITY_DATA_SAVED_LIST);
+
+        }
+        super.onCreate(savedInstanceState);
+    }
+
+    private NavigationBar.onNavigationbarParameter m_onNavigationParameter = new NavigationBar.onNavigationbarParameter() {
+
+        @Override
+        public Boolean GetToolbarType() {
+            return false;
+        }
+
+        @Override
+        public String GetTitle() {
+            if(null != m_strHint){
+                return m_strHint;
+            } else {
+                return "";
+            }
+        }
+    };
+
+    private NavigationBar.onNavigationbarListener m_onNavigationbarListener = new NavigationBar.onNavigationbarListener() {
+
+        @Override
+        public void onRightMenuClick() {}
+
+        @Override
+        public void onLeftMenuClick() {}
+
+        @Override
+        public void onBackClick() {
+            onBackPressed();
+        }
+
+        @Override
+        public void onDeleteClick() {}
+
+        @Override
+        public void onDemoModeClick() {}
+    };
+
+    @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_select_checkin_apis;
+    }
+
+
+    @Override
+    protected void initialLayoutComponent() {
+
+        m_Navigationbar = (NavigationBar) findViewById(R.id.toolbar);
+        m_expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+
+        m_expandableListView.setDivider(null);
+
+        if(m_apisType == CIApisDocmuntTextFieldFragment.EType.Personal) {
+            AllDocs = CIAPISPresenter.getInstance().fetchAllApisList();
+        } else if( m_apisType == CIApisDocmuntTextFieldFragment.EType.CheckIn ){
+            AllDocs = CIAPISPresenter.getInstance().fetchAllApisList();
+            //m_arDocmuntType = CIAPISPresenter.getInstance().fetchApisList();
+        } else {
+            AllDocs = new ArrayList<>();
+        }
+
+        m_arString      = new ArrayList<>();
+
+        if ( null != m_SelectList ) {
+            for (Iterator<CIApisDocmuntTypeEntity> iterator = AllDocs.iterator(); iterator.hasNext(); ) {
+
+                CIApisDocmuntTypeEntity data = iterator.next();
+                boolean bContains = false;
+                for (CIApisDocmuntTypeEntity enity : m_SelectList) {
+                    if (TextUtils.equals(enity.code_1A, data.code_1A)) {
+                        //沒帶國籍，則不過濾國籍
+                        if (TextUtils.isEmpty(enity.issued_country)) {
+                            bContains = true;
+                            break;
+                        } else if (TextUtils.equals(enity.issued_country, data.issued_country)) {
+                            //有帶國籍參數，才過濾國籍
+                            bContains = true;
+                            break;
+                        }
+                    }
+                }
+                if (!bContains) {
+                    iterator.remove();
+                }
+            }
+        }
+        if ( null != m_SelectList ){
+            for( Iterator<CIApisQryRespEntity.ApisRespDocObj> iterator = SavedDocs.iterator(); iterator.hasNext(); ) {
+
+                CIApisQryRespEntity.ApisRespDocObj data = iterator.next();
+                boolean bContains = false;
+                for ( CIApisDocmuntTypeEntity enity : m_SelectList ){
+                    if( TextUtils.equals(enity.code_1A, data.documentType) ) {
+                        //沒帶國籍，則不過濾國籍
+                        if ( TextUtils.isEmpty(enity.issued_country) ){
+                            bContains = true;
+                            break;
+                        } else if ( TextUtils.equals(enity.issued_country, data.documentType) ){
+                            //有帶國籍參數，才過濾國籍
+                            bContains = true;
+                            break;
+                        }
+                    }
+                }
+                if ( !bContains ){
+                    iterator.remove();
+                }
+            }
+        }
+
+        Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
+        for( CIApisDocmuntTypeEntity data : AllDocs ) {
+            m_arString.add(data.getName(locale));
+        }
+
+        m_Items = new ArrayList<>();
+
+        m_Items.clear();
+
+        DataAnalysisDocs(SavedDocs,AllDocs);
+
+        m_Adpater = new CIAPISCheckInDocmuntTypeListAdapter(this,
+                m_Items,
+                R.layout.activity_select_checkin_apis);
+        m_expandableListView.setAdapter(m_Adpater);
+
+    }
+
 //    private void showApis(final Boolean isRecent) {
 //
 //        if(null == allDocs){
@@ -119,159 +237,38 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity
 //            }
 //        });
 //    }
-//
-//    //CIAPISPresenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
-//
-//    private NavigationBar.onNavigationbarParameter m_onNavigationParameter = new NavigationBar.onNavigationbarParameter() {
-//
-//        @Override
-//        public Boolean GetToolbarType() {
-//            return false;
-//        }
-//
-//        @Override
-//        public String GetTitle() {
-//            return m_Context.getString(R.string.select_error_msg) + " "+ m_Context.getString(R.string.my_apis);
-//
-//        }
-//    };
-//
-//    private NavigationBar.onNavigationbarListener m_onNavigationbarListener = new NavigationBar.onNavigationbarListener() {
-//
-//        @Override
-//        public void onRightMenuClick() {
-//        }
-//
-//        @Override
-//        public void onLeftMenuClick() {
-//        }
-//
-//        @Override
-//        public void onBackClick() {
-//            onBackPressed();
-//        }
-//
-//        @Override
-//        public void onDeleteClick() {
-//
-//        }
-//
-//        @Override
-//        public void onDemoModeClick() {
-//        }
-//    };
-//
-//    public void onBackPressed() {
-//        HidekeyBoard();
-//
-//        this.finish();
-//        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
-//    }
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//    }
-//
-//    @Override
-//    public void onPause() {
-//        super.onPause();
-//    }
-//
-//    @Override
-//    protected void setTextSizeAndLayoutParams(ViewScaleDef vScaleDef) {
-//        vScaleDef.selfAdjustAllView(findViewById(R.id.root));
-//    }
-//
-//    @Override
-//    protected void setOnParameterAndListener() {
-//        m_Navigationbar.uiSetParameterListener(m_onNavigationParameter, m_onNavigationbarListener);
-//        m_etSearch.addTextChangedListener(this);
-//        m_expandableListView.setOnGroupClickListener(m_OnGroupClicklistener);
-//        m_expandableListView.setOnChildClickListener(m_OnChildClickListener);
-//    }
-//
-//    @Override
-//    protected void registerFragment(FragmentManager fragmentManager) {
-//
-//    }
-//
-//    @Override
-//    protected boolean bOtherHandleMessage(Message msg) {
-//        return false;
-//    }
-//
-//    @Override
-//    protected void removeOtherHandleMessage() {
-//
-//    }
-//
-//    @Override
-//    protected void onLanguageChangeUpdateUI() {
-//
-//    }
-//
-//    ExpandableListView.OnGroupClickListener m_OnGroupClicklistener = new ExpandableListView.OnGroupClickListener() {
-//        @Override
-//        public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-//            return false;
-//        }
-//    };
-//
-//    ExpandableListView.OnChildClickListener m_OnChildClickListener = new ExpandableListView.OnChildClickListener() {
-//
-//        @Override
-//        public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-//
-//            Intent intent = new Intent();
-//
-////            String iata , localization_name ;
-////
-////            List<CIFlightStationEntity> datas;
-////            ArrayList<GroupItem>        items;
-////            int                         index;
-////            //透過不同的mode抓不同的child data
-////            if (lastMode == RECENT || lastMode == NORMAL) {
-////                datas   = allDeparture;
-////                items   = m_Items;
-////            } else if (lastMode == SEARCH) {
-////                datas   = searchDeparture;
-////                items   = m_ItemSearch;
-////            } else if (lastMode == NEAREST_OFFICE) {
-////                datas   = nearDepartue;
-////                items   = m_ItemsForNearestOffice;
-////            }else {
-////                datas   = allDeparture;
-////                items   = m_Items;
-////            }
-////            index               = items.get(groupPosition).childItems.get(childPosition).index;
-////            iata                = datas.get(index).IATA;
-////            localization_name   = datas.get(index).localization_name;
-////
-////            addRecentAndCheck(iata);
-////
-////            //送出機場區名稱
-////            intent.putExtra(LOCALIZATION_NAME, localization_name);
-////
-////            //送出機場代號
-////            intent.putExtra(IAIT, iata);
-////
-////            //排序
-////            recentSequence();
-//
-//            setResult(RESULT_OK, intent);
-//            finish();
-//            overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
-//
-//            return true;
-//        }
-//    };
-//
-//    private void DataAnalysisForCity(ArrayList<GroupItem>, List<CIApisQryRespEntity.CIApispaxInfo>, List<CIApisDocmuntTypeEntity>) {
-//
-//    }
-//
+
+    //CIAPISPresenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+
+    private void DataAnalysisDocs( List<CIApisQryRespEntity.ApisRespDocObj> saved_list, List<CIApisDocmuntTypeEntity> all_list) {
+        if (saved_list != null) {
+            if (saved_list.size() > 0) {
+                GroupItem saveGroup = new GroupItem();
+                saveGroup.apis_group_name = m_Context.getString(R.string.check_in_input_apis_select_saved);
+                saveGroup.childItems = new ArrayList<>();
+
+                for (CIApisQryRespEntity.ApisRespDocObj tmp1 : SavedDocs) {
+                    saveGroup.childItems.add(tmp1);
+                }
+                m_Items.add(saveGroup);
+            }
+        }
+
+        if (all_list != null) {
+            if (all_list.size() > 0) {
+                GroupItem allGroup = new GroupItem();
+                allGroup.apis_group_name = m_Context.getString(R.string.check_in_input_apis_input_others);
+                allGroup.childItems = new ArrayList<>();
+
+                Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
+                for( CIApisDocmuntTypeEntity data : all_list ) {
+                    m_arString.add(data.getName(locale));
+                }
+                m_Items.add(allGroup);
+            }
+        }
+    }
+
 //    private void addChildItem(int groupIndex, int childIndex, ArrayList<GroupItem> items) {
 //
 //        CISelectDepartureAirpotActivity CISelectDepartureAirpotActivity = new CISelectDepartureAirpotActivity();
@@ -295,7 +292,116 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity
 //        item.country = data.country;
 //        items.add(item);
 //    }
+
+    public void onBackPressed() {
+        HidekeyBoard();
+
+        this.finish();
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void setTextSizeAndLayoutParams(ViewScaleDef vScaleDef) {
+        vScaleDef.selfAdjustAllView(findViewById(R.id.root));
+    }
+
+    @Override
+    protected void setOnParameterAndListener() {
+        m_Navigationbar.uiSetParameterListener(m_onNavigationParameter, m_onNavigationbarListener);
+        //m_etSearch.addTextChangedListener(this);
+        m_expandableListView.setOnGroupClickListener(m_OnGroupClicklistener);
+        m_expandableListView.setOnChildClickListener(m_OnChildClickListener);
+    }
+
+    @Override
+    protected void registerFragment(FragmentManager fragmentManager) {
+
+    }
+
+    @Override
+    protected boolean bOtherHandleMessage(Message msg) {
+        return false;
+    }
+
+    @Override
+    protected void removeOtherHandleMessage() {
+
+    }
+
+    @Override
+    protected void onLanguageChangeUpdateUI() {
+
+    }
+
+    ExpandableListView.OnGroupClickListener m_OnGroupClicklistener = new ExpandableListView.OnGroupClickListener() {
+        @Override
+        public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+            return false;
+        }
+    };
+
+    ExpandableListView.OnChildClickListener m_OnChildClickListener = new ExpandableListView.OnChildClickListener() {
+
+        @Override
+        public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+
+            Intent intent = new Intent();
+
+//            String iata , localization_name ;
 //
+//            List<CIFlightStationEntity> datas;
+//            ArrayList<GroupItem>        items;
+//            int                         index;
+//            //透過不同的mode抓不同的child data
+//            if (lastMode == RECENT || lastMode == NORMAL) {
+//                datas   = allDeparture;
+//                items   = m_Items;
+//            } else if (lastMode == SEARCH) {
+//                datas   = searchDeparture;
+//                items   = m_ItemSearch;
+//            } else if (lastMode == NEAREST_OFFICE) {
+//                datas   = nearDepartue;
+//                items   = m_ItemsForNearestOffice;
+//            }else {
+//                datas   = allDeparture;
+//                items   = m_Items;
+//            }
+//            index               = items.get(groupPosition).childItems.get(childPosition).index;
+//            iata                = datas.get(index).IATA;
+//            localization_name   = datas.get(index).localization_name;
+//
+//            addRecentAndCheck(iata);
+//
+//            //送出機場區名稱
+//            intent.putExtra(LOCALIZATION_NAME, localization_name);
+//
+//            //送出機場代號
+//            intent.putExtra(IAIT, iata);
+//
+//            //排序
+//            recentSequence();
+
+            setResult(RESULT_OK, intent);
+            finish();
+            overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
+
+            return true;
+        }
+    };
+
+
+
 //    private void initExpandableListView(final ArrayList<GroupItem> items,
 //                                        final List<CIFlightStationEntity> datas,
 //                                        final CISelectDepartureListAdpater.EMode mode) {
@@ -374,7 +480,7 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity
 //        }
 //
 //    }
-//
+
 //    @Override
 //    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 //
