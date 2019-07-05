@@ -1160,8 +1160,11 @@ public class CIPersonalFragment extends BaseFragment implements
         CILoginInfo ciLoginInfo = CIApplication.getLoginInfo();
 
         StringBuffer sb = new StringBuffer();
-        sb.append(String.format("%24s", ciLoginInfo.GetUserFirstName()));
-        sb.append(String.format("%24s", ciLoginInfo.GetUserLastName()));
+        int total_len = 24;
+        int firstname_len = ciLoginInfo.GetUserFirstName().length();
+        int lastname_len = ciLoginInfo.GetUserLastName().length();
+        sb.append(ciLoginInfo.GetUserFirstName() + String.format("%"+(total_len -firstname_len)+"s", " "));
+        sb.append(ciLoginInfo.GetUserLastName() + String.format("%"+(total_len -lastname_len)+"s", " "));
         sb.append(String.format("%4s", ciLoginInfo.GetCardType()));
         sb.append(String.format("%9s", ciLoginInfo.GetUserMemberCardNo()));
 
