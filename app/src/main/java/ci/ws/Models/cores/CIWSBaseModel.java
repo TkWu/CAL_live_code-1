@@ -61,7 +61,7 @@ public abstract class CIWSBaseModel {
                 result.strData = Jsobj.getString("rt_data");
             }
 
-           SLog.d("[CAL]","[WS Log][ResultCodeCheck]: "+strBody);
+           //SLog.d("[CAL]","[WS Log][ResultCodeCheck]: "+strBody);
         } catch (JSONException e) {
             e.printStackTrace();
         }

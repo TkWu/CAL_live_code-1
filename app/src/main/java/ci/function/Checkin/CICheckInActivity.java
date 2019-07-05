@@ -26,6 +26,7 @@ import ci.function.Core.CIApplication;
 import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.define.UiMessageDef;
+import ci.ui.define.ViewIdDef;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.object.CIPNRStatusManager;
 import ci.ui.view.NavigationBar;
@@ -441,7 +442,7 @@ public class CICheckInActivity extends BaseActivity {
     public void onNextStep( FragmentManager fragmentManager, int iStep ){
 
         //FlipAnimation flipAnimation = null;
-
+        SLog.d("onNextStep(FragmentManager) + iStep: "+iStep);
         boolean bFirst = true;
 
         Fragment    fragment = null;
@@ -484,7 +485,7 @@ public class CICheckInActivity extends BaseActivity {
                 break;
             case STEP_PROHIBIT_PRODUCT :
                 {
-                    SLog.d("onNextStep(FragmentManager) + m_iCurrStep: "+m_iCurrStep);
+
                     m_tvTitle.setText(R.string.check_in_dabgerous_goods_info);
                     //
                     m_ProhibitProductClaimFragment = new CIProhibitProductClaimFragment();
@@ -583,7 +584,7 @@ public class CICheckInActivity extends BaseActivity {
 //    }
 
     private void onNextStep() {
-
+        SLog.d("onNextStep() + m_iCurrStep: "+m_iCurrStep);
         if (STEP_SELECT_FLIGHT == m_iCurrStep) {
 
             //紀錄選擇的航班
@@ -612,8 +613,13 @@ public class CICheckInActivity extends BaseActivity {
 
         }
         else if( STEP_PROHIBIT_PRODUCT == m_iCurrStep ) {
-            SLog.d("onNextStep() + m_iCurrStep: "+m_iCurrStep);
-            apis_presenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+            if ( true == CIApplication.getLoginInfo().GetLoginStatus()) {
+                apis_presenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
+            }else{
+                saved_apis_resonse = null;
+                m_iCurrStep = m_vStepHorizontalView.setNextSteps();
+                onNextStep(getSupportFragmentManager(), m_iCurrStep);
+            }
 
         }
         else if( STEP_INPUT_APIS == m_iCurrStep ) {
@@ -732,6 +738,7 @@ public class CICheckInActivity extends BaseActivity {
                     if( isFillCompleteAndCorrect() ) {
 //                        m_iCurrStep = m_vStepHorizontalView.setNextSteps();
 //                        onNextStep(getSupportFragmentManager(), m_iCurrStep);
+                        SLog.d("onClick");
                         onNextStep();
                     } else {
                         showDialog(getString(R.string.warning), m_strErrorMsg);
@@ -1312,7 +1319,7 @@ public class CICheckInActivity extends BaseActivity {
 //            showDialog(getString(R.string.warning),
 //                    rt_msg,
 //                    getString(R.string.confirm));
-
+            saved_apis_resonse = null;
             m_iCurrStep = m_vStepHorizontalView.setNextSteps();
             onNextStep(getSupportFragmentManager(), m_iCurrStep);
         }
