@@ -22,9 +22,17 @@ public class CIApisQryRespEntity {
         paxInfo = new ArrayList<CIApispaxInfo>();
     }
 
-    public void addInfosObj(CIApispaxInfo _input){
+//    public void addInfosObjArray(CIApispaxInfo _input){
+//        if (this.paxInfo != null){
+//            paxInfo.add(_input);
+//        }
+//    }
+
+    public ArrayList<CIApispaxInfo> getInfosObjArray(){
         if (this.paxInfo != null){
-            paxInfo.add(_input);
+            return this.paxInfo;
+        }else{
+            return null;
         }
     }
 
@@ -44,6 +52,11 @@ public class CIApisQryRespEntity {
          */
         @Expose
         public String documentType = "";
+        /**
+         * 文件動作：I/U/D
+         */
+        @Expose
+        public String mode = "";
         /**
          * 文件自訂名稱
          */

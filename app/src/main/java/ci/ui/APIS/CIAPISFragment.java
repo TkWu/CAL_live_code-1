@@ -135,6 +135,8 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
     private CIApisDocmuntTypeEntity m_docPassportEntity = null;
 
+    ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_savedDocs;
+
     /** 確認有無從WS拿到合法的APIS*/
     private boolean         m_bGetApisFromWs      = false;
     private boolean         m_bSetApisInfoFromWS  = false;
@@ -202,6 +204,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
         ApisInputData inputData = m_arApis.get(0);
 
+
         for (CIApisQryRespEntity.ApisRespDocObj tmp : SavedAPIS) {
             if (tmp.documentType.equals("N")) {
                 inputData.birthday = tmp.basicDocuments.birthday;
@@ -232,10 +235,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                 }
             }
         }
-        GsonTool gt= new GsonTool();
-
-        SLog.d(gt.toJson(SavedAPIS)+ " "+SavedAPIS.size());
-        //m_arApis
 
     }
     private void addApis(CICheckInApisEntity Apis, CICheckInDocaEntity Doca ) {
@@ -332,6 +331,10 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             Apis = (CICheckInApisEntity)bundle.getSerializable(BUNDLE_PARA_APIS);
             Doca = (CICheckInDocaEntity)bundle.getSerializable(BUNDLE_PARA_DOCA);
             SavedAPIS = (ArrayList<CIApisQryRespEntity.ApisRespDocObj>)bundle.getSerializable(BUNDLE_SAVED_APIS);
+            if (SavedAPIS != null){
+                m_savedDocs = (ArrayList<CIApisQryRespEntity.ApisRespDocObj>)SavedAPIS.clone();
+
+            }
             m_arItinerary_InfoList = (ArrayList<CICheckInPax_ItineraryInfoEntity>)bundle.getSerializable(BUNDLE_PARA_ITINERARY_INFO);
 
         }
@@ -448,7 +451,10 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     }
 
     @Override
-    protected void setOnParameterAndListener(View view) {}
+    protected void setOnParameterAndListener(View view) {
+
+        ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).setOnCIAPISDocChoosedFragmentClick(onAPISDocChoosedFragmentClickListener);
+    }
 
     @Override
     protected void registerFragment(FragmentManager fragmentManager) {
@@ -1445,6 +1451,8 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         basicdocTypeList.add(new CIApisDocmuntTypeEntity("N", ""));
         ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).setDocmuntTypeSelectList(basicdocTypeList);
 
+
+
         switch (m_enRouteType) {
 
             case arrivalCHN: {
@@ -1873,9 +1881,15 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             }
         }
 
+//        HashSet<CIApisQryRespEntity.ApisRespDocObj> saVedDocs = new HashSet<>();
+//
+//        if (m_savedDocs != null) {
+//            for (CIApisQryRespEntity.ApisRespDocObj tmp : m_savedDocs) {
+//                saVedDocs.add(tmp);
+//            }
+//        }
+        ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setSavedDocmuntSelectList(m_savedDocs);
 
-        HashSet<CIApisQryRespEntity.ApisRespDocObj> saVedDocs = new HashSet<>();
-        saVedDocs.add(new CIApisDocmuntTypeEntity("N", ""));
     }
 
     private void setDocumentInfo( String strDocType, String strIssueCountry, boolean bIsLock ){
@@ -2088,4 +2102,13 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         }
 
     }
+
+    CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick onAPISDocChoosedFragmentClickListener = new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
+        @Override
+        public boolean trytrysee() {
+            SLog.d("1");
+            return true;
+        }
+
+    };
 }

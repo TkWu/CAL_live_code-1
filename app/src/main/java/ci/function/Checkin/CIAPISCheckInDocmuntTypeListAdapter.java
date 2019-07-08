@@ -13,6 +13,7 @@ import com.chinaairlines.mobile30.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import ci.function.Core.SLog;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.dialog.CIAlertDialog;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
@@ -23,10 +24,11 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
     private int               m_item_resource   = 0;
 
     public static class GroupHolder {
-        TextView bigCategory;        //大分類
-        RelativeLayout rlBigCategory;      //大分類layout
+        TextView        bigCategory,        //大分類
+                        countyCateGory;     //國家分類
+        RelativeLayout  rlcountyCategory,   //國家分類layout
+                        rlBigCategory;      //大分類layout
     }
-
 
     public class ChildHolder {
         TextView tvDoctypes;   //APIS 類型
@@ -45,7 +47,6 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
     {
         this.m_context = context;
         this.m_items = items;
-        //this.m_datas = datas;
         this.m_item_resource = itemResource;
         m_vScaleDef = ViewScaleDef.getInstance(context);
     }
@@ -85,7 +86,7 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
         } else if (null == m_items.get(groupPosition)) {
             return 0;
         } else {
-            return m_items.get(groupPosition).childItems.size();
+            return m_items.get(groupPosition).docsObject.size();
         }
     }
 
@@ -96,7 +97,7 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return m_items.get(groupPosition).childItems.get(childPosition);
+        return m_items.get(groupPosition).docsObject.get(childPosition);
     }
 
     @Override
@@ -122,14 +123,17 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
         groupHolder = new GroupHolder();
         convertView = LayoutInflater.from(m_context).inflate(R.layout.layout_global_service_group_item, null);
         groupHolder.bigCategory     = (TextView)convertView.findViewById(R.id.tv_big_category);
-
+        groupHolder.countyCateGory  = (TextView)convertView.findViewById(R.id.tv_county_category);
+        groupHolder.rlcountyCategory = (RelativeLayout)convertView.findViewById(R.id.rl_county_category);
         groupHolder.rlBigCategory = (RelativeLayout)convertView.findViewById(R.id.rl_big_category);
         //自適應
         m_vScaleDef.selfAdjustAllView(groupHolder.rlBigCategory);
 
-        groupHolder.bigCategory.setText(R.string.select_airport_section_all_airports);
+        groupHolder.bigCategory.setText(m_items.get(groupPosition).apis_group_name);
+
         groupHolder.bigCategory.setVisibility(View.VISIBLE);
         groupHolder.rlBigCategory.setVisibility(ViewGroup.VISIBLE);
+        groupHolder.rlcountyCategory.setVisibility(ViewGroup.GONE);
 
         return convertView;
     }
@@ -137,19 +141,33 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
     @Override
     public View getChildView(final int groupPosition,final int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
 
-        CIAPISCheckInDocmuntTypeListAdapter.ChildHolder childHolder = null;
+        CIAPISCheckInDocmuntTypeListAdapter.ChildHolder childHolder;
 
-        childHolder = new CIAPISCheckInDocmuntTypeListAdapter.ChildHolder();
+        if (convertView == null) {
+            childHolder = new CIAPISCheckInDocmuntTypeListAdapter.ChildHolder();
+            if (m_items.get(groupPosition).apis_group_type.equals(CIAPISCheckInDocmuntTypeSelectMenuActivity.CICheckInAPISGroupType.ALL.name())) {
+                convertView = LayoutInflater.from(m_context).inflate(R.layout.list_item_textfeild_fullpage_menu, parent, false);
+                childHolder.tvDoctypes = (TextView) convertView.findViewById(R.id.tvContent);
+                //自適應
+                m_vScaleDef.selfAdjustAllView(childHolder.tvDoctypes);
+                childHolder.tvDoctypes.setText(m_items.get(groupPosition).docsObject.get(childPosition).documentName);
 
-        convertView = LayoutInflater.from(m_context).inflate(R.layout.layout_select_departure_airport_item, null);
+            }else{
+                convertView = LayoutInflater.from(m_context).inflate(R.layout.list_item_textfeild_fullpage_menu, parent, false);
+                childHolder.tvDoctypes = (TextView) convertView.findViewById(R.id.tvContent);
+                //自適應
+                m_vScaleDef.selfAdjustAllView(childHolder.tvDoctypes);
+                childHolder.tvDoctypes.setText(m_items.get(groupPosition).docsObject.get(childPosition).documentName);
+            }
 
-        childHolder.tvDoctypes = (TextView) convertView.findViewById(R.id.tv_city_name);
+        } else {
+            childHolder = (CIAPISCheckInDocmuntTypeListAdapter.ChildHolder) convertView.getTag();
+        }
 
-        //自適應
-        m_vScaleDef.setPadding(convertView, 0, 0, 0, 14.3);
-        m_vScaleDef.selfAdjustAllView(childHolder.tvDoctypes);
 
         //childHolder.tvDoctypes.setText(m_datas.get(m_items.get(groupPosition).childItems.get(childPosition).index).code_1A);
+
+        SLog.d(m_items.get(groupPosition).docsObject.get(childPosition).documentName);
 
         return convertView;
     }

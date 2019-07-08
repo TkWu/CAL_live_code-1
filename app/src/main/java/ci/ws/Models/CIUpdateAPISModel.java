@@ -6,6 +6,7 @@ import org.json.JSONObject;
 import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
 import ci.ws.Models.entities.CIApisAddEntity;
+import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIWSResult;
 import ci.ws.cores.object.GsonTool;
 import ci.ws.define.WSConfig;
@@ -85,13 +86,17 @@ public class CIUpdateAPISModel extends CIWSBaseModel {
     public void UpdateApisFromWS(String strCardNo, CIApisAddEntity apisEntity) {
         try {
             m_jsBody = new JSONObject(GsonTool.toJson(apisEntity));
-
+            for (CIApisQryRespEntity.CIApispaxInfo tmpPaxInfo : apisEntity.apisInfo.getInfosObjArray()){
+                for(CIApisQryRespEntity.ApisRespDocObj tmpApisRespDoc : tmpPaxInfo.documentInfos) {
+                    tmpApisRespDoc.mode = "U";
+                }
+            }
             //補上固定參數
             //m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
             //m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
             //m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
             //m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
-            m_jsBody.put( eParaTag.mode.getString(),     "U");
+            //m_jsBody.put( eParaTag.mode.getString(),     "U");
             m_jsBody.put( eParaTag.language.getString(), CIApplication.getLanguageInfo().getWSLanguage());
             m_jsBody.put( eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
 

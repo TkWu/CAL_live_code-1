@@ -20,8 +20,8 @@
             android:id="@+id/view_line"
             android:layout_width="match_parent"
             android:background="@color/white_30"
-            android:layout_height="0.7px"
-            android:layout_below="@+id/rl"/>
+            android:layout_height="0.7dp"
+            android:layout_below="@+id/toolbar"/>
 
         <ExpandableListView
             android:id="@+id/expandableListView"

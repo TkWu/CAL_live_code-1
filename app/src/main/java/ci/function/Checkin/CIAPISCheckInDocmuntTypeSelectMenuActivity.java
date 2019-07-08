@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
+import android.widget.Switch;
 
 import com.chinaairlines.mobile30.R;
 
@@ -57,16 +58,16 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
     public static final String                  VALUE               = "VALUE";
     public static final String                  DOCUMUNT_TYPE       = "DOCUMUNT_TYPE";
 
+    public enum CICheckInAPISGroupType {
+        ALL, SAVED
+    }
+
     private HashSet<CIApisDocmuntTypeEntity> m_SelectList = null;
-    private HashSet<CIApisQryRespEntity.ApisRespDocObj> m_SelectSavedList = null;
 
     public class GroupItem {
         public String  apis_group_name;
-        public ArrayList<Object> childItems;
-    }
-
-    public class ChildItem {
-        public Object childObj;
+        public String  apis_group_type;
+        public ArrayList<CIApisQryRespEntity.ApisRespDocObj> docsObject;
     }
 
     private CIAPISPresenter apis_presenter = null;
@@ -85,7 +86,8 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
             m_apisType = (CIApisDocmuntTextFieldFragment.EType)bundle.getSerializable(CIApisDocmuntTextFieldFragment.APIS_TYPE);
 
             m_SelectList = (HashSet<CIApisDocmuntTypeEntity>)bundle.getSerializable(BUNDLE_ACTIVITY_DATA_SELECT_LIST);
-            m_SelectSavedList = (HashSet<CIApisQryRespEntity.ApisRespDocObj>)bundle.getSerializable(BUNDLE_ACTIVITY_DATA_SAVED_LIST);
+
+            SavedDocs = (ArrayList<CIApisQryRespEntity.ApisRespDocObj>)bundle.getSerializable(BUNDLE_ACTIVITY_DATA_SAVED_LIST);
 
         }
         super.onCreate(savedInstanceState);
@@ -176,22 +178,24 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
                 }
             }
         }
-        if ( null != m_SelectList ){
+        if ( null != SavedDocs ){
             for( Iterator<CIApisQryRespEntity.ApisRespDocObj> iterator = SavedDocs.iterator(); iterator.hasNext(); ) {
 
                 CIApisQryRespEntity.ApisRespDocObj data = iterator.next();
                 boolean bContains = false;
                 for ( CIApisDocmuntTypeEntity enity : m_SelectList ){
                     if( TextUtils.equals(enity.code_1A, data.documentType) ) {
+                        bContains = true;
+                        break;
                         //沒帶國籍，則不過濾國籍
-                        if ( TextUtils.isEmpty(enity.issued_country) ){
-                            bContains = true;
-                            break;
-                        } else if ( TextUtils.equals(enity.issued_country, data.documentType) ){
-                            //有帶國籍參數，才過濾國籍
-                            bContains = true;
-                            break;
-                        }
+//                        if ( TextUtils.isEmpty(enity.issued_country) ){
+//                            bContains = true;
+//                            break;
+//                        } else if ( TextUtils.equals(enity.issued_country, data.documentType) ){
+//                            //有帶國籍參數，才過濾國籍
+//                            bContains = true;
+//                            break;
+//                        }
                     }
                 }
                 if ( !bContains ){
@@ -199,12 +203,6 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
                 }
             }
         }
-
-        Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
-        for( CIApisDocmuntTypeEntity data : AllDocs ) {
-            m_arString.add(data.getName(locale));
-        }
-
         m_Items = new ArrayList<>();
 
         m_Items.clear();
@@ -215,83 +213,61 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
                 m_Items,
                 R.layout.activity_select_checkin_apis);
         m_expandableListView.setAdapter(m_Adpater);
-
+        int iSize = m_Adpater.getGroupCount();
+        for ( int iIdx = 0; iIdx < iSize; iIdx++ ){
+            m_expandableListView.expandGroup(iIdx);
+        }
     }
 
-//    private void showApis(final Boolean isRecent) {
-//
-//        if(null == allDocs){
-//            return;
-//        }
-//
-//        runOnUiThread(new Runnable() {
-//            public void run() {
-//            //判斷是否有 SAVED DOCS
-//            if (haveSavedApis) {
-//                DataAnalysisForCity(m_Items, allDocs, savedDocs);
-//                initExpandableListView(m_Items, allDocs, savedDocs);
-//            } else {
-//                initExpandableListView(m_Items, allDocs, null);
-//            }
-//
-//            }
-//        });
-//    }
-
-    //CIAPISPresenter.getInstance().InquiryMyApisListNewFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_InquiryApisListListener);
 
     private void DataAnalysisDocs( List<CIApisQryRespEntity.ApisRespDocObj> saved_list, List<CIApisDocmuntTypeEntity> all_list) {
         if (saved_list != null) {
             if (saved_list.size() > 0) {
-                GroupItem saveGroup = new GroupItem();
-                saveGroup.apis_group_name = m_Context.getString(R.string.check_in_input_apis_select_saved);
-                saveGroup.childItems = new ArrayList<>();
+                GroupItem m_groupItem = new GroupItem();
+                m_groupItem.apis_group_name = m_Context.getString(R.string.check_in_input_apis_select_saved);
+                m_groupItem.apis_group_type = CICheckInAPISGroupType.SAVED.name();
+                m_groupItem.docsObject = new ArrayList<>();
 
                 for (CIApisQryRespEntity.ApisRespDocObj tmp1 : SavedDocs) {
-                    saveGroup.childItems.add(tmp1);
+                    m_groupItem.docsObject.add(tmp1);
                 }
-                m_Items.add(saveGroup);
+                m_Items.add(m_groupItem);
             }
         }
 
         if (all_list != null) {
             if (all_list.size() > 0) {
-                GroupItem allGroup = new GroupItem();
-                allGroup.apis_group_name = m_Context.getString(R.string.check_in_input_apis_input_others);
-                allGroup.childItems = new ArrayList<>();
+                GroupItem m_groupItem = new GroupItem();
+                m_groupItem.apis_group_name = m_Context.getString(R.string.check_in_input_apis_input_others);
+                m_groupItem.apis_group_type = CICheckInAPISGroupType.ALL.name();
+                m_groupItem.docsObject = new ArrayList<>();
 
                 Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
-                for( CIApisDocmuntTypeEntity data : all_list ) {
-                    m_arString.add(data.getName(locale));
+                CIApisQryRespEntity QRTmp = new CIApisQryRespEntity();
+                CIApisQryRespEntity.CIApispaxInfo QRTmpPaxInfo = QRTmp.new CIApispaxInfo();
+
+                for (CIApisDocmuntTypeEntity tmp1 : AllDocs) {
+                    CIApisQryRespEntity.ApisRespDocObj objectTmp = QRTmp.new ApisRespDocObj();
+                    objectTmp.documentType = tmp1.code_1A;
+                    objectTmp.documentName = tmp1.getName(locale);
+                    objectTmp.deviceId = CIApplication.getDeviceInfo().getAndroidId();
+                    switch (tmp1.code_1A) {
+                        case "A":
+                            objectTmp.docas = QRTmpPaxInfo.new Docas();
+                            break;
+                        case "N":
+                            objectTmp.basicDocuments = QRTmpPaxInfo.new BasicDocuments();
+                            break;
+                        default:
+                            objectTmp.otherDocuments = QRTmpPaxInfo.new OtherDocuments();
+                            break;
+                    }
+                    m_groupItem.docsObject.add(objectTmp);
                 }
-                m_Items.add(allGroup);
+                m_Items.add(m_groupItem);
             }
         }
     }
-
-//    private void addChildItem(int groupIndex, int childIndex, ArrayList<GroupItem> items) {
-//
-//        CISelectDepartureAirpotActivity CISelectDepartureAirpotActivity = new CISelectDepartureAirpotActivity();
-//
-//        ChildItem childItem = CISelectDepartureAirpotActivity.new ChildItem();
-//
-//        //利用index判斷是資料的哪一筆
-//        childItem.index = childIndex;
-//
-//        if (null == items.get(groupIndex).childItems) {
-//            items.get(groupIndex).childItems = new ArrayList();
-//        }
-//        items.get(groupIndex).childItems.add(childItem);
-//    }
-//
-//    private void addGroupItem(CIFlightStationEntity data, ArrayList<GroupItem> items) {
-//        CISelectDepartureAirpotActivity CISelectDepartureAirpotActivity = new CISelectDepartureAirpotActivity();
-//        GroupItem item = CISelectDepartureAirpotActivity.new GroupItem();
-//
-//        //把新增的Group設定country
-//        item.country = data.country;
-//        items.add(item);
-//    }
 
     public void onBackPressed() {
         HidekeyBoard();
@@ -320,7 +296,7 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
     protected void setOnParameterAndListener() {
         m_Navigationbar.uiSetParameterListener(m_onNavigationParameter, m_onNavigationbarListener);
         //m_etSearch.addTextChangedListener(this);
-        m_expandableListView.setOnGroupClickListener(m_OnGroupClicklistener);
+        m_expandableListView.setOnGroupClickListener(m_OnGroupClickListener);
         m_expandableListView.setOnChildClickListener(m_OnChildClickListener);
     }
 
@@ -344,10 +320,10 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
 
     }
 
-    ExpandableListView.OnGroupClickListener m_OnGroupClicklistener = new ExpandableListView.OnGroupClickListener() {
+    ExpandableListView.OnGroupClickListener m_OnGroupClickListener = new ExpandableListView.OnGroupClickListener() {
         @Override
         public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-            return false;
+            return true;
         }
     };
 
@@ -357,6 +333,8 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
         public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
             Intent intent = new Intent();
+
+//            CIApisQryRespEntity.ApisRespDocObj
 
 //            String iata , localization_name ;
 //
@@ -399,147 +377,4 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
             return true;
         }
     };
-
-
-
-//    private void initExpandableListView(final ArrayList<GroupItem> items,
-//                                        final List<CIFlightStationEntity> datas,
-//                                        final CISelectDepartureListAdpater.EMode mode) {
-//        /**ExpandableListView*/
-//
-//
-//        if(mode == NEAREST_OFFICE && SEARCH != lastMode){
-//            if(null == m_Adpater){
-//                return;
-//            }
-//            ArrayList<Integer> arInt = new ArrayList<>();
-//            /*
-//             * 如果是第一次取得最近機場，則記錄已經打開的群組並加一，因為資料更新而新增了最近機場會增加一個群組
-//             * ，導致notifyDataSetChanged()後，原本List所記錄的開啟的群組位置會因為新增群組而展開了錯誤的群組
-//             * ，所以必需判斷是否有展開的群組並加一，先收合，並利用記錄並調整過的展開群組位置，重新展開，才不會
-//             * 展開錯誤的群組，而且也只有進入頁面後，第一次取得最近機場時才需要做這個動作。
-//             */
-//            if(true == isFirstLBS){
-//
-//                int itemSize = m_Adpater.getItem().size();
-//                for(int loop = 0 ; loop < itemSize ; loop++){
-//                    if(true == m_expandableListView.isGroupExpanded(loop)){
-//                        arInt.add(loop + 1);
-//                        m_expandableListView.collapseGroup(loop);
-//                    }
-//                }
-//            }
-//            m_Adpater.setItem(items);
-//            m_Adpater.setDatas(datas);
-//            m_Adpater.setMode(mode);
-//            m_Adpater.notifyDataSetChanged();
-//            /*第一次取得最近機場資料時，重新使用調整過的展開群組位置去展開*/
-//            if(true == isFirstLBS){
-//                for(Integer loop:arInt){
-//                    m_expandableListView.expandGroup(loop);
-//                }
-//            }
-//            isFirstLBS = false;
-//        } else {
-//            m_Adpater = new CISelectDepartureListAdpater(CISelectDepartureAirpotActivity.this, items, datas, mode);
-//            m_expandableListView.setAdapter(m_Adpater);
-//        }
-//
-//        /*此行須在需要放在判斷上次模式的位置之後*/
-//        lastMode = mode;
-//
-//        //初始化開始收和群組的地方
-//        m_iStartCollapseIndex = 0;
-//
-//        //依據目前顯示清單的模式，決定開始收合群組的位置
-//        if (mode == RECENT) {
-//            m_iStartCollapseIndex = 1;
-//            if (true == getIsHaveNearestOffice()) {
-//                m_iStartCollapseIndex = 2;
-//            }
-//        } else if (mode == NORMAL) {
-//            m_iStartCollapseIndex = 0;
-//            if (true == getIsHaveNearestOffice()) {
-//                m_iStartCollapseIndex = 1;
-//            }
-//        } else if (mode == NEAREST_OFFICE) {
-//            m_iStartCollapseIndex = 1;
-//            if(true == isRecent){
-//                m_iStartCollapseIndex = 2;
-//            }
-//        } else if (mode == SEARCH) {
-//            m_iStartCollapseIndex = items.size();
-//        }
-//
-//        if(0 >= items.size()){
-//            return;
-//        }
-//
-//        for (int loop = 0; loop < m_iStartCollapseIndex; loop++) {
-//            m_expandableListView.expandGroup(loop);
-//        }
-//
-//    }
-
-//    @Override
-//    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//    }
-//
-//    @Override
-//    public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//    }
-//
-//    @Override
-//    public void afterTextChanged(Editable s) {
-//        if (s.length() > 0) {
-//
-//            List<CIFlightStationEntity> searchDepartue;
-//            ArrayList<GroupItem> items;
-//
-//            //判斷是否為抵達地
-//            if (getIntent().getExtras().getBoolean(IS_TO_FRAGMENT, false)) {
-//                searchDepartue = ciInquiryFlightStationPresenter.getArrivalSrtationListByDeparture(getIntent().getExtras().get(IAIT).toString(), s.toString());
-//                items = new ArrayList<>();
-//            } else {
-//                searchDepartue = ciInquiryFlightStationPresenter.getDepatureStationListByKeyword(s.toString(), false);
-//                items = new ArrayList<>();
-//            }
-//
-//            //是否找不到資料
-//            if (searchDepartue == null) {
-//
-//                DataAnalysisForCity(new ArrayList<CIFlightStationEntity>(), items);
-//                initExpandableListView(items, searchDepartue, SEARCH);
-//
-//            }else{
-//
-//                DataAnalysisForCity(searchDepartue, items);
-//                initExpandableListView(items, searchDepartue, SEARCH);
-//
-//            }
-//
-//            searchDeparture = searchDepartue;
-//            m_ItemSearch = items;
-//
-//        } else {
-//
-//            if (true == getIsHaveNearestOffice()) {
-//                initExpandableListView(m_ItemsForNearestOffice,
-//                        nearDepartue,
-//                        NEAREST_OFFICE);
-//            } else {
-//
-//                if (isRecent) {
-//                    initExpandableListView(m_Items, allDeparture, RECENT);
-//                } else {
-//                    initExpandableListView(m_Items, allDeparture, NORMAL);
-//                }
-//            }
-//        }
-//
-//    }
-
-
 }
