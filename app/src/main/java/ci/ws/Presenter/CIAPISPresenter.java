@@ -137,7 +137,6 @@ public class CIAPISPresenter {
             m_DeleteApisModel = new CIDeleteAPISModel(m_deleteCallback);
         }
         s_Instance.setCallbackListener(listener);
-
         m_DeleteApisModel.DeleteApisFromWS(strCardNo, ciApisEntity);
         if(null != m_Listener){
             m_Listener.showProgress();

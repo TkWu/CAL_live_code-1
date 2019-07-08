@@ -94,6 +94,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                     CIApisAddEntity ciApisEntity = getApisEntity();
 
                     setMyApisEntity(ciApisEntity);
+                    //ciApisEntity.apisInfo.paxInfo.get(0).m
 
                     CIAPISPresenter.getInstance().DeleteApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
 
@@ -834,6 +835,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         }
 
         m_newApisEntity = (CIApisAddEntity)data.clone();
+        m_newApisEntity.apisInfo.paxInfo.
+
 
 //        m_newApisEntity.card_no =  CIApplication.getLoginInfo().GetUserMemberCardNo();
 //

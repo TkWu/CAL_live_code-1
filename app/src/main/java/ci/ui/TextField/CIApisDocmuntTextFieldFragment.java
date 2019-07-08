@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.chinaairlines.mobile30.R;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import ci.function.Checkin.CIAPISCheckInDocmuntTypeSelectMenuActivity;
@@ -27,11 +28,13 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
     private HashSet<String>     m_filter = null;
     public static final String  APIS_TYPE = "APIS_TYPE";
 
+    private OnCIAPISDocChoosedFragmentClick onCIAPISDocChoosedFragmentClick;
+
     //可選清單，會將總表濾掉，只留下可選擇清單
     private HashSet<CIApisDocmuntTypeEntity> m_SelectList = null;
 
     //新增已存清單
-    private HashSet<CIApisQryRespEntity.ApisRespDocObj> m_SavedList = null;
+    private ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_SavedList = null;
 
     public enum EType{
         Personal, CheckIn
@@ -69,7 +72,7 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
     }
 
     /**已儲存的清單*/
-    public void setSavedDocmuntSelectList(HashSet<CIApisQryRespEntity.ApisRespDocObj> selectHash) {
+    public void setSavedDocmuntSelectList(ArrayList<CIApisQryRespEntity.ApisRespDocObj> selectHash) {
         m_SavedList = selectHash;
     }
 
@@ -130,4 +133,11 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
         this.m_strDocmuntType = strDocmuntType;
     }
 
+    public interface OnCIAPISDocChoosedFragmentClick{
+        boolean trytrysee();
+    }
+
+    public void setOnCIAPISDocChoosedFragmentClick(OnCIAPISDocChoosedFragmentClick onCIChooseAirportTextFragmentClick) {
+        this.onCIAPISDocChoosedFragmentClick = onCIChooseAirportTextFragmentClick;
+    }
 }
