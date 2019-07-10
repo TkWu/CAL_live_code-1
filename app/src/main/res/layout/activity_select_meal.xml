@@ -125,7 +125,8 @@
                     android:text="@string/vegetarian_exclusive_summary"
                     android:textColor="@color/white_four"
                     android:textSize="13px"
-                    style="@style/regular"/>
+                    style="@style/regular"
+                    android:visibility="gone"/>
 
                 <LinearLayout
                     android:id="@+id/llayout_vegetarian_meal_place"
