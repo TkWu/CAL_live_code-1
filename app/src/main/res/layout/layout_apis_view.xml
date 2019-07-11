@@ -45,6 +45,8 @@
         <!--android:layout_marginRight="20px"-->
         <!--android:layout_marginLeft="20px"-->
         <!--android:layout_marginTop="20px"/>-->
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="32px"
@@ -60,13 +62,19 @@
         android:layout_marginTop="9px"
         style="@style/regular" />
 
-    <FrameLayout
-        android:id="@+id/flayout_basicdoctype"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:id="@+id/rlayout_basicdoctype"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="20px"
         android:layout_marginLeft="20px"
-        android:layout_marginTop="26px"/>
+        android:layout_marginTop="26px">
+
+        <FrameLayout
+            android:id="@+id/flayout_basicdoctype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
 
     <ci.ui.view.TwoItemSelectBar
         android:id="@+id/v_gender"

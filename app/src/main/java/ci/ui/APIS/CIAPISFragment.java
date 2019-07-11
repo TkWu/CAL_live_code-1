@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroupOverlay;
 import android.view.inputmethod.EditorInfo;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -79,6 +80,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     private TextView                m_tvName        = null,
                                     m_tvCheck_in_doc_reminder = null;
 
+    private RelativeLayout          m_rlayout_basicdoctype              = null;
     private TwoItemSelectBar        m_vGender   = null;
     private CITextFieldFragment     //m_APISDocumentFragment            = null,
                                     m_BasicDocumentTypefragment         = null,
@@ -127,6 +129,9 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     private boolean         m_bIsMyApis             = false;
     private Date            m_dExpiryDate           = null;
     private String          m_strErrorMsg           = "";
+
+    private boolean         m_boolDeafultN          = false;
+    private String          m_strDefaultNname       = "";
 
     //航班狀態
     private CIAPISDef.CIRouteType m_enRouteType = CIAPISDef.CIRouteType.normal;
@@ -197,42 +202,86 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     }
 
     private void addApis(ArrayList<CIApisQryRespEntity.ApisRespDocObj> SavedAPIS) {
+        if( null == m_arApis ) {
+            m_arApis = new ArrayList<>();
+            ApisInputData inputData = new ApisInputData();
+            m_arApis.add(inputData);
+        }
+
+        if( null == m_ResidentMap ) {
+            m_ResidentMap = CIAPISPresenter.getInstance().fetchApisNationalResidentMap();
+        }
+
+        if( null == m_IssueMap ) {
+            m_IssueMap = CIAPISPresenter.getInstance().fetchApisNationalIssueMap();
+        }
+
         SLog.d("addApis + SaveAPIS");
         if( null == SavedAPIS ) {
             return;
         }
 
         ApisInputData inputData = m_arApis.get(0);
+        boolean first_n = true;
+        boolean first_p = true;
+        boolean first_a = true;
+        /**
+         * 相同類型文件 自動帶入第一筆
+         * 第一文件目前預設為護照
+         * 第二文件照目前邏輯有地址帶地址有其他帶其他
+        **/
+        for (CIApisQryRespEntity.ApisRespDocObj tmpObj : SavedAPIS) {
+            SLog.d("tmp: "+tmpObj.mode+":");
+            if (tmpObj.documentType.equals("N") && first_n) {
+                inputData.birthday = tmpObj.basicDocuments.birthday;
+                inputData.gender = ( tmpObj.basicDocuments.gender.equals(CIApisAddEntity.SEX_FEMALE))? TwoItemSelectBar.ESelectSMode.RIGHT : TwoItemSelectBar.ESelectSMode.LEFT;
 
-
-        for (CIApisQryRespEntity.ApisRespDocObj tmp : SavedAPIS) {
-            if (tmp.documentType.equals("N")) {
-                inputData.birthday = tmp.basicDocuments.birthday;
-                inputData.gender = ( tmp.basicDocuments.gender.equals(CIApisAddEntity.SEX_FEMALE))? TwoItemSelectBar.ESelectSMode.RIGHT : TwoItemSelectBar.ESelectSMode.LEFT;
-
-                CIApisNationalEntity residentEntity = m_ResidentMap.get(tmp.basicDocuments.residence);
+                CIApisNationalEntity residentEntity = m_ResidentMap.get(tmpObj.basicDocuments.residence);
                 if( null != residentEntity) {
-                    inputData.residentCountryCd = tmp.basicDocuments.residence;
+                    inputData.residentCountryCd = tmpObj.basicDocuments.residence;
                     inputData.residentCountryName = residentEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
+                }else{
+                    inputData.residentCountryCd = "";
+                    inputData.residentCountryName = "";
                 }
 
-                CIApisNationalEntity nationalityEntity = m_IssueMap.get(tmp.basicDocuments.nationality);
+                CIApisNationalEntity nationalityEntity = m_IssueMap.get(tmpObj.basicDocuments.nationality);
                 if( null != nationalityEntity ) {
-                    inputData.nationalityCd = tmp.basicDocuments.nationality;
+                    inputData.nationalityCd = tmpObj.basicDocuments.nationality;
                     inputData.nationalityName = nationalityEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
+                }else{
+                    inputData.nationalityCd = "";
+                    inputData.nationalityName = "";
                 }
+                m_boolDeafultN = true;
+                m_strDefaultNname = tmpObj.documentName;
 
+                first_n = false;
             }
 
-            if (tmp.documentType.equals("P")) {
-                inputData.docNo = tmp.otherDocuments.documentNo;
-                inputData.docExpiryDate = tmp.otherDocuments.expireDay;
+            if (tmpObj.documentType.equals("P") && first_p) {
+                inputData.docNo = tmpObj.otherDocuments.documentNo;
+                inputData.docExpiryDate = tmpObj.otherDocuments.expireDay;
 
-                CIApisNationalEntity issueEntity = m_IssueMap.get(tmp.otherDocuments.issueCountry);
+                CIApisNationalEntity issueEntity = m_IssueMap.get(tmpObj.otherDocuments.issueCountry);
                 if( null != issueEntity ) {
-                    inputData.issueCountryCd = tmp.otherDocuments.issueCountry;
+                    inputData.issueCountryCd = tmpObj.otherDocuments.issueCountry;
                     inputData.issueCountryName = issueEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
+                }else{
+                    inputData.issueCountryCd = "";
+                    inputData.issueCountryName = "";
                 }
+                first_p = false;
+            }
+
+            if (tmpObj.documentType.equals("A") && first_a) {
+                CICheckInDocaEntity tmpDoca = new CICheckInDocaEntity();
+                tmpDoca.Country_Sub_Entity = tmpObj.docas.country;
+                tmpDoca.Traveler_City = tmpObj.docas.city;
+                tmpDoca.Traveler_Address = tmpObj.docas.address;
+                tmpDoca.Traveler_Postcode = tmpObj.docas.zipcode;
+                inputData.Doca = tmpDoca;
+                first_a = false;
             }
         }
 
@@ -349,7 +398,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             m_bIsMyApis = false;
         }
 
-        addApis(Apis,Doca);
+        //addApis(Apis,Doca);
         addApis(SavedAPIS);
 
     }
@@ -376,7 +425,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         for( int iPos = 0 ; iPos < m_arApis.size() ; iPos++ ) {
             docTypeList[iPos] = m_arApis.get(iPos).docTypeName;
         }
-
+        m_rlayout_basicdoctype      = (RelativeLayout) view.findViewById(R.id.rlayout_basicdoctype);
         m_BasicDocumentTypefragment = CIApisDocmuntTextFieldFragment.newInstance("*"+getString(R.string.document_type),CIApisDocmuntTextFieldFragment.EType.CheckIn);
 
         m_DateOfBirthdayfragment    = CIDateOfBirthdayTextFieldFragment.newInstance("*"+getString(R.string.inquiry_input_box_date_of_birth_hint));
@@ -423,11 +472,12 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         m_tvCheckText       = (TextView)view.findViewById(R.id.tv_save);
         m_ivCheckBox.setSelected(false);
         //2016-10-03 調整顯示邏輯, 如果該APIS 資料不是自己，則不顯示儲存變更的選項s
-        if ( m_bIsMyApis ){
-            m_rlayout_CheckBox.setVisibility(View.VISIBLE);
-        } else {
-            m_rlayout_CheckBox.setVisibility(View.GONE);
-        }
+        //2019-07-11 調整顯示邏輯, APIS 全部顯示可儲存選項
+//        if ( m_bIsMyApis ){
+//            m_rlayout_CheckBox.setVisibility(View.VISIBLE);
+//        } else {
+//            m_rlayout_CheckBox.setVisibility(View.GONE);
+//        }
 
         m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
         m_tvName.setText(m_strName);
@@ -451,9 +501,81 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     }
 
     @Override
-    protected void setOnParameterAndListener(View view) {
+    protected void setOnParameterAndListener(View view)
+    {
+        ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).setOnCIAPISDocChoosedFragmentClick(
+            new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
+                @Override
+                public boolean setSelectResult() {
+                    SLog.d("APISFRAGMENT setOnParameterAndListener setSelectResult");
+                    return true;
+                }
 
-        ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).setOnCIAPISDocChoosedFragmentClick(onAPISDocChoosedFragmentClickListener);
+                @Override
+                public boolean getSelectResult() {
+                    CIApisQryRespEntity.ApisRespDocObj tmp = ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).getDocmuntTypeObj();
+                    SLog.d(GsonTool.toJson(tmp));
+                    ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
+                    m_ar_tmp.add(tmp);
+                    addApis(m_ar_tmp);
+                    SLog.d(GsonTool.toJson(m_arApis.get(0)));
+                    m_bSetApisInfoFromWS = false;
+                    onResume();
+
+                    return true;
+                }
+            }
+        );
+
+        ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setOnCIAPISDocChoosedFragmentClick(
+                new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
+                    @Override
+                    public boolean setSelectResult() {
+                        SLog.d("APISFRAGMENT setOnParameterAndListener setSelectResult");
+                        return true;
+                    }
+
+                    @Override
+                    public boolean getSelectResult() {
+                        CIApisQryRespEntity.ApisRespDocObj tmp = ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).getDocmuntTypeObj();
+                        SLog.d(GsonTool.toJson(tmp));
+                        ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
+                        m_ar_tmp.add(tmp);
+                        addApis(m_ar_tmp);
+                        SLog.d(GsonTool.toJson(m_arApis.get(0)));
+                        m_bSetApisInfoFromWS = false;
+                        onResume();
+
+                        return true;
+                    }
+                }
+        );
+
+
+
+        ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setOnCIAPISDocChoosedFragmentClick(
+                new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
+                    @Override
+                    public boolean setSelectResult() {
+                        SLog.d("APISFRAGMENT setOnParameterAndListener setSelectResult");
+                        return true;
+                    }
+
+                    @Override
+                    public boolean getSelectResult() {
+                        CIApisQryRespEntity.ApisRespDocObj tmp = ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).getDocmuntTypeObj();
+                        SLog.d(GsonTool.toJson(tmp));
+                        ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
+                        m_ar_tmp.add(tmp);
+                        addApis(m_ar_tmp);
+                        SLog.d(GsonTool.toJson(m_arApis.get(0)));
+                        m_bSetApisInfoFromWS = false;
+                        onResume();
+
+                        return true;
+                    }
+                }
+        );
     }
 
     @Override
@@ -684,6 +806,15 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         } else {
             m_apisSaveData = m_tempApisData;
         }
+
+        if (m_boolDeafultN) {
+            m_rlayout_basicdoctype.setVisibility(View.VISIBLE);
+            m_BasicDocumentTypefragment.setText(m_strDefaultNname);
+        }else{
+            m_rlayout_basicdoctype.setVisibility(View.GONE);
+        }
+
+
 
 
         if(TwoItemSelectBar.ESelectSMode.LEFT == m_apisSaveData.gender ) {
@@ -1147,6 +1278,46 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
         return apisMap;
     }
+
+    //20190711 新增APIS資料存回server
+//    public HashMap<String,Object> getInputAPIS() {
+//        SLog.d("getInputAPIS");
+//        ArrayList<CICheckInApisEntity> ar_apisEntity = getApisEntity();
+//
+//        CICheckInDocaEntity DocaEntity = getSingleDoca();
+//
+//        CICheckInApisEntity apisEntity = ar_apisEntity.get(0);
+//        //若有勾選 儲存/新增選項，則儲存APIS資料至DB
+//        //只存護照
+//        if (m_ivCheckBox.isSelected() && TextUtils.equals("P", apisEntity.Document_No) ) {
+//
+//            CIApisEntity apis = convertApisFormat( ar_apisEntity.get(0), DocaEntity );
+//            if(!m_bIsMyApis) {
+//                saveCompanionsApisFromDB( apis);
+//            } else {
+//                saveMyApis( apis );
+//            }
+//        }
+//
+//        HashMap<String,Object> apisMap = new HashMap<>();
+//
+//        if( null != DocaEntity ) {
+//
+//            apisMap.put( "Doca", DocaEntity );
+//        }
+//
+//        apisMap.put("Apis",ar_apisEntity);
+//
+//        //TODO:待確認邏輯
+//        //若第二證件為台胞證，外層ItineraryInfoEntity的國籍需改為CHN
+//        if( 2 == ar_apisEntity.size() && "CT".equals(ar_apisEntity.get(1).Document_Type) ) {
+//            apisMap.put("Nationality", CIAPISDef.NATIONAL_CHN);
+//        } else {
+//            apisMap.put("Nationality", ar_apisEntity.get(0).Nationality);
+//        }
+//
+//        return apisMap;
+//    }
 
 
     private void saveCompanionsApisFromDB( CIApisEntity apisEntity) {
@@ -2102,13 +2273,4 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         }
 
     }
-
-    CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick onAPISDocChoosedFragmentClickListener = new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
-        @Override
-        public boolean trytrysee() {
-            SLog.d("1");
-            return true;
-        }
-
-    };
 }

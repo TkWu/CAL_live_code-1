@@ -78,12 +78,13 @@ public class CIInsertAPISModel extends CIWSBaseModel{
 
 
         try {
-            m_jsBody = new JSONObject(GsonTool.toJson(apisEntity));
+
             for (CIApisQryRespEntity.CIApispaxInfo tmpPaxInfo : apisEntity.apisInfo.getInfosObjArray()){
                 for(CIApisQryRespEntity.ApisRespDocObj tmpApisRespDoc : tmpPaxInfo.documentInfos) {
                     tmpApisRespDoc.mode = "I";
                 }
             }
+            m_jsBody = new JSONObject(GsonTool.toJson(apisEntity));
             //補上固定參數
             //m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
             //m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);

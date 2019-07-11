@@ -835,8 +835,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         }
 
         m_newApisEntity = (CIApisAddEntity)data.clone();
-        m_newApisEntity.apisInfo.paxInfo.
-
 
 //        m_newApisEntity.card_no =  CIApplication.getLoginInfo().GetUserMemberCardNo();
 //
@@ -930,7 +928,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             PaxInfoObj.lastName = m_LastNamefragment.getText();
 
         }
-        ciApisEntity.apisInfo.addInfosObj(PaxInfoObj);
+        ciApisEntity.apisInfo.addInfosObjArray(PaxInfoObj);
         ciApisEntity.apisInfo.cardNo = CIApplication.getLoginInfo().GetUserMemberCardNo();
 
         String strRequest = GsonTool.toJson(ciApisEntity);

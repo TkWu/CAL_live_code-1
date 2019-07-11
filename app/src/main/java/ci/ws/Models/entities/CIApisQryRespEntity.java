@@ -5,7 +5,7 @@ import com.google.gson.annotations.Expose;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class CIApisQryRespEntity {
+public class CIApisQryRespEntity implements Serializable {
     /**
      * 使用者會員卡號
      */
@@ -22,11 +22,11 @@ public class CIApisQryRespEntity {
         paxInfo = new ArrayList<CIApispaxInfo>();
     }
 
-//    public void addInfosObjArray(CIApispaxInfo _input){
-//        if (this.paxInfo != null){
-//            paxInfo.add(_input);
-//        }
-//    }
+    public void addInfosObjArray(CIApispaxInfo _input){
+        if (this.paxInfo != null){
+            paxInfo.add(_input);
+        }
+    }
 
     public ArrayList<CIApispaxInfo> getInfosObjArray(){
         if (this.paxInfo != null){
@@ -74,7 +74,7 @@ public class CIApisQryRespEntity {
 
     }
 
-    public class CIApispaxInfo {
+    public class CIApispaxInfo implements Serializable {
         public String firstName = "firstName";
         public String lastName = "lastName";
         public ArrayList<ApisRespDocObj> documentInfos;
@@ -179,24 +179,24 @@ public class CIApisQryRespEntity {
 
 
         public class BasicDocuments implements Serializable {
-            public String gender = "gender";
-            public String birthday = "birthday";
-            public String residence = "residence";
-            public String nationality = "nationality";
+            public String gender = "";
+            public String birthday = "";
+            public String residence = "";
+            public String nationality = "";
         }
 
         public class OtherDocuments implements Serializable {
-            public String documentNo = "documentNo";
-            public String expireDay = "expireDay";
-            public String issueCountry = "issueCountry";
+            public String documentNo = "";
+            public String expireDay = "";
+            public String issueCountry = "";
         }
 
         public class Docas implements Serializable {
-            public String country = "country";
-            public String state = "state";
-            public String city = "city";
-            public String address = "address";
-            public String zipcode = "zipcode";
+            public String country = "";
+            public String state = "";
+            public String city = "";
+            public String address = "";
+            public String zipcode = "";
         }
     }
 }

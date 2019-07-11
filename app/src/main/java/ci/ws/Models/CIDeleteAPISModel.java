@@ -71,12 +71,13 @@ public class CIDeleteAPISModel  extends CIWSBaseModel {
     public void DeleteApisFromWS(String strCardNo, CIApisAddEntity apisEntity) {
 
         try {
-            m_jsBody = new JSONObject(GsonTool.toJson(apisEntity));
+
             for (CIApisQryRespEntity.CIApispaxInfo tmpPaxInfo : apisEntity.apisInfo.getInfosObjArray()){
                 for(CIApisQryRespEntity.ApisRespDocObj tmpApisRespDoc : tmpPaxInfo.documentInfos) {
                     tmpApisRespDoc.mode = "D";
                 }
             }
+            m_jsBody = new JSONObject(GsonTool.toJson(apisEntity));
 //            m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
 //            m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
 //            m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
