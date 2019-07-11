@@ -13,8 +13,11 @@ import android.widget.ExpandableListView;
 import android.widget.Switch;
 
 import com.chinaairlines.mobile30.R;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -26,11 +29,12 @@ import ci.ui.TextField.Adapter.CIMenusAdapter;
 import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
+import ci.ui.object.AppInfo;
 import ci.ui.view.NavigationBar;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Presenter.CIAPISPresenter;
-
+import ci.ws.cores.object.GsonTool;
 
 
 public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
@@ -197,6 +201,9 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
 //                            break;
 //                        }
                     }
+                    if (data.otherDocuments != null && checkIfisExpired(data.otherDocuments.expireDay)){
+                        bContains = false;
+                    }
                 }
                 if ( !bContains ){
                     iterator.remove();
@@ -218,6 +225,25 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
             m_expandableListView.expandGroup(iIdx);
         }
     }
+
+
+    /**判斷已存文件有效日期是否已過期*/
+    private boolean checkIfisExpired( String strExpiryDate){
+
+        final String pattern = "yyyy-MM-dd";
+        Date dExpiryDate = AppInfo.getDate(strExpiryDate, pattern);
+
+        Calendar calToday = Calendar.getInstance();
+        Date dToday = calToday.getTime();
+
+        if ( dExpiryDate.getTime() <= dToday.getTime())
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 
 
     private void DataAnalysisDocs( List<CIApisQryRespEntity.ApisRespDocObj> saved_list, List<CIApisDocmuntTypeEntity> all_list) {
@@ -333,43 +359,10 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
         public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
             Intent intent = new Intent();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable(DOCUMUNT_TYPE, m_Items.get(groupPosition).docsObject.get(childPosition));
 
-//            CIApisQryRespEntity.ApisRespDocObj
-
-//            String iata , localization_name ;
-//
-//            List<CIFlightStationEntity> datas;
-//            ArrayList<GroupItem>        items;
-//            int                         index;
-//            //透過不同的mode抓不同的child data
-//            if (lastMode == RECENT || lastMode == NORMAL) {
-//                datas   = allDeparture;
-//                items   = m_Items;
-//            } else if (lastMode == SEARCH) {
-//                datas   = searchDeparture;
-//                items   = m_ItemSearch;
-//            } else if (lastMode == NEAREST_OFFICE) {
-//                datas   = nearDepartue;
-//                items   = m_ItemsForNearestOffice;
-//            }else {
-//                datas   = allDeparture;
-//                items   = m_Items;
-//            }
-//            index               = items.get(groupPosition).childItems.get(childPosition).index;
-//            iata                = datas.get(index).IATA;
-//            localization_name   = datas.get(index).localization_name;
-//
-//            addRecentAndCheck(iata);
-//
-//            //送出機場區名稱
-//            intent.putExtra(LOCALIZATION_NAME, localization_name);
-//
-//            //送出機場代號
-//            intent.putExtra(IAIT, iata);
-//
-//            //排序
-//            recentSequence();
-
+            intent.putExtras(bundle);
             setResult(RESULT_OK, intent);
             finish();
             overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);

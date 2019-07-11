@@ -16,8 +16,8 @@
             android:gravity="center_vertical|left"
             android:paddingLeft="30px"
             android:paddingRight="30px"
-            android:text="Menu Text"
             android:textColor="@color/white_four"
+            android:text="Menu Text"
             android:textSize="16px"
             style="@style/regular"
             />

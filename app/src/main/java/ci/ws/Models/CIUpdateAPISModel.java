@@ -4,6 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import ci.function.Core.CIApplication;
+import ci.function.Core.SLog;
 import ci.ws.Models.cores.CIWSBaseModel;
 import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
@@ -85,12 +86,14 @@ public class CIUpdateAPISModel extends CIWSBaseModel {
 
     public void UpdateApisFromWS(String strCardNo, CIApisAddEntity apisEntity) {
         try {
-            m_jsBody = new JSONObject(GsonTool.toJson(apisEntity));
+
             for (CIApisQryRespEntity.CIApispaxInfo tmpPaxInfo : apisEntity.apisInfo.getInfosObjArray()){
                 for(CIApisQryRespEntity.ApisRespDocObj tmpApisRespDoc : tmpPaxInfo.documentInfos) {
+                    SLog.d("ABSFGDGAD");
                     tmpApisRespDoc.mode = "U";
                 }
             }
+            m_jsBody = new JSONObject(GsonTool.toJson(apisEntity));
             //補上固定參數
             //m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
             //m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);

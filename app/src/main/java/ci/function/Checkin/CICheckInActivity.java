@@ -649,6 +649,8 @@ public class CICheckInActivity extends BaseActivity {
                 m_arInputApisPaxInfo = arInputApisPaxInfo;
 
                 //2018-09-03 調整為使用EditAPIS 上傳APIS資料
+                SLog.d("arEditApisPaxInfo: "+GsonTool.toJson(arEditApisPaxInfo));
+                SLog.d("m_arInputApisPaxInfo: "+GsonTool.toJson(m_arInputApisPaxInfo));
                 CICheckInPresenter.getInstance(m_CheckInListener).EditAPISFromWS(arEditApisPaxInfo);
                 //CICheckInPresenter.getInstance(m_CheckInListener).CheckInFromWS(arInputApisPaxInfo);
             }

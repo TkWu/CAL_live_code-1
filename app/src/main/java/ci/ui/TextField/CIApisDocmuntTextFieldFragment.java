@@ -11,6 +11,7 @@ import java.util.HashSet;
 
 import ci.function.Checkin.CIAPISCheckInDocmuntTypeSelectMenuActivity;
 import ci.function.Core.CIApplication;
+import ci.function.Core.SLog;
 import ci.function.PersonalDetail.APIS.CIAPISDocmuntTypeSelectMenuActivity;
 import ci.ui.TextField.Base.CITextFieldFragment;
 import ci.ui.define.UiMessageDef;
@@ -22,13 +23,19 @@ import ci.ws.Models.entities.CIApisQryRespEntity;
  */
 public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
 
+    public interface OnCIAPISDocChoosedFragmentClick{
+        boolean setSelectResult();
+        boolean getSelectResult();
+    }
+
+    private OnCIAPISDocChoosedFragmentClick onCIAPISDocChoosedFragmentClick;
+
     public static final int     ACTIVITY_ID = 1;
-    public String               m_strDocmuntType = null;
+    public CIApisQryRespEntity.ApisRespDocObj               m_strDocmuntTypeObj = null;
+    public String              m_strDocmuntType = null;
 
     private HashSet<String>     m_filter = null;
     public static final String  APIS_TYPE = "APIS_TYPE";
-
-    private OnCIAPISDocChoosedFragmentClick onCIAPISDocChoosedFragmentClick;
 
     //可選清單，會將總表濾掉，只留下可選擇清單
     private HashSet<CIApisDocmuntTypeEntity> m_SelectList = null;
@@ -85,9 +92,30 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
     dropDownListener listener = new dropDownListener() {
         @Override
         public void onDropDown(TypeMode mode, View v, String tag) {
-            fullPageMenu();
+            if (onCIAPISDocChoosedFragmentClick != null) {
+
+                //給實作的人傳遞數值
+                SLog.d("CIApisDocmuntTextFieldFragment listener");
+                boolean isChangActivity = onCIAPISDocChoosedFragmentClick.setSelectResult();
+                //getArguments().putString(CISelectDepartureAirpotActivity.IAIT, onCIChooseAirportTextFragmentClick.getFromIAIT());
+                //實作的人決定是否換畫面
+                if (isChangActivity){
+                    fullPageMenu();
+                }
+            }else{
+                //沒有實作
+                fullPageMenu();
+            }
         }
     };
+
+
+//    dropDownListener listener = new dropDownListener() {
+//        @Override
+//        public void onDropDown(TypeMode mode, View v, String tag) {
+//            fullPageMenu();
+//        }
+//    };
 
     private void fullPageMenu() {
         changeActivity(CIAPISCheckInDocmuntTypeSelectMenuActivity.class);
@@ -113,8 +141,13 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == ACTIVITY_ID && getActivity().RESULT_OK == resultCode){
-            m_strDocmuntType = data.getStringExtra(CIAPISDocmuntTypeSelectMenuActivity.DOCUMUNT_TYPE);
-            m_editText.setText(data.getStringExtra(CIAPISDocmuntTypeSelectMenuActivity.VALUE));
+            Bundle bundle = data.getExtras();
+            if(null != bundle) {
+                m_strDocmuntTypeObj = (CIApisQryRespEntity.ApisRespDocObj)bundle.getSerializable(CIAPISCheckInDocmuntTypeSelectMenuActivity.DOCUMUNT_TYPE);
+            }
+            //m_strDocmuntTypeObj = data.getStringExtra(CIAPISCheckInDocmuntTypeSelectMenuActivity.DOCUMUNT_TYPE);
+            onCIAPISDocChoosedFragmentClick.getSelectResult();
+            m_editText.setText(m_strDocmuntTypeObj.documentName);
         }
     }
 
@@ -126,15 +159,15 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
         return m_strDocmuntType;
     }
 
+    public CIApisQryRespEntity.ApisRespDocObj getDocmuntTypeObj() {
+        return m_strDocmuntTypeObj;
+    }
+
     /**
      * 設定護照類型
      */
     public void setDocmuntType(String strDocmuntType) {
         this.m_strDocmuntType = strDocmuntType;
-    }
-
-    public interface OnCIAPISDocChoosedFragmentClick{
-        boolean trytrysee();
     }
 
     public void setOnCIAPISDocChoosedFragmentClick(OnCIAPISDocChoosedFragmentClick onCIChooseAirportTextFragmentClick) {
