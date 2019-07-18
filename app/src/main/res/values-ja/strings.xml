@@ -732,7 +732,6 @@
     <string name="document_number">渡航書類の番号</string>
     <string name="country_of_issuance">発行国/地域</string>
     <string name="date_of_expiry">有効期限</string>
-    <string name="apis_save_change">渡航書類の変更の保存</string>
     <string name="apis_add_this_travel_doc_to_my_account">アカウントに渡航書類を追加する</string>
     <string name="addapis_label_address">目的地の住所(米国へ入国する際に必要です)</string>
     <string name="city_stat">州／県名</string>
@@ -1044,11 +1043,11 @@
     <string name="scheme_auth_eshopping_button_agree">同意</string>
 
     <!-- Check-in 預辦登機+ADC -->
-    <string name="check_in_doc_reminder">請確認以下資料與您本次行程的旅行證件相符，\n<b>若資料不正確，將會影響您的行程。</b></string>
+    <string name="check_in_doc_reminder">送信前に、ご入力内容に誤りがないか再度ご確認ください。</string>
     <string name="check_in_input_basic_doc">基本資料</string>
     <string name="check_in_input_apis_doc">書類の詳細1</string>
     <string name="check_in_input_apis_second_doc">書類の詳細2</string>
-    <string name="check_in_input_apis_select_saved">使用已儲存的證件</string>
+    <string name="check_in_input_apis_select_saved">渡航書類を適用</string>
     <string name="check_in_input_apis_input_others">輸入其他證件</string>
     <string name="check_in_input_visa">Visaの詳細</string>
     <string name="check_in_visa_index_title">Visa</string>
@@ -1097,5 +1096,8 @@
     <string name="braoding_pass_screenshots_fail">スクリーンショット 失敗</string>
     <string name="permissions_error">本機能の使用権限がありません</string>
     <string name="apis_my_freename_hint">自訂證件名稱</string>
+    <string name="warrning_apis_continue">チェックインを続ける</string>
+    <string name="apis_save_change">アカウントに渡航書類を保持</string>
+    <string name="Visa_input_hint">目的地への入国に必要なビザ情報をご入力ください。</string>
 </resources>
 

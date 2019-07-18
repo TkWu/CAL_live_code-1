@@ -3,16 +3,12 @@ package ci.ui.TextField;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import com.chinaairlines.mobile30.R;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 
 import ci.function.Checkin.CIAPISCheckInDocmuntTypeSelectMenuActivity;
 import ci.function.Core.CIApplication;
-import ci.function.Core.SLog;
-import ci.function.PersonalDetail.APIS.CIAPISDocmuntTypeSelectMenuActivity;
 import ci.ui.TextField.Base.CITextFieldFragment;
 import ci.ui.define.UiMessageDef;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
@@ -24,7 +20,6 @@ import ci.ws.Models.entities.CIApisQryRespEntity;
 public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
 
     public interface OnCIAPISDocChoosedFragmentClick{
-        boolean setSelectResult();
         boolean getSelectResult();
     }
 
@@ -92,30 +87,9 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
     dropDownListener listener = new dropDownListener() {
         @Override
         public void onDropDown(TypeMode mode, View v, String tag) {
-            if (onCIAPISDocChoosedFragmentClick != null) {
-
-                //給實作的人傳遞數值
-                SLog.d("CIApisDocmuntTextFieldFragment listener");
-                boolean isChangActivity = onCIAPISDocChoosedFragmentClick.setSelectResult();
-                //getArguments().putString(CISelectDepartureAirpotActivity.IAIT, onCIChooseAirportTextFragmentClick.getFromIAIT());
-                //實作的人決定是否換畫面
-                if (isChangActivity){
-                    fullPageMenu();
-                }
-            }else{
-                //沒有實作
-                fullPageMenu();
-            }
+            fullPageMenu();
         }
     };
-
-
-//    dropDownListener listener = new dropDownListener() {
-//        @Override
-//        public void onDropDown(TypeMode mode, View v, String tag) {
-//            fullPageMenu();
-//        }
-//    };
 
     private void fullPageMenu() {
         changeActivity(CIAPISCheckInDocmuntTypeSelectMenuActivity.class);
@@ -145,7 +119,6 @@ public class CIApisDocmuntTextFieldFragment extends CITextFieldFragment {
             if(null != bundle) {
                 m_strDocmuntTypeObj = (CIApisQryRespEntity.ApisRespDocObj)bundle.getSerializable(CIAPISCheckInDocmuntTypeSelectMenuActivity.DOCUMUNT_TYPE);
             }
-            //m_strDocmuntTypeObj = data.getStringExtra(CIAPISCheckInDocmuntTypeSelectMenuActivity.DOCUMUNT_TYPE);
             onCIAPISDocChoosedFragmentClick.getSelectResult();
             m_editText.setText(m_strDocmuntTypeObj.documentName);
         }

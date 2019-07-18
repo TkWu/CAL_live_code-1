@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name" translatable="false">中華航空</string>
-    <string name="app_version_name" translatable="false">1.0.32</string>
+    <string name="app_version_name" translatable="false">1.0.34</string>
     <string name="app_develop_name" translatable="false">R01</string>
 
     <string name="action_example" translatable="false">Example action</string>
@@ -876,7 +876,7 @@
     <string name="document_number">Document No.</string>
     <string name="country_of_issuance">Country/Region of Issuance</string>
     <string name="date_of_expiry">Date of Expiry</string>
-    <string name="apis_save_change">Save change to this travel document</string>
+    <string name="apis_save_change">Save these travel documents to my account</string>
     <string name="apis_add_this_travel_doc_to_my_account">Add this travel document to my account</string>
     <string name="addapis_label_address">Destination Address(Only required for traveling to USA)</string>
     <string name="city_stat">State Code</string>
@@ -1191,12 +1191,12 @@
     <string name="scheme_auth_eshopping_button_agree">同意</string>
 
     <!-- Check-in 預辦登機+ADC -->
-    <string name="check_in_doc_reminder">請確認以下資料與您本次行程的旅行證件相符，\n<b>若資料不正確，將會影響您的行程。</b></string>
+    <string name="check_in_doc_reminder">Please check all your information is correct before submitting. \\n<b>Your travelling may be affected if any of the information does not match the information in your passport or other required visa. </b></string>
     <string name="check_in_input_basic_doc">基本資料</string>
     <string name="check_in_input_apis_doc">證件資訊1</string>
     <string name="check_in_input_apis_second_doc">證件資訊2</string>
-    <string name="check_in_input_apis_select_saved">使用已儲存的證件</string>
-    <string name="check_in_input_apis_input_others">輸入其他證件</string>
+    <string name="check_in_input_apis_select_saved">"Use valid saved document "</string>
+    <string name="check_in_input_apis_input_others">Fill in new document</string>
     <string name="check_in_input_visa">輸入簽證資料</string>
     <string name="check_in_visa_index_title">簽證</string>
     <string name="check_in_visa_document_number">簽證號碼</string>
@@ -1241,4 +1241,6 @@
     <string name="braoding_pass_screenshots_success">Screenshot success\nPlease manaully remove the screenshot and re-keep again. Thank you for your cooperation.</string>
     <string name="braoding_pass_screenshots_fail">Screenshot fail</string>
     <string name="permissions_error">Access invalid. Function not available.</string>
+    <string name="warrning_apis_continue">Continue Check In</string>
+    <string name="Visa_input_hint">Please enter all your required visa document details below for entering your destination.</string>
 </resources>

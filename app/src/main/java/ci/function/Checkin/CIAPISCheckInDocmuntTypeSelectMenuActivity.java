@@ -4,17 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentManager;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ExpandableListView;
-import android.widget.Switch;
 
 import com.chinaairlines.mobile30.R;
-import com.google.gson.Gson;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -25,7 +19,6 @@ import java.util.Locale;
 
 import ci.function.Core.CIApplication;
 import ci.function.Main.BaseActivity;
-import ci.ui.TextField.Adapter.CIMenusAdapter;
 import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
@@ -34,7 +27,6 @@ import ci.ui.view.NavigationBar;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Presenter.CIAPISPresenter;
-import ci.ws.cores.object.GsonTool;
 
 
 public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
@@ -43,19 +35,14 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
     public static final String                  BUNDLE_ACTIVITY_DATA_SELECT_LIST = "ActivitySelectList";
     public static final String                  BUNDLE_ACTIVITY_DATA_SAVED_LIST  = "ActivitySavedList";
 
-    private NavigationBar           m_Navigationbar    = null;
-    private ExpandableListView m_expandableListView    = null;
-    private EditText                m_etSearch;
+    private NavigationBar           m_Navigationbar                 = null;
+    private ExpandableListView m_expandableListView                 = null;
 
-    public  boolean haveSavedApis                        = false;
-
-    private ArrayList<GroupItem>    m_Items            = null;
+    private ArrayList<GroupItem>    m_Items                         = null;
 
     private ArrayList<CIApisQryRespEntity.ApisRespDocObj> SavedDocs;
 
     private ArrayList<CIApisDocmuntTypeEntity> AllDocs;
-
-    private ArrayList<String>                   m_arString              = null;
 
     private String                              m_strHint           = "";
     private CIApisDocmuntTextFieldFragment.EType m_apisType         = null;
@@ -152,12 +139,9 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
             AllDocs = CIAPISPresenter.getInstance().fetchAllApisList();
         } else if( m_apisType == CIApisDocmuntTextFieldFragment.EType.CheckIn ){
             AllDocs = CIAPISPresenter.getInstance().fetchAllApisList();
-            //m_arDocmuntType = CIAPISPresenter.getInstance().fetchApisList();
         } else {
             AllDocs = new ArrayList<>();
         }
-
-        m_arString      = new ArrayList<>();
 
         if ( null != m_SelectList ) {
             for (Iterator<CIApisDocmuntTypeEntity> iterator = AllDocs.iterator(); iterator.hasNext(); ) {
@@ -182,6 +166,7 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
                 }
             }
         }
+
         if ( null != SavedDocs ){
             for( Iterator<CIApisQryRespEntity.ApisRespDocObj> iterator = SavedDocs.iterator(); iterator.hasNext(); ) {
 
@@ -225,7 +210,6 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
             m_expandableListView.expandGroup(iIdx);
         }
     }
-
 
     /**判斷已存文件有效日期是否已過期*/
     private boolean checkIfisExpired( String strExpiryDate){
@@ -288,8 +272,10 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
                             objectTmp.otherDocuments = QRTmpPaxInfo.new OtherDocuments();
                             break;
                     }
+                    objectTmp.mode = "I";
                     m_groupItem.docsObject.add(objectTmp);
                 }
+
                 m_Items.add(m_groupItem);
             }
         }
@@ -321,7 +307,6 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
     @Override
     protected void setOnParameterAndListener() {
         m_Navigationbar.uiSetParameterListener(m_onNavigationParameter, m_onNavigationbarListener);
-        //m_etSearch.addTextChangedListener(this);
         m_expandableListView.setOnGroupClickListener(m_OnGroupClickListener);
         m_expandableListView.setOnChildClickListener(m_OnChildClickListener);
     }
@@ -357,7 +342,6 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
 
         @Override
         public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-
             Intent intent = new Intent();
             Bundle bundle = new Bundle();
             bundle.putSerializable(DOCUMUNT_TYPE, m_Items.get(groupPosition).docsObject.get(childPosition));
@@ -366,7 +350,6 @@ public class CIAPISCheckInDocmuntTypeSelectMenuActivity extends BaseActivity {
             setResult(RESULT_OK, intent);
             finish();
             overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
-
             return true;
         }
     };

@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
+import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIApisEntity;
 import ci.ws.Models.entities.CIWSResult;
 import ci.ws.cores.CIWSShareManager;
@@ -18,7 +19,7 @@ import ci.ws.define.WSConfig;
 public class CIInsertUpdateAPISModel extends CIWSBaseModel {
 
 
-    private static final String API_NAME = "/CIAPP/api/InsertUpdateApis";
+    private static final String API_NAME = "/CIAPP/api/AddApis";
 
     private InsertUpdateApisCallBack m_callback = null;
 
@@ -47,7 +48,8 @@ public class CIInsertUpdateAPISModel extends CIWSBaseModel {
         culture_info("culture_info"),
         device_id("device_id"),
         version("version"),
-        card_no("card_no");
+        card_no("card_no"),
+        language("language");
 
         private String strTag = "";
 
@@ -65,17 +67,18 @@ public class CIInsertUpdateAPISModel extends CIWSBaseModel {
         this.m_callback = callback;
     }
 
-    public void InsertUpdateApisFromWS( String strCardNo, CIApisEntity apisEntity ){
+    public void InsertUpdateApisFromWS( String strCardNo, CIApisAddEntity apisEntity ){
 
         try {
             m_jsBody = new JSONObject(GsonTool.toJson(apisEntity));
-
             //補上固定參數
-            m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
-            m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
-            m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
-            m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
-            m_jsBody.put( eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
+            //m_jsBody.put( eParaTag.login_token.getString(), CIWSShareManager.getAPI().getLoginToken());
+            //m_jsBody.put( eParaTag.card_no.getString(),     strCardNo);
+            //m_jsBody.put( eParaTag.culture_info.getString(), CIApplication.getLanguageInfo().getWSLanguage());
+            //m_jsBody.put( eParaTag.device_id.getString(),   CIApplication.getDeviceInfo().getAndroidId());
+            //m_jsBody.put( eParaTag.mode.getString(),     "U");
+            m_jsBody.put( CIInsertUpdateAPISModel.eParaTag.language.getString(), CIApplication.getLanguageInfo().getWSLanguage());
+            m_jsBody.put( CIInsertUpdateAPISModel.eParaTag.version.getString(),     WSConfig.DEF_API_VERSION);
 
         } catch (JSONException e) {
             e.printStackTrace();

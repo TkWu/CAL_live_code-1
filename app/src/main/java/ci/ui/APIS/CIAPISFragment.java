@@ -10,7 +10,6 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroupOverlay;
 import android.view.inputmethod.EditorInfo;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -19,8 +18,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chinaairlines.mobile30.R;
-import com.google.gson.Gson;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -28,13 +25,12 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
-
-import javax.xml.parsers.SAXParser;
+import java.util.Iterator;
+import java.util.Locale;
 
 import ci.function.Base.BaseFragment;
 import ci.function.Checkin.CIAPISDef;
 import ci.function.Core.CIApplication;
-import ci.function.Core.SLog;
 import ci.ui.TextField.Base.CIBaseTextFieldFragment;
 import ci.ui.TextField.Base.CITextFieldFragment;
 import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
@@ -59,7 +55,6 @@ import ci.ws.Models.entities.CICheckInPax_ItineraryInfoEntity;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Presenter.CIAPISPresenter;
 import ci.ws.Presenter.Listener.CIInquiryApisListListener;
-import ci.ws.cores.object.GsonTool;
 
 import static ci.ui.TextField.Base.CITextFieldFragment.TypeMode.NORMAL;
 
@@ -133,6 +128,10 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     private boolean         m_boolDeafultN          = false;
     private String          m_strDefaultNname       = "";
 
+    boolean first_n = true;
+    boolean first_p = true;
+    boolean first_a = true;
+
     //航班狀態
     private CIAPISDef.CIRouteType m_enRouteType = CIAPISDef.CIRouteType.normal;
 
@@ -141,6 +140,12 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     private CIApisDocmuntTypeEntity m_docPassportEntity = null;
 
     ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_savedDocs;
+    ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_DocsToUPdate;
+    CIApisQryRespEntity.ApisRespDocObj m_Docs_P     = null;
+    CIApisQryRespEntity.ApisRespDocObj m_Docs_N     = null;
+    CIApisQryRespEntity.ApisRespDocObj m_Docs_A     = null;
+    CIApisQryRespEntity.ApisRespDocObj m_Docs_Other = null;
+
 
     /** 確認有無從WS拿到合法的APIS*/
     private boolean         m_bGetApisFromWs      = false;
@@ -201,96 +206,12 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
     }
 
-    private void addApis(ArrayList<CIApisQryRespEntity.ApisRespDocObj> SavedAPIS) {
-        if( null == m_arApis ) {
-            m_arApis = new ArrayList<>();
-            ApisInputData inputData = new ApisInputData();
-            m_arApis.add(inputData);
-        }
 
-        if( null == m_ResidentMap ) {
-            m_ResidentMap = CIAPISPresenter.getInstance().fetchApisNationalResidentMap();
-        }
-
-        if( null == m_IssueMap ) {
-            m_IssueMap = CIAPISPresenter.getInstance().fetchApisNationalIssueMap();
-        }
-
-        SLog.d("addApis + SaveAPIS");
-        if( null == SavedAPIS ) {
-            return;
-        }
-
-        ApisInputData inputData = m_arApis.get(0);
-        boolean first_n = true;
-        boolean first_p = true;
-        boolean first_a = true;
-        /**
-         * 相同類型文件 自動帶入第一筆
-         * 第一文件目前預設為護照
-         * 第二文件照目前邏輯有地址帶地址有其他帶其他
-        **/
-        for (CIApisQryRespEntity.ApisRespDocObj tmpObj : SavedAPIS) {
-            SLog.d("tmp: "+tmpObj.mode+":");
-            if (tmpObj.documentType.equals("N") && first_n) {
-                inputData.birthday = tmpObj.basicDocuments.birthday;
-                inputData.gender = ( tmpObj.basicDocuments.gender.equals(CIApisAddEntity.SEX_FEMALE))? TwoItemSelectBar.ESelectSMode.RIGHT : TwoItemSelectBar.ESelectSMode.LEFT;
-
-                CIApisNationalEntity residentEntity = m_ResidentMap.get(tmpObj.basicDocuments.residence);
-                if( null != residentEntity) {
-                    inputData.residentCountryCd = tmpObj.basicDocuments.residence;
-                    inputData.residentCountryName = residentEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
-                }else{
-                    inputData.residentCountryCd = "";
-                    inputData.residentCountryName = "";
-                }
-
-                CIApisNationalEntity nationalityEntity = m_IssueMap.get(tmpObj.basicDocuments.nationality);
-                if( null != nationalityEntity ) {
-                    inputData.nationalityCd = tmpObj.basicDocuments.nationality;
-                    inputData.nationalityName = nationalityEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
-                }else{
-                    inputData.nationalityCd = "";
-                    inputData.nationalityName = "";
-                }
-                m_boolDeafultN = true;
-                m_strDefaultNname = tmpObj.documentName;
-
-                first_n = false;
-            }
-
-            if (tmpObj.documentType.equals("P") && first_p) {
-                inputData.docNo = tmpObj.otherDocuments.documentNo;
-                inputData.docExpiryDate = tmpObj.otherDocuments.expireDay;
-
-                CIApisNationalEntity issueEntity = m_IssueMap.get(tmpObj.otherDocuments.issueCountry);
-                if( null != issueEntity ) {
-                    inputData.issueCountryCd = tmpObj.otherDocuments.issueCountry;
-                    inputData.issueCountryName = issueEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
-                }else{
-                    inputData.issueCountryCd = "";
-                    inputData.issueCountryName = "";
-                }
-                first_p = false;
-            }
-
-            if (tmpObj.documentType.equals("A") && first_a) {
-                CICheckInDocaEntity tmpDoca = new CICheckInDocaEntity();
-                tmpDoca.Country_Sub_Entity = tmpObj.docas.country;
-                tmpDoca.Traveler_City = tmpObj.docas.city;
-                tmpDoca.Traveler_Address = tmpObj.docas.address;
-                tmpDoca.Traveler_Postcode = tmpObj.docas.zipcode;
-                inputData.Doca = tmpDoca;
-                first_a = false;
-            }
-        }
-
-    }
     private void addApis(CICheckInApisEntity Apis, CICheckInDocaEntity Doca ) {
-        SLog.d("addApis ORI");
         if( null == m_arApis ) {
             m_arApis = new ArrayList<>();
         }
+
 
         if( null == Apis ) {
             return;
@@ -367,10 +288,23 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     }
 
     private void initiaPara(){
-        SLog.d("initiaPara");
         CICheckInApisEntity Apis = null;
         CICheckInDocaEntity Doca = null;
         ArrayList<CIApisQryRespEntity.ApisRespDocObj> SavedAPIS = null;
+
+        if( null == m_arApis ) {
+            m_arApis = new ArrayList<>();
+            ApisInputData inputData = new ApisInputData();
+            m_arApis.add(inputData);
+        }
+
+        if( null == m_ResidentMap ) {
+            m_ResidentMap = CIAPISPresenter.getInstance().fetchApisNationalResidentMap();
+        }
+
+        if( null == m_IssueMap ) {
+            m_IssueMap = CIAPISPresenter.getInstance().fetchApisNationalIssueMap();
+        }
 
         Bundle bundle = getArguments();
         if ( null != bundle ){
@@ -398,8 +332,12 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             m_bIsMyApis = false;
         }
 
+
+        if( null == m_DocsToUPdate ) {
+            m_DocsToUPdate = new ArrayList<>();
+        }
         //addApis(Apis,Doca);
-        addApis(SavedAPIS);
+        //addApis(SavedAPIS);
 
     }
 
@@ -410,7 +348,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
     @Override
     protected void initialLayoutComponent(LayoutInflater inflater, View view) {
-        SLog.d("initialLayoutComponent");
         m_llayout_root  = (LinearLayout)view.findViewById(R.id.llayout_root);
         m_llayout_root.setOnTouchListener(this);
         m_tvName        = (TextView)view.findViewById(R.id.tv_name);
@@ -419,12 +356,13 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         m_tvCheck_in_doc_reminder.setText(getText(R.string.check_in_doc_reminder));
         m_vGender       = (TwoItemSelectBar)view.findViewById(R.id.v_gender);
 
-        initiaPara();
 
-        String[] docTypeList = new String[m_arApis.size()];
-        for( int iPos = 0 ; iPos < m_arApis.size() ; iPos++ ) {
-            docTypeList[iPos] = m_arApis.get(iPos).docTypeName;
-        }
+        initiaPara();
+//
+//        String[] docTypeList = new String[m_arApis.size()];
+//        for( int iPos = 0 ; iPos < m_arApis.size() ; iPos++ ) {
+//            docTypeList[iPos] = m_arApis.get(iPos).docTypeName;
+//        }
         m_rlayout_basicdoctype      = (RelativeLayout) view.findViewById(R.id.rlayout_basicdoctype);
         m_BasicDocumentTypefragment = CIApisDocmuntTextFieldFragment.newInstance("*"+getString(R.string.document_type),CIApisDocmuntTextFieldFragment.EType.CheckIn);
 
@@ -500,25 +438,35 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         vScaleDef.selfAdjustSameScaleView(m_ivCheckBox, 24, 24);
     }
 
+    private void udpateDocsToUPdate(String docSelecter, CIApisQryRespEntity.ApisRespDocObj docChooded) {
+        switch (docSelecter){
+            case "N":
+                m_Docs_A = docChooded;
+                break;
+            case "P":
+                m_Docs_P = docChooded;
+                break;
+            case "OTHER":
+                m_Docs_Other = docChooded;
+                break;
+        }
+    }
+
+
     @Override
     protected void setOnParameterAndListener(View view)
     {
         ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).setOnCIAPISDocChoosedFragmentClick(
             new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
-                @Override
-                public boolean setSelectResult() {
-                    SLog.d("APISFRAGMENT setOnParameterAndListener setSelectResult");
-                    return true;
-                }
 
                 @Override
                 public boolean getSelectResult() {
                     CIApisQryRespEntity.ApisRespDocObj tmp = ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).getDocmuntTypeObj();
-                    SLog.d(GsonTool.toJson(tmp));
-                    ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
-                    m_ar_tmp.add(tmp);
-                    addApis(m_ar_tmp);
-                    SLog.d(GsonTool.toJson(m_arApis.get(0)));
+                    udpateDocsToUPdate("N", tmp);
+
+//                    ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
+//                    m_ar_tmp.add(tmp);
+                    //addApis(m_ar_tmp);
                     m_bSetApisInfoFromWS = false;
                     onResume();
 
@@ -528,53 +476,41 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         );
 
         ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setOnCIAPISDocChoosedFragmentClick(
-                new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
-                    @Override
-                    public boolean setSelectResult() {
-                        SLog.d("APISFRAGMENT setOnParameterAndListener setSelectResult");
-                        return true;
-                    }
+            new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
 
-                    @Override
-                    public boolean getSelectResult() {
-                        CIApisQryRespEntity.ApisRespDocObj tmp = ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).getDocmuntTypeObj();
-                        SLog.d(GsonTool.toJson(tmp));
-                        ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
-                        m_ar_tmp.add(tmp);
-                        addApis(m_ar_tmp);
-                        SLog.d(GsonTool.toJson(m_arApis.get(0)));
-                        m_bSetApisInfoFromWS = false;
-                        onResume();
+                @Override
+                public boolean getSelectResult() {
+                    CIApisQryRespEntity.ApisRespDocObj tmp = ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).getDocmuntTypeObj();
+                    udpateDocsToUPdate("P", tmp);
+//                        ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
+//                        m_ar_tmp.add(tmp);
+                    //addApis(m_ar_tmp);
+                    m_bSetApisInfoFromWS = false;
+                    onResume();
 
-                        return true;
-                    }
+                    return true;
                 }
+            }
         );
 
 
 
         ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setOnCIAPISDocChoosedFragmentClick(
-                new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
-                    @Override
-                    public boolean setSelectResult() {
-                        SLog.d("APISFRAGMENT setOnParameterAndListener setSelectResult");
-                        return true;
-                    }
+            new CIApisDocmuntTextFieldFragment.OnCIAPISDocChoosedFragmentClick() {
 
-                    @Override
-                    public boolean getSelectResult() {
-                        CIApisQryRespEntity.ApisRespDocObj tmp = ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).getDocmuntTypeObj();
-                        SLog.d(GsonTool.toJson(tmp));
-                        ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
-                        m_ar_tmp.add(tmp);
-                        addApis(m_ar_tmp);
-                        SLog.d(GsonTool.toJson(m_arApis.get(0)));
-                        m_bSetApisInfoFromWS = false;
-                        onResume();
+                @Override
+                public boolean getSelectResult() {
+                    CIApisQryRespEntity.ApisRespDocObj tmp = ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).getDocmuntTypeObj();
+                    udpateDocsToUPdate("OTHER", tmp);
+//                        ArrayList<CIApisQryRespEntity.ApisRespDocObj> m_ar_tmp = new ArrayList<>();
+//                        m_ar_tmp.add(tmp);
+                    //addApis(m_ar_tmp);
+                    m_bSetApisInfoFromWS = false;
+                    onResume();
 
-                        return true;
-                    }
+                    return true;
                 }
+            }
         );
     }
 
@@ -638,7 +574,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     public void onResume() {
         super.onResume();
 
-        SLog.d("onResume");
         //是否已將WS給的APIS資料放進畫面
         if(m_bSetApisInfoFromWS) {
 
@@ -677,7 +612,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
 
     private void APISModeCheck() {
-        SLog.d("APISModeCheck");
         //預設填入 arApis 第一筆資料
         if( null == m_tempApisData ) {
             setStoreSaveInputData(ApisDataType.DocList);
@@ -688,7 +622,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
 
     private void resetAllInput() {
-        SLog.d("resetAllInput");
         //性別預設為男性(左邊選項)
         m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
 
@@ -787,7 +720,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
      * 新增旅行證件切換至Save mode，將暫存的Input data填寫回輸入欄位
      */
     private void setStoreSaveInputData(ApisDataType type) {
-        SLog.d("setStoreSaveInputData");
         if( m_iCurrentDocType >= m_arApis.size() ) {
             resetAllInput();
 
@@ -797,6 +729,11 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             checkDocInfo();
             return;
         }
+
+        //檢查航段
+        checkRouteType();
+
+        checkDocInfo();
 
 
         ApisInputData m_apisSaveData = null;
@@ -813,9 +750,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         }else{
             m_rlayout_basicdoctype.setVisibility(View.GONE);
         }
-
-
-
 
         if(TwoItemSelectBar.ESelectSMode.LEFT == m_apisSaveData.gender ) {
             m_vGender.setSelectMode(TwoItemSelectBar.ESelectSMode.LEFT);
@@ -859,6 +793,16 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             m_DocExpiryDatefragment.setText(null);
         }
 
+        //第二證件
+        m_SecondDocumentNoFragment.setText( m_apisSaveData.secondDoc.docNo);
+        if( !TextUtils.isEmpty(m_apisSaveData.secondDoc.docExpiryDate) ) {
+            ((CIDateOfExpiryTextFieldFragment) m_SecondDocExpiryDateFragment).setFormatedDate(m_apisSaveData.secondDoc.docExpiryDate);
+            m_SecondDocExpiryDateFragment.setText(m_apisSaveData.secondDoc.docExpiryDate);
+        } else {
+            m_SecondDocExpiryDateFragment.setText(null);
+        }
+
+
         if( null == m_apisSaveData.Doca ) {
 
             ((CIApisStateTextFieldFragment)m_CityStatfragment).setStateCode("");
@@ -885,7 +829,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             m_CityStatfragment.setText("");
         }
 
-
         m_CityCountyDistrictfragment.setText(m_apisSaveData.Doca.Traveler_City);
 
         m_Streetfragment.setText(m_apisSaveData.Doca.Traveler_Address);
@@ -894,20 +837,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
         //是否有綠卡
         m_ivOtherDocCheckBox.setSelected(m_apisSaveData.bSelectedGreenCard);
-
-        //檢查航段
-        checkRouteType();
-
-        checkDocInfo();
-
-        //第二證件
-        m_SecondDocumentNoFragment.setText( m_apisSaveData.secondDoc.docNo);
-        if( !TextUtils.isEmpty(m_apisSaveData.secondDoc.docExpiryDate) ) {
-            ((CIDateOfExpiryTextFieldFragment) m_SecondDocExpiryDateFragment).setFormatedDate(m_apisSaveData.secondDoc.docExpiryDate);
-            m_SecondDocExpiryDateFragment.setText(m_apisSaveData.secondDoc.docExpiryDate);
-        } else {
-            m_SecondDocExpiryDateFragment.setText(null);
-        }
 
     }
 
@@ -932,7 +861,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
     }
 
     public boolean isFillCompleteAndCorrect() {
-
         m_strErrorMsg = getString(R.string.please_fill_all_text_field_that_must_to_fill);
 
         //出生日期必填
@@ -1053,8 +981,8 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
 
     private ArrayList<CICheckInApisEntity> getApisEntity() {
-        SLog.d("getApisEntity");
         ArrayList<CICheckInApisEntity> ar_Apis = new ArrayList<>();
+
 
         //居住國家必選
         String strResidentCountryCd = ((CIApisNationalTextFieldFragment)m_ResidentCountryFragment).getCountryCd();
@@ -1084,16 +1012,26 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         ciApisEntity.Issue_Country = strIssueCountryCd;
         ciApisEntity.Document_No = strDocumentNo;
 
+        m_Docs_N.basicDocuments.nationality     = strNationality;
+        m_Docs_N.basicDocuments.residence       = strResidentCountryCd;
+        m_Docs_P.otherDocuments.documentNo      = strDocumentNo;
+        m_Docs_P.otherDocuments.expireDay       = strExpiryDate;
+        m_Docs_P.otherDocuments.issueCountry    = strIssueCountryCd;
+
 //        ciApisEntity.first_name = m_strFirstName;
 //        ciApisEntity.last_name = m_strLastName;
 
         if(TwoItemSelectBar.ESelectSMode.LEFT == m_vGender.getSelectModeParam() ) {
             ciApisEntity.Pax_Sex = CIApisEntity.SEX_MALE;
+            m_Docs_N.basicDocuments.gender  = CIApisEntity.SEX_MALE;
         } else {
             ciApisEntity.Pax_Sex = CIApisEntity.SEX_FEMALE;
+            m_Docs_N.basicDocuments.gender  = CIApisEntity.SEX_FEMALE;
         }
 
         ciApisEntity.Pax_Birth = strPaxBirth;
+        m_Docs_N.basicDocuments.birthday    = strPaxBirth;
+
 
         ar_Apis.add(ciApisEntity);
 
@@ -1101,6 +1039,9 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
             String strSecDocType =
                     ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).getDocmuntType();
+            if (TextUtils.equals(strSecDocType, "CG")) {
+                strSecDocType = "C";
+            }
             String strSecDocNo = m_SecondDocumentNoFragment.getText();
             String strSecIssue = ((CIApisNationalTextFieldFragment)m_SecondIssueCountryFragment).getCountryCd();
             String strSecExpiryDate = ((CIDateOfExpiryTextFieldFragment)m_SecondDocExpiryDateFragment).getFormatedDate();
@@ -1121,6 +1062,10 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             }
 
             ar_Apis.add(second_Apis);
+
+            m_Docs_Other.otherDocuments.issueCountry    = strSecIssue;
+            m_Docs_Other.otherDocuments.expireDay       = strSecExpiryDate;
+            m_Docs_Other.otherDocuments.documentNo      = strSecDocNo;
         }
 
         return ar_Apis;
@@ -1181,8 +1126,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
      * 若不需Doca資料，則回傳 null
      */
     private CICheckInDocaEntity getSingleDoca() {
-        SLog.d("getSingleDoca");
-        //String strNationality = ((CIApisNationalTextFieldFragment)m_Nationalityfragment).getCountryCd();
         CICheckInDocaEntity doca = null;
         if( View.VISIBLE ==  m_llayout_Address_Info.getVisibility() && m_enRouteType == CIAPISDef.CIRouteType.arrivalUSA ) {
 
@@ -1200,6 +1143,12 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             doca.Traveler_City = strAddrCity;
             doca.Traveler_Postcode = strAddrZipcode;
             doca.Country_Sub_Entity = strAddrState;
+
+            m_Docs_A.docas.country  = ((CIApisNationalTextFieldFragment) m_AddressNationalityfragment).getCountryCd();
+            m_Docs_A.docas.city     = strAddrCity;
+            m_Docs_A.docas.zipcode  = strAddrZipcode;
+            m_Docs_A.docas.address  = strAddrStreet;
+            m_Docs_A.docas.state    = strAddrState;
         }
 
         return doca;
@@ -1240,8 +1189,9 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         return ciApisEntity;
     }
 
+    //20190711 新增APIS資料存回server
     public HashMap<String,Object> getInputAPIS() {
-        SLog.d("getInputAPIS");
+
         ArrayList<CICheckInApisEntity> ar_apisEntity = getApisEntity();
 
         CICheckInDocaEntity DocaEntity = getSingleDoca();
@@ -1249,15 +1199,16 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         CICheckInApisEntity apisEntity = ar_apisEntity.get(0);
         //若有勾選 儲存/新增選項，則儲存APIS資料至DB
         //只存護照
-        if (m_ivCheckBox.isSelected() && TextUtils.equals("P", apisEntity.Document_No) ) {
-
-            CIApisEntity apis = convertApisFormat( ar_apisEntity.get(0), DocaEntity );
-            if(!m_bIsMyApis) {
-                saveCompanionsApisFromDB( apis);
-            } else {
-                saveMyApis( apis );
-            }
-        }
+        //20190716 改為 每個人(包含非卡客本人)有勾選就更新到ＷＳ
+//        if (m_ivCheckBox.isSelected() && TextUtils.equals("P", apisEntity.Document_No) ) {
+//
+//            CIApisEntity apis = convertApisFormat( ar_apisEntity.get(0), DocaEntity );
+//            if(!m_bIsMyApis) {
+//                saveCompanionsApisFromDB( apis);
+//            } else {
+//                saveMyApis( apis );
+//            }
+//        }
 
         HashMap<String,Object> apisMap = new HashMap<>();
 
@@ -1276,10 +1227,27 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
             apisMap.put("Nationality", ar_apisEntity.get(0).Nationality);
         }
 
+        if (m_ivCheckBox.isSelected()) {
+            m_DocsToUPdate.clear();
+            if (m_Docs_Other != null) {
+                m_DocsToUPdate.add(m_Docs_Other);
+            }
+            if (m_Docs_A != null) {
+                m_DocsToUPdate.add(m_Docs_A);
+            }
+            if (m_Docs_P != null) {
+                m_DocsToUPdate.add(m_Docs_P);
+            }
+            if (m_Docs_N != null) {
+                m_DocsToUPdate.add(m_Docs_N);
+            }
+            apisMap.put("DocsToUPdate", m_DocsToUPdate);
+        }
+
         return apisMap;
     }
 
-    //20190711 新增APIS資料存回server
+
 //    public HashMap<String,Object> getInputAPIS() {
 //        SLog.d("getInputAPIS");
 //        ArrayList<CICheckInApisEntity> ar_apisEntity = getApisEntity();
@@ -1349,7 +1317,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
     private void saveMyApis(CIApisEntity apisEntity) {
 
-        CIAPISPresenter.getInstance().InsertUpdateApisFromWS( CIApplication.getLoginInfo().GetUserMemberCardNo(),m_listener, apisEntity);
+        //CIAPISPresenter.getInstance().InsertUpdateApisFromWS( CIApplication.getLoginInfo().GetUserMemberCardNo(),m_listener, apisEntity);
     }
 
     private CIInquiryApisListListener m_listener = new CIInquiryApisListListener() {
@@ -1439,7 +1407,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
     /**使用航段來歸類航線*/
     private void checkRouteType(){
-        SLog.d("checkRouteType");
         if ( m_arItinerary_InfoList.size() <= 0 ){
             return;
         }
@@ -1609,7 +1576,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
 
     /**使用國籍以及航段來判斷該顯示的證件*/
     private void checkDocInfo() {
-        SLog.d("checkDocInfo");
         final String strCountryCd = ((CIApisNationalTextFieldFragment)m_Nationalityfragment).getCountryCd();
 
         m_rlayout_other_doc_checkbox.setVisibility(View.GONE);
@@ -1621,7 +1587,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
         HashSet<CIApisDocmuntTypeEntity> basicdocTypeList = new HashSet<>();
         basicdocTypeList.add(new CIApisDocmuntTypeEntity("N", ""));
         ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).setDocmuntTypeSelectList(basicdocTypeList);
-
+        setApis(basicdocTypeList);
 
 
         switch (m_enRouteType) {
@@ -1633,6 +1599,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
 
                     //第二證件 是否“未持有台胞證”
                     if ( m_ivOtherDocCheckBox.isSelected() ){
@@ -1641,12 +1608,14 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                         HashSet<CIApisDocmuntTypeEntity> docTypeList_ii = new HashSet<>();
                         docTypeList_ii.add(new CIApisDocmuntTypeEntity("F", CIAPISDef.NATIONAL_TWN));
                         ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setDocmuntTypeSelectList(docTypeList_ii);
+                        setApis(docTypeList_ii);
                     } else {
                         //台胞證
                         setSecondDocInfo("CT", CIAPISDef.NATIONAL_CHN, false);
                         HashSet<CIApisDocmuntTypeEntity> docTypeList_ii = new HashSet<>();
                         docTypeList_ii.add(new CIApisDocmuntTypeEntity("CT", CIAPISDef.NATIONAL_CHN));
                         ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setDocmuntTypeSelectList(docTypeList_ii);
+                        setApis(docTypeList_ii);
                     }
                     m_rlayout_other_doc_checkbox.setVisibility(View.VISIBLE);
                     m_llayout_second_doc.setVisibility(View.VISIBLE);
@@ -1661,6 +1630,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     setSecondDocInfo("", "", false);
 
 //                    //ｘ
@@ -1681,6 +1651,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     setSecondDocInfo("", "", false);
 
 //                    //兩岸航線- 護照
@@ -1705,6 +1676,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     setSecondDocInfo("", "", false);
                 }
             }
@@ -1722,7 +1694,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     //海員證
                     docTypeList.add(new CIApisDocmuntTypeEntity("S", CIAPISDef.NATIONAL_CHN));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
-
+                    setApis(docTypeList);
                     //第二證件-無
                     setSecondDocInfo("", "", false);
 
@@ -1733,12 +1705,14 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
 
                     //第二證件-港澳同胞回鄉證
                     setSecondDocInfo("CC", CIAPISDef.NATIONAL_CHN, false);
                     HashSet<CIApisDocmuntTypeEntity> seconddocTypeList = new HashSet<>();
                     seconddocTypeList.add(new CIApisDocmuntTypeEntity("CC", CIAPISDef.NATIONAL_CHN));
                     ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setDocmuntTypeSelectList(seconddocTypeList);
+                    setApis(seconddocTypeList);
                     m_llayout_second_doc.setVisibility(View.VISIBLE);
                     m_llayout_second_doc.requestFocus();
                     m_bHaveSeconDoc = true;
@@ -1748,6 +1722,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     setSecondDocInfo("", "", false);
                 }
                 break;
@@ -1761,6 +1736,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     setSecondDocInfo("", "", false);
 
                 } else {
@@ -1768,6 +1744,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     setSecondDocInfo("", "", false);
                 }
                 break;
@@ -1783,6 +1760,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
 
                     //第二證件-無
                     setSecondDocInfo("", "", false);
@@ -1803,7 +1781,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                             docTypeList.add(new CIApisDocmuntTypeEntity("S", CIAPISDef.NATIONAL_CHN));
                         }
                         ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
-
+                        setApis(docTypeList);
                         //第二證件-無
                         setSecondDocInfo("", "", false);
 
@@ -1814,6 +1792,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                         HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                         docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                         ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                        setApis(docTypeList);
 
                         //2018-09-14 需求變更
                         //第二證件-無
@@ -1830,11 +1809,13 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                         HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                         docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                         ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                        setApis(docTypeList);
                         //第二證件-入台證
                         setSecondDocInfo("CN", "", false);
                         HashSet<CIApisDocmuntTypeEntity> seconddocTypeList = new HashSet<>();
                         seconddocTypeList.add(new CIApisDocmuntTypeEntity("CN", CIAPISDef.NATIONAL_TWN));
                         ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setDocmuntTypeSelectList(seconddocTypeList);
+                        setApis(seconddocTypeList);
                         m_llayout_second_doc.setVisibility(View.VISIBLE);
                         m_llayout_second_doc.requestFocus();
                         m_bHaveSeconDoc = true;
@@ -1845,6 +1826,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                         HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                         docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                         ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                        setApis(docTypeList);
                         //第二證件-無
                         setSecondDocInfo("", "", false);
 
@@ -1854,6 +1836,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     //第二證件-無
                     setSecondDocInfo("", "", false);
                 }
@@ -1867,6 +1850,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     m_rlayout_other_doc_checkbox.setVisibility(View.VISIBLE);
                     m_tvOtherDocNotice.setText(getString(R.string.check_in_apis_have_ct));
 
@@ -1877,6 +1861,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                         HashSet<CIApisDocmuntTypeEntity> seconddocTypeList = new HashSet<>();
                         seconddocTypeList.add(new CIApisDocmuntTypeEntity("CT", CIAPISDef.NATIONAL_CHN));
                         ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setDocmuntTypeSelectList(seconddocTypeList);
+                        setApis(seconddocTypeList);
                         m_llayout_second_doc.setVisibility(View.VISIBLE);
                         m_llayout_second_doc.requestFocus();
                         m_tvOtherDocNotice.setText(getString(R.string.check_in_apis_have_ct));
@@ -1902,7 +1887,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     docTypeList.add(new CIApisDocmuntTypeEntity("PL", CIAPISDef.NATIONAL_CHN));
                     docTypeList.add(new CIApisDocmuntTypeEntity("PT", CIAPISDef.NATIONAL_CHN));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
-
+                    setApis(docTypeList);
                     //第二證件-無
                     setSecondDocInfo("", "", false);
 
@@ -1913,6 +1898,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                         HashSet<CIApisDocmuntTypeEntity> hsdocTypeList = new HashSet<>();
                         hsdocTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                         ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(hsdocTypeList);
+                        setApis(hsdocTypeList);
                         //第二證件-無
                         setSecondDocInfo("", "", false);
                     }
@@ -1924,6 +1910,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     //第二證件-無
                     setSecondDocInfo("", "", false);
 
@@ -1932,6 +1919,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     //第二證件-無
                     setSecondDocInfo("", "", false);
                 }
@@ -1944,6 +1932,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     setSecondDocInfo("", "", false);
 
                 } else {
@@ -1951,6 +1940,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
                     setSecondDocInfo("", "", false);
                 }
                 break;
@@ -1963,6 +1953,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
 
                     //第二證件-無
                     setSecondDocInfo("", "", false);
@@ -1973,6 +1964,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
 
                     m_rlayout_other_doc_checkbox.setVisibility(View.VISIBLE);
                     m_tvOtherDocNotice.setText(getString(R.string.check_in_apis_have_can_c));
@@ -1984,6 +1976,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                         HashSet<CIApisDocmuntTypeEntity> seconddocTypeList = new HashSet<>();
                         seconddocTypeList.add(new CIApisDocmuntTypeEntity("C", CIAPISDef.NATIONAL_CAN));
                         ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setDocmuntTypeSelectList(seconddocTypeList);
+                        setApis(seconddocTypeList);
                         m_llayout_second_doc.setVisibility(View.VISIBLE);
                         m_llayout_second_doc.requestFocus();
                         m_bHaveSeconDoc = true;
@@ -2004,6 +1997,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
 
                     //第二證件-無
                     setSecondDocInfo("", "", false);
@@ -2014,6 +2008,7 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                     docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                     ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                    setApis(docTypeList);
 
                     m_rlayout_other_doc_checkbox.setVisibility(View.VISIBLE);
                     m_tvOtherDocNotice.setText(getString(R.string.is_there_a_green_card));
@@ -2021,10 +2016,11 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                     //第二證件 是否“有綠卡
                     if ( m_ivOtherDocCheckBox.isSelected() ){
                         //綠卡
-                        setSecondDocInfo("C", CIAPISDef.NATIONAL_USA, false);
+                        setSecondDocInfo("CG", CIAPISDef.NATIONAL_USA, false);
                         HashSet<CIApisDocmuntTypeEntity> seconddocTypeList = new HashSet<>();
-                        seconddocTypeList.add(new CIApisDocmuntTypeEntity("C", CIAPISDef.NATIONAL_USA));
+                        seconddocTypeList.add(new CIApisDocmuntTypeEntity("CG", CIAPISDef.NATIONAL_USA));
                         ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setDocmuntTypeSelectList(seconddocTypeList);
+                        setApis(seconddocTypeList);
                         m_llayout_second_doc.setVisibility(View.VISIBLE);
                         m_llayout_second_doc.requestFocus();
                         m_llayout_Address_Info.setVisibility(View.GONE);
@@ -2046,21 +2042,161 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
                 HashSet<CIApisDocmuntTypeEntity> docTypeList = new HashSet<>();
                 docTypeList.add(new CIApisDocmuntTypeEntity("P", ""));
                 ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setDocmuntTypeSelectList(docTypeList);
+                setApis(docTypeList);
                 //第二證件-無
                 setSecondDocInfo("", "", false);
                 m_bHaveSeconDoc = false;
             }
         }
-
-//        HashSet<CIApisQryRespEntity.ApisRespDocObj> saVedDocs = new HashSet<>();
-//
-//        if (m_savedDocs != null) {
-//            for (CIApisQryRespEntity.ApisRespDocObj tmp : m_savedDocs) {
-//                saVedDocs.add(tmp);
-//            }
-//        }
         ((CIApisDocmuntTextFieldFragment)m_DocumentTypefragment).setSavedDocmuntSelectList(m_savedDocs);
+        ((CIApisDocmuntTextFieldFragment)m_BasicDocumentTypefragment).setSavedDocmuntSelectList(m_savedDocs);
+        ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setSavedDocmuntSelectList(m_savedDocs);
 
+        //APISModeCheck();
+    }
+
+    private void initalAPISObj(HashSet<CIApisDocmuntTypeEntity> docTypeList) {
+        Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
+
+        CIApisQryRespEntity QRTmp = new CIApisQryRespEntity();
+        CIApisQryRespEntity.CIApispaxInfo QRTmpPaxInfo = QRTmp.new CIApispaxInfo();
+
+        CIApisQryRespEntity.ApisRespDocObj objectTmp = QRTmp.new ApisRespDocObj();
+
+        objectTmp.documentType = docTypeList.iterator().next().code_1A;
+        objectTmp.documentName = CIAPISPresenter.getInstance().fetchApisDocmuntMap().get(docTypeList.iterator().next().code_1A).getName(locale);
+        objectTmp.deviceId = CIApplication.getDeviceInfo().getAndroidId();
+        objectTmp.mode = "I";
+        switch (docTypeList.iterator().next().code_1A) {
+            case "A":
+                objectTmp.docas = QRTmpPaxInfo.new Docas();
+                m_Docs_A = objectTmp;
+                break;
+            case "N":
+                objectTmp.basicDocuments = QRTmpPaxInfo.new BasicDocuments();
+                m_Docs_N = objectTmp;
+                break;
+            case "P":
+                objectTmp.otherDocuments = QRTmpPaxInfo.new OtherDocuments();
+                m_Docs_P = objectTmp;
+                break;
+            default:
+                objectTmp.otherDocuments = QRTmpPaxInfo.new OtherDocuments();
+                m_Docs_Other = objectTmp;
+                break;
+        }
+    }
+
+    private void setApis( HashSet<CIApisDocmuntTypeEntity> docTypeList) {
+        if (m_savedDocs == null || m_savedDocs.size() <= 0 ){
+
+            initalAPISObj(docTypeList);
+            return;
+        }
+        boolean bContains = false;
+
+        ApisInputData inputData = m_arApis.get(0);
+
+        for (CIApisQryRespEntity.ApisRespDocObj tmpObj : m_savedDocs) {
+            for(Iterator<CIApisDocmuntTypeEntity> iterator = docTypeList.iterator(); iterator.hasNext(); ) {
+                CIApisDocmuntTypeEntity data = iterator.next();
+                if (TextUtils.equals(tmpObj.documentType, data.code_1A)) {
+                    bContains = true;
+                    break;
+                }
+            }
+            if(bContains){
+                break;
+            }
+        }
+
+        if (!bContains) {
+            initalAPISObj(docTypeList);
+        } else{
+            for (CIApisQryRespEntity.ApisRespDocObj tmpObj : m_savedDocs) {
+                for(Iterator<CIApisDocmuntTypeEntity> iterator = docTypeList.iterator(); iterator.hasNext(); ) {
+                    CIApisDocmuntTypeEntity data = iterator.next();
+                    if (TextUtils.equals(tmpObj.documentType, data.code_1A)) {
+                        tmpObj.mode = "U";
+                        switch (tmpObj.documentType) {
+                            case "N":
+                                inputData.birthday = tmpObj.basicDocuments.birthday;
+                                inputData.gender = (tmpObj.basicDocuments.gender.equals(CIApisAddEntity.SEX_FEMALE)) ? TwoItemSelectBar.ESelectSMode.RIGHT : TwoItemSelectBar.ESelectSMode.LEFT;
+
+                                CIApisNationalEntity residentEntity = m_ResidentMap.get(tmpObj.basicDocuments.residence);
+                                if (null != residentEntity) {
+                                    inputData.residentCountryCd = tmpObj.basicDocuments.residence;
+                                    inputData.residentCountryName = residentEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
+                                } else {
+                                    inputData.residentCountryCd = "";
+                                    inputData.residentCountryName = "";
+                                }
+
+                                CIApisNationalEntity nationalityEntity = m_IssueMap.get(tmpObj.basicDocuments.nationality);
+                                if (null != nationalityEntity) {
+                                    inputData.nationalityCd = tmpObj.basicDocuments.nationality;
+                                    inputData.nationalityName = nationalityEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
+                                } else {
+                                    inputData.nationalityCd = "";
+                                    inputData.nationalityName = "";
+                                }
+
+                                if(first_n) {
+                                    m_boolDeafultN = true;
+                                    m_strDefaultNname = tmpObj.documentName;
+                                    m_Docs_N = tmpObj;
+                                    first_n = false;
+                                }
+                                break;
+                            case "A":
+                                CICheckInDocaEntity tmpDoca = new CICheckInDocaEntity();
+                                tmpDoca.Country_Sub_Entity = tmpObj.docas.country;
+                                tmpDoca.Traveler_City = tmpObj.docas.city;
+                                tmpDoca.Traveler_Address = tmpObj.docas.address;
+                                tmpDoca.Traveler_Postcode = tmpObj.docas.zipcode;
+                                inputData.Doca = tmpDoca;
+                                if (first_a) {
+                                    m_Docs_A = tmpObj;
+                                    first_a = false;
+                                }
+
+                                break;
+                            case "P":
+                                inputData.docNo = tmpObj.otherDocuments.documentNo;
+                                inputData.docExpiryDate = tmpObj.otherDocuments.expireDay;
+
+                                CIApisNationalEntity issueEntity = m_IssueMap.get(tmpObj.otherDocuments.issueCountry);
+                                if (null != issueEntity) {
+                                    inputData.issueCountryCd = tmpObj.otherDocuments.issueCountry;
+                                    inputData.issueCountryName = issueEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
+                                } else {
+                                    inputData.issueCountryCd = "";
+                                    inputData.issueCountryName = "";
+                                }
+                                if (first_p) {
+                                    m_Docs_P = tmpObj;
+                                    first_p = false;
+                                }
+
+                                break;
+                            default:
+                                inputData.secondDoc.docExpiryDate = tmpObj.otherDocuments.expireDay;
+                                inputData.secondDoc.docNo = tmpObj.otherDocuments.documentNo;
+                                inputData.secondDoc.docType = tmpObj.documentType;
+                                CIApisDocmuntTypeEntity getNameEntity = getDocumentTypeInfo(tmpObj.documentType, tmpObj.otherDocuments.issueCountry);
+                                inputData.secondDoc.docTypeName = getNameEntity.getName(CIApplication.getLanguageInfo().getLanguage_Locale());
+                                inputData.secondDoc.issueCountryCd = tmpObj.otherDocuments.issueCountry;
+                                CIApisNationalEntity othetdocnationalityEntity = m_IssueMap.get(tmpObj.otherDocuments.issueCountry);
+                                inputData.secondDoc.issueCountryName = othetdocnationalityEntity.getCountryName(CIApplication.getLanguageInfo().getLanguage_Locale());
+                                m_Docs_Other = tmpObj;
+                                break;
+
+                        }
+
+                    }
+                }
+            }
+        }
     }
 
     private void setDocumentInfo( String strDocType, String strIssueCountry, boolean bIsLock ){
@@ -2100,7 +2236,6 @@ public class CIAPISFragment extends BaseFragment implements View.OnClickListener
      * 重置第二證件區塊的資料
      */
     private void setSecondDocInfo(String strDocType, String strIssued_country, boolean bIsLock ) {
-
         ((CIApisDocmuntTextFieldFragment)m_SecondDocumentTypefragment).setDocmuntType("");
         m_SecondDocumentTypefragment.setText("");
         m_SecondDocumentTypefragment.setLock(false);

@@ -21,6 +21,7 @@ import ci.ws.Models.entities.CIApisNationalList;
 import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIApisResp;
 import ci.ws.Models.entities.CIApisStateEntity;
+import ci.ws.Models.entities.CICheckInEditAPIS_Resp;
 import ci.ws.Models.entities.CICompanionApisEntity;
 import ci.ws.Models.entities.CICompanionApisNameEntity;
 import ci.ws.Models.entities.CIApisAddEntity;
@@ -79,7 +80,7 @@ public class CIAPISPresenter {
 //        }
 //    }
 
-    /**取得Apis列表*/
+    /**取得Apis列表 201907 */
     public void InquiryMyApisListNewFromWS( String strCardNo,CIInquiryApisListListener listener ){
 
         if ( null == m_ApisModel ){
@@ -119,7 +120,7 @@ public class CIAPISPresenter {
         }
     }
 
-    public void InsertUpdateApisFromWS( String strCardNo,CIInquiryApisListListener listener , CIApisEntity ciApisEntity ) {
+    public void InsertUpdateApisFromWS( String strCardNo, CIInquiryApisListListener listener , CIApisAddEntity ciApisEntity ) {
         if( null == m_InsertUpdateApisModel ) {
             m_InsertUpdateApisModel = new CIInsertUpdateAPISModel(m_InsertUpdateCallback);
         }

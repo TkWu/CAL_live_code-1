@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import ci.function.Core.CIApplication;
-import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.TextField.CIApisDocmuntTextFieldFragment;
 import ci.ui.define.UiMessageDef;
@@ -30,7 +29,6 @@ import ci.ui.view.ImageHandle;
 import ci.ui.view.NavigationBar;
 import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
-import ci.ws.Models.entities.CIApisEntity;
 import ci.ws.Models.entities.CIApisNationalEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Presenter.CIAPISPresenter;
@@ -100,9 +98,9 @@ public class CIPersonalAPISDetialActivity extends BaseActivity implements View.O
 
     private TextView m_tvName = null;
 
-    private TextView m_tvdoctype = null;
+    private TextView m_tvdoctypeTitle = null;
     private TextView m_tvdoctypeData = null;
-    private TextView m_tvdocfreename = null;
+    private TextView m_tvdocfreenameTitle = null;
     private TextView m_tvdocfreenameData = null;
 
 
@@ -134,7 +132,6 @@ public class CIPersonalAPISDetialActivity extends BaseActivity implements View.O
         if (null != mode) {
             m_type = CIPersonalAddSaveAPISActivity.CIPersonalAddAPISType.valueOf(mode);
         }
-        SLog.d("m_type: "+m_type.name());
         String fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
         if (null != mode) {
             FUN_ENTRY = fun_entry;
@@ -189,12 +186,20 @@ public class CIPersonalAPISDetialActivity extends BaseActivity implements View.O
         m_tvName = (TextView) ViewContent.findViewById(R.id.tv_title);
         m_tvName.setSingleLine();
         m_tvName.setEllipsize(TextUtils.TruncateAt.END);
-        m_tvName.setText(m_strUserName);
+        m_tvName.setText(m_strUserName.replace(":"," "));
 
+
+        m_tvdoctypeTitle = (TextView) ViewContent.findViewById(R.id.tv_doctype_title);
+        m_tvdoctypeTitle.setText(getString(R.string.document_type)+":");
         m_tvdoctypeData = (TextView) ViewContent.findViewById(R.id.tv_doctype_value);
+        m_tvdoctypeData.setEllipsize(TextUtils.TruncateAt.END);
         m_tvdoctypeData.setText(getDocmuntName(m_strAPISCode));
 
+        m_tvdocfreenameTitle = (TextView) ViewContent.findViewById(R.id.tv_docfreename_title);
+        m_tvdocfreenameTitle.setText(getString(R.string.apis_my_freename_hint)+":");
         m_tvdocfreenameData = (TextView) ViewContent.findViewById(R.id.tv_docfreename_value);
+        m_tvdocfreenameData.setEllipsize(TextUtils.TruncateAt.END);
+        m_tvdocfreenameData.setMaxLines(2);
         m_tvdocfreenameData.setText(m_editApisEntity.documentName);
 
         m_tvdocattrs1 = (TextView) ViewContent.findViewById(R.id.tv_docattrs1_title);
@@ -413,6 +418,8 @@ public class CIPersonalAPISDetialActivity extends BaseActivity implements View.O
             intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, FUN_ENTRY);//個人／checkin入口分類
 
             intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, strData);
+
+            intent.putExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG, m_strUserName);
 
             intent.setClass(m_Context, CIPersonalAddSaveAPISActivity.class);
             startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);

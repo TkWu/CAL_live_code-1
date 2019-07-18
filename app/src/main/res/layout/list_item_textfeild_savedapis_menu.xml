@@ -68,6 +68,7 @@
                 android:layout_marginLeft="10px"
                 android:text="鄭宇容"
                 android:textSize="16px"
+                android:ellipsize="end"
                 style="@style/light" />
 
         </RelativeLayout>

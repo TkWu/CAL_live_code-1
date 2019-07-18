@@ -664,7 +664,7 @@
     <string name="document_number">Dokumentnummer</string>
     <string name="country_of_issuance">Ausstellungsland/-region</string>
     <string name="date_of_expiry">Ablaufdatum</string>
-    <string name="apis_save_change">Änderungen an den Reiseunterlagen speichern.</string>
+    <string name="apis_save_change">Save these travel documents to my account</string>
     <string name="apis_add_this_travel_doc_to_my_account">Diese Reiseunterlagen meinem Konto hinzufügen</string>
     <string name="addapis_label_address">Zieladresse (nur für Reisen in die USA)</string>
     <string name="city_stat">Abkürzung Bundesstaat</string>
@@ -934,11 +934,11 @@
     <string name="scheme_auth_eshopping_note_text">Die China Airlines-App teilt Ihre persönlichen Daten mit 華航 Sky Boutique.</string>
     <string name="scheme_auth_eshopping_button_agree">Zustimmen</string>
 
-    <string name="check_in_doc_reminder">請確認以下資料與您本次行程的旅行證件相符，\n<b>若資料不正確，將會影響您的行程。</b></string>
+    <string name="check_in_doc_reminder">Please check all your information is correct before submitting. \\n<b>Your travelling may be affected if any of the information does not match the information in your passport or other required visa. </b></string>
     <string name="check_in_input_basic_doc">基本資料</string>
     <string name="check_in_input_apis_doc">Dokumentdetails 1</string>
     <string name="check_in_input_apis_second_doc">Dokumentdetails 2</string>
-    <string name="check_in_input_apis_select_saved">使用已儲存的證件</string>
+    <string name="check_in_input_apis_select_saved">"Use valid saved document "</string>
     <string name="check_in_input_apis_input_others">輸入其他證件</string>
     <string name="check_in_input_visa">Visumsdetails</string>
     <string name="check_in_visa_index_title">VISA</string>
@@ -980,4 +980,6 @@
     <string name="braoding_pass_screenshots_fail">-----Screenshot fail</string>
     <string name="permissions_error">-----Access invalid. Function not available.</string>
     <string name="apis_my_freename_hint">自訂證件名稱</string>
+    <string name="warrning_apis_continue">Continue Check In</string>
+    <string name="Visa_input_hint">Please enter all your required visa document details below for entering your destination.</string>
 </resources>

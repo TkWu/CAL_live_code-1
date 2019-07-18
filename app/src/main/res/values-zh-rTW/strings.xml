@@ -216,7 +216,7 @@
     <string name="sign_up_terms_and_conditions_title">注意事項及相關權益與義務</string>
     <string name="sign_up_title">加入會員</string>
     <string name="sign_up_personal_detail">個人資訊</string>
-    <string name="sign_up_nationality">國家/地區</string>
+    <string name="sign_up_nationality">國籍/地區</string>
     <string name="sign_up_salutation">稱謂</string>
     <string name="sign_up_identity_card_no">身分證字號</string>
     <string name="sign_up_passport_chinese_name">護照中文姓名</string>
@@ -728,7 +728,7 @@
     <string name="document_number">證件號碼</string>
     <string name="country_of_issuance">發證國家/地區</string>
     <string name="date_of_expiry">效期截止日期</string>
-    <string name="apis_save_change">儲存變更</string>
+    <string name="apis_save_change">儲存/更新旅行證件至我的帳號</string>
     <string name="apis_add_this_travel_doc_to_my_account">新增旅行證件至我的帳號</string>
     <string name="apis_address_country">國家/地區</string>
     <string name="addapis_label_address">目的地地址(僅至美國需填寫)</string>
@@ -1040,8 +1040,8 @@
     <string name="check_in_input_basic_doc">基本資料</string>
     <string name="check_in_input_apis_doc">證件資訊1</string>
     <string name="check_in_input_apis_second_doc">證件資訊2</string>
-    <string name="check_in_input_apis_select_saved">使用已儲存的證件</string>
-    <string name="check_in_input_apis_input_others">輸入其他證件</string>
+    <string name="check_in_input_apis_select_saved">使用有效已存旅行證件</string>
+    <string name="check_in_input_apis_input_others">填寫其他旅行證件</string>
     <string name="check_in_input_visa">輸入簽證資料</string>
     <string name="check_in_visa_index_title">簽證</string>
     <string name="check_in_visa_document_number">簽證號碼</string>
@@ -1089,5 +1089,7 @@
     <string name="braoding_pass_screenshots_fail">截圖失敗</string>
     <string name="permissions_error">無開啟權限，無法使用此功能</string>
     <string name="apis_my_freename_hint">自訂證件名稱</string>
+    <string name="warrning_apis_continue">繼續預辦登機</string>
+    <string name="Visa_input_hint">請輸入您即將入境的目的地簽證資料。</string>
 
 </resources>

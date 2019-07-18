@@ -57,7 +57,7 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
 
         @Override
         public String GetTitle() {
-            return m_strUserName.replace(":","/");
+            return m_strUserName.replace(":"," ");
         }
     };
 
@@ -304,19 +304,31 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
             holder.m_rlayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     Intent intent = new Intent();
                     intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE, CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS.name()); //功能
                     intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
                     intent.putExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG, m_strUserName);//個人／checkin入口分類
+                    intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, GsonTool.toJson(ar_companionApis.get(position)));
 
-                    Bundle bundle = new Bundle();
-                    bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, ar_companionApis.get(position));
-
-                    intent.putExtras(bundle);
-                    intent.setClass(m_Context, CIPersonalAddSaveAPISActivity.class);
-                    //要改
+                    intent.setClass(m_Context, CIPersonalAPISDetialActivity.class);
                     startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);
                     overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+
+//                    Intent intent = new Intent();
+//                    intent.putExtra(UiMessageDef.BUNDLE_ACTIVITY_MODE, CIPersonalAddAPISActivity.CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS.name()); //功能
+//                    intent.putExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE, CIAddSaveAPISDocTypeActivity.EType.Personal.name());//個人／checkin入口分類
+//
+//                    Bundle bundle = new Bundle();
+//                    bundle.putSerializable(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE, ar_companionApis.get(position));
+//
+//                    intent.putExtras(bundle);
+//                    intent.setClass(m_Context, CIPersonalAddSaveAPISActivity.class);
+////要改
+//                    startActivityForResult(intent, UiMessageDef.REQUEST_CODE_PERSONAL_EDIT_APIS_TAG);
+//                    overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+
+
 
 
 //                    Intent intent = new Intent();
@@ -337,8 +349,6 @@ public class CIPersonalCompanionsAPISListActivity extends BaseActivity {
                 }
             });
 
-//            holder.m_tvName.setText(m_alData.get(position).GetHeadText());
-//            holder.m_tvText.setText(m_alData.get(position).GetBodyText());
             ar_companionApis = (ArrayList<CIApisQryRespEntity.ApisRespDocObj>)companionApisEntity.documentInfos.clone();
             holder.m_tvName.setText(ar_companionApis.get(position).documentName);
             holder.m_tvText.setText(getDocmuntName(ar_companionApis.get(position).documentType));

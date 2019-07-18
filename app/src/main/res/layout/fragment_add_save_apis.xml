@@ -27,7 +27,7 @@
         android:textColor="@color/white_four"
         android:textSize="16px"
         android:layout_below="@id/toolbar"
-        style="@style/light" />
+        style="@style/regular" />
     <View
         android:id="@+id/view_line"
         android:layout_width="match_parent"

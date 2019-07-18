@@ -18,7 +18,6 @@ import java.util.Iterator;
 import java.util.Locale;
 
 import ci.function.Core.CIApplication;
-import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.TextField.Adapter.CIMenusAdapter;
 import ci.ui.define.UiMessageDef;
@@ -45,7 +44,7 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
                 case EDIT_MY_APIS:
                 case EDIT_COMPANAIONS_APIS:
                     //return m_Context.getString(R.string.edit) +" "+ m_strAPISName;
-                    return m_Context.getString(R.string.edit) + " ";
+                    return m_Context.getString(R.string.edit);
                 default:
                     return m_Context.getString(R.string.add_apis);
             }
@@ -134,14 +133,6 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
     protected void initialLayoutComponent() {
 
         m_listView = (ListView) findViewById(R.id.activity_list_view_sign_up_select_menu);
-//        if(m_apisType == CIApisDocmuntTextFieldFragment.EType.Personal) {
-//            m_arDocmuntType = CIAPISPresenter.getInstance().fetchAllApisList();
-//        } else if( m_apisType == CIApisDocmuntTextFieldFragment.EType.CheckIn ){
-//            m_arDocmuntType = CIAPISPresenter.getInstance().fetchAllApisList();
-//            //m_arDocmuntType = CIAPISPresenter.getInstance().fetchApisList();
-//        } else {
-//            m_arDocmuntType = new ArrayList<>();
-//        }
         m_arDocmuntType = CIAPISPresenter.getInstance().fetchAllApisList();
         m_arRetainDocmuntType = (ArrayList<CIApisDocmuntTypeEntity>) m_arDocmuntType.clone();
 
@@ -235,7 +226,6 @@ public class CIAddSaveAPISDocTypeActivity extends BaseActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        SLog.i("CIAddSaveAPISDocType result", ":" + requestCode + "," + resultCode);
         super.onActivityResult(requestCode, resultCode, data);
         if ((requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_ADD_APIS_TAG ||
                 requestCode == UiMessageDef.REQUEST_CODE_PERSONAL_ADD_COMPANIONS_APIS_TAG) &&
