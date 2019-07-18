@@ -1255,4 +1255,6 @@
     <string name="event_name">Event</string>
     <string name="event_time">Date</string>
     <string name="event_location">Location</string>
+    <string name="warrning_apis_continue">Continue Check In</string>
+    <string name="Visa_input_hint">Please enter all your required visa document details below for entering your destination.</string>
 </resources>

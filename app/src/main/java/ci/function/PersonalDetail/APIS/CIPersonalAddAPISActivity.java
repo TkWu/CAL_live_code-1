@@ -73,7 +73,7 @@ public class CIPersonalAddAPISActivity extends BaseActivity implements
                     return m_Context.getString(R.string.add_apis);
                 case EDIT_MY_APIS:
                 case EDIT_COMPANAIONS_APIS:
-                    return m_Context.getString(R.string.edit) +" "+ m_strAPISName;
+                    return m_Context.getString(R.string.edit);
                 default:
                     return m_Context.getString(R.string.add_apis);
             }

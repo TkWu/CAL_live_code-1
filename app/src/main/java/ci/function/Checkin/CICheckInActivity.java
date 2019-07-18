@@ -23,14 +23,14 @@ import java.util.Map;
 
 import ci.function.Checkin.ADC.CICheckInVISAActivity;
 import ci.function.Core.CIApplication;
-import ci.function.Core.SLog;
 import ci.function.Main.BaseActivity;
 import ci.ui.define.UiMessageDef;
-import ci.ui.define.ViewIdDef;
 import ci.ui.define.ViewScaleDef;
+import ci.ui.dialog.CIAlertDialog;
 import ci.ui.object.CIPNRStatusManager;
 import ci.ui.view.NavigationBar;
 import ci.ui.view.StepHorizontalView;
+import ci.ws.Models.entities.CIApisAddEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CICheckInPax_ItineraryInfoEntity;
 import ci.ws.Models.entities.CICheckIn_ItineraryInfo_Req;
@@ -95,6 +95,7 @@ public class CICheckInActivity extends BaseActivity {
     private int                 m_iCurrStep             = FIRST_STEP;
     private String              m_strDeparture          = "TPE";
     private String              m_strArrive             = "FUK";
+    private String              m_isNeedVISA            = "";
 
     private String              m_strStartFrom          = BUNDLE_PARA_ENTRY_HOME_PAGE;
 
@@ -107,6 +108,7 @@ public class CICheckInActivity extends BaseActivity {
     private CICheckInPax_InfoEntity m_arSelectedFlights     = null;
     private CICheckInAllPaxResp m_arPassenger           = null;
     private ArrayList<CICheckIn_Resp> m_arCheckInPaxInfoResp =null;
+    private CIApisAddEntity ciApisEntity = null;
     private String                  m_strErrorMsg           = null;
     private boolean                 m_bArrivalUSA           = false;
     private int                     m_iViewId               = 0;
@@ -291,33 +293,22 @@ public class CICheckInActivity extends BaseActivity {
 
         @Override
         public void onEditAPISSuccess(String rt_code, String rt_msg, String strNeedVISA, ArrayList<CICheckInEditAPIS_Resp> arPaxInfo) {
-
             if ( null == m_arEditAPISPaxInfoResp ){
                 m_arEditAPISPaxInfoResp = new ArrayList<>();
             } else {
                 m_arEditAPISPaxInfoResp.clear();
             }
 
-            m_arEditAPISPaxInfoResp = arPaxInfo;
+            m_arEditAPISPaxInfoResp.addAll(arPaxInfo);
+            m_isNeedVISA = strNeedVISA;
 
-            if ( TextUtils.equals("Y", strNeedVISA) ){
-
-                hideProgressDialog();
-
-                Intent intent = new Intent();
-                Bundle bundle = new Bundle();
-                bundle.putString( CICheckInVISAActivity.BUNDLE_PARA_DEPARTURE, m_strDeparture);
-                bundle.putString( CICheckInVISAActivity.BUNDLE_PARA_ARRIVE, m_strArrive);
-
-                bundle.putSerializable( CICheckInVISAActivity.BUNDLE_PARA_PAXINFO_RESP, arPaxInfo);
-                intent.putExtras(bundle);
-                intent.setClass( CICheckInActivity.this, CICheckInVISAActivity.class );
-                startActivityForResult(intent, UiMessageDef.REQUEST_CODE_CHECK_IN_EDIT_APIS_VISA);
-
-            } else {
-                //不需要簽證，則可以直接執行 Check-in
-                onEditAPIS_Success(arPaxInfo);
+            if (ciApisEntity != null && ciApisEntity.apisInfo.getInfosObjArray().size() != 0){
+                CIAPISPresenter.getInstance().InsertUpdateApisFromWS(CIApplication.getLoginInfo().GetUserMemberCardNo(), m_onInquiryApisListListener, ciApisEntity);
+            }else{
+                continueToVISA();
             }
+
+
         }
 
         @Override
@@ -441,8 +432,6 @@ public class CICheckInActivity extends BaseActivity {
 
     public void onNextStep( FragmentManager fragmentManager, int iStep ){
 
-        //FlipAnimation flipAnimation = null;
-        SLog.d("onNextStep(FragmentManager) + iStep: "+iStep);
         boolean bFirst = true;
 
         Fragment    fragment = null;
@@ -584,7 +573,6 @@ public class CICheckInActivity extends BaseActivity {
 //    }
 
     private void onNextStep() {
-        SLog.d("onNextStep() + m_iCurrStep: "+m_iCurrStep);
         if (STEP_SELECT_FLIGHT == m_iCurrStep) {
 
             //紀錄選擇的航班
@@ -629,6 +617,14 @@ public class CICheckInActivity extends BaseActivity {
 
                 ArrayList<CICheckIn_Req> arInputApisPaxInfo = new ArrayList<>();
                 ArrayList<CICheckInEditAPIS_Req> arEditApisPaxInfo = new ArrayList<>();
+
+
+                ciApisEntity = new CIApisAddEntity();
+                CIApisQryRespEntity QRTmp = new CIApisQryRespEntity();
+                ciApisEntity.apisInfo.clearInfosObjArray();
+
+                ciApisEntity.apisInfo.cardNo = CIApplication.getLoginInfo().GetUserMemberCardNo();
+
                 for( int iPos = 0 ; iPos < m_arPassenger.size() ; iPos++ ) {
                     ArrayList<CICheckInPax_ItineraryInfoEntity> arInItineraryInfo = m_arPassenger.get(iPos).m_Itinerary_InfoList;
                     ArrayList<CICheckInApisEntity> apisEntity = (ArrayList<CICheckInApisEntity>)arInputApis.get(iPos).get("Apis");
@@ -641,16 +637,25 @@ public class CICheckInActivity extends BaseActivity {
                     arInputApisPaxInfo.add( getPaxInfo( m_arPassenger.get(iPos),strNationality , apisEntity , docaEntity) );
                     //EDITAPIS
                     arEditApisPaxInfo.add( getEditAPIS_PaxInfo( m_arPassenger.get(iPos),strNationality , apisEntity , docaEntity) );
+
+                    //AddApis
+                    if((ArrayList<CIApisQryRespEntity.ApisRespDocObj>)arInputApis.get(iPos).get("DocsToUPdate") != null) {
+                        CIApisQryRespEntity.CIApispaxInfo PaxInfoObj = QRTmp.new CIApispaxInfo();
+                        PaxInfoObj.firstName = m_arPassenger.get(iPos).First_Name;
+                        PaxInfoObj.lastName = m_arPassenger.get(iPos).Last_Name;
+                        PaxInfoObj.documentInfos = (ArrayList<CIApisQryRespEntity.ApisRespDocObj>)arInputApis.get(iPos).get("DocsToUPdate");
+                        ciApisEntity.apisInfo.addInfosObjArray(PaxInfoObj);
+                    }
                 }
 
                 if( null != m_arInputApisPaxInfo ) {
                     m_arInputApisPaxInfo.clear();
                 }
+
                 m_arInputApisPaxInfo = arInputApisPaxInfo;
 
                 //2018-09-03 調整為使用EditAPIS 上傳APIS資料
-                SLog.d("arEditApisPaxInfo: "+GsonTool.toJson(arEditApisPaxInfo));
-                SLog.d("m_arInputApisPaxInfo: "+GsonTool.toJson(m_arInputApisPaxInfo));
+                //SLog.d("QRTmp: "+GsonTool.toJson(ciApisEntity));
                 CICheckInPresenter.getInstance(m_CheckInListener).EditAPISFromWS(arEditApisPaxInfo);
                 //CICheckInPresenter.getInstance(m_CheckInListener).CheckInFromWS(arInputApisPaxInfo);
             }
@@ -740,7 +745,6 @@ public class CICheckInActivity extends BaseActivity {
                     if( isFillCompleteAndCorrect() ) {
 //                        m_iCurrStep = m_vStepHorizontalView.setNextSteps();
 //                        onNextStep(getSupportFragmentManager(), m_iCurrStep);
-                        SLog.d("onClick");
                         onNextStep();
                     } else {
                         showDialog(getString(R.string.warning), m_strErrorMsg);
@@ -792,6 +796,7 @@ public class CICheckInActivity extends BaseActivity {
         } else if( STEP_INPUT_APIS == m_iCurrStep ) {
 
             bIsComplete = m_InputAPISFragment.isFillCompleteAndCorrect();
+
             if( false == bIsComplete ) {
                 //2018-09-19 調整為內部判斷提供錯誤訊息
                 //m_strErrorMsg = getString(R.string.please_fill_all_text_field_that_must_to_fill);
@@ -1265,7 +1270,6 @@ public class CICheckInActivity extends BaseActivity {
 
     /**EditAPIS 成功後，將資料整理後 進行Check-in */
     private void onEditAPIS_Success( ArrayList<CICheckInEditAPIS_Resp> arEditAPISInfo ){
-
         if ( null == arEditAPISInfo || arEditAPISInfo.size() <= 0 ){
             return;
         }
@@ -1292,13 +1296,6 @@ public class CICheckInActivity extends BaseActivity {
      * 於危險品畫面取得已儲存的ＡＰＩＳ資料
      * **/
     private CIInquiryApisListListener m_InquiryApisListListener = new CIInquiryApisListListener() {
-//        @Override
-//        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisResp apis) {
-//
-//            saveMyApisFromDB(apis.arApisList);
-//
-//            updateMyApisView(apis.arApisList);
-//        }
 
         @Override
         public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisQryRespEntity apis) {
@@ -1308,19 +1305,10 @@ public class CICheckInActivity extends BaseActivity {
 
             m_iCurrStep = m_vStepHorizontalView.setNextSteps();
             onNextStep(getSupportFragmentManager(), m_iCurrStep);
-            //onNextStep(getSupportFragmentManager(), m_iCurrStep);
-            //saveMyApisFromDB(apis.paxInfo);
-            //updateMyApisView(apis.paxInfo);
-            //queryAndUpdateCompanionsApisView(apis.paxInfo);
         }
 
         @Override
         public void InquiryApisError(String rt_code, String rt_msg) {
-            //updateMyApisView(new ArrayList<CIApisQryRespEntity.CIApispaxInfo>());
-
-//            showDialog(getString(R.string.warning),
-//                    rt_msg,
-//                    getString(R.string.confirm));
             saved_apis_resonse = null;
             m_iCurrStep = m_vStepHorizontalView.setNextSteps();
             onNextStep(getSupportFragmentManager(), m_iCurrStep);
@@ -1380,5 +1368,90 @@ public class CICheckInActivity extends BaseActivity {
         public void onAuthorizationFailedError(String rt_code, String rt_msg) {
 //            isProcessWSErrCode(rt_code, rt_msg);
         }
+    };
+
+    private void continueToVISA(){
+        if ( TextUtils.equals("Y", m_isNeedVISA) ) {
+
+            hideProgressDialog();
+
+            Intent intent = new Intent();
+            Bundle bundle = new Bundle();
+            bundle.putString( CICheckInVISAActivity.BUNDLE_PARA_DEPARTURE, m_strDeparture);
+            bundle.putString( CICheckInVISAActivity.BUNDLE_PARA_ARRIVE, m_strArrive);
+
+            bundle.putSerializable( CICheckInVISAActivity.BUNDLE_PARA_PAXINFO_RESP, m_arEditAPISPaxInfoResp);
+            intent.putExtras(bundle);
+            intent.setClass( CICheckInActivity.this, CICheckInVISAActivity.class );
+            startActivityForResult(intent, UiMessageDef.REQUEST_CODE_CHECK_IN_EDIT_APIS_VISA);
+
+        } else {
+            //不需要簽證，則可以直接執行 Check-in
+
+            onEditAPIS_Success(m_arEditAPISPaxInfoResp);
+        }
+    }
+    private CIInquiryApisListListener m_onInquiryApisListListener = new CIInquiryApisListListener() {
+        @Override
+        public void InquiryApisSuccess(String rt_code, String rt_msg, CIApisQryRespEntity apis) { }
+
+        @Override
+        public void InquiryApisError(String rt_code, String rt_msg) { }
+
+        @Override
+        public void InsertApidSuccess(String rt_code, String rt_msg) { }
+
+        @Override
+        public void InsertApisError(String rt_code, String rt_msg) { }
+
+        //要改
+        @Override
+        public void UpdateApisSuccess(String rt_code, String rt_msg) { }
+        //要改
+        @Override
+        public void UpdateApisError(String rt_code, String rt_msg) { }
+
+        @Override
+        public void InsertUpdateApisSuccess(String rt_code, String rt_msg) {
+            continueToVISA();
+        }
+
+        @Override
+        public void InsertUpdateApisError(String rt_code, String rt_msg) {
+            showDialog(getString(R.string.warning),
+                    rt_msg,
+                    getString(R.string.warrning_apis_continue),
+                    null,
+                    m_alertDialoglistener);
+        }
+        @Override
+        public void DeleteApisSuccess(String rt_code, String rt_msg) { }
+
+        @Override
+        public void DeleteApisError(String rt_code, String rt_msg) { }
+
+        @Override
+        public void showProgress() {
+            showProgressDialog();
+        }
+
+        @Override
+        public void hideProgress() {
+            hideProgressDialog();
+        }
+
+        @Override
+        public void onAuthorizationFailedError(String rt_code, String rt_msg) {
+            isProcessWSErrorCodeByOtherActivity(rt_code, rt_msg);
+        }
+    };
+
+    CIAlertDialog.OnAlertMsgDialogListener m_alertDialoglistener = new CIAlertDialog.OnAlertMsgDialogListener() {
+        @Override
+        public void onAlertMsgDialog_Confirm() {
+            continueToVISA();
+        }
+        @Override
+        public void onAlertMsgDialogg_Cancel() {}
     };
 }

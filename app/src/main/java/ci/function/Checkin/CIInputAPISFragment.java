@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import ci.function.Base.BaseFragment;
-import ci.function.Core.SLog;
 import ci.ui.APIS.CIAPISFragment;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.view.ShadowBar.ShadowBarScrollview;
@@ -47,7 +46,6 @@ public class CIInputAPISFragment extends BaseFragment {
         String strName;
         String strFirstName;
         String strLastName;
-//        CIApisEntity Apis;
 
         CICheckInApisEntity Apis;
         CICheckInDocaEntity Doca;
@@ -233,7 +231,6 @@ public class CIInputAPISFragment extends BaseFragment {
                 if (apisEntity.strFirstName.equals(paxEntity.firstName) &&
                         apisEntity.strLastName.equals(paxEntity.lastName)) {
                     apisEntity.m_arApisRespDocObj = paxEntity.documentInfos;
-                    SLog.d("apisEntity.m_arApisRespDocObj: "+apisEntity.m_arApisRespDocObj.size());
                     break;
                 }else{
                     if (m_arAPISList.indexOf(apisEntity) == m_arAPISList.size()-1) {
@@ -247,34 +244,6 @@ public class CIInputAPISFragment extends BaseFragment {
 
     }
 
-    public void setPassengerInfoList(CICheckInAllPaxResp CheckInResp, boolean bArrivalUSA) {
-
-        //m_bArrivalUSA = bArrivalUSA;
-
-        m_arAPISList = new ArrayList<>();
-
-        if( null == CheckInResp ) {
-            return;
-        }
-
-        for(CICheckInPax_InfoEntity entity : CheckInResp ) {
-            if( null == entity.m_Itinerary_InfoList || 0 >= entity.m_Itinerary_InfoList.size() ) {
-                continue;
-            }
-
-            APISHolder apis = new APISHolder();
-            apis.strName = entity.First_Name + " " + entity.Last_Name;
-            apis.strFirstName = entity.First_Name;
-            apis.strLastName = entity.Last_Name;
-            apis.Apis = getApis(entity.m_Itinerary_InfoList.get(0).Apis);
-             apis.Doca = getDoca(entity.m_Itinerary_InfoList.get(0).Doca);
-            m_arAPISList.add(apis);
-
-            //final int iItinereryPos = entity.m_Itinerary_InfoList.size() - 1;
-            //m_strArrivalStation = entity.m_Itinerary_InfoList.get(iItinereryPos).Arrival_Station;
-        }
-
-    }
 
     private CICheckInDocaEntity getDoca(ArrayList<CICheckInPax_ItineraryInfoEntity.Doca> arDoca) {
 
@@ -301,7 +270,6 @@ public class CIInputAPISFragment extends BaseFragment {
         }
 
         //2016-09-28 修正邏輯改為只抓護照類別的APIS
-        //CICheckInPax_ItineraryInfoEntity.Apis entity = arApis.get(0);
         CICheckInPax_ItineraryInfoEntity.Apis tmpAPIS = null;
         CICheckInPax_ItineraryInfoEntity.Apis entity = null;
         for ( CICheckInPax_ItineraryInfoEntity.Apis apis : arApis ){
@@ -348,7 +316,6 @@ public class CIInputAPISFragment extends BaseFragment {
             apisEntity.Issue_Country = entity.Issue_Country;
         }
 
-        //
         if ( TextUtils.isEmpty( apisEntity.Document_Type ) ){
 
             apisEntity.Document_Type = "P";
@@ -388,10 +355,4 @@ public class CIInputAPISFragment extends BaseFragment {
 
         return arApis;
     }
-
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//    }
-
 }

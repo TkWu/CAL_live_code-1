@@ -6,10 +6,8 @@ import org.json.JSONObject;
 import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
 import ci.ws.Models.entities.CIApisAddEntity;
-import ci.ws.Models.entities.CIApisEntity;
 import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Models.entities.CIWSResult;
-import ci.ws.cores.CIWSShareManager;
 import ci.ws.cores.object.GsonTool;
 import ci.ws.define.WSConfig;
 

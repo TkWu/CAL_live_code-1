@@ -10,22 +10,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chinaairlines.mobile30.R;
-
 import java.util.ArrayList;
-import java.util.List;
-
 import ci.function.Core.CIApplication;
-import ci.function.Core.SLog;
 import ci.ui.define.ViewScaleDef;
-import ci.ui.dialog.CIAlertDialog;
 import ci.ws.Models.entities.CIApisDocmuntTypeEntity;
-import ci.ws.Models.entities.CIApisQryRespEntity;
 import ci.ws.Presenter.CIAPISPresenter;
 
 public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapter {
 
     private int               m_item_resource   = 0;
-    List<String> denyPermissionList = new ArrayList<>();
 
     public static class GroupHolder {
         TextView        bigCategory,        //大分類
@@ -47,13 +40,9 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
 
     }
 
-    private ViewScaleDef m_vScaleDef = null;
-    //private List<CIApisDocmuntTypeEntity> m_datas     = null;
-    //private List<CIApisQryRespEntity.ApisRespDocObj> m_datas     = null;
-    private Context m_context   = null;
+    private ViewScaleDef        m_vScaleDef = null;
+    private Context             m_context   = null;
     private ArrayList<CIAPISCheckInDocmuntTypeSelectMenuActivity.GroupItem> m_items     = null;
-    private CIAlertDialog m_dialog    = null;
-//    private EDoctypeMode  m_mode      = EDoctypeMode.OTHER;
 
     public CIAPISCheckInDocmuntTypeListAdapter(Context context,
                                         ArrayList<CIAPISCheckInDocmuntTypeSelectMenuActivity.GroupItem> items, int itemResource)
@@ -72,14 +61,6 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
     public ArrayList<CIAPISCheckInDocmuntTypeSelectMenuActivity.GroupItem> getItem(){
         return this.m_items;
     }
-
-    public void setDatas(List<CIApisDocmuntTypeEntity> datas){
-        //this.m_datas = datas;
-    }
-
-//    public void setMode(EDoctypeMode mode){
-//        this.m_mode = mode;
-//    }
 
     @Override
     public int getGroupCount() {
@@ -135,10 +116,10 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
 
         groupHolder = new GroupHolder();
         convertView = LayoutInflater.from(m_context).inflate(R.layout.layout_global_service_group_item, null);
-        groupHolder.bigCategory     = (TextView)convertView.findViewById(R.id.tv_big_category);
-        groupHolder.countyCateGory  = (TextView)convertView.findViewById(R.id.tv_county_category);
-        groupHolder.rlcountyCategory = (RelativeLayout)convertView.findViewById(R.id.rl_county_category);
-        groupHolder.rlBigCategory = (RelativeLayout)convertView.findViewById(R.id.rl_big_category);
+        groupHolder.bigCategory         = (TextView)convertView.findViewById(R.id.tv_big_category);
+        groupHolder.countyCateGory      = (TextView)convertView.findViewById(R.id.tv_county_category);
+        groupHolder.rlcountyCategory    = (RelativeLayout)convertView.findViewById(R.id.rl_county_category);
+        groupHolder.rlBigCategory       = (RelativeLayout)convertView.findViewById(R.id.rl_big_category);
         //自適應
         m_vScaleDef.selfAdjustAllView(groupHolder.rlBigCategory);
 
@@ -161,15 +142,14 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
             if (m_items.get(groupPosition).apis_group_type.equals(CIAPISCheckInDocmuntTypeSelectMenuActivity.CICheckInAPISGroupType.SAVED.name())) {
                 convertView = LayoutInflater.from(m_context).inflate(R.layout.list_item_textfeild_savedapis_menu, parent, false);
 
-                childHolder.tvDocfreename = (TextView) convertView.findViewById(R.id.tv_docfreename_value);
+                childHolder.tvDocfreename           = (TextView) convertView.findViewById(R.id.tv_docfreename_value);
+                childHolder.tvDoctypesTitle         = (TextView) convertView.findViewById(R.id.tv_doctype_title);
+                childHolder.tvDocnumberTitle        = (TextView) convertView.findViewById(R.id.tv_docattrs1_title);
+                childHolder.tvDocexpirydateTitle    = (TextView) convertView.findViewById(R.id.tv_docattrs2_title);
 
-                childHolder.tvDoctypesTitle = (TextView) convertView.findViewById(R.id.tv_doctype_title);
-                childHolder.tvDocnumberTitle = (TextView) convertView.findViewById(R.id.tv_docattrs1_title);
-                childHolder.tvDocexpirydateTitle = (TextView) convertView.findViewById(R.id.tv_docattrs2_title);
-
-                childHolder.tvDoctypes = (TextView) convertView.findViewById(R.id.tv_doctype_value);
-                childHolder.tvDocnumber = (TextView) convertView.findViewById(R.id.tv_docattrs1_value);
-                childHolder.tvDocexpirydate = (TextView) convertView.findViewById(R.id.tv_docattrs2_value);
+                childHolder.tvDoctypes              = (TextView) convertView.findViewById(R.id.tv_doctype_value);
+                childHolder.tvDocnumber             = (TextView) convertView.findViewById(R.id.tv_docattrs1_value);
+                childHolder.tvDocexpirydate         = (TextView) convertView.findViewById(R.id.tv_docattrs2_value);
 
                 //自適應
                 m_vScaleDef.selfAdjustAllView(childHolder.tvDoctypesTitle);
@@ -181,11 +161,10 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
                 m_vScaleDef.selfAdjustAllView(childHolder.tvDocnumber);
                 m_vScaleDef.selfAdjustAllView(childHolder.tvDocexpirydate);
 
-
-
                 childHolder.tvDocfreename.setText(m_items.get(groupPosition).docsObject.get(childPosition).documentName);
                 childHolder.tvDoctypes.setText(getDocmuntName(m_items.get(groupPosition).docsObject.get(childPosition).documentType));
-                if (!TextUtils.equals(m_items.get(groupPosition).docsObject.get(childPosition).documentType, "A") && !TextUtils.equals(m_items.get(groupPosition).docsObject.get(childPosition).documentType, "N")) {
+                if (!TextUtils.equals(m_items.get(groupPosition).docsObject.get(childPosition).documentType, "A") &&
+                        !TextUtils.equals(m_items.get(groupPosition).docsObject.get(childPosition).documentType, "N")) {
                     childHolder.tvDocnumber.setText(m_items.get(groupPosition).docsObject.get(childPosition).otherDocuments.documentNo);
                     childHolder.tvDocexpirydate.setText(m_items.get(groupPosition).docsObject.get(childPosition).otherDocuments.expireDay);
                 }else{
@@ -204,11 +183,6 @@ public class CIAPISCheckInDocmuntTypeListAdapter extends BaseExpandableListAdapt
         } else {
             childHolder = (CIAPISCheckInDocmuntTypeListAdapter.ChildHolder) convertView.getTag();
         }
-
-
-        //childHolder.tvDoctypes.setText(m_datas.get(m_items.get(groupPosition).childItems.get(childPosition).index).code_1A);
-
-        //SLog.d(m_items.get(groupPosition).docsObject.get(childPosition).documentName);
 
         return convertView;
     }

@@ -65,7 +65,7 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                     return m_Context.getString(R.string.add_apis);
                 case EDIT_MY_APIS:
                 case EDIT_COMPANAIONS_APIS:
-                    return m_Context.getString(R.string.edit) +" "+ m_strAPISName;
+                    return m_Context.getString(R.string.edit);
                 default:
                     return m_Context.getString(R.string.add_apis);
             }
@@ -85,7 +85,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
             CIPersonalAddSaveAPISActivity.this.finish();
         }
 
-        //要改
         @Override
         public void onDeleteClick() {
             CIAlertDialog dialog = new CIAlertDialog(m_Context, new CIAlertDialog.OnAlertMsgDialogListener() {
@@ -305,7 +304,6 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         if (null != mode) {
             m_type = CIPersonalAddAPISType.valueOf(mode);
         }
-        SLog.d("m_type: "+m_type.name());
         String fun_entry = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_FUN_ENTRANCE); //APIS編輯進入點  個人資訊／報到時
         m_apisType = CIApisDocmuntTextFieldFragment.EType.valueOf(fun_entry);
 
@@ -354,13 +352,13 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
 
                 break;
             case EDIT_COMPANAIONS_APIS:
-
                 String tmp_companyname = getIntent().getStringExtra(UiMessageDef.BUNDLE_PERSONAL_EDIT_APIS_USER_NAME_TAG);
                 if (tmp_companyname != null) {
                     m_strUserName = tmp_companyname;
                 }
-
-                m_editApisEntity = (CIApisQryRespEntity.ApisRespDocObj)getIntent().getSerializableExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE); //APIS類型物件
+                Gson gson = new Gson();
+                String edtmy_comapny_apis = getIntent().getStringExtra(CIAddSaveAPISDocTypeActivity.APIS_OBJ_VALUE);
+                m_editApisEntity = gson.fromJson(edtmy_comapny_apis, CIApisQryRespEntity.ApisRespDocObj.class); //APIS類型物件
 
                 if (m_editApisEntity != null)
                 {
@@ -395,9 +393,13 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
         m_rlayout.setOnTouchListener(this);
 
         m_tvName                    = (TextView) ViewContent.findViewById(R.id.tv_name);
-        if ( 0 < m_strUserName.length())
-            m_tvName.setText(m_strUserName);
-        SLog.d("m_type"+m_strUserName);
+        if ( 0 < m_strUserName.length()) {
+            if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+                m_tvName.setText(m_strUserName.replace(":"," "));
+            }else{
+                m_tvName.setText(m_strUserName);
+            }
+        }
 
         m_ll_companions_name        = (LinearLayout)ViewContent.findViewById(R.id.ll_companions_name);
         m_FirstNamefragment         = CIOnlyEnglishTextFieldFragment.newInstance("*" + getString(R.string.sign_up_first_name));
@@ -473,8 +475,8 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
                 m_ll_companions_name.setVisibility(View.GONE);
                 break;
             case EDIT_COMPANAIONS_APIS:
-                m_tvName.setVisibility(View.GONE);
-                m_ll_companions_name.setVisibility(View.VISIBLE);
+                m_tvName.setVisibility(View.VISIBLE);
+                m_ll_companions_name.setVisibility(View.GONE);
                 break;
         }
     }
@@ -647,14 +649,14 @@ public class CIPersonalAddSaveAPISActivity extends BaseActivity implements
     private void setEditAPISData() {
 
         //Set Membership data
-        if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
-            String[] companysname = m_strUserName.split(":");
-            m_FirstNamefragment.setText(companysname[0]);
-            m_FirstNamefragment.setLock(true);
-
-            m_LastNamefragment.setText( companysname[1]);
-            m_LastNamefragment.setLock(true);
-        }
+//        if( CIPersonalAddAPISType.EDIT_COMPANAIONS_APIS == m_type ) {
+//            String[] companysname = m_strUserName.split(":");
+//            m_FirstNamefragment.setText(companysname[0]);
+//            m_FirstNamefragment.setLock(true);
+//
+//            m_LastNamefragment.setText( companysname[1]);
+//            m_LastNamefragment.setLock(true);
+//        }
 
         m_DocumentTypefragment.setText(getDocmuntName(m_strAPISCode));
         ((CIApisDocmuntTextFieldFragment) m_DocumentTypefragment).setDocmuntType(m_strAPISCode);

@@ -28,6 +28,12 @@ public class CIApisQryRespEntity implements Serializable {
         }
     }
 
+    public void clearInfosObjArray(){
+        if (this.paxInfo != null){
+            paxInfo.clear();
+        }
+    }
+
     public ArrayList<CIApispaxInfo> getInfosObjArray(){
         if (this.paxInfo != null){
             return this.paxInfo;
