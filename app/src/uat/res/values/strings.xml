@@ -13,7 +13,8 @@
     <!-- 2017-03-09 更換為使用 PROD 的Domain-->
     <!-- BOOKTICKET_WS_URL -->
     <!--<string name="bookticket_ws_url" translatable="false">https://202.165.148.149/eRetailPortal/Mobile.svc/Mobile/Search</string>-->
-    <string name="bookticket_ws_url" translatable="false">https://calws08.china-airlines.com/eRetailPortal_uat/Mobile.svc/Mobile/Search</string>
+    <!--<string name="bookticket_ws_url" translatable="false">https://calws08.china-airlines.com/eRetailPortal_uat/Mobile.svc/Mobile/Search</string>-->
+    <string name="bookticket_ws_url" translatable="false">https://bookingportal.china-airlines.com/eRetailPortal/Mobile.svc/Mobile/Search</string>
 
     <string name="scheme" translatable="false">calmobile30uat</string>
     <string name="scheme_eshopping" translatable="false">caleshoppinguat</string>
@@ -23,6 +24,6 @@
     <string name="exquisitetravel_packagename" translatable="false">tw.com.mook.exquisitetravel</string>
 
     <!-- AI_SERVICE_WS_URL -->
-    <string name="ai_service_ws_url" translatable="false">https://calaics01t.china-airlines.com/chatindexfortest.aspx</string>
+    <string name="ai_service_ws_url" translatable="false">https://calaics01t.china-airlines.com/chatindex.aspx</string>
 
 </resources>

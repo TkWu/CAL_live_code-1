@@ -3,6 +3,7 @@ package ci.ui.WebView;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentManager;
@@ -10,6 +11,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -264,6 +266,14 @@ public class CIWebViewFragment extends BaseFragment {
         m_webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         m_webSettings.setSupportMultipleWindows(true);
 
+        //644336 20190723 Cookie
+        CookieManager cookieManager = CookieManager.getInstance();
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            CookieSyncManager.createInstance(getContext());
+        }
+
+        cookieManager.setAcceptCookie(true);
+        cookieManager.acceptCookie();
         loadUrl(m_strUrl);
 //    	m_webView.loadUrl(strUrl);
 

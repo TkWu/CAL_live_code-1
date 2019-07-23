@@ -2,7 +2,7 @@
 
     <string name="app_name" translatable="false">中華航空</string>
     <string name="app_version_name" translatable="false">1.0.34</string>
-    <string name="app_develop_name" translatable="false">R01</string>
+    <string name="app_develop_name" translatable="false">R02</string>
 
     <string name="action_example" translatable="false">Example action</string>
     <string name="action_settings" translatable="false">Settings</string>

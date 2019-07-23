@@ -17,6 +17,7 @@ import android.widget.ExpandableListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
+import com.chinaairlines.mobile30.BuildConfig;
 import com.chinaairlines.mobile30.R;
 
 import java.util.ArrayList;
@@ -306,13 +307,14 @@ public class CIAboutFragment extends BaseFragment
                 CIAboutChildItem.DEF_ABOUT_CHILD_ITEM_GLOBAL,
                 getString(R.string.global_customer_service),
                 null, R.drawable.ic_locate_service);
-// 移除ＡＩ功能
-//        if ( !TextUtils.isEmpty(getContext().getString(R.string.about_ai_service)) ){
-//            groupItem1.addChildItem(
-//                    CIAboutChildItem.DEF_ABOUT_CHILD_ITEM_AI,
-//                    getString(R.string.about_ai_service),
-//                    null, R.drawable.ic_ai_service);
-//        }
+// UAT 打開 ＡＩ功能
+        //if ( !TextUtils.isEmpty(getContext().getString(R.string.about_ai_service)) ){
+        if( BuildConfig.isLoggable && BuildConfig.DEBUG) {
+            groupItem1.addChildItem(
+                    CIAboutChildItem.DEF_ABOUT_CHILD_ITEM_AI,
+                    getString(R.string.about_ai_service),
+                    null, R.drawable.ic_ai_service);
+        }
         groupItem1.addChildItem(
                 CIAboutChildItem.DEF_ABOUT_CHILD_ITEM_FB,
                 getString(R.string.fb_message),

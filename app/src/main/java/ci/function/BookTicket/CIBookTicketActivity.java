@@ -1469,7 +1469,6 @@ public class CIBookTicketActivity extends BaseActivity
             m_presenter.fetchRromoteCodeToken(m_PromoCodeValue);
         }else{
             m_mapParams.put("Token",data.token);
-            SLog.d("Token of CRPID : "+data.token);
             m_presenter.fetchBookTicketWebData(getPostData());
         }
     }
@@ -1478,7 +1477,6 @@ public class CIBookTicketActivity extends BaseActivity
     public void onPromoteCodeTokenBinded(CIInquiryPromoteCodeTokenResp data) {
         if(null != data) {
             m_mapParams.put("Token",data.token);
-            SLog.d("Token of PromoteCode : "+data.token);
             m_isPromoCodeValid = true;
         }else{
             m_isPromoCodeValid = false;
