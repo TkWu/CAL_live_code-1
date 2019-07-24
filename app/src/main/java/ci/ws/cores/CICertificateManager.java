@@ -25,15 +25,14 @@ import ci.function.Core.SLog;
 public class CICertificateManager {
     //憑證名稱不能包含 * 字元
     public static final String CAL_CERT = "certificate/china-airlines.com.cer";
-    public static final String CAL_CERT_NEW = "certificate/BASE64_X509.cer";
     public static final String CAL_BOOKING_CERT = "certificate/www.china-airlines.com.cer";
+    public static final String CAL_BOOKING_CERT_NEW = "certificate/new_booking_base64.cer";
     public static final String GOOGLE_CERT = "certificate/GIAG3.cer";
     public static final String CAL_AI_CERT = "certificate/CALAICS01TCHINA-AIRLINESCOM.der";
 
-    private static boolean isDateNowBiggerThanUpdatetime() {
+    private static boolean isDateNowBiggerThanUpdatetime(String cer_update_date_utc) {
         boolean isBigger = false;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String cer_update_date_utc = "2019-06-14 01:00:00";
         sdf.setTimeZone(TimeZone.getTimeZone("gmt"));
         String gmtTimeNow = sdf.format(new Date());
 
@@ -52,7 +51,6 @@ public class CICertificateManager {
             isBigger = false;
         }
         return isBigger;
-
     }
 
     public static SSLContext getSSLContext(){
@@ -64,13 +62,14 @@ public class CICertificateManager {
             CertificateFactory cf = CertificateFactory.getInstance("X.509");
             // From https://www.washington.edu/itconnect/security/ca/load-der.crt
             AssetManager assetManager = CIApplication.getContext().getAssets();
-            InputStream caInputCAL = null;//  = assetManager.open(CAL_CERT);
-            if(isDateNowBiggerThanUpdatetime()){
-                caInputCAL = assetManager.open(CAL_CERT_NEW);
+            InputStream caInputCAL = assetManager.open(CAL_CERT);
+            InputStream caInputCALBooking = null;
+            if(isDateNowBiggerThanUpdatetime("2019-07-25 00:00:00")){
+                caInputCALBooking = assetManager.open(CAL_BOOKING_CERT_NEW);
             }else{
-                caInputCAL = assetManager.open(CAL_CERT);
+                caInputCALBooking = assetManager.open(CAL_BOOKING_CERT);
             }
-            InputStream caInputCALBooking = assetManager.open(CAL_BOOKING_CERT);
+
             InputStream caInputGoogle = assetManager.open(GOOGLE_CERT);
             InputStream caInputCAL_AI = assetManager.open(CAL_AI_CERT);
             Certificate certCAL,certCALBooking,certGoogle,calAI;
