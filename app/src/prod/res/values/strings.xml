@@ -56,6 +56,6 @@
     <string name="instagram_fanpage_US" translatable="false">https://www.instagram.com/chinaairlines.usa/</string>
 
     <!-- AI_SERVICE_WS_URL -->
-    <string name="ai_service_ws_url" translatable="false">https://calaics01t.china-airlines.com/chatindex.aspx</string>
+    <string name="ai_service_ws_url" translatable="false">https://calaics01.china-airlines.com/chatindex.aspx</string>
 
 </resources>
