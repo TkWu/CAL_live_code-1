@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chinaairlines.mobile30.R;
@@ -43,6 +44,8 @@ public class CIFlightDetialInputFragment extends BaseFragment
     private boolean                     m_bFlightNumberPrefix = true;
     private onFragmentDeletedListener   m_listener            = null;
 
+    private LinearLayout                m_llflightTicket=null;
+
     @Override
     protected int getLayoutResourceId() {
         return R.layout.fragment_flight_detial_input;
@@ -56,6 +59,7 @@ public class CIFlightDetialInputFragment extends BaseFragment
         m_ivAE = (ImageView) view.findViewById(R.id.iv_flight_nubmer_ae);
         m_tvCI = (TextView) view.findViewById(R.id.tv_ci);
         m_tvAE = (TextView) view.findViewById(R.id.tv_ae);
+        m_llflightTicket= (LinearLayout) view.findViewById(R.id.ll_ticketnumber);
 
         m_view = view;
 
@@ -75,6 +79,7 @@ public class CIFlightDetialInputFragment extends BaseFragment
         m_flightNumberFragment = CIOnlyNumberTextFieldFragment.newInstance(getString(R.string.flight_number));
         m_tickerNumberFragment = CIOnlyNumberTextFieldFragment.newInstance(getString(R.string.manage_miles_ticket_number));
         m_flightNumberFragment.setWidth(200);
+        m_llflightTicket.setVisibility(View.GONE);
 
     }
 
@@ -211,6 +216,10 @@ public class CIFlightDetialInputFragment extends BaseFragment
         data.flightNumber = m_flightNumberFragment.getText().trim();
         data.tickerNumber = m_tickerNumberFragment.getText().trim();
         return data;
+    }
+
+    public void setFlightNumberFragmentVisivle(){
+        m_llflightTicket.setVisibility(View.VISIBLE);
     }
 
     @Override

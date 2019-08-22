@@ -251,17 +251,17 @@ public class CIWebViewFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
         getParams();
-        m_webView = (WebView)view.findViewById(R.id.webView);
+        m_webView = (WebView) view.findViewById(R.id.webView);
 
         m_webSettings = m_webView.getSettings();
-        m_webSettings.setSupportZoom(true);					//縮放
+        m_webSettings.setSupportZoom(true);                    //縮放
         m_webSettings.setBuiltInZoomControls(true);
-        m_webSettings.setJavaScriptEnabled(true);			//啟用JavaScript
+        m_webSettings.setJavaScriptEnabled(true);            //啟用JavaScript
         m_webSettings.setLoadsImagesAutomatically(true);
-        m_webSettings.setUseWideViewPort(true);				//讓網頁以最適合的版面顯示
+        m_webSettings.setUseWideViewPort(true);                //讓網頁以最適合的版面顯示
         m_webSettings.setLoadWithOverviewMode(true);
         m_webSettings.setDomStorageEnabled(true);
-        m_webSettings.setDisplayZoomControls(false);		//不要顯示放大縮小的功能圖
+        m_webSettings.setDisplayZoomControls(false);        //不要顯示放大縮小的功能圖
         m_webSettings.setAppCacheEnabled(false);
         m_webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         m_webSettings.setSupportMultipleWindows(true);
@@ -270,6 +270,11 @@ public class CIWebViewFragment extends BaseFragment {
         CookieManager cookieManager = CookieManager.getInstance();
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             CookieSyncManager.createInstance(getContext());
+        }
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        {
+            CookieManager.getInstance().setAcceptThirdPartyCookies(m_webView, true);
         }
 
         cookieManager.setAcceptCookie(true);

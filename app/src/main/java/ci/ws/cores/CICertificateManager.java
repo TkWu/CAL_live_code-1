@@ -7,6 +7,9 @@ import java.security.KeyStore;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
@@ -22,8 +25,32 @@ public class CICertificateManager {
     //憑證名稱不能包含 * 字元
     public static final String CAL_CERT = "certificate/china-airlines.com.cer";
     public static final String CAL_BOOKING_CERT = "certificate/www.china-airlines.com.cer";
+    public static final String CAL_BOOKING_CERT_NEW = "certificate/new_booking_base64.cer";
     public static final String GOOGLE_CERT = "certificate/GIAG3.cer";
-    public static final String CAL_AI_CERT = "certificate/CALAICS01TCHINA-AIRLINESCOM.der";
+    public static final String CAL_AI_CERT = "certificate/CALAICS01CHINA-AIRLINESCOM.cer";
+
+    private static boolean isDateNowBiggerThanUpdatetime(String cer_update_date_utc) {
+        boolean isBigger = false;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        sdf.setTimeZone(TimeZone.getTimeZone("gmt"));
+        String gmtTimeNow = sdf.format(new Date());
+
+        Date dt1 = null;
+        Date dt2 = null;
+
+        try {
+            dt1 = sdf.parse(gmtTimeNow);
+            dt2 = sdf.parse(cer_update_date_utc);
+        } catch (java.text.ParseException e) {
+            e.printStackTrace();
+        }
+        if (dt1.getTime() > dt2.getTime()) {
+            isBigger = true;
+        } else if (dt1.getTime() < dt2.getTime()) {
+            isBigger = false;
+        }
+        return isBigger;
+    }
 
     public static SSLContext getSSLContext(){
         // Create the SSL connection
@@ -35,7 +62,13 @@ public class CICertificateManager {
             // From https://www.washington.edu/itconnect/security/ca/load-der.crt
             AssetManager assetManager = CIApplication.getContext().getAssets();
             InputStream caInputCAL = assetManager.open(CAL_CERT);
-            InputStream caInputCALBooking = assetManager.open(CAL_BOOKING_CERT);
+            InputStream caInputCALBooking = null;
+            if(isDateNowBiggerThanUpdatetime("2019-07-25 00:00:00")){
+                caInputCALBooking = assetManager.open(CAL_BOOKING_CERT_NEW);
+            }else{
+                caInputCALBooking = assetManager.open(CAL_BOOKING_CERT);
+            }
+
             InputStream caInputGoogle = assetManager.open(GOOGLE_CERT);
             InputStream caInputCAL_AI = assetManager.open(CAL_AI_CERT);
             Certificate certCAL,certCALBooking,certGoogle,calAI;
