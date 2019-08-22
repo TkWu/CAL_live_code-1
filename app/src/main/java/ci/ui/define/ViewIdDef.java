@@ -146,9 +146,7 @@ public class ViewIdDef {
         MenuItemList.add(arSideMenuList);
         //三
         arSideMenuList = new ArrayList<SideMenuItem>();
-//        if ( !TextUtils.isEmpty(context.getString(R.string.menu_title_ai_service)) ){
-//            arSideMenuList.add(new SideMenuItem(ViewIdDef.VIEW_ID_AI_SERVICE, R.string.menu_title_ai_service, R.drawable.ic_menu_ai_service, R.drawable.ic_menu_ai_service_n, null, false, 0));
-//        }
+        arSideMenuList.add(new SideMenuItem(ViewIdDef.VIEW_ID_AI_SERVICE, R.string.menu_title_ai_service, R.drawable.ic_menu_ai_service, R.drawable.ic_menu_ai_service_n, null, false, 0));
         arSideMenuList.add(new SideMenuItem(ViewIdDef.VIEW_ID_ABOUT, R.string.menu_title_about, R.drawable.ic_about_china_airlines, R.drawable.ic_about_china_airlines_n, CIAboutFragment.class, false, 0));
         arSideMenuList.add(new SideMenuItem(ViewIdDef.VIEW_ID_SETTING, R.string.menu_title_setting, R.drawable.ic_settings, R.drawable.ic_settings_n, CISettingFragment.class, false, 0));
         MenuItemList.add(arSideMenuList);
