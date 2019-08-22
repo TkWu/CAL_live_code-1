@@ -1,5 +1,7 @@
 package ci.function.BoardingPassEWallet.ExtraServices;
 
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentManager;
@@ -15,7 +17,12 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.chinaairlines.mobile30.R;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
 
+import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.util.Locale;
 
@@ -82,6 +89,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
     private ImageView       m_ivBlue        = null;
     private ImageView       m_ivLogo        = null;
     private ImageView       m_ivService     = null;
+    private ImageView       m_ivQRCode      = null;
 
     private TextView        m_tvName        = null,
                             m_tvNo          = null,
@@ -101,6 +109,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
     private RelativeLayout  m_rlLine4       = null;
     private LinearLayout    m_llLine4       = null,
                             m_llLine5       = null,
+                            m_llLine6       = null,
                             m_llBarcode     = null,
                             m_list          = null;
 
@@ -108,6 +117,9 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                             m_vLine4        = null;
 
     private DashedLine      m_dl            = null;
+
+    private final int BLACK = Color.BLACK;
+    private final int WHITE = Color.WHITE;
 
     @Override
     protected int getLayoutResourceId() {
@@ -132,6 +144,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
         m_ivHold        = (ImageView) ViewContent.findViewById(R.id.iv_hole);
         m_ivUsed        = (ImageView) ViewContent.findViewById(R.id.iv_used);
         m_ivBlue        = (ImageView) ViewContent.findViewById(R.id.iv_blue);
+        m_ivQRCode      = (ImageView) ViewContent.findViewById(R.id.iv_qrcode);
 
         m_tvName        = (TextView) ViewContent.findViewById(R.id.tv_name);
         String strName  = "";
@@ -171,6 +184,8 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
         m_tvline5       = (TextView) ViewContent.findViewById(R.id.tv_line5);
         m_tvline5Data   = (TextView) ViewContent.findViewById(R.id.tv_line5_data);
         m_llLine5       = (LinearLayout)ViewContent.findViewById(R.id.ll_line5);
+
+        m_llLine6       = (LinearLayout)ViewContent.findViewById(R.id.ll_line6);
 
         //第三條分隔線
         m_vLine3        = (View) ViewContent.findViewById(R.id.v_line3);
@@ -234,6 +249,8 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
         vScaleDef.selfAdjustSameScaleView(m_ivService, 32, 32);
         vScaleDef.selfAdjustSameScaleView(m_ivLogo, 130, 20);
 
+        vScaleDef.selfAdjustSameScaleView(m_ivQRCode, 186.7, 186.7);
+
         ViewTreeObserver vto = m_shadowScrollView.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
@@ -274,6 +291,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
         int iBagRes = R.drawable.ic_baggage_b_services;
         int iHsrRes = R.drawable.ic_vip_b_high_speed_rail;
         int iFamilyRes = R.drawable.ic_family_couch_b;
+
 
         if ( "Y".equals(m_ExtraServiceData.STATUS) ){
 //        if( true == m_bUsed ) {
@@ -333,6 +351,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_llBarcode.setVisibility(View.GONE);
                 m_vLine4.setVisibility(View.GONE);
                 m_llLine5.setVisibility(View.GONE);
+                m_llLine6.setVisibility(View.GONE);
 
                 m_tvNotice.setText(getString(R.string.boarding_pass_extra_services_wifi_notice));
                 break;
@@ -364,6 +383,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_tvline5Data.setText(strDate);
 
                 m_llBarcode.setVisibility(View.GONE);
+                m_llLine6.setVisibility(View.GONE);
 
                 m_tvNotice.setText(getString(R.string.boarding_pass_extra_services_vip_notice));
                 break;
@@ -392,6 +412,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                     m_tvline5Data.setText(m_ExtraServiceData.THSRDEPSTN);
 
                 m_llBarcode.setVisibility(View.GONE);
+                m_llLine6.setVisibility(View.GONE);
 
                 m_tvNotice.setText(getString(R.string.boarding_pass_extra_services_thsr_notice));
                 break;
@@ -419,8 +440,81 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_llBarcode.setVisibility(View.GONE);
                 m_vLine4.setVisibility(View.GONE);
                 m_llLine5.setVisibility(View.GONE);
+                m_llLine6.setVisibility(View.GONE);
+                break;
+            case EVENT:
+
+                /**
+                 * 645400 - EVENT, Gold卡以上為紅色
+                 */
+
+                String  strCardType = CIApplication.getLoginInfo().GetCardType();
+
+                if ("N".equals(m_ExtraServiceData.STATUS)) {
+                    if (!("DYNA".equals(strCardType))) {
+                        m_ivBlue.setImageResource(R.drawable.bg_extra_services_card_red);
+                    }
+                }
+
+
+                m_ivService.setImageResource(iVipRes);
+                m_tvService.setText(getString(R.string.event_vip));
+
+                m_tvline1.setText(getString(R.string.event_name));
+                if ( null != m_ExtraServiceData.EVENTNAME )
+                    m_tvline1Data.setText(m_ExtraServiceData.EVENTNAME);
+
+                m_tvline2.setText(getString(R.string.event_location));
+                if ( null != m_ExtraServiceData.EVENTPLACE ){
+                    //去掉空格
+                    m_tvline2Data.setText(m_ExtraServiceData.EVENTPLACE.replaceAll("\\s+", ""));
+                }
+
+                m_tvline3.setText(getString(R.string.event_time));
+                if ( null != m_ExtraServiceData.EVENTTIME )
+                    m_tvline3Data.setText(m_ExtraServiceData.EVENTTIME);
+
+                m_tvline4.setVisibility(View.GONE);
+
+                m_tvline5.setVisibility(View.GONE);
+
+                m_llBarcode.setVisibility(View.GONE);
+
+                m_ivQRCode.setImageBitmap(encodeToQRCode(m_ExtraServiceData.EVENTCODE,186));
+
+                m_llLine6.setVisibility(View.VISIBLE);
+
+                m_tvNotice.setVisibility(View.VISIBLE);
+
+
+
                 break;
         }
+    }
+
+    private Bitmap encodeToQRCode(final String strData , final int iWidth) {
+        BitMatrix result;
+        try {
+            String strUtf8Data = new String(strData.getBytes("UTF-8"),"ISO-8859-1");;
+            result = new MultiFormatWriter().encode(strUtf8Data, BarcodeFormat.QR_CODE,iWidth,iWidth);
+        } catch (WriterException e) {
+            // Unsupported format
+            return null;
+        } catch ( UnsupportedEncodingException e) {
+            return null;
+        }
+        int w = result.getWidth();
+        int h = result.getHeight();
+        int[] pixels = new int[w * h];
+        for (int y = 0; y < h; y++) {
+            int offset = y * w;
+            for (int x = 0; x < w; x++) {
+                pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
+            }
+        }
+        Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.RGB_565);
+        bitmap.setPixels(pixels, 0, iWidth, 0, 0, w, h);
+        return bitmap;
     }
 
     private  void setExtraBagUI(int iBagRes){
@@ -483,6 +577,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
 
         m_llBarcode.setVisibility(View.GONE);
         m_llLine5.setVisibility(View.GONE);
+        m_llLine6.setVisibility(View.GONE);
     }
 
     @Override

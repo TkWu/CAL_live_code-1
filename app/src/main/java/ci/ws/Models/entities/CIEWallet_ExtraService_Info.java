@@ -158,6 +158,23 @@ public class CIEWallet_ExtraService_Info implements Serializable, Cloneable {
     @SerializedName("FLIGHT_INFO")
     public FlightInfoList Flight_Info;
 
+
+    /**活動名稱*/
+    @Expose
+    public String EVENTNAME;
+
+    /**活動日期*/
+    @Expose
+    public String EVENTTIME;
+
+    /**活動場次*/
+    @Expose
+    public String EVENTPLACE;
+
+    /**活動QRCODE*/
+    @Expose
+    public String EVENTCODE;
+
     @Override
     public Object clone() {
         try {

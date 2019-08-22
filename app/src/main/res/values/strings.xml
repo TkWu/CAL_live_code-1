@@ -1234,4 +1234,8 @@
     <string name="braoding_pass_screenshots_success">Screenshot success\nPlease manaully remove the screenshot and re-keep again. Thank you for your cooperation.</string>
     <string name="braoding_pass_screenshots_fail">Screenshot fail</string>
     <string name="permissions_error">Access invalid. Function not available.</string>
+    <string name="event_vip">VIP EVENT</string>
+    <string name="event_name">Event</string>
+    <string name="event_time">Date</string>
+    <string name="event_location">Location</string>
 </resources>

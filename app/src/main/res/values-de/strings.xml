@@ -975,4 +975,8 @@
     <string name="youngadults">Young Adults</string>
     <string name="bookticket_corporate_id_title">Corporate Id</string>
     <string name="bookticket_corporate_id_code">Corporate Id (Optional)</string>
+    <string name="event_vip">VIP EVENT</string>
+    <string name="event_name">Event</string>
+    <string name="event_location">Location</string>
+    <string name="event_time">Date</string>
 </resources>

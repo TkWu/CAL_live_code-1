@@ -1082,5 +1082,9 @@
     <string name="braoding_pass_screenshots_success">截圖成功\n若航班有異動,需重新截圖</string>
     <string name="braoding_pass_screenshots_fail">截圖失敗</string>
     <string name="permissions_error">無開啟權限，無法使用此功能</string>
+    <string name="event_vip">貴賓活動</string>
+    <string name="event_time">日期</string>
+    <string name="event_name">活動名稱</string>
+    <string name="event_location">場次</string>
 
 </resources>
