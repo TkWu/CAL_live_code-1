@@ -53,7 +53,7 @@ public class CIExtraServiceRecyclerViewAdapter extends RecyclerView.Adapter<Recy
      *  EB:超重行李加購
      *  */
     public enum EServiceType{
-        WIFI, ExtraBaggage, VIP, THSR, FamilyCouch, EB
+        WIFI, ExtraBaggage, VIP, THSR, FamilyCouch, EB, EVENT
     }
 
 
@@ -286,6 +286,11 @@ public class CIExtraServiceRecyclerViewAdapter extends RecyclerView.Adapter<Recy
 //                case FAMILY:
                     extraServiceHolder.ivServiceType.setBackgroundResource(iFamilyRes);
                     extraServiceHolder.tvServiceType.setText(m_context.getString(R.string.family_couch));
+                    break;
+                case "EVENT":
+//                case FAMILY:
+                    extraServiceHolder.ivServiceType.setBackgroundResource(iVipRes);
+                    extraServiceHolder.tvServiceType.setText(m_context.getString(R.string.event_vip));
                     break;
             }
 
