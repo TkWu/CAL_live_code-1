@@ -632,7 +632,11 @@
     <string name="departure_date_only_within_6_months">出發日(6個月內)</string>
     <string name="notice">注意事項</string>
     <string name="notice_message_content_1">1. 若您在 6 個月內搭乘華航/華信自營航班(機票號碼開頭 297/803) 但未累積哩程，請輸入相關資料即可辦理哩程補登。</string>
-    <string name="notice_message_content_2">2. 使用訂位艙等 G/X/O/A/S/L 的機票不予累積哩程。</string>
+    <string name="notice_message_content_2">2. 由於班機搭乘資訊更新尚需作業時間，部分航班將無法於當日補登哩程。</string>
+    <string name="notice_message_content_3">3. 若您的訂位姓名與會員卡上之姓名不相符，將無法於網上成功補登哩程，請提供登機證、護照影本、機票收據或存根洽華航各地會員服務專線(請設連結https://www.china-airlines.com/tw/zh/member/member-service-hotline )申請哩程補登。</string>
+    <string name="notice_message_content_4">4. 請保留機票收據或存根及登機證至哩程成功累計到您的會員帳戶。</string>
+    <string name="notice_message_content_5">5. 五折及五折以下之優待票、免費機票、酬賓機票〈訂位艙等 X/Z/O〉、嬰兒票、團體票〈訂位艙等 G〉、促銷機票〈訂位艙等 S/L/X〉、勞工票、交換機票(Barter Ticket)、包機票(Charter Ticket)、超重行李票(Excess Baggage Ticket)、航空及旅行同業折扣票等，均無法累積飛行哩程。</string>
+    <string name="notice_message_content_6">6. 網上補登哩程將於4週內完成核對並予以更正。</string>
     <string name="reclaim_completed_message">哩程補登將於 4 週內完成核對並予以更正。</string>
     <string name="back_to_manage_miles">回到哩程管理</string>
     <string name="your_miles_has_been_update">更新里程</string>
@@ -1066,7 +1070,7 @@
     <string name="find_my_booking_baggage_notes">注意事項</string>
     <string name="find_my_booking_baggage_notes_content">
         \n
-        1. 目前僅提供由桃園/首爾/新加坡/法蘭克福/紐約/舊金山出發，並於劃位櫃台完成報到及託運行李之旅客查詢行李狀態。\n\n
+        1. 目前僅提供由桃園/首爾/新加坡/法蘭克福/紐約/舊金山/溫哥華出發，並於劃位櫃台完成報到及託運行李之旅客查詢行李狀態。\n\n
         2. 開放可查詢時間為班機抵站後3天內。\n\n
 		3. 所有行李動態的顯示時間為查詢機場位置的當地時間。\n\n
 		4. 若行程中包含中華航空公司以外或其連接中華航空以外的航空公司，行李動態追蹤信息將無法顯示， 請與主要乘載的航空公司聯繫，了解您的行李狀態。\n\n

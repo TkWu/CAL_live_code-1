@@ -639,8 +639,12 @@
     <string name="arrival_airport">抵达机场</string>
     <string name="departure_date_only_within_6_months">出发日(6 个月内)</string>
     <string name="notice">注</string>
-    <string name="notice_message_content_1">1. 若您在6 个月内搭乘华航/华信自营航班(机票号码开头297/803) 但未累积哩程，请输入相关资料即可办理哩程补登</string>
-    <string name="notice_message_content_2">2. 使用订位舱等G/X/O/A/S/L 的机票不予累积哩程</string>
+    <string name="notice_message_content_1">1. 若您在6 个月内搭乘华航/华信自营航班(机票号码开头297/803) 但未累积哩程，请输入相关资料即可办理哩程补登。</string>
+    <string name="notice_message_content_2">2. 由于班机搭乘信息更新尚需作業时间，部分航班将无法于当日补登哩程。</string>
+    <string name="notice_message_content_3">3. 若您的订位姓名与会员卡上之姓名不相符，将无法于网上成功补登哩程，请提供登机证、护照复印件、机票收据或存根洽华航各地会员服务专线(请设链接https://www.china-airlines.com/tw/zh/member/member-service-hotline )申请哩程补登。</string>
+    <string name="notice_message_content_4">4. 请保留机票收据或存根及登机证至哩程成功累计到您的会员账户。</string>
+    <string name="notice_message_content_5">5. 五折及五折以下之优待票、免费机票、酬宾机票〈订位舱等 X/Z/O〉、婴儿票、团体票〈订位舱等 G〉、促销机票〈订位舱等 S/L/X〉、劳工票、交换机票(Barter Ticket)、包机票(Charter Ticket)、超重行李票(Excess Baggage Ticket)、航空及旅行同业折扣票等，均无法累积飞行哩程。</string>
+    <string name="notice_message_content_6">6. 网上补登哩程将于4周内完成核对并予以更正。</string>
     <string name="reclaim_completed_message">哩程补登将于4 周内完成核对并予以更正。</string>
     <string name="back_to_manage_miles">回到哩程管理</string>
     <string name="your_miles_has_been_update">更新哩程</string>
@@ -1083,7 +1087,7 @@
     <string name="find_my_booking_baggage_notes">注意事项</string>
     <string name="find_my_booking_baggage_notes_content">
         \n
-        1. 目前仅提供由桃园/首尔/新加坡/法兰克福/纽约/旧金山出发，并于划位柜台完成报到及讬运行李之旅客查询行李状态。\n\n
+        1. 目前仅提供由桃园/首尔/新加坡/法兰克福/纽约/旧金山/温哥华出发，并于划位柜台完成报到及讬运行李之旅客查询行李状态。\n\n
         2. 开放可查询时间为班机抵站后3天内。\n\n
 		3. 所有行李动态的显示时间为查询机场位置的当地时间。\n\n
 		4. 若行程中包含中华航空公司以外或其连接中华航空以外的航空公司，行李动态追踪信息将无法显示， 请与主要乘载的航空公司联系，了解您的行李状态。\n\n
