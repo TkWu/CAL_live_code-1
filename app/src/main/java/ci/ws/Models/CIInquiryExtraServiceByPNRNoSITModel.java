@@ -18,6 +18,7 @@ import ci.ws.Models.entities.CIEWallet_ExtraService_List;
 import ci.ws.Models.entities.CIExtraServiceResp;
 import ci.ws.Models.entities.CIInquiryExtraServicesDBEntity;
 import ci.ws.Models.entities.CIWSResult;
+import ci.ws.cores.CIWSShareManager;
 import ci.ws.cores.object.GsonTool;
 import ci.ws.define.WSConfig;
 
@@ -57,7 +58,8 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
         PNR_ID ,
         TICKET,
         Language,
-        Version
+        Version,
+        login_token
     }
 
     private enum eRespParaTag {
@@ -129,6 +131,7 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
             m_jsBody.put( eParaTag.First_Name.name(),reqData.First_Name_C);
             m_jsBody.put( eParaTag.Last_Name.name(), reqData.Last_Name_C);
             m_jsBody.put( eParaTag.PNR_List.name(),  array);
+            m_jsBody.put( eParaTag.login_token.name(), CIWSShareManager.getAPI().getLoginToken());
 
             //TICKET登入
             JSONObject jsTicket = new JSONObject();
