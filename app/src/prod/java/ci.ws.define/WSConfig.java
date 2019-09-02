@@ -22,6 +22,8 @@ public class WSConfig extends BaseWSConfig{
 
     /**WS, 使用測試的假資料的Flag, 正式機環境不使用假資料*/
     public static final Boolean WS_TESTMODE                     = false;
+    //public static final Boolean Todd_WS_TESTMODE               = true;
+
     /**定義假資料的檔名*/
     public static final String FlightStatus                     = "";
     public static final String FlightStatus_station             = "";
@@ -64,4 +66,6 @@ public class WSConfig extends BaseWSConfig{
     public static final String CCPage                           = "";
     public static final String EBPayment                        = "";
     public static final String InquiryPromoteCodeToken          = "";
+
+    public static final String extra_service_vip_act          = "extra_service_vip_act.json";
 }

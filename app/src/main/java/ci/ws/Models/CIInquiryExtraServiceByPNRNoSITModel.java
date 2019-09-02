@@ -164,7 +164,9 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
 
     @Override
     protected void DecodeResponse_Success(CIWSResult respBody, String code) {
-
+//        if (WSConfig.Todd_WS_TESTMODE){
+//            respBody = ResultCodeCheck(getJsonFile(WSConfig.extra_service_vip_act));
+//        }
         CIExtraServiceResp List = null;
         try {
             JSONObject jsResp = new JSONObject(respBody.strData);

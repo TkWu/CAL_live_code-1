@@ -14,7 +14,7 @@ import com.chinaairlines.mobile30.BuildConfig;
 public class SLog {
 
     private static final boolean enable = BuildConfig.isLoggable && BuildConfig.DEBUG;
-
+    //private static final boolean enable = true;
     private SLog() {
         // None Instance
     }

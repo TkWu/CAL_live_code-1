@@ -313,8 +313,8 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ll_line6"
+        <RelativeLayout
+            android:id="@+id/rl_line6"
             android:layout_width="300px"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -324,13 +324,12 @@
                 android:id="@+id/iv_qrcode"
                 android:layout_width="186.7px"
                 android:layout_height="186.7px"
-                android:layout_below="@+id/tv_title"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20px"
                 android:background="@drawable/bg_iv_grey_line"
+                android:layout_centerInParent="true"
                 android:scaleType="fitXY" />
 
-        </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
     <RelativeLayout
