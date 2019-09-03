@@ -64,6 +64,7 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
         ExtraService,
     }
 
+
     private static final String API_NAME = "/CIAPP/api/InquiryExtraServiceByPNRNoSIT";
     private CallBack m_Callback = null;
     private RuntimeExceptionDao<CIInquiryExtraServicesDBEntity, Integer> m_dao
