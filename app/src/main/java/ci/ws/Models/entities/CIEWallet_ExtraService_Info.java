@@ -165,7 +165,7 @@ public class CIEWallet_ExtraService_Info implements Serializable, Cloneable {
 
     /**活動日期*/
     @Expose
-    public String EVENTTIME;
+    public String EVENTDATE;
 
     /**活動場次*/
     @Expose
@@ -173,8 +173,12 @@ public class CIEWallet_ExtraService_Info implements Serializable, Cloneable {
 
     /**活動QRCODE*/
     @Expose
-    //public String EVENTCODE;
     public String CODE;
+
+
+    /**活動NOTICE*/
+    @Expose
+    public String NOTICE;
 
     @Override
     public Object clone() {

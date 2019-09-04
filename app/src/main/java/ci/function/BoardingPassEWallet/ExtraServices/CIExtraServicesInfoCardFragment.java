@@ -28,6 +28,7 @@ import java.util.Locale;
 
 import ci.function.Base.BaseFragment;
 import ci.function.Core.CIApplication;
+import ci.function.Core.SLog;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.object.AppInfo;
@@ -106,10 +107,10 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                             m_tvline5Data   = null,
                             m_tvNotice      = null;
 
-    private RelativeLayout  m_rlLine4       = null;
+    private RelativeLayout  m_rlLine4       = null,
+                            m_rlLine6       = null;
     private LinearLayout    m_llLine4       = null,
                             m_llLine5       = null,
-                            m_llLine6       = null,
                             m_llBarcode     = null,
                             m_list          = null;
 
@@ -185,7 +186,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
         m_tvline5Data   = (TextView) ViewContent.findViewById(R.id.tv_line5_data);
         m_llLine5       = (LinearLayout)ViewContent.findViewById(R.id.ll_line5);
 
-        m_llLine6       = (LinearLayout)ViewContent.findViewById(R.id.ll_line6);
+        m_rlLine6       = (RelativeLayout)ViewContent.findViewById(R.id.rl_line6);
 
         //第三條分隔線
         m_vLine3        = (View) ViewContent.findViewById(R.id.v_line3);
@@ -245,11 +246,20 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
 
         vScaleDef.selfAdjustAllView(view.findViewById(R.id.extra_service_card_root));
         vScaleDef.selfAdjustSameScaleView(m_ivUsed, 80.7, 68.7);
-//        vScaleDef.selfAdjustSameScaleView(view.findViewById(R.id.iv_barcode), 270, 56);
+        //vScaleDef.selfAdjustSameScaleView(view.findViewById(R.id.iv_barcode), 270, 56);
         vScaleDef.selfAdjustSameScaleView(m_ivService, 32, 32);
         vScaleDef.selfAdjustSameScaleView(m_ivLogo, 130, 20);
 
         vScaleDef.selfAdjustSameScaleView(m_ivQRCode, 186.7, 186.7);
+
+        if (EServiceType.valueOf(m_ExtraServiceData.SERVICETYPE).equals(EServiceType.EVENT))
+        {
+            LinearLayout.LayoutParams rp = (LinearLayout.LayoutParams) m_tvline1Data.getLayoutParams();
+            rp.height = vScaleDef.getLayoutHeight(50);
+            rp.width = vScaleDef.getLayoutWidth(190);
+
+            vScaleDef.selfAdjustSameScaleView(m_tvline3Data, 170, 50);
+        }
 
         ViewTreeObserver vto = m_shadowScrollView.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -353,7 +363,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_llBarcode.setVisibility(View.GONE);
                 m_vLine4.setVisibility(View.GONE);
                 m_llLine5.setVisibility(View.GONE);
-                m_llLine6.setVisibility(View.GONE);
+                m_rlLine6.setVisibility(View.GONE);
 
                 m_tvNotice.setText(getString(R.string.boarding_pass_extra_services_wifi_notice));
                 break;
@@ -385,7 +395,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_tvline5Data.setText(strDate);
 
                 m_llBarcode.setVisibility(View.GONE);
-                m_llLine6.setVisibility(View.GONE);
+                m_rlLine6.setVisibility(View.GONE);
 
                 m_tvNotice.setText(getString(R.string.boarding_pass_extra_services_vip_notice));
                 break;
@@ -414,7 +424,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                     m_tvline5Data.setText(m_ExtraServiceData.THSRDEPSTN);
 
                 m_llBarcode.setVisibility(View.GONE);
-                m_llLine6.setVisibility(View.GONE);
+                m_rlLine6.setVisibility(View.GONE);
 
                 m_tvNotice.setText(getString(R.string.boarding_pass_extra_services_thsr_notice));
                 break;
@@ -442,7 +452,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_llBarcode.setVisibility(View.GONE);
                 m_vLine4.setVisibility(View.GONE);
                 m_llLine5.setVisibility(View.GONE);
-                m_llLine6.setVisibility(View.GONE);
+                m_rlLine6.setVisibility(View.GONE);
                 break;
             case EVENT:
 
@@ -473,22 +483,20 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 }
 
                 m_tvline3.setText(getString(R.string.event_time));
-                if ( null != m_ExtraServiceData.EVENTTIME )
-                    m_tvline3Data.setText(m_ExtraServiceData.EVENTTIME);
+                if ( null != m_ExtraServiceData.EVENTDATE )
+                    m_tvline3Data.setText(m_ExtraServiceData.EVENTDATE);
 
-                m_tvline4.setVisibility(View.GONE);
+                m_rlLine4.setVisibility(View.GONE);
 
-                m_tvline5.setVisibility(View.GONE);
-
-                m_llBarcode.setVisibility(View.GONE);
+                m_llLine5.setVisibility(View.GONE);
 
                 m_ivQRCode.setImageBitmap(encodeToQRCode(m_ExtraServiceData.CODE,186));
 
-                m_llLine6.setVisibility(View.VISIBLE);
+                String temp = m_ExtraServiceData.NOTICE.replace("\\n", "\n");
+                m_tvNotice.setText(temp);
+                m_rlLine6.setVisibility(View.VISIBLE);
 
                 m_tvNotice.setVisibility(View.VISIBLE);
-
-
 
                 break;
         }
@@ -579,7 +587,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
 
         m_llBarcode.setVisibility(View.GONE);
         m_llLine5.setVisibility(View.GONE);
-        m_llLine6.setVisibility(View.GONE);
+        m_rlLine6.setVisibility(View.GONE);
     }
 
     @Override

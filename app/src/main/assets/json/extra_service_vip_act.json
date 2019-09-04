@@ -1,0 +1,60 @@
+{
+  "rt_code":"000",
+  "rt_msg":"OK",
+  "rt_data":{
+    "ExtraService":[
+      [
+        {
+          "LASTNAME":"LI",
+          "DEPARTURE_STAION":"TPE",
+          "SEAT_TYPE":"Extra leg seat",
+          "TICKETNO":"297-2411430646",
+          "ARRIVAL_STAION":"OKA",
+          "EMDNO":"297-8210025295",
+          "STATUS":"N",
+          "FIRSTNAME":"LETICIA",
+          "SERVICETYPE":"CHSEAT",
+          "CURRENCY":"TWD",
+          "AMOUNT":"466",
+          "SEAT_NUM":"08E",
+          "FLIGHTDATE":"2019-10-28",
+          "FLIGHTNO":"CI 120"
+        }
+      ],
+      [
+        {
+          "LASTNAME":"LI",
+          "DEPARTURE_STAION":"OKA",
+          "SEAT_TYPE":"Extra leg seat",
+          "TICKETNO":"297-2411430678",
+          "ARRIVAL_STAION":"TPE",
+          "EMDNO":"297-8210025302",
+          "STATUS":"N",
+          "FIRSTNAME":"LETICIA",
+          "SERVICETYPE":"CHSEAT",
+          "CURRENCY":"TWD",
+          "AMOUNT":"466",
+          "SEAT_NUM":"30G",
+          "FLIGHTDATE":"2019-10-31",
+          "FLIGHTNO":"CI 123"
+        }
+      ],
+      [
+        {
+          "NOTICE":"1.入場時間：請報名成功者於13：30-14：15憑【QR code】入場，採先到優先選位方式 ; 為維護聽講品質，逾時視同棄權，請配合工作人員管制入場。\\n2.因場地座位有限，請會員珍惜資源，若您報名成功後因故無法參加，請務必於10/06(日)前取消報名，以利主辦單位視需求再開放報名。\\n3.為尊重智慧財產權及肖像權，講座開始後，禁止攝影、錄音、拍照。\\n4.演講廳內禁止飲食，請勿攜帶食物飲料，並勿攜帶寵物、危險品入場。\\n5.為維護演講品質，本活動未開放10歲以下孩童入場。\\n※中華航空保有更動活動內容之權利，所有講座時間及內容將依現場實際狀況而訂。最新訊息隨時公佈於官網。\\n活動內容詢問： 中華航空 02-412-9000\\n",
+          "EVENTNAME":"中華航空60周年系列講座《旅行中做美的功課》 ",
+          "IS_HIGH_PRIORITY":"Y",
+          "CODE":"OHSf0So4Ny/cJQnv1Qo5AD88ZK92YJWy ",
+          "EVENTPLACE":"台北場-國家圖書館 ",
+          "EVENTDATE":"2019-10-20 (日) 13:30 ",
+          "STATUS":"N",
+          "LASTNAME":"邱咪咪 ",
+          "CARD_NO":"AL0000000",
+          "SERVICETYPE":"EVENT",
+          "FIRSTNAME":"",
+          "CARD_TYPE":"PARA"
+        }
+      ]
+    ]
+  }
+}

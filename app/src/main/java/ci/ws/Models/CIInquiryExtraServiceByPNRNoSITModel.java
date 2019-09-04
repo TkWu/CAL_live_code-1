@@ -59,7 +59,8 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
         PNR_ID ,
         TICKET,
         Language,
-        Version
+        Version,
+        login_token
     }
 
     private enum eRespParaTag {
@@ -133,6 +134,7 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
             m_jsBody.put( eParaTag.First_Name.name(),reqData.First_Name_C);
             m_jsBody.put( eParaTag.Last_Name.name(), reqData.Last_Name_C);
             m_jsBody.put( eParaTag.PNR_List.name(),  array);
+            m_jsBody.put( eParaTag.login_token.name(), CIWSShareManager.getAPI().getLoginToken());
 
             //TICKET登入
             JSONObject jsTicket = new JSONObject();
@@ -165,7 +167,9 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
 
     @Override
     protected void DecodeResponse_Success(CIWSResult respBody, String code) {
-
+//        if (WSConfig.Todd_WS_TESTMODE){
+//            respBody = ResultCodeCheck(getJsonFile(WSConfig.extra_service_vip_act));
+//        }
         CIExtraServiceResp List = null;
         try {
             JSONObject jsResp = new JSONObject(respBody.strData);
