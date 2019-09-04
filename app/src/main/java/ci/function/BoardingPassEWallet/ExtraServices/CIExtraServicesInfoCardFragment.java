@@ -302,6 +302,8 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
             iFamilyRes = R.drawable.ic_family_couch_w;
         }
 
+
+
         String strDate = "";
         //依據type不同 要設定的card 高度也不同
         //三行177.8, 四行228.5, 四行帶qrcode 274.5, 五行279.2
@@ -480,7 +482,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
 
                 m_llBarcode.setVisibility(View.GONE);
 
-                m_ivQRCode.setImageBitmap(encodeToQRCode(m_ExtraServiceData.EVENTCODE,186));
+                m_ivQRCode.setImageBitmap(encodeToQRCode(m_ExtraServiceData.CODE,186));
 
                 m_llLine6.setVisibility(View.VISIBLE);
 
@@ -495,7 +497,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
     private Bitmap encodeToQRCode(final String strData , final int iWidth) {
         BitMatrix result;
         try {
-            String strUtf8Data = new String(strData.getBytes("UTF-8"),"ISO-8859-1");;
+            String strUtf8Data = new String(strData.getBytes("UTF-8"),"ISO-8859-1");
             result = new MultiFormatWriter().encode(strUtf8Data, BarcodeFormat.QR_CODE,iWidth,iWidth);
         } catch (WriterException e) {
             // Unsupported format

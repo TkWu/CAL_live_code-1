@@ -1068,7 +1068,6 @@
     <string name="find_my_booking_baggage_notes_2">備註</string>
     <string name="find_my_booking_baggage_notes_content_2">
         \n
-        * 訂位代號：6碼英數字的組合(例如：000000)\n\n
         * 行李牌號碼：2碼航空公司英文代碼+6碼數字的組合(例如：CI123456)\n\n
     </string>
     <string name="bagtag_camera_permissions_msg">請同意授權存取權限，以便開啟相機掃描行李條碼。請前往裝置設定開啟相機授權服務。</string>

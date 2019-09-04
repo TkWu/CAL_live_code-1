@@ -173,7 +173,8 @@ public class CIEWallet_ExtraService_Info implements Serializable, Cloneable {
 
     /**活動QRCODE*/
     @Expose
-    public String EVENTCODE;
+    //public String EVENTCODE;
+    public String CODE;
 
     @Override
     public Object clone() {

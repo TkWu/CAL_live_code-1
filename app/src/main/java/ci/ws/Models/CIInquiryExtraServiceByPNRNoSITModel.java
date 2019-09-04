@@ -18,6 +18,7 @@ import ci.ws.Models.entities.CIEWallet_ExtraService_List;
 import ci.ws.Models.entities.CIExtraServiceResp;
 import ci.ws.Models.entities.CIInquiryExtraServicesDBEntity;
 import ci.ws.Models.entities.CIWSResult;
+import ci.ws.cores.CIWSShareManager;
 import ci.ws.cores.object.GsonTool;
 import ci.ws.define.WSConfig;
 
@@ -50,6 +51,7 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
     }
 
     private enum eParaTag {
+        login_Token,
         Card_Id,
         PNR_List,
         First_Name,
@@ -126,6 +128,7 @@ public class CIInquiryExtraServiceByPNRNoSITModel extends CIWSBaseModel {
 //                for ( int i = 0 ; i < reqData.Pnr_List.size() ; i ++ ){
 //                array.put(reqData.Pnr_List.);
 //            }
+            m_jsBody.put( eParaTag.login_Token.name(),  CIWSShareManager.getAPI().getLoginToken());
             m_jsBody.put( eParaTag.Card_Id.name(),   reqData.Card_Id);
             m_jsBody.put( eParaTag.First_Name.name(),reqData.First_Name_C);
             m_jsBody.put( eParaTag.Last_Name.name(), reqData.Last_Name_C);
