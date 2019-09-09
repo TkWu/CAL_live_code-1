@@ -180,7 +180,15 @@ public class CIExtraServiceRecyclerViewAdapter extends RecyclerView.Adapter<Recy
             extraServiceHolder.tvName.setText(strName);
 
             if ( null != arrayList.get(i).SERVICETYPE )
-                extraServiceHolder.tvServiceNum.setText(arrayList.get(i).TICKETNO);
+            {
+                if ( "EVENT".equals(arrayList.get(i).SERVICETYPE) )
+                    extraServiceHolder.tvServiceNum.setText(arrayList.get(i).CARD_NO);
+                else
+                    extraServiceHolder.tvServiceNum.setText(arrayList.get(i).TICKETNO);
+            }
+
+
+
 
 //            extraServiceHolder.tvName.setText(alBoardingPass.get(i).getName());
 //            extraServiceHolder.tvServiceNum.setText(alBoardingPass.get(i).getServiceNum());

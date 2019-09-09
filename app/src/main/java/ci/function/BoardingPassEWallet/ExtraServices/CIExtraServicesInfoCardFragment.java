@@ -38,6 +38,9 @@ import ci.ws.Models.CIInquiryAllPassengerByPNRModel;
 import ci.ws.Models.entities.CIEWallet_ExtraService_Info;
 import ci.ws.Models.entities.BaggageEntity.FlightInfo;
 
+import android.view.WindowManager;
+
+
 import static ci.function.BoardingPassEWallet.Adapter.CIExtraServiceRecyclerViewAdapter.EServiceType;
 
 /** 其他服務明細卡內容
@@ -254,12 +257,29 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
 
         if (EServiceType.valueOf(m_ExtraServiceData.SERVICETYPE).equals(EServiceType.EVENT))
         {
-            LinearLayout.LayoutParams rp = (LinearLayout.LayoutParams) m_tvline1Data.getLayoutParams();
-            rp.height = vScaleDef.getLayoutHeight(50);
-            rp.width = vScaleDef.getLayoutWidth(190);
+            LinearLayout.LayoutParams tvline1Data_rp = (LinearLayout.LayoutParams) m_tvline1Data.getLayoutParams();
+            tvline1Data_rp.width = vScaleDef.getLayoutWidth(190);
 
-            vScaleDef.selfAdjustSameScaleView(m_tvline3Data, 170, 50);
+            LinearLayout.LayoutParams tvline1_rp = (LinearLayout.LayoutParams) m_tvline1.getLayoutParams();
+            tvline1_rp.width = vScaleDef.getLayoutWidth(110);
+
+            LinearLayout.LayoutParams tvline2Data_rp = (LinearLayout.LayoutParams) m_tvline2Data.getLayoutParams();
+            tvline2Data_rp.width = vScaleDef.getLayoutWidth(190);
+
+            LinearLayout.LayoutParams tvline2_rp = (LinearLayout.LayoutParams) m_tvline2.getLayoutParams();
+            tvline2_rp.width = vScaleDef.getLayoutWidth(110);
+
+            LinearLayout.LayoutParams tvline3Data_rp = (LinearLayout.LayoutParams) m_tvline3Data.getLayoutParams();
+            tvline3Data_rp.width = vScaleDef.getLayoutWidth(190);
+
+            LinearLayout.LayoutParams tvline3_rp = (LinearLayout.LayoutParams) m_tvline3.getLayoutParams();
+            tvline3_rp.width = vScaleDef.getLayoutWidth(110);
+            //rp.gravity = 16;
+
+
+            //vScaleDef.selfAdjustSameScaleView(m_tvline3Data, 170, 50);
         }
+
 
         ViewTreeObserver vto = m_shadowScrollView.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -269,9 +289,6 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
 
                 int iShadowSvHeight = m_shadowScrollView.getHeight();
                 int iContentHeight = m_llContent.getHeight();
-
-//                Log.e("iShadowSvHeight",""+m_shadowScrollView.getHeight());
-//                Log.e("iContentHeight",""+m_llContent.getHeight());
 
                 if ( iShadowSvHeight > iContentHeight ){
                     m_shadowScrollView.getLayoutParams().height = iContentHeight;
@@ -460,11 +477,16 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                  * 645400 - EVENT, Gold卡以上為紅色
                  */
 
-                String  strCardType = CIApplication.getLoginInfo().GetCardType();
+                if ( null != m_ExtraServiceData.CARD_NO)
+                    m_tvNo.setText(m_ExtraServiceData.CARD_NO + "-" + m_ExtraServiceData.CARD_TYPE);
+
+                //String  strCardType = CIApplication.getLoginInfo().GetCardType();
 
                 if ("N".equals(m_ExtraServiceData.STATUS)) {
-                    if (!("DYNA".equals(strCardType))) {
+                    if (!("Y".equals(m_ExtraServiceData.IS_HIGH_PRIORITY))) {
                         m_ivBlue.setImageResource(R.drawable.bg_extra_services_card_red);
+                        iVipRes = R.drawable.ic_vip_services;
+                        m_tvService.setTextColor(ContextCompat.getColor(getActivity(), R.color.white_four));
                     }
                 }
 
@@ -475,6 +497,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_tvline1.setText(getString(R.string.event_name));
                 if ( null != m_ExtraServiceData.EVENTNAME )
                     m_tvline1Data.setText(m_ExtraServiceData.EVENTNAME);
+
 
                 m_tvline2.setText(getString(R.string.event_location));
                 if ( null != m_ExtraServiceData.EVENTPLACE ){
@@ -497,6 +520,18 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_rlLine6.setVisibility(View.VISIBLE);
 
                 m_tvNotice.setVisibility(View.VISIBLE);
+
+                //643924 票卡亮度調亮
+                //try {
+                //    WindowManager.LayoutParams tempParam = null;
+                //    tempParam = this.getActivity().getWindow().getAttributes();
+                //    tempParam.screenBrightness = 1F;
+                //    this.getActivity().getWindow().setAttributes(tempParam);
+
+                //} catch (Exception e) {
+                //    e.printStackTrace();
+                //}
+                //643924 票卡亮度調亮
 
                 break;
         }

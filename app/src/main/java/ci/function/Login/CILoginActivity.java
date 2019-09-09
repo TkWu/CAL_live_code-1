@@ -9,6 +9,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Message;
+import android.provider.Settings;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
@@ -158,6 +159,7 @@ public class CILoginActivity extends BaseActivity
 
         @Override
         public void onMemberLoginClick(String strAccout, String strPassword, boolean bKeep) {
+
 //            if ( WSConfig.WS_TESTMODE ){
 
                 //測試模式 by ryan for demo

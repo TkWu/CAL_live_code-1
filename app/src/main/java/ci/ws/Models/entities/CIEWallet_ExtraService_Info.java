@@ -180,6 +180,16 @@ public class CIEWallet_ExtraService_Info implements Serializable, Cloneable {
     @Expose
     public String NOTICE;
 
+    /**活動卡號*/
+    @Expose
+    public String CARD_NO;
+    /**活動卡別*/
+    @Expose
+    public String CARD_TYPE;
+    /**高卡別*/
+    @Expose
+    public String IS_HIGH_PRIORITY;
+
     @Override
     public Object clone() {
         try {

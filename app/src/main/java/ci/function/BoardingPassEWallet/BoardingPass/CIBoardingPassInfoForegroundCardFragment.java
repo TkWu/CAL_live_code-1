@@ -382,6 +382,18 @@ public class CIBoardingPassInfoForegroundCardFragment extends Fragment {
 //            m_ivAircraft.setImageResource(R.drawable.bg_both_flight);
 //            m_ivBottom.setImageDrawable(null);
 //        }
+
+        //643924 票卡亮度調亮
+        //try {
+        //    WindowManager.LayoutParams tempParam = null;
+        //    tempParam = this.getActivity().getWindow().getAttributes();
+        //    tempParam.screenBrightness = 1F;
+        //    this.getActivity().getWindow().setAttributes(tempParam);
+
+        //} catch (Exception e) {
+        //    e.printStackTrace();
+        //}
+        //643924 票卡亮度調亮
     }
 
     protected void setTextSizeAndLayoutParams(final View view, final ViewScaleDef vScaleDef) {
