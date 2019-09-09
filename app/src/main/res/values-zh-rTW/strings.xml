@@ -633,7 +633,7 @@
     <string name="notice">注意事項</string>
     <string name="notice_message_content_1">1. 若您在 6 個月內搭乘華航/華信自營航班(機票號碼開頭 297/803) 但未累積哩程，請輸入相關資料即可辦理哩程補登。</string>
     <string name="notice_message_content_2">2. 由於班機搭乘資訊更新尚需作業時間，部分航班將無法於當日補登哩程。</string>
-    <string name="notice_message_content_3">3. 若您的訂位姓名與會員卡上之姓名不相符，將無法於網上成功補登哩程，請提供登機證、護照影本、機票收據或存根洽華航各地會員服務專線(請設連結https://www.china-airlines.com/tw/zh/member/member-service-hotline )申請哩程補登。</string>
+    <string name="notice_message_content_3">3. 若您的訂位姓名與會員卡上之姓名不相符，將無法於網上成功補登哩程，請提供登機證、護照影本、機票收據或存根洽華航各地會員服務專線(https://www.china-airlines.com/tw/zh/member/member-service-hotline)申請哩程補登。</string>
     <string name="notice_message_content_4">4. 請保留機票收據或存根及登機證至哩程成功累計到您的會員帳戶。</string>
     <string name="notice_message_content_5">5. 五折及五折以下之優待票、免費機票、酬賓機票〈訂位艙等 X/Z/O〉、嬰兒票、團體票〈訂位艙等 G〉、促銷機票〈訂位艙等 S/L/X〉、勞工票、交換機票(Barter Ticket)、包機票(Charter Ticket)、超重行李票(Excess Baggage Ticket)、航空及旅行同業折扣票等，均無法累積飛行哩程。</string>
     <string name="notice_message_content_6">6. 網上補登哩程將於4週內完成核對並予以更正。</string>

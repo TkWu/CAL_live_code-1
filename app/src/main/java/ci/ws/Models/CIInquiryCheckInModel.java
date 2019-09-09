@@ -248,9 +248,11 @@ public class CIInquiryCheckInModel extends CIWSBaseModel {
     @Override
     protected void DecodeResponse_Error(String code, String strMag, Exception exception) {
 
-        if ( WSConfig.WS_TESTMODE ){
-            if(TextUtils.isEmpty(s_testFileName)){
-                DecodeResponse_Success( ResultCodeCheck(getJsonFile(WSConfig.InquiryCheckInByCardNo)) ,"");
+        //if ( WSConfig.WS_TESTMODE ){
+        if ( WSConfig.WS_TESTMODE_TODD ){
+            s_testFileName = "InquiryCheckInByPNR";
+            if(!TextUtils.isEmpty(s_testFileName)){
+                DecodeResponse_Success( ResultCodeCheck(getJsonFile(s_testFileName + ".json")) ,"");
             } else {
                 /**Unit test測試用*/
                 if(true == s_bIsOnSuccess){

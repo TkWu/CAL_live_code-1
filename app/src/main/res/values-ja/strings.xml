@@ -636,7 +636,7 @@
     <string name="notice">注意</string>
     <string name="notice_message_content_1">1. 過去6ヶ月以内に、チャイナエアライン/マンダリン航空運航の航空券（航空券番号の最初の3桁が297/803の航空券）でご利用になられたマイルが積算されていない場合は、必要事項をご入力の上、お申込みください。</string>
     <string name="notice_message_content_2">2. フライト搭乗情報の更新が時間がかかるため、一部当日発着便のマイレージ訂正はできません。</string>
-    <string name="notice_message_content_3">3. ご予約名とDFPにご登録いただいているお名前が一致しない場合、ダイナスティ・フライヤー・サービスにてマイルの事後積算をご申請いただけません。搭乗券、ご登録名とご予約名が同一人物であることを証明できるパスポートのコピー、E-チケットレシート（航空券の明細書）、をご用意の上、お近くのチャイナエアラインまでお問合せください。DFPホットライン(https://www.china-airlines.com/jp/jp/member/member-service-hotline )。</string>
+    <string name="notice_message_content_3">3. ご予約名とDFPにご登録いただいているお名前が一致しない場合、ダイナスティ・フライヤー・サービスにてマイルの事後積算をご申請いただけません。搭乗券、ご登録名とご予約名が同一人物であることを証明できるパスポートのコピー、E-チケットレシート（航空券の明細書）、をご用意の上、お近くのチャイナエアラインまでお問合せください。DFPホットライン(https://www.china-airlines.com/jp/jp/member/member-service-hotline)。</string>
     <string name="notice_message_content_4">4. E-チケットレシート(航空券の明細書)は、マイルの加算が完了するまで保管してください。</string>
     <string name="notice_message_content_5">5. 50%以上割引された航空券、無料航空券、特典航空券〈クラス X/Z/O〉、幼児運賃航空券、団体航空券〈クラス G〉、プロモーション航空券〈クラス S/L/X〉、就労者用航空券、バーター航空券、チャーター航空券(Charter Ticket)、超過手荷物用チケット(Excess Baggage Ticket)、航空業界優待航空券等の航空券に関しましては、マイル加算の対象外となります。</string>
     <string name="notice_message_content_6">6. 4週間以内にマイルの訂正を行います。</string>
