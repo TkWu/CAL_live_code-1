@@ -9,6 +9,7 @@ import com.chinaairlines.mobile30.R;
 import java.util.List;
 
 import ci.function.Core.CIApplication;
+import ci.function.Core.SLog;
 import ci.function.TimeTable.CISelectDepartureAirpotActivity;
 import ci.ws.Models.entities.CIFlightStationEntity;
 import ci.ws.Presenter.CIInquiryFlightStationPresenter;
@@ -114,6 +115,9 @@ public class CIAirportDataManager {
                 break;
             case CISelectDepartureAirpotActivity.BOOKT_TICKET:
                 eSource = CIInquiryFlightStationPresenter.ESource.BookTicket;
+                break;
+            case CISelectDepartureAirpotActivity.BOOKT_TICKET_ISOriginal_Y:
+                eSource = CIInquiryFlightStationPresenter.ESource.BookTicket_ISOriginal_Y;
                 break;
             case CISelectDepartureAirpotActivity.TIME_TABLE:
                 eSource = CIInquiryFlightStationPresenter.ESource.TimeTable;

@@ -291,7 +291,7 @@ public class CIBookTicketActivity extends BaseActivity
                 R.drawable.ic_departure_2,
                 R.drawable.ic_departure_4,
                 false,
-                CISelectDepartureAirpotActivity.BOOKT_TICKET);
+                CISelectDepartureAirpotActivity.BOOKT_TICKET_ISOriginal_Y);
         m_toFragment            = CIChooseAirportTextFieldFragment.newInstance(
                 getString(R.string.to),
                 R.drawable.ic_arrival_2,
@@ -979,7 +979,16 @@ public class CIBookTicketActivity extends BaseActivity
         layout.setId(viewID);
         m_llMultiFlightContent.addView(layout);
 
+        Bundle bundle = new Bundle();
+        if(m_iFragmentCount == 1){
+            bundle.putBoolean(UiMessageDef.BUNDLE_BOOKING_ISORIGINAL_Y, true);
+        }else{
+            bundle.putBoolean(UiMessageDef.BUNDLE_BOOKING_ISORIGINAL_Y, false);
+        }
+
         final CIBookTicketFlightInputFragment fragment = new CIBookTicketFlightInputFragment();
+
+        fragment.setArguments(bundle);
         fragment.setOnFragmentDeletedListener(this);
         //使用supportFragment去加入fragment到framelayout
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

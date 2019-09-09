@@ -78,6 +78,7 @@ public class CISelectDepartureAirpotActivity extends BaseActivity implements CIA
     public final static int     FLIGHT_STATUS   = 1;
     public final static int     BOOKT_TICKET    = 2;
     public final static int     TIME_TABLE      = 3;
+    public final static int     BOOKT_TICKET_ISOriginal_Y = 4;
 
     public final static String ESOURCE                  = "ESOURCE";
     public final static String IS_TO_FRAGMENT           = "IS_TO_FRAGMENT";

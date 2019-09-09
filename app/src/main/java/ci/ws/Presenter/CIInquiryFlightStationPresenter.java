@@ -21,7 +21,7 @@ import ci.ws.Presenter.Listener.CIInquiryFlightStatusStationListener;
 public class CIInquiryFlightStationPresenter {
 
     public enum ESource {
-        FlightStatus, BookTicket, TimeTable
+        FlightStatus, BookTicket, TimeTable, BookTicket_ISOriginal_Y
     }
     //哩程補登同 FlightStatus
     private CIInquiryFlightStatusStationListener m_Listener = null;
@@ -100,6 +100,12 @@ public class CIInquiryFlightStationPresenter {
                 }
                 m_BookTicketODModel.getFromWS();
                 break;
+            case BookTicket_ISOriginal_Y:
+                if(null == m_BookTicketODModel) {
+                    m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
+                }
+                m_BookTicketODModel.getFromWS();
+                break;
             case TimeTable:
                 if(null == m_TimeTableODModel) {
                     m_TimeTableODModel = new CIInquiryFlightTimeTableODListModel(m_TimeTableModelcallback);
@@ -126,6 +132,13 @@ public class CIInquiryFlightStationPresenter {
                     m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
                 }
                 StationDatas = m_BookTicketODModel.getDepartureStation();
+                //StationDatas = m_BookTicketODModel.getDepartureStation_ISORIGINAL_N();
+                break;
+            case BookTicket_ISOriginal_Y:
+                if(null == m_BookTicketODModel) {
+                    m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
+                }
+                StationDatas = m_BookTicketODModel.getDepartureStation_ISORIGINAL_Y();
                 break;
             case TimeTable:
                 if(null == m_TimeTableODModel) {
@@ -161,7 +174,13 @@ public class CIInquiryFlightStationPresenter {
                 if(null == m_BookTicketODModel) {
                     m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
                 }
-                StationDatas = m_BookTicketODModel.getDepartureStationByKeyword(key, isFindByOnlyIATA);
+                StationDatas = m_BookTicketODModel.getDepartureStationByKeyword(key, isFindByOnlyIATA, false);
+                break;
+            case BookTicket_ISOriginal_Y:
+                if(null == m_BookTicketODModel) {
+                    m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
+                }
+                StationDatas = m_BookTicketODModel.getDepartureStationByKeyword(key, isFindByOnlyIATA, true);
                 break;
             case TimeTable:
                 if(null == m_TimeTableODModel) {
@@ -227,6 +246,12 @@ public class CIInquiryFlightStationPresenter {
                 }
                 arrivaStationDatas = m_BookTicketODModel.getArrivalSrtationByDeparture(strStationCode);
                 break;
+            case BookTicket_ISOriginal_Y:
+                if(null == m_BookTicketODModel) {
+                    m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
+                }
+                arrivaStationDatas = m_BookTicketODModel.getArrivalSrtationByDeparture(strStationCode);
+                break;
             case TimeTable:
                 if(null == m_TimeTableODModel) {
                     m_TimeTableODModel = new CIInquiryFlightTimeTableODListModel(m_TimeTableModelcallback);
@@ -268,6 +293,12 @@ public class CIInquiryFlightStationPresenter {
                 }
                 arrivaStationDatas = m_BookTicketODModel.getArrivalSrtationByDepartureAndKeyWord(strStationCode, key, isFindOnlyIATA);
                 break;
+            case BookTicket_ISOriginal_Y:
+                if(null == m_BookTicketODModel) {
+                    m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
+                }
+                arrivaStationDatas = m_BookTicketODModel.getArrivalSrtationByDepartureAndKeyWord(strStationCode, key, isFindOnlyIATA);
+                break;
             case TimeTable:
                 if(null == m_TimeTableODModel) {
                     m_TimeTableODModel = new CIInquiryFlightTimeTableODListModel(m_TimeTableModelcallback);
@@ -303,6 +334,13 @@ public class CIInquiryFlightStationPresenter {
                 m_StatusODModel.Clear();
                 break;
             case BookTicket:
+                if(null == m_BookTicketODModel) {
+                    m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
+                }
+                m_BookTicketODModel.initLastUpdateDate();
+                m_BookTicketODModel.Clear();
+                break;
+            case BookTicket_ISOriginal_Y:
                 if(null == m_BookTicketODModel) {
                     m_BookTicketODModel = new CIInquiryFlightBookTicketODListModel(m_BookTicketModelcallback);
                 }

@@ -135,4 +135,6 @@ public class UiMessageDef {
 
 	public static final String BUNDLE_FIRST_NAME								= "FirstName";
 	public static final String BUNDLE_LAST_NAME									= "LastName";
+
+	public static final String 	BUNDLE_BOOKING_ISORIGINAL_Y					= "IsOriginal";
 }

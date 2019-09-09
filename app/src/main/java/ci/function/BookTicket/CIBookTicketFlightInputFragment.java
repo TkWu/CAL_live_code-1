@@ -1,5 +1,6 @@
 package ci.function.BookTicket;
 
+import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -22,6 +23,7 @@ import ci.ui.TextField.Base.CIBaseTextFieldFragment;
 import ci.ui.TextField.Base.CITextFieldFragment;
 import ci.ui.TextField.CIChooseAirportTextFieldFragment;
 import ci.ui.TextField.CIChooseSearchDateTextFieldFragment;
+import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
 
 /**
@@ -46,12 +48,31 @@ public class CIBookTicketFlightInputFragment extends BaseFragment
     protected void initialLayoutComponent(LayoutInflater inflater, View view) {
         m_tvMultiStopValue      = (TextView) view.findViewById(R.id.tv_multi_stop_value);
         m_ivGarbage             = (ImageView) view.findViewById(R.id.iv_garbage);
-        m_fromFragment          = CIChooseAirportTextFieldFragment.newInstance(
-                "*" + getString(R.string.from),
-                R.drawable.ic_departure_2,
-                R.drawable.ic_departure_4,
-                false,
-                CISelectDepartureAirpotActivity.BOOKT_TICKET);
+
+        Bundle bundle = getArguments();
+
+        if(bundle == null){
+            return;
+        }
+
+        Boolean blIsORginal  = bundle.getBoolean(UiMessageDef.BUNDLE_BOOKING_ISORIGINAL_Y,false);
+
+        if (blIsORginal) {
+            m_fromFragment          = CIChooseAirportTextFieldFragment.newInstance(
+                    "*" + getString(R.string.from),
+                    R.drawable.ic_departure_2,
+                    R.drawable.ic_departure_4,
+                    false,
+                    CISelectDepartureAirpotActivity.BOOKT_TICKET_ISOriginal_Y);
+        } else {
+            m_fromFragment          = CIChooseAirportTextFieldFragment.newInstance(
+                    "*" + getString(R.string.from),
+                    R.drawable.ic_departure_2,
+                    R.drawable.ic_departure_4,
+                    false,
+                    CISelectDepartureAirpotActivity.BOOKT_TICKET);
+        }
+
         m_toFragment            = CIChooseAirportTextFieldFragment.newInstance(
                 "*"+getString(R.string.to),
                 R.drawable.ic_arrival_2,

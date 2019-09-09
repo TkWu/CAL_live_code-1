@@ -76,6 +76,7 @@ public class CIInquiryFlightBookTicketODListModel extends CIWSBaseModel{
         arrival,            //抵達機場
         departure_iata,     //起飛機場代號
         IATA,               //機場代號
+        isOriginal,         //isOriginal欄位
     }
 
     private static final String API_NAME = "/CIAPP/api/InquiryODList";
@@ -158,7 +159,7 @@ public class CIInquiryFlightBookTicketODListModel extends CIWSBaseModel{
             } else {
                 CreateTable();
             }
-
+            SLog.e("insert(List) "+List.size());
             if(false == insert(List)){
                 DecodeResponse_Error("", SQLException.class.getSimpleName(), null);
                 return;
@@ -181,6 +182,8 @@ public class CIInquiryFlightBookTicketODListModel extends CIWSBaseModel{
             JSONObject jsObj = jsArrayList.getJSONObject(iIdx);
             if ( null != jsObj ){
                 String strDepartureIATA = jsObj.getString(eRespParaTag.departure_iata.name());
+                String strDepartureIATA_isOriginal = jsObj.getString(eRespParaTag.isOriginal.name());
+                SLog.e("data.isOriginal: "+strDepartureIATA +" "+ strDepartureIATA_isOriginal);
                 JSONArray jsarArrival = jsObj.getJSONArray(eRespParaTag.arrival.name());
 
                 //依序依照國家將出發地點放入map
@@ -189,6 +192,8 @@ public class CIInquiryFlightBookTicketODListModel extends CIWSBaseModel{
                     String strArrivalIATA = jsarArrival.getJSONObject(iJdx).getString(eRespParaTag.IATA.name());
 
                     CIFlightStationBookTicketODEntity data = new CIFlightStationBookTicketODEntity();
+
+                    data.isOriginal = strDepartureIATA_isOriginal;
                     data.departure_iata = strDepartureIATA;
                     data.arrival_iata = strArrivalIATA;
                     //對應出發地, 依照國家將出發地點放入map
@@ -277,7 +282,7 @@ public class CIInquiryFlightBookTicketODListModel extends CIWSBaseModel{
                 }
             }
             dataList = stationBuilder.join("IATA","arrival_iata",ODBuilder).query();
-//            Log.e(API_NAME, "sql=> " + stationBuilder.prepareStatementString());
+//            SLog.d(API_NAME, "sql=> " + stationBuilder.prepareStatementString());
 //            Log.e(API_NAME, "data " + GsonTool.getGson().toJson(dataList));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -293,19 +298,30 @@ public class CIInquiryFlightBookTicketODListModel extends CIWSBaseModel{
     }
 
     public List<CIFlightStationEntity> getDepartureStation(){
-        return getDepartureStationByKeyword(null, false);
+        return getDepartureStationByKeyword(null, false, false);
+    }
+
+    public List<CIFlightStationEntity> getDepartureStation_ISORIGINAL_Y(){
+        return getDepartureStationByKeyword(null, false, true);
     }
 
     /**取得出發地*/
     public List<CIFlightStationEntity> getDepartureStationByKeyword(String key,
-                                                                    boolean isFindByOnlyIATA){
+                                                                    boolean isFindByOnlyIATA, boolean isOriginalY){
         List<CIFlightStationEntity> dataList = null;
 
         try {
             QueryBuilder<CIFlightStationBookTicketODEntity,Integer> ODBuilder = m_dao.queryBuilder();
             QueryBuilder<CIFlightStationEntity,Integer> stationBuilder = m_daoStation.queryBuilder();
-            ODBuilder.groupBy("departure_iata");
-            if(!TextUtils.isEmpty(key)){
+            SLog.e(API_NAME, "sql key=> " + key);
+            if(isOriginalY){
+                ODBuilder.groupBy("departure_iata")
+                        .where().eq("isOriginal", 'Y');
+            }else{
+                ODBuilder.groupBy("departure_iata");
+            }
+
+            if(!TextUtils.isEmpty(key)) {
                 if(false == isFindByOnlyIATA){
                     stationBuilder.where().like("IATA", "%"+key+"%")
                             //2016-11-01 Ryan, 與iOS統一搜尋邏輯
@@ -317,7 +333,7 @@ public class CIInquiryFlightBookTicketODListModel extends CIWSBaseModel{
                 }
             }
             dataList = stationBuilder.join("IATA","departure_iata",ODBuilder).query();
-//            Log.e(API_NAME, "sql=> " + stationBuilder.prepareStatementString());
+            SLog.e(API_NAME, "sql=> " + stationBuilder.prepareStatementString());
 //            Log.e(API_NAME, "initdata " + GsonTool.getGson().toJson(dataList));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -325,8 +341,6 @@ public class CIInquiryFlightBookTicketODListModel extends CIWSBaseModel{
             return null;
         }
 
-
-//        Log.e(API_NAME, "sortData " + GsonTool.getGson().toJson(sorteddataList));
         if(dataList == null || dataList.size() <= 0){
             return null;
         } else {

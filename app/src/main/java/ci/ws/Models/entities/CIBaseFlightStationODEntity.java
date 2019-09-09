@@ -17,6 +17,10 @@ public class CIBaseFlightStationODEntity implements Cloneable {
     @DatabaseField
     public String departure_iata;
 
+    /**出發地場站 isOriginal 欄位*/
+    @DatabaseField
+    public String isOriginal;
+
     /**目的地機場代號*/
     @DatabaseField
     @Expose
