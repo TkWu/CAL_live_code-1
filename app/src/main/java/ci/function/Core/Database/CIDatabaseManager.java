@@ -132,7 +132,6 @@ public class CIDatabaseManager
                     TableUtils.createTable(connectionSource, CIFlightStationStatusODEntity.class);
                     break;
                     //NOTE: 此switch區段中只能放置ㄧ個break，而且一定要在最後;
-
             }
 
             if(BuildConfig.isLoggable){

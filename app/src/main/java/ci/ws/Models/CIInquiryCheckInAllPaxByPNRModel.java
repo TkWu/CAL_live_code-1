@@ -190,8 +190,9 @@ public class CIInquiryCheckInAllPaxByPNRModel extends CIWSBaseModel {
 
     @Override
     protected void DecodeResponse_Error(String code, String strMag, Exception exception) {
-        if ( WSConfig.WS_TESTMODE ){
-        m_testFileName = "InquiryCheckInAllPaxByPNR";
+        //if ( WSConfig.WS_TESTMODE ){
+        if ( WSConfig.WS_TESTMODE_TODD ){
+            m_testFileName = "InquiryCheckInAllPaxByPNR";
             if(TextUtils.isEmpty(m_testFileName)){
                 if ( null != m_Callback ){
                     m_Callback.onInquiryCheckInAllPaxError(code, strMag);
