@@ -30,6 +30,9 @@ import ci.ws.Models.entities.CIBoardPassResp_PaxInfo;
 import ci.ws.Models.entities.CIFlightStationEntity;
 import ci.ws.Presenter.CIInquiryFlightStationPresenter;
 
+import android.view.WindowManager;
+
+
 /** 登機證卡片前景內容
  * Created by jlchen on 2016/3/24.
  */
@@ -384,15 +387,15 @@ public class CIBoardingPassInfoForegroundCardFragment extends Fragment {
 //        }
 
         //643924 票卡亮度調亮
-        //try {
-        //    WindowManager.LayoutParams tempParam = null;
-        //    tempParam = this.getActivity().getWindow().getAttributes();
-        //    tempParam.screenBrightness = 1F;
-        //    this.getActivity().getWindow().setAttributes(tempParam);
+        try {
+            WindowManager.LayoutParams tempParam = null;
+            tempParam = this.getActivity().getWindow().getAttributes();
+            tempParam.screenBrightness = 1F;
+            this.getActivity().getWindow().setAttributes(tempParam);
 
-        //} catch (Exception e) {
-        //    e.printStackTrace();
-        //}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         //643924 票卡亮度調亮
     }
 

@@ -104,8 +104,13 @@ public class CIDatabaseManager
                 case 5:
                     TableUtils.dropTable(connectionSource, CINationalEntity.class, true);
                     TableUtils.createTable(connectionSource, CINationalEntity.class);
+                case 7:
+                    //20190912 ODList欄位變動，重新創建資料表 by 643924
+                    TableUtils.dropTable(connectionSource, CIFlightStationBookTicketODEntity.class, true);
+                    TableUtils.createTable(connectionSource, CIFlightStationBookTicketODEntity.class);
                     break;
                     //NOTE: 此switch區段中只能放置ㄧ個break，而且一定要在最後;
+
             }
 
             if(BuildConfig.isLoggable){

@@ -483,7 +483,7 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 //String  strCardType = CIApplication.getLoginInfo().GetCardType();
 
                 if ("N".equals(m_ExtraServiceData.STATUS)) {
-                    if (!("Y".equals(m_ExtraServiceData.IS_HIGH_PRIORITY))) {
+                    if ("Y".equals(m_ExtraServiceData.IS_HIGH_PRIORITY)) {
                         m_ivBlue.setImageResource(R.drawable.bg_extra_services_card_red);
                         iVipRes = R.drawable.ic_vip_services;
                         m_tvService.setTextColor(ContextCompat.getColor(getActivity(), R.color.white_four));
@@ -522,15 +522,15 @@ public class CIExtraServicesInfoCardFragment extends BaseFragment{
                 m_tvNotice.setVisibility(View.VISIBLE);
 
                 //643924 票卡亮度調亮
-                //try {
-                //    WindowManager.LayoutParams tempParam = null;
-                //    tempParam = this.getActivity().getWindow().getAttributes();
-                //    tempParam.screenBrightness = 1F;
-                //    this.getActivity().getWindow().setAttributes(tempParam);
+                try {
+                    WindowManager.LayoutParams tempParam = null;
+                    tempParam = this.getActivity().getWindow().getAttributes();
+                    tempParam.screenBrightness = 1F;
+                    this.getActivity().getWindow().setAttributes(tempParam);
 
-                //} catch (Exception e) {
-                //    e.printStackTrace();
-                //}
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 //643924 票卡亮度調亮
 
                 break;
