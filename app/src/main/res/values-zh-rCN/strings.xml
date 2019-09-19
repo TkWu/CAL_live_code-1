@@ -933,7 +933,7 @@
     <string name="extra_service_content_eco_travel">小花邀請花粉們一起實踐零碳飛行~「環保旅程碳抵換計畫」</string>
 
     <!-- Extra Services link-->
-    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/tw/zh/booking/manage-booking/reservation-booking-inquiry</string>
+    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/cn/zh/booking/manage-booking/excess_bagagge_A</string>
     <string name="extra_services_family_couch_link">https://calee.china-airlines.com/FC_DOT/Agreement.aspx?lang=zh-CN&#038;country=cn&#038;locale=zh</string>
     <string name="extra_services_wifi_link">https://calde.china-airlines.com/Flywifi/Agreement.aspx?lang=zh-TW&#038;country=cn&#038;locale=zh</string>
     <string name="extra_services_hsr_link">https://calee.china-airlines.com/CITHSR_AMA?country=cn&#038;locale=zh</string>

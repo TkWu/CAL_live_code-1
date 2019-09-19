@@ -908,21 +908,21 @@
     <string name="extra_services_msg">China Airlines provides a selection of services to enhance your travel experience via the mobile app.</string>
 
     <!-- Extra Services card title-->
-    <string name="extra_service_title_extra_baggage">Prepaid Checked Baggage (Lets GO)</string>
+    <string name="extra_service_title_extra_baggage">Prepaid Checked Baggage</string>
     <string name="extra_service_title_family_couch">Family Couch</string>
     <string name="extra_service_title_wifi">Wi-Fi Onboard</string>
     <string name="extra_service_title_hsr">THSR Reservation and Ticketing System</string>
     <string name="extra_service_title_eco_travel">ECO Travel Carbon Offsetting</string>
 
     <!-- Extra Services card title-->
-    <string name="extra_service_content_extra_baggage">If you are the Lets GO passenger, please remind that your ticket is EXCLUDED free checked baggage allowance. Please select add-on checked baggage allowance you need here.</string>
+    <string name="extra_service_content_extra_baggage">You may pre-purchase additional baggage allowance online at a discounted price, 24 hours prior to your flight departure time.</string>
     <string name="extra_service_content_family_couch">China Airlines is the exclusive airline in Asia to offer Family Couch. Enjoy a comfortable cuddling sleep through your long haul flight.</string>
     <string name="extra_service_content_wifi">We offer on-board Internet to let you indulge in a roaming service in the air.</string>
     <string name="extra_service_content_hsr">Offers THSR ticket at discounted price on the day after the flight ticket has been issued.</string>
     <string name="extra_service_content_eco_travel">China Airlines invites you to take part in carbon offsetting to achieve carbon neutrality for your flight.</string>
 
     <!-- Extra Services link-->
-    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/tw/en/booking/manage-booking/reservation-booking-inquiry</string>
+    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/us/en/booking/manage-booking/excess_bagagge_A</string>
     <string name="extra_services_family_couch_link">https://calee.china-airlines.com/FC_DOT/Agreement.aspx?lang=en-us&#038;country=us&#038;locale=en</string>
     <string name="extra_services_wifi_link">https://calde.china-airlines.com/Flywifi/Agreement.aspx?lang=en-us&#038;country=us&#038;locale=en</string>
     <string name="extra_services_hsr_link">https://calee.china-airlines.com/CITHSR_AMA?country=tw&#038;locale=en</string>

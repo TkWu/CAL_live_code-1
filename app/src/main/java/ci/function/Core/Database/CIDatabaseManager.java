@@ -39,7 +39,7 @@ public class CIDatabaseManager
         extends OrmLiteSqliteOpenHelper {
 
     private static final String DATABASE_NAME    = "cal.db";
-    private static final int    DATABASE_VERSION = 8;
+    private static final int    DATABASE_VERSION = 9;
 
     public CIDatabaseManager(Context context) {
         super(context,
@@ -108,6 +108,17 @@ public class CIDatabaseManager
                     //20190912 ODList欄位變動，重新創建資料表 by 643924
                     TableUtils.dropTable(connectionSource, CIFlightStationBookTicketODEntity.class, true);
                     TableUtils.createTable(connectionSource, CIFlightStationBookTicketODEntity.class);
+                    break;
+                case 8:
+                    //20190918 ODList欄位變動，重新創建資料表 by 643924
+                    TableUtils.dropTable(connectionSource, CIFlightStationBookTicketODEntity.class, true);
+                    TableUtils.dropTable(connectionSource, CIFlightStationTimeTableODEntity.class, true);
+                    TableUtils.dropTable(connectionSource, CIFlightStationStatusODEntity.class, true);
+                    TableUtils.dropTable(connectionSource, CIFlightStationEntity.class, true);
+                    TableUtils.createTable(connectionSource, CIFlightStationBookTicketODEntity.class);
+                    TableUtils.createTable(connectionSource, CIFlightStationTimeTableODEntity.class);
+                    TableUtils.createTable(connectionSource, CIFlightStationStatusODEntity.class);
+                    TableUtils.createTable(connectionSource, CIFlightStationEntity.class);
                     break;
                     //NOTE: 此switch區段中只能放置ㄧ個break，而且一定要在最後;
 

@@ -825,7 +825,7 @@
     <string name="extra_service_content_hsr">Bietet THSR-Tickets zu einem ermäßigten Preis am Tag nach der Ausstellung des Flugtickets.</string>
     <string name="extra_service_content_eco_travel">China Airlines invites you to take part in carbon offsetting to achieve carbon neutrality for your flight.</string>
 
-    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/tw/en/booking/manage-booking/reservation-booking-inquiry</string>
+    <string name="extra_services_extra_baggage_link">https://www.china-airlines.com/de/de/booking/manage-booking/excess_bagagge_A</string>
     <string name="extra_services_family_couch_link">https://calee.china-airlines.com/FC_DOT/Agreement.aspx?lang=en-us&amp;country=us&amp;locale=en</string>
     <string name="extra_services_wifi_link">https://calde.china-airlines.com/Flywifi/Agreement.aspx?lang=en-us&amp;country=us&amp;locale=en</string>
     <string name="extra_services_hsr_link">https://calee.china-airlines.com/CITHSR_AMA?country=tw&amp;locale=en</string>
