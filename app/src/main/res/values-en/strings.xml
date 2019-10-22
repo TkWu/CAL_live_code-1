@@ -1047,7 +1047,7 @@
     <string name="scheme_auth_eshopping_button_agree">Agree</string>
 
     <!-- Check-in 預辦登機+ADC -->
-    <string name="check_in_doc_reminder">Please check all your information is correct before submitting. \\n<b>Your travelling may be affected if any of the information does not match the information in your passport or other required visa. </b></string>
+    <string name="check_in_doc_reminder">Please check all your information is correct before submitting. \n<b>Your travelling may be affected if any of the information does not match the information in your passport or other required visa. </b></string>
     <string name="check_in_input_basic_doc">基本資料</string>
     <string name="check_in_input_apis_doc">Document Details 1</string>
     <string name="check_in_input_apis_second_doc">Document Details 2</string>

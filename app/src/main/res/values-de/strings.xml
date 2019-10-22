@@ -792,7 +792,7 @@
     <string name="infants">Kleinkinder</string>
     <string name="passengers_and_booking_rules">Buchungsinformationen</string>
     <string name="find_flight">Flüge suchen</string>
-    <string name="book_ticket_more_options">Weitere Optionen?</string>
+    <string name="book_ticket_more_options">Weitere Optionen? <u>Mehrere Städte und Zwischenstopp</u></string>
     <string name="book_ticket_more_options_underline">Mehrere Städte und Zwischenstopp</string>
     <string name="book_ticket_max_number_of_passengers">Es können nicht mehr als 9 Personen angegeben werden.</string>
     <string name="book_ticket_max_number_of_adults">Es können nicht mehr als 4 Erwachsene angegeben werden.</string>

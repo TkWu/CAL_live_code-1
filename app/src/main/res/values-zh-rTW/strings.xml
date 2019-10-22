@@ -639,7 +639,7 @@
     <string name="notice_message_content_6">6. 網上補登哩程將於4週內完成核對並予以更正。</string>
     <string name="reclaim_completed_message">哩程補登將於 4 週內完成核對並予以更正。</string>
     <string name="back_to_manage_miles">回到哩程管理</string>
-    <string name="your_miles_has_been_update">更新里程</string>
+    <string name="your_miles_has_been_update">更新哩程</string>
     <string name="miles_have_been_imported_to_your_account">%1$s (%2$s-%3$s) 航班共計 %4$s 哩已累積至您的帳號。</string>
     <string name="vip_lounge_content">貴賓休息室為您提供一個輕鬆的氛圍與點餐服務</string>
     <string name="not_in_use">未使用獎項</string>
