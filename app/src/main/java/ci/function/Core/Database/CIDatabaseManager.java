@@ -104,21 +104,32 @@ public class CIDatabaseManager
                 case 5:
                     TableUtils.dropTable(connectionSource, CINationalEntity.class, true);
                     TableUtils.createTable(connectionSource, CINationalEntity.class);
+                case 6:
+                    //20190912 ODList欄位變動，重新創建資料表 by 643924
+                    TableUtils.dropTable(connectionSource, CIFlightStationBookTicketODEntity.class, true);
+                    TableUtils.dropTable(connectionSource, CIFlightStationTimeTableODEntity.class, true);
+                    TableUtils.dropTable(connectionSource, CIFlightStationStatusODEntity.class, true);
+                    TableUtils.createTable(connectionSource, CIFlightStationBookTicketODEntity.class);
+                    TableUtils.createTable(connectionSource, CIFlightStationTimeTableODEntity.class);
+                    TableUtils.createTable(connectionSource, CIFlightStationStatusODEntity.class);
+                    break;
                 case 7:
                     //20190912 ODList欄位變動，重新創建資料表 by 643924
                     TableUtils.dropTable(connectionSource, CIFlightStationBookTicketODEntity.class, true);
+                    TableUtils.dropTable(connectionSource, CIFlightStationTimeTableODEntity.class, true);
+                    TableUtils.dropTable(connectionSource, CIFlightStationStatusODEntity.class, true);
                     TableUtils.createTable(connectionSource, CIFlightStationBookTicketODEntity.class);
+                    TableUtils.createTable(connectionSource, CIFlightStationTimeTableODEntity.class);
+                    TableUtils.createTable(connectionSource, CIFlightStationStatusODEntity.class);
                     break;
                 case 8:
                     //20190918 ODList欄位變動，重新創建資料表 by 643924
                     TableUtils.dropTable(connectionSource, CIFlightStationBookTicketODEntity.class, true);
                     TableUtils.dropTable(connectionSource, CIFlightStationTimeTableODEntity.class, true);
                     TableUtils.dropTable(connectionSource, CIFlightStationStatusODEntity.class, true);
-                    TableUtils.dropTable(connectionSource, CIFlightStationEntity.class, true);
                     TableUtils.createTable(connectionSource, CIFlightStationBookTicketODEntity.class);
                     TableUtils.createTable(connectionSource, CIFlightStationTimeTableODEntity.class);
                     TableUtils.createTable(connectionSource, CIFlightStationStatusODEntity.class);
-                    TableUtils.createTable(connectionSource, CIFlightStationEntity.class);
                     break;
                     //NOTE: 此switch區段中只能放置ㄧ個break，而且一定要在最後;
 

@@ -272,7 +272,9 @@ public class CIPassengerTabFragment extends BaseFragment{
         @Override
         public void SelectSeatOnClick(CIPassengerListResp_PaxInfo paxInfo) {
             m_PaxInfo = paxInfo;
-            GoSelectSeatActivity();
+            //643924-2019
+            //GoSelectSeatActivity();
+            GoSelectSeatActivity_Web();
         }
 
         @Override
@@ -284,7 +286,9 @@ public class CIPassengerTabFragment extends BaseFragment{
         @Override
         public void EditSeatOnClick(CIPassengerListResp_PaxInfo paxInfo) {
             m_PaxInfo = paxInfo;
-            GoSelectSeatActivity();
+            //643924-2019
+            //GoSelectSeatActivity();
+            GoSelectSeatActivity_Web();
         }
 
         @Override
@@ -806,6 +810,36 @@ public class CIPassengerTabFragment extends BaseFragment{
         }
     };
 
+    CIManageTicketPresenter.CallBack m_onManagerCallback_Services = new CIManageTicketPresenter.CallBack() {
+        @Override
+        public void showProgress() {
+            if ( null != m_Listener )
+                m_Listener.showProDlg();
+        }
+
+        @Override
+        public void hideProgress() {
+            if ( null != m_Listener )
+                m_Listener.hideProDlg();
+        }
+
+        @Override
+        public void onDataBinded(String webData) {
+            Intent data = new Intent();
+            data.putExtra(UiMessageDef.BUNDLE_WEBVIEW_TITLE_TEXT_TAG, getString(R.string.select_seat));
+            data.putExtra(UiMessageDef.BUNDLE_WEBVIEW_WEB_DATA_TAG, webData);
+            data.putExtra(UiMessageDef.BUNDLE_WEBVIEW_WEB_IS_SHOW_CLOSE_BTN_TAG, true);
+            ChangeActivity( data, CIWithoutInternetActivity.class );
+        }
+
+        @Override
+        public void onDataFetchFeild(String msg) {
+            showDialog(getString(R.string.warning),
+                    msg,
+                    getString(R.string.confirm));
+        }
+    };
+
     private final int                   REQUEST_CODE       = 3916; //(cip 字母順序)
 
     private BoardingPassType            m_type             = BoardingPassType.AVAILABLE;
@@ -845,6 +879,9 @@ public class CIPassengerTabFragment extends BaseFragment{
 
     //2018-06-26 ryan 新增改票功能
     private CIManageTicketPresenter m_ManagerPresenter = null;
+
+    //643924-2019
+    private CIManageTicketPresenter m_ManagerPresenter_Services = null;
 
     //2018-10-31 新增行李追蹤，被點擊的行李牌卡
     private CIBaggageInfoNumEntity m_BaggageEntity = null;
@@ -892,6 +929,7 @@ public class CIPassengerTabFragment extends BaseFragment{
 
         //2018-06-26 新增改票
         m_ManagerPresenter = new CIManageTicketPresenter(m_onManagerCallback);
+        m_ManagerPresenter_Services = new CIManageTicketPresenter(m_onManagerCallback_Services);
     }
 
     @Override
@@ -978,6 +1016,42 @@ public class CIPassengerTabFragment extends BaseFragment{
                 UiMessageDef.REQUEST_CODE_TRIP_DETAIL_PASSENGER_SELECT_SEAT);
     }
 
+    private void GoSelectSeatActivity_Web(){
+
+        if ( null != m_PassengerData){
+            if(m_tripData.Is_Do.equals("Y")
+                    && true == IsPaxCanSelectSeat(m_iPNRStatus)){
+                if(CIWSHomeStatus_Code.TYPE_C_SEAT_180D_14D == m_iPNRStatus
+                        ||CIWSHomeStatus_Code.TYPE_C_SEAT_MEAL_14D_24H == m_iPNRStatus){
+                    if ( null != m_ManagerPresenter_Services ){
+                        for ( int i = 0; i < m_PassengerData.Pax_Info.size(); i ++ ){
+                            if (m_PassengerData.Pax_Info.get(i).Is_Change_Seat.equals("Y")
+                                    && !m_PassengerData.Pax_Info.get(i).Pax_Type.equals(CIPassengerListResp_PaxInfo.PASSENGER_INFANT)){
+                                m_ManagerPresenter_Services.fetchBookTicketWebData(getManageTicketPostData_Services(m_PassengerData.Pax_Info.get(i)));
+                            }
+                        }
+                    }
+                } else if(CIWSHomeStatus_Code.TYPE_D_E_CHECKIN == m_iPNRStatus
+                        || CIWSHomeStatus_Code.TYPE_D_E_GATE_INFO == m_iPNRStatus){
+                    Intent intent = new Intent();
+                    intent.putExtra(
+                            UiMessageDef.BUNDLE_WEBVIEW_TITLE_TEXT_TAG,
+                            getString(R.string.select_seat));
+                    for ( int i = 0; i < m_PassengerData.Pax_Info.size(); i ++ ){
+                        if (m_PassengerData.Pax_Info.get(i).Is_Change_Seat.equals("Y")
+                                && !m_PassengerData.Pax_Info.get(i).Pax_Type.equals(CIPassengerListResp_PaxInfo.PASSENGER_INFANT)){
+                            intent.putExtra(
+                                    UiMessageDef.BUNDLE_WEBVIEW_URL_TAG,
+                                    getString(R.string.trip_detail_checkin_url)+"&IIdentification="+m_tripData.Pnr_Id+"&ISurname="+m_PassengerData.Pax_Info.get(i).Last_Name);
+                        }
+                    }
+                    intent.putExtra(UiMessageDef.BUNDLE_WEBVIEW_WEB_IS_SHOW_CLOSE_BTN_TAG, true);
+                    ChangeActivity(intent, CIWithoutInternetActivity.class);
+                }
+            }
+        }
+    }
+
     private boolean IsPaxCanSelectSeat(int iStatus){
 
         switch ( iStatus ){
@@ -988,7 +1062,9 @@ public class CIPassengerTabFragment extends BaseFragment{
             case CIWSHomeStatus_Code.TYPE_C_SEAT_MEAL_14D_24H:
                 return true;
             case CIWSHomeStatus_Code.TYPE_D_E_CHECKIN:
-                return false;
+                //643924-2019
+                //return false;
+                return true;
             case CIWSHomeStatus_Code.TYPE_D_E_GATE_INFO:
                 if ( m_iPNRStatus == CIWSHomeStatus_Code.TYPE_D_E_CHECKIN ){
                     return true;
@@ -1090,6 +1166,55 @@ public class CIPassengerTabFragment extends BaseFragment{
         }
         return postData;
     }
+
+    //643924-2019-Start
+    private String getManageTicketPostData_Services( CIPassengerListResp_PaxInfo passengerItem ){
+
+        /**
+         * 文件：CA_I-004_reservation inquiry interface_v2.1.docx
+         * 版本：2018/-6/26
+         * postData = LANG=GB&REC_LOC=NZ3T6A&LASTNAME=OKARR&FIRSTNAME=TEST&SERVICE_TYPE=RetrievePNRServices
+         * */
+        Map<String, String> mapParams = new LinkedHashMap<>();
+
+        Locale locale = CIApplication.getLanguageInfo().getLanguage_Locale();
+        switch (locale.toString()){
+            case "zh_TW":
+                mapParams.put("LANG","TW");
+                break;
+            case "zh_CN":
+                mapParams.put("LANG","CN");
+                break;
+            case "en":
+                mapParams.put("LANG","GB");
+                break;
+            case "ja_JP":
+                mapParams.put("LANG","JP");
+                break;
+        }
+
+        mapParams.put("REC_LOC" ,       m_tripData.Pnr_Id);
+        mapParams.put("LASTNAME" ,      passengerItem.Last_Name);
+        mapParams.put("FIRSTNAME" ,     passengerItem.First_Name);
+        mapParams.put("SERVICE_TYPE" ,  "RetrievePNRServices");
+
+        String postData ="";
+        Iterator<Map.Entry<String, String>> iter = mapParams.entrySet().iterator();
+        int count = 0;
+        while (iter.hasNext()) {
+            Map.Entry<String, String> entry = iter.next();
+            String key = entry.getKey();
+            String val = entry.getValue();
+            if(0 == count){
+                postData+= key+"="+val;
+            } else {
+                postData+= "&"+key+"="+val;
+            }
+            count++;
+        }
+        return postData;
+    }
+    //643924-2019-End
 
     private void DelectMealInfo(){
 

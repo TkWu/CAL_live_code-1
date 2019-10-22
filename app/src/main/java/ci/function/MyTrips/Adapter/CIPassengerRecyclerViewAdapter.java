@@ -553,6 +553,10 @@ public class CIPassengerRecyclerViewAdapter extends RecyclerView.Adapter<Recycle
                 bIsBag = true;
                 break;
             case CIWSHomeStatus_Code.TYPE_D_E_CHECKIN:
+                //643924-2019
+                //可選位
+                bIsSeat = true;
+
                 //可選餐
                 bIsMeal = true;
                 break;

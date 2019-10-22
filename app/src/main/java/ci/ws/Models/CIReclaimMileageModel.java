@@ -1,14 +1,18 @@
 package ci.ws.Models;
 
+import com.google.gson.Gson;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import ci.function.Core.CIApplication;
 import ci.ws.Models.cores.CIWSBaseModel;
+import ci.ws.Models.entities.CIReclaimErrorResp;
 import ci.ws.Models.entities.CIReclaimMileageReq;
 import ci.ws.Models.entities.CITimeTableReq;
 import ci.ws.Models.entities.CIWSResult;
 import ci.ws.cores.CIWSShareManager;
+import ci.ws.define.CIWSResultCode;
 import ci.ws.define.WSConfig;
 
 /**
@@ -30,7 +34,9 @@ public class CIReclaimMileageModel extends CIWSBaseModel{
          * @param rt_code   result code
          * @param rt_msg    result msg
          */
-        void onSuccess(String rt_code, String rt_msg);
+        void onSuccess(String rt_code, String rt_msg);  //一般錯誤
+        void onSuccess007(String rt_code, String rt_msg, CIReclaimErrorResp re_data);  //-999錯誤
+
         /**
          * 失敗由此訊息通知,
          * rt_code 規則同api文件
@@ -116,8 +122,45 @@ public class CIReclaimMileageModel extends CIWSBaseModel{
     @Override
     protected void DecodeResponse_Success(CIWSResult respBody, String code) {
 
-        if ( null != m_callback ){
+        /*if ( null != m_callback ){
             m_callback.onSuccess(respBody.rt_code, respBody.rt_msg);
+        }*/
+
+        Gson gson = new Gson();
+        CIReclaimErrorResp Resp = null;
+
+        try {
+            Resp = gson.fromJson( respBody.strData, CIReclaimErrorResp.class);
+
+        } catch (Exception e ){
+            e.printStackTrace();
+        }
+
+        /* 20191008 643924
+        if ( null == Resp ){
+            if ( null != m_callback ){
+                m_callback.onError( CIWSResultCode.NO_RESULTS, CIWSResultCode.getResultMessage(CIWSResultCode.NO_RESULTS) );
+            }
+            return;
+        }
+
+        if ( null != m_callback ){
+            if (Resp.size() > 0){
+                m_callback.onSuccess007(respBody.rt_code, respBody.rt_msg, Resp);
+            }else{
+                m_callback.onSuccess(respBody.rt_code, respBody.rt_msg);
+            }
+        }*/
+
+        if ( null != m_callback ){
+            if ( null == Resp ){
+                m_callback.onSuccess(respBody.rt_code, respBody.rt_msg);
+            } else if (Resp.size() > 0){
+                m_callback.onSuccess007(respBody.rt_code, respBody.rt_msg, Resp);
+            }
+
+        } else{
+            m_callback.onError( CIWSResultCode.NO_RESULTS, CIWSResultCode.getResultMessage(CIWSResultCode.NO_RESULTS) );
         }
     }
 

@@ -125,7 +125,7 @@ public class CIBoardingPassEWalletFragment extends BaseFragment
 
             for ( int i = 0; i < datas.size(); i ++ ){
                 for ( int j = 0; j < datas.get(i).size(); j ++ ){
-                    m_alExtraServiceResp.add(datas.get(i).get(j));
+                     m_alExtraServiceResp.add(datas.get(i).get(j));
                 }
             }
 //            m_alExtraServiceResp = datas;
@@ -268,7 +268,12 @@ public class CIBoardingPassEWalletFragment extends BaseFragment
         //如果在three item bar 選擇到目前已經顯示畫面則不在做動作
         if(m_bar.getSelectType() == m_selectedItem){
             return;
+        } else {
+            m_alBoardPass_Itinerary.clear();
+            m_alExtraServiceResp = null;
+            m_ExtraServiceItem.clear();
         }
+
         FragmentTransaction transaction = m_fragmentManager.beginTransaction();
         switch (v.getId()){
             case R.id.rl_left_bg:
@@ -280,7 +285,7 @@ public class CIBoardingPassEWalletFragment extends BaseFragment
                 transaction.replace(R.id.fragment, m_boardingPassListFragment);
                 m_selectedItem = EInitItem.LEFT;
 
-//                loadBoardPassData();
+                loadBoardPassData();
 
                 break;
             case R.id.rl_middle_bg:

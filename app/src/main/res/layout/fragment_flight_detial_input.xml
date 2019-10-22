@@ -136,16 +136,22 @@
 
         </LinearLayout>
 
-        <FrameLayout
-            android:id="@+id/fragment5"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll_ticketnumber"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20px"
-            android:layout_marginRight="20px"
-            android:layout_marginTop="6.3px">
+            android:orientation="horizontal">
 
-        </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fragment5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="6.3px">
 
+            </FrameLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

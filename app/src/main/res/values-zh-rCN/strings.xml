@@ -54,7 +54,7 @@
     <string name="menu_title_about">联系我们</string>
     <string name="menu_title_setting">设定(Settings)</string>
     <string name="menu_title_ai_service">智能客服</string>
-
+    <string name="menu_title_noshowfee">未登机费</string>
 
     <!-- SideMenu Left-->
     <string name="menu_title_boarding_pass_ewallet">登机证/票券夹</string>
@@ -420,6 +420,8 @@
 
     <!-- 乘客-行李url-->
     <string name="trip_detail_passenger_bag_url">https://www.china-airlines.com/jp/jp/booking/manage-booking/reservation-booking-inquiry</string>
+    <!-- 旅客-預辦登機url-->
+    <string name="trip_detail_checkin_url">https://checkin.si.amadeus.net/static/PRD/CI/#/checkindirect?ln=cn&#038;IFormOfIdentification=PNR</string>
 
     <string name="trip_detail_passenger_free_bag_title">托运行李</string>
     <string name="trip_detail_passenger_add_excess_bag_title">预购超额行李</string>
@@ -637,11 +639,15 @@
 
     <string name="departure_airport">出发机场</string>
     <string name="arrival_airport">抵达机场</string>
-    <string name="departure_date_only_within_6_months">出发日(6 个月内)</string>
-    <string name="notice">注</string>
-    <string name="notice_message_content_1">1. 若您在6 个月内搭乘华航/华信自营航班(机票号码开头297/803) 但未累积哩程，请输入相关资料即可办理哩程补登</string>
-    <string name="notice_message_content_2">2. 使用订位舱等G/X/O/A/S/L 的机票不予累积哩程</string>
-    <string name="reclaim_completed_message">哩程补登将于4 周内完成核对并予以更正。</string>
+    <string name="departure_date_only_within_6_months">出发日(6个月内)</string>
+    <string name="notice">注意事项</string>
+    <string name="notice_message_content_1">1. 若您在6个月内搭乘华航/华信自营航班(机票号码开头297/803) 但未累积哩程，请输入相关资料即可办理哩程补登。</string>
+    <string name="notice_message_content_2">2. 由于班机搭乘信息更新尚需作業时间，部分航班将无法于当日补登哩程。</string>
+    <string name="notice_message_content_3">3. 若您的订位姓名与会员卡上之姓名不相符，将无法于网上成功补登哩程，请提供登机证、护照复印件、机票收据或存根洽华航各地会员服务专线(https://www.china-airlines.com/tw/zh/member/member-service-hotline)申请哩程补登。</string>
+    <string name="notice_message_content_4">4. 请保留机票收据或存根及登机证至哩程成功累计到您的会员账户。</string>
+    <string name="notice_message_content_5">5. 五折及五折以下之优待票、免费机票、酬宾机票〈订位舱等 X/Z/O〉、婴儿票、团体票〈订位舱等 G〉、促销机票〈订位舱等 S/L/X〉、劳工票、交换机票(Barter Ticket)、包机票(Charter Ticket)、超重行李票(Excess Baggage Ticket)、航空及旅行同业折扣票等，均无法累积飞行哩程。</string>
+    <string name="notice_message_content_6">6. 网上补登哩程将于4周内完成核对并予以更正。</string>
+    <string name="reclaim_completed_message">哩程补登将于4周内完成核对并予以更正。</string>
     <string name="back_to_manage_miles">回到哩程管理</string>
     <string name="your_miles_has_been_update">更新哩程</string>
     <string name="miles_have_been_imported_to_your_account">%1$s (%2$s-%3$s) 航班共计 %4$s 哩已累积至您的帐号。</string>
@@ -1103,5 +1109,9 @@
     <string name="event_location">场次</string>
     <string name="event_name">活动名称</string>
     <string name="event_time">日期</string>
+
+    <!--643924 NoShowFee_WS_URL -->
+    <string name="noshowfee_url">https://calec.china-airlines.com/NoShowFee/PNRQuery.aspx?lang=zh-TW&#038;country=tw&#038;locale=zh</string>
+
 </resources>
 

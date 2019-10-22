@@ -52,6 +52,7 @@
     <string name="menu_title_about">お問い合わせ</string>
     <string name="menu_title_setting">設定(Settings)</string>
     <string name="menu_title_ai_service"></string>
+    <string name="menu_title_noshowfee">ノーショーチャージ</string>
 
 
     <!-- SideMenu Left-->
@@ -421,6 +422,8 @@
 
     <!-- 乘客-行李url-->
     <string name="trip_detail_passenger_bag_url">https://www.china-airlines.com/jp/jp/booking/manage-booking/reservation-booking-inquiry</string>
+    <!-- 旅客-預辦登機url-->
+    <string name="trip_detail_checkin_url">https://checkin.si.amadeus.net/static/PRD/CI/#/checkindirect?ln=ja&#038;IFormOfIdentification=PNR</string>
 
     <string name="trip_detail_passenger_free_bag_title">無料受託手荷物</string>
     <string name="trip_detail_passenger_add_excess_bag_title">前払い超過手荷物</string>
@@ -634,8 +637,12 @@
     <string name="arrival_airport">到着空港</string>
     <string name="departure_date_only_within_6_months">出発日（6ヶ月以内）</string>
     <string name="notice">注意</string>
-    <string name="notice_message_content_1">1.過去6ヶ月以内に、チャイナエアライン/マンダリン航空運航の航空券（航空券番号の最初の3桁が297/803の航空券）でご利用になられたマイルが積算されていない場合は、必要事項をご入力の上、お申込みください。</string>
-    <string name="notice_message_content_2">2.予約クラスがG/X/O/A/S/Lの航空券はマイル積算の対象外となります。</string>
+    <string name="notice_message_content_1">1. 過去6ヶ月以内に、チャイナエアライン/マンダリン航空運航の航空券（航空券番号の最初の3桁が297/803の航空券）でご利用になられたマイルが積算されていない場合は、必要事項をご入力の上、お申込みください。</string>
+    <string name="notice_message_content_2">2. フライト搭乗情報の更新が時間がかかるため、一部当日発着便のマイレージ訂正はできません。</string>
+    <string name="notice_message_content_3">3. ご予約名とDFPにご登録いただいているお名前が一致しない場合、ダイナスティ・フライヤー・サービスにてマイルの事後積算をご申請いただけません。搭乗券、ご登録名とご予約名が同一人物であることを証明できるパスポートのコピー、E-チケットレシート（航空券の明細書）、をご用意の上、お近くのチャイナエアラインまでお問合せください。DFPホットライン(https://www.china-airlines.com/jp/jp/member/member-service-hotline)。</string>
+    <string name="notice_message_content_4">4. E-チケットレシート(航空券の明細書)は、マイルの加算が完了するまで保管してください。</string>
+    <string name="notice_message_content_5">5. 50%以上割引された航空券、無料航空券、特典航空券〈クラス X/Z/O〉、幼児運賃航空券、団体航空券〈クラス G〉、プロモーション航空券〈クラス S/L/X〉、就労者用航空券、バーター航空券、チャーター航空券(Charter Ticket)、超過手荷物用チケット(Excess Baggage Ticket)、航空業界優待航空券等の航空券に関しましては、マイル加算の対象外となります。</string>
+    <string name="notice_message_content_6">6. 4週間以内にマイルの訂正を行います。</string>
     <string name="reclaim_completed_message">お申込みいただいたマイルは、4週間以内に口座へ加算されます。</string>
     <string name="back_to_manage_miles">マイルの管理へ戻る</string>
     <string name="your_miles_has_been_update">マイルが更新されました</string>
@@ -1094,5 +1101,9 @@
     <string name="event_location">開催場所</string>
     <string name="event_time">開催日時</string>
     <string name="event_name">イベント</string>
+
+    <!--643924 NoShowFee_WS_URL -->
+    <string name="noshowfee_url">https://calec.china-airlines.com/NoShowFee/PNRQuery.aspx?lang=en-us&#038;country=us&#038;locale=en</string>
+
 </resources>
 

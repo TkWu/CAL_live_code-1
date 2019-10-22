@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 
 import ci.ws.Models.CIReclaimMileageModel;
+import ci.ws.Models.entities.CIReclaimErrorResp;
 import ci.ws.Models.entities.CIReclaimMileageReq;
 import ci.ws.Presenter.Listener.CIReclaimMileageListener;
 
@@ -72,6 +73,21 @@ public class CIReclaimMileagePresenter {
         }
 
         @Override
+        public void onSuccess007(final String rt_code, final String rt_msg, final CIReclaimErrorResp re_data) {
+
+            s_hdUIThreadhandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    if ( null != m_Listener ) {
+                        m_Listener.onReclaimMileageSuccess007(rt_code, rt_msg, re_data);
+                        m_Listener.hideProgress();
+                    }
+                }
+            });
+
+        }
+
+        @Override
         public void onError(final String rt_code, final String rt_msg) {
 
             s_hdUIThreadhandler.post(new Runnable() {
@@ -84,5 +100,6 @@ public class CIReclaimMileagePresenter {
                 }
             });
         }
+
     };
 }

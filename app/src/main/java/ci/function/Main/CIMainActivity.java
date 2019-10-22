@@ -1203,6 +1203,20 @@ public class CIMainActivity extends BaseActivity{
                 ciAIServicePresenter.fetchAIServiceWebData();
             }
             break;
+            //643924-2019-start
+            case ViewIdDef.VIEW_ID_NOSHOWFEE:      /**未登機費*/
+            {
+                iViewId = m_iCurrViewId;
+                m_DrawerLayout.closeDrawers();
+                setupUIChangeSetting(setting, null, true);
+                m_intent = new Intent();
+                m_intent.putExtra(UiMessageDef.BUNDLE_WEBVIEW_TITLE_TEXT_TAG,getString(R.string.menu_title_noshowfee));
+                m_intent.putExtra(UiMessageDef.BUNDLE_WEBVIEW_URL_TAG,getString(R.string.noshowfee_url));
+                m_intent.putExtra(UiMessageDef.BUNDLE_WEBVIEW_WEB_IS_SHOW_CLOSE_BTN_TAG, true);
+                changeActivityForResult( CIWithoutInternetActivity.class , 0, m_intent, true);
+            }
+            break;
+            //643924-2019-end
             default:
                 setIsChangeFragment(true);
                 setOnParameterAndListener_Fragment(iViewId, fragment);

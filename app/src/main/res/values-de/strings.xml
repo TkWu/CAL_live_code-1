@@ -54,6 +54,7 @@
     <string name="menu_title_about">Kontakt</string>
     <string name="menu_title_setting">Einstellungen</string>
     <string name="menu_title_ai_service"></string>
+    <string name="menu_title_noshowfee">No Show Fee</string>
 
     <!-- SideMenu Left-->
     <string name="menu_title_boarding_pass_ewallet">Bordkarte &amp; MyWallet</string>
@@ -398,6 +399,8 @@
     <string name="gps_position_fail">GPS-Positionierung fehlgeschlagen</string>
     <string name="gps_permissions_msg">Für den Zugriff auf Ihren Standort ist eine Autorisierung erforderlich. Gehen Sie zu den Einstellungen auf Ihrem Gerät, um den GPS-Positionierungsdienst zu aktivieren.</string>
     <string name="trip_detail_passenger_bag_url">https://www.china-airlines.com/jp/jp/booking/manage-booking/reservation-booking-inquiry</string>
+    <!-- 旅客-預辦登機url-->
+    <string name="trip_detail_checkin_url">https://checkin.si.amadeus.net/static/PRD/CI/#/checkindirect?ln=de&#038;IFormOfIdentification=PNR</string>
     <string name="trip_detail_passenger_free_bag_title">Aufgegebenes Gepäck</string>
     <string name="trip_detail_passenger_add_excess_bag_title">Vorausbezahltes Übergepäck</string>
     <string name="trip_detail_passenger_add_bag_btn">Let’s GO</string>
@@ -574,8 +577,12 @@
     <string name="arrival_airport">Zielflughafen</string>
     <string name="departure_date_only_within_6_months">Abreisedatum (nur innerhalb von 6 Monaten)</string>
     <string name="notice">Hinweise</string>
-    <string name="notice_message_content_1">1. Wenn Sie in den letzten 6 Monaten mit China Airlines/Mandarin Airlines gereist sind und Ihre Meilen nicht gutgeschrieben worden sind, beantragen Sie bitte die Anpassung Ihrer Meilen. Es werden nur Tickets akzeptiert, die von CI/AE mit der Ticketnummer 297/803 ausgestellt wurden.</string>
-    <string name="notice_message_content_2">2. Wenn ein Mitglied ein Ticket mit dem Buchungscode „G/X/O/A/S/L“ verwendet, werden keine Meilen gesammelt.</string>
+    <string name="notice_message_content_1">1. If you traveled on a China Airlines/Mandarin Airlines operated flight within the last 6 months and did not credit your miles, please apply to reclaim your mileage. Only tickets issued by CI/AE starting with ticket number 297/803 will be accepted.</string>
+    <string name="notice_message_content_2">2. Because boarding record for each flight requires time for update, application on the same day as flight departure may not be accepted.</string>
+    <string name="notice_message_content_3">3. If your booking name is different from your name shown on the membership card and you will not be able to reclaim your mileage successfully online. Please provide boarding pass, electronic or paper ticket receipt, photocopy of your passport with the alias name (also known as) is required for identity verification and contact our local Member Service Hotline (https://www.china-airlines.com/us/en/member/member-service-hotline ) to correct mileage.</string>
+    <string name="notice_message_content_4">4. Please keep your electronic or paper ticket receipt and boarding pass until the mileage has been credited to your account.</string>
+    <string name="notice_message_content_5">5. Tickets sold at discounts of 50% or more, free ticket, award ticket with X/Z/O booking class, infant ticket, group ticket with G booking class, promotional ticket with S/L/X booking class, labor ticket, barter ticket, charter ticket, excess baggage ticket, and airline and travel industry discount tickets are excluded from flight mileage accumulation.</string>
+    <string name="notice_message_content_6">6. Valid claim for missing miles will be credited to member\'s account within 4 weeks.</string>
     <string name="reclaim_completed_message">Bei einem gültigen Antrag auf fehlende Meilen werden sie dem Konto des Mitglieds innerhalb von 4 Wochen gutgeschrieben.</string>
     <string name="back_to_manage_miles">Zurück zu Meilen verwalten</string>
     <string name="your_miles_has_been_update">Meilen aktualisiert</string>
@@ -786,7 +793,7 @@
     <string name="infants">Kleinkinder</string>
     <string name="passengers_and_booking_rules">Buchungsinformationen</string>
     <string name="find_flight">Flüge suchen</string>
-    <string name="book_ticket_more_options">Weitere Optionen?</string>
+    <string name="book_ticket_more_options">Weitere Optionen? <u>Mehrere Städte und Zwischenstopp</u></string>
     <string name="book_ticket_more_options_underline">Mehrere Städte und Zwischenstopp</string>
     <string name="book_ticket_max_number_of_passengers">Es können nicht mehr als 9 Personen angegeben werden.</string>
     <string name="book_ticket_max_number_of_adults">Es können nicht mehr als 4 Erwachsene angegeben werden.</string>
@@ -979,4 +986,8 @@
     <string name="event_name">Event</string>
     <string name="event_location">Location</string>
     <string name="event_time">Date</string>
+
+    <!--643924 NoShowFee_WS_URL -->
+    <string name="noshowfee_url">https://calec.china-airlines.com/NoShowFee/PNRQuery.aspx?lang=en-us&#038;country=us&#038;locale=en</string>
+
 </resources>

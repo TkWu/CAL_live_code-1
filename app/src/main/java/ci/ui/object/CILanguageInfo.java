@@ -36,10 +36,11 @@ public class CILanguageInfo {
     public static Locale[] LANGUAGE = new Locale[]{ Locale.TAIWAN, Locale.CHINA, Locale.ENGLISH, Locale.JAPAN};
     public int[]  LANGUAGE_NAME     = new int[]{ R.string.language_tw, R.string.language_cn, R.string.language_en, R.string.language_jp};
 
-    /* 德文
-    public static Locale[] LANGUAGE = new Locale[]{ Locale.TAIWAN, Locale.CHINA, Locale.ENGLISH, Locale.JAPAN, Locale.GERMAN };
-    public int[]  LANGUAGE_NAME     = new int[]{ R.string.language_tw, R.string.language_cn, R.string.language_en, R.string.language_jp, R.string.language_ge };
-    */
+
+    //德文
+    /*public static Locale[] LANGUAGE = new Locale[]{ Locale.TAIWAN, Locale.CHINA, Locale.ENGLISH, Locale.JAPAN, Locale.GERMAN };
+    public int[]  LANGUAGE_NAME     = new int[]{ R.string.language_tw, R.string.language_cn, R.string.language_en, R.string.language_jp, R.string.language_ge };*/
+
 
     private ArrayList<LocaleItem> m_arLanguageList = new ArrayList<>();
 

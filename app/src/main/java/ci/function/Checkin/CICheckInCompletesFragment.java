@@ -30,6 +30,7 @@ import ci.function.Base.BaseFragment;
 import ci.function.BoardingPassEWallet.BoardingPass.CIBoardingPassCardActivity;
 import ci.function.Core.SLog;
 import ci.function.SeatSelection.CISelectSeatMapActivity;
+import ci.ui.WebView.CIWithoutInternetActivity;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
 import ci.ui.view.ImageHandle;
@@ -331,8 +332,8 @@ public class CICheckInCompletesFragment extends BaseFragment {
 
                 CIPassengerListResp passengerList = getPassengerList(iPaxInfoPos, iItineraryPos);
 
-
-                Intent intent = new Intent();
+                //643924-2019-start
+                /*Intent intent = new Intent();
                 Bundle bundle = new Bundle();
                 bundle.putString(UiMessageDef.BUNDLE_IS_CHECK_IN_SELECT_SEAT, "Y");
 
@@ -344,7 +345,20 @@ public class CICheckInCompletesFragment extends BaseFragment {
 
                 intent.putExtras(bundle);
 
-                ChangeActivity(intent, CISelectSeatMapActivity.class, UiMessageDef.REQUEST_CODE_CHECK_IN_SELECT_SEAT);
+                ChangeActivity(intent, CISelectSeatMapActivity.class, UiMessageDef.REQUEST_CODE_CHECK_IN_SELECT_SEAT);*/
+
+                Intent intent = new Intent();
+                intent.putExtra(
+                        UiMessageDef.BUNDLE_WEBVIEW_TITLE_TEXT_TAG,
+                        getString(R.string.select_seat));
+                for ( int i = 0; i < passengerList.Pax_Info.size(); i ++ ){
+                    intent.putExtra(
+                            UiMessageDef.BUNDLE_WEBVIEW_URL_TAG,
+                            getString(R.string.trip_detail_checkin_url)+"&IIdentification="+m_tripData.Pnr_Id+"&ISurname="+passengerList.Pax_Info.get(i).Last_Name);
+                }
+                intent.putExtra(UiMessageDef.BUNDLE_WEBVIEW_WEB_IS_SHOW_CLOSE_BTN_TAG, true);
+                ChangeActivity(intent, CIWithoutInternetActivity.class);
+                //643924-2019-end
             }
         }
     };
@@ -586,6 +600,14 @@ public class CICheckInCompletesFragment extends BaseFragment {
         bitmap.recycle();
         System.gc();
     }
+
+    //643924-2019-start
+    private void ChangeActivity(Intent intent, Class clazz){
+        intent.setClass(getActivity(), clazz);
+        getActivity().startActivity(intent);
+        getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+    }
+    //643924-2019-end
 
     private void ChangeActivity(Intent intent, Class clazz, int iRequestCode) {
         intent.setClass(getActivity(), clazz);

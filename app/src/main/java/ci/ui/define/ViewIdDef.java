@@ -54,6 +54,8 @@ public class ViewIdDef {
     public static final int VIEW_ID_BAGGAGE_TRACKING    = 1010;
     /**智能客服*/
     public static final int VIEW_ID_AI_SERVICE          = 1011;
+    /**未登機費*/
+    public static final int VIEW_ID_NOSHOWFEE          = 1012;
 
     //左側
     /**登機證*/
@@ -137,6 +139,8 @@ public class ViewIdDef {
         //二
         arSideMenuList = new ArrayList<SideMenuItem>();
         arSideMenuList.add( new SideMenuItem( ViewIdDef.VIEW_ID_EXTRA_SERVICES, R.string.menu_title_extra_services, R.drawable.ic_extra_services, R.drawable.ic_extra_services_n, CIExtraServicesFragment.class, false, 0 ));
+        //643924-2019-NoShowFee
+        arSideMenuList.add(new SideMenuItem(ViewIdDef.VIEW_ID_NOSHOWFEE, R.string.menu_title_noshowfee, R.drawable.ic_noshowfee, R.drawable.ic_noshowfee_n, null, false, 0));
         arSideMenuList.add(new SideMenuItem(ViewIdDef.VIEW_ID_E_SHOPPING, R.string.menu_title_e_shopping, R.drawable.ic_e_shopping, R.drawable.ic_e_shopping_n, null, false, 0));
         arSideMenuList.add(new SideMenuItem(ViewIdDef.VIEW_ID_PROMOTIONS, R.string.menu_title_promotions, R.drawable.ic_promotion, R.drawable.ic_promotion_n, null, false, 0));
         MenuItemList.add(arSideMenuList);

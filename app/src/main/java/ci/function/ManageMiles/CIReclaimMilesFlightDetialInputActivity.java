@@ -22,8 +22,11 @@ import java.util.ArrayList;
 import ci.function.Main.BaseActivity;
 import ci.ui.define.UiMessageDef;
 import ci.ui.define.ViewScaleDef;
+import ci.ui.dialog.CIAlertDialog;
 import ci.ui.view.NavigationBar;
 import ci.ui.view.ShadowBar.ShadowBarScrollview;
+import ci.ws.Models.entities.CIReclaimErrorResp;
+import ci.ws.Models.entities.CIReclaimErrorResp_Info;
 import ci.ws.Models.entities.CIReclaimMileageReq;
 import ci.ws.Presenter.CIReclaimMileagePresenter;
 import ci.ws.Presenter.Listener.CIReclaimMileageListener;
@@ -40,6 +43,8 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
     public  final       int                      DEF_RESET_NO             = 1;
     private             int                      m_iMax                   = 2;
     private             int                      m_iFragmentCount         = 0;
+    private             Boolean                  m_bNeedSecondTimesend    = false;
+    private             int                      m_iNeedSecondTimesend    = 0;
     private             LinearLayout             m_llAdd                  = null;
     private             LinearLayout             m_contentView            = null;
     private             ShadowBarScrollview      m_scrollView             = null;
@@ -170,8 +175,7 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
         for(CIFlightDetialInputFragment fragment : m_alFragment){
             CIFlightDetialInputFragment.Entity data = fragment.getData();
 
-
-            if(TextUtils.isEmpty(data.departureAirport) || TextUtils.isEmpty(data.arrivalAirport)
+            /*if(TextUtils.isEmpty(data.departureAirport) || TextUtils.isEmpty(data.arrivalAirport)
                     || TextUtils.isEmpty(data.departureDate)  || TextUtils.isEmpty(data.company)
                     || TextUtils.isEmpty(data.flightNumber)   || TextUtils.isEmpty(data.tickerNumber)){
                 showDialog(getString(R.string.warning),
@@ -186,8 +190,82 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
                         msg,
                         getString(R.string.member_login_input_correvt_format_msg));
                 return false;
+            }*/
+
+            //哩程補登不需輸入機票號碼欄位，若回覆需輸入再輸
+            if(TextUtils.isEmpty(data.departureAirport) || TextUtils.isEmpty(data.arrivalAirport)
+                    || TextUtils.isEmpty(data.departureDate)  || TextUtils.isEmpty(data.company)
+                    || TextUtils.isEmpty(data.flightNumber)){
+                showDialog(getString(R.string.warning),
+                        getString(R.string.please_fill_all_text_field_that_must_to_fill));
+                return false;
             }
         }
+
+        if (m_bNeedSecondTimesend){
+            switch(m_iNeedSecondTimesend){
+                case 1:
+                    if (TextUtils.isEmpty(m_alFragment.get(0).getData().tickerNumber)) {
+                        showDialog(getString(R.string.warning),
+                                getString(R.string.please_fill_all_text_field_that_must_to_fill));
+                        return false;
+                    }
+
+                    if(m_alFragment.get(0).getData().tickerNumber.length() != 13){
+                        String msg = String.format(getString(R.string.textfield_placeholder_invalidformatmesseage),
+                                getString(R.string.ticket_number));
+                        showDialog(getString(R.string.warning),
+                                msg,
+                                getString(R.string.member_login_input_correvt_format_msg));
+                        return false;
+                    }
+                    break;
+                case 2:
+                    if (TextUtils.isEmpty(m_alFragment.get(1).getData().tickerNumber)) {
+                        showDialog(getString(R.string.warning),
+                                getString(R.string.please_fill_all_text_field_that_must_to_fill));
+                        return false;
+                    }
+                    if(m_alFragment.get(1).getData().tickerNumber.length() != 13){
+                        String msg = String.format(getString(R.string.textfield_placeholder_invalidformatmesseage),
+                                getString(R.string.ticket_number));
+                        showDialog(getString(R.string.warning),
+                                msg,
+                                getString(R.string.member_login_input_correvt_format_msg));
+                        return false;
+                    }
+                    break;
+                case 3:
+                    if (TextUtils.isEmpty(m_alFragment.get(0).getData().tickerNumber)) {
+                        showDialog(getString(R.string.warning),
+                                getString(R.string.please_fill_all_text_field_that_must_to_fill));
+                        return false;
+                    }
+                    if(m_alFragment.get(0).getData().tickerNumber.length() != 13){
+                        String msg = String.format(getString(R.string.textfield_placeholder_invalidformatmesseage),
+                                getString(R.string.ticket_number));
+                        showDialog(getString(R.string.warning),
+                                msg,
+                                getString(R.string.member_login_input_correvt_format_msg));
+                        return false;
+                    }
+                    if (TextUtils.isEmpty(m_alFragment.get(1).getData().tickerNumber)) {
+                        showDialog(getString(R.string.warning),
+                                getString(R.string.please_fill_all_text_field_that_must_to_fill));
+                        return false;
+                    }
+                    if(m_alFragment.get(1).getData().tickerNumber.length() != 13){
+                        String msg = String.format(getString(R.string.textfield_placeholder_invalidformatmesseage),
+                                getString(R.string.ticket_number));
+                        showDialog(getString(R.string.warning),
+                                msg,
+                                getString(R.string.member_login_input_correvt_format_msg));
+                        return false;
+                    }
+                    break;
+            }
+        }
+
         return true;
     }
 
@@ -202,7 +280,13 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
                 reqData.dep_date1     = data.departureDate;
                 reqData.cdc1          = data.company;
                 reqData.fno1          = String.format("%1$04d",Integer.valueOf(data.flightNumber));
-                reqData.ticket_no1    = data.tickerNumber;
+                //哩程補登不需輸入機票號碼欄位，若回覆需輸入再輸
+                //reqData.ticket_no1    = data.tickerNumber;
+                if (m_bNeedSecondTimesend) {
+                    reqData.ticket_no1    = data.tickerNumber;
+                }else{
+                    reqData.ticket_no1    = "";
+                }
 
             } else if(2 == count){
                 reqData.dep_city2     = data.departureAirport;
@@ -210,12 +294,19 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
                 reqData.dep_date2     = data.departureDate;
                 reqData.cdc2          = data.company;
                 reqData.fno2          = String.format("%1$04d",Integer.valueOf(data.flightNumber));
-                reqData.ticket_no2    = data.tickerNumber;
+                //哩程補登不需輸入機票號碼欄位，若回覆需輸入再輸
+                //reqData.ticket_no2    = data.tickerNumber;
+                if (m_bNeedSecondTimesend) {
+                    reqData.ticket_no2    = data.tickerNumber;
+                }else{
+                    reqData.ticket_no2    = "";
+                }
 
             }
             count++;
         }
-
+        m_bNeedSecondTimesend = false;
+        m_iNeedSecondTimesend = 0;
         CIReclaimMileagePresenter.getInstance(m_listener).ReclaimMileageFromWS(reqData);
     }
 
@@ -229,10 +320,6 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
         startActivityForResult(data, UiMessageDef.REQUEST_CODE_LOGIN);
         overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
     }
-
-
-
-
 
     private void addFlightData(){
         //增加數量
@@ -273,7 +360,6 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
         }
 
     }
-
 
     /**
      * 對View Id 做資源管理，避免使用到整數的極限值造成異常
@@ -341,8 +427,20 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
         }
 
         @Override
+        public void onReclaimMileageSuccess007(String rt_code, String rt_msg, CIReclaimErrorResp re_data) {
+            String error_message = "";
+            for (CIReclaimErrorResp_Info infoitem: re_data){
+                error_message += infoitem.msg+"\n";
+                if (infoitem.code.contains("MCM007")){
+                    m_iNeedSecondTimesend += Integer.parseInt(infoitem.seq);
+                }
+            }
+            showDialog(getString(R.string.warning), error_message, getString(R.string.confirm), null, m_alertDialoglistener);
+        }
+
+        @Override
         public void onReclaimMileageError(String rt_code, String rt_msg) {
-            showDialog(getString(R.string.warning),rt_msg);
+            showDialog(getString(R.string.warning), rt_msg);
         }
 
         @Override
@@ -355,4 +453,29 @@ public class CIReclaimMilesFlightDetialInputActivity extends BaseActivity
             hideProgressDialog();
         }
     };
+
+    CIAlertDialog.OnAlertMsgDialogListener m_alertDialoglistener = new CIAlertDialog.OnAlertMsgDialogListener() {
+        @Override
+        public void onAlertMsgDialog_Confirm() {setSecondSendLayout();}
+        @Override
+        public void onAlertMsgDialogg_Cancel() {}
+    };
+
+    private void setSecondSendLayout() {
+
+        switch(m_iNeedSecondTimesend){
+            case 1:
+                m_alFragment.get(0).setFlightNumberFragmentVisivle();
+                break;
+            case 2:
+                m_alFragment.get(1).setFlightNumberFragmentVisivle();
+                break;
+            case 3:
+                m_alFragment.get(0).setFlightNumberFragmentVisivle();
+                m_alFragment.get(1).setFlightNumberFragmentVisivle();
+                break;
+        }
+        m_bNeedSecondTimesend = true;
+    }
+
 }

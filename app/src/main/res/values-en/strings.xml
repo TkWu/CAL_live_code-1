@@ -54,6 +54,7 @@
     <string name="menu_title_about">Contact Us</string>
     <string name="menu_title_setting">Settings</string>
     <string name="menu_title_ai_service"></string>
+    <string name="menu_title_noshowfee">No Show Fee</string>
 
     <!-- SideMenu Left-->
     <string name="menu_title_boarding_pass_ewallet">Boarding Pass &amp; My Wallet</string>
@@ -424,6 +425,8 @@
 
     <!-- 乘客-行李url-->
     <string name="trip_detail_passenger_bag_url">https://www.china-airlines.com/jp/jp/booking/manage-booking/reservation-booking-inquiry</string>
+    <!-- 旅客-預辦登機url-->
+    <string name="trip_detail_checkin_url">https://checkin.si.amadeus.net/static/PRD/CI/#/checkindirect?ln=en&#038;IFormOfIdentification=PNR</string>
 
     <string name="trip_detail_passenger_free_bag_title">Checked Baggage</string>
     <string name="trip_detail_passenger_add_excess_bag_title">Prepaid Excess Baggage</string>
@@ -630,7 +633,11 @@
     <string name="departure_date_only_within_6_months">Departure Date(only within 6 months)</string>
     <string name="notice">Notes</string>
     <string name="notice_message_content_1">1. If you traveled on a China Airlines/Mandarin Airlines operated flight within the last 6 months and did not credit your miles, please apply to reclaim your mileage. Only tickets issued by CI/AE starting with ticket number 297/803 will be accepted.</string>
-    <string name="notice_message_content_2">2. When a member uses a ticket with G/X/O/A/S/L booking code, no mileage will be earned.</string>
+    <string name="notice_message_content_2">2. Because boarding record for each flight requires time for update, application on the same day as flight departure may not be accepted.</string>
+    <string name="notice_message_content_3">3. If your booking name is different from your name shown on the membership card and you will not be able to reclaim your mileage successfully online. Please provide boarding pass, electronic or paper ticket receipt, photocopy of your passport with the alias name (also known as) is required for identity verification and contact our local Member Service Hotline (https://www.china-airlines.com/us/en/member/member-service-hotline) to correct mileage.</string>
+    <string name="notice_message_content_4">4. Please keep your electronic or paper ticket receipt and boarding pass until the mileage has been credited to your account.</string>
+    <string name="notice_message_content_5">5. Tickets sold at discounts of 50% or more, free ticket, award ticket with X/Z/O booking class, infant ticket, group ticket with G booking class, promotional ticket with S/L/X booking class, labor ticket, barter ticket, charter ticket, excess baggage ticket, and airline and travel industry discount tickets are excluded from flight mileage accumulation.</string>
+    <string name="notice_message_content_6">6. Valid claim for missing miles will be credited to member\'s account within 4 weeks.</string>
     <string name="reclaim_completed_message">A valid claim for missing miles will be credited to the member\'s account within 4 weeks.</string>
     <string name="back_to_manage_miles">Back to Manage Miles</string>
     <string name="your_miles_has_been_update">Miles Updated</string>
@@ -1093,4 +1100,8 @@
     <string name="event_location">Location</string>
     <string name="event_name">Event</string>
     <string name="event_time">Date</string>
+
+    <!--643924 NoShowFee_WS_URL -->
+    <string name="noshowfee_url">https://calec.china-airlines.com/NoShowFee/PNRQuery.aspx?lang=en-us&#038;country=us&#038;locale=en</string>
+
 </resources>
