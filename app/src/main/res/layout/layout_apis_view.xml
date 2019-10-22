@@ -317,7 +317,7 @@
     <RelativeLayout
         android:id="@+id/rlayout_checkbox"
         android:layout_width="match_parent"
-        android:layout_height="24px"
+        android:layout_height="wrap_content"
         android:layout_marginRight="30px"
         android:layout_marginLeft="30px"
         android:layout_marginTop="20px"
@@ -344,6 +344,7 @@
             android:textColor="@color/white_four"
             android:textSize="16px"
             android:layout_marginLeft="8px"
+            android:singleLine="false"
             style="@style/light" />
     </RelativeLayout>
 

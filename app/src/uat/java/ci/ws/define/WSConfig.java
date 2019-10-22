@@ -24,7 +24,7 @@ public class WSConfig extends BaseWSConfig{
 
     /**WS, 使用測試的假資料*/
     public static final Boolean WS_TESTMODE                     = false;
-    public static final Boolean WS_TESTMODE_TODD                = true;
+    public static final Boolean WS_TESTMODE_TODD                = false;
     /**定義假資料的檔名*/
     public static final String FlightStatus                     = "";
     public static final String FlightStatus_station             = "";
