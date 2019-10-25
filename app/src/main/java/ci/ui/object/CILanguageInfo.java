@@ -32,13 +32,13 @@ public class CILanguageInfo {
         JAPAN
     }
 
-    public static Locale[] LANGUAGE = new Locale[]{ Locale.TAIWAN, Locale.CHINA, Locale.ENGLISH, Locale.JAPAN};
-    public int[]  LANGUAGE_NAME     = new int[]{ R.string.language_tw, R.string.language_cn, R.string.language_en, R.string.language_jp};
+//    public static Locale[] LANGUAGE = new Locale[]{ Locale.TAIWAN, Locale.CHINA, Locale.ENGLISH, Locale.JAPAN};
+//    public int[]  LANGUAGE_NAME     = new int[]{ R.string.language_tw, R.string.language_cn, R.string.language_en, R.string.language_jp};
 
-    /* 德文
+    /* 德文 */
     public static Locale[] LANGUAGE = new Locale[]{ Locale.TAIWAN, Locale.CHINA, Locale.ENGLISH, Locale.JAPAN, Locale.GERMAN };
     public int[]  LANGUAGE_NAME     = new int[]{ R.string.language_tw, R.string.language_cn, R.string.language_en, R.string.language_jp, R.string.language_ge };
-    */
+
 
     private ArrayList<LocaleItem> m_arLanguageList = new ArrayList<>();
 
@@ -180,10 +180,10 @@ public class CILanguageInfo {
 
             }
             /* 德文 */
-//            else if ( Locale.GERMAN.getLanguage().equals(strSystem) ){
-//                strAppLanguage = Locale.GERMAN.toString();
-//
-//            }
+            else if ( Locale.GERMAN.getLanguage().equals(strSystem) ){
+                strAppLanguage = Locale.GERMAN.toString();
+
+            }
             else {
                 strAppLanguage = Locale.ENGLISH.toString();
             }

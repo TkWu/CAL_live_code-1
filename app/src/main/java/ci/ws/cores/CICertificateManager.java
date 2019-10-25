@@ -11,10 +11,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
 
@@ -32,29 +28,6 @@ public class CICertificateManager {
     public static final String CAL_BOOKING_CERT_NEW = "certificate/new_booking_base64.cer";
     public static final String GOOGLE_CERT = "certificate/GIAG3.cer";
     public static final String CAL_AI_CERT = "certificate/CALAICS01CHINA-AIRLINESCOM.cer";
-
-    private static boolean isDateNowBiggerThanUpdatetime(String cer_update_date_utc) {
-        boolean isBigger = false;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        sdf.setTimeZone(TimeZone.getTimeZone("gmt"));
-        String gmtTimeNow = sdf.format(new Date());
-
-        Date dt1 = null;
-        Date dt2 = null;
-
-        try {
-            dt1 = sdf.parse(gmtTimeNow);
-            dt2 = sdf.parse(cer_update_date_utc);
-        } catch (java.text.ParseException e) {
-            e.printStackTrace();
-        }
-        if (dt1.getTime() > dt2.getTime()) {
-            isBigger = true;
-        } else if (dt1.getTime() < dt2.getTime()) {
-            isBigger = false;
-        }
-        return isBigger;
-    }
 
     private static boolean isDateNowBiggerThanUpdatetime(String cer_update_date_utc) {
         boolean isBigger = false;
